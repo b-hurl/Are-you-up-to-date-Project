@@ -38,6 +38,9 @@
         
         <div class="space-y-3">
             <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition">
+                <div id="review-section" class="text-left mb-8 space-y-4 border-t border-slate-700 pt-6 max-h-60 overflow-y-auto pr-2">
+    <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-4">Question Review</h3>
+    </div>
                 <span>Share Results</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
@@ -115,23 +118,17 @@
             const currentQ = gameData.questions[currentIdx];
             qText.innerText = currentQ.q;
             document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
-            
-            // Render Source Link
-            if (currentQ.source) {
-                sourceBox.innerHTML = `<a href="${currentQ.source}" target="_blank" class="text-xs text-indigo-400 underline opacity-70 hover:opacity-100 italic transition">Source: Learn More</a>`;
-            } else {
-                sourceBox.innerHTML = "";
-            }
-
+    
+          // We removed the sourceBox logic from here!
             optionsBox.innerHTML = '';
             currentQ.options.forEach((opt, i) => {
-                const btn = document.createElement('button');
-                btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 hover:bg-indigo-600 border border-slate-600 hover:border-indigo-400 font-semibold transition-all";
-                btn.innerText = opt;
-                btn.onclick = () => handleAnswer(i);
-                optionsBox.appendChild(btn);
-            });
-        }
+            const btn = document.createElement('button');
+            btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 hover:bg-indigo-600 border border-slate-600 hover:border-indigo-400 font-semibold transition-all";
+            btn.innerText = opt;
+            btn.onclick = () => handleAnswer(i);
+            optionsBox.appendChild(btn);
+        });
+}
 
         function handleAnswer(choice) {
             if (choice === gameData.questions[currentIdx].a) {
@@ -147,11 +144,29 @@
             }
         }
 
-        function showFinalResults() {
-            document.getElementById('main-card').classList.add('hidden');
-            document.getElementById('results-card').classList.remove('hidden');
-            document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
-        }
+function showFinalResults() {
+    document.getElementById('main-card').classList.add('hidden');
+    const resultsCard = document.getElementById('results-card');
+    resultsCard.classList.remove('hidden');
+    document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
+
+    // Build the Review Section
+    const reviewSection = document.getElementById('review-section');
+    reviewSection.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-xs mb-4">Question Review</h3>';
+
+    gameData.questions.forEach((q, index) => {
+        const item = document.createElement('div');
+        item.className = "bg-slate-900/40 p-4 rounded-xl border border-slate-700 mb-2";
+        
+        // Show the question and the correct answer
+        item.innerHTML = `
+            <p class="text-sm font-bold mb-1">${index + 1}. ${q.q}</p>
+            <p class="text-xs text-slate-400 mb-2">Answer: <span class="text-emerald-400">${q.options[q.a]}</span></p>
+            ${q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-indigo-400 underline hover:text-indigo-300 transition">Read Source →</a>` : ''}
+        `;
+        reviewSection.appendChild(item);
+    });
+}
 
         function shareResults() {
             const total = gameData.questions.length;
