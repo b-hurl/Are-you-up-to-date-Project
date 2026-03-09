@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "q": "Which artist released the hit song 'Smooth' in 1999?",
+      "options": ["Santana", "Rob Thomas", "Ricky Martin", "Sugar Ray"],
+      "a": 0,
+      "source": "https://en.wikipedia.org/wiki/Smooth_(song)"
+    },
+    {
+      "q": "What is the capital of Saskatchewan?",
+      "options": ["Saskatoon", "Regina", "Moose Jaw", "Prince Albert"],
+      "a": 1,
+      "source": "https://www.regina.ca/"
+    }
+  ]
+}

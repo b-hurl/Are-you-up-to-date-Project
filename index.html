@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Trivia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .option-btn { transition: all 0.2s ease; }
+        .option-btn:active { transform: scale(0.98); }
+        .countdown-glow { text-shadow: 0 0 15px rgba(99, 102, 241, 0.5); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
+
+    <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative">
+        
+        <div id="game-header" class="flex justify-between items-center mb-6 hidden">
+            <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
+            <span id="score-display" class="bg-indigo-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/20">Score: 0</span>
+        </div>
+
+        <div id="content-area" class="text-center">
+            <h2 id="question-text" class="text-2xl font-bold leading-tight">Checking the clock...</h2>
+            
+            <div id="source-container" class="mt-2 mb-6 h-4 min-h-[1rem]"></div>
+
+            <div id="options-container" class="space-y-3">
+                </div>
+        </div>
+    </div>
+
+    <div id="results-card" class="hidden w-full max-w-md text-center bg-slate-800 rounded-3xl shadow-2xl p-10 border border-slate-700">
+        <div class="text-5xl mb-4">🏆</div>
+        <h2 class="text-3xl font-black mb-2">Daily Complete!</h2>
+        <p class="text-slate-400 mb-8">See you tomorrow at 8:00 AM.</p>
+        <div id="final-score" class="text-6xl font-black text-indigo-400 mb-8">0/0</div>
+        
+        <div class="space-y-3">
+            <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 transition">
+                <span>Share Results</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                </svg>
+            </button>
+            <button onclick="location.reload()" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl font-bold transition">Play Again</button>
+        </div>
+    </div>
+
+    <script>
+        const UNLOCK_HOUR = 8; 
+        let currentIdx = 0;
+        let score = 0;
+        let gameData = null;
+
+        const qText = document.getElementById('question-text');
+        const optionsBox = document.getElementById('options-container');
+        const sourceBox = document.getElementById('source-container');
+        const header = document.getElementById('game-header');
+
+        async function startApp() {
+            const now = new Date();
+            if (now.getHours() >= UNLOCK_HOUR) {
+                loadDailyFile();
+            } else {
+                startCountdown();
+            }
+        }
+
+        function startCountdown() {
+            qText.innerText = "Next Trivia Unlocks at 8:00 AM";
+            const timerInterval = setInterval(() => {
+                const now = new Date();
+                const target = new Date();
+                target.setHours(UNLOCK_HOUR, 0, 0, 0);
+                const diff = target - now;
+
+                if (diff <= 0) {
+                    clearInterval(timerInterval);
+                    loadDailyFile();
+                    return;
+                }
+
+                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+                const m = Math.floor((diff / (1000 * 60)) % 60);
+                const s = Math.floor((diff / 1000) % 60);
+
+                optionsBox.innerHTML = `
+                    <div class="bg-slate-900/50 p-8 rounded-2xl border border-indigo-500/20">
+                        <div class="text-5xl font-mono font-black tracking-tighter countdown-glow text-indigo-400">
+                            ${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}
+                        </div>
+                        <div class="text-xs mt-4 text-slate-500 font-bold uppercase tracking-widest">Time Remaining</div>
+                    </div>`;
+            }, 1000);
+        }
+
+        async function loadDailyFile() {
+            const today = new Date();
+            const dateStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+            
+            try {
+                const response = await fetch(`${dateStr}.json?v=${new Date().getTime()}`);
+                if (!response.ok) throw new Error("File not found");
+                gameData = await response.json();
+                header.classList.remove('hidden');
+                renderQuestion();
+            } catch (err) {
+                qText.innerText = "No Trivia Today";
+                optionsBox.innerHTML = "<p class='text-slate-500 font-medium'>Check back tomorrow morning!</p>";
+            }
+        }
+
+        function renderQuestion() {
+            const currentQ = gameData.questions[currentIdx];
+            qText.innerText = currentQ.q;
+            document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
+            
+            // Render Source Link
+            if (currentQ.source) {
+                sourceBox.innerHTML = `<a href="${currentQ.source}" target="_blank" class="text-xs text-indigo-400 underline opacity-70 hover:opacity-100 italic transition">Source: Learn More</a>`;
+            } else {
+                sourceBox.innerHTML = "";
+            }
+
+            optionsBox.innerHTML = '';
+            currentQ.options.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 hover:bg-indigo-600 border border-slate-600 hover:border-indigo-400 font-semibold transition-all";
+                btn.innerText = opt;
+                btn.onclick = () => handleAnswer(i);
+                optionsBox.appendChild(btn);
+            });
+        }
+
+        function handleAnswer(choice) {
+            if (choice === gameData.questions[currentIdx].a) {
+                score++;
+                document.getElementById('score-display').innerText = `Score: ${score}`;
+            }
+
+            if (currentIdx < gameData.questions.length - 1) {
+                currentIdx++;
+                renderQuestion();
+            } else {
+                showFinalResults();
+            }
+        }
+
+        function showFinalResults() {
+            document.getElementById('main-card').classList.add('hidden');
+            document.getElementById('results-card').classList.remove('hidden');
+            document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
+        }
+
+        function shareResults() {
+            const total = gameData.questions.length;
+            const squares = "🟦".repeat(score) + "⬜".repeat(total - score);
+            const text = `Daily Trivia ${new Date().toLocaleDateString()}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.origin}${window.location.pathname}`;
+
+            if (navigator.share) {
+                navigator.share({ title: 'Daily Trivia', text: text });
+            } else {
+                navigator.clipboard.writeText(text);
+                alert("Copied to clipboard!");
+            }
+        }
+
+        startApp();
+    </script>
+</body>
+</html>
