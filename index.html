@@ -140,23 +140,32 @@
         // ... startApp call and results logic from previous steps remain the same ...
         // (Including showFinalResults, shareResults, and startCountdown)
         
-        function showFinalResults() {
-            document.getElementById('main-card').classList.add('hidden');
-            document.getElementById('results-card').classList.remove('hidden');
-            document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
-            const reviewSection = document.getElementById('review-section');
-            reviewSection.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Question Review & Sources</h3>';
-            gameData.questions.forEach((q, index) => {
-                const item = document.createElement('div');
-                item.className = "bg-slate-900/40 p-4 rounded-xl border border-slate-700";
-                item.innerHTML = `
-                    <p class="text-xs font-bold mb-1">${index + 1}. ${q.q}</p>
-                    <p class="text-[11px] text-slate-400 mb-2">Answer: <span class="text-emerald-400 font-bold">${q.options[q.a]}</span></p>
-                    ${q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-indigo-400 underline italic">Source: Read More</a>` : ''}
-                `;
-                reviewSection.appendChild(item);
-            });
-        }
+function showFinalResults() {
+    // 1. Swap the screens
+    document.getElementById('main-card').classList.add('hidden');
+    document.getElementById('results-card').classList.remove('hidden');
+    
+    // 2. Set the final score text
+    document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
+
+    // 3. START THE TIMER (The fix for the 00:00 issue)
+    startNextTriviaCountdown();
+
+    // 4. Build the Review Section
+    const reviewSection = document.getElementById('review-section');
+    reviewSection.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Question Review & Sources</h3>';
+    
+    gameData.questions.forEach((q, index) => {
+        const item = document.createElement('div');
+        item.className = "bg-slate-900/40 p-4 rounded-xl border border-slate-700";
+        item.innerHTML = `
+            <p class="text-xs font-bold mb-1">${index + 1}. ${q.q}</p>
+            <p class="text-[11px] text-slate-400 mb-2">Answer: <span class="text-emerald-400 font-bold">${q.options[q.a]}</span></p>
+            ${q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-indigo-400 underline italic">Source: Read More</a>` : ''}
+        `;
+        reviewSection.appendChild(item);
+    });
+}
 
 function shareResults() {
     const total = gameData.questions.length;
