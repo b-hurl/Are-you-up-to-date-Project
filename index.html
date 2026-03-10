@@ -105,29 +105,30 @@
 // 8:00 AM CST is 14:00 UTC
 const UNLOCK_UTC_HOUR = 14; 
 
-async function startApp() {
-    document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
-    
+// HELPER: Get the "Game Date" (Adjusts for the 8AM cutoff)
+function getGameDate() {
     const now = new Date();
-    // Use UTC to determine the "Trivia Day"
-    let triviaDate = new Date(now);
-
-    // If it's before 14:00 UTC, we are still on the "Previous" day's trivia
-    if (now.getUTCHours() < UNLOCK_UTC_HOUR) {
-        triviaDate.setUTCDate(now.getUTCDate() - 1);
+    // If it's before 14:00 UTC, the "Game Day" is actually yesterday
+    if (now.getUTCHours() < 14) {
+        now.setUTCDate(now.getUTCDate() - 1);
     }
+    // Return a simple string: "2026-03-11"
+    return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`;
+}
 
-    const dateStr = `${triviaDate.getUTCFullYear()}-${String(triviaDate.getUTCMonth() + 1).padStart(2, '0')}-${String(triviaDate.getUTCDate()).padStart(2, '0')}`;
-    
+async function startApp() {
+    const gameDate = getGameDate();
+    console.log("Current Game Date:", gameDate);
+
     try {
-        const response = await fetch(`${dateStr}.json?v=${Date.now()}`);
+        const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
         if (!response.ok) throw new Error();
         gameData = await response.json();
         gameData.questions = shuffle(gameData.questions);
         document.getElementById('game-header').classList.remove('hidden');
         renderQuestion();
     } catch (err) {
-        document.getElementById('question-text').innerText = "Syncing with Server...";
+        document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
     }
 }
 
@@ -207,63 +208,77 @@ async function startApp() {
 
         // --- WRAP UP FUNCTIONS ---
 function startNextTimer() {
-    // Clear any old timers to prevent memory leaks
-    if (window.triviaInterval) clearInterval(window.triviaInterval);
-
-    const update = () => {
+    const timerElem = document.getElementById('next-trivia-timer');
+    
+    const tick = () => {
         const now = new Date();
-        
-        // Define the target: Today at 14:00 UTC (8:00 AM CST)
         let target = new Date();
         target.setUTCHours(14, 0, 0, 0);
 
-        // If 14:00 UTC has already passed today, the 'Next' one is tomorrow
         if (now.getUTCHours() >= 14) {
             target.setUTCDate(target.getUTCDate() + 1);
         }
 
         const diff = target.getTime() - now.getTime();
 
-        // LOGGING: Open your browser console (F12) to see this ticking
-        console.log("Next Unlock UTC:", target.toUTCString(), "Remaining ms:", diff);
-
-        // REFRESH TRIGGER
         if (diff <= 0) {
-            console.log("REFRESHING NOW...");
-            window.location.reload(true); 
+            // RELOAD!
+            window.location.href = window.location.pathname + "?" + Date.now();
             return;
         }
 
-        // Timer Display Math
         const h = Math.floor(diff / 3600000);
         const m = Math.floor((diff % 3600000) / 60000);
         const s = Math.floor((diff % 60000) / 1000);
         
-        const timerElem = document.getElementById('next-trivia-timer');
-        if (timerElem) {
-            timerElem.innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-        }
+        timerElem.innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
     };
 
-    update(); 
-    window.triviaInterval = setInterval(update, 1000);
+    tick();
+    setInterval(tick, 1000);
 }
+function updateStreak() {
+    const currentGameDate = getGameDate(); // The ID for today's game
+    let streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
+    let lastGameDate = localStorage.getItem('trivia-last-date');
+    let best = parseInt(localStorage.getItem('trivia-best')) || 0;
 
-        function updateStreak() {
-            const today = new Date().toDateString();
-            let streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
-            let lastDate = localStorage.getItem('trivia-last-play');
-            if (lastDate !== today) {
-                const yesterday = new Date(); yesterday.setDate(yesterday.getDate()-1);
-                streak = (lastDate === yesterday.toDateString()) ? streak + 1 : 1;
-                localStorage.setItem('trivia-streak', streak);
-                localStorage.setItem('trivia-last-play', today);
-            }
-            document.getElementById('streak-count').innerText = streak;
-            let best = Math.max(streak, parseInt(localStorage.getItem('trivia-best')) || 0);
-            localStorage.setItem('trivia-best', best);
-            document.getElementById('best-streak').innerText = best;
+    // 1. If they already played THIS game date, do nothing
+    if (lastGameDate === currentGameDate) {
+        console.log("Already recorded streak for this game date.");
+    } else {
+        // 2. Check if they played the PREVIOUS game date
+        const yesterday = new Date();
+        // Go back 24 hours from "now" to check the previous window
+        yesterday.setUTCHours(yesterday.getUTCHours() - 24);
+        
+        // Use a temporary adjustment to see what the Game Date was 24h ago
+        let prevDateObj = new Date();
+        if (new Date().getUTCHours() < 14) {
+            prevDateObj.setUTCDate(prevDateObj.getUTCDate() - 2); // Was already yesterday, go back one more
+        } else {
+            prevDateObj.setUTCDate(prevDateObj.getUTCDate() - 1); // Was today, go back to yesterday
         }
+        const prevGameDate = `${prevDateObj.getUTCFullYear()}-${String(prevDateObj.getUTCMonth() + 1).padStart(2, '0')}-${String(prevDateObj.getUTCDate()).padStart(2, '0')}`;
+
+        if (lastGameDate === prevGameDate) {
+            streak++; // Continued!
+        } else {
+            streak = 1; // Broke or first time
+        }
+
+        localStorage.setItem('trivia-streak', streak);
+        localStorage.setItem('trivia-last-date', currentGameDate);
+        
+        if (streak > best) {
+            best = streak;
+            localStorage.setItem('trivia-best', best);
+        }
+    }
+
+    document.getElementById('streak-count').innerText = streak;
+    document.getElementById('best-streak').innerText = best;
+}
 
         function renderReview() {
             const review = document.getElementById('review-section');
