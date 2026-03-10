@@ -211,18 +211,23 @@ function startNextTimer() {
         const now = new Date();
         const target = new Date();
 
-        // Set the target to 14:00 UTC today
+        // Target 14:00 UTC (8:00 AM CST)
         target.setUTCHours(UNLOCK_UTC_HOUR, 0, 0, 0);
 
-        // If 14:00 UTC has already passed today, target 14:00 UTC tomorrow
+        // If that time has passed today, look at tomorrow
         if (now.getUTCHours() >= UNLOCK_UTC_HOUR) {
             target.setUTCDate(target.getUTCDate() + 1);
         }
 
         const diff = target - now;
 
+        // FORCE REFRESH: If we are at or past the target time
         if (diff <= 0) {
-            location.reload(); 
+            console.log("New Trivia Available! Refreshing...");
+            // Small delay to ensure the server has time to register the new day
+            setTimeout(() => {
+                location.reload();
+            }, 500); 
             return;
         }
 
@@ -235,7 +240,8 @@ function startNextTimer() {
     };
 
     update(); 
-    setInterval(update, 1000);
+    // Run the check every second
+    const timerInterval = setInterval(update, 1000);
 }
 
         function updateStreak() {
