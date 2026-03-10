@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "q": "On Day 3 of the 2026 Winter Paralympics, which Canadian duo won their second medal of the Games with a bronze in the Super-G?",
+      "options": ["Mac Marcoux & Jack Leitch", "Kalle Eriksson & Sierra Smith", "Mollie Jepsen", "Alexis Guimond"],
+      "a": 1,
+      "source": "https://paralympic.ca/news/milano-cortina-2026-day-3-recap-kalle-eriksson-and-guide-sierra-smith-race-to-second-medal-of-the-games/"
+    },
+    {
+      "q": "Saskatchewan Premier Scott Moe announced which new healthcare strategy today, outlining over 50 actions to improve provincial access?",
+      "options": ["SaskFirst Health Initiative", "The Rural Care Act", "Patients First Health Care Plan", "Primary Care 2030"],
+      "a": 2,
+      "source": "https://www.saskatchewan.ca/government/news-and-media/2026/march/09/premier-scott-moe-announces-patients-first-health-care-plan-the-right-care-right-place-right-time"
+    },
+    {
+      "q": "The Federal Government announced a nearly $1 billion investment today for the National Research Council (NRC) to acquire what specific asset for defense research?",
+      "options": ["A fleet of stealth drones", "A Bombardier Global 6500 jet", "A nuclear-powered icebreaker", "A quantum computing hub in Regina"],
+      "a": 1,
+      "source": "https://vancouver.citynews.ca/2026/03/09/nrc-to-acquire-bombardier-jet-as-feds-earmark-nearly-1b-for-defence-research/"
+    },
+    {
+      "q": "Prime Minister Mark Carney is traveling to which two countries this week to discuss Arctic security and NATO defense interoperability?",
+      "options": ["USA and Mexico", "France and Germany", "Norway and the United Kingdom", "Sweden and Finland"],
+      "a": 2,
+      "source": "https://www.pm.gc.ca/en/news/news-releases/2026/03/09/prime-minister-carney-travel-norway-and-united-kingdom-strengthen"
+    },
+    {
+      "q": "Which federal political party in Canada officially began the voting process for a new leader today to replace Jagmeet Singh?",
+      "options": ["Liberal Party", "Conservative Party", "Green Party", "New Democratic Party (NDP)"],
+      "a": 3,
+      "source": "https://subscriptions.cbc.ca/message/sample/newsletter/55/cmp/subscription-centre_top-headlines-morning_vib-link"
+    }
+  ]
+}
