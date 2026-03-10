@@ -38,6 +38,11 @@
     <div id="results-card" class="hidden w-full max-w-md text-center bg-slate-800 rounded-3xl shadow-2xl p-10 border border-slate-700">
         <div class="text-5xl mb-4">🏆</div>
         <h2 class="text-3xl font-black mb-2">Daily Complete!</h2>
+        
+        <div class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
+        <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
+        <div id="next-trivia-timer" class="text-xl font-mono font-bold text-indigo-400">00:00:00</div>
+        </div>
         <div id="final-score" class="text-6xl font-black text-indigo-400 mb-6">0/0</div>
         <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2"></div>
         <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 mb-3">
@@ -153,13 +158,23 @@
             });
         }
 
-        function shareResults() {
-            const total = gameData.questions.length;
-            const squares = "🟦".repeat(score) + "⬜".repeat(total - score);
-            const text = `Daily Trivia ${new Date().toLocaleDateString()}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.origin}${window.location.pathname}`;
-            if (navigator.share) { navigator.share({ text: text }); } 
-            else { navigator.clipboard.writeText(text); alert("Copied!"); }
-        }
+function shareResults() {
+    const total = gameData.questions.length;
+    let grid = "";
+    
+    // Logic to build the grid based on correct/incorrect
+    // (Note: This requires tracking which specific questions were right/wrong)
+    const squares = "🟩".repeat(score) + "🟥".repeat(total - score);
+    
+    const text = `Daily Trivia ${new Date().toLocaleDateString()}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.origin}${window.location.pathname}`;
+
+    if (navigator.share) {
+        navigator.share({ text: text });
+    } else {
+        navigator.clipboard.writeText(text);
+        alert("Results copied to clipboard!");
+    }
+}
 
         function startCountdown() {
             document.getElementById('question-text').innerText = "Next Trivia Unlocks at 8:00 AM";
@@ -177,6 +192,28 @@
                     </div>`;
             }, 1000);
         }
+
+        function startNextTriviaCountdown() {
+    const timerDisplay = document.getElementById('next-trivia-timer');
+    
+    setInterval(() => {
+        const now = new Date();
+        const tomorrow = new Date();
+        
+        // Set target to tomorrow at 8:00 AM
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        tomorrow.setHours(8, 0, 0, 0);
+
+        const diff = tomorrow - now;
+
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / (1000 * 60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+
+        timerDisplay.innerText = 
+            `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    }, 1000);
+}
 
         startApp();
     </script>
