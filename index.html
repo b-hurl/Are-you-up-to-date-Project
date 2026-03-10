@@ -211,37 +211,47 @@ function startNextTimer() {
         const now = new Date();
         const target = new Date();
 
-        // Target 14:00 UTC (8:00 AM CST)
+        // 1. Set the target to 14:00 UTC (8:00 AM CST)
         target.setUTCHours(UNLOCK_UTC_HOUR, 0, 0, 0);
 
-        // If that time has passed today, look at tomorrow
+        // 2. If 14:00 UTC has already passed today, the "Next" one is tomorrow
         if (now.getUTCHours() >= UNLOCK_UTC_HOUR) {
             target.setUTCDate(target.getUTCDate() + 1);
         }
 
-        const diff = target - now;
+        const diff = target.getTime() - now.getTime();
 
-        // FORCE REFRESH: If we are at or past the target time
+        // --- THE FORCE REFRESH ---
+        // If the difference is 0 or negative, it means we've hit the unlock time
         if (diff <= 0) {
-            console.log("New Trivia Available! Refreshing...");
-            // Small delay to ensure the server has time to register the new day
+            console.log("Time is up! Refreshing for new trivia...");
+            // We use a small delay so the user sees 00:00:00 for a split second
             setTimeout(() => {
-                location.reload();
-            }, 500); 
+                window.location.reload(true); // 'true' forces a skip-cache reload
+            }, 800);
             return;
         }
 
+        // 3. Math for the display
         const h = Math.floor(diff / 3600000);
         const m = Math.floor((diff % 3600000) / 60000);
         const s = Math.floor((diff % 60000) / 1000);
         
-        document.getElementById('next-trivia-timer').innerText = 
-            `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        const display = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        
+        // Update the UI
+        const timerElem = document.getElementById('next-trivia-timer');
+        if (timerElem) {
+            timerElem.innerText = display;
+        }
     };
 
-    update(); 
-    // Run the check every second
-    const timerInterval = setInterval(update, 1000);
+    // Run once immediately
+    update();
+    
+    // Set the interval and store it in a variable so it doesn't duplicate
+    if (window.triviaInterval) clearInterval(window.triviaInterval);
+    window.triviaInterval = setInterval(update, 1000);
 }
 
         function updateStreak() {
