@@ -207,50 +207,45 @@ async function startApp() {
 
         // --- WRAP UP FUNCTIONS ---
 function startNextTimer() {
+    // Clear any old timers to prevent memory leaks
+    if (window.triviaInterval) clearInterval(window.triviaInterval);
+
     const update = () => {
         const now = new Date();
-        const target = new Date();
+        
+        // Define the target: Today at 14:00 UTC (8:00 AM CST)
+        let target = new Date();
+        target.setUTCHours(14, 0, 0, 0);
 
-        // 1. Set the target to 14:00 UTC (8:00 AM CST)
-        target.setUTCHours(UNLOCK_UTC_HOUR, 0, 0, 0);
-
-        // 2. If 14:00 UTC has already passed today, the "Next" one is tomorrow
-        if (now.getUTCHours() >= UNLOCK_UTC_HOUR) {
+        // If 14:00 UTC has already passed today, the 'Next' one is tomorrow
+        if (now.getUTCHours() >= 14) {
             target.setUTCDate(target.getUTCDate() + 1);
         }
 
         const diff = target.getTime() - now.getTime();
 
-        // --- THE FORCE REFRESH ---
-        // If the difference is 0 or negative, it means we've hit the unlock time
+        // LOGGING: Open your browser console (F12) to see this ticking
+        console.log("Next Unlock UTC:", target.toUTCString(), "Remaining ms:", diff);
+
+        // REFRESH TRIGGER
         if (diff <= 0) {
-            console.log("Time is up! Refreshing for new trivia...");
-            // We use a small delay so the user sees 00:00:00 for a split second
-            setTimeout(() => {
-                window.location.reload(true); // 'true' forces a skip-cache reload
-            }, 800);
+            console.log("REFRESHING NOW...");
+            window.location.reload(true); 
             return;
         }
 
-        // 3. Math for the display
+        // Timer Display Math
         const h = Math.floor(diff / 3600000);
         const m = Math.floor((diff % 3600000) / 60000);
         const s = Math.floor((diff % 60000) / 1000);
         
-        const display = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-        
-        // Update the UI
         const timerElem = document.getElementById('next-trivia-timer');
         if (timerElem) {
-            timerElem.innerText = display;
+            timerElem.innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
         }
     };
 
-    // Run once immediately
-    update();
-    
-    // Set the interval and store it in a variable so it doesn't duplicate
-    if (window.triviaInterval) clearInterval(window.triviaInterval);
+    update(); 
     window.triviaInterval = setInterval(update, 1000);
 }
 
