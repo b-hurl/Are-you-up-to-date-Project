@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Trivia</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         .option-btn { transition: all 0.2s ease; }
         .selected { 
@@ -193,7 +194,14 @@ function showFinalResults() {
     document.getElementById('results-card').classList.remove('hidden');
     
     // 2. Set the final score text
+    const totalQuestions = gameData.questions.length;
     document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
+
+    // --- CONFETTI TRIGGER ---
+    if (score === totalQuestions && totalQuestions > 0) {
+        fireConfetti();
+    }
+    // ------------------------
 
     // 3. START THE TIMER (The fix for the 00:00 issue)
     startNextTriviaCountdown();
@@ -212,6 +220,34 @@ function showFinalResults() {
         `;
         reviewSection.appendChild(item);
     });
+}
+
+function fireConfetti() {
+    const duration = 3 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+        // Launch confetti from the left
+        confetti({
+            particleCount: 3,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0, y: 0.6 },
+            colors: ['#4f46e5', '#10b981', '#ffffff']
+        });
+        // Launch confetti from the right
+        confetti({
+            particleCount: 3,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1, y: 0.6 },
+            colors: ['#4f46e5', '#10b981', '#ffffff']
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }())
 }
 
 function shareResults() {
