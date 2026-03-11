@@ -229,7 +229,7 @@ function showFinalResults() {
     document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
 
     // --- CONFETTI TRIGGER ---
-    if (score === totalQuestions && totalQuestions > 0) {
+    if (score === totalQuestions) {
         // 1. Change the Trophy to a Crown
         resultIcon.innerText = "👑"; 
         
