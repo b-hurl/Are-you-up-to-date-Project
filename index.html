@@ -80,12 +80,27 @@
         let gameData = null;
         let selectedIdx = null;
 
-        function shuffle(array) {
-           for (let i = array.length - 1; i > 0; i--) {
-             const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+// Sound Effect URLs
+const SOUNDS = {
+    correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3', // Happy Chime
+    wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',   // Subtle Buzzer
+    finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',  // Level Up
+    perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3' // Fanfare
+};
+
+// Helper function to play sound
+function playSound(type) {
+    const audio = new Audio(SOUNDS[type]);
+    audio.volume = 0.5; // Set to 50% so it's not startling
+    audio.play().catch(e => console.log("Audio play blocked until user interacts."));
 }
 
 async function startApp() {
@@ -173,6 +188,7 @@ function renderQuestion() {
 
             function confirmAnswer() {
                 const buttons = document.querySelectorAll('.option-btn');
+                document.getElementById('action-area').innerHTML = '';
     
                 // Disable all buttons
                 buttons.forEach(btn => btn.onclick = null);
@@ -181,8 +197,10 @@ function renderQuestion() {
                 if (isCurrentSelectionCorrect) {
                     score++;
                     buttons[selectedIdx].classList.add('correct');
+                    playSound('correct'); // <--- TRIGGER CORRECT SOUND
                 } else {
                     buttons[selectedIdx].classList.add('incorrect');
+                    playSound('wrong');   // <--- TRIGGER WRONG SOUND
                  }
 
             setTimeout(() => {
@@ -215,6 +233,7 @@ function showFinalResults() {
         // 1. Change the Trophy to a Crown
         resultIcon.innerText = "👑"; 
         
+        playSound('perfect'); // <--- TRIUMPHANT FANFARE FOR PERFECT SCORE
         // 2. Add the Glowing Text
         const badge = document.createElement('div');
         badge.className = "perfect-badge text-sm uppercase mb-4";
@@ -224,6 +243,7 @@ function showFinalResults() {
     }else {
         // Reset to default if they play again and don't get 100%
         resultIcon.innerText = "🏆";
+        playSound('finish');  // <--- STANDARD SUCCESS CHIME
     }
     // ------------------------
 
