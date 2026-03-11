@@ -68,25 +68,38 @@
         let gameData = null;
         let selectedIdx = null;
 
-        async function startApp() {
-            const now = new Date();
-            if (now.getHours() >= UNLOCK_HOUR) { loadDailyFile(); } 
-            else { startCountdown(); }
-        }
+async function startApp() {
+    // We no longer show a "Countdown" on the home screen because 
+    // there is always a "current" trivia active until the next one hits at 8 AM.
+    loadDailyFile();
+}
 
-        async function loadDailyFile() {
-            const today = new Date();
-            const dateStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
-            try {
-                const response = await fetch(`${dateStr}.json?v=${new Date().getTime()}`);
-                if (!response.ok) throw new Error();
-                gameData = await response.json();
-                document.getElementById('game-header').classList.remove('hidden');
-                renderQuestion();
-            } catch (err) {
-                document.getElementById('question-text').innerText = "No Trivia Today";
-            }
-        }
+async function loadDailyFile() {
+    const now = new Date();
+    const currentHour = now.getHours();
+    
+    // Create a date object to determine which file to fetch
+    let triviaDate = new Date(now);
+
+    // If it's before 8:00 AM, we want the PREVIOUS day's trivia file
+    if (currentHour < UNLOCK_HOUR) {
+        triviaDate.setDate(now.getDate() - 1);
+    }
+
+    // Format the date as YYYY-MM-DD
+    const dateStr = `${triviaDate.getFullYear()}-${String(triviaDate.getMonth() + 1).padStart(2, '0')}-${String(triviaDate.getDate()).padStart(2, '0')}`;
+    
+    try {
+        const response = await fetch(`${dateStr}.json?v=${new Date().getTime()}`);
+        if (!response.ok) throw new Error();
+        gameData = await response.json();
+        document.getElementById('game-header').classList.remove('hidden');
+        renderQuestion();
+    } catch (err) {
+        document.getElementById('question-text').innerText = "Trivia Refreshing...";
+        document.getElementById('options-container').innerHTML = "<p class='text-slate-500'>The next set of questions will be ready shortly!</p>";
+    }
+}
 
         function renderQuestion() {
             selectedIdx = null;
@@ -209,26 +222,31 @@ function shareResults() {
             }, 1000);
         }
 
-        function startNextTriviaCountdown() {
-        const timerDisplay = document.getElementById('next-trivia-timer');
+function startNextTriviaCountdown() {
+    const timerDisplay = document.getElementById('next-trivia-timer');
     
-            setInterval(() => {
-                const now = new Date();
-                const tomorrow = new Date();
-        
-        // Set target to tomorrow at 8:00 AM
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        tomorrow.setHours(8, 0, 0, 0);
+    const updateTimer = () => {
+        const now = new Date();
+        const target = new Date();
 
-        const diff = tomorrow - now;
+        // The next "New" trivia always happens at the upcoming 8:00 AM
+        if (now.getHours() >= 8) {
+            // If it's 10:00 AM now, the next one is 8:00 AM tomorrow
+            target.setDate(now.getDate() + 1);
+        }
+        // If it's 4:00 AM now, the target is 8:00 AM today
+        target.setHours(8, 0, 0, 0);
 
+        const diff = target - now;
         const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
         const m = Math.floor((diff / (1000 * 60)) % 60);
         const s = Math.floor((diff / 1000) % 60);
 
-        timerDisplay.innerText = 
-            `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-    }, 1000);
+        timerDisplay.innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    };
+
+    updateTimer();
+    setInterval(updateTimer, 1000);
 }
 function updateStreak() {
     const now = new Date();
