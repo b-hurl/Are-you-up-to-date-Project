@@ -17,6 +17,17 @@
         .correct { background-color: #10b981 !important; border-color: #059669 !important; }
         .incorrect { background-color: #ef4444 !important; border-color: #dc2626 !important; }
         .countdown-glow { text-shadow: 0 0 15px rgba(99, 102, 241, 0.5); }
+        @keyframes gold-glow {
+            0% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); }
+            50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); }
+            100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); }
+        }
+        .perfect-badge {
+            color: #fbbf24; /* Amber-400 */
+            animation: gold-glow 2s infinite ease-in-out;
+            font-weight: 900;
+            letter-spacing: 0.1em;
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -195,11 +206,24 @@ function showFinalResults() {
     
     // 2. Set the final score text
     const totalQuestions = gameData.questions.length;
+    const finalScoreDisplay = document.getElementById('final-score');
+    const resultIcon = document.querySelector('#results-card .text-5xl');
     document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
 
     // --- CONFETTI TRIGGER ---
     if (score === totalQuestions && totalQuestions > 0) {
+        // 1. Change the Trophy to a Crown
+        resultIcon.innerText = "👑"; 
+        
+        // 2. Add the Glowing Text
+        const badge = document.createElement('div');
+        badge.className = "perfect-badge text-sm uppercase mb-4";
+        badge.innerText = "✨ Perfect Score ✨";
+        finalScoreDisplay.parentNode.insertBefore(badge, finalScoreDisplay);
         fireConfetti();
+    }else {
+        // Reset to default if they play again and don't get 100%
+        resultIcon.innerText = "🏆";
     }
     // ------------------------
 
@@ -252,16 +276,20 @@ function fireConfetti() {
 
 function shareResults() {
     const total = gameData.questions.length;
+    const isPerfect = (score === total);
     const streak = localStorage.getItem('trivia-streak') || 1;
     const squares = "🟩".repeat(score) + "🟥".repeat(total - score);
     
-    const text = `Daily Trivia ${new Date().toLocaleDateString()}\n🔥 Streak: ${streak}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.origin}${window.location.pathname}`;
+    // Add a Crown to the share text if they were perfect
+    const title = isPerfect ? "👑 PERFECT DAILY TRIVIA" : "Daily Trivia";
+    
+    const text = `${title} ${new Date().toLocaleDateString()}\n🔥 Streak: ${streak}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.href}`;
 
     if (navigator.share) {
         navigator.share({ text: text });
     } else {
         navigator.clipboard.writeText(text);
-        alert("Copied with Streak info!");
+        alert("Perfect results copied to clipboard! 👑");
     }
 }
 
