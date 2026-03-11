@@ -100,33 +100,50 @@ async function loadDailyFile() {
     try {
         const response = await fetch(`${dateStr}.json?v=${new Date().getTime()}`);
         if (!response.ok) throw new Error();
-        gameData = await response.json();
-        document.getElementById('game-header').classList.remove('hidden');
-        renderQuestion();
+            gameData = await response.json();
+            // Shuffle the entire list of questions once at the start
+            gameData.questions = shuffle(gameData.questions); 
+            document.getElementById('game-header').classList.remove('hidden');
+            renderQuestion();
     } catch (err) {
         document.getElementById('question-text').innerText = "Trivia Refreshing...";
         document.getElementById('options-container').innerHTML = "<p class='text-slate-500'>The next set of questions will be ready shortly!</p>";
     }
 }
 
-        function renderQuestion() {
-            selectedIdx = null;
-            const currentQ = gameData.questions[currentIdx];
-            document.getElementById('question-text').innerText = currentQ.q;
-            document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
-            document.getElementById('action-area').innerHTML = ''; // Clear confirm button
-            
-            const optionsBox = document.getElementById('options-container');
-            optionsBox.innerHTML = '';
-            currentQ.options.forEach((opt, i) => {
-                const btn = document.createElement('button');
-                btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold transition-all";
-                btn.innerText = opt;
-                btn.onclick = () => selectOption(i);
-                optionsBox.appendChild(btn);
-            });
-        }
+function renderQuestion() {
+    selectedIdx = null;
+    const currentQ = gameData.questions[currentIdx];
+    document.getElementById('question-text').innerText = currentQ.q;
+    document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
+    document.getElementById('action-area').innerHTML = '';
 
+    // 1. Create a temporary list of options with a 'isCorrect' flag
+    let mappedOptions = currentQ.options.map((opt, i) => ({
+        text: opt,
+        isCorrect: i === currentQ.a
+    }));
+
+    // 2. Shuffle those options
+    mappedOptions = shuffle(mappedOptions);
+
+    const optionsBox = document.getElementById('options-container');
+    optionsBox.innerHTML = '';
+
+    mappedOptions.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold transition-all";
+        btn.innerText = opt.text;
+        
+        // 3. Store the 'correctness' directly on the button's click event
+        btn.onclick = () => {
+            selectedIdx = i;
+            isCurrentSelectionCorrect = opt.isCorrect; // Track this globally
+            selectOption(i);
+        };
+        optionsBox.appendChild(btn);
+    });
+}
         function selectOption(index) {
             selectedIdx = index;
             // Highlight selected button
@@ -142,20 +159,19 @@ async function loadDailyFile() {
                 </button>`;
         }
 
-        function confirmAnswer() {
-            const buttons = document.querySelectorAll('.option-btn');
-            const isCorrect = selectedIdx === gameData.questions[currentIdx].a;
-            
-            // Disable all buttons
-            buttons.forEach(btn => btn.onclick = null);
-            document.getElementById('action-area').innerHTML = '';
+            function confirmAnswer() {
+                const buttons = document.querySelectorAll('.option-btn');
+    
+                // Disable all buttons
+                buttons.forEach(btn => btn.onclick = null);
+                document.getElementById('action-area').innerHTML = '';
 
-            if (isCorrect) {
-                score++;
-                buttons[selectedIdx].classList.add('correct');
-            } else {
-                buttons[selectedIdx].classList.add('incorrect');
-            }
+                if (isCurrentSelectionCorrect) {
+                    score++;
+                    buttons[selectedIdx].classList.add('correct');
+                } else {
+                    buttons[selectedIdx].classList.add('incorrect');
+                 }
 
             setTimeout(() => {
                 document.getElementById('score-display').innerText = `Score: ${score}`;
