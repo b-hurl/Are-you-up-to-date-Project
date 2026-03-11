@@ -241,9 +241,9 @@ function showFinalResults() {
         finalScoreDisplay.parentNode.insertBefore(badge, finalScoreDisplay);
         fireConfetti();
     }else {
+        playSound('finish');  // <--- STANDARD SUCCESS CHIME
         // Reset to default if they play again and don't get 100%
         resultIcon.innerText = "🏆";
-        playSound('finish');  // <--- STANDARD SUCCESS CHIME
     }
     // ------------------------
 
