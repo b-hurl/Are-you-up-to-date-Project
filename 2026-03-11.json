@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "q": "On Day 4 of the 2026 Winter Paralympics, which Canadian athlete won her 10th career Paralympic medal with a bronze in the women's standing cross-country sprint?",
+      "options": ["Mollie Jepsen", "Natalie Wilkie", "Brittany Hudak", "Alana Ramsay"],
+      "a": 1,
+      "source": "https://paralympic.ca/news/milano-cortina-2026-day-4-recap-natalie-wilkie-claims-bronze-for-complete-medal-set-at-the-games/"
+    },
+    {
+      "q": "Which notorious Canadian criminal, known as the 'Monster of the Miramichi,' was confirmed dead today at the age of 78 while serving a life sentence?",
+      "options": ["Robert Pickton", "Paul Bernardo", "Allan Legere", "Clifford Olson"],
+      "a": 2,
+      "source": "https://www.canada.ca/en/correctional-service/news/2026/03/death-of-an-inmate-from-edmonton-institution.html"
+    },
+    {
+      "q": "Environment and Climate Change Canada issued a major weather advisory today regarding which severe event predicted for Ontario, Quebec, and Atlantic Canada?",
+      "options": ["A Category 2 Hurricane", "A widespread freezing rain event", "A record-breaking heatwave", "A series of flash floods"],
+      "a": 1,
+      "source": "https://www.canada.ca/en/environment-climate-change/news/2026/03/environment-and-climate-change-canada-to-hold-a-technical-briefing-related-to-a-severe-freezing-rain-event-predicted-for-areas-of-ontario-quebec-an.html"
+    },
+    {
+      "q": "U.S. President Donald Trump sparked social media discussion today by referring to Prime Minister Mark Carney by what title in a Truth Social post?",
+      "options": ["The King of the North", "The Future Governor of Canada", "The CEO of Ottawa", "The Trade Specialist"],
+      "a": 1,
+      "source": "https://www.ctvnews.ca/politics/article/trump-refers-to-pm-carney-as-future-governor-of-canada-in-social-media-post/"
+    },
+    {
+      "q": "Who headlined the 2026 class of inductees into the Canadian Golf Hall of Fame announced today in Hamilton?",
+      "options": ["Brooke Henderson", "Mike Weir", "Alena Sharp", "Corey Conners"],
+      "a": 2,
+      "source": "https://lethbridgeherald.com/sports/national-sports/2026/03/10/hamiltons-alena-sharp-headlines-2026-inductee-class-for-canadian-golf-hall-of-fame/"
+    }
+  ]
+}
