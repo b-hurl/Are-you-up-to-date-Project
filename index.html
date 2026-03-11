@@ -42,6 +42,16 @@
         <div class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
         <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
         <div id="next-trivia-timer" class="text-xl font-mono font-bold text-indigo-400">00:00:00</div>
+        <div class="flex justify-center gap-4 mb-6">
+    <div class="bg-slate-900/50 p-4 rounded-2xl border border-orange-500/30 flex-1">
+        <div class="text-[10px] uppercase tracking-widest text-orange-400 font-bold mb-1">🔥 Streak</div>
+        <div id="streak-count" class="text-3xl font-black text-white">1</div>
+    </div>
+    <div class="bg-slate-900/50 p-4 rounded-2xl border border-indigo-500/30 flex-1">
+        <div class="text-[10px] uppercase tracking-widest text-indigo-400 font-bold mb-1">🏆 Best</div>
+        <div id="best-streak" class="text-3xl font-black text-white">1</div>
+    </div>
+</div>
         </div>
         <div id="final-score" class="text-6xl font-black text-indigo-400 mb-6">0/0</div>
         <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2"></div>
@@ -169,19 +179,16 @@ function showFinalResults() {
 
 function shareResults() {
     const total = gameData.questions.length;
-    let grid = "";
-    
-    // Logic to build the grid based on correct/incorrect
-    // (Note: This requires tracking which specific questions were right/wrong)
+    const streak = localStorage.getItem('trivia-streak') || 1;
     const squares = "🟩".repeat(score) + "🟥".repeat(total - score);
     
-    const text = `Daily Trivia ${new Date().toLocaleDateString()}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.origin}${window.location.pathname}`;
+    const text = `Daily Trivia ${new Date().toLocaleDateString()}\n🔥 Streak: ${streak}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.origin}${window.location.pathname}`;
 
     if (navigator.share) {
         navigator.share({ text: text });
     } else {
         navigator.clipboard.writeText(text);
-        alert("Results copied to clipboard!");
+        alert("Copied with Streak info!");
     }
 }
 
@@ -203,11 +210,11 @@ function shareResults() {
         }
 
         function startNextTriviaCountdown() {
-    const timerDisplay = document.getElementById('next-trivia-timer');
+        const timerDisplay = document.getElementById('next-trivia-timer');
     
-    setInterval(() => {
-        const now = new Date();
-        const tomorrow = new Date();
+            setInterval(() => {
+                const now = new Date();
+                const tomorrow = new Date();
         
         // Set target to tomorrow at 8:00 AM
         tomorrow.setDate(tomorrow.getDate() + 1);
@@ -222,6 +229,44 @@ function shareResults() {
         timerDisplay.innerText = 
             `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
     }, 1000);
+}
+function updateStreak() {
+    const now = new Date();
+    const todayStr = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
+    
+    // Get stored data
+    let streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
+    let lastDate = localStorage.getItem('trivia-last-date'); // e.g., "2026-2-9"
+    let bestStreak = parseInt(localStorage.getItem('trivia-best-streak')) || 0;
+
+    if (lastDate === todayStr) {
+        // Already played today, just display current
+    } else {
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yesterdayStr = `${yesterday.getFullYear()}-${yesterday.getMonth()}-${yesterday.getDate()}`;
+
+        if (lastDate === yesterdayStr) {
+            // Played yesterday! Streak continues
+            streak++;
+        } else {
+            // Missed a day or first time playing
+            streak = 1;
+        }
+        
+        // Save new data
+        localStorage.setItem('trivia-streak', streak);
+        localStorage.setItem('trivia-last-date', todayStr);
+        
+        if (streak > bestStreak) {
+            bestStreak = streak;
+            localStorage.setItem('trivia-best-streak', bestStreak);
+        }
+    }
+
+    // Update the UI
+    document.getElementById('streak-count').innerText = streak;
+    document.getElementById('best-streak').innerText = bestStreak;
 }
 
         startApp();
