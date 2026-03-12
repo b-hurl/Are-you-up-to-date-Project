@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/50 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
-    <span id="mute-icon" class="text-xl">🔊</span>
-</button>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Trivia</title>
@@ -11,222 +8,160 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         .option-btn { transition: all 0.2s ease; }
-        .selected { 
-            background-color: #4f46e5 !important; 
-            border-color: #818cf8 !important; 
-            transform: scale(1.02);
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
-        }
+        .selected { background-color: #4f46e5 !important; border-color: #818cf8 !important; transform: scale(1.02); box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
         .correct { background-color: #10b981 !important; border-color: #059669 !important; }
         .incorrect { background-color: #ef4444 !important; border-color: #dc2626 !important; }
-        .countdown-glow { text-shadow: 0 0 15px rgba(99, 102, 241, 0.5); }
-        @keyframes gold-glow {
-            0% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); }
-            50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); }
-            100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); }
-        }
-        .perfect-badge {
-            color: #fbbf24; /* Amber-400 */
-            animation: gold-glow 2s infinite ease-in-out;
-            font-weight: 900;
-            letter-spacing: 0.1em;
-        }
-        #mute-btn:active { transform: scale(0.9); }
+        @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
+        .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
+
+    <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
+        <span id="mute-icon" class="text-xl">🔊</span>
+    </button>
 
     <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative">
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
             <span id="score-display" class="bg-indigo-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/20">Score: 0</span>
         </div>
-
         <div id="content-area" class="text-center">
-            <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8">Checking the clock...</h2>
+            <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8">Loading Today's Challenge...</h2>
             <div id="options-container" class="space-y-3 mb-6"></div>
-            
-            <div id="action-area" class="h-16 flex items-center justify-center">
-                </div>
+            <div id="action-area" class="h-16 flex items-center justify-center"></div>
         </div>
     </div>
 
     <div id="results-card" class="hidden w-full max-w-md text-center bg-slate-800 rounded-3xl shadow-2xl p-10 border border-slate-700">
-        <div class="text-5xl mb-4">🏆</div>
+        <div class="text-5xl mb-4" id="result-emoji">🏆</div>
         <h2 class="text-3xl font-black mb-2">Daily Complete!</h2>
         
-        <div class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
-        <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
-        <div id="next-trivia-timer" class="text-xl font-mono font-bold text-indigo-400">00:00:00</div>
-        <div class="flex justify-center gap-4 mb-6">
-    <div class="bg-slate-900/50 p-4 rounded-2xl border border-orange-500/30 flex-1">
-        <div class="text-[10px] uppercase tracking-widest text-orange-400 font-bold mb-1">🔥 Streak</div>
-        <div id="streak-count" class="text-3xl font-black text-white">1</div>
-    </div>
-    <div class="bg-slate-900/50 p-4 rounded-2xl border border-indigo-500/30 flex-1">
-        <div class="text-[10px] uppercase tracking-widest text-indigo-400 font-bold mb-1">🏆 Best</div>
-        <div id="best-streak" class="text-3xl font-black text-white">1</div>
-    </div>
-</div>
+        <div id="next-timer-container" class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
+            <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
+            <div id="next-trivia-timer" class="text-xl font-mono font-bold text-indigo-400">00:00:00</div>
         </div>
+
+        <div class="flex justify-center gap-4 mb-6">
+            <div class="bg-slate-900/50 p-4 rounded-2xl border border-orange-500/30 flex-1 text-center">
+                <div class="text-[10px] uppercase tracking-widest text-orange-400 font-bold mb-1">🔥 Streak</div>
+                <div id="streak-count" class="text-3xl font-black text-white">0</div>
+            </div>
+            <div class="bg-slate-900/50 p-4 rounded-2xl border border-indigo-500/30 flex-1 text-center">
+                <div class="text-[10px] uppercase tracking-widest text-indigo-400 font-bold mb-1">🏆 Best</div>
+                <div id="best-streak" class="text-3xl font-black text-white">0</div>
+            </div>
+        </div>
+
         <div id="final-score" class="text-6xl font-black text-indigo-400 mb-6">0/0</div>
-        <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2"></div>
-        <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 mb-3">
-            <span>Share Results</span>
-        </button>
-        <button onclick="location.reload()" class="w-full bg-slate-700 py-4 rounded-2xl font-bold">Play Again</button>
+        <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2 scrollbar-hide"></div>
+        
+        <div class="space-y-3">
+            <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
+            <button onclick="location.reload()" class="w-full bg-slate-700 py-4 rounded-2xl font-bold">Play Again</button>
+        </div>
     </div>
 
     <script>
-        const UNLOCK_HOUR = 8; 
+        // --- CONFIG & AUDIO ---
+        const UNLOCK_HOUR = 8;
+        const SOUNDS = {
+            correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
+            wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
+            finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',
+            perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3'
+        };
+
+        let isMuted = localStorage.getItem('trivia-muted') === 'true';
         let currentIdx = 0;
         let score = 0;
         let gameData = null;
         let selectedIdx = null;
-        let isMuted = localStorage.getItem('trivia-muted') === 'true';
+        let isCurrentSelectionCorrect = false;
 
-// Update icon on page load
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
-});
-
-function toggleMute() {
-    isMuted = !isMuted;
-    localStorage.setItem('trivia-muted', isMuted);
-    document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
-}
-
-// Update your playSound function to check this variable
-function playSound(type) {
-    if (isMuted) return; // Exit if muted
-
-    const audio = new Audio(SOUNDS[type]);
-    audio.volume = 0.5;
-    audio.play().catch(e => console.log("Audio play blocked."));
-}
-
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-// Sound Effect URLs
-const SOUNDS = {
-    correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3', // Happy Chime
-    wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',   // Subtle Buzzer
-    finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',  // Level Up
-    perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3' // Fanfare
-};
-
-// Helper function to play sound
-function playSound(type) {
-    const audio = new Audio(SOUNDS[type]);
-    audio.volume = 0.5; // Set to 50% so it's not startling
-    audio.play().catch(e => console.log("Audio play blocked until user interacts."));
-}
-
-async function startApp() {
-    // We no longer show a "Countdown" on the home screen because 
-    // there is always a "current" trivia active until the next one hits at 8 AM.
-    loadDailyFile();
-}
-
-async function loadDailyFile() {
-    const now = new Date();
-    const currentHour = now.getHours();
-    
-    // Create a date object to determine which file to fetch
-    let triviaDate = new Date(now);
-
-    // If it's before 8:00 AM, we want the PREVIOUS day's trivia file
-    if (currentHour < UNLOCK_HOUR) {
-        triviaDate.setDate(now.getDate() - 1);
-    }
-
-    // Format the date as YYYY-MM-DD
-    const dateStr = `${triviaDate.getFullYear()}-${String(triviaDate.getMonth() + 1).padStart(2, '0')}-${String(triviaDate.getDate()).padStart(2, '0')}`;
-    
-    try {
-        const response = await fetch(`${dateStr}.json?v=${new Date().getTime()}`);
-        if (!response.ok) throw new Error();
-            gameData = await response.json();
-            // Shuffle the entire list of questions once at the start
-            gameData.questions = shuffle(gameData.questions); 
-            document.getElementById('game-header').classList.remove('hidden');
-            renderQuestion();
-    } catch (err) {
-        document.getElementById('question-text').innerText = "Trivia Refreshing...";
-        document.getElementById('options-container').innerHTML = "<p class='text-slate-500'>The next set of questions will be ready shortly!</p>";
-    }
-}
-
-function renderQuestion() {
-    selectedIdx = null;
-    const currentQ = gameData.questions[currentIdx];
-    document.getElementById('question-text').innerText = currentQ.q;
-    document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
-    document.getElementById('action-area').innerHTML = '';
-
-    // 1. Create a temporary list of options with a 'isCorrect' flag
-    let mappedOptions = currentQ.options.map((opt, i) => ({
-        text: opt,
-        isCorrect: i === currentQ.a
-    }));
-
-    // 2. Shuffle those options
-    mappedOptions = shuffle(mappedOptions);
-
-    const optionsBox = document.getElementById('options-container');
-    optionsBox.innerHTML = '';
-
-    mappedOptions.forEach((opt, i) => {
-        const btn = document.createElement('button');
-        btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold transition-all";
-        btn.innerText = opt.text;
-        
-        // 3. Store the 'correctness' directly on the button's click event
-        btn.onclick = () => {
-            selectedIdx = i;
-            isCurrentSelectionCorrect = opt.isCorrect; // Track this globally
-            selectOption(i);
-        };
-        optionsBox.appendChild(btn);
-    });
-}
-        function selectOption(index) {
-            selectedIdx = index;
-            // Highlight selected button
-            const buttons = document.querySelectorAll('.option-btn');
-            buttons.forEach((btn, i) => {
-                btn.classList.toggle('selected', i === index);
-            });
-
-            // Show Confirm Button
-            document.getElementById('action-area').innerHTML = `
-                <button onclick="confirmAnswer()" class="w-full bg-emerald-600 hover:bg-emerald-500 py-3 rounded-xl font-bold animate-bounce-short">
-                    Confirm Answer
-                </button>`;
+        // --- UTILITIES ---
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
 
-            function confirmAnswer() {
-                const buttons = document.querySelectorAll('.option-btn');
-                document.getElementById('action-area').innerHTML = '';
-    
-                // Disable all buttons
-                buttons.forEach(btn => btn.onclick = null);
-                document.getElementById('action-area').innerHTML = '';
+        function playSound(type) {
+            if (isMuted) return; // BULLETPROOF MUTE CHECK
+            const audio = new Audio(SOUNDS[type]);
+            audio.volume = 0.4;
+            audio.play().catch(() => {});
+        }
 
-                if (isCurrentSelectionCorrect) {
-                    score++;
-                    buttons[selectedIdx].classList.add('correct');
-                    playSound('correct'); // <--- TRIGGER CORRECT SOUND
-                } else {
-                    buttons[selectedIdx].classList.add('incorrect');
-                    playSound('wrong');   // <--- TRIGGER WRONG SOUND
-                 }
+        function toggleMute() {
+            isMuted = !isMuted;
+            localStorage.setItem('trivia-muted', isMuted);
+            document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
+        }
+
+        // --- CORE LOGIC ---
+        async function startApp() {
+            document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
+            const now = new Date();
+            let triviaDate = new Date(now);
+            if (now.getHours() < UNLOCK_HOUR) triviaDate.setDate(now.getDate() - 1);
+
+            const dateStr = `${triviaDate.getFullYear()}-${String(triviaDate.getMonth() + 1).padStart(2, '0')}-${String(triviaDate.getDate()).padStart(2, '0')}`;
+            
+            try {
+                const response = await fetch(`${dateStr}.json?v=${Date.now()}`);
+                if (!response.ok) throw new Error();
+                gameData = await response.json();
+                gameData.questions = shuffle(gameData.questions);
+                document.getElementById('game-header').classList.remove('hidden');
+                renderQuestion();
+            } catch (err) {
+                document.getElementById('question-text').innerText = "Trivia Refreshing...";
+            }
+        }
+
+        function renderQuestion() {
+            selectedIdx = null;
+            const currentQ = gameData.questions[currentIdx];
+            document.getElementById('question-text').innerText = currentQ.q;
+            document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
+            document.getElementById('action-area').innerHTML = '';
+            
+            let mappedOptions = currentQ.options.map((opt, i) => ({ text: opt, isCorrect: i === currentQ.a }));
+            mappedOptions = shuffle(mappedOptions);
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+            mappedOptions.forEach((opt, i) => {
+                const btn = document.createElement('button');
+                btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold";
+                btn.innerText = opt.text;
+                btn.onclick = () => {
+                    selectedIdx = i;
+                    isCurrentSelectionCorrect = opt.isCorrect;
+                    document.querySelectorAll('.option-btn').forEach((b, idx) => b.classList.toggle('selected', idx === i));
+                    document.getElementById('action-area').innerHTML = `<button onclick="confirmAnswer()" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">Confirm Answer</button>`;
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        function confirmAnswer() {
+            const buttons = document.querySelectorAll('.option-btn');
+            document.getElementById('action-area').innerHTML = '';
+            buttons.forEach(b => b.onclick = null);
+
+            if (isCurrentSelectionCorrect) {
+                score++;
+                buttons[selectedIdx].classList.add('correct');
+                playSound('correct');
+            } else {
+                buttons[selectedIdx].classList.add('incorrect');
+                playSound('wrong');
+            }
 
             setTimeout(() => {
                 document.getElementById('score-display').innerText = `Score: ${score}`;
@@ -239,186 +174,89 @@ function renderQuestion() {
             }, 1000);
         }
 
-        // ... startApp call and results logic from previous steps remain the same ...
-        // (Including showFinalResults, shareResults, and startCountdown)
-        
-function showFinalResults() {
-    // 1. Swap the screens
-    document.getElementById('main-card').classList.add('hidden');
-    document.getElementById('results-card').classList.remove('hidden');
-    
-    // 2. Set the final score text
-    const totalQuestions = gameData.questions.length;
-    const finalScoreDisplay = document.getElementById('final-score');
-    const resultIcon = document.querySelector('#results-card .text-5xl');
-    document.getElementById('final-score').innerText = `${score}/${gameData.questions.length}`;
+        function showFinalResults() {
+            document.getElementById('main-card').classList.add('hidden');
+            document.getElementById('results-card').classList.remove('hidden');
+            const total = gameData.questions.length;
+            document.getElementById('final-score').innerText = `${score}/${total}`;
 
-    // --- CONFETTI TRIGGER ---
-    if (score === totalQuestions) {
-        // 1. Change the Trophy to a Crown
-        resultIcon.innerText = "👑"; 
-        
-        playSound('perfect'); // <--- TRIUMPHANT FANFARE FOR PERFECT SCORE
-        // 2. Add the Glowing Text
-        const badge = document.createElement('div');
-        badge.className = "perfect-badge text-sm uppercase mb-4";
-        badge.innerText = "✨ Perfect Score ✨";
-        finalScoreDisplay.parentNode.insertBefore(badge, finalScoreDisplay);
-        fireConfetti();
-    }else {
-        playSound('finish');  // <--- STANDARD SUCCESS CHIME
-        // Reset to default if they play again and don't get 100%
-        resultIcon.innerText = "🏆";
-    }
-    // ------------------------
+            if (score === total) {
+                document.getElementById('result-emoji').innerText = "👑";
+                const badge = document.createElement('div');
+                badge.className = "perfect-badge text-sm uppercase mb-4";
+                badge.innerText = "✨ Perfect Score ✨";
+                document.getElementById('final-score').parentNode.insertBefore(badge, document.getElementById('final-score'));
+                playSound('perfect');
+                fireConfetti();
+            } else {
+                playSound('finish');
+            }
 
-    // 3. START THE TIMER (The fix for the 00:00 issue)
-    startNextTriviaCountdown();
-
-    // 4. Build the Review Section
-    const reviewSection = document.getElementById('review-section');
-    reviewSection.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Question Review & Sources</h3>';
-    
-    gameData.questions.forEach((q, index) => {
-        const item = document.createElement('div');
-        item.className = "bg-slate-900/40 p-4 rounded-xl border border-slate-700";
-        item.innerHTML = `
-            <p class="text-xs font-bold mb-1">${index + 1}. ${q.q}</p>
-            <p class="text-[11px] text-slate-400 mb-2">Answer: <span class="text-emerald-400 font-bold">${q.options[q.a]}</span></p>
-            ${q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-indigo-400 underline italic">Source: Read More</a>` : ''}
-        `;
-        reviewSection.appendChild(item);
-    });
-}
-
-function fireConfetti() {
-    const duration = 3 * 1000;
-    const end = Date.now() + duration;
-
-    (function frame() {
-        // Launch confetti from the left
-        confetti({
-            particleCount: 3,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0, y: 0.6 },
-            colors: ['#4f46e5', '#10b981', '#ffffff']
-        });
-        // Launch confetti from the right
-        confetti({
-            particleCount: 3,
-            angle: 120,
-            spread: 55,
-            origin: { x: 1, y: 0.6 },
-            colors: ['#4f46e5', '#10b981', '#ffffff']
-        });
-
-        if (Date.now() < end) {
-            requestAnimationFrame(frame);
+            startNextTimer();
+            updateStreak();
+            renderReview();
         }
-    }())
-}
 
-function shareResults() {
-    const total = gameData.questions.length;
-    const isPerfect = (score === total);
-    const streak = localStorage.getItem('trivia-streak') || 1;
-    const squares = "🟩".repeat(score) + "🟥".repeat(total - score);
-    
-    // Add a Crown to the share text if they were perfect
-    const title = isPerfect ? "👑 PERFECT DAILY TRIVIA" : "Daily Trivia";
-    
-    const text = `${title} ${new Date().toLocaleDateString()}\n🔥 Streak: ${streak}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.href}`;
-
-    if (navigator.share) {
-        navigator.share({ text: text });
-    } else {
-        navigator.clipboard.writeText(text);
-        alert("Perfect results copied to clipboard! 👑");
-    }
-}
-
-        function startCountdown() {
-            document.getElementById('question-text').innerText = "Next Trivia Unlocks at 8:00 AM";
-            const timerInterval = setInterval(() => {
+        // --- WRAP UP FUNCTIONS ---
+        function startNextTimer() {
+            const update = () => {
                 const now = new Date();
-                const target = new Date(); target.setHours(UNLOCK_HOUR, 0, 0, 0);
+                const target = new Date();
+                if (now.getHours() >= UNLOCK_HOUR) target.setDate(now.getDate() + 1);
+                target.setHours(UNLOCK_HOUR, 0, 0, 0);
                 const diff = target - now;
-                if (diff <= 0) { clearInterval(timerInterval); loadDailyFile(); return; }
-                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const m = Math.floor((diff / (1000 * 60)) % 60);
-                const s = Math.floor((diff / 1000) % 60);
-                document.getElementById('options-container').innerHTML = `
-                    <div class="bg-slate-900/50 p-8 rounded-2xl border border-indigo-500/20 text-center">
-                        <div class="text-5xl font-mono font-black text-indigo-400">${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}</div>
-                    </div>`;
-            }, 1000);
+                const h = Math.floor(diff/3600000);
+                const m = Math.floor((diff%3600000)/60000);
+                const s = Math.floor((diff%60000)/1000);
+                document.getElementById('next-trivia-timer').innerText = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+            };
+            update(); setInterval(update, 1000);
         }
 
-function startNextTriviaCountdown() {
-    const timerDisplay = document.getElementById('next-trivia-timer');
-    
-    const updateTimer = () => {
-        const now = new Date();
-        const target = new Date();
-
-        // The next "New" trivia always happens at the upcoming 8:00 AM
-        if (now.getHours() >= 8) {
-            // If it's 10:00 AM now, the next one is 8:00 AM tomorrow
-            target.setDate(now.getDate() + 1);
+        function updateStreak() {
+            const today = new Date().toDateString();
+            let streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
+            let lastDate = localStorage.getItem('trivia-last-play');
+            if (lastDate !== today) {
+                const yesterday = new Date(); yesterday.setDate(yesterday.getDate()-1);
+                streak = (lastDate === yesterday.toDateString()) ? streak + 1 : 1;
+                localStorage.setItem('trivia-streak', streak);
+                localStorage.setItem('trivia-last-play', today);
+            }
+            document.getElementById('streak-count').innerText = streak;
+            let best = Math.max(streak, parseInt(localStorage.getItem('trivia-best')) || 0);
+            localStorage.setItem('trivia-best', best);
+            document.getElementById('best-streak').innerText = best;
         }
-        // If it's 4:00 AM now, the target is 8:00 AM today
-        target.setHours(8, 0, 0, 0);
 
-        const diff = target - now;
-        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const m = Math.floor((diff / (1000 * 60)) % 60);
-        const s = Math.floor((diff / 1000) % 60);
-
-        timerDisplay.innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-    };
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
-}
-function updateStreak() {
-    const now = new Date();
-    const todayStr = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`;
-    
-    // Get stored data
-    let streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
-    let lastDate = localStorage.getItem('trivia-last-date'); // e.g., "2026-2-9"
-    let bestStreak = parseInt(localStorage.getItem('trivia-best-streak')) || 0;
-
-    if (lastDate === todayStr) {
-        // Already played today, just display current
-    } else {
-        const yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1);
-        const yesterdayStr = `${yesterday.getFullYear()}-${yesterday.getMonth()}-${yesterday.getDate()}`;
-
-        if (lastDate === yesterdayStr) {
-            // Played yesterday! Streak continues
-            streak++;
-        } else {
-            // Missed a day or first time playing
-            streak = 1;
+        function renderReview() {
+            const review = document.getElementById('review-section');
+            review.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Review & Sources</h3>';
+            gameData.questions.forEach((q, i) => {
+                const div = document.createElement('div');
+                div.className = "bg-slate-900/40 p-4 rounded-xl border border-slate-700";
+                div.innerHTML = `<p class="text-xs font-bold mb-1">${q.q}</p><p class="text-[11px] text-slate-400 mb-2">Answer: <span class="text-emerald-400 font-bold">${q.options[q.a]}</span></p>${q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-indigo-400 underline italic">Source: Learn More</a>` : ''}`;
+                review.appendChild(div);
+            });
         }
-        
-        // Save new data
-        localStorage.setItem('trivia-streak', streak);
-        localStorage.setItem('trivia-last-date', todayStr);
-        
-        if (streak > bestStreak) {
-            bestStreak = streak;
-            localStorage.setItem('trivia-best-streak', bestStreak);
-        }
-    }
 
-    // Update the UI
-    document.getElementById('streak-count').innerText = streak;
-    document.getElementById('best-streak').innerText = bestStreak;
-}
+        function fireConfetti() {
+            const end = Date.now() + 3000;
+            (function frame() {
+                confetti({ particleCount: 3, angle: 60, spread: 55, origin: { x: 0, y: 0.6 }, colors: ['#4f46e5', '#10b981'] });
+                confetti({ particleCount: 3, angle: 120, spread: 55, origin: { x: 1, y: 0.6 }, colors: ['#4f46e5', '#10b981'] });
+                if (Date.now() < end) requestAnimationFrame(frame);
+            }());
+        }
+
+        function shareResults() {
+            const total = gameData.questions.length;
+            const streak = localStorage.getItem('trivia-streak') || 1;
+            const squares = "🟩".repeat(score) + "🟥".repeat(total - score);
+            const text = `${(score===total) ? '👑 PERFECT' : 'Daily Trivia'} ${new Date().toLocaleDateString()}\n🔥 Streak: ${streak}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.href}`;
+            if (navigator.share) navigator.share({ text });
+            else { navigator.clipboard.writeText(text); alert("Results Copied!"); }
+        }
 
         startApp();
     </script>
