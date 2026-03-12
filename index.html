@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Trivia</title>
+    <meta property="og:type" content="website">
+<meta property="og:url" content="https://your-site-name.vercel.app/">
+<meta property="og:title" content="Daily Trivia Challenge">
+<meta property="og:description" content="Can you beat my streak? New trivia every morning at 8:00 AM CST.">
+<meta property="og:image" content="https://your-site-name.vercel.app/preview-image.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Trivia Challenge">
+<meta name="twitter:description" content="I just scored on today's trivia! Come play.">
+
+3. How this works on each platform:
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
@@ -14,6 +25,15 @@
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .share-btn {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    transition: all 0.3s ease;
+}
+.share-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
+}
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -183,28 +203,50 @@ async function startApp() {
             }, 1000);
         }
 
-        function showFinalResults() {
-            document.getElementById('main-card').classList.add('hidden');
-            document.getElementById('results-card').classList.remove('hidden');
-            const total = gameData.questions.length;
-            document.getElementById('final-score').innerText = `${score}/${total}`;
+function showFinalResults() {
+    document.getElementById('main-card').classList.add('hidden');
+    document.getElementById('results-card').classList.remove('hidden');
+    
+    const total = gameData.questions.length;
+    const finalScoreDisplay = document.getElementById('final-score');
+    const resultEmoji = document.getElementById('result-emoji');
+    const titleElem = document.querySelector('#results-card h2'); // Targets the "Daily Complete!" text
 
-            if (score === total) {
-                document.getElementById('result-emoji').innerText = "👑";
-                const badge = document.createElement('div');
-                badge.className = "perfect-badge text-sm uppercase mb-4";
-                badge.innerText = "✨ Perfect Score ✨";
-                document.getElementById('final-score').parentNode.insertBefore(badge, document.getElementById('final-score'));
-                playSound('perfect');
-                fireConfetti();
-            } else {
-                playSound('finish');
-            }
+    // 1. Define the Ranks
+    const ranks = [
+        { title: "Ouch...", color: "#ef4444", emoji: "💀" },       // 0/5
+        { title: "Keep Trying!", color: "#f97316", emoji: "🐣" }, // 1/5
+        { title: "Getting There", color: "#facc15", emoji: "🥉" }, // 2/5
+        { title: "Solid Effort", color: "#a855f7", emoji: "🥈" },  // 3/5
+        { title: "Trivia Pro!", color: "#3b82f6", emoji: "🥇" },   // 4/5
+        { title: "LEGENDARY!", color: "#fbbf24", emoji: "👑" }    // 5/5
+    ];
 
-            startNextTimer();
-            updateStreak();
-            renderReview();
-        }
+    // 2. Apply the Rank (Safety check: don't exceed array length)
+    const rank = ranks[score] || ranks[0];
+    
+    titleElem.innerText = rank.title;
+    titleElem.style.color = rank.color;
+    resultEmoji.innerText = rank.emoji;
+    finalScoreDisplay.innerText = `${score}/${total}`;
+
+    // 3. Perfect Score Extras
+    if (score === total) {
+        const badge = document.createElement('div');
+        badge.className = "perfect-badge text-sm uppercase mb-4";
+        badge.innerText = "✨ Perfect Score ✨";
+        finalScoreDisplay.parentNode.insertBefore(badge, finalScoreDisplay);
+        
+        playSound('perfect');
+        fireConfetti();
+    } else {
+        playSound('finish');
+    }
+
+    startNextTimer();
+    updateStreak();
+    renderReview();
+}
 
         // --- WRAP UP FUNCTIONS ---
 function startNextTimer() {
@@ -300,14 +342,47 @@ function updateStreak() {
             }());
         }
 
-        function shareResults() {
-            const total = gameData.questions.length;
-            const streak = localStorage.getItem('trivia-streak') || 1;
-            const squares = "🟩".repeat(score) + "🟥".repeat(total - score);
-            const text = `${(score===total) ? '👑 PERFECT' : 'Daily Trivia'} ${new Date().toLocaleDateString()}\n🔥 Streak: ${streak}\nScore: ${score}/${total}\n${squares}\nPlay at: ${window.location.href}`;
-            if (navigator.share) navigator.share({ text });
-            else { navigator.clipboard.writeText(text); alert("Results Copied!"); }
-        }
+function shareResults() {
+    const total = gameData.questions.length;
+    const ranks = ["Ouch...", "Keep Trying!", "Getting There", "Solid Effort", "Trivia Pro!", "LEGENDARY!"];
+    const myRank = ranks[score] || "Daily Trivia";
+    const streak = localStorage.getItem('trivia-streak') || 1;
+    
+    // Create the visual grid
+    const squares = "🟩".repeat(score) + "🟥".repeat(total - score);
+    
+    // The message body
+    const shareTitle = `Daily Trivia: ${myRank}`;
+    const shareBody = `${shareTitle}\n🔥 Streak: ${streak}\nScore: ${score}/${total}\n${squares}\n\nPlay today at: ${window.location.origin}`;
+
+    // 1. Check if the device supports the "Native Share" menu (Common on Mobile/Mac Safari)
+    if (navigator.share) {
+        navigator.share({
+            title: 'My Daily Trivia Results',
+            text: shareBody,
+            url: window.location.origin
+        }).then(() => {
+            console.log('Successful share');
+        }).catch((error) => {
+            console.log('Error sharing', error);
+        });
+    } 
+    // 2. Fallback: Copy to Clipboard (Best for PC users on Discord, Teams, etc.)
+    else {
+        navigator.clipboard.writeText(shareBody).then(() => {
+            // Visual feedback that it worked
+            const shareBtn = document.querySelector('button[onclick="shareResults()"]');
+            const originalText = shareBtn.innerText;
+            shareBtn.innerText = "✅ Copied to Clipboard!";
+            shareBtn.classList.replace('bg-indigo-600', 'bg-emerald-600');
+            
+            setTimeout(() => {
+                shareBtn.innerText = originalText;
+                shareBtn.classList.replace('bg-emerald-600', 'bg-indigo-600');
+            }, 2500);
+        });
+    }
+}
 
         startApp();
     </script>
