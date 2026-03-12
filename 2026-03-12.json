@@ -1,0 +1,34 @@
+{
+  "questions": [
+    {
+      "q": "Which country defeated South Korea on March 11, 2026, to become the first-ever Paralympic gold medallists in wheelchair mixed doubles curling?",
+      "options": ["Canada", "China", "United States", "Latvia"],
+      "a": 2,
+      "source": "https://worldcurling.org/2026/03/mico2026-whmd-medals/"
+    },
+    {
+      "q": "Which major Canadian bank announced the acquisition of the fintech startup 'Pinch Financial' today to streamline digital mortgage qualifications?",
+      "options": ["TD Bank", "Scotiabank", "RBC", "BMO"],
+      "a": 3,
+      "source": "https://www.rbc.com/newsroom/article.html?article=126084"
+    },
+    {
+      "q": "Natural Resources Minister Tim Hodgson announced today that Canada will participate in a massive release of how many barrels of oil to stabilize global energy prices?",
+      "options": ["100 million", "250 million", "400 million", "1 billion"],
+      "a": 3,
+      "source": "https://chatnewstoday.ca/2026/03/11/cp-newsalert-canada-will-do-its-part-to-help-iea-release-of-oil-reserves-hodgson/"
+    },
+    {
+      "q": "In a significant political move today, Nunavut MP Lori Idlout officially crossed the floor to join which federal party's caucus?",
+      "options": ["Conservative Party", "Liberal Party", "Green Party", "Bloc Québécois"],
+      "a": 2,
+      "source": "https://www.ctvnews.ca/politics/article/tom-mulcair-lori-idlouts-move-to-liberals-brings-rewards-to-far-north/"
+    },
+    {
+      "q": "American athlete Oksana Masters made history today at the 2026 Paralympics by winning her 13th career gold medal in which event?",
+      "options": ["Para ice hockey", "10km individual cross-country skiing", "Women's standing Super-G", "Wheelchair curling"],
+      "a": 2,
+      "source": "https://www.olympics.com/en/milano-cortina-2026/paralympic-games/news/highlights-from-wednesday-11-march-at-the-milano-cortina-2026-paralympic-winter-games"
+    }
+  ]
+}

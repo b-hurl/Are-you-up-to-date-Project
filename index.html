@@ -102,26 +102,34 @@
             document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
         }
 
-        // --- CORE LOGIC ---
-        async function startApp() {
-            document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
-            const now = new Date();
-            let triviaDate = new Date(now);
-            if (now.getHours() < UNLOCK_HOUR) triviaDate.setDate(now.getDate() - 1);
+// 8:00 AM CST is 14:00 UTC
+const UNLOCK_UTC_HOUR = 14; 
 
-            const dateStr = `${triviaDate.getFullYear()}-${String(triviaDate.getMonth() + 1).padStart(2, '0')}-${String(triviaDate.getDate()).padStart(2, '0')}`;
-            
-            try {
-                const response = await fetch(`${dateStr}.json?v=${Date.now()}`);
-                if (!response.ok) throw new Error();
-                gameData = await response.json();
-                gameData.questions = shuffle(gameData.questions);
-                document.getElementById('game-header').classList.remove('hidden');
-                renderQuestion();
-            } catch (err) {
-                document.getElementById('question-text').innerText = "Trivia Refreshing...";
-            }
-        }
+async function startApp() {
+    document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
+    
+    const now = new Date();
+    // Use UTC to determine the "Trivia Day"
+    let triviaDate = new Date(now);
+
+    // If it's before 14:00 UTC, we are still on the "Previous" day's trivia
+    if (now.getUTCHours() < UNLOCK_UTC_HOUR) {
+        triviaDate.setUTCDate(now.getUTCDate() - 1);
+    }
+
+    const dateStr = `${triviaDate.getUTCFullYear()}-${String(triviaDate.getUTCMonth() + 1).padStart(2, '0')}-${String(triviaDate.getUTCDate()).padStart(2, '0')}`;
+    
+    try {
+        const response = await fetch(`${dateStr}.json?v=${Date.now()}`);
+        if (!response.ok) throw new Error();
+        gameData = await response.json();
+        gameData.questions = shuffle(gameData.questions);
+        document.getElementById('game-header').classList.remove('hidden');
+        renderQuestion();
+    } catch (err) {
+        document.getElementById('question-text').innerText = "Syncing with Server...";
+    }
+}
 
         function renderQuestion() {
             selectedIdx = null;
@@ -198,20 +206,37 @@
         }
 
         // --- WRAP UP FUNCTIONS ---
-        function startNextTimer() {
-            const update = () => {
-                const now = new Date();
-                const target = new Date();
-                if (now.getHours() >= UNLOCK_HOUR) target.setDate(now.getDate() + 1);
-                target.setHours(UNLOCK_HOUR, 0, 0, 0);
-                const diff = target - now;
-                const h = Math.floor(diff/3600000);
-                const m = Math.floor((diff%3600000)/60000);
-                const s = Math.floor((diff%60000)/1000);
-                document.getElementById('next-trivia-timer').innerText = `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
-            };
-            update(); setInterval(update, 1000);
+function startNextTimer() {
+    const update = () => {
+        const now = new Date();
+        const target = new Date();
+
+        // Set the target to 14:00 UTC today
+        target.setUTCHours(UNLOCK_UTC_HOUR, 0, 0, 0);
+
+        // If 14:00 UTC has already passed today, target 14:00 UTC tomorrow
+        if (now.getUTCHours() >= UNLOCK_UTC_HOUR) {
+            target.setUTCDate(target.getUTCDate() + 1);
         }
+
+        const diff = target - now;
+
+        if (diff <= 0) {
+            location.reload(); 
+            return;
+        }
+
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        
+        document.getElementById('next-trivia-timer').innerText = 
+            `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+    };
+
+    update(); 
+    setInterval(update, 1000);
+}
 
         function updateStreak() {
             const today = new Date().toDateString();
