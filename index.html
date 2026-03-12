@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/50 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
+    <span id="mute-icon" class="text-xl">🔊</span>
+</button>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Trivia</title>
@@ -28,6 +31,7 @@
             font-weight: 900;
             letter-spacing: 0.1em;
         }
+        #mute-btn:active { transform: scale(0.9); }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -79,6 +83,27 @@
         let score = 0;
         let gameData = null;
         let selectedIdx = null;
+        let isMuted = localStorage.getItem('trivia-muted') === 'true';
+
+// Update icon on page load
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
+});
+
+function toggleMute() {
+    isMuted = !isMuted;
+    localStorage.setItem('trivia-muted', isMuted);
+    document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
+}
+
+// Update your playSound function to check this variable
+function playSound(type) {
+    if (isMuted) return; // Exit if muted
+
+    const audio = new Audio(SOUNDS[type]);
+    audio.volume = 0.5;
+    audio.play().catch(e => console.log("Audio play blocked."));
+}
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
