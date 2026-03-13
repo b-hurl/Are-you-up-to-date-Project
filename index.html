@@ -206,6 +206,7 @@ function startNewSession(data, date) {
 function renderQuestion() {
     selectedIdx = null;
     const currentQ = gameData.questions[currentIdx];
+    document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
     document.getElementById('question-text').innerText = currentQ.q;
     
     const container = document.getElementById('options-container');
