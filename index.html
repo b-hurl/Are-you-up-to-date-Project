@@ -164,6 +164,19 @@ async function startApp() {
             startNewSession(freshData, gameDate);
         }
 
+        // Inside your startApp logic where you parse the session:
+if (session.date === gameDate) {
+    gameData = { questions: session.shuffledQuestions };
+    currentIdx = session.currentIdx;
+    score = session.score;
+    window.userChoices = session.userChoices || []; // RESTORE CHOICES
+    
+    if (session.isFinished) {
+        showFinalResults();
+        return;
+    }
+}
+
         // --- FINAL SAFETY CHECK ---
         // Ensure UI matches loaded state before rendering
         document.getElementById('score-display').innerText = `Score: ${score}`;
@@ -211,12 +224,17 @@ function startNewSession(data, date) {
 let isProcessing = false; // Add this at the top of your script
 
 function confirmAnswer() {
-    // 1. If we are already moving to the next question, stop everything.
     if (isProcessing) return; 
+    isProcessing = true;
     
-    isProcessing = true; // Lock the game
+    // Initialize the choices array if it doesn't exist
+    if (!window.userChoices) window.userChoices = [];
+    
+    // SAVE the user's current selection index
+    window.userChoices.push(selectedIdx);
+
     const buttons = document.querySelectorAll('.option-btn');
-    document.getElementById('action-area').innerHTML = ''; // Hide confirm button immediately
+    document.getElementById('action-area').innerHTML = '';
 
     if (isCurrentSelectionCorrect) {
         score++;
@@ -229,12 +247,11 @@ function confirmAnswer() {
 
     document.getElementById('score-display').innerText = `Score: ${score}`;
 
-    // 2. We ONLY increment the index inside this timer
     setTimeout(() => {
         if (currentIdx < gameData.questions.length - 1) {
             currentIdx++;
             saveSession(false); 
-            isProcessing = false; // Unlock for the next question
+            isProcessing = false;
             renderQuestion();
         } else {
             saveSession(true);
@@ -243,7 +260,6 @@ function confirmAnswer() {
         }
     }, 1000);
 }
-
 function showFinalResults() {
 // Force the UI to switch to results mode
     document.getElementById('main-card').classList.add('hidden');
@@ -366,16 +382,32 @@ function updateStreak() {
     document.getElementById('best-streak').innerText = best;
 }
 
-        function renderReview() {
-            const review = document.getElementById('review-section');
-            review.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Review & Sources</h3>';
-            gameData.questions.forEach((q, i) => {
-                const div = document.createElement('div');
-                div.className = "bg-slate-900/40 p-4 rounded-xl border border-slate-700";
-                div.innerHTML = `<p class="text-xs font-bold mb-1">${q.q}</p><p class="text-[11px] text-slate-400 mb-2">Answer: <span class="text-emerald-400 font-bold">${q.options[q.a]}</span></p>${q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-indigo-400 underline italic">Source: Learn More</a>` : ''}`;
-                review.appendChild(div);
-            });
-        }
+function renderReview() {
+    const review = document.getElementById('review-section');
+    review.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Your Answers</h3>';
+    
+    const choices = window.userChoices || [];
+
+    gameData.questions.forEach((q, i) => {
+        const userClicked = choices[i];
+        const isCorrect = userClicked === q.a;
+        
+        const div = document.createElement('div');
+        div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
+        
+        div.innerHTML = `
+            <p class="text-xs font-bold mb-2">${q.q}</p>
+            <div class="flex flex-col gap-1 text-[11px]">
+                <p class="${isCorrect ? 'text-emerald-400' : 'text-red-400'}">
+                    ${isCorrect ? '✅' : '❌'} Your Answer: ${q.options[userClicked] || 'Skipped'}
+                </p>
+                ${!isCorrect ? `<p class="text-emerald-400 font-bold">✅ Correct Answer: ${q.options[q.a]}</p>` : ''}
+                ${q.source ? `<a href="${q.source}" target="_blank" class="text-indigo-400 underline mt-1">Learn More</a>` : ''}
+            </div>
+        `;
+        review.appendChild(div);
+    });
+}
 
         function fireConfetti() {
             const end = Date.now() + 3000;
@@ -428,13 +460,15 @@ function shareResults() {
     }
 }
 
+// Add 'userChoices' to the session object
 function saveSession(isFinished = false) {
     const session = {
         date: getGameDate(),
         shuffledQuestions: gameData.questions,
         currentIdx: currentIdx,
         score: score,
-        isFinished: isFinished // New flag
+        isFinished: isFinished,
+        userChoices: window.userChoices || [] // Store the array of answers
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
 }
