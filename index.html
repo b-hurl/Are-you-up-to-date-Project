@@ -443,7 +443,11 @@ async function fetchAndDisplayLeaderboard() {
         display.appendChild(list);
     } catch (error) {
         console.error("Error fetching leaderboard:", error);
-        display.innerHTML = '<p class="text-red-400 text-sm text-center">Could not load leaderboard.</p>';
+        if (error.message && error.message.includes("index")) {
+            display.innerHTML = '<p class="text-amber-400 text-xs text-center mt-2">⚠️ Missing Firestore Index.<br>Open your browser console (F12) and click the link provided by Firebase to create it.</p>';
+        } else {
+            display.innerHTML = `<p class="text-red-400 text-xs text-center mt-2">Error: ${error.code || error.message}</p>`;
+        }
     }
 }
 
