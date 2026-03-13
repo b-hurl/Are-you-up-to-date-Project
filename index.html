@@ -180,38 +180,55 @@ async function startApp() {
     }
 }
 function startNewSession(data, date) {
-    gameData = data;
-    gameData.questions = shuffle([...data.questions]); // Shuffle a copy
+    // 1. Map the correct answer text to each question BEFORE shuffling
+    gameData = {
+        questions: data.questions.map(q => {
+            return {
+                ...q,
+                correctText: q.options[q.a] // Store the actual correct string
+            };
+        })
+    };
+
+    // 2. Now shuffle the questions and the options safely
+    gameData.questions = shuffle(gameData.questions);
+    gameData.questions.forEach(q => {
+        q.options = shuffle([...q.options]);
+    });
+
     currentIdx = 0;
     score = 0;
-    window.userChoices = []; // Reset the user's answers
-    saveSession(false); // Save this fresh start to localStorage immediately
+    window.userChoices = [];
+    saveSession(false);
 }
-        function renderQuestion() {
-            selectedIdx = null;
-            const currentQ = gameData.questions[currentIdx];
-            document.getElementById('question-text').innerText = currentQ.q;
-            document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
-            document.getElementById('action-area').innerHTML = '';
-            
-            let mappedOptions = currentQ.options.map((opt, i) => ({ text: opt, isCorrect: i === currentQ.a }));
-            mappedOptions = shuffle(mappedOptions);
 
-            const container = document.getElementById('options-container');
-            container.innerHTML = '';
-            mappedOptions.forEach((opt, i) => {
-                const btn = document.createElement('button');
-                btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold";
-                btn.innerText = opt.text;
-                btn.onclick = () => {
-                    selectedIdx = i;
-                    isCurrentSelectionCorrect = opt.isCorrect;
-                    document.querySelectorAll('.option-btn').forEach((b, idx) => b.classList.toggle('selected', idx === i));
-                    document.getElementById('action-area').innerHTML = `<button onclick="confirmAnswer()" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">Confirm Answer</button>`;
-                };
-                container.appendChild(btn);
-            });
-        }
+// Update the renderQuestion to handle the new format
+function renderQuestion() {
+    selectedIdx = null;
+    const currentQ = gameData.questions[currentIdx];
+    document.getElementById('question-text').innerText = currentQ.q;
+    
+    const container = document.getElementById('options-container');
+    container.innerHTML = '';
+    
+    currentQ.options.forEach((opt, i) => {
+        const btn = document.createElement('button');
+        btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold";
+        btn.innerText = opt;
+        btn.onclick = () => {
+            selectedIdx = i;
+            // Check if the text of this button matches our stored correct text
+            isCurrentSelectionCorrect = (opt === currentQ.correctText);
+            
+            document.querySelectorAll('.option-btn').forEach((b, idx) => 
+                b.classList.toggle('selected', idx === i));
+            
+            document.getElementById('action-area').innerHTML = 
+                `<button onclick="confirmAnswer()" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">Confirm Answer</button>`;
+        };
+        container.appendChild(btn);
+    });
+}
 
 let isProcessing = false; // Add this at the top of your script
 
@@ -381,8 +398,9 @@ function renderReview() {
     const choices = window.userChoices || [];
 
     gameData.questions.forEach((q, i) => {
-        const userClicked = choices[i];
-        const isCorrect = userClicked === q.a;
+        const userClickedIdx = choices[i];
+        const userClickedText = q.options[userClickedIdx];
+        const isCorrect = userClickedText === q.correctText;
         
         const div = document.createElement('div');
         div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
@@ -391,10 +409,9 @@ function renderReview() {
             <p class="text-xs font-bold mb-2">${q.q}</p>
             <div class="flex flex-col gap-1 text-[11px]">
                 <p class="${isCorrect ? 'text-emerald-400' : 'text-red-400'}">
-                    ${isCorrect ? '✅' : '❌'} Your Answer: ${q.options[userClicked] || 'Skipped'}
+                    ${isCorrect ? '✅' : '❌'} Your Answer: ${userClickedText || 'Skipped'}
                 </p>
-                ${!isCorrect ? `<p class="text-emerald-400 font-bold">✅ Correct Answer: ${q.options[q.a]}</p>` : ''}
-                ${q.source ? `<a href="${q.source}" target="_blank" class="text-indigo-400 underline mt-1">Learn More</a>` : ''}
+                ${!isCorrect ? `<p class="text-emerald-400 font-bold">✅ Correct Answer: ${q.correctText}</p>` : ''}
             </div>
         `;
         review.appendChild(div);
