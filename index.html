@@ -150,22 +150,26 @@ async function startApp() {
                 gameData = { questions: session.shuffledQuestions };
                 currentIdx = session.currentIdx;
                 score = session.score;
-                document.getElementById('score-display').innerText = `Score: ${score}`;
-
-                // --- NEW REDIRECT LOGIC ---
+                
                 if (session.isFinished) {
-                    showFinalResults(); 
-                    return; // Stop here, don't render questions
+                    showFinalResults();
+                    return; // EXIT IMMEDIATELY
                 }
             } else {
+                // New day - clear old storage
+                localStorage.removeItem('trivia-session');
                 startNewSession(freshData, gameDate);
             }
         } else {
             startNewSession(freshData, gameDate);
         }
 
+        // --- FINAL SAFETY CHECK ---
+        // Ensure UI matches loaded state before rendering
+        document.getElementById('score-display').innerText = `Score: ${score}`;
         document.getElementById('game-header').classList.remove('hidden');
         renderQuestion();
+        
     } catch (err) {
         document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
     }
@@ -204,9 +208,15 @@ function startNewSession(data, date) {
             });
         }
 
+let isProcessing = false; // Add this at the top of your script
+
 function confirmAnswer() {
+    // 1. If we are already moving to the next question, stop everything.
+    if (isProcessing) return; 
+    
+    isProcessing = true; // Lock the game
     const buttons = document.querySelectorAll('.option-btn');
-    document.getElementById('action-area').innerHTML = '';
+    document.getElementById('action-area').innerHTML = ''; // Hide confirm button immediately
 
     if (isCurrentSelectionCorrect) {
         score++;
@@ -217,24 +227,18 @@ function confirmAnswer() {
         playSound('wrong');
     }
 
-    // Inside your setTimeout in confirmAnswer:
-    if (currentIdx < gameData.questions.length - 1) {
-            currentIdx++;
-            saveSession(false); 
-            renderQuestion();
-    } else {
-            saveSession(true); // <--- Mark as finished
-            showFinalResults();
-    }
+    document.getElementById('score-display').innerText = `Score: ${score}`;
+
+    // 2. We ONLY increment the index inside this timer
     setTimeout(() => {
         if (currentIdx < gameData.questions.length - 1) {
             currentIdx++;
-            saveSession(); // <--- Save progress and order
+            saveSession(false); 
+            isProcessing = false; // Unlock for the next question
             renderQuestion();
         } else {
-            // Game over: We keep the session saved so they see their results
-            // but we can mark it as "finished" if we want.
-            saveSession(); 
+            saveSession(true);
+            isProcessing = false; 
             showFinalResults();
         }
     }, 1000);
