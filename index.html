@@ -202,6 +202,7 @@ async function startApp() {
         renderQuestion();
         
     } catch (err) {
+        console.error("Error loading trivia:", err);
         document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
     }
 }
