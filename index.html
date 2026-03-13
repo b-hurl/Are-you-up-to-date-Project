@@ -160,6 +160,7 @@ async function startApp() {
                 currentIdx = session.currentIdx;
                 score = session.score;
                 window.userChoices = session.userChoices || [];
+                selectedIdx = session.selectedIdx ?? null;
 
                 if (session.isFinished) {
                     showFinalResults();
@@ -199,12 +200,12 @@ function startNewSession(data, date) {
     currentIdx = 0;
     score = 0;
     window.userChoices = [];
+    selectedIdx = null;
     saveSession(false);
 }
 
 // Update the renderQuestion to handle the new format
 function renderQuestion() {
-    selectedIdx = null;
     const currentQ = gameData.questions[currentIdx];
     document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
     document.getElementById('question-text').innerText = currentQ.q;
@@ -212,12 +213,19 @@ function renderQuestion() {
     const container = document.getElementById('options-container');
     container.innerHTML = '';
     
+    // Clear action area to prevent duplicates on re-render
+    document.getElementById('action-area').innerHTML = '';
+    
     currentQ.options.forEach((opt, i) => {
         const btn = document.createElement('button');
-        btn.className = "option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold";
+        const isSelected = (i === selectedIdx);
+        if (isSelected) isCurrentSelectionCorrect = (opt === currentQ.correctText);
+        
+        btn.className = `option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold ${isSelected ? 'selected' : ''}`;
         btn.innerText = opt;
         btn.onclick = () => {
             selectedIdx = i;
+            saveSession(); // Save immediately on click
             // Check if the text of this button matches our stored correct text
             isCurrentSelectionCorrect = (opt === currentQ.correctText);
             
@@ -229,6 +237,12 @@ function renderQuestion() {
         };
         container.appendChild(btn);
     });
+
+    // If we restored a selection, ensure the confirm button is visible
+    if (selectedIdx !== null) {
+        document.getElementById('action-area').innerHTML = 
+            `<button onclick="confirmAnswer()" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">Confirm Answer</button>`;
+    }
 }
 
 let isProcessing = false; // Add this at the top of your script
@@ -260,6 +274,7 @@ function confirmAnswer() {
     setTimeout(() => {
         if (currentIdx < gameData.questions.length - 1) {
             currentIdx++;
+            selectedIdx = null; // Reset selection for the next question
             saveSession(false); 
             isProcessing = false;
             renderQuestion();
@@ -478,7 +493,8 @@ function saveSession(isFinished = false) {
         currentIdx: currentIdx,
         score: score,
         isFinished: isFinished,
-        userChoices: window.userChoices || [] // Store the array of answers
+        userChoices: window.userChoices || [], // Store the array of answers
+        selectedIdx: selectedIdx
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
 }
