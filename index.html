@@ -142,23 +142,25 @@ async function startApp() {
         if (!response.ok) throw new Error();
         const freshData = await response.json();
         
-        // Try to load a saved session
         const saved = localStorage.getItem('trivia-session');
         if (saved) {
             const session = JSON.parse(saved);
             
-            // Only restore if the saved session is for the CURRENT game date
             if (session.date === gameDate) {
                 gameData = { questions: session.shuffledQuestions };
                 currentIdx = session.currentIdx;
                 score = session.score;
                 document.getElementById('score-display').innerText = `Score: ${score}`;
+
+                // --- NEW REDIRECT LOGIC ---
+                if (session.isFinished) {
+                    showFinalResults(); 
+                    return; // Stop here, don't render questions
+                }
             } else {
-                // It's a new day! Clear old session and start fresh
                 startNewSession(freshData, gameDate);
             }
         } else {
-            // First time opening the app today
             startNewSession(freshData, gameDate);
         }
 
@@ -215,6 +217,15 @@ function confirmAnswer() {
         playSound('wrong');
     }
 
+    // Inside your setTimeout in confirmAnswer:
+    if (currentIdx < gameData.questions.length - 1) {
+            currentIdx++;
+            saveSession(false); 
+            renderQuestion();
+    } else {
+            saveSession(true); // <--- Mark as finished
+            showFinalResults();
+    }
     setTimeout(() => {
         if (currentIdx < gameData.questions.length - 1) {
             currentIdx++;
@@ -230,7 +241,9 @@ function confirmAnswer() {
 }
 
 function showFinalResults() {
+// Force the UI to switch to results mode
     document.getElementById('main-card').classList.add('hidden');
+    document.getElementById('game-header').classList.add('hidden'); // Hide the score/progress bar
     document.getElementById('results-card').classList.remove('hidden');
     
     const total = gameData.questions.length;
@@ -411,12 +424,13 @@ function shareResults() {
     }
 }
 
-function saveSession(date = getGameDate()) {
+function saveSession(isFinished = false) {
     const session = {
-        date: date,
+        date: getGameDate(),
         shuffledQuestions: gameData.questions,
         currentIdx: currentIdx,
-        score: score
+        score: score,
+        isFinished: isFinished // New flag
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
 }
