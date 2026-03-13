@@ -136,13 +136,32 @@ function getGameDate() {
 
 async function startApp() {
     const gameDate = getGameDate();
-    console.log("Current Game Date:", gameDate);
-
+    
     try {
         const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
         if (!response.ok) throw new Error();
-        gameData = await response.json();
-        gameData.questions = shuffle(gameData.questions);
+        const freshData = await response.json();
+        
+        // Try to load a saved session
+        const saved = localStorage.getItem('trivia-session');
+        if (saved) {
+            const session = JSON.parse(saved);
+            
+            // Only restore if the saved session is for the CURRENT game date
+            if (session.date === gameDate) {
+                gameData = { questions: session.shuffledQuestions };
+                currentIdx = session.currentIdx;
+                score = session.score;
+                document.getElementById('score-display').innerText = `Score: ${score}`;
+            } else {
+                // It's a new day! Clear old session and start fresh
+                startNewSession(freshData, gameDate);
+            }
+        } else {
+            // First time opening the app today
+            startNewSession(freshData, gameDate);
+        }
+
         document.getElementById('game-header').classList.remove('hidden');
         renderQuestion();
     } catch (err) {
@@ -150,6 +169,13 @@ async function startApp() {
     }
 }
 
+function startNewSession(data, date) {
+    gameData = data;
+    gameData.questions = shuffle(gameData.questions);
+    currentIdx = 0;
+    score = 0;
+    saveSession(date);
+}
         function renderQuestion() {
             selectedIdx = null;
             const currentQ = gameData.questions[currentIdx];
@@ -176,30 +202,32 @@ async function startApp() {
             });
         }
 
-        function confirmAnswer() {
-            const buttons = document.querySelectorAll('.option-btn');
-            document.getElementById('action-area').innerHTML = '';
-            buttons.forEach(b => b.onclick = null);
+function confirmAnswer() {
+    const buttons = document.querySelectorAll('.option-btn');
+    document.getElementById('action-area').innerHTML = '';
 
-            if (isCurrentSelectionCorrect) {
-                score++;
-                buttons[selectedIdx].classList.add('correct');
-                playSound('correct');
-            } else {
-                buttons[selectedIdx].classList.add('incorrect');
-                playSound('wrong');
-            }
+    if (isCurrentSelectionCorrect) {
+        score++;
+        buttons[selectedIdx].classList.add('correct');
+        playSound('correct');
+    } else {
+        buttons[selectedIdx].classList.add('incorrect');
+        playSound('wrong');
+    }
 
-            setTimeout(() => {
-                document.getElementById('score-display').innerText = `Score: ${score}`;
-                if (currentIdx < gameData.questions.length - 1) {
-                    currentIdx++;
-                    renderQuestion();
-                } else {
-                    showFinalResults();
-                }
-            }, 1000);
+    setTimeout(() => {
+        if (currentIdx < gameData.questions.length - 1) {
+            currentIdx++;
+            saveSession(); // <--- Save progress and order
+            renderQuestion();
+        } else {
+            // Game over: We keep the session saved so they see their results
+            // but we can mark it as "finished" if we want.
+            saveSession(); 
+            showFinalResults();
         }
+    }, 1000);
+}
 
 function showFinalResults() {
     document.getElementById('main-card').classList.add('hidden');
@@ -381,6 +409,40 @@ function shareResults() {
             }, 2500);
         });
     }
+}
+
+function saveSession(date = getGameDate()) {
+    const session = {
+        date: date,
+        shuffledQuestions: gameData.questions,
+        currentIdx: currentIdx,
+        score: score
+    };
+    localStorage.setItem('trivia-session', JSON.stringify(session));
+}
+
+function saveProgress() {
+    const progress = {
+        idx: currentIdx,
+        score: score,
+        date: getGameDate() // Use our unified Game Date function
+    };
+    localStorage.setItem('trivia-progress', JSON.stringify(progress));
+}
+
+function loadProgress() {
+    const saved = localStorage.getItem('trivia-progress');
+    if (saved) {
+        const progress = JSON.parse(saved);
+        // Only restore progress if it belongs to TODAY'S game
+        if (progress.date === getGameDate()) {
+            currentIdx = progress.idx;
+            score = progress.score;
+            document.getElementById('score-display').innerText = `Score: ${score}`;
+            return true; 
+        }
+    }
+    return false; // No valid progress found
 }
 
         startApp();

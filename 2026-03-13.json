@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "q": "Which major piece of Canadian legislation officially received Royal Assent today, bringing middle-class tax cuts and the removal of the federal fuel charge into law?",
+      "options": [
+        "The Budget 2026 Act",
+        "The Making Life More Affordable for Canadians Act (Bill C-4)",
+        "The Carbon Tax Repeal Bill",
+        "The Housing & Groceries Relief Act"
+      ],
+      "a": 1,
+      "source": "https://www.canada.ca/en/department-finance/news/2026/03/legislation-to-make-life-more-affordable-receives-royal-assent.html"
+    },
+    {
+      "q": "Federal investigators are treating a violent attack on one of the United States' largest Reform synagogues in which city today as a targeted act of violence against the Jewish community?",
+      "options": [
+        "West Bloomfield, Michigan",
+        "Chicago, Illinois",
+        "Pittsburgh, Pennsylvania",
+        "Los Angeles, California"
+      ],
+      "a": 0,
+      "source": "https://www.ctvnews.ca/world/article/armed-suspect-in-michigan-synagogue-attack-dead-ap-source-says/"
+    },
+    {
+      "q": "The Canadian government introduced Bill C-22 today, which would grant new powers to law enforcement and which agency to investigate digital threats and organized crime?",
+      "options": [
+        "The RCMP Cyber Task Force",
+        "The Canada Border Services Agency (CBSA)",
+        "The Canadian Security Intelligence Service (CSIS)",
+        "The Communications Security Establishment (CSE)"
+      ],
+      "a": 2,
+      "source": "https://www.canada.ca/en/public-safety-canada/news/2026/03/canada-introduces-new-tools-for-law-enforcement-to-investigate-threats-and-keep-canadians-safe.html"
+    },
+    {
+      "q": "Canada announced over $37.7 million in humanitarian funding today to provide food, water, and medical services to civilians in which conflict-affected country?",
+      "options": [
+        "Ukraine",
+        "Lebanon",
+        "Sudan",
+        "Yemen"
+      ],
+      "a": 1,
+      "source": "https://www.canada.ca/en/global-affairs/news/2026/03/canada-providing-aid-to-help-address-growing-humanitarian-needs-in-lebanon.html"
+    },
+    {
+      "q": "The Privacy Commissioner of Canada tabled a special report in Parliament today regarding an investigation into which controversial mobile application?",
+      "options": [
+        "TikTok",
+        "ArriveCAN",
+        "COVID Alert",
+        "Phoenix Pay System"
+      ],
+      "a": 1,
+      "source": "https://www.priv.gc.ca/en/opc-news/news-and-announcements/2026/nr-c_260312/"
+    }
+  ]
+}
