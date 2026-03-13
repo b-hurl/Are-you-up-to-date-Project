@@ -15,6 +15,10 @@
 <meta name="twitter:description" content="I just scored on today's trivia! Come play.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+
     <style>
         .option-btn { transition: all 0.2s ease; }
         .selected { background-color: #4f46e5 !important; border-color: #818cf8 !important; transform: scale(1.02); box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
@@ -32,6 +36,7 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
 }
+        .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -48,7 +53,6 @@
         <div id="content-area" class="text-center">
             <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8">Loading Today's Challenge...</h2>
             <div id="options-container" class="space-y-3 mb-6"></div>
-            <div id="action-area" class="h-16 flex items-center justify-center"></div>
         </div>
     </div>
 
@@ -74,6 +78,16 @@
 
         <div id="final-score" class="text-6xl font-black text-indigo-400 mb-6">0/0</div>
         <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2 scrollbar-hide"></div>
+
+        <!-- Leaderboard Section -->
+        <div id="leaderboard-section" class="text-left mb-6">
+            <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-3">Today's Leaderboard</h3>
+            <div id="leaderboard-submit-form" class="flex gap-2 mb-3">
+                <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
+                <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
+            </div>
+            <div id="leaderboard-display" class="glass-panel rounded-xl p-4 max-h-48 overflow-y-auto scrollbar-hide"><p class="text-slate-400 text-sm text-center">Loading leaderboard...</p></div>
+        </div>
         
         <div class="space-y-3">
             <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
@@ -97,6 +111,8 @@
         let gameData = null;
         let selectedIdx = null;
         let isCurrentSelectionCorrect = false;
+        let db = null;
+        let userId = null;
 
         // --- UTILITIES ---
         function shuffle(array) {
@@ -105,6 +121,15 @@
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
+        }
+
+        function getOrSetUserId() {
+            let id = localStorage.getItem('trivia-userId');
+            if (!id) {
+                id = 'user_' + Date.now() + Math.random().toString(36).substring(2, 9);
+                localStorage.setItem('trivia-userId', id);
+            }
+            return id;
         }
 
         function playSound(type) {
@@ -331,9 +356,94 @@ function showFinalResults() {
     startNextTimer();
     updateStreak();
     renderReview();
+
+    // Pre-fill name and fetch leaderboard
+    document.getElementById('player-name').value = localStorage.getItem('trivia-name') || '';
+    if (db) {
+        checkIfSubmitted();
+        fetchAndDisplayLeaderboard();
+    }
 }
 
         // --- WRAP UP FUNCTIONS ---
+
+async function submitScore() {
+    const name = document.getElementById('player-name').value.trim();
+    if (!name) {
+        alert("Please enter a name to submit your score.");
+        return;
+    }
+    localStorage.setItem('trivia-name', name);
+
+    const btn = document.getElementById('submit-score-btn');
+    btn.disabled = true;
+    btn.innerText = "Submitting...";
+
+    const gameDate = getGameDate();
+    const scoreData = {
+        name: name,
+        score: score,
+        date: gameDate,
+        userId: userId,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    };
+
+    try {
+        // Use the date and userId to create a unique ID for the document
+        // This prevents a user from submitting more than once per day
+        const docId = `${gameDate}_${userId}`;
+        await db.collection('scores').doc(docId).set(scoreData);
+        
+        document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score has been submitted!</p>`;
+        fetchAndDisplayLeaderboard(); // Refresh the leaderboard with the new score
+    } catch (error) {
+        console.error("Error submitting score: ", error);
+        alert("Could not submit score. Please try again.");
+        btn.disabled = false;
+        btn.innerText = "Submit Score";
+    }
+}
+
+async function checkIfSubmitted() {
+    const docId = `${getGameDate()}_${userId}`;
+    const doc = await db.collection('scores').doc(docId).get();
+    if (doc.exists) {
+        document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score for today is on the board!</p>`;
+    }
+}
+
+async function fetchAndDisplayLeaderboard() {
+    const display = document.getElementById('leaderboard-display');
+    try {
+        const snapshot = await db.collection('scores')
+            .where('date', '==', getGameDate())
+            .orderBy('score', 'desc')
+            .orderBy('timestamp', 'asc')
+            .limit(50)
+            .get();
+
+        if (snapshot.empty) {
+            display.innerHTML = '<p class="text-slate-400 text-sm text-center">Be the first to get on the leaderboard today!</p>';
+            return;
+        }
+
+        display.innerHTML = ''; // Clear loading/previous state
+        const list = document.createElement('ol');
+        list.className = "list-decimal list-inside space-y-2";
+        snapshot.forEach(doc => {
+            const data = doc.data();
+            const item = document.createElement('li');
+            item.className = `text-sm font-semibold flex justify-between items-center ${data.userId === userId ? 'text-indigo-300 font-black' : ''}`;
+            item.innerHTML = `<span>${data.name}</span> <span class="font-mono bg-slate-700/50 px-2 py-0.5 rounded">${data.score}/5</span>`;
+            list.appendChild(item);
+        });
+        display.appendChild(list);
+    } catch (error) {
+        console.error("Error fetching leaderboard:", error);
+        display.innerHTML = '<p class="text-red-400 text-sm text-center">Could not load leaderboard.</p>';
+    }
+}
+
 function startNextTimer() {
     const timerElem = document.getElementById('next-trivia-timer');
     
@@ -499,30 +609,30 @@ function saveSession(isFinished = false) {
     localStorage.setItem('trivia-session', JSON.stringify(session));
 }
 
-function saveProgress() {
-    const progress = {
-        idx: currentIdx,
-        score: score,
-        date: getGameDate() // Use our unified Game Date function
+function initFirebase() {
+    // --- IMPORTANT ---
+    // PASTE YOUR FIREBASE CONFIGURATION OBJECT HERE
+    const firebaseConfig = {
+        apiKey: "AIzaSyAy8v_7mtvsLatU1VZLcH4XCuyWuFWte68",
+        authDomain: "are-you-up-to-date.firebaseapp.com",
+        projectId: "are-you-up-to-date",
+        storageBucket: "are-you-up-to-date.firebasestorage.app",
+        messagingSenderId: "158814738632",
+        appId: "1:158814738632:web:056503f7789d8c42c5edfd",
+        measurementId: "G-E6BHXMTQ4M"
     };
-    localStorage.setItem('trivia-progress', JSON.stringify(progress));
-}
 
-function loadProgress() {
-    const saved = localStorage.getItem('trivia-progress');
-    if (saved) {
-        const progress = JSON.parse(saved);
-        // Only restore progress if it belongs to TODAY'S game
-        if (progress.date === getGameDate()) {
-            currentIdx = progress.idx;
-            score = progress.score;
-            document.getElementById('score-display').innerText = `Score: ${score}`;
-            return true; 
-        }
+    if (!firebaseConfig.apiKey || firebaseConfig.apiKey.includes("YOUR_")) {
+        console.warn("Firebase config is missing. Leaderboard will be disabled.");
+        document.getElementById('leaderboard-section').innerHTML = '<p class="text-center text-sm text-amber-500">Leaderboard is not configured.</p>';
+        return;
     }
-    return false; // No valid progress found
-}
 
+    firebase.initializeApp(firebaseConfig);
+    db = firebase.firestore();
+    userId = getOrSetUserId();
+}
+        initFirebase();
         startApp();
     </script>
 </body>
