@@ -370,6 +370,17 @@ function showFinalResults() {
 
         // --- WRAP UP FUNCTIONS ---
 
+// Helper to get ISO Week ID (e.g., "2026-W11")
+function getWeekId(dateStr) {
+    const date = new Date(dateStr);
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const dayNum = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+    const weekNo = Math.ceil((((d - yearStart) / 86400000) + 1)/7);
+    return `${d.getUTCFullYear()}-W${weekNo}`;
+}
+
 async function submitScore() {
     const name = document.getElementById('player-name').value.trim();
     if (!name) {
@@ -383,11 +394,15 @@ async function submitScore() {
     btn.innerText = "Submitting...";
 
     const gameDate = getGameDate();
+    const groupId = localStorage.getItem('trivia-group'); // Get current group ID
+
     const scoreData = {
         name: name,
         score: score,
         date: gameDate,
+        weekId: getWeekId(gameDate), // Save the Week ID
         userId: userId,
+        groupId: groupId || null,   // Save the Group ID (if exists)
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
     };
 
@@ -417,30 +432,87 @@ async function checkIfSubmitted() {
 
 async function fetchAndDisplayLeaderboard() {
     const display = document.getElementById('leaderboard-display');
+    const title = document.querySelector('#leaderboard-section h3');
+    const groupId = localStorage.getItem('trivia-group');
+
+    // 1. If no group, show "Create Group" UI
+    if (!groupId) {
+        title.innerText = "Start a Leaderboard";
+        display.innerHTML = `
+            <div class="text-center p-4">
+                <p class="text-indigo-200 text-sm mb-4">Create a private weekly leaderboard to compete with friends!</p>
+                <button onclick="createGroup()" class="bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all w-full">Create Friend Group</button>
+            </div>
+        `;
+        return;
+    }
+
+    // 2. If Group Exists, Fetch Weekly Scores
+    title.innerText = "Weekly Friend Board";
     try {
+        // Show Invite Button + Loading
+        display.innerHTML = `
+            <div class="mb-3 flex justify-center">
+                <button onclick="copyGroupLink()" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30">
+                    🔗 Copy Invite Link
+                </button>
+            </div>
+            <p class="text-slate-400 text-sm text-center">Loading scores...</p>
+        `;
+
+        const currentWeek = getWeekId(getGameDate());
+
         const snapshot = await db.collection('scores')
-            .where('date', '==', getGameDate())
-            .orderBy('score', 'desc')
-            .orderBy('timestamp', 'asc')
-            .limit(50)
+            .where('groupId', '==', groupId)
+            .where('weekId', '==', currentWeek)
             .get();
 
         if (snapshot.empty) {
-            display.innerHTML = '<p class="text-slate-400 text-sm text-center">Be the first to get on the leaderboard today!</p>';
+            display.innerHTML += '<p class="text-slate-400 text-sm text-center mt-2">No scores yet this week. Be the first!</p>';
+            // Keep the invite button visible by clearing only the "Loading" text (simple replacement)
+            display.innerHTML = display.innerHTML.replace('Loading scores...', ''); 
             return;
         }
 
-        display.innerHTML = ''; // Clear loading/previous state
+        // 3. Client-side Aggregation (Sum scores by user for the week)
+        const userTotals = {};
+
+        snapshot.forEach(doc => {
+            const d = doc.data();
+            if (!userTotals[d.userId]) {
+                userTotals[d.userId] = { name: d.name, totalScore: 0, games: 0 };
+            }
+            userTotals[d.userId].totalScore += (d.score || 0);
+            userTotals[d.userId].games += 1;
+            // Always take the most recent name used
+            userTotals[d.userId].name = d.name;
+        });
+
+        // Convert to array and sort
+        const sortedUsers = Object.values(userTotals).sort((a, b) => b.totalScore - a.totalScore);
+
+        // 4. Render
+        // Keep invite button at top
+        const inviteBtnHTML = `
+            <div class="mb-3 flex justify-center">
+                <button onclick="copyGroupLink()" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30 transition-all">
+                    🔗 Copy Invite Link
+                </button>
+            </div>`;
+        
         const list = document.createElement('ol');
         list.className = "list-decimal list-inside space-y-2";
-        snapshot.forEach(doc => {
-            const data = doc.data();
+        
+        sortedUsers.forEach(user => {
             const item = document.createElement('li');
-            item.className = `text-sm font-semibold flex justify-between items-center ${data.userId === userId ? 'text-indigo-300 font-black' : ''}`;
-            item.innerHTML = `<span>${data.name}</span> <span class="font-mono bg-slate-700/50 px-2 py-0.5 rounded">${data.score}/5</span>`;
+            item.className = `text-sm font-semibold flex justify-between items-center`;
+            item.innerHTML = `<span>${user.name}</span> <span class="font-mono bg-slate-700/50 px-2 py-0.5 rounded text-indigo-300">${user.totalScore} pts</span>`;
             list.appendChild(item);
         });
+        
+        display.innerHTML = inviteBtnHTML;
         display.appendChild(list);
+
     } catch (error) {
         console.error("Error fetching leaderboard:", error);
         if (error.message && error.message.includes("index")) {
@@ -449,6 +521,32 @@ async function fetchAndDisplayLeaderboard() {
             display.innerHTML = `<p class="text-red-400 text-xs text-center mt-2">Error: ${error.code || error.message}</p>`;
         }
     }
+}
+
+// --- GROUP MANAGEMENT ---
+
+function createGroup() {
+    const newGroupId = 'grp_' + Math.random().toString(36).substring(2, 9) + Date.now().toString(36);
+    localStorage.setItem('trivia-group', newGroupId);
+    
+    // Update URL without reloading
+    const url = new URL(window.location);
+    url.searchParams.set('group', newGroupId);
+    window.history.pushState({}, '', url);
+    
+    fetchAndDisplayLeaderboard();
+}
+
+function copyGroupLink() {
+    const groupId = localStorage.getItem('trivia-group');
+    const url = new URL(window.location.origin + window.location.pathname); // Clean URL
+    url.searchParams.set('group', groupId);
+    
+    navigator.clipboard.writeText(url.toString()).then(() => {
+        const btn = document.getElementById('invite-btn');
+        btn.innerText = "✅ Link Copied!";
+        setTimeout(() => btn.innerText = "🔗 Copy Invite Link", 2000);
+    });
 }
 
 function startNextTimer() {
@@ -638,6 +736,14 @@ function initFirebase() {
     firebase.initializeApp(firebaseConfig);
     db = firebase.firestore();
     userId = getOrSetUserId();
+
+    // CHECK FOR INVITE LINK
+    const urlParams = new URLSearchParams(window.location.search);
+    const inviteGroup = urlParams.get('group');
+    if (inviteGroup) {
+        localStorage.setItem('trivia-group', inviteGroup);
+        console.log("Joined group:", inviteGroup);
+    }
 }
         initFirebase();
         startApp();
