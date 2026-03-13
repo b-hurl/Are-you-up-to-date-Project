@@ -135,7 +135,7 @@ function getGameDate() {
 }
 
 async function startApp() {
-    const gameDate = getGameDate();
+    const gameDate = getGameDate(); // e.g., "2026-03-12"
     
     try {
         const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
@@ -143,42 +143,34 @@ async function startApp() {
         const freshData = await response.json();
         
         const saved = localStorage.getItem('trivia-session');
+        
         if (saved) {
             const session = JSON.parse(saved);
             
-            if (session.date === gameDate) {
+            // CRITICAL CHECK: Is this session from a DIFFERENT day?
+            if (session.date !== gameDate) {
+                console.log("Old session detected. Clearing for new day...");
+                localStorage.removeItem('trivia-session'); // Wipe yesterday's data
+                window.userChoices = []; // Reset choices
+                startNewSession(freshData, gameDate);
+            } 
+            else {
+                // It is TODAY'S session, so we restore it
                 gameData = { questions: session.shuffledQuestions };
                 currentIdx = session.currentIdx;
                 score = session.score;
-                
+                window.userChoices = session.userChoices || [];
+
                 if (session.isFinished) {
                     showFinalResults();
-                    return; // EXIT IMMEDIATELY
+                    return; // Jump to results and stop
                 }
-            } else {
-                // New day - clear old storage
-                localStorage.removeItem('trivia-session');
-                startNewSession(freshData, gameDate);
             }
         } else {
+            // No saved session at all
             startNewSession(freshData, gameDate);
         }
 
-        // Inside your startApp logic where you parse the session:
-if (session.date === gameDate) {
-    gameData = { questions: session.shuffledQuestions };
-    currentIdx = session.currentIdx;
-    score = session.score;
-    window.userChoices = session.userChoices || []; // RESTORE CHOICES
-    
-    if (session.isFinished) {
-        showFinalResults();
-        return;
-    }
-}
-
-        // --- FINAL SAFETY CHECK ---
-        // Ensure UI matches loaded state before rendering
         document.getElementById('score-display').innerText = `Score: ${score}`;
         document.getElementById('game-header').classList.remove('hidden');
         renderQuestion();
@@ -187,13 +179,13 @@ if (session.date === gameDate) {
         document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
     }
 }
-
 function startNewSession(data, date) {
     gameData = data;
-    gameData.questions = shuffle(gameData.questions);
+    gameData.questions = shuffle([...data.questions]); // Shuffle a copy
     currentIdx = 0;
     score = 0;
-    saveSession(date);
+    window.userChoices = []; // Reset the user's answers
+    saveSession(false); // Save this fresh start to localStorage immediately
 }
         function renderQuestion() {
             selectedIdx = null;
