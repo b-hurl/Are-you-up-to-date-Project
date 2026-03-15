@@ -117,6 +117,7 @@
         let isCurrentSelectionCorrect = false;
         let db = null;
         let userId = null;
+        let currentGroupIndex = 0;
 
         // --- UTILITIES ---
         function shuffle(array) {
@@ -405,7 +406,10 @@ async function submitScore() {
     btn.innerText = "Submitting...";
 
     const gameDate = getGameDate();
-    const groupId = localStorage.getItem('trivia-group'); // Get current group ID
+    
+    // Get ALL group IDs the user belongs to
+    const groups = getMyGroups();
+    const groupIds = groups.map(g => g.id);
 
     const scoreData = {
         name: name,
@@ -413,7 +417,7 @@ async function submitScore() {
         date: gameDate,
         weekId: getWeekId(gameDate), // Save the Week ID
         userId: userId,
-        groupId: groupId || null,   // Save the Group ID (if exists)
+        groupIds: groupIds,         // Save ALL Group IDs
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
     };
 
@@ -460,10 +464,11 @@ async function fetchAndDisplayLeaderboard() {
     const display = document.getElementById('leaderboard-display');
     const title = document.querySelector('#leaderboard-section h3');
     const submitForm = document.getElementById('leaderboard-submit-form');
-    const groupId = localStorage.getItem('trivia-group');
+    
+    const groups = getMyGroups();
 
-    // 1. If no group, show "Create Group" UI
-    if (!groupId) {
+    // 1. If no groups at all, show "Create Group" UI
+    if (groups.length === 0) {
         title.innerText = "Start a Leaderboard";
         if (submitForm) submitForm.classList.add('hidden');
         display.innerHTML = `
@@ -476,32 +481,36 @@ async function fetchAndDisplayLeaderboard() {
         return;
     }
 
-    // 2. If Group Exists, Fetch Name & Weekly Scores
+    // 2. If Groups Exist, Pick the Current One
     if (submitForm) submitForm.classList.remove('hidden');
-    let storedName = localStorage.getItem('trivia-group-name');
-    if (storedName) {
-        title.innerText = storedName;
-    } else {
-        // Fetch name asynchronously
-        db.collection('groups').doc(groupId).get().then(doc => {
-            const name = doc.exists ? doc.data().name : "Weekly Friend Board";
-            localStorage.setItem('trivia-group-name', name);
-            if(localStorage.getItem('trivia-group') === groupId) {
-                document.querySelector('#leaderboard-section h3').innerText = name;
-            }
-        }).catch(() => title.innerText = "Weekly Friend Board");
-        title.innerText = "Loading Group...";
-    }
+    
+    // Ensure index is valid
+    if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
+    const currentGroup = groups[currentGroupIndex];
+
+    // Update Title with Switcher UI
+    const switcherHTML = groups.length > 1 
+        ? `<div class="flex items-center justify-center gap-2 mt-1">
+             <button onclick="switchGroup(-1)" class="text-indigo-400 hover:text-white px-2">◀</button>
+             <span class="text-white text-sm">${currentGroup.name}</span>
+             <button onclick="switchGroup(1)" class="text-indigo-400 hover:text-white px-2">▶</button>
+           </div>`
+        : `<span class="block text-white text-sm mt-1">${currentGroup.name}</span>`;
+
+    title.innerHTML = `LEADERBOARD ${switcherHTML}`;
 
     try {
         // Show Invite Button + Loading
         display.innerHTML = `
-            <div class="mb-3 flex justify-center gap-2">
-                <button onclick="copyGroupLink()" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30">
+            <div class="mb-3 flex flex-wrap justify-center gap-2">
+                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30">
                     🔗 Copy Invite Link
                 </button>
-                <button onclick="leaveGroup()" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
+                <button onclick="leaveGroup('${currentGroup.id}')" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
                     Leave
+                </button>
+                <button onclick="showCreateGroupUI()" class="text-[10px] bg-emerald-900/30 hover:bg-emerald-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-emerald-400 font-bold border border-emerald-500/30 transition-all">
+                    + New Group
                 </button>
             </div>
             <p class="text-slate-400 text-sm text-center">Loading scores...</p>
@@ -509,8 +518,11 @@ async function fetchAndDisplayLeaderboard() {
 
         const currentWeek = getWeekId(getGameDate());
 
+        // NEW QUERY: array-contains
+        // Note: This requires a composite index: groupIds (Arrays) + weekId (Ascending)
+        // If this fails, check console for Firebase link to create index.
         const snapshot = await db.collection('scores')
-            .where('groupId', '==', groupId)
+            .where('groupIds', 'array-contains', currentGroup.id)
             .where('weekId', '==', currentWeek)
             .get();
 
@@ -541,12 +553,15 @@ async function fetchAndDisplayLeaderboard() {
         // 4. Render
         // Keep invite button at top
         const inviteBtnHTML = `
-            <div class="mb-3 flex justify-center gap-2">
-                <button onclick="copyGroupLink()" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30 transition-all">
+            <div class="mb-3 flex flex-wrap justify-center gap-2">
+                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30 transition-all">
                     🔗 Copy Invite Link
                 </button>
-                <button onclick="leaveGroup()" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
+                <button onclick="leaveGroup('${currentGroup.id}')" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
                     Leave
+                </button>
+                <button onclick="showCreateGroupUI()" class="text-[10px] bg-emerald-900/30 hover:bg-emerald-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-emerald-400 font-bold border border-emerald-500/30 transition-all">
+                    + New Group
                 </button>
             </div>`;
         
@@ -575,6 +590,53 @@ async function fetchAndDisplayLeaderboard() {
 
 // --- GROUP MANAGEMENT ---
 
+function getMyGroups() {
+    let groups = [];
+    try {
+        groups = JSON.parse(localStorage.getItem('trivia-groups') || '[]');
+    } catch(e) { groups = []; }
+
+    // MIGRATION: Check for legacy single group
+    const legacyId = localStorage.getItem('trivia-group');
+    if (legacyId) {
+        // Only add if not already in list
+        if (!groups.find(g => g.id === legacyId)) {
+            const legacyName = localStorage.getItem('trivia-group-name') || "Friend Group";
+            groups.push({ id: legacyId, name: legacyName });
+        }
+        // Clean up legacy
+        localStorage.removeItem('trivia-group');
+        localStorage.removeItem('trivia-group-name');
+        localStorage.setItem('trivia-groups', JSON.stringify(groups));
+    }
+    return groups;
+}
+
+function switchGroup(direction) {
+    const groups = getMyGroups();
+    if (groups.length === 0) return;
+    
+    currentGroupIndex += direction;
+    if (currentGroupIndex < 0) currentGroupIndex = groups.length - 1;
+    if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
+    
+    fetchAndDisplayLeaderboard();
+}
+
+function showCreateGroupUI() {
+    const display = document.getElementById('leaderboard-display');
+    display.innerHTML = `
+        <div class="text-center p-4">
+            <p class="text-indigo-200 text-sm mb-4">Create another leaderboard?</p>
+            <input type="text" id="new-group-name" placeholder="Group Name (e.g. Work Buds)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-indigo-500 text-center">
+            <div class="flex gap-2">
+                <button onclick="fetchAndDisplayLeaderboard()" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Cancel</button>
+                <button onclick="createGroup()" id="create-group-btn" class="flex-1 bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Create</button>
+            </div>
+        </div>
+    `;
+}
+
 async function createGroup() {
     const nameInput = document.getElementById('new-group-name');
     const btn = document.getElementById('create-group-btn');
@@ -591,12 +653,10 @@ async function createGroup() {
             createdBy: userId
         });
 
-        localStorage.setItem('trivia-group', newGroupId);
-        localStorage.setItem('trivia-group-name', groupName);
-        
-        const url = new URL(window.location);
-        url.searchParams.set('group', newGroupId);
-        window.history.pushState({}, '', url);
+        const groups = getMyGroups();
+        groups.push({ id: newGroupId, name: groupName });
+        localStorage.setItem('trivia-groups', JSON.stringify(groups));
+        currentGroupIndex = groups.length - 1; // Switch to new group
         
         await fetchAndDisplayLeaderboard();
         await checkIfSubmitted();
@@ -607,32 +667,37 @@ async function createGroup() {
     }
 }
 
-async function leaveGroup() {
-    if(!confirm("Are you sure you want to leave this leaderboard? This will remove your scores from the group.")) return;
+async function leaveGroup(groupId) {
+    if(!confirm("Leave this group? Your scores will be removed from this leaderboard.")) return;
     
-    const groupId = localStorage.getItem('trivia-group');
-    if (!groupId) return;
-
     const display = document.getElementById('leaderboard-display');
     display.innerHTML = '<p class="text-slate-400 text-sm text-center">Leaving group...</p>';
 
     try {
+        // 1. Remove from Firestore "groupIds" array for this week
         const currentWeek = getWeekId(getGameDate());
         const snapshot = await db.collection('scores')
-            .where('groupId', '==', groupId)
+            .where('groupIds', 'array-contains', groupId)
             .where('weekId', '==', currentWeek)
             .get();
 
         const batch = db.batch();
         snapshot.forEach(doc => {
             if (doc.data().userId === userId) {
-                batch.update(doc.ref, { groupId: null });
+                // Remove just this group ID from the array
+                batch.update(doc.ref, { 
+                    groupIds: firebase.firestore.FieldValue.arrayRemove(groupId) 
+                });
             }
         });
         await batch.commit();
 
-        localStorage.removeItem('trivia-group');
-        localStorage.removeItem('trivia-group-name');
+        // 2. Remove from Local Storage
+        let groups = getMyGroups();
+        groups = groups.filter(g => g.id !== groupId);
+        localStorage.setItem('trivia-groups', JSON.stringify(groups));
+        
+        currentGroupIndex = 0;
         fetchAndDisplayLeaderboard();
     } catch (error) {
         console.error("Error leaving group:", error);
@@ -641,8 +706,7 @@ async function leaveGroup() {
     }
 }
 
-function copyGroupLink() {
-    const groupId = localStorage.getItem('trivia-group');
+function copyGroupLink(groupId) {
     const url = new URL(window.location.origin + window.location.pathname); // Clean URL
     url.searchParams.set('group', groupId);
     
@@ -845,12 +909,32 @@ function initFirebase() {
     const urlParams = new URLSearchParams(window.location.search);
     const inviteGroup = urlParams.get('group');
     if (inviteGroup) {
-        const current = localStorage.getItem('trivia-group');
-        if (current !== inviteGroup) {
-            localStorage.setItem('trivia-group', inviteGroup);
-            localStorage.removeItem('trivia-group-name'); // Clear old name so it fetches new one
+        handleInvite(inviteGroup);
+    }
+}
+
+async function handleInvite(groupId) {
+    const groups = getMyGroups();
+    // If already in group, just switch to it
+    const existingIdx = groups.findIndex(g => g.id === groupId);
+    if (existingIdx !== -1) {
+        currentGroupIndex = existingIdx;
+        console.log("Already in group, switching view.");
+        return;
+    }
+
+    // Fetch group name and add to list
+    try {
+        const doc = await db.collection('groups').doc(groupId).get();
+        if (doc.exists) {
+            const groupName = doc.data().name;
+            groups.push({ id: groupId, name: groupName });
+            localStorage.setItem('trivia-groups', JSON.stringify(groups));
+            currentGroupIndex = groups.length - 1;
+            console.log("Joined new group:", groupName);
         }
-        console.log("Joined group:", inviteGroup);
+    } catch (e) {
+        console.error("Error joining group from link", e);
     }
 }
         initFirebase();
