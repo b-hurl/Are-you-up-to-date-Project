@@ -569,7 +569,7 @@ async function createGroup() {
     try {
         await db.collection('groups').doc(newGroupId).set({
             name: groupName,
-            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            createdAt: new Date(),
             createdBy: userId
         });
 
@@ -583,7 +583,7 @@ async function createGroup() {
         fetchAndDisplayLeaderboard();
     } catch (error) {
         console.error("Error creating group:", error);
-        alert("Could not create group. Please try again.");
+        alert("Error creating group: " + error.message + "\nIf this persists, check your Firestore Security Rules.");
         if(btn) { btn.disabled = false; btn.innerText = "Create Friend Group"; }
     }
 }
