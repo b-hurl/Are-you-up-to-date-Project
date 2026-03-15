@@ -598,7 +598,7 @@ async function createGroup() {
         url.searchParams.set('group', newGroupId);
         window.history.pushState({}, '', url);
         
-        fetchAndDisplayLeaderboard();
+        await fetchAndDisplayLeaderboard();
     } catch (error) {
         console.error("Error creating group:", error);
         alert("Error creating group: " + error.message + "\nIf this persists, check your Firestore Security Rules.");
