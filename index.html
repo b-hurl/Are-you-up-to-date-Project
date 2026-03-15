@@ -452,14 +452,29 @@ async function fetchAndDisplayLeaderboard() {
         display.innerHTML = `
             <div class="text-center p-4">
                 <p class="text-indigo-200 text-sm mb-4">Create a private weekly leaderboard to compete with friends!</p>
-                <button onclick="createGroup()" class="bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all w-full">Create Friend Group</button>
+                <input type="text" id="new-group-name" placeholder="Group Name (e.g. The Squad)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-indigo-500 text-center">
+                <button onclick="createGroup()" id="create-group-btn" class="bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all w-full">Create Friend Group</button>
             </div>
         `;
         return;
     }
 
-    // 2. If Group Exists, Fetch Weekly Scores
-    title.innerText = "Weekly Friend Board";
+    // 2. If Group Exists, Fetch Name & Weekly Scores
+    let storedName = localStorage.getItem('trivia-group-name');
+    if (storedName) {
+        title.innerText = storedName;
+    } else {
+        // Fetch name asynchronously
+        db.collection('groups').doc(groupId).get().then(doc => {
+            const name = doc.exists ? doc.data().name : "Weekly Friend Board";
+            localStorage.setItem('trivia-group-name', name);
+            if(localStorage.getItem('trivia-group') === groupId) {
+                document.querySelector('#leaderboard-section h3').innerText = name;
+            }
+        }).catch(() => title.innerText = "Weekly Friend Board");
+        title.innerText = "Loading Group...";
+    }
+
     try {
         // Show Invite Button + Loading
         display.innerHTML = `
@@ -542,16 +557,35 @@ async function fetchAndDisplayLeaderboard() {
 
 // --- GROUP MANAGEMENT ---
 
-function createGroup() {
+async function createGroup() {
+    const nameInput = document.getElementById('new-group-name');
+    const btn = document.getElementById('create-group-btn');
+    const groupName = nameInput.value.trim() || "Trivia Squad";
+
+    if(btn) { btn.disabled = true; btn.innerText = "Creating..."; }
+
     const newGroupId = 'grp_' + Math.random().toString(36).substring(2, 9) + Date.now().toString(36);
-    localStorage.setItem('trivia-group', newGroupId);
     
-    // Update URL without reloading
-    const url = new URL(window.location);
-    url.searchParams.set('group', newGroupId);
-    window.history.pushState({}, '', url);
-    
-    fetchAndDisplayLeaderboard();
+    try {
+        await db.collection('groups').doc(newGroupId).set({
+            name: groupName,
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            createdBy: userId
+        });
+
+        localStorage.setItem('trivia-group', newGroupId);
+        localStorage.setItem('trivia-group-name', groupName);
+        
+        const url = new URL(window.location);
+        url.searchParams.set('group', newGroupId);
+        window.history.pushState({}, '', url);
+        
+        fetchAndDisplayLeaderboard();
+    } catch (error) {
+        console.error("Error creating group:", error);
+        alert("Could not create group. Please try again.");
+        if(btn) { btn.disabled = false; btn.innerText = "Create Friend Group"; }
+    }
 }
 
 async function leaveGroup() {
@@ -579,6 +613,7 @@ async function leaveGroup() {
         await batch.commit();
 
         localStorage.removeItem('trivia-group');
+        localStorage.removeItem('trivia-group-name');
         fetchAndDisplayLeaderboard();
     } catch (error) {
         console.error("Error leaving group:", error);
@@ -791,7 +826,11 @@ function initFirebase() {
     const urlParams = new URLSearchParams(window.location.search);
     const inviteGroup = urlParams.get('group');
     if (inviteGroup) {
-        localStorage.setItem('trivia-group', inviteGroup);
+        const current = localStorage.getItem('trivia-group');
+        if (current !== inviteGroup) {
+            localStorage.setItem('trivia-group', inviteGroup);
+            localStorage.removeItem('trivia-group-name'); // Clear old name so it fetches new one
+        }
         console.log("Joined group:", inviteGroup);
     }
 }
