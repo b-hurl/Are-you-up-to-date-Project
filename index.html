@@ -439,11 +439,17 @@ async function checkIfSubmitted() {
     if (doc.exists) {
         const currentGroup = localStorage.getItem('trivia-group');
         
-        // If user is joining a group via link but has an existing score, update it
+        // If user is joining a group via link but has an existing score
         if (currentGroup && doc.data().groupId !== currentGroup) {
-            await db.collection('scores').doc(docId).update({ groupId: currentGroup });
-            document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Joined group & updated score!</p>`;
-            fetchAndDisplayLeaderboard();
+            // Allow user to edit name before submitting
+            const nameInput = document.getElementById('player-name');
+            const btn = document.getElementById('submit-score-btn');
+            
+            if (nameInput) nameInput.value = doc.data().name || '';
+            if (btn) {
+                btn.innerText = "Join Group";
+                btn.className = "bg-emerald-600 hover:bg-emerald-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all";
+            }
             return;
         }
         document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score for today is on the board!</p>`;
