@@ -459,11 +459,13 @@ async function checkIfSubmitted() {
 async function fetchAndDisplayLeaderboard() {
     const display = document.getElementById('leaderboard-display');
     const title = document.querySelector('#leaderboard-section h3');
+    const submitForm = document.getElementById('leaderboard-submit-form');
     const groupId = localStorage.getItem('trivia-group');
 
     // 1. If no group, show "Create Group" UI
     if (!groupId) {
         title.innerText = "Start a Leaderboard";
+        if (submitForm) submitForm.classList.add('hidden');
         display.innerHTML = `
             <div class="text-center p-4">
                 <p class="text-indigo-200 text-sm mb-4">Create a private weekly leaderboard to compete with friends!</p>
@@ -475,6 +477,7 @@ async function fetchAndDisplayLeaderboard() {
     }
 
     // 2. If Group Exists, Fetch Name & Weekly Scores
+    if (submitForm) submitForm.classList.remove('hidden');
     let storedName = localStorage.getItem('trivia-group-name');
     if (storedName) {
         title.innerText = storedName;
