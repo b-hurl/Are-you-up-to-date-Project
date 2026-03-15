@@ -51,6 +51,9 @@
             <span id="score-display" class="bg-indigo-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/20">Score: 0</span>
         </div>
         <div id="content-area" class="text-center">
+            <div id="category-display" class="mb-4 hidden">
+                <span class="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-500/30"></span>
+            </div>
             <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8">Loading Today's Challenge...</h2>
             <div id="options-container" class="space-y-3 mb-6"></div>
             <div id="action-area"></div>
@@ -238,6 +241,14 @@ function renderQuestion() {
     document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
     document.getElementById('question-text').innerText = currentQ.q;
     
+    const catDisplay = document.getElementById('category-display');
+    if (currentQ.category) {
+        catDisplay.querySelector('span').innerText = currentQ.category;
+        catDisplay.classList.remove('hidden');
+    } else {
+        catDisplay.classList.add('hidden');
+    }
+
     const container = document.getElementById('options-container');
     container.innerHTML = '';
     

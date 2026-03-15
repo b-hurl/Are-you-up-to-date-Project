@@ -9,7 +9,8 @@
         "The GDP Quarterly Review"
       ],
       "a": 1,
-      "source": "https://globalnews.ca/news/11729223/canada-jobs-report-february-2026/"
+      "source": "https://globalnews.ca/news/11729223/canada-jobs-report-february-2026/",
+      "category": "Economy"
     },
     {
       "q": "Prime Minister Mark Carney announced from Norway today that Canada will maintain sanctions on which specific Russian asset, despite a temporary 30-day pause by the U.S.?",
@@ -20,7 +21,8 @@
         "The Russian Central Bank"
       ],
       "a": 1,
-      "source": "https://www.barrietoday.com/national-news/canada-will-maintain-russian-oil-sanctions-despite-30-day-us-pause-carney-12000273"
+      "source": "https://www.barrietoday.com/national-news/canada-will-maintain-russian-oil-sanctions-despite-30-day-us-pause-carney-12000273",
+      "category": "Politics"
     },
     {
       "q": "The FBI revealed today that the suspect in the Michigan synagogue attack was motivated by a 'targeted act of violence' after losing relatives in an airstrike in which country?",
@@ -31,7 +33,8 @@
         "Iran"
       ],
       "a": 2,
-      "source": "https://www.ctvnews.ca/world/article/armed-suspect-in-michigan-synagogue-attack-dead-ap-source-says/"
+      "source": "https://www.ctvnews.ca/world/article/armed-suspect-in-michigan-synagogue-attack-dead-ap-source-says/",
+      "category": "World"
     },
 {
       "q": "At the 2026 Winter Paralympics today, Natalie Wilkie won her 11th career medal (gold) in which event, becoming the second most decorated Canadian female Winter Paralympian ever?",
@@ -42,7 +45,8 @@
         "Women's standing biathlon sprint pursuit"
       ],
       "a": 3,
-      "source": "https://paralympic.ca/news/milano-cortina-2026-day-7-recap-natalie-wilkie-wins-c3anadas-second-gold-of-the-paralympic-winter-games/"
+      "source": "https://paralympic.ca/news/milano-cortina-2026-day-7-recap-natalie-wilkie-wins-c3anadas-second-gold-of-the-paralympic-winter-games/",
+      "category": "Sports"
     },
     {
       "q": "The CRTC issued a decision today (Telecom Decision 2026-43) that officially prohibits telecommunications companies from charging fees for which consumer action?",
@@ -53,7 +57,8 @@
         "Exceeding monthly data limits"
       ],
       "a": 2,
-      "source": "https://www.canada.ca/en/radio-television-telecommunications/news/2026/03/crtc-eliminates-fees-to-make-it-easier-to-switch-internet-and-cellphone-plans.html"
+      "source": "https://www.canada.ca/en/radio-television-telecommunications/news/2026/03/crtc-eliminates-fees-to-make-it-easier-to-switch-internet-and-cellphone-plans.html",
+      "category": "Technology"
     }
   ]
 }
