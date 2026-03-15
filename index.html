@@ -393,6 +393,24 @@ function getWeekId(dateStr) {
     return `${d.getUTCFullYear()}-W${weekNo}`;
 }
 
+async function setTaunt() {
+    const taunt = prompt("Enter a taunt message for the player ranked below you:");
+    if (taunt === null) return;
+    
+    const gameDate = getGameDate();
+    const docId = `${gameDate}_${userId}`;
+    
+    try {
+        await db.collection('scores').doc(docId).update({
+            taunt: taunt.trim()
+        });
+        fetchAndDisplayLeaderboard();
+    } catch (error) {
+        console.error("Error setting taunt:", error);
+        alert("You need to play today's trivia before you can taunt!");
+    }
+}
+
 async function submitScore() {
     const name = document.getElementById('player-name').value.trim();
     if (!name) {
