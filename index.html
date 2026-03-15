@@ -599,6 +599,7 @@ async function createGroup() {
         window.history.pushState({}, '', url);
         
         await fetchAndDisplayLeaderboard();
+        await checkIfSubmitted();
     } catch (error) {
         console.error("Error creating group:", error);
         alert("Error creating group: " + error.message + "\nIf this persists, check your Firestore Security Rules.");
