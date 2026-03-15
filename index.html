@@ -427,7 +427,13 @@ async function submitScore() {
         const docId = `${gameDate}_${userId}`;
         await db.collection('scores').doc(docId).set(scoreData, { merge: true });
         
-        document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score has been submitted!</p>`;
+        document.getElementById('leaderboard-submit-form').innerHTML = `
+            <div class="flex flex-col items-center gap-2 w-full">
+                <p class="text-emerald-400 text-sm font-bold">✅ Score Submitted!</p>
+                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-indigo-300 py-1.5 px-3 rounded-lg border border-indigo-500/30 transition-all">
+                    💬 Add a Taunt
+                </button>
+            </div>`;
         fetchAndDisplayLeaderboard(); // Refresh the leaderboard with the new score
     } catch (error) {
         console.error("Error submitting score: ", error);
@@ -471,7 +477,13 @@ async function checkIfSubmitted() {
             return;
         }
         }
-        document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score for today is on the board!</p>`;
+        document.getElementById('leaderboard-submit-form').innerHTML = `
+            <div class="flex flex-col items-center gap-2 w-full">
+                <p class="text-emerald-400 text-sm font-bold">✅ Your score is on the board!</p>
+                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-indigo-300 py-1.5 px-3 rounded-lg border border-indigo-500/30 transition-all">
+                    💬 Update Taunt
+                </button>
+            </div>`;
     }
 }
 
@@ -604,7 +616,7 @@ async function fetchAndDisplayLeaderboard() {
             const nameColor = isMe ? "text-emerald-400 font-bold" : (index < 3 ? "text-white" : "text-slate-300");
             const displayName = isMe ? `${user.name} (You)` : user.name;
             const tauntHTML = user.taunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${user.taunt}" 👇</div>` : '';
-            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 opacity-50 hover:opacity-100 text-xs grayscale hover:grayscale-0 transition-all" title="Set Taunt">💬</button>` : '';
+            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 bg-slate-700 hover:bg-slate-600 text-indigo-300 text-[10px] px-2 py-0.5 rounded border border-indigo-500/30 transition-all">💬 Taunt</button>` : '';
             
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
 
