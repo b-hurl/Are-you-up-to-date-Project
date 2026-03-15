@@ -463,9 +463,12 @@ async function fetchAndDisplayLeaderboard() {
     try {
         // Show Invite Button + Loading
         display.innerHTML = `
-            <div class="mb-3 flex justify-center">
+            <div class="mb-3 flex justify-center gap-2">
                 <button onclick="copyGroupLink()" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30">
                     🔗 Copy Invite Link
+                </button>
+                <button onclick="leaveGroup()" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
+                    Leave
                 </button>
             </div>
             <p class="text-slate-400 text-sm text-center">Loading scores...</p>
@@ -505,9 +508,12 @@ async function fetchAndDisplayLeaderboard() {
         // 4. Render
         // Keep invite button at top
         const inviteBtnHTML = `
-            <div class="mb-3 flex justify-center">
+            <div class="mb-3 flex justify-center gap-2">
                 <button onclick="copyGroupLink()" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30 transition-all">
                     🔗 Copy Invite Link
+                </button>
+                <button onclick="leaveGroup()" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
+                    Leave
                 </button>
             </div>`;
         
@@ -546,6 +552,13 @@ function createGroup() {
     window.history.pushState({}, '', url);
     
     fetchAndDisplayLeaderboard();
+}
+
+function leaveGroup() {
+    if(confirm("Are you sure you want to leave this leaderboard?")) {
+        localStorage.removeItem('trivia-group');
+        fetchAndDisplayLeaderboard();
+    }
 }
 
 function copyGroupLink() {
