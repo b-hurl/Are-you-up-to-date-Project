@@ -1,0 +1,59 @@
+{
+  "questions": [
+    {
+      "q": "Which tech giant made headlines today with reports that it is weighing its largest restructuring in history, potentially cutting 20% of its workforce due to rising AI infrastructure costs?",
+      "options": [
+        "Google (Alphabet)",
+        "Meta",
+        "Amazon",
+        "Microsoft"
+      ],
+      "a": 1,
+      "source": "https://www.foxbusiness.com/technology/meta-eyes-massive-20-workforce-cut-ai-infrastructure-costs-continue-soar-across-operations-report"
+    },
+    {
+      "q": "Environment and Climate Change Canada announced today that which long-running service, which has provided weather alerts via VHF radio since the 1970s, will be permanently disconnected this Monday?",
+      "options": [
+        "The Weather Network TV channel",
+        "Weatheradio",
+        "The Marine Forecast Hotline",
+        "Canada Sky-Watch"
+      ],
+      "a": 1,
+      "source": "https://toronto.citynews.ca/2026/03/14/weatheradio-going-off-the-air-as-environment-canada-moves-emphasis-to-online-and-apps/"
+    },
+    {
+      "q": "Canada won a dramatic gold medal at the 2026 Winter Paralympics today by defeating which defending champion in a 4-3 nail-biter in the wheelchair curling final?",
+      "options": [
+        "United States",
+        "Sweden",
+        "China",
+        "Norway"
+      ],
+      "a": 2,
+      "source": "https://paralympic.ca/news/milano-cortina-2026-day-8-recap-canada-claims-paralympic-gold-in-wheelchair-curling/"
+    },
+    {
+      "q": "What major gaming event took place today at 3:30 PM ET, featuring a 'Power Hour' that bridged the gap between two chapters of the game's narrative?",
+      "options": [
+        "Roblox Bloxy Awards",
+        "Call of Duty: Warzone Season Reveal",
+        "Fortnite Story Moment",
+        "Minecraft Live Mini-Mob Vote"
+      ],
+      "a": 2,
+      "source": "https://timesofindia.indiatimes.com/sports/esports/fortnite/fortnite-story-moment-power-hour-event-march-14-2026-start-timings-for-all-regions/articleshow/129568961.cms"
+    },
+    {
+      "q": "With the 98th Academy Awards taking place tomorrow, film historians shared the story today of how the 'Oscar' statuette got its name. Which actress famously claimed she named it after her first husband?",
+      "options": [
+        "Katharine Hepburn",
+        "Bette Davis",
+        "Audrey Hepburn",
+        "Elizabeth Taylor"
+      ],
+      "a": 1,
+      "source": "https://www.opb.org/article/2026/03/14/why-are-the-academy-awards-called-the-oscars/"
+    }
+  ]
+}
