@@ -425,7 +425,7 @@ async function submitScore() {
         // Use the date and userId to create a unique ID for the document
         // This prevents a user from submitting more than once per day
         const docId = `${gameDate}_${userId}`;
-        await db.collection('scores').doc(docId).set(scoreData);
+        await db.collection('scores').doc(docId).set(scoreData, { merge: true });
         
         document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score has been submitted!</p>`;
         fetchAndDisplayLeaderboard(); // Refresh the leaderboard with the new score
@@ -440,21 +440,36 @@ async function submitScore() {
 async function checkIfSubmitted() {
     const docId = `${getGameDate()}_${userId}`;
     const doc = await db.collection('scores').doc(docId).get();
+    
     if (doc.exists) {
-        const currentGroup = localStorage.getItem('trivia-group');
+        const data = doc.data();
+        const remoteGroupIds = data.groupIds || (data.groupId ? [data.groupId] : []);
+        const groups = getMyGroups();
         
-        // If user is joining a group via link but has an existing score
-        if (currentGroup && doc.data().groupId !== currentGroup) {
-            // Allow user to edit name before submitting
+        // If we have local groups, check if the current one is in the remote score
+        if (groups.length > 0) {
+            if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
+            const currentGroupId = groups[currentGroupIndex].id;
+
+            if (!remoteGroupIds.includes(currentGroupId)) {
+                const formContainer = document.getElementById('leaderboard-submit-form');
+                 
+                // Re-render form if it was replaced by success message
+                formContainer.innerHTML = `
+                    <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
+                    <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
+                `;
+
             const nameInput = document.getElementById('player-name');
             const btn = document.getElementById('submit-score-btn');
             
-            if (nameInput) nameInput.value = doc.data().name || '';
+            if (nameInput) nameInput.value = data.name || localStorage.getItem('trivia-name') || '';
             if (btn) {
                 btn.innerText = "Join Group";
                 btn.className = "bg-emerald-600 hover:bg-emerald-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all";
             }
             return;
+        }
         }
         document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score for today is on the board!</p>`;
     }
@@ -654,6 +669,7 @@ function switchGroup(direction) {
     if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
     
     fetchAndDisplayLeaderboard();
+    checkIfSubmitted();
 }
 
 function showCreateGroupUI() {
@@ -965,6 +981,11 @@ async function handleInvite(groupId) {
             localStorage.setItem('trivia-groups', JSON.stringify(groups));
             currentGroupIndex = groups.length - 1;
             console.log("Joined new group:", groupName);
+            
+            if (!document.getElementById('results-card').classList.contains('hidden')) {
+                fetchAndDisplayLeaderboard();
+                checkIfSubmitted();
+            }
         }
     } catch (e) {
         console.error("Error joining group from link", e);
