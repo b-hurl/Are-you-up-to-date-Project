@@ -437,6 +437,15 @@ async function checkIfSubmitted() {
     const docId = `${getGameDate()}_${userId}`;
     const doc = await db.collection('scores').doc(docId).get();
     if (doc.exists) {
+        const currentGroup = localStorage.getItem('trivia-group');
+        
+        // If user is joining a group via link but has an existing score, update it
+        if (currentGroup && doc.data().groupId !== currentGroup) {
+            await db.collection('scores').doc(docId).update({ groupId: currentGroup });
+            document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Joined group & updated score!</p>`;
+            fetchAndDisplayLeaderboard();
+            return;
+        }
         document.getElementById('leaderboard-submit-form').innerHTML = `<p class="text-emerald-400 text-sm font-bold w-full text-center">✅ Your score for today is on the board!</p>`;
     }
 }
