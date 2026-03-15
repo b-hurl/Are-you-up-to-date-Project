@@ -554,9 +554,35 @@ function createGroup() {
     fetchAndDisplayLeaderboard();
 }
 
-function leaveGroup() {
-    if(confirm("Are you sure you want to leave this leaderboard?")) {
+async function leaveGroup() {
+    if(!confirm("Are you sure you want to leave this leaderboard? This will remove your scores from the group.")) return;
+    
+    const groupId = localStorage.getItem('trivia-group');
+    if (!groupId) return;
+
+    const display = document.getElementById('leaderboard-display');
+    display.innerHTML = '<p class="text-slate-400 text-sm text-center">Leaving group...</p>';
+
+    try {
+        const currentWeek = getWeekId(getGameDate());
+        const snapshot = await db.collection('scores')
+            .where('groupId', '==', groupId)
+            .where('weekId', '==', currentWeek)
+            .get();
+
+        const batch = db.batch();
+        snapshot.forEach(doc => {
+            if (doc.data().userId === userId) {
+                batch.update(doc.ref, { groupId: null });
+            }
+        });
+        await batch.commit();
+
         localStorage.removeItem('trivia-group');
+        fetchAndDisplayLeaderboard();
+    } catch (error) {
+        console.error("Error leaving group:", error);
+        alert("Failed to leave group properly.");
         fetchAndDisplayLeaderboard();
     }
 }
