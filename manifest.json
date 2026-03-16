@@ -1,0 +1,16 @@
+{
+  "name": "Daily Trivia Challenge",
+  "short_name": "Trivia",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/864/864806.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

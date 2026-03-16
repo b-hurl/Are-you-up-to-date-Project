@@ -13,6 +13,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Daily Trivia Challenge">
 <meta name="twitter:description" content="I just scored on today's trivia! Come play.">
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <!-- Firebase SDKs -->
@@ -100,12 +102,31 @@
         </div>
     </div>
 
+    <!-- iOS Install Modal -->
+    <div id="ios-install-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4" onclick="this.classList.add('hidden')">
+        <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-sm w-full shadow-2xl text-center relative" onclick="event.stopPropagation()">
+            <button onclick="document.getElementById('ios-install-modal').classList.add('hidden')" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+            <div class="text-4xl mb-4">📲</div>
+            <h3 class="text-xl font-black text-white mb-2">Install App</h3>
+            <p class="text-slate-300 text-sm mb-4">To install this app on your iPhone:</p>
+            <div class="space-y-3 text-left text-sm text-slate-400 bg-slate-900/50 p-4 rounded-xl">
+                <p class="flex items-center gap-2">1. Tap the <span class="font-bold text-blue-400">Share</span> button <span class="text-xl">⎋</span></p>
+                <p class="flex items-center gap-2">2. Scroll down and tap <span class="font-bold text-white">Add to Home Screen</span> <span class="text-xl">⊞</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons -->
     <button id="stats-btn" onclick="openStats()" class="fixed top-4 left-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span class="text-xl">📊</span>
     </button>
 
     <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span id="mute-icon" class="text-xl">🔊</span>
+    </button>
+
+    <button id="install-btn" class="fixed top-4 left-20 z-50 bg-indigo-600/90 p-3 rounded-full border border-indigo-500 hover:bg-indigo-500 transition-all hidden shadow-lg shadow-indigo-500/20">
+        <span class="text-xl">📲</span>
     </button>
 
     <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative">
@@ -1345,6 +1366,44 @@ function closeStats() {
     modal.querySelector('div').classList.add('scale-95');
     setTimeout(() => modal.classList.add('hidden'), 300);
 }
+
+        // --- PWA INSTALL LOGIC ---
+        let deferredPrompt;
+        const installBtn = document.getElementById('install-btn');
+        const iosModal = document.getElementById('ios-install-modal');
+
+        // Detect iOS
+        const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+        // iOS: Show button if not already installed, open instructions on click
+        if (isIos && !isStandalone) {
+            installBtn.classList.remove('hidden');
+            installBtn.onclick = () => iosModal.classList.remove('hidden');
+        }
+
+        // Android/Desktop: Handle native install prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installBtn.classList.remove('hidden');
+            
+            installBtn.onclick = async () => {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    const { outcome } = await deferredPrompt.userChoice;
+                    deferredPrompt = null;
+                    if (outcome === 'accepted') {
+                        installBtn.classList.add('hidden');
+                    }
+                }
+            };
+        });
+
+        window.addEventListener('appinstalled', () => {
+            installBtn.classList.add('hidden');
+            deferredPrompt = null;
+        });
 
         // Run Import before initialization
         importStateFromURL();
