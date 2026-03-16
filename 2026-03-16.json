@@ -1,0 +1,44 @@
+{
+  "questions": [
+    {
+      "q": "At the 98th Academy Awards held on March 15th 2026, which veteran actor won the Oscar for Best Supporting Role for his performance in the film 'One Battle After Another'?",
+      "options": ["Benicio Del Toro", "Jacob Elordi", "Sean Penn", "Stellan Skarsgård"],
+      "a": 2,
+      "category": "Entertainment",
+      "source": "https://www.foxnews.com/entertainment/2026-oscars-winners-losers"
+    },
+    {
+      "q": "The 2026 Winter Paralympics officially concluded in Italy on March 15th 2026. Which country finished at the very top of the overall medal table with 15 gold medals?",
+      "options": ["United States", "Canada", "China", "Norway"],
+      "a": 2,
+      "category": "Sports",
+      "source": "https://www.cbc.ca/sports/paralympics/milano-cortina-paralympics-closing-ceremony-9.7129830"
+    },
+    {
+      "q": "Environment Canada issued warnings on March 15th 2026 for a significant winter storm bringing snow and freezing rain to which region of the country?",
+      "options": ["The Prairie Provinces", "Central and Eastern Ontario", "Vancouver Island", "The Yukon Territory"],
+      "a": 1,
+      "category": "Weather",
+      "source": "https://globalnews.ca/news/11731772/canada-winter-storm-march-15/"
+    },
+    {
+      "q": "Conservative Leader Pierre Poilievre unveiled a major new 'Auto Plan' in Windsor on March 15th 2026. What is the primary goal of this policy regarding the U.S. market?",
+      "options": [
+        "To ban all American-made parts",
+        "To secure tariff-free access for Canadian-made cars",
+        "To increase the federal tax on gasoline",
+        "To move all car manufacturing to Western Canada"
+      ],
+      "a": 1,
+      "category": "Politics",
+      "source": "https://www.thealbertan.com/national-news/poilievre-announces-auto-plan-aiming-for-tariff-free-access-to-us-market-12007078"
+    },
+    {
+      "q": "According to the National Day Calendar, March 15th is humorously known as 'Everything You Think Is ______ Day,' a day where people are encouraged to admit they might not always be right.",
+      "options": ["Awesome", "Right", "Wrong", "Impossible"],
+      "a": 2,
+      "category": "Lifestyle",
+      "source": "https://www.nationaldaycalendar.com/pop-culture-lifestyle/everything-you-think-is-wrong-day-march-15"
+    }
+  ]
+}
