@@ -71,6 +71,39 @@
         </div>
     </div>
 
+    <!-- Stats Modal -->
+    <div id="stats-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300">
+            <button onclick="closeStats()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black text-white mb-1">Your Stats</h2>
+                <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Lifetime Performance</p>
+            </div>
+            
+            <div id="stats-content" class="space-y-4">
+                <!-- Loading State -->
+                <div class="animate-pulse flex space-x-4">
+                    <div class="flex-1 space-y-4 py-1">
+                        <div class="h-4 bg-slate-700 rounded w-3/4 mx-auto"></div>
+                        <div class="space-y-2">
+                            <div class="h-4 bg-slate-700 rounded"></div>
+                            <div class="h-4 bg-slate-700 rounded w-5/6"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-slate-500 text-xs">Crunching the numbers...</p>
+            </div>
+
+            <button onclick="closeStats()" class="mt-6 w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <button id="stats-btn" onclick="openStats()" class="fixed top-4 left-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
+        <span class="text-xl">📊</span>
+    </button>
+
     <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span id="mute-icon" class="text-xl">🔊</span>
     </button>
@@ -177,6 +210,7 @@
                     grps: localStorage.getItem('trivia-groups'),
                     mute: localStorage.getItem('trivia-muted'),
                     cens: localStorage.getItem('trivia-censor'),
+                    asub: localStorage.getItem('trivia-autosubmit'),
                     sess: localStorage.getItem('trivia-session')
                 };
                 
@@ -214,6 +248,7 @@
                 if (state.grps) localStorage.setItem('trivia-groups', state.grps);
                 if (state.mute) localStorage.setItem('trivia-muted', state.mute);
                 if (state.cens) localStorage.setItem('trivia-censor', state.cens);
+                if (state.asub) localStorage.setItem('trivia-autosubmit', state.asub);
                 if (state.sess) localStorage.setItem('trivia-session', state.sess);
 
                 // Clean URL so the user doesn't accidentally share their session link later
@@ -478,11 +513,19 @@ function showFinalResults() {
 
     // Initialize UI states
     document.getElementById('profanity-filter-toggle').checked = localStorage.getItem('trivia-censor') === 'true';
+    const autoSubmit = localStorage.getItem('trivia-autosubmit') !== 'false';
+    document.getElementById('auto-submit-toggle').checked = autoSubmit;
+
     // Pre-fill name and fetch leaderboard
-    document.getElementById('player-name').value = localStorage.getItem('trivia-name') || '';
+    const storedName = localStorage.getItem('trivia-name');
+    document.getElementById('player-name').value = storedName || '';
     if (db) {
-        checkIfSubmitted();
         fetchAndDisplayLeaderboard();
+        checkIfSubmitted().then(submitted => {
+            if (!submitted && autoSubmit && storedName && storedName.trim() && getMyGroups().length > 0) {
+                submitScore();
+            }
+        });
     }
 }
 
@@ -613,7 +656,7 @@ async function checkIfSubmitted() {
                 btn.innerText = "Join Group";
                 btn.className = "bg-emerald-600 hover:bg-emerald-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all";
             }
-            return;
+            return true;
         }
         }
         document.getElementById('leaderboard-submit-form').innerHTML = `
@@ -623,7 +666,9 @@ async function checkIfSubmitted() {
                     💬 Update Taunt
                 </button>
             </div>`;
+        return true;
     }
+    return false;
 }
 
 function setLeaderboardView(view) {
@@ -810,6 +855,12 @@ function toggleProfanityFilter() {
     localStorage.setItem('trivia-censor', checkbox.checked);
     // Re-render the leaderboard to apply the filter
     fetchAndDisplayLeaderboard();
+    exportStateToURL();
+}
+
+function toggleAutoSubmit() {
+    const checkbox = document.getElementById('auto-submit-toggle');
+    localStorage.setItem('trivia-autosubmit', checkbox.checked);
     exportStateToURL();
 }
 
@@ -1221,6 +1272,88 @@ function closeTutorial() {
     
     setTimeout(() => {
         modal.classList.add('hidden');
+        localStorage.setItem('trivia-tutorial-seen', 'true');
+    }, 300);
+}
+
+async function openStats() {
+    const modal = document.getElementById('stats-modal');
+    const content = document.getElementById('stats-content');
+    
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+    }, 10);
+
+    if (!userId || !db) {
+        content.innerHTML = '<p class="text-center text-slate-400">Connect to play to see stats.</p>';
+        return;
+    }
+
+    try {
+        const snapshot = await db.collection('scores').where('userId', '==', userId).get();
+        
+        let totalGames = 0;
+        let totalScore = 0;
+        let perfectGames = 0;
+
+        snapshot.forEach(doc => {
+            const data = doc.data();
+            const s = data.score || 0;
+            totalGames++;
+            totalScore += s;
+            if (s === 5) perfectGames++; 
+        });
+
+        if (totalGames === 0) {
+            content.innerHTML = '<p class="text-center text-slate-400">No games played yet.</p>';
+            return;
+        }
+
+        const avgScore = (totalScore / totalGames).toFixed(1);
+        const winPct = Math.round((perfectGames / totalGames) * 100);
+
+        content.innerHTML = `
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Games Played</div>
+                    <div class="text-2xl font-black text-white">${totalGames}</div>
+                </div>
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Win % (Perfect)</div>
+                    <div class="text-2xl font-black text-emerald-400">${winPct}%</div>
+                </div>
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center col-span-2">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Average Score</div>
+                    <div class="text-3xl font-black text-indigo-400">${avgScore} <span class="text-sm text-slate-500">/ 5</span></div>
+                </div>
+            </div>
+        `;
+
+    } catch (error) {
+        console.error("Stats error:", error);
+        content.innerHTML = '<p class="text-center text-red-400 text-sm">Could not load stats.</p>';
+    }
+}
+
+function closeStats() {
+    const modal = document.getElementById('stats-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+}
+
+        // Run Import before initialization
+        importStateFromURL();
+        initFirebase();
+        startApp();
+        checkTutorial();
+    </script>
+</body>
+</html> modal.classList.add('hidden');
         localStorage.setItem('trivia-tutorial-seen', 'true');
     }, 300);
 }
