@@ -84,8 +84,14 @@
         <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2 scrollbar-hide"></div>
 
         <!-- Leaderboard Section -->
-        <div id="leaderboard-section" class="text-left mb-6">
-            <h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-3">Today's Leaderboard</h3>
+        <div id="leaderboard-section" class="text-left mb-6 border-t border-slate-700 pt-6">
+            <div class="flex justify-between items-center mb-3">
+                <h3 id="leaderboard-title" class="text-indigo-400 font-bold uppercase tracking-widest text-[10px]">Today's Leaderboard</h3>
+                <div class="flex items-center gap-1.5">
+                    <input type="checkbox" id="profanity-filter-toggle" onchange="toggleProfanityFilter()" class="h-3.5 w-3.5 bg-slate-700 border-slate-600 rounded text-indigo-500 focus:ring-indigo-600 focus:ring-offset-slate-800 cursor-pointer">
+                    <label for="profanity-filter-toggle" class="text-xs text-slate-400 select-none cursor-pointer">Censor Taunts</label>
+                </div>
+            </div>
             <div id="leaderboard-submit-form" class="flex gap-2 mb-3">
                 <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
                 <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
@@ -118,6 +124,7 @@
         let db = null;
         let userId = null;
         let currentGroupIndex = 0;
+        let leaderboardView = 'daily';
 
         // --- UTILITIES ---
         function shuffle(array) {
@@ -372,6 +379,8 @@ function showFinalResults() {
     updateStreak();
     renderReview();
 
+    // Initialize UI states
+    document.getElementById('profanity-filter-toggle').checked = localStorage.getItem('trivia-censor') === 'true';
     // Pre-fill name and fetch leaderboard
     document.getElementById('player-name').value = localStorage.getItem('trivia-name') || '';
     if (db) {
@@ -394,8 +403,23 @@ function getWeekId(dateStr) {
 }
 
 async function setTaunt() {
-    const taunt = prompt("Enter a taunt message for the player ranked below you:");
+    const MAX_LEN = 60;
+    const taunt = prompt(`Enter a taunt message for the player ranked below you (Max ${MAX_LEN} chars):`);
     if (taunt === null) return;
+
+    if (taunt.length > MAX_LEN) {
+        alert(`Whoa, Shakespeare! Keep your taunt under ${MAX_LEN} characters so it fits on the board.`);
+        return;
+    }
+
+    // Filter: Slurs & Hate Speech (Allows general swearing like "fuck")
+    const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
+    const hasSlur = banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(taunt));
+
+    if (hasSlur) {
+        alert("Let's keep it friendly-ish! No slurs or hate speech allowed.");
+        return;
+    }
     
     const gameDate = getGameDate();
     const docId = `${gameDate}_${userId}`;
@@ -505,9 +529,14 @@ async function checkIfSubmitted() {
     }
 }
 
+function setLeaderboardView(view) {
+    leaderboardView = view;
+    fetchAndDisplayLeaderboard();
+}
+
 async function fetchAndDisplayLeaderboard() {
     const display = document.getElementById('leaderboard-display');
-    const title = document.querySelector('#leaderboard-section h3');
+    const title = document.getElementById('leaderboard-title');
     const submitForm = document.getElementById('leaderboard-submit-form');
     
     const groups = getMyGroups();
@@ -548,6 +577,10 @@ async function fetchAndDisplayLeaderboard() {
         // Show Invite Button + Loading
         display.innerHTML = `
             <div class="mb-3 flex flex-wrap justify-center gap-2">
+                <div class="w-full flex justify-center gap-1 mb-1 bg-slate-800/80 p-1 rounded-lg w-max mx-auto border border-slate-700/50 max-w-[200px]">
+                    <button onclick="setLeaderboardView('daily')" class="${leaderboardView === 'daily' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Daily</button>
+                    <button onclick="setLeaderboardView('weekly')" class="${leaderboardView === 'weekly' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Weekly</button>
+                </div>
                 <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30">
                     🔗 Copy Invite Link
                 </button>
@@ -571,18 +604,15 @@ async function fetchAndDisplayLeaderboard() {
             .where('weekId', '==', currentWeek)
             .get();
 
-        if (snapshot.empty) {
-            display.innerHTML += '<p class="text-slate-400 text-sm text-center mt-2">No scores yet this week. Be the first!</p>';
-            // Keep the invite button visible by clearing only the "Loading" text (simple replacement)
-            display.innerHTML = display.innerHTML.replace('Loading scores...', ''); 
-            return;
-        }
-
         // 3. Client-side Aggregation (Sum scores by user for the week)
         const userTotals = {};
+        const todayDate = getGameDate();
 
         snapshot.forEach(doc => {
             const d = doc.data();
+            // Filter if daily
+            if (leaderboardView === 'daily' && d.date !== todayDate) return;
+
             if (!userTotals[d.userId]) {
                 userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0, games: 0 };
             }
@@ -599,8 +629,15 @@ async function fetchAndDisplayLeaderboard() {
 
         // 4. Render
         // Keep invite button at top
+        const dailyClass = leaderboardView === 'daily' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
+        const weeklyClass = leaderboardView === 'weekly' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
+        
         const inviteBtnHTML = `
             <div class="mb-3 flex flex-wrap justify-center gap-2">
+                <div class="w-full flex justify-center gap-1 mb-1 bg-slate-800/80 p-1 rounded-lg w-max mx-auto border border-slate-700/50 max-w-[200px]">
+                    <button onclick="setLeaderboardView('daily')" class="${dailyClass} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Daily</button>
+                    <button onclick="setLeaderboardView('weekly')" class="${weeklyClass} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Weekly</button>
+                </div>
                 <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30 transition-all">
                     🔗 Copy Invite Link
                 </button>
@@ -633,7 +670,8 @@ async function fetchAndDisplayLeaderboard() {
             const isMe = user.id === userId;
             const nameColor = isMe ? "text-emerald-400 font-bold" : (index < 3 ? "text-white" : "text-slate-300");
             const displayName = isMe ? `${user.name} (You)` : user.name;
-            const tauntHTML = user.taunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${user.taunt}" 👇</div>` : '';
+            const cleanTaunt = censorTaunt(user.taunt);
+            const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}" 👇</div>` : '';
             const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 bg-slate-700 hover:bg-slate-600 text-indigo-300 text-[10px] px-2 py-0.5 rounded border border-indigo-500/30 transition-all">💬 Taunt</button>` : '';
             
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
@@ -654,7 +692,11 @@ async function fetchAndDisplayLeaderboard() {
         });
         
         display.innerHTML = inviteBtnHTML;
-        display.appendChild(list);
+        if (sortedUsers.length === 0) {
+            display.innerHTML += `<p class="text-slate-400 text-sm text-center mt-4">No scores ${leaderboardView === 'daily' ? 'today' : 'this week'}. Be the first!</p>`;
+        } else {
+            display.appendChild(list);
+        }
 
     } catch (error) {
         console.error("Error fetching leaderboard:", error);
@@ -664,6 +706,39 @@ async function fetchAndDisplayLeaderboard() {
             display.innerHTML = `<p class="text-red-400 text-xs text-center mt-2">Error: ${error.code || error.message}</p>`;
         }
     }
+}
+
+function toggleProfanityFilter() {
+    const checkbox = document.getElementById('profanity-filter-toggle');
+    localStorage.setItem('trivia-censor', checkbox.checked);
+    // Re-render the leaderboard to apply the filter
+    fetchAndDisplayLeaderboard();
+}
+
+function censorTaunt(taunt) {
+    const isCensored = localStorage.getItem('trivia-censor') === 'true';
+    if (!isCensored || !taunt) return taunt;
+
+    // This list is for the optional client-side filter.
+    // The input filter in setTaunt() is stricter for slurs.
+    const profanity = [
+        'fuck', 'fucking', 'fucked', 'fuckin',
+        'shit', 'shitty', 'shitting',
+        'bitch', 'bitching',
+        'cunt',
+        'asshole',
+        'pussy',
+        'dick', 'dickhead',
+        // Also filter slurs on output for good measure
+        "nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"
+    ];
+    
+    let cleanTaunt = taunt;
+    profanity.forEach(word => {
+        const regex = new RegExp(`\\b${word}\\b`, 'gi');
+        cleanTaunt = cleanTaunt.replace(regex, '*'.repeat(word.length));
+    });
+    return cleanTaunt;
 }
 
 // --- GROUP MANAGEMENT ---
