@@ -852,7 +852,8 @@ async function leaveGroup(groupId) {
         localStorage.setItem('trivia-groups', JSON.stringify(groups));
         
         currentGroupIndex = 0;
-        fetchAndDisplayLeaderboard();
+        await fetchAndDisplayLeaderboard();
+        await checkIfSubmitted();
     } catch (error) {
         console.error("Error leaving group:", error);
         alert("Failed to leave group properly.");
