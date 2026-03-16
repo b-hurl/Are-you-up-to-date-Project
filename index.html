@@ -155,6 +155,73 @@
         let currentGroupIndex = 0;
         let leaderboardView = 'daily';
 
+        // --- CROSS-BROWSER STATE SYNC ---
+        function isInAppBrowser() {
+            const ua = navigator.userAgent || navigator.vendor || window.opera;
+            // Detect Facebook, Instagram, etc.
+            return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Instagram") > -1) || (ua.indexOf("Line") > -1);
+        }
+
+        function exportStateToURL() {
+            // Only inject state into URL if we are in an in-app browser.
+            // This ensures "Open in Browser" works while keeping the URL clean for normal users.
+            if (!isInAppBrowser()) return;
+
+            try {
+                const state = {
+                    uid: localStorage.getItem('trivia-userId'),
+                    name: localStorage.getItem('trivia-name'),
+                    streak: localStorage.getItem('trivia-streak'),
+                    best: localStorage.getItem('trivia-best'),
+                    lDate: localStorage.getItem('trivia-last-date'),
+                    grps: localStorage.getItem('trivia-groups'),
+                    mute: localStorage.getItem('trivia-muted'),
+                    cens: localStorage.getItem('trivia-censor'),
+                    sess: localStorage.getItem('trivia-session')
+                };
+                
+                // UTF-8 Safe Base64 encoding
+                const json = JSON.stringify(state);
+                const b64 = btoa(encodeURIComponent(json).replace(/%([0-9A-F]{2})/g,
+                    function toSolidBytes(match, p1) {
+                        return String.fromCharCode('0x' + p1);
+                }));
+
+                const url = new URL(window.location);
+                url.searchParams.set('x-state', b64);
+                window.history.replaceState({}, '', url);
+            } catch (e) { console.error("State export failed", e); }
+        }
+
+        function importStateFromURL() {
+            const url = new URL(window.location);
+            const stateStr = url.searchParams.get('x-state');
+            if (!stateStr) return;
+
+            try {
+                // UTF-8 Safe Base64 decoding
+                const json = decodeURIComponent(atob(stateStr).split('').map(function(c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+                
+                const state = JSON.parse(json);
+
+                if (state.uid) localStorage.setItem('trivia-userId', state.uid);
+                if (state.name) localStorage.setItem('trivia-name', state.name);
+                if (state.streak) localStorage.setItem('trivia-streak', state.streak);
+                if (state.best) localStorage.setItem('trivia-best', state.best);
+                if (state.lDate) localStorage.setItem('trivia-last-date', state.lDate);
+                if (state.grps) localStorage.setItem('trivia-groups', state.grps);
+                if (state.mute) localStorage.setItem('trivia-muted', state.mute);
+                if (state.cens) localStorage.setItem('trivia-censor', state.cens);
+                if (state.sess) localStorage.setItem('trivia-session', state.sess);
+
+                // Clean URL so the user doesn't accidentally share their session link later
+                url.searchParams.delete('x-state');
+                window.history.replaceState({}, '', url);
+            } catch (e) { console.error("State import failed", e); }
+        }
+
         // --- UTILITIES ---
         function shuffle(array) {
             for (let i = array.length - 1; i > 0; i--) {
@@ -184,6 +251,7 @@
             isMuted = !isMuted;
             localStorage.setItem('trivia-muted', isMuted);
             document.getElementById('mute-icon').innerText = isMuted ? "🔇" : "🔊";
+            exportStateToURL();
         }
 
 // 8:00 AM CST is 14:00 UTC
@@ -742,6 +810,7 @@ function toggleProfanityFilter() {
     localStorage.setItem('trivia-censor', checkbox.checked);
     // Re-render the leaderboard to apply the filter
     fetchAndDisplayLeaderboard();
+    exportStateToURL();
 }
 
 function censorTaunt(taunt) {
@@ -840,6 +909,7 @@ async function createGroup() {
         groups.push({ id: newGroupId, name: groupName });
         localStorage.setItem('trivia-groups', JSON.stringify(groups));
         currentGroupIndex = groups.length - 1; // Switch to new group
+        exportStateToURL();
         
         await fetchAndDisplayLeaderboard();
         await checkIfSubmitted();
@@ -881,6 +951,7 @@ async function leaveGroup(groupId) {
         localStorage.setItem('trivia-groups', JSON.stringify(groups));
         
         currentGroupIndex = 0;
+        exportStateToURL();
         await fetchAndDisplayLeaderboard();
         await checkIfSubmitted();
     } catch (error) {
@@ -972,6 +1043,7 @@ function updateStreak() {
 
     document.getElementById('streak-count').innerText = streak;
     document.getElementById('best-streak').innerText = best;
+    exportStateToURL();
 }
 
 function renderReview() {
@@ -1064,6 +1136,7 @@ function saveSession(isFinished = false) {
         selectedIdx: selectedIdx
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
+    exportStateToURL();
 }
 
 function initFirebase() {
@@ -1115,6 +1188,7 @@ async function handleInvite(groupId) {
             groups.push({ id: groupId, name: groupName });
             localStorage.setItem('trivia-groups', JSON.stringify(groups));
             currentGroupIndex = groups.length - 1;
+            exportStateToURL();
             console.log("Joined new group:", groupName);
             
             if (!document.getElementById('results-card').classList.contains('hidden')) {
@@ -1151,6 +1225,8 @@ function closeTutorial() {
     }, 300);
 }
 
+        // Run Import before initialization
+        importStateFromURL();
         initFirebase();
         startApp();
         checkTutorial();
