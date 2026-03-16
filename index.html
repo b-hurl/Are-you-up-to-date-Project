@@ -41,6 +41,36 @@
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
 
+    <!-- Tutorial Modal -->
+    <div id="tutorial-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300">
+             <div class="text-center mb-6">
+                <div class="text-5xl mb-4">👋</div>
+                <h2 class="text-2xl font-black text-white mb-2">Welcome!</h2>
+                <p class="text-indigo-300 font-bold uppercase tracking-widest text-xs">How it works</p>
+            </div>
+            
+            <ul class="space-y-4 text-slate-300 text-sm mb-8">
+                <li class="flex items-start gap-3">
+                    <span class="bg-indigo-500/20 text-indigo-400 p-1.5 rounded-lg text-xs">📅</span>
+                    <span><strong>Daily Challenge:</strong> New trivia drops every day at 8:00 AM. The trivia questions will be based on the events that happened yesterday.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-red-500/20 text-red-400 p-1.5 rounded-lg text-xs">⚡</span>
+                    <span><strong>One Shot:</strong> You only get one chance per day. No retries!</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="bg-emerald-500/20 text-emerald-400 p-1.5 rounded-lg text-xs">🏆</span>
+                    <span><strong>Leaderboards:</strong> Create groups to compete with friends.</span>
+                </li>
+            </ul>
+
+            <button onclick="closeTutorial()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3.5 rounded-xl font-bold text-white shadow-lg shadow-indigo-500/20 transition-all transform active:scale-95">
+                Got it, Let's Play!
+            </button>
+        </div>
+    </div>
+
     <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span id="mute-icon" class="text-xl">🔊</span>
     </button>
@@ -1096,8 +1126,34 @@ async function handleInvite(groupId) {
         console.error("Error joining group from link", e);
     }
 }
+
+function checkTutorial() {
+    if (!localStorage.getItem('trivia-tutorial-seen')) {
+        const modal = document.getElementById('tutorial-modal');
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+        }, 10);
+    }
+}
+
+function closeTutorial() {
+    const modal = document.getElementById('tutorial-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        localStorage.setItem('trivia-tutorial-seen', 'true');
+    }, 300);
+}
+
         initFirebase();
         startApp();
+        checkTutorial();
     </script>
 </body>
 </html>
