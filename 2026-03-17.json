@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "q": "At the 98th Academy Awards held on March 15, 2026, which film took home the top prize for Best Picture?",
+      "options": [
+        "Sinners",
+        "Hamnet",
+        "One Battle After Another",
+        "Frankenstein"
+      ],
+      "a": 2,
+      "category": "Entertainment",
+      "source": "https://www.pbs.org/newshour/arts/heres-a-full-list-of-2026-academy-awards-winners"
+    },
+    {
+      "q": "On March 16, 2026, the Canadian Minister of National Defence announced a $200 million investment to build infrastructure for what sovereign capability?",
+      "options": [
+        "A national high-speed rail network",
+        "A Canadian-owned spaceport",
+        "An Arctic deep-water naval port",
+        "A domestic semiconductor factory"
+      ],
+      "a": 1,
+      "category": "Technology",
+      "source": "https://www.canada.ca/en/department-national-defence/news/2026/03/minister-mcguinty-announces-strategic-investments-in-sovereign-space-launch.html"
+    },
+    {
+      "q": "Which actor won the Oscar for Best Actor on March 15, 2026, for his leading role in the film 'Sinners'?",
+      "options": [
+        "Cillian Murphy",
+        "Michael B. Jordan",
+        "Jacob Elordi",
+        "Colman Domingo"
+      ],
+      "a": 1,
+      "category": "Entertainment",
+      "source": "https://apnews.com/article/2026-oscars-academy-awards-show-b868da63dd16aa6ca289ba4a8ac3a157"
+    },
+    {
+      "q": "Economic data released on March 16, 2026, showed that while inflation cooled in February, the Bank of Canada is concerned about a 'price shock' in which sector due to global conflict?",
+      "options": [
+        "Lumber and Housing",
+        "Wheat and Grain",
+        "Oil and Energy",
+        "Automotive Manufacturing"
+      ],
+      "a": 2,
+      "category": "Business",
+      "source": "https://rdnewsnow.com/2026/03/16/statistics-canada-set-to-publish-fresh-inflation-data-for-february/"
+    },
+    {
+      "q": "The Canadian government announced on March 16, 2026, that it has successfully bid to host the 2028 World Cup of Hockey in which two cities?",
+      "options": [
+        "Toronto and Montreal",
+        "Vancouver and Seattle",
+        "Edmonton and Calgary",
+        "Winnipeg and Regina"
+      ],
+      "a": 2,
+      "category": "Sports",
+      "source": "https://www.canada.ca/en/prairies-economic-development/news/2026/03/government-of-canada-supporting-community-experiences-around-the-nhl-and-nhlpa-world-cup-of-hockey-2028.html"
+    }
+  ]
+}
