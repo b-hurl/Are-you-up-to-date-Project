@@ -596,7 +596,7 @@ function showFinalResults() {
     if (db) {
         fetchAndDisplayLeaderboard();
         checkIfSubmitted().then(submitted => {
-            if (!submitted && autoSubmit && storedName && storedName.trim() && getMyGroups().length > 0) {
+            if (auth.currentUser && !submitted && autoSubmit && storedName && storedName.trim() && getMyGroups().length > 0) {
                 submitScore();
             }
         });
@@ -650,6 +650,11 @@ async function setTaunt() {
 }
 
 async function submitScore() {
+    if (!auth.currentUser) {
+        toggleLoginModal();
+        return;
+    }
+
     const name = document.getElementById('player-name').value.trim();
     if (!name) {
         alert("Please enter a name to submit your score.");
@@ -662,6 +667,7 @@ async function submitScore() {
     btn.innerText = "Submitting...";
 
     const gameDate = getGameDate();
+    const streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
     
     // Get ALL group IDs the user belongs to
     const groups = getMyGroups();
@@ -670,6 +676,7 @@ async function submitScore() {
     const scoreData = {
         name: name,
         score: score,
+        streak: streak,
         date: gameDate,
         weekId: getWeekId(gameDate), // Save the Week ID
         userId: userId,
@@ -700,6 +707,16 @@ async function submitScore() {
 }
 
 async function checkIfSubmitted() {
+    const formContainer = document.getElementById('leaderboard-submit-form');
+    if (!auth.currentUser) {
+        formContainer.innerHTML = `
+            <div class="flex flex-col items-center gap-2 w-full p-3 bg-slate-900/50 rounded-xl border border-slate-700/50">
+                <p class="text-indigo-200 text-xs font-bold">Sign in to submit score</p>
+                <button onclick="toggleLoginModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
+            </div>`;
+        return false;
+    }
+
     const docId = `${getGameDate()}_${userId}`;
     const doc = await db.collection('scores').doc(docId).get();
     
@@ -714,7 +731,6 @@ async function checkIfSubmitted() {
             const currentGroupId = groups[currentGroupIndex].id;
 
             if (!remoteGroupIds.includes(currentGroupId)) {
-                const formContainer = document.getElementById('leaderboard-submit-form');
                  
                 // Re-render form if it was replaced by success message
                 formContainer.innerHTML = `
@@ -742,6 +758,15 @@ async function checkIfSubmitted() {
             </div>`;
         return true;
     }
+    
+    // Not submitted yet: Ensure default form is visible (restores form if user just logged in)
+    formContainer.innerHTML = `
+        <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
+        <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
+    `;
+    const storedName = localStorage.getItem('trivia-name');
+    if (storedName) document.getElementById('player-name').value = storedName;
+
     return false;
 }
 
@@ -838,6 +863,8 @@ async function fetchAndDisplayLeaderboard() {
             userTotals[d.userId].name = d.name;
             // Capture taunt if present
             if (d.taunt) userTotals[d.userId].taunt = d.taunt;
+            // Capture streak (use max found for the period)
+            if (d.streak) userTotals[d.userId].streak = Math.max(userTotals[d.userId].streak || 0, d.streak);
         });
 
         // Convert to array and sort
@@ -886,6 +913,7 @@ async function fetchAndDisplayLeaderboard() {
             const isMe = user.id === userId;
             const nameColor = isMe ? "text-emerald-400 font-bold" : (index < 3 ? "text-white" : "text-slate-300");
             const displayName = isMe ? `${user.name} (You)` : user.name;
+            const streakHTML = (user.streak > 0) ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : '';
             const cleanTaunt = censorTaunt(user.taunt);
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}" 👇</div>` : '';
             const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 bg-slate-700 hover:bg-slate-600 text-indigo-300 text-[10px] px-2 py-0.5 rounded border border-indigo-500/30 transition-all">💬 Taunt</button>` : '';
@@ -899,6 +927,7 @@ async function fetchAndDisplayLeaderboard() {
                     <div class="flex items-center">
                         ${badge}
                         <span class="${nameColor} truncate max-w-[140px]">${displayName}</span>
+                        ${streakHTML}
                         ${actionBtn}
                     </div>
                     <span class="font-mono bg-slate-900/50 px-2 py-1 rounded text-indigo-300 text-xs border border-indigo-500/20 whitespace-nowrap">${user.totalScore} pts</span>
