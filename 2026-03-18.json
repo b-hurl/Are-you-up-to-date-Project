@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "As of March 16, 2026, a new cap on 'Non-Sufficient Funds' (NSF) fees officially took effect in Canada. What is the maximum amount a bank can now charge a consumer for an NSF fee?",
+      "options": ["$5", "$10", "$25", "$45"],
+      "a": 1,
+      "category": "Business",
+      "source": "https://www.canada.ca/en/department-finance/news/2026/03/secretary-of-state-long-highlights-recent-measures-to-make-life-more-affordable-for-canadians.html"
+    },
+    {
+      "q": "Which iconic Canadian landmark is being lit green every hour for 15 minutes starting at 8:00 PM on March 17, 2026, as part of a global St. Patrick's Day tourism initiative?",
+      "options": ["The CN Tower", "Parliament Hill", "Niagara Falls", "The Fairmont Le Château Frontenac"],
+      "a": 2,
+      "category": "Lifestyle",
+      "source": "https://www.cbc.ca/news/canada/hamilton/niagara-falls-lit-green-st-patricks-day-9.7131696"
+    },
+    {
+      "q": "The Canadian government announced a $200 million investment on March 17, 2026, to support a new spaceport located in which province?",
+      "options": ["British Columbia", "Ontario", "Alberta", "Nova Scotia"],
+      "a": 3,
+      "category": "Technology",
+      "source": "https://globe2go.pressreader.com/the-globe-and-mail-ontario-edition"
+    },
+    {
+      "q": "On March 17, 2026, reports emerged that the federal government is planning to achieve $60 billion in savings by reducing the size of the public service. Which agency is projected to see its workforce peak this year due to the 2026 Census?",
+      "options": ["Health Canada", "Statistics Canada", "The Canada Revenue Agency", "Parks Canada"],
+      "a": 1,
+      "category": "Politics",
+      "source": "https://www.ctvnews.ca/ottawa/article/federal-department-plans-outline-public-service-job-cuts-spending-reductions/"
+    },
+    {
+      "q": "Which major tech company completed its $11 billion acquisition of the data streaming platform Confluent on March 17, 2026, to bolster its 'real-time' AI capabilities?",
+      "options": ["Microsoft", "IBM", "Oracle", "Amazon"],
+      "a": 1,
+      "category": "Business",
+      "source": "https://www.prnewswire.com/news-releases/ibm-completes-acquisition-of-confluent-making-real-time-data-the-engine-of-enterprise-ai-and-agents-302716028.html"
+    }
+  ]
+}
