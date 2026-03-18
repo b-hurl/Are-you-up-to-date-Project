@@ -592,7 +592,18 @@ function showFinalResults() {
 
     // Pre-fill name and fetch leaderboard
     const storedName = localStorage.getItem('trivia-name');
-    document.getElementById('player-name').value = storedName || '';
+    
+    if (!auth.currentUser) {
+        document.getElementById('leaderboard-submit-form').innerHTML = `
+            <div class="flex flex-col items-center gap-2 w-full p-3 bg-slate-900/50 rounded-xl border border-slate-700/50">
+                <p class="text-indigo-200 text-xs font-bold">Sign in to submit score</p>
+                <button onclick="toggleLoginModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
+            </div>`;
+    } else {
+        const nameInput = document.getElementById('player-name');
+        if (nameInput) nameInput.value = storedName || '';
+    }
+
     if (db) {
         fetchAndDisplayLeaderboard();
         checkIfSubmitted().then(submitted => {
