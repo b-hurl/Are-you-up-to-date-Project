@@ -90,6 +90,9 @@
                 <button onclick="socialLogin('facebook')" class="w-full bg-[#1877F2] text-white hover:bg-[#166fe5] py-3 rounded-xl font-bold flex items-center justify-center gap-3 transition-all">
                     <span class="font-serif font-black text-xl">f</span> Continue with Facebook
                 </button>
+                <button onclick="socialLogin('microsoft')" class="w-full bg-[#2f2f2f] text-white hover:bg-[#1a1a1a] py-3 rounded-xl font-bold flex items-center justify-center gap-3 transition-all border border-slate-600">
+                    <span class="text-xl">⊞</span> Continue with Microsoft
+                </button>
             </div>
 
             <div class="relative flex py-2 items-center mb-4">
@@ -109,7 +112,8 @@
             <p id="auth-error" class="text-red-400 text-xs text-center mt-4 hidden"></p>
             
             <div id="user-info-display" class="hidden text-center">
-                <p class="text-slate-300 text-sm mb-4">You are currently signed in.</p>
+                <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-2">Signed In As</p>
+                <p id="user-email-display" class="text-white font-mono text-sm bg-slate-900 py-2 px-3 rounded-lg border border-slate-700 mb-6 truncate"></p>
                 <button onclick="doLogout()" class="w-full bg-red-600 hover:bg-red-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Out</button>
             </div>
         </div>
@@ -1310,6 +1314,7 @@ function initFirebase() {
             userBtn.innerHTML = user.photoURL ? `<img src="${user.photoURL}" class="w-6 h-6 rounded-full">` : "🟢";
             loginOptions.classList.add('hidden');
             userInfo.classList.remove('hidden');
+            document.getElementById('user-email-display').innerText = user.email || "Linked Account";
             
             // Refresh data context
             if (!document.getElementById('results-card').classList.contains('hidden')) {
@@ -1353,15 +1358,31 @@ function closeLoginModal() {
 }
 
 async function socialLogin(providerName) {
-    const provider = providerName === 'google' 
-        ? new firebase.auth.GoogleAuthProvider() 
-        : new firebase.auth.FacebookAuthProvider();
+    let provider;
+    if (providerName === 'google') {
+        provider = new firebase.auth.GoogleAuthProvider();
+    } else if (providerName === 'facebook') {
+        provider = new firebase.auth.FacebookAuthProvider();
+    } else if (providerName === 'microsoft') {
+        provider = new firebase.auth.OAuthProvider('microsoft.com');
+        // Force prompt to select account every time (optional)
+        provider.setCustomParameters({ prompt: 'select_account' });
+    }
     
     try {
         await auth.signInWithPopup(provider);
         closeLoginModal();
     } catch (error) {
-        document.getElementById('auth-error').innerText = error.message;
+        console.error("Login Error:", error);
+        let msg = error.message;
+        if (error.code === 'auth/configuration-not-found' || error.code === 'auth/operation-not-allowed') {
+            msg = "This login method is not enabled in the Firebase Console.";
+        } else if (error.code === 'auth/popup-closed-by-user') {
+            msg = "Sign-in was cancelled.";
+        } else if (error.code === 'auth/unauthorized-domain') {
+            msg = "This domain is not authorized. Add it in Firebase Console > Auth > Settings.";
+        }
+        document.getElementById('auth-error').innerText = msg;
         document.getElementById('auth-error').classList.remove('hidden');
     }
 }
