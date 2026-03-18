@@ -95,6 +95,7 @@
                 </button>
             </div>
 
+            <div id="email-auth-section">
             <div class="relative flex py-2 items-center mb-4">
                 <div class="flex-grow border-t border-slate-600"></div>
                 <span class="flex-shrink mx-4 text-slate-500 text-xs uppercase">Or with Email</span>
@@ -108,6 +109,7 @@
                     <button onclick="emailAuth('login')" class="flex-1 bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
                     <button onclick="emailAuth('signup')" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Up</button>
                 </div>
+            </div>
             </div>
             <p id="auth-error" class="text-red-400 text-xs text-center mt-4 hidden"></p>
             
@@ -1298,6 +1300,7 @@ function initFirebase() {
         const userBtn = document.getElementById('user-icon-display');
         const loginOptions = document.getElementById('login-options');
         const userInfo = document.getElementById('user-info-display');
+        const emailAuthSection = document.getElementById('email-auth-section');
 
         if (user) {
             // Logged In
@@ -1313,6 +1316,7 @@ function initFirebase() {
             // Update UI
             userBtn.innerHTML = user.photoURL ? `<img src="${user.photoURL}" class="w-6 h-6 rounded-full">` : "🟢";
             loginOptions.classList.add('hidden');
+            if (emailAuthSection) emailAuthSection.classList.add('hidden');
             userInfo.classList.remove('hidden');
             document.getElementById('user-email-display').innerText = user.email || "Linked Account";
             
@@ -1330,6 +1334,7 @@ function initFirebase() {
             userId = getOrSetUserId();
             userBtn.innerHTML = "👤";
             loginOptions.classList.remove('hidden');
+            if (emailAuthSection) emailAuthSection.classList.remove('hidden');
             userInfo.classList.add('hidden');
         }
     });
