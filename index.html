@@ -20,6 +20,7 @@
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
 
     <style>
         .option-btn { transition: all 0.2s ease; }
@@ -73,6 +74,47 @@
         </div>
     </div>
 
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black text-white mb-1">Sign In</h2>
+                <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Sync Stats & Leaderboards</p>
+            </div>
+            
+            <div id="login-options" class="space-y-3 mb-6">
+                <button onclick="socialLogin('google')" class="w-full bg-white text-slate-900 hover:bg-slate-100 py-3 rounded-xl font-bold flex items-center justify-center gap-3 transition-all">
+                    <span>🇬</span> Continue with Google
+                </button>
+                <button onclick="socialLogin('facebook')" class="w-full bg-[#1877F2] text-white hover:bg-[#166fe5] py-3 rounded-xl font-bold flex items-center justify-center gap-3 transition-all">
+                    <span class="font-serif font-black text-xl">f</span> Continue with Facebook
+                </button>
+            </div>
+
+            <div class="relative flex py-2 items-center mb-4">
+                <div class="flex-grow border-t border-slate-600"></div>
+                <span class="flex-shrink mx-4 text-slate-500 text-xs uppercase">Or with Email</span>
+                <div class="flex-grow border-t border-slate-600"></div>
+            </div>
+
+            <div class="space-y-3">
+                <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                <div class="flex gap-2">
+                    <button onclick="emailAuth('login')" class="flex-1 bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
+                    <button onclick="emailAuth('signup')" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Up</button>
+                </div>
+            </div>
+            <p id="auth-error" class="text-red-400 text-xs text-center mt-4 hidden"></p>
+            
+            <div id="user-info-display" class="hidden text-center">
+                <p class="text-slate-300 text-sm mb-4">You are currently signed in.</p>
+                <button onclick="doLogout()" class="w-full bg-red-600 hover:bg-red-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Out</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Stats Modal -->
     <div id="stats-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300">
@@ -119,6 +161,10 @@
     <!-- Buttons -->
     <button id="stats-btn" onclick="openStats()" class="fixed top-4 left-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span class="text-xl">📊</span>
+    </button>
+
+    <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
+        <span id="user-icon-display" class="text-xl">👤</span>
     </button>
 
     <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
@@ -205,6 +251,7 @@
         let selectedIdx = null;
         let isCurrentSelectionCorrect = false;
         let db = null;
+        let auth = null;
         let userId = null;
         let currentGroupIndex = 0;
         let leaderboardView = 'daily';
@@ -1232,6 +1279,7 @@ function initFirebase() {
 
     firebase.initializeApp(firebaseConfig);
     db = firebase.firestore();
+    auth = firebase.auth();
     userId = getOrSetUserId();
 
     // CHECK FOR INVITE LINK
@@ -1240,6 +1288,114 @@ function initFirebase() {
     if (inviteGroup) {
         handleInvite(inviteGroup);
     }
+
+    // Auth Listener
+    auth.onAuthStateChanged((user) => {
+        const userBtn = document.getElementById('user-icon-display');
+        const loginOptions = document.getElementById('login-options');
+        const userInfo = document.getElementById('user-info-display');
+
+        if (user) {
+            // Logged In
+            userId = user.uid;
+            localStorage.setItem('trivia-userId', userId); // Update local reference
+            
+            // Auto-set name if available
+            if(user.displayName && !localStorage.getItem('trivia-name')) {
+                localStorage.setItem('trivia-name', user.displayName);
+                document.getElementById('player-name').value = user.displayName;
+            }
+
+            // Update UI
+            userBtn.innerHTML = user.photoURL ? `<img src="${user.photoURL}" class="w-6 h-6 rounded-full">` : "🟢";
+            loginOptions.classList.add('hidden');
+            userInfo.classList.remove('hidden');
+            
+            // Refresh data context
+            if (!document.getElementById('results-card').classList.contains('hidden')) {
+                fetchAndDisplayLeaderboard();
+                checkIfSubmitted();
+            }
+        } else {
+            // Logged Out
+            if (localStorage.getItem('trivia-userId') && !localStorage.getItem('trivia-userId').startsWith('user_')) {
+                // If we were using an auth ID, reset to a random one so we don't keep using the old account locally
+                localStorage.removeItem('trivia-userId');
+            }
+            userId = getOrSetUserId();
+            userBtn.innerHTML = "👤";
+            loginOptions.classList.remove('hidden');
+            userInfo.classList.add('hidden');
+        }
+    });
+}
+
+function toggleLoginModal() {
+    const modal = document.getElementById('login-modal');
+    if (modal.classList.contains('hidden')) {
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+        }, 10);
+    } else {
+        closeLoginModal();
+    }
+}
+
+function closeLoginModal() {
+    const modal = document.getElementById('login-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+}
+
+async function socialLogin(providerName) {
+    const provider = providerName === 'google' 
+        ? new firebase.auth.GoogleAuthProvider() 
+        : new firebase.auth.FacebookAuthProvider();
+    
+    try {
+        await auth.signInWithPopup(provider);
+        closeLoginModal();
+    } catch (error) {
+        document.getElementById('auth-error').innerText = error.message;
+        document.getElementById('auth-error').classList.remove('hidden');
+    }
+}
+
+async function emailAuth(type) {
+    const email = document.getElementById('auth-email').value;
+    const password = document.getElementById('auth-password').value;
+    const errDisplay = document.getElementById('auth-error');
+
+    if (!email || !password) {
+        errDisplay.innerText = "Please enter email and password";
+        errDisplay.classList.remove('hidden');
+        return;
+    }
+
+    try {
+        if (type === 'signup') {
+            await auth.createUserWithEmailAndPassword(email, password);
+        } else {
+            await auth.signInWithEmailAndPassword(email, password);
+        }
+        closeLoginModal();
+        errDisplay.classList.add('hidden');
+    } catch (error) {
+        errDisplay.innerText = error.message;
+        errDisplay.classList.remove('hidden');
+    }
+}
+
+async function doLogout() {
+    try {
+        await auth.signOut();
+        closeLoginModal();
+    } catch (e) { console.error(e); }
 }
 
 async function handleInvite(groupId) {
