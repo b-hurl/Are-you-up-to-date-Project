@@ -61,7 +61,6 @@
         }
 
         .option-btn { transition: all 0.2s ease; }
-        .selected { background-color: #4f46e5 !important; border-color: #818cf8 !important; transform: scale(1.02); box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
         .selected { background-color: var(--primary-600) !important; border-color: var(--primary-400) !important; transform: scale(1.02); box-shadow: 0 0 20px var(--primary-dim); }
         .correct { background-color: #10b981 !important; border-color: #059669 !important; }
         .incorrect { background-color: #ef4444 !important; border-color: #dc2626 !important; }
@@ -69,15 +68,13 @@
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .share-btn {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
     background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
     box-shadow: 0 4px 15px var(--primary-dim);
     transition: all 0.3s ease;
 }
 .share-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.6);
+    box-shadow: 0 6px 20px var(--primary-dim);
 }
         .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
@@ -90,13 +87,11 @@
              <div class="text-center mb-6">
                 <div class="text-5xl mb-4">👋</div>
                 <h2 class="text-2xl font-black text-white mb-2">Welcome!</h2>
-                <p class="text-indigo-300 font-bold uppercase tracking-widest text-xs">How it works</p>
                 <p class="text-primary-300 font-bold uppercase tracking-widest text-xs">How it works</p>
             </div>
             
             <ul class="space-y-4 text-slate-300 text-sm mb-8">
                 <li class="flex items-start gap-3">
-                    <span class="bg-indigo-500/20 text-indigo-400 p-1.5 rounded-lg text-xs">📅</span>
                     <span class="bg-primary-500/20 text-primary-400 p-1.5 rounded-lg text-xs">📅</span>
                     <span><strong>Daily Challenge:</strong> New trivia drops every day at 8:00 AM. The trivia questions will be based on the events that happened yesterday.</span>
                 </li>
@@ -110,7 +105,6 @@
                 </li>
             </ul>
 
-            <button onclick="closeTutorial()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3.5 rounded-xl font-bold text-white shadow-lg shadow-indigo-500/20 transition-all transform active:scale-95">
             <button onclick="closeTutorial()" class="w-full bg-primary-600 hover:bg-primary-500 py-3.5 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all transform active:scale-95">
                 Got it, Let's Play!
             </button>
@@ -123,7 +117,6 @@
             <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-black text-white mb-1">Sign In</h2>
-                <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Sync Stats & Leaderboards</p>
                 <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Sync Stats & Leaderboards</p>
             </div>
             
@@ -147,15 +140,12 @@
             </div>
 
             <div class="space-y-3">
-                <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
-                <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
                 <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
                 <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
                 <div class="text-right">
                     <button onclick="resetPassword()" class="text-xs text-slate-400 hover:text-white transition-colors">Forgot Password?</button>
                 </div>
                 <div class="flex gap-2">
-                    <button onclick="emailAuth('login')" class="flex-1 bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
                     <button onclick="emailAuth('login')" class="flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
                     <button onclick="emailAuth('signup')" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Up</button>
                 </div>
@@ -177,7 +167,6 @@
             <button onclick="closeStats()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-black text-white mb-1">Your Stats</h2>
-                <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Lifetime Performance</p>
                 <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Lifetime Performance</p>
             </div>
             
@@ -207,12 +196,10 @@
             <button onclick="closeHistory()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-black text-white mb-1">Game History</h2>
-                <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Past 7 Days</p>
                 <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Past 7 Days</p>
             </div>
 
             <div class="flex justify-center gap-2 mb-4">
-                <button onclick="filterHistory('all')" id="hist-filter-all" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-500/20">All</button>
                 <button onclick="filterHistory('all')" id="hist-filter-all" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-primary-600 text-white shadow-lg shadow-primary-500/20">All</button>
                 <button onclick="filterHistory('casual')" id="hist-filter-casual" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Casual</button>
                 <button onclick="filterHistory('professional')" id="hist-filter-professional" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Professional</button>
@@ -248,7 +235,6 @@
     </div>
 
     <!-- Buttons -->
-    <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
     <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all hidden">
         <span id="user-icon-display" class="text-xl">👤</span>
     </button>
@@ -257,7 +243,6 @@
         <span id="mute-icon" class="text-xl">🔊</span>
     </button>
 
-    <button id="install-btn" class="fixed top-4 left-20 z-50 bg-indigo-600/90 p-3 rounded-full border border-indigo-500 hover:bg-indigo-500 transition-all hidden shadow-lg shadow-indigo-500/20">
     <button id="install-btn" class="fixed top-4 left-20 z-50 bg-primary-600/90 p-3 rounded-full border border-primary-500 hover:bg-primary-500 transition-all hidden shadow-lg shadow-primary-500/20">
         <span class="text-xl">📲</span>
     </button>
@@ -265,12 +250,10 @@
     <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative">
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
-            <span id="score-display" class="bg-indigo-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/20">Score: 0</span>
             <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
         </div>
         <div id="content-area" class="text-center">
             <div id="category-display" class="mb-4 hidden">
-                <span class="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-500/30"></span>
                 <span class="inline-block bg-primary-500/20 text-primary-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-primary-500/30"></span>
             </div>
             
@@ -313,7 +296,6 @@
         
         <div id="next-timer-container" class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
             <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
-            <div id="next-trivia-timer" class="text-xl font-mono font-bold text-indigo-400">00:00:00</div>
             <div id="next-trivia-timer" class="text-xl font-mono font-bold text-primary-400">00:00:00</div>
         </div>
 
@@ -322,15 +304,12 @@
                 <div class="text-[10px] uppercase tracking-widest text-orange-400 font-bold mb-1">🔥 Streak</div>
                 <div id="streak-count" class="text-3xl font-black text-white">0</div>
             </div>
-            <div class="bg-slate-900/50 p-4 rounded-2xl border border-indigo-500/30 flex-1 text-center">
-                <div class="text-[10px] uppercase tracking-widest text-indigo-400 font-bold mb-1">🏆 Best</div>
             <div class="bg-slate-900/50 p-4 rounded-2xl border border-primary-500/30 flex-1 text-center">
                 <div class="text-[10px] uppercase tracking-widest text-primary-400 font-bold mb-1">🏆 Best</div>
                 <div id="best-streak" class="text-3xl font-black text-white">0</div>
             </div>
         </div>
 
-        <div id="final-score" class="text-6xl font-black text-indigo-400 mb-6">0/0</div>
         <div id="final-score" class="text-6xl font-black text-primary-400 mb-6">0/0</div>
         <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2 scrollbar-hide"></div>
 
@@ -344,17 +323,13 @@
         <!-- Leaderboard Section -->
         <div id="leaderboard-section" class="text-left mb-6 border-t border-slate-700 pt-6">
             <div class="flex justify-between items-center mb-3">
-                <h3 id="leaderboard-title" class="text-indigo-400 font-bold uppercase tracking-widest text-[10px]">Today's Leaderboard</h3>
                 <h3 id="leaderboard-title" class="text-primary-400 font-bold uppercase tracking-widest text-[10px]">Today's Leaderboard</h3>
                 <div id="leaderboard-controls" class="flex items-center gap-1.5">
-                    <input type="checkbox" id="profanity-filter-toggle" onchange="toggleProfanityFilter()" class="h-3.5 w-3.5 bg-slate-700 border-slate-600 rounded text-indigo-500 focus:ring-indigo-600 focus:ring-offset-slate-800 cursor-pointer">
                     <input type="checkbox" id="profanity-filter-toggle" onchange="toggleProfanityFilter()" class="h-3.5 w-3.5 bg-slate-700 border-slate-600 rounded text-primary-500 focus:ring-primary-600 focus:ring-offset-slate-800 cursor-pointer">
                     <label for="profanity-filter-toggle" class="text-xs text-slate-400 select-none cursor-pointer">Censor Taunts</label>
                 </div>
             </div>
             <div id="leaderboard-submit-form" class="flex gap-2 mb-3">
-                <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
-                <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
                 <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
                 <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
             </div>
@@ -370,7 +345,6 @@
                     <span class="text-xl">📜</span> History
                 </button>
             </div>
-            <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
             <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
         </div>
     </div>
@@ -814,8 +788,6 @@ function showFinalResults() {
     if (!auth.currentUser) {
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full p-3 bg-slate-900/50 rounded-xl border border-slate-700/50">
-                <p class="text-indigo-200 text-xs font-bold">Sign in to submit score</p>
-                <button onclick="toggleLoginModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
                 <p class="text-primary-200 text-xs font-bold">Sign in to submit score</p>
                 <button onclick="toggleLoginModal()" class="bg-primary-600 hover:bg-primary-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
             </div>`;
@@ -957,7 +929,6 @@ async function submitScore() {
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full">
                 <p class="text-emerald-400 text-sm font-bold">✅ Score Submitted!</p>
-                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-indigo-300 py-1.5 px-3 rounded-lg border border-indigo-500/30 transition-all">
                 <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-primary-300 py-1.5 px-3 rounded-lg border border-primary-500/30 transition-all">
                     💬 Add a Taunt
                 </button>
@@ -976,8 +947,6 @@ async function checkIfSubmitted() {
     if (!auth.currentUser) {
         formContainer.innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full p-3 bg-slate-900/50 rounded-xl border border-slate-700/50">
-                <p class="text-indigo-200 text-xs font-bold">Sign in to submit score</p>
-                <button onclick="toggleLoginModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
                 <p class="text-primary-200 text-xs font-bold">Sign in to submit score</p>
                 <button onclick="toggleLoginModal()" class="bg-primary-600 hover:bg-primary-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
             </div>`;
@@ -1001,8 +970,6 @@ async function checkIfSubmitted() {
                  
                 // Re-render form if it was replaced by success message
                 formContainer.innerHTML = `
-                    <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
-                    <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
                     <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
                     <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
                 `;
@@ -1021,7 +988,6 @@ async function checkIfSubmitted() {
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full">
                 <p class="text-emerald-400 text-sm font-bold">✅ Your score is on the board!</p>
-                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-indigo-300 py-1.5 px-3 rounded-lg border border-indigo-500/30 transition-all">
                 <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-primary-300 py-1.5 px-3 rounded-lg border border-primary-500/30 transition-all">
                     💬 Update Taunt
                 </button>
@@ -1031,8 +997,6 @@ async function checkIfSubmitted() {
     
     // Not submitted yet: Ensure default form is visible (restores form if user just logged in)
     formContainer.innerHTML = `
-        <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
-        <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
         <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
         <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
     `;
@@ -1316,13 +1280,10 @@ function showCreateGroupUI() {
     const display = document.getElementById('leaderboard-display');
     display.innerHTML = `
         <div class="text-center p-4">
-            <p class="text-indigo-200 text-sm mb-4">Create another leaderboard?</p>
-            <input type="text" id="new-group-name" placeholder="Group Name (e.g. Work Buds)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-indigo-500 text-center">
             <p class="text-primary-200 text-sm mb-4">Create another leaderboard?</p>
             <input type="text" id="new-group-name" placeholder="Group Name (e.g. Work Buds)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-primary-500 text-center">
             <div class="flex gap-2">
                 <button onclick="fetchAndDisplayLeaderboard()" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Cancel</button>
-                <button onclick="createGroup()" id="create-group-btn" class="flex-1 bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Create</button>
                 <button onclick="createGroup()" id="create-group-btn" class="flex-1 bg-primary-500 hover:bg-primary-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Create</button>
             </div>
         </div>
@@ -1488,7 +1449,6 @@ function updateStreak() {
 
 function renderReview() {
     const review = document.getElementById('review-section');
-    review.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Your Answers</h3>';
     review.innerHTML = '<h3 class="text-primary-400 font-bold uppercase tracking-widest text-[10px] mb-4">Your Answers</h3>';
     
     const choices = window.userChoices || [];
@@ -1555,12 +1515,10 @@ function shareResults() {
             const shareBtn = document.querySelector('button[onclick="shareResults()"]');
             const originalText = shareBtn.innerText;
             shareBtn.innerText = "✅ Copied to Clipboard!";
-            shareBtn.classList.replace('bg-indigo-600', 'bg-emerald-600');
             shareBtn.classList.replace('bg-primary-600', 'bg-emerald-600');
             
             setTimeout(() => {
                 shareBtn.innerText = originalText;
-                shareBtn.classList.replace('bg-emerald-600', 'bg-indigo-600');
                 shareBtn.classList.replace('bg-emerald-600', 'bg-primary-600');
             }, 2500);
         });
@@ -1622,7 +1580,6 @@ function archiveSession(session) {
             answers: answersMap,
             choices: choicesList,
             score: session.score,
-            score: session.score,
             mode: lastMode
         };
         
@@ -1663,7 +1620,6 @@ function initFirebase() {
 
     // Auth Listener
     auth.onAuthStateChanged((user) => {
-        const userBtn = document.getElementById('user-icon-display');
         const userBtnElement = document.getElementById('user-btn');
         const userIconDisplay = document.getElementById('user-icon-display');
         const loginOptions = document.getElementById('login-options');
@@ -1684,7 +1640,6 @@ function initFirebase() {
             }
 
             // Update UI
-            userBtn.innerHTML = user.photoURL ? `<img src="${user.photoURL}" class="w-6 h-6 rounded-full">` : "🟢";
             userIconDisplay.innerHTML = user.photoURL ? `<img src="${user.photoURL}" class="w-6 h-6 rounded-full">` : "🟢";
             loginOptions.classList.add('hidden');
             if (emailAuthSection) emailAuthSection.classList.add('hidden');
@@ -1705,7 +1660,6 @@ function initFirebase() {
                 localStorage.removeItem('trivia-userId');
             }
             userId = getOrSetUserId();
-            userBtn.innerHTML = "👤";
             userIconDisplay.innerHTML = "👤";
             loginOptions.classList.remove('hidden');
             if (emailAuthSection) emailAuthSection.classList.remove('hidden');
@@ -1903,7 +1857,6 @@ function renderStatsSection(title, icon, metrics, isFirst = false) {
                 </div>
                 <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center col-span-2">
                     <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Average Score</div>
-                    <div class="text-3xl font-black text-indigo-400">${metrics.avgScore} <span class="text-sm text-slate-500">/ 5</span></div>
                     <div class="text-3xl font-black text-primary-400">${metrics.avgScore} <span class="text-sm text-slate-500">/ 5</span></div>
                 </div>
             </div>
@@ -2026,7 +1979,6 @@ function closeStats() {
             buttons.forEach(btnMode => {
                 const btn = document.getElementById(`hist-filter-${btnMode}`);
                 if (mode === btnMode) {
-                    btn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-500/20";
                     btn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-primary-600 text-white shadow-lg shadow-primary-500/20";
                 } else {
                     btn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600";
@@ -2126,7 +2078,7 @@ function closeStats() {
 
                 game.questions.forEach((q, idx) => {
                     const correctAnswer = q.options[q.a];
-                    const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-indigo-400 underline ml-2 decoration-dotted">Source ↗</a>` : '';
+                    const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline ml-2 decoration-dotted">Source ↗</a>` : '';
                      
                     let answerHTML = `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`;
                     let userPick = null;
