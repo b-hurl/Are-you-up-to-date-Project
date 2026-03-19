@@ -1442,7 +1442,11 @@ function startNextTimer() {
         const diff = target.getTime() - now.getTime();
 
         if (diff <= 0) {
-            // RELOAD!
+            // Time's up! Archive current session and reset to Mode Selection
+            const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+            if (session.date) archiveSession(session);
+            localStorage.removeItem('trivia-session');
+
             window.location.href = window.location.pathname + "?" + Date.now();
             return;
         }
