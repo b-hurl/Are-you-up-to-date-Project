@@ -150,6 +150,30 @@
         </div>
     </div>
 
+    <!-- History Modal -->
+    <div id="history-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-md w-full h-[90vh] shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col">
+            <button onclick="closeHistory()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black text-white mb-1">Game History</h2>
+                <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Past 7 Days</p>
+            </div>
+            
+            <div id="history-content" class="flex-1 overflow-y-auto pr-2 scrollbar-hide space-y-6">
+                <!-- Loading State -->
+                <div class="animate-pulse space-y-4">
+                    <div class="h-6 bg-slate-700 rounded w-1/2"></div>
+                    <div class="space-y-2">
+                        <div class="h-4 bg-slate-700 rounded"></div>
+                        <div class="h-4 bg-slate-700 rounded w-5/6"></div>
+                    </div>
+                    <div class="h-4 bg-slate-700 rounded w-3/4"></div>
+                </div>
+                <p class="text-center text-slate-500 text-xs">Loading past games...</p>
+            </div>
+        </div>
+    </div>
+
     <!-- iOS Install Modal -->
     <div id="ios-install-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4" onclick="this.classList.add('hidden')">
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-sm w-full shadow-2xl text-center relative" onclick="event.stopPropagation()">
@@ -171,6 +195,10 @@
 
     <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span id="user-icon-display" class="text-xl">👤</span>
+    </button>
+
+    <button id="history-btn" onclick="openHistory()" class="fixed top-4 right-36 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
+        <span class="text-xl">📜</span>
     </button>
 
     <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
@@ -1606,6 +1634,104 @@ function closeStats() {
     modal.querySelector('div').classList.add('scale-95');
     setTimeout(() => modal.classList.add('hidden'), 300);
 }
+
+        // --- HISTORY MODAL ---
+        async function openHistory() {
+            const modal = document.getElementById('history-modal');
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+
+            loadHistoryData();
+        }
+
+        function closeHistory() {
+            const modal = document.getElementById('history-modal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        async function loadHistoryData() {
+            const content = document.getElementById('history-content');
+            content.innerHTML = `
+                <div class="animate-pulse space-y-4">
+                    <div class="h-6 bg-slate-700 rounded w-1/2"></div>
+                    <div class="space-y-2">
+                        <div class="h-4 bg-slate-700 rounded"></div>
+                        <div class="h-4 bg-slate-700 rounded w-5/6"></div>
+                    </div>
+                    <div class="h-4 bg-slate-700 rounded w-3/4"></div>
+                </div>
+                <p class="text-center text-slate-500 text-xs">Loading past games...</p>
+            `;
+
+            const historyDays = 7;
+            const pastGames = [];
+            
+            const gameDateStr = getGameDate();
+            const parts = gameDateStr.split('-').map(Number);
+            const gameDate = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
+
+            for (let i = 0; i < historyDays; i++) {
+                const pastDate = new Date(gameDate);
+                pastDate.setUTCDate(pastDate.getUTCDate() - (i + 1));
+                
+                const dateString = `${pastDate.getUTCFullYear()}-${String(pastDate.getUTCMonth() + 1).padStart(2, '0')}-${String(pastDate.getUTCDate()).padStart(2, '0')}`;
+
+                try {
+                    const response = await fetch(`${dateString}.json?v=hist`);
+                    if (!response.ok) continue; 
+                    const data = await response.json();
+                    pastGames.push({ date: dateString, ...data });
+                } catch (error) {
+                    console.log(`No history found for ${dateString}`);
+                }
+            }
+
+            if (pastGames.length === 0) {
+                content.innerHTML = '<p class="text-center text-slate-400">No past games found.</p>';
+                return;
+            }
+
+            renderHistory(pastGames);
+        }
+
+        function renderHistory(games) {
+            const content = document.getElementById('history-content');
+            content.innerHTML = '';
+
+            games.forEach(game => {
+                const dateParts = game.date.split('-').map(Number);
+                const gameDate = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
+                const formattedDate = gameDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
+
+                const dayContainer = document.createElement('div');
+                dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50';
+                
+                let questionsHTML = '';
+                game.questions.forEach(q => {
+                    const correctAnswer = q.options[q.a];
+                    questionsHTML += `
+                        <div class="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
+                            <p class="text-xs font-bold mb-2 text-slate-300">${q.q}</p>
+                            <p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>
+                        </div>
+                    `;
+                });
+
+                dayContainer.innerHTML = `
+                    <h3 class="text-lg font-bold text-indigo-400 mb-3 border-b border-slate-700 pb-2">${formattedDate}</h3>
+                    <div class="space-y-3">${questionsHTML}</div>
+                `;
+                content.appendChild(dayContainer);
+            });
+        }
 
         // --- PWA INSTALL LOGIC ---
         let deferredPrompt;
