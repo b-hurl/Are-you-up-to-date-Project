@@ -111,6 +111,60 @@
         </div>
     </div>
 
+    <!-- Signup Prompt Modal -->
+    <div id="signup-prompt-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">🔐</div>
+            <h2 class="text-2xl font-black text-white mb-2">Save Your Stats?</h2>
+            <p class="text-slate-300 text-sm mb-6">Create an account to track your streak, stats, and leaderboard position across all your devices.</p>
+            
+            <div class="space-y-3">
+                <button onclick="openLoginFromPrompt()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all">
+                    Sign In / Sign Up
+                </button>
+                <button onclick="closeSignupPrompt()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                    Maybe Later
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Group Modal -->
+    <div id="join-group-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">👥</div>
+            <h2 class="text-2xl font-black text-white mb-2">Join Group?</h2>
+            <p class="text-slate-300 text-sm mb-6">You've been invited to join <strong id="join-group-name" class="text-primary-400"></strong>.</p>
+            
+            <div class="space-y-3">
+                <button id="confirm-join-btn" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all">
+                    Yes, Join Group
+                </button>
+                <button onclick="closeJoinGroupModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                    No thanks
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Auth Modal -->
+    <div id="join-auth-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">🔒</div>
+            <h2 class="text-2xl font-black text-white mb-2">Login Required</h2>
+            <p class="text-slate-300 text-sm mb-6">To join a group leaderboard, you need to sign in first.</p>
+            
+            <div class="space-y-3">
+                <button onclick="openLoginFromJoin()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all">
+                    Sign In / Sign Up
+                </button>
+                <button onclick="playOfflineJoin()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                    Play Offline
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Login Modal -->
     <div id="login-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300">
@@ -1651,6 +1705,13 @@ function initFirebase() {
                 fetchAndDisplayLeaderboard();
                 checkIfSubmitted();
             }
+
+            // Check if there was a pending group invite waiting for login
+            const urlParams = new URLSearchParams(window.location.search);
+            const inviteGroup = urlParams.get('group');
+            if (inviteGroup) {
+                handleInvite(inviteGroup);
+            }
         } else {
             // Hide user button when logged out
             if (userBtnElement) userBtnElement.classList.add('hidden');
@@ -1785,28 +1846,95 @@ async function handleInvite(groupId) {
     if (existingIdx !== -1) {
         currentGroupIndex = existingIdx;
         console.log("Already in group, switching view.");
+        // Clear param
+        const url = new URL(window.location);
+        url.searchParams.delete('group');
+        window.history.replaceState({}, '', url);
         return;
     }
 
-    // Fetch group name and add to list
+    // Fetch group name and show confirmation
     try {
         const doc = await db.collection('groups').doc(groupId).get();
         if (doc.exists) {
             const groupName = doc.data().name;
-            groups.push({ id: groupId, name: groupName });
-            localStorage.setItem('trivia-groups', JSON.stringify(groups));
-            currentGroupIndex = groups.length - 1;
-            exportStateToURL();
-            console.log("Joined new group:", groupName);
             
-            if (!document.getElementById('results-card').classList.contains('hidden')) {
-                fetchAndDisplayLeaderboard();
-                checkIfSubmitted();
-            }
+            // Show Confirmation Modal
+            const modal = document.getElementById('join-group-modal');
+            document.getElementById('join-group-name').innerText = groupName;
+            document.getElementById('confirm-join-btn').onclick = () => confirmJoinGroup(groupId, groupName);
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
         }
     } catch (e) {
-        console.error("Error joining group from link", e);
+        console.error("Error fetching group for invite", e);
     }
+}
+
+function closeJoinGroupModal() {
+    const modal = document.getElementById('join-group-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        // Clear param if declined
+        const url = new URL(window.location);
+        url.searchParams.delete('group');
+        window.history.replaceState({}, '', url);
+    }, 300);
+}
+
+async function confirmJoinGroup(groupId, groupName) {
+    if (!auth.currentUser) {
+        closeJoinGroupModal();
+        // Show Auth Required Modal
+        const modal = document.getElementById('join-auth-modal');
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+        }, 300);
+        return;
+    }
+
+    const groups = getMyGroups();
+    groups.push({ id: groupId, name: groupName });
+    localStorage.setItem('trivia-groups', JSON.stringify(groups));
+    currentGroupIndex = groups.length - 1;
+    exportStateToURL();
+    console.log("Joined new group:", groupName);
+    
+    closeJoinGroupModal();
+    
+    // Success Notification
+    alert(`Success! You have joined ${groupName}.`);
+
+    if (!document.getElementById('results-card').classList.contains('hidden')) {
+        fetchAndDisplayLeaderboard();
+        checkIfSubmitted();
+    }
+}
+
+function openLoginFromJoin() {
+    const modal = document.getElementById('join-auth-modal');
+    modal.classList.add('hidden'); // Hide join auth prompt
+    toggleLoginModal(); // Open main login
+}
+
+function playOfflineJoin() {
+    const modal = document.getElementById('join-auth-modal');
+    modal.classList.add('hidden');
+    // Clear the invite param so they aren't asked again
+    const url = new URL(window.location);
+    url.searchParams.delete('group');
+    window.history.replaceState({}, '', url);
 }
 
 function checkTutorial() {
@@ -1818,6 +1946,8 @@ function checkTutorial() {
             modal.querySelector('div').classList.remove('scale-95');
             modal.querySelector('div').classList.add('scale-100');
         }, 10);
+    } else {
+        checkSignupPrompt();
     }
 }
 
@@ -1830,6 +1960,46 @@ function closeTutorial() {
     setTimeout(() => {
         modal.classList.add('hidden');
         localStorage.setItem('trivia-tutorial-seen', 'true');
+        checkSignupPrompt();
+    }, 300);
+}
+
+function checkSignupPrompt() {
+    // Check if seen before
+    const seen = localStorage.getItem('trivia-signup-prompt-seen');
+    
+    // Check if likely anonymous (User ID starts with 'user_')
+    // We use this local check because auth.currentUser might be null during initialization even if logged in
+    const localUid = localStorage.getItem('trivia-userId');
+    const isAnonymous = localUid && localUid.startsWith('user_');
+
+    if (!seen && isAnonymous) {
+        const modal = document.getElementById('signup-prompt-modal');
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+        }, 500); // Slight delay for smoother feel if coming from tutorial
+    }
+}
+
+function closeSignupPrompt() {
+    const modal = document.getElementById('signup-prompt-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        localStorage.setItem('trivia-signup-prompt-seen', 'true');
+    }, 300);
+}
+
+function openLoginFromPrompt() {
+    closeSignupPrompt();
+    setTimeout(() => {
+        toggleLoginModal();
     }, 300);
 }
 
