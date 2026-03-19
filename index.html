@@ -791,6 +791,14 @@ async function fetchAndDisplayLeaderboard() {
     const title = document.getElementById('leaderboard-title');
     const submitForm = document.getElementById('leaderboard-submit-form');
     
+    if (!auth.currentUser) {
+        title.innerText = "Leaderboard";
+        // Ensure the form area (managed by checkIfSubmitted) is visible for the Sign In button
+        if (submitForm) submitForm.classList.remove('hidden');
+        display.innerHTML = `<div class="text-center p-8 text-slate-500 text-xs italic"><p>🔒 Sign in to create groups and view leaderboards</p></div>`;
+        return;
+    }
+
     const groups = getMyGroups();
 
     // 1. If no groups at all, show "Create Group" UI
