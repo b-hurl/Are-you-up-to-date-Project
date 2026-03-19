@@ -426,6 +426,7 @@ async function startApp() {
             // CRITICAL CHECK: Is this session from a DIFFERENT day?
             if (session.date !== gameDate) {
                 console.log("Old session detected. Clearing for new day...");
+                archiveSession(session);
                 localStorage.removeItem('trivia-session'); // Wipe yesterday's data
                 window.userChoices = []; // Reset choices
                 startNewSession(freshData, gameDate);
@@ -1348,6 +1349,28 @@ function saveSession(isFinished = false) {
     exportStateToURL();
 }
 
+function archiveSession(session) {
+    if (!session || !session.date || !session.shuffledQuestions) return;
+    try {
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        
+        // Map indices to actual text answers
+        const choicesText = session.shuffledQuestions.map((q, i) => {
+            if (session.userChoices && session.userChoices[i] !== undefined && session.userChoices[i] !== null) {
+                return q.options[session.userChoices[i]];
+            }
+            return null;
+        });
+
+        archive[session.date] = {
+            choices: choicesText,
+            score: session.score
+        };
+        
+        localStorage.setItem('trivia-archive', JSON.stringify(archive));
+    } catch (e) { console.error("Archive failed", e); }
+}
+
 function initFirebase() {
     // --- IMPORTANT ---
     // PASTE YOUR FIREBASE CONFIGURATION OBJECT HERE
@@ -1737,8 +1760,21 @@ function closeStats() {
         function renderHistory(games) {
             const content = document.getElementById('history-content');
             content.innerHTML = '';
+            
+            let archive = {};
+            try { archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}'); } catch(e){}
 
             games.forEach(game => {
+            // Filter games to only include those that have been played and are in the archive.
+            const playedGames = games.filter(game => archive[game.date]);
+
+            if (playedGames.length === 0) {
+                content.innerHTML = '<p class="text-center text-slate-400 p-8">No completed games in your history yet. Play today to start your collection!</p>';
+                return;
+            }
+
+
+            playedGames.forEach(game => {
                 const dateParts = game.date.split('-').map(Number);
                 const gameDate = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
                 const formattedDate = gameDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
@@ -1746,13 +1782,33 @@ function closeStats() {
                 const dayContainer = document.createElement('div');
                 dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50';
                 
+                const userRecord = archive[game.date];
+                const played = !!userRecord;
+                
                 let questionsHTML = '';
-                game.questions.forEach(q => {
+                game.questions.forEach((q, idx) => {
                     const correctAnswer = q.options[q.a];
+                    const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-indigo-400 underline ml-2 decoration-dotted">Source ↗</a>` : '';
+                    
+                    let answerHTML = `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`;
+                    
+                    if (played && userRecord.choices && userRecord.choices[idx]) {
+                        const userPick = userRecord.choices[idx];
+                        const isCorrect = userPick === correctAnswer;
+                        
+                        if (!isCorrect) {
+                            answerHTML = `
+                                <p class="text-red-400 text-[11px] font-bold mb-1">❌ Your Answer: ${userPick}</p>
+                                <p class="text-emerald-400 text-[11px] font-bold">✅ Correct: ${correctAnswer}</p>
+                            `;
+                        }
+                    }
+
                     questionsHTML += `
                         <div class="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
                             <p class="text-xs font-bold mb-2 text-slate-300">${q.q}</p>
-                            <p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>
+                            ${answerHTML}
+                            <div class="mt-2 text-right">${source}</div>
                         </div>
                     `;
                 });
