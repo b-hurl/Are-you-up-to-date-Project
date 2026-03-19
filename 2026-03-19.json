@@ -1,0 +1,95 @@
+
+{
+  "questions": [
+    {
+      "q": "Following his Best Actor win on March 15, which star was officially confirmed on March 18, 2026, to lead the upcoming sci-fi film 'Project Hail Mary'?",
+      "options": ["Cillian Murphy", "Ryan Gosling", "Michael B. Jordan", "Jacob Elordi"],
+      "a": 1,
+      "category": "Movies",
+      "source": "https://www.ctvnews.ca/entertainment/article/ryan-gosling-goes-solo-in-space-for-film-project-hail-mary/"
+    },
+{
+  "q": "In a historic move for the industry on March 18, 2026, Microsoft confirmed that which formerly exclusive Xbox title will finally be released on the PlayStation 5?",
+  "options": [
+    "Gears of War: E-Day",
+    "Starfield",
+    "Forza Horizon 5",
+    "Senua's Saga: Hellblade II"
+  ],
+  "a": 1,
+  "category": "Gaming",
+  "source": "https://www.newsofbahrain.com/business/128716.html"
+},
+    {
+      "q": "On March 18, 2026, which Canadian city was announced as the returning host for the 2026 JUNO Awards, bringing a record lineup of industry partners?",
+      "options": ["Toronto", "Winnipeg", "Hamilton", "Regina"],
+      "a": 2,
+      "category": "Music",
+      "source": "https://www.newswire.ca/news-releases/55th-annual-juno-awards-forge-a-record-lineup-of-partners-bringing-canada-s-leading-artists-and-fans-together-through-excellence-and-innovation-843915802.htmlJes"
+    },
+    {
+      "q": "Which former reality TV star made headlines on March 18, 2026, by cruising to a repeat victory in the 1,600-km Iditarod sled dog race?",
+      "options": ["Rick Casillo", "Jessie Holmes", "Dallas Seavey", "Brent Sass"],
+      "a": 1,
+      "category": "Reality TV",
+      "source": "https://www.cbc.ca/news/canada/north/jessie-holmes-wins-iditarod-9.7133275"
+    },
+    {
+      "q": "On March 18, 2026, legendary actor Mark Hamill was announced to headline a rare 'Special Edition' appearance at which upcoming fan convention?",
+      "options": ["Comic-Con International", "FAN EXPO Anaheim", "Fan Expo Canada", "Star Wars Celebration"],
+      "a": 1,
+      "category": "Celebrity",
+      "source": "https://www.newswire.ca/news-releases/fan-expo-hq-announces-fan-expo-anaheim-special-edition-june-26-28-2026-801145209.html"
+    },
+    {
+      "q": "The Bank of Canada issued its interest rate announcement on March 18, 2026. What is the current policy rate as confirmed by the Bank today?",
+      "options": ["2.00%", "2.25%", "2.50%", "4.00%"],
+      "a": 1,
+      "category": "Finance",
+      "source": "https://www.bankofcanada.ca/2026/03/fad-press-release-2026-03-18/"
+    },
+    {
+      "q": "Which Canadian province tabled its 2026-27 budget on March 18, 2026, projecting an $819-million deficit and citing 'world events' for the fiscal strain?",
+      "options": ["Alberta", "Manitoba", "Saskatchewan", "Ontario"],
+      "a": 2,
+      "category": "Politics",
+      "source": "https://www.cbc.ca/news/canada/saskatchewan/budget-2026-27-deficit-health-care-education-oil-9.7133515"
+    },
+    {
+      "q": "On March 18, 2026, Canada announced the 'Canada Strong Pass,' a summer initiative that offers what benefit to international tourists?",
+      "options": [
+        "Free airfare between major cities",
+        "Free visitation to all national parks",
+        "Half-price hotel stays in Ottawa",
+        "Unlimited VIA Rail travel"
+      ],
+      "a": 1,
+      "category": "Economy",
+      "source": "https://www.ctvnews.ca/calgary/article/canada-offers-international-tourists-free-visitation-to-national-parks-while-trump-adds-100-surcharge-for-foreign-visitors/"
+    },
+    {
+      "q": "Which major world event is causing a 'panic mode' in global markets on March 18, 2026, driving oil prices toward $110 a barrel?",
+      "options": [
+        "A total blockade of the Panama Canal",
+        "Conflict in the Middle East and the closure of the Strait of Hormuz",
+        "A nationwide strike in the US shipping industry",
+        "The collapse of the European Union's carbon credit market"
+      ],
+      "a": 1,
+      "category": "World",
+      "source": "https://www.theguardian.com/business/live/2026/mar/18/oil-stock-markets-iraq-deal-exports-turkey-inflation-central-bankers-news-updates"
+    },
+    {
+      "q": "On March 18, 2026, Health Canada announced the creation of a new Task Force specifically designed to improve access to what?",
+      "options": [
+        "Electric vehicle charging stations",
+        "Affordable high-speed internet",
+        "Innovative medicines and pharmaceuticals",
+        "Clean drinking water in remote communities"
+      ],
+      "a": 2,
+      "category": "Health",
+      "source": "https://www.canada.ca/en/health-canada/news/2026/03/new-task-force-to-enhance-canadas-competitiveness-and-improve-access-to-innovative-medicines.html"
+    }
+  ]
+}
