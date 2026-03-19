@@ -189,16 +189,8 @@
     </div>
 
     <!-- Buttons -->
-    <button id="stats-btn" onclick="openStats()" class="fixed top-4 left-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
-        <span class="text-xl">📊</span>
-    </button>
-
     <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span id="user-icon-display" class="text-xl">👤</span>
-    </button>
-
-    <button id="history-btn" onclick="openHistory()" class="fixed top-4 right-36 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
-        <span class="text-xl">📜</span>
     </button>
 
     <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
@@ -264,6 +256,14 @@
         </div>
         
         <div class="space-y-3">
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="openStats()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
+                    <span class="text-xl">📊</span> Stats
+                </button>
+                <button onclick="openHistory()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
+                    <span class="text-xl">📜</span> History
+                </button>
+            </div>
             <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
         </div>
     </div>
