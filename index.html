@@ -1388,6 +1388,12 @@ function initFirebase() {
             loginOptions.classList.remove('hidden');
             if (emailAuthSection) emailAuthSection.classList.remove('hidden');
             userInfo.classList.add('hidden');
+
+            // Refresh data context on logout as well
+            if (!document.getElementById('results-card').classList.contains('hidden')) {
+                fetchAndDisplayLeaderboard();
+                checkIfSubmitted();
+            }
         }
     });
 }
