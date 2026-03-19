@@ -16,6 +16,28 @@
 <meta name="theme-color" content="#0f172a">
 <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: 'var(--primary-50)',
+                            100: 'var(--primary-100)',
+                            200: 'var(--primary-200)',
+                            300: 'var(--primary-300)',
+                            400: 'var(--primary-400)',
+                            500: 'var(--primary-500)',
+                            600: 'var(--primary-600)',
+                            700: 'var(--primary-700)',
+                            800: 'var(--primary-800)',
+                            900: 'var(--primary-900)',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
@@ -23,8 +45,24 @@
     <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
 
     <style>
+        :root {
+            /* Default (Casual) - Indigo */
+            --primary-50: #eef2ff; --primary-100: #e0e7ff; --primary-200: #c7d2fe;
+            --primary-300: #a5b4fc; --primary-400: #818cf8; --primary-500: #6366f1;
+            --primary-600: #4f46e5; --primary-700: #4338ca; --primary-800: #3730a3; --primary-900: #312e81;
+            --primary-dim: rgba(79, 70, 229, 0.4);
+        }
+        body.theme-professional {
+            /* Professional - Emerald/Teal */
+            --primary-50: #ecfdf5; --primary-100: #d1fae5; --primary-200: #a7f3d0;
+            --primary-300: #6ee7b7; --primary-400: #34d399; --primary-500: #10b981;
+            --primary-600: #059669; --primary-700: #047857; --primary-800: #065f46; --primary-900: #064e3b;
+            --primary-dim: rgba(5, 150, 105, 0.4);
+        }
+
         .option-btn { transition: all 0.2s ease; }
         .selected { background-color: #4f46e5 !important; border-color: #818cf8 !important; transform: scale(1.02); box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
+        .selected { background-color: var(--primary-600) !important; border-color: var(--primary-400) !important; transform: scale(1.02); box-shadow: 0 0 20px var(--primary-dim); }
         .correct { background-color: #10b981 !important; border-color: #059669 !important; }
         .incorrect { background-color: #ef4444 !important; border-color: #dc2626 !important; }
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
@@ -33,6 +71,8 @@
         .share-btn {
     background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+    box-shadow: 0 4px 15px var(--primary-dim);
     transition: all 0.3s ease;
 }
 .share-btn:hover {
@@ -51,11 +91,13 @@
                 <div class="text-5xl mb-4">👋</div>
                 <h2 class="text-2xl font-black text-white mb-2">Welcome!</h2>
                 <p class="text-indigo-300 font-bold uppercase tracking-widest text-xs">How it works</p>
+                <p class="text-primary-300 font-bold uppercase tracking-widest text-xs">How it works</p>
             </div>
             
             <ul class="space-y-4 text-slate-300 text-sm mb-8">
                 <li class="flex items-start gap-3">
                     <span class="bg-indigo-500/20 text-indigo-400 p-1.5 rounded-lg text-xs">📅</span>
+                    <span class="bg-primary-500/20 text-primary-400 p-1.5 rounded-lg text-xs">📅</span>
                     <span><strong>Daily Challenge:</strong> New trivia drops every day at 8:00 AM. The trivia questions will be based on the events that happened yesterday.</span>
                 </li>
                 <li class="flex items-start gap-3">
@@ -69,6 +111,7 @@
             </ul>
 
             <button onclick="closeTutorial()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3.5 rounded-xl font-bold text-white shadow-lg shadow-indigo-500/20 transition-all transform active:scale-95">
+            <button onclick="closeTutorial()" class="w-full bg-primary-600 hover:bg-primary-500 py-3.5 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all transform active:scale-95">
                 Got it, Let's Play!
             </button>
         </div>
@@ -81,6 +124,7 @@
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-black text-white mb-1">Sign In</h2>
                 <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Sync Stats & Leaderboards</p>
+                <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Sync Stats & Leaderboards</p>
             </div>
             
             <div id="login-options" class="space-y-3 mb-6">
@@ -105,11 +149,14 @@
             <div class="space-y-3">
                 <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
                 <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
+                <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
                 <div class="text-right">
                     <button onclick="resetPassword()" class="text-xs text-slate-400 hover:text-white transition-colors">Forgot Password?</button>
                 </div>
                 <div class="flex gap-2">
                     <button onclick="emailAuth('login')" class="flex-1 bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
+                    <button onclick="emailAuth('login')" class="flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
                     <button onclick="emailAuth('signup')" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Up</button>
                 </div>
             </div>
@@ -131,6 +178,7 @@
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-black text-white mb-1">Your Stats</h2>
                 <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Lifetime Performance</p>
+                <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Lifetime Performance</p>
             </div>
             
             <div id="stats-content" class="space-y-4">
@@ -160,6 +208,14 @@
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-black text-white mb-1">Game History</h2>
                 <p class="text-indigo-400 text-xs font-bold uppercase tracking-widest">Past 7 Days</p>
+                <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Past 7 Days</p>
+            </div>
+
+            <div class="flex justify-center gap-2 mb-4">
+                <button onclick="filterHistory('all')" id="hist-filter-all" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-500/20">All</button>
+                <button onclick="filterHistory('all')" id="hist-filter-all" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-primary-600 text-white shadow-lg shadow-primary-500/20">All</button>
+                <button onclick="filterHistory('casual')" id="hist-filter-casual" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Casual</button>
+                <button onclick="filterHistory('professional')" id="hist-filter-professional" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Professional</button>
             </div>
             
             <div id="history-content" class="flex-1 overflow-y-auto pr-2 scrollbar-hide space-y-6">
@@ -202,6 +258,7 @@
     </button>
 
     <button id="install-btn" class="fixed top-4 left-20 z-50 bg-indigo-600/90 p-3 rounded-full border border-indigo-500 hover:bg-indigo-500 transition-all hidden shadow-lg shadow-indigo-500/20">
+    <button id="install-btn" class="fixed top-4 left-20 z-50 bg-primary-600/90 p-3 rounded-full border border-primary-500 hover:bg-primary-500 transition-all hidden shadow-lg shadow-primary-500/20">
         <span class="text-xl">📲</span>
     </button>
 
@@ -209,11 +266,41 @@
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
             <span id="score-display" class="bg-indigo-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-indigo-500/20">Score: 0</span>
+            <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
         </div>
         <div id="content-area" class="text-center">
             <div id="category-display" class="mb-4 hidden">
                 <span class="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-indigo-500/30"></span>
+                <span class="inline-block bg-primary-500/20 text-primary-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-primary-500/30"></span>
             </div>
+            
+            <div id="mode-selection" class="hidden text-center space-y-4 py-2">
+                <div class="mb-4">
+                    <h2 class="text-2xl font-black text-white mb-1">Select Difficulty</h2>
+                    <p class="text-slate-400 text-xs uppercase tracking-widest">Choose your path</p>
+                </div>
+                
+                <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/20 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 transition-all">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-indigo-500/20 p-3 rounded-xl text-2xl">🎮</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition-colors">Casual</h3>
+                            <p class="text-xs text-slate-400">Entertainment, Gaming, Sports, Lifestyle</p>
+                        </div>
+                    </div>
+                </button>
+            
+                <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/20 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 transition-all">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-emerald-500/20 p-3 rounded-xl text-2xl">💼</div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-lg text-white group-hover:text-emerald-400 transition-colors">Professional</h3>
+                            <p class="text-xs text-slate-400">Economy, Politics, World, Tech</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+
             <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8">Loading Today's Challenge...</h2>
             <div id="options-container" class="space-y-3 mb-6"></div>
             <div id="action-area"></div>
@@ -227,6 +314,7 @@
         <div id="next-timer-container" class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
             <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
             <div id="next-trivia-timer" class="text-xl font-mono font-bold text-indigo-400">00:00:00</div>
+            <div id="next-trivia-timer" class="text-xl font-mono font-bold text-primary-400">00:00:00</div>
         </div>
 
         <div class="flex justify-center gap-4 mb-6">
@@ -236,25 +324,39 @@
             </div>
             <div class="bg-slate-900/50 p-4 rounded-2xl border border-indigo-500/30 flex-1 text-center">
                 <div class="text-[10px] uppercase tracking-widest text-indigo-400 font-bold mb-1">🏆 Best</div>
+            <div class="bg-slate-900/50 p-4 rounded-2xl border border-primary-500/30 flex-1 text-center">
+                <div class="text-[10px] uppercase tracking-widest text-primary-400 font-bold mb-1">🏆 Best</div>
                 <div id="best-streak" class="text-3xl font-black text-white">0</div>
             </div>
         </div>
 
         <div id="final-score" class="text-6xl font-black text-indigo-400 mb-6">0/0</div>
+        <div id="final-score" class="text-6xl font-black text-primary-400 mb-6">0/0</div>
         <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2 scrollbar-hide"></div>
+
+        <!-- Play Other Mode Section -->
+        <div id="play-other-mode-section" class="hidden my-6 border-t border-slate-700 pt-6">
+            <button onclick="playOtherMode()" id="play-other-mode-btn" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
+                <!-- Content set by JS -->
+            </button>
+        </div>
 
         <!-- Leaderboard Section -->
         <div id="leaderboard-section" class="text-left mb-6 border-t border-slate-700 pt-6">
             <div class="flex justify-between items-center mb-3">
                 <h3 id="leaderboard-title" class="text-indigo-400 font-bold uppercase tracking-widest text-[10px]">Today's Leaderboard</h3>
+                <h3 id="leaderboard-title" class="text-primary-400 font-bold uppercase tracking-widest text-[10px]">Today's Leaderboard</h3>
                 <div id="leaderboard-controls" class="flex items-center gap-1.5">
                     <input type="checkbox" id="profanity-filter-toggle" onchange="toggleProfanityFilter()" class="h-3.5 w-3.5 bg-slate-700 border-slate-600 rounded text-indigo-500 focus:ring-indigo-600 focus:ring-offset-slate-800 cursor-pointer">
+                    <input type="checkbox" id="profanity-filter-toggle" onchange="toggleProfanityFilter()" class="h-3.5 w-3.5 bg-slate-700 border-slate-600 rounded text-primary-500 focus:ring-primary-600 focus:ring-offset-slate-800 cursor-pointer">
                     <label for="profanity-filter-toggle" class="text-xs text-slate-400 select-none cursor-pointer">Censor Taunts</label>
                 </div>
             </div>
             <div id="leaderboard-submit-form" class="flex gap-2 mb-3">
                 <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
                 <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
+                <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
+                <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
             </div>
             <div id="leaderboard-display" class="glass-panel rounded-xl p-4 max-h-48 overflow-y-auto scrollbar-hide"><p class="text-slate-400 text-sm text-center">Loading leaderboard...</p></div>
         </div>
@@ -269,6 +371,7 @@
                 </button>
             </div>
             <button onclick="shareResults()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
+            <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
         </div>
     </div>
 
@@ -293,6 +396,9 @@
         let userId = null;
         let currentGroupIndex = 0;
         let leaderboardView = 'daily';
+        let freshGameData = null;
+        let cachedHistoryGames = [];
+        let currentHistoryFilter = 'all';
 
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
@@ -381,6 +487,50 @@
             return id;
         }
 
+        function updateTheme(mode) {
+            const body = document.body;
+            if (mode === 'professional') {
+                body.classList.add('theme-professional');
+            } else {
+                body.classList.remove('theme-professional');
+            }
+        }
+
+        function selectMode(mode) {
+            if (!freshGameData) return;
+            
+            const CASUAL_CATS = ['Entertainment', 'Gaming', 'Sports', 'Lifestyle', 'Reality TV', 'Music', 'Movies', 'Celebrity', 'Pop Culture'];
+            const PRO_CATS = ['Economy', 'Politics', 'Business', 'World', 'Technology', 'Environment', 'Weather', 'Science', 'Health', 'Finance'];
+
+            // Filter questions based on mode
+            updateTheme(mode);
+
+            let filteredQuestions = freshGameData.questions.filter(q => {
+                if (!q.category) return true; // Include uncategorized in both to be safe
+                const cat = q.category.trim();
+                if (mode === 'casual') {
+                    return CASUAL_CATS.some(c => cat.includes(c));
+                } else {
+                    return PRO_CATS.some(c => cat.includes(c));
+                }
+            });
+
+            // Fallback: If filter results in 0 questions (e.g. mismatched categories), default to all to prevent empty game
+            if (filteredQuestions.length === 0) {
+                console.log("No questions matched mode, falling back to all.");
+                filteredQuestions = freshGameData.questions;
+            }
+
+            // Create a data object compatible with startNewSession
+            const modeData = { questions: filteredQuestions };
+            
+            // UI Updates
+            document.getElementById('mode-selection').classList.add('hidden');
+            document.getElementById('question-text').classList.remove('hidden');
+            
+            startNewSession(modeData, getGameDate(), mode);
+        }
+
         function playSound(type) {
             if (isMuted) return; // BULLETPROOF MUTE CHECK
             const audio = new Audio(SOUNDS[type]);
@@ -416,7 +566,7 @@ async function startApp() {
     try {
         const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
         if (!response.ok) throw new Error();
-        const freshData = await response.json();
+        freshGameData = await response.json();
         
         const saved = localStorage.getItem('trivia-session');
         
@@ -429,7 +579,8 @@ async function startApp() {
                 archiveSession(session);
                 localStorage.removeItem('trivia-session'); // Wipe yesterday's data
                 window.userChoices = []; // Reset choices
-                startNewSession(freshData, gameDate);
+                updateTheme('casual');
+                showModeSelection(); 
             } 
             else {
                 // It is TODAY'S session, so we restore it
@@ -438,27 +589,40 @@ async function startApp() {
                 score = session.score;
                 window.userChoices = session.userChoices || [];
                 selectedIdx = session.selectedIdx ?? null;
+                
+                const lastMode = (session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual';
+                updateTheme(lastMode);
 
                 if (session.isFinished) {
                     showFinalResults();
                     return; // Jump to results and stop
                 }
+                
+                // Resume game UI
+                document.getElementById('score-display').innerText = `Score: ${score}`;
+                document.getElementById('game-header').classList.remove('hidden');
+                renderQuestion();
             }
         } else {
             // No saved session at all
-            startNewSession(freshData, gameDate);
+            updateTheme('casual');
+            showModeSelection();
         }
-
-        document.getElementById('score-display').innerText = `Score: ${score}`;
-        document.getElementById('game-header').classList.remove('hidden');
-        renderQuestion();
         
     } catch (err) {
         console.error("Error loading trivia:", err);
         document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
     }
 }
-function startNewSession(data, date) {
+
+function showModeSelection() {
+    document.getElementById('mode-selection').classList.remove('hidden');
+    document.getElementById('question-text').classList.add('hidden');
+    document.getElementById('game-header').classList.add('hidden');
+    document.getElementById('options-container').innerHTML = '';
+}
+
+function startNewSession(data, date, mode) {
     // 1. Map the correct answer text to each question BEFORE shuffling
     gameData = {
         questions: data.questions.map(q => {
@@ -479,7 +643,11 @@ function startNewSession(data, date) {
     score = 0;
     window.userChoices = [];
     selectedIdx = null;
-    saveSession(false);
+    saveSession(false, mode);
+
+    document.getElementById('score-display').innerText = `Score: ${score}`;
+    document.getElementById('game-header').classList.remove('hidden');
+    renderQuestion();
 }
 
 // Update the renderQuestion to handle the new format
@@ -618,6 +786,22 @@ function showFinalResults() {
     updateStreak();
     renderReview();
 
+    // NEW LOGIC for "Play Other Mode" button
+    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+    const playedModes = session.playedModes || [];
+    const otherModeSection = document.getElementById('play-other-mode-section');
+    const otherModeBtn = document.getElementById('play-other-mode-btn');
+
+    if (playedModes.length === 1) {
+        const otherMode = playedModes[0] === 'casual' ? 'professional' : 'casual';
+        const otherModeCapitalized = otherMode.charAt(0).toUpperCase() + otherMode.slice(1);
+        otherModeSection.classList.remove('hidden');
+        otherModeBtn.innerHTML = `<span class="text-xl">${otherMode === 'casual' ? '🎮' : '💼'}</span> Play ${otherModeCapitalized}`;
+        otherModeBtn.setAttribute('data-mode', otherMode); // Store the mode to play
+    } else {
+        otherModeSection.classList.add('hidden');
+    }
+
     // Initialize UI states
     document.getElementById('profanity-filter-toggle').checked = localStorage.getItem('trivia-censor') === 'true';
     const autoSubmit = localStorage.getItem('trivia-autosubmit') !== 'false';
@@ -632,6 +816,8 @@ function showFinalResults() {
             <div class="flex flex-col items-center gap-2 w-full p-3 bg-slate-900/50 rounded-xl border border-slate-700/50">
                 <p class="text-indigo-200 text-xs font-bold">Sign in to submit score</p>
                 <button onclick="toggleLoginModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
+                <p class="text-primary-200 text-xs font-bold">Sign in to submit score</p>
+                <button onclick="toggleLoginModal()" class="bg-primary-600 hover:bg-primary-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
             </div>`;
     } else {
         const nameInput = document.getElementById('player-name');
@@ -648,6 +834,33 @@ function showFinalResults() {
     }
 }
 
+function playOtherMode() {
+    const btn = document.getElementById('play-other-mode-btn');
+    const modeToPlay = btn.getAttribute('data-mode');
+
+    if (!modeToPlay || !freshGameData) {
+        console.error("Cannot play other mode, data missing.");
+        return;
+    }
+
+    // 1. Hide results, show main card
+    document.getElementById('results-card').classList.add('hidden');
+    document.getElementById('main-card').classList.remove('hidden');
+
+    // 2. Reset score and index for the new round
+    score = 0;
+    currentIdx = 0;
+    selectedIdx = null;
+    isProcessing = false;
+    window.userChoices = [];
+
+    // 3. Remove the "Perfect Score" badge if it was added
+    const perfectBadge = document.querySelector('.perfect-badge');
+    if (perfectBadge) perfectBadge.remove();
+
+    // 4. Call selectMode with the new mode
+    selectMode(modeToPlay);
+}
         // --- WRAP UP FUNCTIONS ---
 
 // Helper to get ISO Week ID (e.g., "2026-W11")
@@ -714,6 +927,11 @@ async function submitScore() {
     const gameDate = getGameDate();
     const streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
     
+    // Get the mode for the game just played
+    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+    const playedModes = session.playedModes || [];
+    const lastMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
+
     // Get ALL group IDs the user belongs to
     const groups = getMyGroups();
     const groupIds = groups.map(g => g.id);
@@ -721,6 +939,7 @@ async function submitScore() {
     const scoreData = {
         name: name,
         score: score,
+        mode: lastMode,
         streak: streak,
         date: gameDate,
         weekId: getWeekId(gameDate), // Save the Week ID
@@ -739,6 +958,7 @@ async function submitScore() {
             <div class="flex flex-col items-center gap-2 w-full">
                 <p class="text-emerald-400 text-sm font-bold">✅ Score Submitted!</p>
                 <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-indigo-300 py-1.5 px-3 rounded-lg border border-indigo-500/30 transition-all">
+                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-primary-300 py-1.5 px-3 rounded-lg border border-primary-500/30 transition-all">
                     💬 Add a Taunt
                 </button>
             </div>`;
@@ -758,6 +978,8 @@ async function checkIfSubmitted() {
             <div class="flex flex-col items-center gap-2 w-full p-3 bg-slate-900/50 rounded-xl border border-slate-700/50">
                 <p class="text-indigo-200 text-xs font-bold">Sign in to submit score</p>
                 <button onclick="toggleLoginModal()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
+                <p class="text-primary-200 text-xs font-bold">Sign in to submit score</p>
+                <button onclick="toggleLoginModal()" class="bg-primary-600 hover:bg-primary-500 text-white px-6 py-2 rounded-lg font-bold text-xs w-full transition-all">Sign In</button>
             </div>`;
         return false;
     }
@@ -781,6 +1003,8 @@ async function checkIfSubmitted() {
                 formContainer.innerHTML = `
                     <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
                     <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
+                    <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
+                    <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
                 `;
 
             const nameInput = document.getElementById('player-name');
@@ -798,6 +1022,7 @@ async function checkIfSubmitted() {
             <div class="flex flex-col items-center gap-2 w-full">
                 <p class="text-emerald-400 text-sm font-bold">✅ Your score is on the board!</p>
                 <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-indigo-300 py-1.5 px-3 rounded-lg border border-indigo-500/30 transition-all">
+                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-primary-300 py-1.5 px-3 rounded-lg border border-primary-500/30 transition-all">
                     💬 Update Taunt
                 </button>
             </div>`;
@@ -808,6 +1033,8 @@ async function checkIfSubmitted() {
     formContainer.innerHTML = `
         <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" onchange="localStorage.setItem('trivia-name', this.value)">
         <button onclick="submitScore()" id="submit-score-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
+        <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
+        <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
     `;
     const storedName = localStorage.getItem('trivia-name');
     if (storedName) document.getElementById('player-name').value = storedName;
@@ -844,9 +1071,9 @@ async function fetchAndDisplayLeaderboard() {
         if (submitForm) submitForm.classList.add('hidden');
         display.innerHTML = `
             <div class="text-center p-4">
-                <p class="text-indigo-200 text-sm mb-4">Create a private weekly leaderboard to compete with friends!</p>
-                <input type="text" id="new-group-name" placeholder="Group Name (e.g. The Squad)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-indigo-500 text-center">
-                <button onclick="createGroup()" id="create-group-btn" class="bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all w-full">Create Friend Group</button>
+                <p class="text-primary-200 text-sm mb-4">Create a private weekly leaderboard to compete with friends!</p>
+                <input type="text" id="new-group-name" placeholder="Group Name (e.g. The Squad)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-primary-500 text-center">
+                <button onclick="createGroup()" id="create-group-btn" class="bg-primary-500 hover:bg-primary-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all w-full">Create Friend Group</button>
             </div>
         `;
         return;
@@ -862,9 +1089,9 @@ async function fetchAndDisplayLeaderboard() {
     // Update Title with Switcher UI
     const switcherHTML = groups.length > 1 
         ? `<div class="flex items-center justify-center gap-2 mt-1">
-             <button onclick="switchGroup(-1)" class="text-indigo-400 hover:text-white px-2">◀</button>
+             <button onclick="switchGroup(-1)" class="text-primary-400 hover:text-white px-2">◀</button>
              <span class="text-white text-sm">${currentGroup.name}</span>
-             <button onclick="switchGroup(1)" class="text-indigo-400 hover:text-white px-2">▶</button>
+             <button onclick="switchGroup(1)" class="text-primary-400 hover:text-white px-2">▶</button>
            </div>`
         : `<span class="block text-white text-sm mt-1">${currentGroup.name}</span>`;
 
@@ -875,10 +1102,10 @@ async function fetchAndDisplayLeaderboard() {
         display.innerHTML = `
             <div class="mb-3 flex flex-wrap justify-center gap-2">
                 <div class="w-full flex justify-center gap-1 mb-1 bg-slate-800/80 p-1 rounded-lg w-max mx-auto border border-slate-700/50 max-w-[200px]">
-                    <button onclick="setLeaderboardView('daily')" class="${leaderboardView === 'daily' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Daily</button>
-                    <button onclick="setLeaderboardView('weekly')" class="${leaderboardView === 'weekly' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Weekly</button>
+                    <button onclick="setLeaderboardView('daily')" class="${leaderboardView === 'daily' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Daily</button>
+                    <button onclick="setLeaderboardView('weekly')" class="${leaderboardView === 'weekly' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Weekly</button>
                 </div>
-                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30">
+                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30">
                     🔗 Copy Invite Link
                 </button>
                 <button onclick="leaveGroup('${currentGroup.id}')" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
@@ -928,8 +1155,8 @@ async function fetchAndDisplayLeaderboard() {
 
         // 4. Render
         // Keep invite button at top
-        const dailyClass = leaderboardView === 'daily' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
-        const weeklyClass = leaderboardView === 'weekly' ? 'bg-indigo-600 text-white shadow-indigo-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
+        const dailyClass = leaderboardView === 'daily' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
+        const weeklyClass = leaderboardView === 'weekly' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
         
         const inviteBtnHTML = `
             <div class="mb-3 flex flex-wrap justify-center gap-2">
@@ -937,7 +1164,7 @@ async function fetchAndDisplayLeaderboard() {
                     <button onclick="setLeaderboardView('daily')" class="${dailyClass} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Daily</button>
                     <button onclick="setLeaderboardView('weekly')" class="${weeklyClass} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Weekly</button>
                 </div>
-                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-indigo-300 font-bold border border-indigo-500/30 transition-all">
+                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30 transition-all">
                     🔗 Copy Invite Link
                 </button>
                 <button onclick="leaveGroup('${currentGroup.id}')" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
@@ -972,7 +1199,7 @@ async function fetchAndDisplayLeaderboard() {
             const streakHTML = (user.streak > 0) ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : '';
             const cleanTaunt = censorTaunt(user.taunt);
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}" 👇</div>` : '';
-            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 bg-slate-700 hover:bg-slate-600 text-indigo-300 text-[10px] px-2 py-0.5 rounded border border-indigo-500/30 transition-all">💬 Taunt</button>` : '';
+            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 bg-slate-700 hover:bg-slate-600 text-primary-300 text-[10px] px-2 py-0.5 rounded border border-primary-500/30 transition-all">💬 Taunt</button>` : '';
             
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
 
@@ -986,7 +1213,7 @@ async function fetchAndDisplayLeaderboard() {
                         ${streakHTML}
                         ${actionBtn}
                     </div>
-                    <span class="font-mono bg-slate-900/50 px-2 py-1 rounded text-indigo-300 text-xs border border-indigo-500/20 whitespace-nowrap">${user.totalScore} pts</span>
+                    <span class="font-mono bg-slate-900/50 px-2 py-1 rounded text-primary-300 text-xs border border-primary-500/20 whitespace-nowrap">${user.totalScore} pts</span>
                 </div>
                 ${tauntHTML}`;
             list.appendChild(item);
@@ -1091,9 +1318,12 @@ function showCreateGroupUI() {
         <div class="text-center p-4">
             <p class="text-indigo-200 text-sm mb-4">Create another leaderboard?</p>
             <input type="text" id="new-group-name" placeholder="Group Name (e.g. Work Buds)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-indigo-500 text-center">
+            <p class="text-primary-200 text-sm mb-4">Create another leaderboard?</p>
+            <input type="text" id="new-group-name" placeholder="Group Name (e.g. Work Buds)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm mb-3 focus:outline-none focus:border-primary-500 text-center">
             <div class="flex gap-2">
                 <button onclick="fetchAndDisplayLeaderboard()" class="flex-1 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Cancel</button>
                 <button onclick="createGroup()" id="create-group-btn" class="flex-1 bg-indigo-500 hover:bg-indigo-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Create</button>
+                <button onclick="createGroup()" id="create-group-btn" class="flex-1 bg-primary-500 hover:bg-primary-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all">Create</button>
             </div>
         </div>
     `;
@@ -1259,6 +1489,7 @@ function updateStreak() {
 function renderReview() {
     const review = document.getElementById('review-section');
     review.innerHTML = '<h3 class="text-indigo-400 font-bold uppercase tracking-widest text-[10px] mb-4">Your Answers</h3>';
+    review.innerHTML = '<h3 class="text-primary-400 font-bold uppercase tracking-widest text-[10px] mb-4">Your Answers</h3>';
     
     const choices = window.userChoices || [];
 
@@ -1325,25 +1556,39 @@ function shareResults() {
             const originalText = shareBtn.innerText;
             shareBtn.innerText = "✅ Copied to Clipboard!";
             shareBtn.classList.replace('bg-indigo-600', 'bg-emerald-600');
+            shareBtn.classList.replace('bg-primary-600', 'bg-emerald-600');
             
             setTimeout(() => {
                 shareBtn.innerText = originalText;
                 shareBtn.classList.replace('bg-emerald-600', 'bg-indigo-600');
+                shareBtn.classList.replace('bg-emerald-600', 'bg-primary-600');
             }, 2500);
         });
     }
 }
 
 // Add 'userChoices' to the session object
-function saveSession(isFinished = false) {
+function saveSession(isFinished = false, newMode = null) {
+    // Get current session to preserve playedModes across saves within the same day
+    const currentSessionJSON = localStorage.getItem('trivia-session');
+    const currentSession = currentSessionJSON ? JSON.parse(currentSessionJSON) : {};
+    
+    // If the saved session is from a different day, reset playedModes
+    const playedModes = currentSession.date === getGameDate() ? (currentSession.playedModes || []) : [];
+
+    if (newMode && !playedModes.includes(newMode)) {
+        playedModes.push(newMode);
+    }
+
     const session = {
         date: getGameDate(),
         shuffledQuestions: gameData.questions,
         currentIdx: currentIdx,
         score: score,
         isFinished: isFinished,
-        userChoices: window.userChoices || [], // Store the array of answers
-        selectedIdx: selectedIdx
+        userChoices: window.userChoices || [],
+        selectedIdx: selectedIdx,
+        playedModes: playedModes // Save the array
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
     exportStateToURL();
@@ -1354,17 +1599,31 @@ function archiveSession(session) {
     try {
         const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
         
-        // Map indices to actual text answers
-        const choicesText = session.shuffledQuestions.map((q, i) => {
-            if (session.userChoices && session.userChoices[i] !== undefined && session.userChoices[i] !== null) {
-                return q.options[session.userChoices[i]];
+        // ROBUST ARCHIVING: Map Question Text -> User Answer
+        // This ensures that even if questions are shuffled differently in the future,
+        // we can still find the specific answer the user gave to a specific question.
+        const answersMap = {};
+        const choicesList = []; // Keep linear list for legacy safety
+
+        session.shuffledQuestions.forEach((q, i) => {
+            let ans = null;
+             if (session.userChoices && session.userChoices[i] !== undefined && session.userChoices[i] !== null) {
+                ans = q.options[session.userChoices[i]];
             }
-            return null;
+            if (ans) answersMap[q.q] = ans;
+            choicesList.push(ans);
         });
 
+        const lastMode = (session.playedModes && session.playedModes.length > 0) 
+            ? session.playedModes[session.playedModes.length - 1] 
+            : 'casual';
+
         archive[session.date] = {
-            choices: choicesText,
-            score: session.score
+            answers: answersMap,
+            choices: choicesList,
+            score: session.score,
+            score: session.score,
+            mode: lastMode
         };
         
         localStorage.setItem('trivia-archive', JSON.stringify(archive));
@@ -1620,6 +1879,38 @@ function closeTutorial() {
     }, 300);
 }
 
+function renderStatsSection(title, icon, metrics, isFirst = false) {
+    const borderClass = isFirst ? '' : 'border-t border-slate-700/50 pt-4';
+    if (metrics.totalGames === 0) {
+        return `
+            <div class="${borderClass}">
+                <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">${icon} ${title}</h3>
+                <p class="text-center text-slate-500 text-xs p-4 bg-slate-900/30 rounded-lg">No games played in this mode yet.</p>
+            </div>
+        `;
+    }
+    return `
+        <div class="${borderClass}">
+            <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">${icon} ${title}</h3>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Games Played</div>
+                    <div class="text-2xl font-black text-white">${metrics.totalGames}</div>
+                </div>
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Win % (Perfect)</div>
+                    <div class="text-2xl font-black text-emerald-400">${metrics.winPct}%</div>
+                </div>
+                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center col-span-2">
+                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Average Score</div>
+                    <div class="text-3xl font-black text-indigo-400">${metrics.avgScore} <span class="text-sm text-slate-500">/ 5</span></div>
+                    <div class="text-3xl font-black text-primary-400">${metrics.avgScore} <span class="text-sm text-slate-500">/ 5</span></div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 async function openStats() {
     const modal = document.getElementById('stats-modal');
     const content = document.getElementById('stats-content');
@@ -1631,48 +1922,63 @@ async function openStats() {
         modal.querySelector('div').classList.add('scale-100');
     }, 10);
 
-    if (!userId || !db) {
-        content.innerHTML = '<p class="text-center text-slate-400">Connect to play to see stats.</p>';
+    if (!auth.currentUser || !db) {
+        content.innerHTML = '<p class="text-center text-slate-400">Sign in to see your stats.</p>';
         return;
     }
+
+    content.innerHTML = `
+        <div class="animate-pulse space-y-4">
+            <div class="h-4 bg-slate-700 rounded w-3/4 mx-auto"></div>
+            <div class="space-y-2">
+                <div class="h-4 bg-slate-700 rounded"></div>
+                <div class="h-4 bg-slate-700 rounded w-5/6"></div>
+            </div>
+        </div>
+        <p class="text-center text-slate-500 text-xs">Crunching the numbers...</p>
+    `;
 
     try {
         const snapshot = await db.collection('scores').where('userId', '==', userId).get();
         
-        let totalGames = 0;
-        let totalScore = 0;
-        let perfectGames = 0;
+        const stats = {
+            casual: { totalGames: 0, totalScore: 0, perfectGames: 0 },
+            professional: { totalGames: 0, totalScore: 0, perfectGames: 0 },
+            overall: { totalGames: 0, totalScore: 0, perfectGames: 0 }
+        };
 
         snapshot.forEach(doc => {
             const data = doc.data();
             const s = data.score || 0;
-            totalGames++;
-            totalScore += s;
-            if (s === 5) perfectGames++; 
+            const mode = data.mode || 'casual'; // Default old games to casual
+
+            stats.overall.totalGames++;
+            stats.overall.totalScore += s;
+            if (s === 5) stats.overall.perfectGames++;
+
+            if (stats[mode]) {
+                stats[mode].totalGames++;
+                stats[mode].totalScore += s;
+                if (s === 5) stats[mode].perfectGames++;
+            }
         });
 
-        if (totalGames === 0) {
-            content.innerHTML = '<p class="text-center text-slate-400">No games played yet.</p>';
+        if (stats.overall.totalGames === 0) {
+            content.innerHTML = '<p class="text-center text-slate-400">No games played yet. Your stats will appear here!</p>';
             return;
         }
 
-        const avgScore = (totalScore / totalGames).toFixed(1);
-        const winPct = Math.round((perfectGames / totalGames) * 100);
+        const calculateMetrics = (category) => ({
+            avgScore: category.totalGames > 0 ? (category.totalScore / category.totalGames).toFixed(1) : '0.0',
+            winPct: category.totalGames > 0 ? Math.round((category.perfectGames / category.totalGames) * 100) : 0,
+            totalGames: category.totalGames
+        });
 
         content.innerHTML = `
-            <div class="grid grid-cols-2 gap-3">
-                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center">
-                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Games Played</div>
-                    <div class="text-2xl font-black text-white">${totalGames}</div>
-                </div>
-                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center">
-                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Win % (Perfect)</div>
-                    <div class="text-2xl font-black text-emerald-400">${winPct}%</div>
-                </div>
-                <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center col-span-2">
-                    <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Average Score</div>
-                    <div class="text-3xl font-black text-indigo-400">${avgScore} <span class="text-sm text-slate-500">/ 5</span></div>
-                </div>
+            <div class="space-y-6">
+                ${renderStatsSection('Overall', '🌟', calculateMetrics(stats.overall), true)}
+                ${renderStatsSection('Casual', '🎮', calculateMetrics(stats.casual))}
+                ${renderStatsSection('Professional', '💼', calculateMetrics(stats.professional))}
             </div>
         `;
 
@@ -1712,6 +2018,24 @@ function closeStats() {
             setTimeout(() => modal.classList.add('hidden'), 300);
         }
 
+        function filterHistory(mode) {
+            currentHistoryFilter = mode;
+            
+            // Update UI Buttons
+            const buttons = ['all', 'casual', 'professional'];
+            buttons.forEach(btnMode => {
+                const btn = document.getElementById(`hist-filter-${btnMode}`);
+                if (mode === btnMode) {
+                    btn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-500/20";
+                    btn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-primary-600 text-white shadow-lg shadow-primary-500/20";
+                } else {
+                    btn.className = "px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600";
+                }
+            });
+            
+            renderHistory(cachedHistoryGames);
+        }
+
         async function loadHistoryData() {
             const content = document.getElementById('history-content');
             content.innerHTML = `
@@ -1749,6 +2073,8 @@ function closeStats() {
                 }
             }
 
+            cachedHistoryGames = pastGames; // Store for filtering
+
             if (pastGames.length === 0) {
                 content.innerHTML = '<p class="text-center text-slate-400">No past games found.</p>';
                 return;
@@ -1765,10 +2091,20 @@ function closeStats() {
             try { archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}'); } catch(e){}
 
             // Filter games to only include those that have been played and are in the archive.
-            const playedGames = games.filter(game => archive[game.date]);
+            const playedGames = games.filter(game => {
+                const record = archive[game.date];
+                if (!record) return false;
+                
+                // Filter Logic
+                if (currentHistoryFilter !== 'all') {
+                    const recordMode = record.mode || 'casual'; // Default to casual for legacy data
+                    if (recordMode !== currentHistoryFilter) return false;
+                }
+                return true;
+            });
 
             if (playedGames.length === 0) {
-                content.innerHTML = '<p class="text-center text-slate-400 p-8">No completed games in your history yet. Play today to start your collection!</p>';
+                content.innerHTML = '<p class="text-center text-slate-400 p-8">No games found for this category.</p>';
                 return;
             }
 
@@ -1781,16 +2117,36 @@ function closeStats() {
                 dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50';
                 
                 const userRecord = archive[game.date];
+                const modeBadge = (userRecord.mode === 'professional') 
+                    ? '<span class="text-[10px] bg-emerald-900/50 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30 ml-2">PRO</span>'
+                    : '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
                 
                 let questionsHTML = '';
+                let visibleQuestionsCount = 0;
+
                 game.questions.forEach((q, idx) => {
                     const correctAnswer = q.options[q.a];
                     const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-indigo-400 underline ml-2 decoration-dotted">Source ↗</a>` : '';
                      
                     let answerHTML = `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`;
+                    let userPick = null;
                      
-                    if (userRecord && userRecord.choices && userRecord.choices[idx]) {
-                        const userPick = userRecord.choices[idx];
+                    // Try finding the answer by Question Text first (New Robust Way)
+                    if (userRecord.answers && userRecord.answers[q.q] !== undefined) {
+                        userPick = userRecord.answers[q.q];
+                    } 
+                    // Fallback to Index (Legacy Way) - only if answers map missing
+                    else if (!userRecord.answers && userRecord.choices && userRecord.choices[idx]) {
+                        userPick = userRecord.choices[idx];
+                    }
+
+                    // If we filtered by mode, hide questions the user didn't actually play
+                    // (This assumes userRecord.answers is populated correctly)
+                    if (userRecord.answers && !userPick) return;
+                    
+                    visibleQuestionsCount++;
+
+                    if (userPick) {
                         const isCorrect = userPick === correctAnswer;
                          
                         if (!isCorrect) {
@@ -1810,8 +2166,12 @@ function closeStats() {
                     `;
                 });
  
+                if (visibleQuestionsCount === 0) return; // Don't show empty days
+
                 dayContainer.innerHTML = `
-                    <h3 class="text-lg font-bold text-indigo-400 mb-3 border-b border-slate-700 pb-2">${formattedDate}</h3>
+                    <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
+                        ${formattedDate} ${modeBadge}
+                    </h3>
                     <div class="space-y-3">${questionsHTML}</div>
                 `;
                 content.appendChild(dayContainer);
