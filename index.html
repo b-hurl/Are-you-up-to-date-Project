@@ -105,6 +105,9 @@
             <div class="space-y-3">
                 <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
                 <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500">
+                <div class="text-right">
+                    <button onclick="resetPassword()" class="text-xs text-slate-400 hover:text-white transition-colors">Forgot Password?</button>
+                </div>
                 <div class="flex gap-2">
                     <button onclick="emailAuth('login')" class="flex-1 bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
                     <button onclick="emailAuth('signup')" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Up</button>
@@ -190,6 +193,7 @@
 
     <!-- Buttons -->
     <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
+    <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all hidden">
         <span id="user-icon-display" class="text-xl">👤</span>
     </button>
 
@@ -1378,11 +1382,15 @@ function initFirebase() {
     // Auth Listener
     auth.onAuthStateChanged((user) => {
         const userBtn = document.getElementById('user-icon-display');
+        const userBtnElement = document.getElementById('user-btn');
+        const userIconDisplay = document.getElementById('user-icon-display');
         const loginOptions = document.getElementById('login-options');
         const userInfo = document.getElementById('user-info-display');
         const emailAuthSection = document.getElementById('email-auth-section');
 
         if (user) {
+            // Show user button only when logged in
+            if (userBtnElement) userBtnElement.classList.remove('hidden');
             // Logged In
             userId = user.uid;
             localStorage.setItem('trivia-userId', userId); // Update local reference
@@ -1395,6 +1403,7 @@ function initFirebase() {
 
             // Update UI
             userBtn.innerHTML = user.photoURL ? `<img src="${user.photoURL}" class="w-6 h-6 rounded-full">` : "🟢";
+            userIconDisplay.innerHTML = user.photoURL ? `<img src="${user.photoURL}" class="w-6 h-6 rounded-full">` : "🟢";
             loginOptions.classList.add('hidden');
             if (emailAuthSection) emailAuthSection.classList.add('hidden');
             userInfo.classList.remove('hidden');
@@ -1406,6 +1415,8 @@ function initFirebase() {
                 checkIfSubmitted();
             }
         } else {
+            // Hide user button when logged out
+            if (userBtnElement) userBtnElement.classList.add('hidden');
             // Logged Out
             if (localStorage.getItem('trivia-userId') && !localStorage.getItem('trivia-userId').startsWith('user_')) {
                 // If we were using an auth ID, reset to a random one so we don't keep using the old account locally
@@ -1413,6 +1424,7 @@ function initFirebase() {
             }
             userId = getOrSetUserId();
             userBtn.innerHTML = "👤";
+            userIconDisplay.innerHTML = "👤";
             loginOptions.classList.remove('hidden');
             if (emailAuthSection) emailAuthSection.classList.remove('hidden');
             userInfo.classList.add('hidden');
@@ -1485,7 +1497,7 @@ async function emailAuth(type) {
 
     if (!email || !password) {
         errDisplay.innerText = "Please enter email and password";
-        errDisplay.classList.remove('hidden');
+        errDisplay.className = "text-red-400 text-xs text-center mt-4";
         return;
     }
 
@@ -1499,7 +1511,27 @@ async function emailAuth(type) {
         errDisplay.classList.add('hidden');
     } catch (error) {
         errDisplay.innerText = error.message;
-        errDisplay.classList.remove('hidden');
+        errDisplay.className = "text-red-400 text-xs text-center mt-4";
+    }
+}
+
+async function resetPassword() {
+    const email = document.getElementById('auth-email').value;
+    const errDisplay = document.getElementById('auth-error');
+    
+    if (!email) {
+        errDisplay.innerText = "Please enter your email to reset password.";
+        errDisplay.className = "text-red-400 text-xs text-center mt-4";
+        return;
+    }
+
+    try {
+        await auth.sendPasswordResetEmail(email);
+        errDisplay.innerText = "Reset link sent! Check your email.";
+        errDisplay.className = "text-emerald-400 text-xs text-center mt-4";
+    } catch (error) {
+        errDisplay.innerText = error.message;
+        errDisplay.className = "text-red-400 text-xs text-center mt-4";
     }
 }
 
