@@ -223,7 +223,7 @@
         <div id="leaderboard-section" class="text-left mb-6 border-t border-slate-700 pt-6">
             <div class="flex justify-between items-center mb-3">
                 <h3 id="leaderboard-title" class="text-indigo-400 font-bold uppercase tracking-widest text-[10px]">Today's Leaderboard</h3>
-                <div class="flex items-center gap-1.5">
+                <div id="leaderboard-controls" class="flex items-center gap-1.5">
                     <input type="checkbox" id="profanity-filter-toggle" onchange="toggleProfanityFilter()" class="h-3.5 w-3.5 bg-slate-700 border-slate-600 rounded text-indigo-500 focus:ring-indigo-600 focus:ring-offset-slate-800 cursor-pointer">
                     <label for="profanity-filter-toggle" class="text-xs text-slate-400 select-none cursor-pointer">Censor Taunts</label>
                 </div>
@@ -588,7 +588,8 @@ function showFinalResults() {
     // Initialize UI states
     document.getElementById('profanity-filter-toggle').checked = localStorage.getItem('trivia-censor') === 'true';
     const autoSubmit = localStorage.getItem('trivia-autosubmit') !== 'false';
-    document.getElementById('auto-submit-toggle').checked = autoSubmit;
+    const autoSubmitToggle = document.getElementById('auto-submit-toggle');
+    if (autoSubmitToggle) autoSubmitToggle.checked = autoSubmit;
 
     // Pre-fill name and fetch leaderboard
     const storedName = localStorage.getItem('trivia-name');
@@ -790,14 +791,17 @@ async function fetchAndDisplayLeaderboard() {
     const display = document.getElementById('leaderboard-display');
     const title = document.getElementById('leaderboard-title');
     const submitForm = document.getElementById('leaderboard-submit-form');
+    const controls = document.getElementById('leaderboard-controls');
     
     if (!auth.currentUser) {
         title.innerText = "Leaderboard";
         // Ensure the form area (managed by checkIfSubmitted) is visible for the Sign In button
         if (submitForm) submitForm.classList.remove('hidden');
+        if (controls) controls.classList.add('hidden');
         display.innerHTML = `<div class="text-center p-8 text-slate-500 text-xs italic"><p>🔒 Sign in to create groups and view leaderboards</p></div>`;
         return;
     }
+    if (controls) controls.classList.remove('hidden');
 
     const groups = getMyGroups();
 
@@ -1637,6 +1641,12 @@ function closeStats() {
 
         // Run Import before initialization
         importStateFromURL();
+        initFirebase();
+        startApp();
+        checkTutorial();
+    </script>
+</body>
+</html> importStateFromURL();
         initFirebase();
         startApp();
         checkTutorial();
