@@ -1,0 +1,122 @@
+[
+  {
+    "q": "On March 19, 2026, which reality TV star's upcoming season of 'The Bachelorette' was officially canceled by ABC just days before its scheduled premiere?",
+    "options": [
+      "Hannah Brown",
+      "Taylor Frankie Paul",
+      "Daisy Kent",
+      "Maria Georgas"
+    ],
+    "a": 1,
+    "category": "Reality TV",
+    "source": "https://news.northeastern.edu/2026/03/19/the-bachelorette-canceled-taylor-frankie-paul/"
+  },
+  {
+    "q": "Which legendary actor was reported to be in 'good spirits' on March 19, 2026, after being hospitalized in Hawaii following his 86th birthday?",
+    "options": [
+      "Clint Eastwood",
+      "Sylvester Stallone",
+      "Chuck Norris",
+      "Harrison Ford"
+    ],
+    "a": 2,
+    "category": "Celebrity",
+    "source": "https://www.ctvnews.ca/entertainment/article/chuck-norris-hospitalized-in-hawaii-report/"
+  },
+  {
+    "q": "Announced on March 19, 2026, which artist is the most-nominated for the upcoming 2026 iHeartRadio Music Awards with a total of nine nominations?",
+    "options": [
+      "Beyoncé",
+      "Taylor Swift",
+      "Billie Eilish",
+      "Sabrina Carpenter"
+    ],
+    "a": 1,
+    "category": "Music",
+    "source": "https://www.iheartmedia.com/press/2026-iheartradio-music-awards-most-nominated-artist-taylor-swift-make-special-appearance"
+  },
+  {
+    "q": "Released on March 19, 2026, for PC and consoles, which long-awaited open-world RPG features over 110 hours of gameplay in its initial reviews?",
+    "options": [
+      "Crimson Desert",
+      "The Elder Scrolls VI",
+      "Ghost of Yotei",
+      "Marathon"
+    ],
+    "a": 0,
+    "category": "Gaming",
+    "source": "https://www.ign.com/articles/crimson-desert-review"
+  },
+  {
+    "q": "Which film, starring Leonardo DiCaprio and Jennifer Lawrence, released first-look images on March 19, 2026, showing DiCaprio's 'Oscar mustache' from his recent Best Actor nomination?",
+    "options": [
+      "One Battle After Another",
+      "Heat 2",
+      "What Happens at Night",
+      "The Wager"
+    ],
+    "a": 2,
+    "category": "Movies",
+    "source": "https://nz.news.yahoo.com/leonardo-dicaprio-returns-oscars-mustache-181540493.html"
+  },
+  {
+    "q": "On March 19, 2026, Canada and several G7 allies issued a joint statement expressing their readiness to contribute to efforts to reopen which vital shipping route?",
+    "options": [
+      "The Panama Canal",
+      "The Strait of Hormuz",
+      "The Suez Canal",
+      "The Malacca Strait"
+    ],
+    "a": 1,
+    "category": "World",
+    "source": "https://globalnews.ca/news/11738135/canada-allies-strait-of-hormuz/"
+  },
+  {
+    "q": "Physicists at CERN's Large Hadron Collider (LHC) announced on March 19, 2026, the discovery of a heavy 'cousin' of the proton known as the Ξcc⁺, which contains two of which type of quark?",
+    "options": [
+      "Strange quarks",
+      "Top quarks",
+      "Bottom quarks",
+      "Charm quarks"
+    ],
+    "a": 3,
+    "category": "Science",
+    "source": "https://www.sciencedaily.com/releases/2026/03/260319005106.htm"
+  },
+{
+    "q": "On March 19, 2026, Brent crude oil prices saw significant volatility, briefly spiking above what price per barrel following intensified Middle East conflict?",
+    "options": [
+      "US$95",
+      "US$105",
+      "US$119",
+      "US$135"
+    ],
+    "a": 2,
+    "category": "Finance",
+    "source": "https://www.bnnbloomberg.ca/markets/oil/2026/03/19/brent-crude-briefly-tops-us119-per-barrel-before-pulling-back-and-stocks-sink-worldwide/"
+  },
+  {
+    "q": "In a March 19, 2026,, the Canadian government highlighted an investment of over $900 million through the National Research Council (NRC) to boost which emerging technology field as part of its Defence Industrial Strategy?",
+    "options": [
+      "Quantum technology",
+      "Deep-sea exploration",
+      "Hydrogen-powered aviation",
+      "Vertical farming"
+    ],
+    "a": 0,
+    "category": "Technology",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/canada-advances-defence-industrial-strategy-to-strengthen-security-sovereignty-and-prosperity0.html"
+  },
+{
+    "q": "In a major environmental policy move on March 19, 2026, the Canadian government released which 10-year strategy to align research and protect vital water resources?",
+    "options": [
+      "The Ocean Conservation Act",
+      "The National Freshwater Science Agenda",
+      "The Great Lakes Restoration Initiative",
+      "The Arctic Watershed Protection Plan"
+    ],
+    "a": 1,
+    "category": "Environment",
+    "source": "https://www.canada.ca/en/environment-climate-change/news/2026/03/canada-releases-the-national-freshwater-science-agenda-to-guide-priorities-over-the-next-10-years.html"
+  }
+]
