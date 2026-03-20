@@ -111,6 +111,24 @@
         </div>
     </div>
 
+    <!-- Permissions Modal -->
+    <div id="permissions-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">🔔</div>
+            <h2 class="text-2xl font-black text-white mb-2">Enable Features</h2>
+            <p class="text-slate-300 text-sm mb-6">Allow notifications and location to get daily reminders and see local rankings.</p>
+            
+            <div class="space-y-3">
+                <button onclick="requestPermissions()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all">
+                    Allow Access
+                </button>
+                <button onclick="closePermissionsModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                    Maybe Later
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Signup Prompt Modal -->
     <div id="signup-prompt-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
@@ -1652,6 +1670,53 @@ function archiveSession(session) {
     } catch (e) { console.error("Archive failed", e); }
 }
 
+async function checkDailyWinnerNotification() {
+    // 1. Permissions & Auth Check
+    if (!("Notification" in window)) return;
+    if (Notification.permission !== "granted") return;
+    if (!auth.currentUser) return;
+
+    const groups = getMyGroups();
+    if (groups.length === 0) return;
+
+    // 2. Date Logic: We want the winner of the PREVIOUS game (Yesterday)
+    const todayGameDate = getGameDate();
+    const lastNotified = localStorage.getItem('trivia-notified-winner-date');
+    
+    // Only notify once per day
+    if (lastNotified === todayGameDate) return;
+
+    const parts = todayGameDate.split('-').map(Number);
+    const d = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2]));
+    d.setUTCDate(d.getUTCDate() - 1); // Go back one day
+    const prevGameDate = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+
+    // 3. Query Winner
+    if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
+    const groupId = groups[currentGroupIndex].id;
+
+    try {
+        const snapshot = await db.collection('scores')
+            .where('groupIds', 'array-contains', groupId)
+            .where('date', '==', prevGameDate)
+            .orderBy('score', 'desc')
+            .orderBy('timestamp', 'asc') // Tie-breaker: First to submit wins
+            .limit(1)
+            .get();
+
+        if (!snapshot.empty) {
+            const doc = snapshot.docs[0].data();
+            const winnerName = doc.userId === userId ? "You" : (doc.name || "A Player");
+            const taunt = doc.taunt ? `"${doc.taunt}"` : "Top of the leaderboard!";
+            const title = doc.userId === userId ? "🏆 You Won Yesterday!" : `🏆 ${winnerName} Won Yesterday`;
+            const body = doc.userId === userId ? "Keep the streak alive today!" : `${taunt}\nPlay now to take the crown!`;
+
+            new Notification(title, { body, icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968923.png' });
+            localStorage.setItem('trivia-notified-winner-date', todayGameDate);
+        }
+    } catch (e) { console.log("Notification check skipped:", e); }
+}
+
 function initFirebase() {
     // --- IMPORTANT ---
     // PASTE YOUR FIREBASE CONFIGURATION OBJECT HERE
@@ -1723,6 +1788,9 @@ function initFirebase() {
             if (inviteGroup) {
                 handleInvite(inviteGroup);
             }
+
+            // Check for daily winner notification
+            setTimeout(checkDailyWinnerNotification, 3000);
         } else {
             // Hide user button when logged out
             if (userBtnElement) userBtnElement.classList.add('hidden');
@@ -1948,6 +2016,44 @@ function playOfflineJoin() {
     window.history.replaceState({}, '', url);
 }
 
+        function checkPermissions() {
+            const seen = localStorage.getItem('trivia-permissions-seen');
+            if (!seen) {
+                const modal = document.getElementById('permissions-modal');
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('div').classList.remove('scale-95');
+                    modal.querySelector('div').classList.add('scale-100');
+                }, 10);
+            } else {
+                checkSignupPrompt();
+            }
+        }
+
+        function closePermissionsModal() {
+            const modal = document.getElementById('permissions-modal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                localStorage.setItem('trivia-permissions-seen', 'true');
+                checkSignupPrompt();
+            }, 300);
+        }
+
+        async function requestPermissions() {
+            if ("Notification" in window) {
+                try { await Notification.requestPermission(); } catch (e) { console.error(e); }
+            }
+            if ("geolocation" in navigator) {
+                navigator.geolocation.getCurrentPosition(() => {}, () => {}, { timeout: 5000 });
+            }
+            closePermissionsModal();
+        }
+
 function checkTutorial() {
     if (!localStorage.getItem('trivia-tutorial-seen')) {
         const modal = document.getElementById('tutorial-modal');
@@ -1958,7 +2064,7 @@ function checkTutorial() {
             modal.querySelector('div').classList.add('scale-100');
         }, 10);
     } else {
-        checkSignupPrompt();
+                checkPermissions();
     }
 }
 
@@ -1971,7 +2077,7 @@ function closeTutorial() {
     setTimeout(() => {
         modal.classList.add('hidden');
         localStorage.setItem('trivia-tutorial-seen', 'true');
-        checkSignupPrompt();
+                checkPermissions();
     }, 300);
 }
 
