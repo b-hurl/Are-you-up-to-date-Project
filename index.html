@@ -234,6 +234,7 @@
             </div>
 
             <div class="space-y-3">
+                <input type="text" id="auth-name" placeholder="Display Name (Required for Sign Up)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
                 <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
                 <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
                 <div class="text-right">
@@ -1992,17 +1993,28 @@ async function socialLogin(providerName) {
 async function emailAuth(type) {
     const email = document.getElementById('auth-email').value;
     const password = document.getElementById('auth-password').value;
+    const name = document.getElementById('auth-name').value.trim();
     const errDisplay = document.getElementById('auth-error');
 
     if (!email || !password) {
         errDisplay.innerText = "Please enter email and password";
         errDisplay.className = "text-red-400 text-xs text-center mt-4";
+        errDisplay.classList.remove('hidden');
         return;
     }
 
     try {
         if (type === 'signup') {
-            await auth.createUserWithEmailAndPassword(email, password);
+            if (!name) {
+                errDisplay.innerText = "Please enter a display name for the leaderboard.";
+                errDisplay.className = "text-red-400 text-xs text-center mt-4";
+                errDisplay.classList.remove('hidden');
+                return;
+            }
+            const result = await auth.createUserWithEmailAndPassword(email, password);
+            // Save Display Name to Profile
+            await result.user.updateProfile({ displayName: name });
+            localStorage.setItem('trivia-name', name);
         } else {
             await auth.signInWithEmailAndPassword(email, password);
         }
@@ -2011,6 +2023,7 @@ async function emailAuth(type) {
     } catch (error) {
         errDisplay.innerText = error.message;
         errDisplay.className = "text-red-400 text-xs text-center mt-4";
+        errDisplay.classList.remove('hidden');
     }
 }
 
