@@ -596,6 +596,10 @@ async function startApp() {
         if (!response.ok) throw new Error();
         freshGameData = await response.json();
         
+        if (Array.isArray(freshGameData)) {
+            freshGameData = { questions: freshGameData };
+        }
+        
         const saved = localStorage.getItem('trivia-session');
         
         if (saved) {
@@ -2195,7 +2199,8 @@ function closeStats() {
                 try {
                     const response = await fetch(`${dateString}.json?v=hist`);
                     if (!response.ok) continue; 
-                    const data = await response.json();
+                    let data = await response.json();
+                    if (Array.isArray(data)) data = { questions: data };
                     pastGames.push({ date: dateString, ...data });
                 } catch (error) {
                     console.log(`No history found for ${dateString}`);
