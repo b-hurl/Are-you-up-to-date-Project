@@ -205,6 +205,24 @@
         </div>
     </div>
 
+    <!-- Sign Out Confirm Modal -->
+    <div id="signout-confirm-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">👋</div>
+            <h2 class="text-2xl font-black text-white mb-2">Sign Out?</h2>
+            <p class="text-slate-300 text-sm mb-6">Are you sure you want to sign out?</p>
+            
+            <div class="space-y-3">
+                <button onclick="confirmLogout()" class="w-full bg-red-600 hover:bg-red-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-red-500/20 transition-all">
+                    Yes, Sign Out
+                </button>
+                <button onclick="closeSignOutModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Join Auth Modal -->
     <div id="join-auth-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
@@ -254,7 +272,6 @@
             <div>
                 <div id="auth-name-wrapper" class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
                     <div class="relative">
-                        <input type="text" id="auth-name" placeholder="Display Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" oninput="document.getElementById('auth-name-counter').innerText = this.value.length + '/15'">
                         <input type="text" id="auth-name" placeholder="Display Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" oninput="updateCharCounter(this, 'auth-name-counter')">
                         <span id="auth-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
                     </div>
@@ -450,7 +467,6 @@
             </div>
             <div id="leaderboard-submit-form" class="flex gap-2 mb-3">
                 <div class="relative flex-1">
-                    <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="document.getElementById('player-name-counter').innerText = this.value.length + '/15'">
                     <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
                     <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
                 </div>
@@ -1135,7 +1151,6 @@ async function checkIfSubmitted() {
                 // Re-render form if it was replaced by success message
                 formContainer.innerHTML = `
                     <div class="relative flex-1">
-                        <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="document.getElementById('player-name-counter').innerText = this.value.length + '/15'">
                         <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
                         <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
                     </div>
@@ -1166,7 +1181,6 @@ async function checkIfSubmitted() {
     // Not submitted yet: Ensure default form is visible (restores form if user just logged in)
     formContainer.innerHTML = `
         <div class="relative flex-1">
-            <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="document.getElementById('player-name-counter').innerText = this.value.length + '/15'">
             <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
             <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
         </div>
@@ -2144,16 +2158,10 @@ function toggleSignupView(isSignup) {
         nameWrapper.classList.add('max-h-24', 'opacity-100', 'mb-3');
         title.innerText = 'Sign Up';
         
-        loginBtn.innerText = 'Back to Login';
-        loginBtn.onclick = () => toggleSignupView(false);
-        loginBtn.className = 'flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all'; // secondary style
         loginBtn.innerText = 'Create Account';
         loginBtn.onclick = () => emailAuth('signup');
         loginBtn.className = 'flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all'; // primary style
         
-        signupSwitchBtn.innerText = 'Create Account';
-        signupSwitchBtn.onclick = () => emailAuth('signup');
-        signupSwitchBtn.className = 'flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all'; // primary style
         signupSwitchBtn.innerText = 'Back to Login';
         signupSwitchBtn.onclick = () => toggleSignupView(false);
         signupSwitchBtn.className = 'flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all'; // secondary style
@@ -2237,11 +2245,32 @@ async function resetPassword() {
     }
 }
 
-async function doLogout() {
+function doLogout() {
+    const modal = document.getElementById('signout-confirm-modal');
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+    }, 10);
+}
+
+async function confirmLogout() {
     try {
         await auth.signOut();
+        closeSignOutModal();
         closeLoginModal();
     } catch (e) { console.error(e); }
+}
+
+function closeSignOutModal() {
+    const modal = document.getElementById('signout-confirm-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300);
 }
 
 async function handleInvite(groupId) {

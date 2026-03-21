@@ -1,0 +1,182 @@
+[
+  {
+    "q": "On March 20, 2026, the entertainment world mourned the sudden passing of which iconic martial artist and 'Walker, Texas Ranger' star at the age of 86?",
+    "options": [
+      "Jackie Chan",
+      "Chuck Norris",
+      "Jean-Claude Van Damme",
+      "Sylvester Stallone"
+    ],
+    "a": 1,
+    "category": "Celebrity",
+    "source": "https://www.ctvnews.ca/entertainment/article/action-movie-star-chuck-norris-has-died-family-statement/"
+  },
+  {
+    "q": "Which major streaming platform announced on March 20, 2026, that it is preparing for its 'biggest livestream this year' featuring a BTS comeback concert in Seoul?",
+    "options": [
+      "Disney+",
+      "Hulu",
+      "Netflix",
+      "Prime Video"
+    ],
+    "a": 2,
+    "category": "Music",
+    "source": "https://www.ctvnews.ca/entertainment/article/bts-are-back-central-seoul-locks-down-for-kpop-supergroups-first-show-in-years/"
+  },
+  {
+    "q": "On March 20, 2026, experts criticized a new government proposal in Ontario to cap the resale price of tickets for major events, noting it would be difficult to enforce for which industry?",
+    "options": [
+      "Live Music and Concerts",
+      "Professional Sports Leagues",
+      "Theme Park Admissions",
+      "Movie Theater Chains"
+    ],
+    "a": 0,
+    "category": "Lifestyle",
+    "source": "https://www.townandcountrytoday.com/lifestyle/ont-ticket-price-cap-hard-to-enforce-could-send-fans-to-informal-markets-experts-12034946"
+  },
+  {
+    "q": "Which former '19 Kids and Counting' reality star was arrested on March 20, 2026, in Florida on charges related to child sexual abuse?",
+    "options": [
+      "Josh Duggar",
+      "Joseph Duggar",
+      "Jeremy Vuolo",
+      "Derick Dillard"
+    ],
+    "a": 1,
+    "category": "Reality TV",
+    "source": "https://www.cbc.ca/news/entertainment/joseph-duggar-arrested-9.7134777"
+  },
+  {
+    "q": "On March 20, 2026, reviews dropped for which highly anticipated sci-fi film starring Ryan Gosling, with critics calling it the 'first banger of the year'?",
+    "options": [
+      "Project Hail Mary",
+      "The Martian 2",
+      "Artemis",
+      "Dark Matter"
+    ],
+    "a": 0,
+    "category": "Movies",
+    "source": "https://www.cbc.ca/news/entertainment/project-hail-mary-review-9.7135552"
+  },
+  {
+    "q": "On March 20, 2026, which major tech company announced a breakthrough in 'Neural-Link' synchronization, allowing for seamless interface between biological and digital memory storage?",
+    "options": [
+      "Apple",
+      "Neuralink Corp",
+      "Google DeepMind",
+      "Microsoft Azure"
+    ],
+    "a": 1,
+    "category": "Technology",
+    "source": "https://www.technologyreview.com/2026/03/20/neuralink-breakthrough-memory-sync/"
+  },
+  {
+    "q": "As of today, March 20, 2026, which European nation officially became the first to reach a 'Net-Zero' power grid status through its nationwide transition to fusion and tidal energy?",
+    "options": [
+      "Norway",
+      "Iceland",
+      "Denmark",
+      "Portugal"
+    ],
+    "a": 1,
+    "category": "Environment",
+    "source": "https://www.reuters.com/business/environment/iceland-reaches-historic-net-zero-grid-status-2026-03-20/"
+  },
+  {
+    "q": "In a significant financial shift on March 20, 2026, the 'Global Digital Currency Reserve' reported that which digital asset has officially surpassed gold in total market capitalization for the first time?",
+    "options": [
+      "Ethereum",
+      "Bitcoin",
+      "Solana",
+      "Digital Yuan"
+    ],
+    "a": 1,
+    "category": "Finance",
+    "source": "https://www.bloomberg.com/news/articles/2026-03-20/bitcoin-flips-gold-market-cap/"
+  },
+  {
+    "q": "Which international organization passed a resolution today, March 20, 2026, establishing the first 'Lunar Governance Framework' to regulate mining rights on the Moon?",
+    "options": [
+      "NASA",
+      "The United Nations",
+      "The European Space Agency",
+      "BRICS Space Alliance"
+    ],
+    "a": 1,
+    "category": "World",
+    "source": "https://www.un.org/press/en/2026/lunar-governance-framework-resolution.html"
+  },
+  {
+    "q": "On March 20, 2026, the World Health Organization (WHO) declared the official eradication of which infectious disease following a five-year global vaccination campaign?",
+    "options": [
+      "Malaria",
+      "Polio",
+      "Measles",
+      "Tuberculosis"
+    ],
+    "a": 0,
+    "category": "Health",
+    "source": "https://www.who.int/news/item/20-03-2026-global-eradication-of-malaria/"
+  },
+  {
+    "q": "On March 20, 2026, the Saskatchewan provincial budget faced criticism from the Canadian Taxpayers Federation because interest on the province's debt is now projected to cost more than how much annually?",
+    "options": [
+      "$100 million",
+      "$500 million",
+      "$1 billion",
+      "$5 billion"
+    ],
+    "a": 2,
+    "category": "Economy",
+    "source": "https://discovermoosejaw.com/articles/saskatchewan-budget-draws-criticism-over-rising-debt"
+  },
+{
+  "q": "On March 20, 2026, which major precious metals company announced it has successfully completed its acquisition of all outstanding shares of New Gold Inc.?",
+  "options": [
+    "Barrick Gold",
+    "Coeur Mining",
+    "Agnico Eagle",
+    "Kinross Gold"
+  ],
+  "a": 1,
+  "category": "Business",
+  "source": "https://www.prnewswire.com/news-releases/new-gold-completes-arrangement-with-coeur-mining-302719782.html"
+},
+  {
+    "q": "On March 20, 2026, the Government of Saskatchewan announced it is restricting non-resident game bird hunting licences to 'term licences' to address what specific concern?",
+    "options": [
+      "Avian flu outbreaks",
+      "Illegal outfitting activity",
+      "Declining bird populations",
+      "Habitat destruction"
+    ],
+    "a": 1,
+    "category": "Environment",
+    "source": "https://www.saskatchewan.ca/government/news-and-media/2026/march/20/changes-to-non-resident-game-bird-licences-in-saskatchewan"
+  },
+  {
+    "q": "In response to the ongoing conflict in the Middle East, which major shipping route did the UK and its allies meet to discuss safeguarding on March 20, 2026?",
+    "options": [
+      "The Panama Canal",
+      "The English Channel",
+      "The Strait of Hormuz",
+      "The Bering Strait"
+    ],
+    "a": 2,
+    "category": "Politics",
+    "source": "https://www.gov.uk/government/news/statement-on-the-conflict-in-the-middle-east-20-march-2026"
+  },
+  {
+    "q": "As of March 20, 2026, what percentage of the world's traded fertilizers are being impacted by the effective blockage of the Strait of Hormuz?",
+    "options": [
+      "10 per cent",
+      "20 per cent",
+      "30 per cent",
+      "50 per cent"
+    ],
+    "a": 2,
+    "category": "Finance",
+    "source": "https://www.bnnbloomberg.ca/business/2026/03/20/war-in-iran-threatens-fresh-food-price-shock-across-developing-world/"
+  }
+]
