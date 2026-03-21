@@ -63,8 +63,10 @@
         .option-btn { transition: all 0.2s ease; }
         @keyframes selection-pulse { 0%, 100% { box-shadow: 0 0 20px var(--primary-dim); transform: scale(1.02); } 50% { box-shadow: 0 0 35px var(--primary-400); transform: scale(1.04); } }
         .selected { background-color: var(--primary-600) !important; border-color: var(--primary-400) !important; animation: selection-pulse 2s infinite ease-in-out; }
-        .correct { background-color: #10b981 !important; border-color: #059669 !important; }
+        .correct { background-color: #10b981 !important; border-color: #059669 !important; box-shadow: 0 0 20px rgba(16, 185, 129, 0.6); }
         .incorrect { background-color: #ef4444 !important; border-color: #dc2626 !important; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-5px); } }
+        .shake { animation: shake 0.4s ease-in-out; }
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -78,6 +80,8 @@
     box-shadow: 0 6px 20px var(--primary-dim);
 }
         .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+        body { transition: background-color 1s ease; }
+        body.dimmed { background-color: #020617 !important; }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -500,12 +504,14 @@
             correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
             wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
             finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',
-            perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3'
+            perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
+            streak: 'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3'
         };
 
         let isMuted = localStorage.getItem('trivia-muted') === 'true';
         let currentIdx = 0;
         let score = 0;
+        let currentStreak = 0;
         let gameData = null;
         let selectedIdx = null;
         let isCurrentSelectionCorrect = false;
@@ -727,6 +733,7 @@ async function startApp() {
                 gameData = { questions: session.shuffledQuestions };
                 currentIdx = session.currentIdx;
                 score = session.score;
+                currentStreak = session.currentStreak || 0;
                 window.userChoices = session.userChoices || [];
                 selectedIdx = session.selectedIdx ?? null;
                 
@@ -785,6 +792,7 @@ function startNewSession(data, date, mode) {
 
     currentIdx = 0;
     score = 0;
+    currentStreak = 0;
     window.userChoices = [];
     selectedIdx = null;
     saveSession(false, mode);
@@ -866,14 +874,40 @@ function confirmAnswer() {
 
     const buttons = document.querySelectorAll('.option-btn');
     document.getElementById('action-area').innerHTML = '';
+    buttons[selectedIdx].classList.remove('selected');
 
     if (isCurrentSelectionCorrect) {
         score++;
+        currentStreak++;
+        
+        if (currentStreak >= 2) {
+            const streakMsg = document.createElement('div');
+            streakMsg.className = "absolute top-1/3 left-0 w-full text-center z-50 pointer-events-none animate-bounce";
+            
+            const scale = Math.min(1 + ((currentStreak - 2) * 0.2), 3);
+            const rotate = (currentStreak % 2 === 0 ? -6 : 6);
+            
+            streakMsg.innerHTML = `<span class="inline-block bg-yellow-400 text-slate-900 font-black text-2xl px-4 py-2 rounded-xl shadow-xl border-4 border-white" style="transform: scale(${scale}) rotate(${rotate}deg)">${currentStreak} IN A ROW! 🔥</span>`;
+            document.getElementById('main-card').appendChild(streakMsg);
+            setTimeout(() => streakMsg.remove(), 2000);
+            playSound('streak');
+        }
+
         buttons[selectedIdx].classList.add('correct');
         playSound('correct');
     } else {
+        currentStreak = 0;
         buttons[selectedIdx].classList.add('incorrect');
         playSound('wrong');
+        
+        // Highlight the correct answer if the user chose wrong
+        const currentQ = gameData.questions[currentIdx];
+        buttons.forEach(btn => {
+            if (btn.innerText === currentQ.correctText) {
+                btn.classList.add('correct');
+                btn.classList.add('shake');
+            }
+        });
     }
 
     document.getElementById('score-display').innerText = `Score: ${score}`;
@@ -894,6 +928,7 @@ function confirmAnswer() {
 }
 function showFinalResults() {
 // Force the UI to switch to results mode
+    document.body.classList.add('dimmed');
     document.getElementById('main-card').classList.add('hidden');
     document.getElementById('game-header').classList.add('hidden'); // Hide the score/progress bar
     document.getElementById('results-card').classList.remove('hidden');
@@ -995,12 +1030,14 @@ function playOtherMode() {
     }
 
     // 1. Hide results, show main card
+    document.body.classList.remove('dimmed');
     document.getElementById('results-card').classList.add('hidden');
     document.getElementById('main-card').classList.remove('hidden');
 
     // 2. Reset score and index for the new round
     score = 0;
     currentIdx = 0;
+    currentStreak = 0;
     selectedIdx = null;
     isProcessing = false;
     window.userChoices = [];
@@ -1803,6 +1840,7 @@ function saveSession(isFinished = false, newMode = null) {
         shuffledQuestions: gameData.questions,
         currentIdx: currentIdx,
         score: score,
+        currentStreak: currentStreak,
         isFinished: isFinished,
         userChoices: window.userChoices || [],
         selectedIdx: selectedIdx,
