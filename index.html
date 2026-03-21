@@ -399,7 +399,8 @@
                     <p class="text-slate-400 text-xs uppercase tracking-widest">Choose your path</p>
                 </div>
                 
-                <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/20 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 transition-all">
+                <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
+                <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
                     <div class="flex items-center gap-4">
                         <div class="bg-indigo-500/20 p-3 rounded-xl text-2xl">🎮</div>
                         <div class="text-left">
@@ -409,7 +410,8 @@
                     </div>
                 </button>
             
-                <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/20 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 transition-all">
+                <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
+                <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
                     <div class="flex items-center gap-4">
                         <div class="bg-emerald-500/20 p-3 rounded-xl text-2xl">💼</div>
                         <div class="text-left">
@@ -818,12 +820,15 @@ function renderQuestion() {
     // Clear action area to prevent duplicates on re-render
     document.getElementById('action-area').innerHTML = '';
     
+    const isPro = document.body.classList.contains('theme-professional');
+    const themeColor = isPro ? 'emerald' : 'indigo';
+
     currentQ.options.forEach((opt, i) => {
         const btn = document.createElement('button');
         const isSelected = (i === selectedIdx);
         if (isSelected) isCurrentSelectionCorrect = (opt === currentQ.correctText);
         
-        btn.className = `option-btn w-full text-left p-5 rounded-2xl bg-slate-700 border border-slate-600 font-semibold ${isSelected ? 'selected' : ''}`;
+        btn.className = `option-btn w-full text-left p-5 rounded-2xl bg-slate-700/50 border border-slate-600 font-semibold hover:bg-${themeColor}-600/40 hover:border-${themeColor}-500 active:bg-${themeColor}-500/60 active:border-${themeColor}-400 active:scale-95 transition-all ${isSelected ? 'selected' : ''}`;
         btn.innerText = opt;
         btn.onclick = () => {
             selectedIdx = i;
