@@ -61,7 +61,8 @@
         }
 
         .option-btn { transition: all 0.2s ease; }
-        .selected { background-color: var(--primary-600) !important; border-color: var(--primary-400) !important; transform: scale(1.02); box-shadow: 0 0 20px var(--primary-dim); }
+        @keyframes selection-pulse { 0%, 100% { box-shadow: 0 0 20px var(--primary-dim); transform: scale(1.02); } 50% { box-shadow: 0 0 35px var(--primary-400); transform: scale(1.04); } }
+        .selected { background-color: var(--primary-600) !important; border-color: var(--primary-400) !important; animation: selection-pulse 2s infinite ease-in-out; }
         .correct { background-color: #10b981 !important; border-color: #059669 !important; }
         .incorrect { background-color: #ef4444 !important; border-color: #dc2626 !important; }
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
@@ -399,7 +400,6 @@
                     <p class="text-slate-400 text-xs uppercase tracking-widest">Choose your path</p>
                 </div>
                 
-                <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
                 <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
                     <div class="flex items-center gap-4">
                         <div class="bg-indigo-500/20 p-3 rounded-xl text-2xl">🎮</div>
@@ -410,7 +410,6 @@
                     </div>
                 </button>
             
-                <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
                 <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
                     <div class="flex items-center gap-4">
                         <div class="bg-emerald-500/20 p-3 rounded-xl text-2xl">💼</div>
