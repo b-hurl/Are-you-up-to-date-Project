@@ -839,7 +839,7 @@ function renderQuestion() {
                 b.classList.toggle('selected', idx === i));
             
             document.getElementById('action-area').innerHTML = 
-                `<button onclick="confirmAnswer()" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">Confirm Answer</button>`;
+                `<button onclick="confirmAnswer()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-bold transition-all">Confirm Answer</button>`;
         };
         container.appendChild(btn);
     });
@@ -847,7 +847,7 @@ function renderQuestion() {
     // If we restored a selection, ensure the confirm button is visible
     if (selectedIdx !== null) {
         document.getElementById('action-area').innerHTML = 
-            `<button onclick="confirmAnswer()" class="w-full bg-emerald-600 py-3 rounded-xl font-bold">Confirm Answer</button>`;
+            `<button onclick="confirmAnswer()" class="w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded-xl font-bold transition-all">Confirm Answer</button>`;
     }
 }
 
