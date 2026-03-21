@@ -68,7 +68,7 @@
         @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-5px); } }
         .shake { animation: shake 0.4s ease-in-out; }
         @keyframes streak-pop { 0% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(0); opacity: 0; } }
-        .streak-anim { animation: streak-pop 0.8s ease-in-out forwards; }
+        .streak-anim { animation: streak-pop 1.4s ease-in-out forwards; }
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -891,7 +891,7 @@ function confirmAnswer() {
             
             streakMsg.innerHTML = `<span class="inline-block bg-yellow-400 text-slate-900 font-black text-2xl px-4 py-2 rounded-xl shadow-xl border-4 border-white" style="transform: scale(${scale}) rotate(${rotate}deg)">${currentStreak} IN A ROW! 🔥</span>`;
             document.getElementById('main-card').appendChild(streakMsg);
-            setTimeout(() => streakMsg.remove(), 900);
+            setTimeout(() => streakMsg.remove(), 1400);
             playSound('streak');
         }
 
@@ -914,6 +914,9 @@ function confirmAnswer() {
 
     document.getElementById('score-display').innerText = `Score: ${score}`;
 
+    // Give more time to read the streak notification if it appeared
+    const transitionDelay = (isCurrentSelectionCorrect && currentStreak >= 2) ? 1500 : 1000;
+
     setTimeout(() => {
         if (currentIdx < gameData.questions.length - 1) {
             currentIdx++;
@@ -926,7 +929,7 @@ function confirmAnswer() {
             isProcessing = false; 
             showFinalResults();
         }
-    }, 1000);
+    }, transitionDelay);
 }
 function showFinalResults() {
 // Force the UI to switch to results mode
