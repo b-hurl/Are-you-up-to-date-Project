@@ -158,6 +158,20 @@
         </div>
     </div>
 
+    <!-- Weekly Leaderboard Modal -->
+    <div id="weekly-leaderboard-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-md w-full shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col max-h-[80vh]">
+            <button onclick="closeWeeklyLeaderboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black text-white mb-1">Weekly Standings</h2>
+                <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Who's winning the week?</p>
+            </div>
+            <div id="weekly-leaderboard-content" class="flex-1 overflow-y-auto scrollbar-hide space-y-2">
+                <p class="text-center text-slate-500 text-xs">Loading...</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Signup Prompt Modal -->
     <div id="signup-prompt-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
@@ -528,7 +542,6 @@
         let auth = null;
         let userId = null;
         let currentGroupIndex = 0;
-        let leaderboardView = 'daily';
         let freshGameData = null;
         let cachedHistoryGames = [];
         let currentHistoryFilter = 'all';
@@ -1246,11 +1259,6 @@ async function checkIfSubmitted() {
     return false;
 }
 
-function setLeaderboardView(view) {
-    leaderboardView = view;
-    fetchAndDisplayLeaderboard();
-}
-
 async function fetchAndDisplayLeaderboard() {
     const display = document.getElementById('leaderboard-display');
     const title = document.getElementById('leaderboard-title');
@@ -1309,8 +1317,9 @@ async function fetchAndDisplayLeaderboard() {
                     <button onclick="setLeaderboardView('daily')" class="${leaderboardView === 'daily' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Daily</button>
                     <button onclick="setLeaderboardView('weekly')" class="${leaderboardView === 'weekly' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white'} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Weekly</button>
                 </div>
-                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30">
+                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="group relative text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30 transition-all">
                     🔗 Copy Invite Link
+                    <span id="invite-tooltip" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-900 text-emerald-400 text-[10px] py-1.5 px-3 rounded-lg opacity-0 translate-y-2 transition-all duration-200 pointer-events-none whitespace-nowrap border border-slate-600 shadow-xl z-20 font-bold">Copied!</span>
                 </button>
                 <button onclick="leaveGroup('${currentGroup.id}')" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
                     Leave
@@ -1339,7 +1348,7 @@ async function fetchAndDisplayLeaderboard() {
         snapshot.forEach(doc => {
             const d = doc.data();
             // Filter if daily
-            if (leaderboardView === 'daily' && d.date !== todayDate) return;
+            if (d.date !== todayDate) return;
 
             if (!userTotals[d.userId]) {
                 userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0, games: 0 };
@@ -1359,17 +1368,11 @@ async function fetchAndDisplayLeaderboard() {
 
         // 4. Render
         // Keep invite button at top
-        const dailyClass = leaderboardView === 'daily' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
-        const weeklyClass = leaderboardView === 'weekly' ? 'bg-primary-600 text-white shadow-primary-500/20' : 'bg-slate-700 text-slate-400 hover:text-white';
-        
         const inviteBtnHTML = `
             <div class="mb-3 flex flex-wrap justify-center gap-2">
-                <div class="w-full flex justify-center gap-1 mb-1 bg-slate-800/80 p-1 rounded-lg w-max mx-auto border border-slate-700/50 max-w-[200px]">
-                    <button onclick="setLeaderboardView('daily')" class="${dailyClass} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Daily</button>
-                    <button onclick="setLeaderboardView('weekly')" class="${weeklyClass} flex-1 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-all">Weekly</button>
-                </div>
-                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30 transition-all">
+                <button onclick="copyGroupLink('${currentGroup.id}')" id="invite-btn" class="group relative text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30 transition-all">
                     🔗 Copy Invite Link
+                    <span id="invite-tooltip" class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-slate-900 text-emerald-400 text-[10px] py-1.5 px-3 rounded-lg opacity-0 translate-y-2 transition-all duration-200 pointer-events-none whitespace-nowrap border border-slate-600 shadow-xl z-20 font-bold">Copied!</span>
                 </button>
                 <button onclick="leaveGroup('${currentGroup.id}')" class="text-[10px] bg-red-900/30 hover:bg-red-900/50 px-3 py-1 rounded-full uppercase tracking-wider text-red-400 font-bold border border-red-500/30 transition-all">
                     Leave
@@ -1425,10 +1428,17 @@ async function fetchAndDisplayLeaderboard() {
         
         display.innerHTML = inviteBtnHTML;
         if (sortedUsers.length === 0) {
-            display.innerHTML += `<p class="text-slate-400 text-sm text-center mt-4">No scores ${leaderboardView === 'daily' ? 'today' : 'this week'}. Be the first!</p>`;
+            display.innerHTML += `<p class="text-slate-400 text-sm text-center mt-4">No scores today. Be the first!</p>`;
         } else {
             display.appendChild(list);
         }
+
+        // Add Weekly View Button
+        const weeklyBtn = document.createElement('button');
+        weeklyBtn.className = "w-full mt-4 bg-slate-700 hover:bg-slate-600 text-primary-300 py-3 rounded-xl font-bold text-xs border border-slate-600 transition-all flex items-center justify-center gap-2";
+        weeklyBtn.innerHTML = "📅 View Weekly Standings";
+        weeklyBtn.onclick = openWeeklyLeaderboard;
+        display.appendChild(weeklyBtn);
 
     } catch (error) {
         console.error("Error fetching leaderboard:", error);
@@ -1438,6 +1448,113 @@ async function fetchAndDisplayLeaderboard() {
             display.innerHTML = `<p class="text-red-400 text-xs text-center mt-2">Error: ${error.code || error.message}</p>`;
         }
     }
+}
+
+async function openWeeklyLeaderboard() {
+    const modal = document.getElementById('weekly-leaderboard-modal');
+    const content = document.getElementById('weekly-leaderboard-content');
+    
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+    }, 10);
+
+    const groups = getMyGroups();
+    if (groups.length === 0) {
+        content.innerHTML = '<p class="text-center text-slate-400">Join a group to see weekly standings.</p>';
+        return;
+    }
+    if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
+    const currentGroup = groups[currentGroupIndex];
+    const currentWeek = getWeekId(getGameDate());
+
+    try {
+        const snapshot = await db.collection('scores')
+            .where('groupIds', 'array-contains', currentGroup.id)
+            .where('weekId', '==', currentWeek)
+            .get();
+
+        const userTotals = {};
+        snapshot.forEach(doc => {
+            const d = doc.data();
+            if (!userTotals[d.userId]) {
+                userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0 };
+            }
+            userTotals[d.userId].totalScore += (d.score || 0);
+            userTotals[d.userId].name = d.name; // Keep latest name
+        });
+
+        const sortedUsers = Object.values(userTotals).sort((a, b) => b.totalScore - a.totalScore);
+        
+        if (sortedUsers.length === 0) {
+            content.innerHTML = '<p class="text-center text-slate-400">No scores this week yet.</p>';
+            return;
+        }
+
+        content.innerHTML = sortedUsers.map((user, index) => {
+            const isMe = user.id === userId;
+            const rank = index === 0 ? '🥇' : (index === 1 ? '🥈' : (index === 2 ? '🥉' : `${index + 1}.`));
+            
+            let rankIcon, containerStyle, nameStyle, scoreStyle;
+            
+            if (index === 0) {
+                rankIcon = '<div class="text-4xl filter drop-shadow-md animate-pulse">🥇</div>';
+                containerStyle = 'bg-gradient-to-r from-yellow-900/30 to-slate-900/50 border-yellow-500/50 py-4';
+                nameStyle = 'text-lg text-yellow-100';
+                scoreStyle = 'text-yellow-400 text-xl';
+            } else if (index === 1) {
+                rankIcon = '<div class="text-3xl">🥈</div>';
+                containerStyle = 'bg-slate-800/60 border-slate-400/30 py-3';
+                nameStyle = 'text-base text-slate-200';
+                scoreStyle = 'text-slate-300 text-lg';
+            } else if (index === 2) {
+                rankIcon = '<div class="text-3xl">🥉</div>';
+                containerStyle = 'bg-slate-800/60 border-orange-700/30 py-3';
+                nameStyle = 'text-base text-orange-100';
+                scoreStyle = 'text-orange-400 text-lg';
+            } else {
+                rankIcon = `<div class="w-8 text-center font-bold text-slate-500 text-sm">#${index + 1}</div>`;
+                containerStyle = 'bg-slate-900/30 border-slate-700/30 py-2.5';
+                nameStyle = 'text-sm text-slate-400';
+                scoreStyle = 'text-slate-500 text-sm';
+            }
+
+            if (isMe) {
+                containerStyle += ' ring-2 ring-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.2)]';
+                nameStyle = 'text-emerald-400 font-black'; 
+            }
+
+            return `
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/50 border border-slate-700/50 ${isMe ? 'ring-1 ring-emerald-500/50' : ''}">
+                    <div class="flex items-center gap-3">
+                        <span class="w-6 text-center font-bold text-slate-400">${rank}</span>
+                        <span class="font-bold ${isMe ? 'text-emerald-400' : 'text-white'}">${user.name}</span>
+                <div class="flex items-center justify-between px-4 rounded-xl border ${containerStyle} transition-all hover:scale-[1.01]">
+                    <div class="flex items-center gap-4">
+                        <div class="shrink-0 w-10 text-center">${rankIcon}</div>
+                        <div class="flex flex-col">
+                            <span class="font-bold ${nameStyle}">${user.name}</span>
+                            ${index === 0 ? '<span class="text-[9px] uppercase tracking-widest text-yellow-500 font-bold opacity-80">Current Leader</span>' : ''}
+                        </div>
+                    </div>
+                    <span class="font-mono font-bold text-primary-300">${user.totalScore} pts</span>
+                    <span class="font-mono font-bold ${scoreStyle}">${user.totalScore} pts</span>
+                </div>`;
+        }).join('');
+
+    } catch (e) {
+        content.innerHTML = '<p class="text-center text-red-400">Error loading data.</p>';
+    }
+}
+
+function closeWeeklyLeaderboard() {
+    const modal = document.getElementById('weekly-leaderboard-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
 }
 
 function toggleProfanityFilter() {
@@ -1588,8 +1705,14 @@ async function createGroup() {
         currentGroupIndex = groups.length - 1; // Switch to new group
         exportStateToURL();
         
-        await fetchAndDisplayLeaderboard();
-        await checkIfSubmitted();
+        // Auto-submit score to the new group if a name is entered
+        const nameInput = document.getElementById('player-name');
+        if (nameInput && nameInput.value.trim()) {
+            await submitScore();
+        } else {
+            await fetchAndDisplayLeaderboard();
+            await checkIfSubmitted();
+        }
     } catch (error) {
         console.error("Error creating group:", error);
         alert("Error creating group: " + error.message + "\nIf this persists, check your Firestore Security Rules.");
@@ -1628,15 +1751,24 @@ async function confirmLeaveGroup(groupId) {
             .get();
 
         const batch = db.batch();
+        let otherMembersCount = 0;
+
         snapshot.forEach(doc => {
             if (doc.data().userId === userId) {
                 // Remove just this group ID from the array
                 batch.update(doc.ref, { 
                     groupIds: firebase.firestore.FieldValue.arrayRemove(groupId) 
                 });
+            } else {
+                otherMembersCount++;
             }
         });
         await batch.commit();
+
+        // If no one else is in the group (active this week), delete the group data
+        if (otherMembersCount === 0) {
+            await db.collection('groups').doc(groupId).delete().catch(err => console.log("Group cleanup skipped:", err));
+        }
 
         // 2. Remove from Local Storage
         let groups = getMyGroups();
@@ -1669,9 +1801,9 @@ function copyGroupLink(groupId) {
     url.searchParams.set('group', groupId);
     
     navigator.clipboard.writeText(url.toString()).then(() => {
-        const btn = document.getElementById('invite-btn');
-        btn.innerText = "✅ Link Copied!";
-        setTimeout(() => btn.innerText = "🔗 Copy Invite Link", 2000);
+        const tooltip = document.getElementById('invite-tooltip');
+        tooltip.classList.remove('opacity-0', 'translate-y-2');
+        setTimeout(() => tooltip.classList.add('opacity-0', 'translate-y-2'), 2000);
     });
 }
 
@@ -1860,6 +1992,10 @@ function saveSession(isFinished = false, newMode = null) {
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
     exportStateToURL();
+
+    if (isFinished) {
+        archiveSession(session);
+    }
 }
 
 function archiveSession(session) {
@@ -2410,8 +2546,13 @@ async function confirmJoinGroup(groupId, groupName) {
     alert(`Success! You have joined ${groupName}.`);
 
     if (!document.getElementById('results-card').classList.contains('hidden')) {
-        fetchAndDisplayLeaderboard();
-        checkIfSubmitted();
+        const nameInput = document.getElementById('player-name');
+        if (nameInput && nameInput.value.trim()) {
+            await submitScore();
+        } else {
+            fetchAndDisplayLeaderboard();
+            checkIfSubmitted();
+        }
     }
 }
 
@@ -2712,7 +2853,7 @@ function closeStats() {
 
             for (let i = 0; i < historyDays; i++) {
                 const pastDate = new Date(gameDate);
-                pastDate.setUTCDate(pastDate.getUTCDate() - (i + 1));
+                pastDate.setUTCDate(pastDate.getUTCDate() - i);
                 
                 const dateString = `${pastDate.getUTCFullYear()}-${String(pastDate.getUTCMonth() + 1).padStart(2, '0')}-${String(pastDate.getUTCDate()).padStart(2, '0')}`;
 
@@ -2871,6 +3012,13 @@ function closeStats() {
         });
 
         // Run Import before initialization
+        importStateFromURL();
+        initFirebase();
+        startApp();
+        checkTutorial();
+    </script>
+</body>
+</html> // Run Import before initialization
         importStateFromURL();
         initFirebase();
         startApp();
