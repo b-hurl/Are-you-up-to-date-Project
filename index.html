@@ -187,6 +187,24 @@
         </div>
     </div>
 
+    <!-- Leave Group Modal -->
+    <div id="leave-group-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">🚪</div>
+            <h2 class="text-2xl font-black text-white mb-2">Leave Group?</h2>
+            <p class="text-slate-300 text-sm mb-6">Are you sure? Your scores will be removed from the <strong id="leave-group-name" class="text-primary-400"></strong> leaderboard.</p>
+            
+            <div class="space-y-3">
+                <button id="confirm-leave-btn" class="w-full bg-red-600 hover:bg-red-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-red-500/20 transition-all">
+                    Yes, Leave Group
+                </button>
+                <button onclick="closeLeaveGroupModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Join Auth Modal -->
     <div id="join-auth-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
@@ -233,16 +251,22 @@
                 <div class="flex-grow border-t border-slate-600"></div>
             </div>
 
-            <div class="space-y-3">
-                <input type="text" id="auth-name" placeholder="Display Name (Required for Sign Up)" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
-                <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
-                <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500">
-                <div class="text-right">
+            <div>
+                <div id="auth-name-wrapper" class="transition-all duration-300 ease-in-out overflow-hidden max-h-0 opacity-0">
+                    <div class="relative">
+                        <input type="text" id="auth-name" placeholder="Display Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" oninput="document.getElementById('auth-name-counter').innerText = this.value.length + '/15'">
+                        <input type="text" id="auth-name" placeholder="Display Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" oninput="updateCharCounter(this, 'auth-name-counter')">
+                        <span id="auth-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
+                    </div>
+                </div>
+                <input type="email" id="auth-email" placeholder="Email Address" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500 mb-3">
+                <input type="password" id="auth-password" placeholder="Password" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500 mb-3">
+                <div class="text-right mb-3">
                     <button onclick="resetPassword()" class="text-xs text-slate-400 hover:text-white transition-colors">Forgot Password?</button>
                 </div>
                 <div class="flex gap-2">
-                    <button onclick="emailAuth('login')" class="flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
-                    <button onclick="emailAuth('signup')" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Up</button>
+                    <button id="login-btn" onclick="emailAuth('login')" class="flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all">Log In</button>
+                    <button id="signup-switch-btn" onclick="toggleSignupView(true)" class="flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all">Sign Up</button>
                 </div>
             </div>
             </div>
@@ -425,7 +449,11 @@
                 </div>
             </div>
             <div id="leaderboard-submit-form" class="flex gap-2 mb-3">
-                <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
+                <div class="relative flex-1">
+                    <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="document.getElementById('player-name-counter').innerText = this.value.length + '/15'">
+                    <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
+                    <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
+                </div>
                 <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
             </div>
             <div id="leaderboard-display" class="glass-panel rounded-xl p-4 max-h-48 overflow-y-auto scrollbar-hide"><p class="text-slate-400 text-sm text-center">Loading leaderboard...</p></div>
@@ -443,6 +471,10 @@
             <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
         </div>
     </div>
+
+    <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity">
+        <a href="mailto:support@example.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact & Feedback</a>
+    </footer>
 
     <script>
         // --- CONFIG & AUDIO ---
@@ -987,6 +1019,12 @@ async function submitScore() {
     const name = document.getElementById('player-name').value.trim();
     if (!name) {
         alert("Please enter a name to submit your score.");
+        alert("Please enter a name for the leaderboard.");
+        return;
+    }
+    const nameValidation = isNameValid(name);
+    if (!nameValidation.valid) {
+        alert(nameValidation.message);
         return;
     }
     localStorage.setItem('trivia-name', name);
@@ -1069,7 +1107,11 @@ async function checkIfSubmitted() {
                  
                 // Re-render form if it was replaced by success message
                 formContainer.innerHTML = `
-                    <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
+                    <div class="relative flex-1">
+                        <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="document.getElementById('player-name-counter').innerText = this.value.length + '/15'">
+                        <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
+                        <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
+                    </div>
                     <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
                 `;
 
@@ -1096,7 +1138,11 @@ async function checkIfSubmitted() {
     
     // Not submitted yet: Ensure default form is visible (restores form if user just logged in)
     formContainer.innerHTML = `
-        <input type="text" id="player-name" placeholder="Enter Your Name" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)">
+        <div class="relative flex-1">
+            <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="document.getElementById('player-name-counter').innerText = this.value.length + '/15'">
+            <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
+            <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
+        </div>
         <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
     `;
     const storedName = localStorage.getItem('trivia-name');
@@ -1313,6 +1359,42 @@ function toggleAutoSubmit() {
     exportStateToURL();
 }
 
+function updateCharCounter(input, counterId) {
+    const counter = document.getElementById(counterId);
+    if (!counter) return;
+    
+    const len = input.value.length;
+    counter.innerText = len + '/15';
+    
+    if (len >= 15) {
+        counter.classList.remove('text-slate-500');
+        counter.classList.add('text-red-500', 'font-bold');
+    } else {
+        counter.classList.add('text-slate-500');
+        counter.classList.remove('text-red-500', 'font-bold');
+    }
+}
+
+function isNameValid(name) {
+    if (!name || name.trim().length === 0) {
+        return { valid: false, message: "Name cannot be empty." };
+    }
+
+    if (name.length > 15) {
+        return { valid: false, message: "Display name must be 15 characters or less." };
+    }
+
+    // Filter for hate speech. This is a stricter filter than the censor.
+    const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
+    const hasSlur = banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(name));
+
+    if (hasSlur) {
+        return { valid: false, message: "This name is not allowed. Please choose another." };
+    }
+    
+    return { valid: true };
+}
+
 function censorTaunt(taunt) {
     const isCensored = localStorage.getItem('trivia-censor') === 'true';
     if (!isCensored || !taunt) return taunt;
@@ -1422,7 +1504,25 @@ async function createGroup() {
 
 async function leaveGroup(groupId) {
     if(!confirm("Leave this group? Your scores will be removed from this leaderboard.")) return;
+function leaveGroup(groupId) {
+    const groups = getMyGroups();
+    const group = groups.find(g => g.id === groupId);
+    if (!group) return;
+
+    const modal = document.getElementById('leave-group-modal');
+    document.getElementById('leave-group-name').innerText = group.name;
+    document.getElementById('confirm-leave-btn').onclick = () => confirmLeaveGroup(groupId);
     
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+    }, 10);
+}
+
+async function confirmLeaveGroup(groupId) {
+    closeLeaveGroupModal();
     const display = document.getElementById('leaderboard-display');
     display.innerHTML = '<p class="text-slate-400 text-sm text-center">Leaving group...</p>';
 
@@ -1459,6 +1559,16 @@ async function leaveGroup(groupId) {
         alert("Failed to leave group properly.");
         fetchAndDisplayLeaderboard();
     }
+}
+
+function closeLeaveGroupModal() {
+    const modal = document.getElementById('leave-group-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+    }, 300);
 }
 
 function copyGroupLink(groupId) {
@@ -1957,7 +2067,10 @@ function closeLoginModal() {
     modal.classList.add('opacity-0');
     modal.querySelector('div').classList.remove('scale-100');
     modal.querySelector('div').classList.add('scale-95');
-    setTimeout(() => modal.classList.add('hidden'), 300);
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        toggleSignupView(false); // Reset for next time
+    }, 300);
 }
 
 async function socialLogin(providerName) {
@@ -1990,6 +2103,51 @@ async function socialLogin(providerName) {
     }
 }
 
+function toggleSignupView(isSignup) {
+    const nameWrapper = document.getElementById('auth-name-wrapper');
+    const loginBtn = document.getElementById('login-btn');
+    const signupSwitchBtn = document.getElementById('signup-switch-btn');
+    const title = document.querySelector('#login-modal h2');
+    const errDisplay = document.getElementById('auth-error');
+
+    // Clear any previous errors
+    errDisplay.classList.add('hidden');
+
+    if (isSignup) {
+        // Switch to Sign Up view
+        nameWrapper.classList.remove('max-h-0', 'opacity-0');
+        nameWrapper.classList.add('max-h-24', 'opacity-100', 'mb-3');
+        title.innerText = 'Sign Up';
+        
+        loginBtn.innerText = 'Back to Login';
+        loginBtn.onclick = () => toggleSignupView(false);
+        loginBtn.className = 'flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all'; // secondary style
+        loginBtn.innerText = 'Create Account';
+        loginBtn.onclick = () => emailAuth('signup');
+        loginBtn.className = 'flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all'; // primary style
+        
+        signupSwitchBtn.innerText = 'Create Account';
+        signupSwitchBtn.onclick = () => emailAuth('signup');
+        signupSwitchBtn.className = 'flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all'; // primary style
+        signupSwitchBtn.innerText = 'Back to Login';
+        signupSwitchBtn.onclick = () => toggleSignupView(false);
+        signupSwitchBtn.className = 'flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all'; // secondary style
+    } else {
+        // Switch back to Login view
+        nameWrapper.classList.add('max-h-0', 'opacity-0');
+        nameWrapper.classList.remove('max-h-24', 'opacity-100', 'mb-3');
+        title.innerText = 'Sign In';
+
+        loginBtn.innerText = 'Log In';
+        loginBtn.onclick = () => emailAuth('login');
+        loginBtn.className = 'flex-1 bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all'; // primary style
+
+        signupSwitchBtn.innerText = 'Sign Up';
+        signupSwitchBtn.onclick = () => toggleSignupView(true);
+        signupSwitchBtn.className = 'flex-1 bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all'; // secondary style
+    }
+}
+
 async function emailAuth(type) {
     const email = document.getElementById('auth-email').value;
     const password = document.getElementById('auth-password').value;
@@ -2007,6 +2165,13 @@ async function emailAuth(type) {
         if (type === 'signup') {
             if (!name) {
                 errDisplay.innerText = "Please enter a display name for the leaderboard.";
+                errDisplay.className = "text-red-400 text-xs text-center mt-4";
+                errDisplay.classList.remove('hidden');
+                return;
+            }
+            const nameValidation = isNameValid(name);
+            if (!nameValidation.valid) {
+                errDisplay.innerText = nameValidation.message;
                 errDisplay.className = "text-red-400 text-xs text-center mt-4";
                 errDisplay.classList.remove('hidden');
                 return;
@@ -2591,7 +2756,7 @@ function closeStats() {
             installBtn.classList.add('hidden');
             deferredPrompt = null;
         });
-    
+}
         // Run Import before initialization
         importStateFromURL();
         initFirebase();
