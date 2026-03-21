@@ -641,7 +641,13 @@
             document.getElementById('mode-selection').classList.add('hidden');
             document.getElementById('question-text').classList.remove('hidden');
             
-            startNewSession(modeData, getGameDate(), mode);
+            try {
+                startNewSession(modeData, getGameDate(), mode);
+            } catch (e) {
+                console.error("Game start error:", e);
+                document.getElementById('question-text').innerText = "Something went wrong starting the game. Please refresh.";
+                document.getElementById('mode-selection').classList.remove('hidden');
+            }
         }
 
         function playSound(type) {
@@ -753,7 +759,11 @@ function startNewSession(data, date, mode) {
     // 2. Now shuffle the questions and the options safely
     gameData.questions = shuffle(gameData.questions);
     gameData.questions.forEach(q => {
-        q.options = shuffle([...q.options]);
+        if (q.options && Array.isArray(q.options)) {
+            q.options = shuffle([...q.options]);
+        } else {
+            q.options = [];
+        }
     });
 
     currentIdx = 0;
