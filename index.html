@@ -69,6 +69,8 @@
         .shake { animation: shake 0.4s ease-in-out; }
         @keyframes streak-pop { 0% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(0); opacity: 0; } }
         .streak-anim { animation: streak-pop 1.4s ease-in-out forwards; }
+        @keyframes text-glow { 0%, 100% { opacity: 1; text-shadow: 0 0 0 transparent; } 50% { opacity: 0.8; text-shadow: 0 0 10px rgba(255,255,255,0.8); } }
+        .text-glow-pulse { animation: text-glow 1.5s infinite ease-in-out; }
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -427,7 +429,7 @@
                     <p class="text-slate-400 text-xs uppercase tracking-widest">Choose your path</p>
                 </div>
                 
-                <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
+                <button id="btn-mode-casual" onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
                     <div class="flex items-center gap-4">
                         <div class="bg-indigo-500/20 p-3 rounded-xl text-2xl">🎮</div>
                         <div class="text-left">
@@ -437,7 +439,7 @@
                     </div>
                 </button>
             
-                <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
+                <button id="btn-mode-professional" onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
                     <div class="flex items-center gap-4">
                         <div class="bg-emerald-500/20 p-3 rounded-xl text-2xl">💼</div>
                         <div class="text-left">
@@ -1164,7 +1166,8 @@ async function submitScore() {
         weekId: getWeekId(gameDate), // Save the Week ID
         userId: userId,
         groupIds: groupIds,         // Save ALL Group IDs
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        playedModes: firebase.firestore.FieldValue.arrayUnion(lastMode)
     };
 
     try {
@@ -2255,6 +2258,7 @@ function initFirebase() {
             
             // Check for weekly winner modal
             setTimeout(checkWeeklyWinner, 4000);
+            checkRemoteProgress(user);
         } else {
             // Hide user button when logged out
             if (userBtnElement) userBtnElement.classList.add('hidden');
@@ -2300,6 +2304,7 @@ function closeLoginModal() {
     setTimeout(() => {
         modal.classList.add('hidden');
         toggleSignupView(false); // Reset for next time
+        modal.classList.replace('backdrop-blur-2xl', 'backdrop-blur-sm');
     }, 300);
 }
 
@@ -2381,6 +2386,8 @@ async function emailAuth(type) {
     const password = document.getElementById('auth-password').value;
     const name = document.getElementById('auth-name').value.trim();
     const errDisplay = document.getElementById('auth-error');
+    const loginBtn = document.getElementById('login-btn');
+    const modal = document.getElementById('login-modal');
 
     if (!email || !password) {
         errDisplay.innerText = "Please enter email and password";
@@ -2389,34 +2396,51 @@ async function emailAuth(type) {
         return;
     }
 
+    const originalBtnText = loginBtn.innerText;
+    loginBtn.disabled = true;
+    loginBtn.innerText = "Processing...";
+    loginBtn.classList.add('text-glow-pulse');
+    modal.classList.replace('backdrop-blur-sm', 'backdrop-blur-2xl');
+
     try {
         if (type === 'signup') {
             if (!name) {
-                errDisplay.innerText = "Please enter a display name for the leaderboard.";
-                errDisplay.className = "text-red-400 text-xs text-center mt-4";
-                errDisplay.classList.remove('hidden');
-                return;
+                throw new Error("Please enter a display name for the leaderboard.");
             }
             const nameValidation = isNameValid(name);
             if (!nameValidation.valid) {
-                errDisplay.innerText = nameValidation.message;
-                errDisplay.className = "text-red-400 text-xs text-center mt-4";
-                errDisplay.classList.remove('hidden');
-                return;
+                throw new Error(nameValidation.message);
             }
             const result = await auth.createUserWithEmailAndPassword(email, password);
             // Save Display Name to Profile
             await result.user.updateProfile({ displayName: name });
             localStorage.setItem('trivia-name', name);
+            
+            errDisplay.innerText = "Account creation successful! Going to main screen...";
         } else {
             await auth.signInWithEmailAndPassword(email, password);
+            errDisplay.innerText = "Login complete, loading information...";
         }
-        closeLoginModal();
-        errDisplay.classList.add('hidden');
+        
+        errDisplay.className = "text-emerald-400 text-sm font-bold text-center mt-4 animate-pulse";
+        errDisplay.classList.remove('hidden');
+
+        setTimeout(() => {
+            closeLoginModal();
+            errDisplay.classList.add('hidden');
+            loginBtn.disabled = false;
+            loginBtn.innerText = originalBtnText;
+            loginBtn.classList.remove('text-glow-pulse');
+        }, 1500);
+
     } catch (error) {
         errDisplay.innerText = error.message;
         errDisplay.className = "text-red-400 text-xs text-center mt-4";
         errDisplay.classList.remove('hidden');
+        loginBtn.disabled = false;
+        loginBtn.innerText = originalBtnText;
+        loginBtn.classList.remove('text-glow-pulse');
+        modal.classList.replace('backdrop-blur-2xl', 'backdrop-blur-sm');
     }
 }
 
@@ -2437,6 +2461,22 @@ async function resetPassword() {
     } catch (error) {
         errDisplay.innerText = error.message;
         errDisplay.className = "text-red-400 text-xs text-center mt-4";
+    }
+}
+
+function togglePasswordVisibility() {
+    const input = document.getElementById('auth-password');
+    const openIcon = document.getElementById('eye-icon-open');
+    const closedIcon = document.getElementById('eye-icon-closed');
+
+    if (input.type === 'password') {
+        input.type = 'text';
+        openIcon.classList.add('hidden');
+        closedIcon.classList.remove('hidden');
+    } else {
+        input.type = 'password';
+        openIcon.classList.remove('hidden');
+        closedIcon.classList.add('hidden');
     }
 }
 
@@ -3018,11 +3058,12 @@ function closeStats() {
         checkTutorial();
     </script>
 </body>
-</html> // Run Import before initialization
-        importStateFromURL();
-        initFirebase();
-        startApp();
-        checkTutorial();
+</html>
+    </script>
+</body>
+</html> ript>
+</body>
+</html>
     </script>
 </body>
 </html> 
