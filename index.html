@@ -600,6 +600,12 @@
         function selectMode(mode) {
             if (!freshGameData) return;
             
+            if (!freshGameData.questions || freshGameData.questions.length === 0) {
+                document.getElementById('question-text').innerText = "No questions found for today.";
+                document.getElementById('question-text').classList.remove('hidden');
+                return;
+            }
+            
             const CASUAL_CATS = ['Entertainment', 'Gaming', 'Sports', 'Lifestyle', 'Reality TV', 'Music', 'Movies', 'Celebrity', 'Pop Culture'];
             const PRO_CATS = ['Economy', 'Politics', 'Business', 'World', 'Technology', 'Environment', 'Weather', 'Science', 'Health', 'Finance'];
 
@@ -620,6 +626,12 @@
             if (filteredQuestions.length === 0) {
                 console.log("No questions matched mode, falling back to all.");
                 filteredQuestions = freshGameData.questions;
+            }
+
+            if (filteredQuestions.length === 0) {
+                document.getElementById('question-text').innerText = "Unable to load questions.";
+                document.getElementById('question-text').classList.remove('hidden');
+                return;
             }
 
             // Create a data object compatible with startNewSession
@@ -733,7 +745,7 @@ function startNewSession(data, date, mode) {
         questions: data.questions.map(q => {
             return {
                 ...q,
-                correctText: q.options[q.a] // Store the actual correct string
+                correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
             };
         })
     };
@@ -757,6 +769,11 @@ function startNewSession(data, date, mode) {
 
 // Update the renderQuestion to handle the new format
 function renderQuestion() {
+    if (!gameData || !gameData.questions || !gameData.questions[currentIdx]) {
+        document.getElementById('question-text').innerText = "Error loading question.";
+        return;
+    }
+
     const currentQ = gameData.questions[currentIdx];
     document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
     document.getElementById('question-text').innerText = currentQ.q;
