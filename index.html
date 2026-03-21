@@ -561,7 +561,8 @@
             wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
             finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',
             perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
-            streak: 'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3'
+            streak: 'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3',
+            lock: 'https://assets.mixkit.co/active_storage/sfx/2859/2859-preview.mp3'
         };
 
         let isMuted = localStorage.getItem('trivia-muted') === 'true';
@@ -677,6 +678,9 @@
         }
 
         function selectMode(mode) {
+            const btn = document.getElementById(`btn-mode-${mode}`);
+            if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
+
             if (!freshGameData) return;
             
             if (!freshGameData.questions || freshGameData.questions.length === 0) {
@@ -810,6 +814,11 @@ async function startApp() {
             // No saved session at all
             updateTheme('casual');
             showModeSelection();
+        }
+        
+        // Force a check for remote progress now that game data is loaded
+        if (auth && auth.currentUser) {
+            checkRemoteProgress(auth.currentUser);
         }
         
     } catch (err) {
