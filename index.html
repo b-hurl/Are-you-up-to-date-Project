@@ -1529,8 +1529,6 @@ async function createGroup() {
     }
 }
 
-async function leaveGroup(groupId) {
-    if(!confirm("Leave this group? Your scores will be removed from this leaderboard.")) return;
 function leaveGroup(groupId) {
     const groups = getMyGroups();
     const group = groups.find(g => g.id === groupId);
@@ -2783,17 +2781,12 @@ function closeStats() {
             installBtn.classList.add('hidden');
             deferredPrompt = null;
         });
-    }
+
         // Run Import before initialization
         importStateFromURL();
         initFirebase();
         startApp();
         checkTutorial();
-
-        
     </script>
 </body>
 </html> 
-    </script>
-</body>
-</html>
