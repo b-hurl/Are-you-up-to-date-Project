@@ -1124,6 +1124,19 @@ function playOtherMode() {
         return;
     }
 
+    // Check if user has already played this mode today (Local Check)
+    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+    if (session.date === getGameDate() && session.playedModes && session.playedModes.includes(modeToPlay)) {
+        alert(`You have already completed ${modeToPlay} mode today!`);
+        return;
+    }
+
+    // Check if user has already played this mode today (Remote Check)
+    if (remoteUserProgress && (remoteUserProgress.playedModes || []).includes(modeToPlay)) {
+        alert(`You have already completed ${modeToPlay} mode today!`);
+        return;
+    }
+
     // 1. Hide results, show main card
     document.body.classList.remove('dimmed');
     document.getElementById('results-card').classList.add('hidden');
@@ -1177,7 +1190,10 @@ async function setTaunt() {
     }
     
     const gameDate = getGameDate();
-    const docId = `${gameDate}_${userId}`;
+    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+    const playedModes = session.playedModes || [];
+    const lastMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
+    const docId = `${gameDate}_${userId}_${lastMode}`;
     
     try {
         await db.collection('scores').doc(docId).update({
@@ -1241,8 +1257,16 @@ async function submitScore() {
     try {
         // Use the date and userId to create a unique ID for the document
         // This prevents a user from submitting more than once per day
-        const docId = `${gameDate}_${userId}`;
+        const docId = `${gameDate}_${userId}_${lastMode}`;
         await db.collection('scores').doc(docId).set(scoreData, { merge: true });
+
+        // Sync User Stats for Cloud Functions (Streak Tracking)
+        await db.collection('users').doc(userId).set({
+            name: name,
+            lastPlayedDate: gameDate,
+            currentStreak: streak,
+            lastMode: lastMode
+        }, { merge: true });
         
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full">
@@ -1271,7 +1295,11 @@ async function checkIfSubmitted() {
         return false;
     }
 
-    const docId = `${getGameDate()}_${userId}`;
+    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+    const playedModes = session.playedModes || [];
+    const currentMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
+
+    const docId = `${getGameDate()}_${userId}_${currentMode}`;
     const doc = await db.collection('scores').doc(docId).get();
     
     if (doc.exists) {
