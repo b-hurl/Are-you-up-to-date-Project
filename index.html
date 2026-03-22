@@ -449,7 +449,6 @@
                 <span class="inline-block bg-primary-500/20 text-primary-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-primary-500/30"></span>
             </div>
             
-            <div id="mode-selection" class="hidden text-center space-y-4 py-2">
             <div id="mode-selection" class="hidden text-center space-y-4 py-2 relative">
                 <div class="mb-4">
                     <h2 class="text-2xl font-black text-white mb-1">Select Difficulty</h2>
@@ -476,7 +475,6 @@
                     </div>
                 </button>
 
-                <div id="mode-loading-overlay" class="absolute inset-0 bg-slate-800/95 z-20 flex flex-col items-center justify-center rounded-2xl hidden backdrop-blur-sm border border-slate-700">
                 <div id="mode-loading-overlay" class="absolute inset-0 bg-slate-800/95 z-20 flex flex-col items-center justify-center rounded-2xl hidden backdrop-blur-sm border border-slate-700 transition-all duration-500">
                     <div class="animate-spin text-4xl mb-3">⏳</div>
                     <p class="text-primary-300 text-xs font-bold uppercase tracking-widest animate-pulse">Checking Progress...</p>
@@ -1594,10 +1592,6 @@ async function openWeeklyLeaderboard() {
             }
 
             return `
-                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/50 border border-slate-700/50 ${isMe ? 'ring-1 ring-emerald-500/50' : ''}">
-                    <div class="flex items-center gap-3">
-                        <span class="w-6 text-center font-bold text-slate-400">${rank}</span>
-                        <span class="font-bold ${isMe ? 'text-emerald-400' : 'text-white'}">${user.name}</span>
                 <div class="flex items-center justify-between px-4 rounded-xl border ${containerStyle} transition-all hover:scale-[1.01]">
                     <div class="flex items-center gap-4">
                         <div class="shrink-0 w-10 text-center">${rankIcon}</div>
@@ -1606,7 +1600,6 @@ async function openWeeklyLeaderboard() {
                             ${index === 0 ? '<span class="text-[9px] uppercase tracking-widest text-yellow-500 font-bold opacity-80">Current Leader</span>' : ''}
                         </div>
                     </div>
-                    <span class="font-mono font-bold text-primary-300">${user.totalScore} pts</span>
                     <span class="font-mono font-bold ${scoreStyle}">${user.totalScore} pts</span>
                 </div>`;
         }).join('');
