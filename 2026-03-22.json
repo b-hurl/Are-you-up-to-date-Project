@@ -1,0 +1,122 @@
+[
+  {
+    "q": "On March 21, 2026, which NBA legend officially broke the all-time record for the most regular-season games played, surpassing Robert Parish's long-standing mark of 1,611?",
+    "options": [
+      "Kevin Durant",
+      "Chris Paul",
+      "LeBron James",
+      "Stephen Curry"
+    ],
+    "a": 2,
+    "category": "Sports",
+    "source": "https://sports.inquirer.net/668396/lebron-james-breaks-record-for-most-nba-regular-season-games-played"
+  },
+  {
+    "q": "Which K-pop group made their highly anticipated global comeback on March 21, 2026, with a massive live-streamed performance from Seoul's Gwanghwamun Square?",
+    "options": [
+      "BLACKPINK",
+      "BTS",
+      "Stray Kids",
+      "NewJeans"
+    ],
+    "a": 1,
+    "category": "Music",
+    "source": "https://www.salon.com/2026/03/21/bts-the-comeback-live-seeks-to-rival-the-super-bowl-halftime-show/"
+  },
+  {
+    "q": "On March 21, 2026, Sony confirmed a global outage for which service, preventing players from launching games or accessing network features on PS5 and PS4?",
+    "options": [
+      "PlayStation Network (PSN)",
+      "Xbox Live",
+      "Steam Deck Cloud",
+      "Nintendo Online"
+    ],
+    "a": 0,
+    "category": "Gaming",
+    "source": "https://aiptcomics.com/2026/03/21/playstation-network-down-psn-not-working/"
+  },
+{
+    "q": "Which 1970s and 80s variety show legend had their 64th birthday celebrated on March 21, 2026?",
+    "options": [
+      "Ellen DeGeneres",
+      "Rosie O'Donnell",
+      "Whoopi Goldberg",
+      "Sherri Shepherd"
+    ],
+    "a": 1,
+    "category": "Pop Culture",
+    "source": "https://programminginsider.com/today-in-history-sunday-march-21-2026/"
+  },
+  {
+    "q": "In NHL action on March 21, 2026, which Montreal Canadiens player dominated the New York Islanders with a hat trick and two assists in a 7-3 victory?",
+    "options": [
+      "Nick Suzuki",
+      "Juraj Slafkovsky",
+      "Cole Caufield",
+      "Kaiden Guhle"
+    ],
+    "a": 2,
+    "category": "Sports",
+    "source": "https://panow.com/2026/03/21/caufield-scores-hat-trick-in-five-point-night-canadiens-crush-islanders-7-3/"
+  },
+  {
+    "q": "On March 21, 2026, the G7 Foreign Ministers, including Canada’s, issued a joint statement condemning 'unjustifiable attacks' by which nation against energy infrastructure in the Middle East?",
+    "options": [
+      "Russia",
+      "Iran",
+      "Yemen",
+      "Syria"
+    ],
+    "a": 1,
+    "category": "World",
+    "source": "https://www.canada.ca/en/global-affairs/news/2026/03/g7-foreign-ministers-statement-on-support-to-partners-in-the-middle-east.html"
+  },
+{
+    "q": "In a study highlighted on March 21, 2026, scientists at Kyushu University developed a new method called 'SeeDB-Live' that allows them to do what to living brain tissue for better imaging?",
+    "options": [
+      "Freeze it instantly without damaging cells",
+      "Make it temporarily transparent",
+      "Convert electrical signals into digital audio",
+      "Increase the size of neurons by 100x"
+    ],
+    "a": 1,
+    "category": "Science",
+    "source": "https://www.earth.com/news/scientists-develop-method-that-makes-living-brain-tissue-transparent/"
+  },
+  {
+    "q": "On March 21, 2026, the Canadian military held an open house at which location to ramp up recruitment efforts amid growing global security tensions?",
+    "options": [
+      "CFB Gagetown",
+      "The Regina Armoury",
+      "The Edmonton Garrison",
+      "CFB Valcartier"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "source": "https://www.cjme.com/2026/03/21/army-ramps-up-recruiting-with-regina-open-house-event/"
+  },
+{
+    "q": "On March 21, 2026, researchers at the University of California, San Francisco (UCSF) announced a breakthrough in 'in-vivo' CAR-T therapy, which allows for what major procedural change in cancer treatment?",
+    "options": [
+      "Replacing chemotherapy with light-based lasers",
+      "Reprogramming immune cells directly inside the body",
+      "Growing a patient's new immune system in a lab-grown organ",
+      "Using mRNA to prevent cancer from ever developing"
+    ],
+    "a": 1,
+    "category": "Health",
+    "source": "https://scitechdaily.com/revolutionary-new-cancer-treatment-reprograms-immune-cells-inside-the-body/"
+  },
+  {
+    "q": "On March 21, 2026, Indigenous Services Canada announced the recipients of the National First Nations Water Leadership Award to coincide with which day?",
+    "options": [
+      "World Day for Glaciers",
+      "National Indigenous Water Operator Day",
+      "International Day of Forests",
+      "World Water Day Eve"
+    ],
+    "a": 1,
+    "category": "Environment",
+    "source": "https://www.canada.ca/en/indigenous-services-canada/news/2026/03/2026-national-first-nations-water-leadership-award-recipients-honoured-on-national-indigenous-water-operator-day.html"
+  }
+]

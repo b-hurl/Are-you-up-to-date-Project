@@ -450,6 +450,7 @@
             </div>
             
             <div id="mode-selection" class="hidden text-center space-y-4 py-2">
+            <div id="mode-selection" class="hidden text-center space-y-4 py-2 relative">
                 <div class="mb-4">
                     <h2 class="text-2xl font-black text-white mb-1">Select Difficulty</h2>
                     <p class="text-slate-400 text-xs uppercase tracking-widest">Choose your path</p>
@@ -474,6 +475,12 @@
                         </div>
                     </div>
                 </button>
+
+                <div id="mode-loading-overlay" class="absolute inset-0 bg-slate-800/95 z-20 flex flex-col items-center justify-center rounded-2xl hidden backdrop-blur-sm border border-slate-700">
+                <div id="mode-loading-overlay" class="absolute inset-0 bg-slate-800/95 z-20 flex flex-col items-center justify-center rounded-2xl hidden backdrop-blur-sm border border-slate-700 transition-all duration-500">
+                    <div class="animate-spin text-4xl mb-3">⏳</div>
+                    <p class="text-primary-300 text-xs font-bold uppercase tracking-widest animate-pulse">Checking Progress...</p>
+                </div>
             </div>
 
             <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8">Loading Today's Challenge...</h2>
@@ -580,6 +587,7 @@
         let cachedHistoryGames = [];
         let currentHistoryFilter = 'all';
         let currentInviteGroupId = null;
+        let remoteUserProgress = null;
 
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
@@ -680,6 +688,16 @@
         function selectMode(mode) {
             const btn = document.getElementById(`btn-mode-${mode}`);
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
+
+            // Double check against remote progress if available
+            if (remoteUserProgress) {
+                let pModes = remoteUserProgress.playedModes || [];
+                if (pModes.length === 0 && remoteUserProgress.mode) pModes = [remoteUserProgress.mode];
+                if (pModes.includes(mode)) {
+                    alert("You've already completed this mode today!");
+                    return;
+                }
+            }
 
             if (!freshGameData) return;
             
@@ -832,6 +850,17 @@ function showModeSelection() {
     document.getElementById('question-text').classList.add('hidden');
     document.getElementById('game-header').classList.add('hidden');
     document.getElementById('options-container').innerHTML = '';
+
+            // Show loading overlay if user is logged in but progress isn't loaded yet
+            const overlay = document.getElementById('mode-loading-overlay');
+            if (auth && auth.currentUser && remoteUserProgress === null) {
+                document.getElementById('mode-loading-overlay').classList.remove('hidden');
+                overlay.classList.remove('hidden');
+                overlay.classList.remove('opacity-0');
+            } else {
+                document.getElementById('mode-loading-overlay').classList.add('hidden');
+                overlay.classList.add('hidden');
+            }
 }
 
 function startNewSession(data, date, mode) {
