@@ -688,9 +688,9 @@
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
 
             // Double check against remote progress if available
-            if (remoteUserProgress) {
+            if (remoteUserProgress && remoteUserProgress.lastPlayedDate === getGameDate()) {
                 let pModes = remoteUserProgress.playedModes || [];
-                if (pModes.length === 0 && remoteUserProgress.mode) pModes = [remoteUserProgress.mode];
+                if (pModes.length === 0 && remoteUserProgress.lastMode) pModes = [remoteUserProgress.lastMode];
                 if (pModes.includes(mode)) {
                     alert("You've already completed this mode today!");
                     return;
@@ -1268,6 +1268,13 @@ async function submitScore() {
             lastMode: lastMode,
             playedModes: firebase.firestore.FieldValue.arrayUnion(lastMode)
         }, { merge: true });
+
+        // Update local cache immediately so we don't need a reload to know this mode is done
+        if (!remoteUserProgress) remoteUserProgress = {};
+        remoteUserProgress.lastPlayedDate = gameDate;
+        remoteUserProgress.lastMode = lastMode;
+        if (!remoteUserProgress.playedModes) remoteUserProgress.playedModes = [];
+        if (!remoteUserProgress.playedModes.includes(lastMode)) remoteUserProgress.playedModes.push(lastMode);
         
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full">
