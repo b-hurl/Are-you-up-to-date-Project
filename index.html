@@ -419,7 +419,7 @@
             <div class="text-4xl mb-4">📲</div>
             <h3 class="text-xl font-black text-white mb-2">Install App</h3>
             <p class="text-slate-300 text-sm mb-4">To install this app on your iPhone:</p>
-            <div class="space-y-3 text-left text-sm text-slate-400 bg-slate-900/50 p-4 rounded-xl">
+            <div id="ios-instructions" class="space-y-3 text-left text-sm text-slate-400 bg-slate-900/50 p-4 rounded-xl">
                 <p class="flex items-center gap-2">1. Tap the <span class="font-bold text-blue-400">Share</span> button <span class="text-xl">⎋</span></p>
                 <p class="flex items-center gap-2">2. Scroll down and tap <span class="font-bold text-white">Add to Home Screen</span> <span class="text-xl">⊞</span></p>
             </div>
@@ -433,10 +433,6 @@
 
     <button id="mute-btn" onclick="toggleMute()" class="fixed top-4 right-4 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">
         <span id="mute-icon" class="text-xl">🔊</span>
-    </button>
-
-    <button id="install-btn" class="fixed top-4 left-20 z-50 bg-primary-600/90 p-3 rounded-full border border-primary-500 hover:bg-primary-500 transition-all hidden shadow-lg shadow-primary-500/20">
-        <span class="text-xl">📲</span>
     </button>
 
     <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative">
@@ -474,6 +470,18 @@
                         </div>
                     </div>
                 </button>
+
+                <div id="start-screen-login" class="pt-2">
+                    <button onclick="toggleLoginModal()" class="w-full py-3 rounded-xl border border-dashed border-slate-700 text-slate-400 hover:text-white hover:border-slate-500 text-xs font-bold transition-all uppercase tracking-widest">
+                        Login to Save Progress
+                    </button>
+                </div>
+
+                <div id="start-screen-install-container" class="pt-2 hidden">
+                    <button id="install-btn-start" class="w-full py-3 rounded-xl bg-slate-800 border border-slate-600 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-bold transition-all uppercase tracking-widest flex items-center justify-center gap-2">
+                        <span class="text-xl">📲</span> Install App
+                    </button>
+                </div>
 
                 <div id="mode-loading-overlay" class="absolute inset-0 bg-slate-800/95 z-20 flex flex-col items-center justify-center rounded-2xl hidden backdrop-blur-sm border border-slate-700 transition-all duration-500">
                     <div class="animate-spin text-4xl mb-3">⏳</div>
@@ -551,6 +559,31 @@
                 </button>
             </div>
             <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
+            <div class="flex gap-2">
+                <button onclick="shareResults()" class="flex-1 bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 text-sm">Share Text</button>
+                <button onclick="shareToStory()" class="flex-1 bg-pink-600 hover:bg-pink-500 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 text-sm">
+                    <span class="text-xl">📸</span> Story
+            <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm mb-2">Share Text Result</button>
+            
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest text-center mb-2">Share Story Image</p>
+            <div class="grid grid-cols-3 gap-2">
+                <button onclick="shareToStory('Instagram', this)" class="bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:opacity-90 py-3 rounded-xl font-bold text-white text-xs flex flex-col items-center justify-center gap-1 transition-all">
+                    <span class="text-xl">📸</span> Insta
+                </button>
+                <button onclick="shareToStory('Snapchat', this)" class="bg-[#FFFC00] hover:brightness-95 py-3 rounded-xl font-bold text-black text-xs flex flex-col items-center justify-center gap-1 transition-all">
+                    <span class="text-xl">👻</span> Snap
+                </button>
+                <button onclick="shareToStory('Facebook', this)" class="bg-[#1877F2] hover:bg-blue-600 py-3 rounded-xl font-bold text-white text-xs flex flex-col items-center justify-center gap-1 transition-all">
+                    <span class="text-xl">📘</span> Facebook
+                </button>
+            </div>
+            
+
+            <div id="end-screen-install-container" class="mt-3 hidden">
+                <button id="install-btn-end" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 border border-slate-700 transition-all">
+                    <span class="text-xl">📲</span> Install App
+                </button>
+            </div>
         </div>
     </div>
 
@@ -932,7 +965,7 @@ function renderQuestion() {
         btn.innerText = opt;
         btn.onclick = () => {
             selectedIdx = i;
-            saveSession(); // Save immediately on click
+            saveSession(false, null, false); // Save locally, skip cloud to save writes
             // Check if the text of this button matches our stored correct text
             isCurrentSelectionCorrect = (opt === currentQ.correctText);
             
@@ -2126,8 +2159,129 @@ function shareResults() {
     }
 }
 
+async function shareToStory(platform, btn) {
+    const originalContent = btn.innerHTML;
+    btn.innerHTML = `<span class="animate-spin text-xl">⏳</span>`;
+    btn.disabled = true;
+
+    try {
+        // 1. Setup Canvas (1080x1920 Story Resolution)
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        const W = 1080;
+        const H = 1920;
+        canvas.width = W;
+        canvas.height = H;
+
+        // 2. Configure Theme Based on Platform
+        let bgFill, primaryText, secondaryText, boxBg, accentText;
+
+        if (platform === 'Snapchat') {
+            // Snapchat: Bright Yellow Background, Black Text
+            bgFill = '#FFFC00'; 
+            primaryText = '#000000';
+            secondaryText = '#333333';
+            boxBg = 'rgba(0,0,0,0.05)';
+            accentText = '#000000';
+        } else if (platform === 'Facebook') {
+            // Facebook: Brand Blue Background, White Text
+            bgFill = '#1877F2';
+            primaryText = '#ffffff';
+            secondaryText = '#e0f2fe'; // Light Blue-Gray
+            boxBg = 'rgba(255,255,255,0.2)';
+            accentText = '#fbbf24'; // Amber
+        } else {
+            // Instagram / Default: Dark Gradient
+            const grd = ctx.createLinearGradient(0, 0, 0, H);
+            grd.addColorStop(0, '#0f172a'); // Slate 900
+            grd.addColorStop(1, '#312e81'); // Indigo 900
+            bgFill = grd;
+            primaryText = '#ffffff';
+            secondaryText = '#94a3b8'; // Slate 400
+            boxBg = 'rgba(255,255,255,0.1)';
+            accentText = '#fbbf24';
+        }
+
+        // 3. Draw Content
+        // Background
+        ctx.fillStyle = bgFill;
+        ctx.fillRect(0, 0, W, H);
+
+        ctx.textAlign = 'center';
+        
+        // Title
+        ctx.fillStyle = primaryText;
+        ctx.font = 'bold 70px sans-serif';
+        ctx.fillText('DAILY TRIVIA', W/2, 250);
+        
+        ctx.fillStyle = secondaryText;
+        ctx.font = '40px sans-serif';
+        ctx.fillText(new Date().toLocaleDateString(undefined, {weekday:'long', month:'long', day:'numeric'}), W/2, 330);
+
+        // Rank Emoji & Title
+        const ranks = [
+            { title: "Ouch...", emoji: "💀" }, { title: "Keep Trying!", emoji: "🐣" },
+            { title: "Getting There", emoji: "🥉" }, { title: "Solid Effort", emoji: "🥈" },
+            { title: "Trivia Pro!", emoji: "🥇" }, { title: "LEGENDARY!", emoji: "👑" }
+        ];
+        const rank = ranks[score] || ranks[0];
+
+        ctx.font = '220px serif';
+        ctx.fillText(rank.emoji, W/2, 650);
+
+        ctx.fillStyle = accentText;
+        ctx.font = 'bold 90px sans-serif';
+        ctx.fillText(rank.title, W/2, 800);
+
+        // Score Box
+        ctx.fillStyle = boxBg;
+        ctx.fillRect(W/2 - 300, 900, 600, 350); // Simple rect fallback
+        
+        ctx.fillStyle = secondaryText;
+        ctx.font = '40px sans-serif';
+        ctx.fillText('SCORE', W/2, 980);
+
+        ctx.fillStyle = primaryText;
+        ctx.font = 'bold 160px sans-serif';
+        ctx.fillText(`${score}/${gameData.questions.length}`, W/2, 1150);
+
+        // Streak
+        const streak = localStorage.getItem('trivia-streak') || 0;
+        ctx.fillStyle = primaryText;
+        ctx.font = 'bold 60px sans-serif';
+        ctx.fillText(`🔥 ${streak} Day Streak`, W/2, 1400);
+
+        // URL Footer
+        ctx.fillStyle = (platform === 'Snapchat') ? '#000000' : '#818cf8';
+        ctx.font = 'bold 50px sans-serif';
+        ctx.fillText(window.location.host, W/2, 1750);
+
+        // 4. Share or Download
+        canvas.toBlob(async (blob) => {
+            const file = new File([blob], 'trivia-story.png', { type: 'image/png' });
+
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                await navigator.share({ files: [file] });
+            } else {
+                const link = document.createElement('a');
+                link.download = 'trivia-story.png';
+                link.href = canvas.toDataURL();
+                link.click();
+                alert(`Image saved! Open ${platform} to share it.`);
+            }
+            btn.innerHTML = originalContent;
+            btn.disabled = false;
+        });
+    } catch (e) {
+        console.error(e);
+        alert("Could not generate image.");
+        btn.innerHTML = originalContent;
+        btn.disabled = false;
+    }
+}
+
 // Add 'userChoices' to the session object
-function saveSession(isFinished = false, newMode = null) {
+function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
     // Get current session to preserve playedModes across saves within the same day
     const currentSessionJSON = localStorage.getItem('trivia-session');
     const currentSession = currentSessionJSON ? JSON.parse(currentSessionJSON) : {};
@@ -2154,11 +2308,28 @@ function saveSession(isFinished = false, newMode = null) {
     exportStateToURL();
 
     // CLOUD SYNC: Save session to Firestore
-    if (auth && auth.currentUser) {
-        db.collection('users').doc(auth.currentUser.uid).set({
-            currentSession: session,
-            lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
-        }, { merge: true }).catch(e => console.error("Cloud sync failed", e));
+    if (syncToCloud && auth && auth.currentUser) {
+        // OPTIMIZATION: Only send full questions array on new game start
+        // For updates, use dot notation to merge specific fields without overwriting/sending the large questions array
+        if (currentIdx > 0 || isFinished) {
+            const partialPayload = {
+                'currentSession.currentIdx': session.currentIdx,
+                'currentSession.score': session.score,
+                'currentSession.currentStreak': session.currentStreak,
+                'currentSession.isFinished': session.isFinished,
+                'currentSession.userChoices': session.userChoices,
+                'currentSession.selectedIdx': session.selectedIdx,
+                'currentSession.playedModes': session.playedModes,
+                'currentSession.date': session.date,
+                'lastUpdated': firebase.firestore.FieldValue.serverTimestamp()
+            };
+            db.collection('users').doc(auth.currentUser.uid).set(partialPayload, { merge: true }).catch(e => console.error("Cloud sync failed", e));
+        } else {
+            db.collection('users').doc(auth.currentUser.uid).set({
+                currentSession: session,
+                lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+            }, { merge: true }).catch(e => console.error("Cloud sync failed", e));
+        }
     }
 
     if (isFinished) {
@@ -2477,6 +2648,7 @@ function initFirebase() {
         const loginOptions = document.getElementById('login-options');
         const userInfo = document.getElementById('user-info-display');
         const emailAuthSection = document.getElementById('email-auth-section');
+        const startScreenLogin = document.getElementById('start-screen-login');
 
         if (user) {
             // Show user button only when logged in
@@ -2497,6 +2669,7 @@ function initFirebase() {
             if (emailAuthSection) emailAuthSection.classList.add('hidden');
             userInfo.classList.remove('hidden');
             document.getElementById('user-email-display').innerText = user.email || "Linked Account";
+            if (startScreenLogin) startScreenLogin.classList.add('hidden');
             
             // Refresh data context
             if (!document.getElementById('results-card').classList.contains('hidden')) {
@@ -2530,6 +2703,20 @@ function initFirebase() {
             loginOptions.classList.remove('hidden');
             if (emailAuthSection) emailAuthSection.classList.remove('hidden');
             userInfo.classList.add('hidden');
+            
+            if (startScreenLogin) {
+                startScreenLogin.classList.remove('hidden');
+                // Custom Pulse Effect for High Streaks (3+ Days)
+                const savedStreak = parseInt(localStorage.getItem('trivia-streak')) || 0;
+                const loginBtn = startScreenLogin.querySelector('button');
+                if (loginBtn && savedStreak >= 3) {
+                    loginBtn.className = "w-full py-3 rounded-xl border-2 border-emerald-500 bg-emerald-900/30 text-emerald-400 hover:bg-emerald-900/50 text-xs font-bold transition-all uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.2)] animate-pulse";
+                    loginBtn.innerHTML = `🔥 Save Your ${savedStreak} Day Streak!`;
+                } else if (loginBtn) {
+                    loginBtn.className = "w-full py-3 rounded-xl border border-dashed border-slate-700 text-slate-400 hover:text-white hover:border-slate-500 text-xs font-bold transition-all uppercase tracking-widest";
+                    loginBtn.innerHTML = "Login to Save Progress";
+                }
+            }
 
             // Refresh data context on logout as well
             if (!document.getElementById('results-card').classList.contains('hidden')) {
@@ -3290,39 +3477,72 @@ function closeStats() {
 
         // --- PWA INSTALL LOGIC ---
         let deferredPrompt;
-        const installBtn = document.getElementById('install-btn');
+        const installContainers = [
+            document.getElementById('start-screen-install-container'),
+            document.getElementById('end-screen-install-container')
+        ];
+        const installBtns = [
+            document.getElementById('install-btn-start'),
+            document.getElementById('install-btn-end')
+        ];
         const iosModal = document.getElementById('ios-install-modal');
 
         // Detect iOS
         const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const isIosChrome = /CriOS/.test(navigator.userAgent);
         const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+        const showInstallButtons = () => installContainers.forEach(el => el && el.classList.remove('hidden'));
+        const hideInstallButtons = () => installContainers.forEach(el => el && el.classList.add('hidden'));
 
         // iOS: Show button if not already installed, open instructions on click
         if (isIos && !isStandalone) {
-            installBtn.classList.remove('hidden');
-            installBtn.onclick = () => iosModal.classList.remove('hidden');
+            showInstallButtons();
+            installBtns.forEach(btn => {
+                if(btn) {
+                    btn.onclick = () => {
+                        const instructions = document.getElementById('ios-instructions');
+                        if (instructions) {
+                            if (isIosChrome) {
+                                instructions.innerHTML = `
+                                    <p class="flex items-center gap-2">1. Tap the <span class="font-bold text-white">Share</span> icon (top right) <span class="text-xl">⎋</span></p>
+                                    <p class="flex items-center gap-2">2. Scroll down and tap <span class="font-bold text-white">Add to Home Screen</span> <span class="text-xl">⊞</span></p>`;
+                            } else {
+                                instructions.innerHTML = `
+                                    <p class="flex items-center gap-2">1. Tap the <span class="font-bold text-blue-400">Share</span> button (bottom bar) <span class="text-xl">⎋</span></p>
+                                    <p class="flex items-center gap-2">2. Scroll down and tap <span class="font-bold text-white">Add to Home Screen</span> <span class="text-xl">⊞</span></p>`;
+                            }
+                        }
+                        iosModal.classList.remove('hidden');
+                    };
+                }
+            });
         }
 
         // Android/Desktop: Handle native install prompt
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            installBtn.classList.remove('hidden');
+            showInstallButtons();
             
-            installBtn.onclick = async () => {
-                if (deferredPrompt) {
-                    deferredPrompt.prompt();
-                    const { outcome } = await deferredPrompt.userChoice;
-                    deferredPrompt = null;
-                    if (outcome === 'accepted') {
-                        installBtn.classList.add('hidden');
-                    }
+            installBtns.forEach(btn => {
+                if(btn) {
+                    btn.onclick = async () => {
+                        if (deferredPrompt) {
+                            deferredPrompt.prompt();
+                            const { outcome } = await deferredPrompt.userChoice;
+                            deferredPrompt = null;
+                            if (outcome === 'accepted') {
+                                hideInstallButtons();
+                            }
+                        }
+                    };
                 }
-            };
+            });
         });
 
         window.addEventListener('appinstalled', () => {
-            installBtn.classList.add('hidden');
+            hideInstallButtons();
             deferredPrompt = null;
         });
 
