@@ -412,27 +412,6 @@
         </div>
     </div>
 
-    <!-- Share Story Modal -->
-    <div id="share-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4" onclick="closeShareModal()">
-        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center" onclick="event.stopPropagation()">
-            <button onclick="closeShareModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
-            <div class="text-4xl mb-4">📸</div>
-            <h2 class="text-2xl font-black text-white mb-6">Share Story</h2>
-            
-            <div class="space-y-3">
-                <button onclick="shareToStory('Instagram', this)" class="w-full bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:opacity-90 py-4 rounded-xl font-bold text-white flex items-center justify-center gap-3 transition-all">
-                    <span class="text-2xl">📸</span> Instagram Story
-                </button>
-                <button onclick="shareToStory('Snapchat', this)" class="w-full bg-[#FFFC00] hover:brightness-95 py-4 rounded-xl font-bold text-black flex items-center justify-center gap-3 transition-all">
-                    <span class="text-2xl">👻</span> Snapchat
-                </button>
-                <button onclick="shareToStory('Facebook', this)" class="w-full bg-[#1877F2] hover:bg-blue-600 py-4 rounded-xl font-bold text-white flex items-center justify-center gap-3 transition-all">
-                    <span class="text-2xl">📘</span> Facebook Story
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- iOS Install Modal -->
     <div id="ios-install-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4" onclick="this.classList.add('hidden')">
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-sm w-full shadow-2xl text-center relative" onclick="event.stopPropagation()">
@@ -582,7 +561,7 @@
             
             <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-lg shadow-primary-500/20 transition-all">Share Text Result</button>
             
-            <button id="share-story-trigger" onclick="openShareModal()" class="w-full bg-pink-600 hover:bg-pink-500 py-3 rounded-xl font-bold text-white flex items-center justify-center gap-2 text-sm shadow-lg shadow-pink-500/20 transition-all">
+            <button id="share-story-trigger" onclick="shareToStory(this)" class="w-full bg-pink-600 hover:bg-pink-500 py-3 rounded-xl font-bold text-white flex items-center justify-center gap-2 text-sm shadow-lg shadow-pink-500/20 transition-all">
                 <span class="text-xl">📸</span> Share Story Image
             </button>
 
@@ -1962,24 +1941,6 @@ function closeInviteModal() {
     setTimeout(() => modal.classList.add('hidden'), 300);
 }
 
-function openShareModal() {
-    const modal = document.getElementById('share-modal');
-    modal.classList.remove('hidden');
-    setTimeout(() => {
-        modal.classList.remove('opacity-0');
-        modal.querySelector('div').classList.remove('scale-95');
-        modal.querySelector('div').classList.add('scale-100');
-    }, 10);
-}
-
-function closeShareModal() {
-    const modal = document.getElementById('share-modal');
-    modal.classList.add('opacity-0');
-    modal.querySelector('div').classList.remove('scale-100');
-    modal.querySelector('div').classList.add('scale-95');
-    setTimeout(() => modal.classList.add('hidden'), 300);
-}
-
 function generateInviteQRCode() {
     const container = document.getElementById('qrcode-container');
     if (!container.classList.contains('hidden')) {
@@ -2184,7 +2145,7 @@ function shareResults() {
     }
 }
 
-async function shareToStory(platform, btn) {
+async function shareToStory(btn) {
     const originalContent = btn.innerHTML;
     btn.innerHTML = `<span class="animate-spin text-xl">⏳</span>`;
     btn.disabled = true;
@@ -2198,34 +2159,15 @@ async function shareToStory(platform, btn) {
         canvas.width = W;
         canvas.height = H;
 
-        // 2. Configure Theme Based on Platform
-        let bgFill, primaryText, secondaryText, boxBg, accentText;
-
-        if (platform === 'Snapchat') {
-            // Snapchat: Bright Yellow Background, Black Text
-            bgFill = '#FFFC00'; 
-            primaryText = '#000000';
-            secondaryText = '#333333';
-            boxBg = 'rgba(0,0,0,0.05)';
-            accentText = '#000000';
-        } else if (platform === 'Facebook') {
-            // Facebook: Brand Blue Background, White Text
-            bgFill = '#1877F2';
-            primaryText = '#ffffff';
-            secondaryText = '#e0f2fe'; // Light Blue-Gray
-            boxBg = 'rgba(255,255,255,0.2)';
-            accentText = '#fbbf24'; // Amber
-        } else {
-            // Instagram / Default: Dark Gradient
-            const grd = ctx.createLinearGradient(0, 0, 0, H);
-            grd.addColorStop(0, '#0f172a'); // Slate 900
-            grd.addColorStop(1, '#312e81'); // Indigo 900
-            bgFill = grd;
-            primaryText = '#ffffff';
-            secondaryText = '#94a3b8'; // Slate 400
-            boxBg = 'rgba(255,255,255,0.1)';
-            accentText = '#fbbf24';
-        }
+        // 2. Configure Theme (Default Dark Gradient)
+        const grd = ctx.createLinearGradient(0, 0, 0, H);
+        grd.addColorStop(0, '#0f172a'); // Slate 900
+        grd.addColorStop(1, '#312e81'); // Indigo 900
+        const bgFill = grd;
+        const primaryText = '#ffffff';
+        const secondaryText = '#94a3b8'; // Slate 400
+        const boxBg = 'rgba(255,255,255,0.1)';
+        const accentText = '#fbbf24';
 
         // 3. Draw Content
         // Background
@@ -2277,7 +2219,7 @@ async function shareToStory(platform, btn) {
         ctx.fillText(`🔥 ${streak} Day Streak`, W/2, 1400);
 
         // URL Footer
-        ctx.fillStyle = (platform === 'Snapchat') ? '#000000' : '#818cf8';
+        ctx.fillStyle = '#818cf8';
         ctx.font = 'bold 50px sans-serif';
         ctx.fillText(window.location.host, W/2, 1750);
 
@@ -2292,7 +2234,7 @@ async function shareToStory(platform, btn) {
                 link.download = 'trivia-story.png';
                 link.href = canvas.toDataURL();
                 link.click();
-                alert(`Image saved! Open ${platform} to share it.`);
+                alert(`Image saved! Open Instagram/Snapchat/Facebook to share it.`);
             }
             btn.innerHTML = originalContent;
             btn.disabled = false;
