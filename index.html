@@ -2224,24 +2224,26 @@ async function shareToStory(btn) {
         ctx.fillText(window.location.host, W/2, 1750);
 
         // 4. Share or Download
-        canvas.toBlob(async (blob) => {
-            const file = new File([blob], 'trivia-story.png', { type: 'image/png' });
+        const blob = await new Promise(resolve => canvas.toBlob(resolve));
+        const file = new File([blob], 'trivia-story.png', { type: 'image/png' });
 
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+            try {
                 await navigator.share({ files: [file] });
-            } else {
-                const link = document.createElement('a');
-                link.download = 'trivia-story.png';
-                link.href = canvas.toDataURL();
-                link.click();
-                alert(`Image saved! Open Instagram/Snapchat/Facebook to share it.`);
+            } catch (err) {
+                if (err.name !== 'AbortError') console.error("Share failed", err);
             }
-            btn.innerHTML = originalContent;
-            btn.disabled = false;
-        });
+        } else {
+            const link = document.createElement('a');
+            link.download = 'trivia-story.png';
+            link.href = canvas.toDataURL();
+            link.click();
+            alert(`Image saved! Open Instagram/Snapchat/Facebook to share it.`);
+        }
     } catch (e) {
         console.error(e);
         alert("Could not generate image.");
+    } finally {
         btn.innerHTML = originalContent;
         btn.disabled = false;
     }
