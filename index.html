@@ -1265,7 +1265,8 @@ async function submitScore() {
             name: name,
             lastPlayedDate: gameDate,
             currentStreak: streak,
-            lastMode: lastMode
+            lastMode: lastMode,
+            playedModes: firebase.firestore.FieldValue.arrayUnion(lastMode)
         }, { merge: true });
         
         document.getElementById('leaderboard-submit-form').innerHTML = `
@@ -2328,6 +2329,49 @@ function closeWeeklyWinnerModal() {
     modal.querySelector('div').classList.remove('scale-100');
     modal.querySelector('div').classList.add('scale-95');
     setTimeout(() => modal.classList.add('hidden'), 500);
+}
+
+async function checkRemoteProgress(user) {
+    if (!user) return;
+    const today = getGameDate();
+    
+    try {
+        const doc = await db.collection('users').doc(user.uid).get();
+        if (doc.exists) {
+            const data = doc.data();
+            remoteUserProgress = data; 
+            
+            if (data.lastPlayedDate === today) {
+                // Determine played modes
+                let modes = data.playedModes || [];
+                if (modes.length === 0 && data.lastMode) modes = [data.lastMode];
+                
+                // Update global state
+                remoteUserProgress.playedModes = modes;
+
+                // Sync to Local Storage
+                let session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+                if (session.date !== today) {
+                     session = { date: today, playedModes: modes, score: 0, currentStreak: data.currentStreak || 0 };
+                     localStorage.setItem('trivia-session', JSON.stringify(session));
+                } else {
+                     const combined = new Set([...(session.playedModes || []), ...modes]);
+                     session.playedModes = Array.from(combined);
+                     localStorage.setItem('trivia-session', JSON.stringify(session));
+                }
+
+                // UI Update: Disable buttons for played modes
+                modes.forEach(mode => {
+                    const btn = document.getElementById(`btn-mode-${mode}`);
+                    if (btn) {
+                        btn.classList.add('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
+                        const desc = btn.querySelector('p');
+                        if (desc) desc.innerHTML = '<span class="text-emerald-400 font-bold">✅ Completed</span>';
+                    }
+                });
+            }
+        }
+    } catch (e) { console.error("Error checking remote progress", e); }
 }
 
 function initFirebase() {

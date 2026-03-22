@@ -23,9 +23,8 @@ exports.resetStreaks = onSchedule({
 
     console.log(`Checking for streaks broken before ${yesterdayGameDate}`);
 
-    // Query: Users with a streak > 0 AND lastPlayedDate < yesterdayGameDate
+    // Query: Users with a streak > 0 (We filter date in memory to avoid Firestore multi-field inequality error)
     const snapshot = await db.collection('users')
-        .where('lastPlayedDate', '<', yesterdayGameDate)
         .where('currentStreak', '>', 0)
         .get();
 
@@ -38,12 +37,19 @@ exports.resetStreaks = onSchedule({
     let count = 0;
 
     snapshot.docs.forEach(doc => {
-        batch.update(doc.ref, { currentStreak: 0 });
-        count++;
+        const data = doc.data();
+        if (data.lastPlayedDate < yesterdayGameDate) {
+            batch.update(doc.ref, { currentStreak: 0 });
+            count++;
+        }
     });
 
-    await batch.commit();
-    console.log(`Reset streaks for ${count} users.`);
+    if (count > 0) {
+        await batch.commit();
+        console.log(`Reset streaks for ${count} users.`);
+    } else {
+        console.log('No streaks needed resetting.');
+    }
     return null;
 });
 
@@ -63,14 +69,13 @@ exports.testResetStreaks = onRequest(async (req, res) => {
     yesterday.setUTCDate(now.getUTCDate() - 1);
     const yesterdayGameDate = formatDate(yesterday); 
 
-    // Query: Users with a streak > 0 AND lastPlayedDate < yesterdayGameDate
+    // Query: Users with a streak > 0
     const snapshot = await db.collection('users')
-        .where('lastPlayedDate', '<', yesterdayGameDate)
         .where('currentStreak', '>', 0)
         .get();
 
     if (snapshot.empty) {
-        res.send(`No streaks to reset. (Cutoff date was ${yesterdayGameDate})`);
+        res.send(`No users with active streaks found.`);
         return;
     }
 
@@ -78,10 +83,16 @@ exports.testResetStreaks = onRequest(async (req, res) => {
     let count = 0;
 
     snapshot.docs.forEach(doc => {
-        batch.update(doc.ref, { currentStreak: 0 });
-        count++;
+        const data = doc.data();
+        if (data.lastPlayedDate < yesterdayGameDate) {
+            batch.update(doc.ref, { currentStreak: 0 });
+            count++;
+        }
     });
 
-    await batch.commit();
+    if (count > 0) {
+        await batch.commit();
+    }
+    
     res.send(`Success! Reset streaks for ${count} users. (Cutoff date was ${yesterdayGameDate})`);
 });
