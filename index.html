@@ -412,6 +412,27 @@
         </div>
     </div>
 
+    <!-- Share Story Modal -->
+    <div id="share-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4" onclick="closeShareModal()">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center" onclick="event.stopPropagation()">
+            <button onclick="closeShareModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">✕</button>
+            <div class="text-4xl mb-4">📸</div>
+            <h2 class="text-2xl font-black text-white mb-6">Share Story</h2>
+            
+            <div class="space-y-3">
+                <button onclick="shareToStory('Instagram', this)" class="w-full bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:opacity-90 py-4 rounded-xl font-bold text-white flex items-center justify-center gap-3 transition-all">
+                    <span class="text-2xl">📸</span> Instagram Story
+                </button>
+                <button onclick="shareToStory('Snapchat', this)" class="w-full bg-[#FFFC00] hover:brightness-95 py-4 rounded-xl font-bold text-black flex items-center justify-center gap-3 transition-all">
+                    <span class="text-2xl">👻</span> Snapchat
+                </button>
+                <button onclick="shareToStory('Facebook', this)" class="w-full bg-[#1877F2] hover:bg-blue-600 py-4 rounded-xl font-bold text-white flex items-center justify-center gap-3 transition-all">
+                    <span class="text-2xl">📘</span> Facebook Story
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- iOS Install Modal -->
     <div id="ios-install-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4" onclick="this.classList.add('hidden')">
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-sm w-full shadow-2xl text-center relative" onclick="event.stopPropagation()">
@@ -472,7 +493,7 @@
                 </button>
 
                 <div id="start-screen-login" class="pt-2">
-                    <button onclick="toggleLoginModal()" class="w-full py-3 rounded-xl border border-dashed border-slate-700 text-slate-400 hover:text-white hover:border-slate-500 text-xs font-bold transition-all uppercase tracking-widest">
+                    <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
                         Login to Save Progress
                     </button>
                 </div>
@@ -558,26 +579,12 @@
                     <span class="text-xl">📜</span> History
                 </button>
             </div>
-            <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">Share Results</button>
-            <div class="flex gap-2">
-                <button onclick="shareResults()" class="flex-1 bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 text-sm">Share Text</button>
-                <button onclick="shareToStory()" class="flex-1 bg-pink-600 hover:bg-pink-500 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 text-sm">
-                    <span class="text-xl">📸</span> Story
-            <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm mb-2">Share Text Result</button>
             
-            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest text-center mb-2">Share Story Image</p>
-            <div class="grid grid-cols-3 gap-2">
-                <button onclick="shareToStory('Instagram', this)" class="bg-gradient-to-tr from-yellow-500 via-pink-600 to-purple-700 hover:opacity-90 py-3 rounded-xl font-bold text-white text-xs flex flex-col items-center justify-center gap-1 transition-all">
-                    <span class="text-xl">📸</span> Insta
-                </button>
-                <button onclick="shareToStory('Snapchat', this)" class="bg-[#FFFC00] hover:brightness-95 py-3 rounded-xl font-bold text-black text-xs flex flex-col items-center justify-center gap-1 transition-all">
-                    <span class="text-xl">👻</span> Snap
-                </button>
-                <button onclick="shareToStory('Facebook', this)" class="bg-[#1877F2] hover:bg-blue-600 py-3 rounded-xl font-bold text-white text-xs flex flex-col items-center justify-center gap-1 transition-all">
-                    <span class="text-xl">📘</span> Facebook
-                </button>
-            </div>
+            <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-lg shadow-primary-500/20 transition-all">Share Text Result</button>
             
+            <button id="share-story-trigger" onclick="openShareModal()" class="w-full bg-pink-600 hover:bg-pink-500 py-3 rounded-xl font-bold text-white flex items-center justify-center gap-2 text-sm shadow-lg shadow-pink-500/20 transition-all">
+                <span class="text-xl">📸</span> Share Story Image
+            </button>
 
             <div id="end-screen-install-container" class="mt-3 hidden">
                 <button id="install-btn-end" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 border border-slate-700 transition-all">
@@ -1955,6 +1962,24 @@ function closeInviteModal() {
     setTimeout(() => modal.classList.add('hidden'), 300);
 }
 
+function openShareModal() {
+    const modal = document.getElementById('share-modal');
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+    }, 10);
+}
+
+function closeShareModal() {
+    const modal = document.getElementById('share-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+}
+
 function generateInviteQRCode() {
     const container = document.getElementById('qrcode-container');
     if (!container.classList.contains('hidden')) {
@@ -2713,7 +2738,7 @@ function initFirebase() {
                     loginBtn.className = "w-full py-3 rounded-xl border-2 border-emerald-500 bg-emerald-900/30 text-emerald-400 hover:bg-emerald-900/50 text-xs font-bold transition-all uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.2)] animate-pulse";
                     loginBtn.innerHTML = `🔥 Save Your ${savedStreak} Day Streak!`;
                 } else if (loginBtn) {
-                    loginBtn.className = "w-full py-3 rounded-xl border border-dashed border-slate-700 text-slate-400 hover:text-white hover:border-slate-500 text-xs font-bold transition-all uppercase tracking-widest";
+                    loginBtn.className = "w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20";
                     loginBtn.innerHTML = "Login to Save Progress";
                 }
             }
@@ -3491,6 +3516,13 @@ function closeStats() {
         const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
         const isIosChrome = /CriOS/.test(navigator.userAgent);
         const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+
+        // Hide Story Share on Desktop (Cannot detect specific apps, but can detect non-mobile)
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if (!isMobile) {
+            const btn = document.getElementById('share-story-trigger');
+            if (btn) btn.classList.add('hidden');
+        }
 
         const showInstallButtons = () => installContainers.forEach(el => el && el.classList.remove('hidden'));
         const hideInstallButtons = () => installContainers.forEach(el => el && el.classList.add('hidden'));
