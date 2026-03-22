@@ -702,6 +702,32 @@
             }
         }
 
+        // --- LOCATION SERVICES ---
+        async function determineUserLocation() {
+            // Check cache first to avoid API rate limits
+            const cached = localStorage.getItem('trivia-location');
+            if (cached) return JSON.parse(cached);
+
+            try {
+                // Use a free IP-geolocation service (approximate location)
+                const response = await fetch('https://ipapi.co/json/');
+                if (!response.ok) throw new Error('Location fetch failed');
+                
+                const data = await response.json();
+                const loc = {
+                    city: data.city,
+                    region: data.region,      // e.g. "Texas" or "Ontario"
+                    region_code: data.region_code, // e.g. "TX" or "ON"
+                    country: data.country_name,
+                    country_code: data.country_code // e.g. "US" or "CA"
+                };
+                
+                localStorage.setItem('trivia-location', JSON.stringify(loc));
+                console.log("Location detected:", loc);
+                return loc;
+            } catch (e) { return null; }
+        }
+
         function selectMode(mode) {
             const btn = document.getElementById(`btn-mode-${mode}`);
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
@@ -729,8 +755,33 @@
 
             // Filter questions based on mode
             updateTheme(mode);
+            
+            // Get user location for regional filtering
+            const userLoc = JSON.parse(localStorage.getItem('trivia-location') || '{}');
 
             let filteredQuestions = freshGameData.questions.filter(q => {
+                // 1. Regional Filter
+                // Questions can have a "location" object: { country: "Canada", region: "Ontario", city: "Toronto" }
+                if (q.location) {
+                    // If we don't know the user's location, skip regional questions (safest bet)
+                    if (!userLoc.country_code) return false;
+
+                    // Hierarchy Check:
+                    // If Country is specified in question, user must match it
+                    if (q.location.country && 
+                        q.location.country !== userLoc.country && 
+                        q.location.country !== userLoc.country_code) return false;
+
+                    // If Region/Province is specified, user must match it
+                    if (q.location.region && 
+                        q.location.region !== userLoc.region && 
+                        q.location.region !== userLoc.region_code) return false;
+                        
+                    // If City is specified, user must match it
+                    if (q.location.city && q.location.city !== userLoc.city) return false;
+                }
+
+                // 2. Category Filter
                 if (!q.category) return true; // Include uncategorized in both to be safe
                 const cat = q.category.trim();
                 if (mode === 'casual') {
@@ -799,6 +850,7 @@ function getGameDate() {
 async function startApp() {
     const gameDate = getGameDate(); // e.g., "2026-03-12"
     console.log("Attempting to load trivia for date:", gameDate);
+    determineUserLocation(); // Trigger background location check
     
     try {
         const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
@@ -882,17 +934,36 @@ function showModeSelection() {
 
 function startNewSession(data, date, mode) {
     // 1. Map the correct answer text to each question BEFORE shuffling
+    const allQuestions = data.questions.map(q => {
+        return {
+            ...q,
+            correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
+        };
+    });
+
+    // 2. Select up to 5 questions, prioritizing regional ones (if they passed the filter)
+    const regional = allQuestions.filter(q => q.location);
+    const standard = allQuestions.filter(q => !q.location);
+
+    // Shuffle source arrays for variety
+    shuffle(regional);
+    shuffle(standard);
+
+    let selectedQuestions = [...regional];
+
+    // Fill remaining spots with standard questions
+    const remainingSlots = 5 - selectedQuestions.length;
+    if (remainingSlots > 0) {
+        selectedQuestions = selectedQuestions.concat(standard.slice(0, remainingSlots));
+    }
+
+    // 3. Shuffle the final set so regional questions are mixed in randomly (not just at top)
+    // and hard cap to 5 questions per day
     gameData = {
-        questions: data.questions.map(q => {
-            return {
-                ...q,
-                correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
-            };
-        })
+        questions: shuffle(selectedQuestions.slice(0, 5))
     };
 
-    // 2. Now shuffle the questions and the options safely
-    gameData.questions = shuffle(gameData.questions);
+    // 4. Shuffle options for all questions
     gameData.questions.forEach(q => {
         if (q.options && Array.isArray(q.options)) {
             q.options = shuffle([...q.options]);
@@ -2078,7 +2149,8 @@ function renderReview() {
         const div = document.createElement('div');
         div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
         
-        const sourceLink = q.source ? `<div class="mt-2 text-right"><a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted">Source ↗</a></div>` : '';
+        const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted">Source ↗</a>` : '';
+        const reportBtn = `<button onclick="reportQuestion(${i})" class="text-[10px] text-slate-500 hover:text-red-400 underline decoration-dotted ml-2">Report 🚩</button>`;
 
         div.innerHTML = `
             <p class="text-xs font-bold mb-2">${q.q}</p>
@@ -2088,10 +2160,35 @@ function renderReview() {
                 </p>
                 ${!isCorrect ? `<p class="text-emerald-400 font-bold">✅ Correct Answer: ${q.correctText}</p>` : ''}
             </div>
-            ${sourceLink}
+            <div class="mt-2 text-right flex justify-end items-center">
+                ${sourceLink}
+                ${reportBtn}
+            </div>
         `;
         review.appendChild(div);
     });
+}
+
+async function reportQuestion(idx) {
+    if (!gameData || !gameData.questions[idx]) return;
+    const q = gameData.questions[idx];
+    
+    const reason = prompt("What is the issue with this question? (e.g. Typo, Factually Incorrect)");
+    if (!reason) return;
+
+    try {
+        await db.collection('reports').add({
+            question: q.q,
+            reason: reason,
+            user: userId || 'anonymous',
+            date: getGameDate(),
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        alert("Report submitted. Thanks for helping improve the game!");
+    } catch (e) {
+        console.error("Error reporting:", e);
+        alert("Could not send report.");
+    }
 }
 
         function fireConfetti() {
@@ -3076,6 +3173,7 @@ function playOfflineJoin() {
             }
             if ("geolocation" in navigator) {
                 navigator.geolocation.getCurrentPosition(() => {}, () => {}, { timeout: 5000 });
+                determineUserLocation(); // Refresh IP location if they grant permissions
             }
             closePermissionsModal();
         }
