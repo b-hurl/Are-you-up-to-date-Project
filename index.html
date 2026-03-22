@@ -2356,6 +2356,10 @@ async function checkRemoteProgress(user) {
             const data = doc.data();
             remoteUserProgress = data; 
             
+            // SYNC STREAK: Ensure local storage matches cloud data immediately
+            if (data.currentStreak !== undefined) localStorage.setItem('trivia-streak', data.currentStreak);
+            if (data.lastPlayedDate) localStorage.setItem('trivia-last-date', data.lastPlayedDate);
+
             if (data.lastPlayedDate === today) {
                 // Determine played modes
                 let modes = data.playedModes || [];
@@ -2404,6 +2408,7 @@ async function checkRemoteProgress(user) {
                 
                 if (shouldSync) {
                     localStorage.setItem('trivia-session', JSON.stringify(data.currentSession));
+                    if (data.currentSession.currentStreak !== undefined) localStorage.setItem('trivia-streak', data.currentSession.currentStreak);
                     
                     // Restore global state
                     const s = data.currentSession;
@@ -2746,6 +2751,23 @@ function doLogout() {
 async function confirmLogout() {
     try {
         await auth.signOut();
+        
+        // 1. Clear all local game state
+        localStorage.removeItem('trivia-session');
+        localStorage.removeItem('trivia-streak');
+        localStorage.removeItem('trivia-last-date');
+        localStorage.removeItem('trivia-best');
+        localStorage.removeItem('trivia-name');
+        
+        // 2. Reset UI to Start Screen (Hide Results)
+        document.body.classList.remove('dimmed');
+        document.getElementById('results-card').classList.add('hidden');
+        document.getElementById('game-header').classList.add('hidden');
+        document.getElementById('main-card').classList.remove('hidden');
+        
+        updateTheme('casual');
+        showModeSelection();
+        
         closeSignOutModal();
         closeLoginModal();
     } catch (e) { console.error(e); }
