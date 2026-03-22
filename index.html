@@ -1592,6 +1592,10 @@ async function openWeeklyLeaderboard() {
             }
 
             return `
+                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/50 border border-slate-700/50 ${isMe ? 'ring-1 ring-emerald-500/50' : ''}">
+                    <div class="flex items-center gap-3">
+                        <span class="w-6 text-center font-bold text-slate-400">${rank}</span>
+                        <span class="font-bold ${isMe ? 'text-emerald-400' : 'text-white'}">${user.name}</span>
                 <div class="flex items-center justify-between px-4 rounded-xl border ${containerStyle} transition-all hover:scale-[1.01]">
                     <div class="flex items-center gap-4">
                         <div class="shrink-0 w-10 text-center">${rankIcon}</div>
@@ -1600,6 +1604,7 @@ async function openWeeklyLeaderboard() {
                             ${index === 0 ? '<span class="text-[9px] uppercase tracking-widest text-yellow-500 font-bold opacity-80">Current Leader</span>' : ''}
                         </div>
                     </div>
+                    <span class="font-mono font-bold text-primary-300">${user.totalScore} pts</span>
                     <span class="font-mono font-bold ${scoreStyle}">${user.totalScore} pts</span>
                 </div>`;
         }).join('');
@@ -3174,12 +3179,6 @@ function closeStats() {
         checkTutorial();
     </script>
 </body>
-</html>
-    </script>
-</body>
-</html>
-</body>
-</html>
-    </script>
+</html>ript>
 </body>
 </html> 
