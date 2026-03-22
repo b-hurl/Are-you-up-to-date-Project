@@ -2153,6 +2153,14 @@ function saveSession(isFinished = false, newMode = null) {
     localStorage.setItem('trivia-session', JSON.stringify(session));
     exportStateToURL();
 
+    // CLOUD SYNC: Save session to Firestore
+    if (auth && auth.currentUser) {
+        db.collection('users').doc(auth.currentUser.uid).set({
+            currentSession: session,
+            lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true }).catch(e => console.error("Cloud sync failed", e));
+    }
+
     if (isFinished) {
         archiveSession(session);
     }
@@ -2376,6 +2384,51 @@ async function checkRemoteProgress(user) {
                         if (desc) desc.innerHTML = '<span class="text-emerald-400 font-bold">✅ Completed</span>';
                     }
                 });
+            }
+
+            // CLOUD SYNC: Restore session if remote is newer/valid
+            if (data.currentSession && data.currentSession.date === today) {
+                const localJSON = localStorage.getItem('trivia-session');
+                const localSession = localJSON ? JSON.parse(localJSON) : null;
+                
+                // Check if we should sync (Remote exists, local is missing or behind)
+                let shouldSync = false;
+                if (!localSession || localSession.date !== today) {
+                    shouldSync = true;
+                } else {
+                    const remoteIdx = data.currentSession.currentIdx || 0;
+                    const localIdx = localSession.currentIdx || 0;
+                    if (data.currentSession.isFinished && !localSession.isFinished) shouldSync = true;
+                    else if (remoteIdx > localIdx) shouldSync = true;
+                }
+                
+                if (shouldSync) {
+                    localStorage.setItem('trivia-session', JSON.stringify(data.currentSession));
+                    
+                    // Restore global state
+                    const s = data.currentSession;
+                    gameData = { questions: s.shuffledQuestions };
+                    currentIdx = s.currentIdx;
+                    score = s.score;
+                    currentStreak = s.currentStreak;
+                    window.userChoices = s.userChoices || [];
+                    selectedIdx = s.selectedIdx;
+                    
+                    const lastMode = (s.playedModes && s.playedModes.length > 0) ? s.playedModes[s.playedModes.length - 1] : 'casual';
+                    updateTheme(lastMode);
+
+                    if (s.isFinished) {
+                        archiveSession(s);
+                        showFinalResults();
+                    } else {
+                        // Resume Game UI
+                        document.getElementById('mode-selection').classList.add('hidden');
+                        document.getElementById('question-text').classList.remove('hidden');
+                        document.getElementById('game-header').classList.remove('hidden');
+                        document.getElementById('score-display').innerText = `Score: ${score}`;
+                        renderQuestion();
+                    }
+                }
             }
         }
     } catch (e) { console.error("Error checking remote progress", e); }
