@@ -1,0 +1,173 @@
+[
+  {
+    "q": "Which sci-fi epic starring Ryan Gosling dominated the North American box office on March 22, 2026, earning an estimated $80.5 million in its opening weekend?",
+    "options": [
+      "The Martian 2",
+      "Project Hail Mary",
+      "Artemis",
+      "Dark Matter"
+    ],
+    "a": 1,
+    "category": "Movies",
+    "source": "https://lethbridgeherald.com/entertainment/entertainment-news/2026/03/22/box-office-project-hail-mary-blasts-off-with-80-5-million-a-best-for-amazon-mgm/"
+  },
+  {
+    "q": "On March 22, 2026, which iconic Canadian music retailer officially closed its Queen Street West location in Toronto after nearly 50 years in business?",
+    "options": [
+      "Sam the Record Man",
+      "HMV Canada",
+      "Steve's Music Store",
+      "Sunrise Records"
+    ],
+    "a": 2,
+    "category": "Music",
+    "source": "https://www.cp24.com/local/toronto/2026/03/22/steves-music-store-on-queen-street-closes-today-after-nearly-five-decades-why-music-lovers-say-its-tragic-to-see/"
+  },
+  {
+    "q": "Which wellness practice, based on the Japanese concept of Shinrin-yoku, was highlighted on March 22, 2026, as a growing trend for reducing stress in uncertain times?",
+    "options": [
+      "Forest bathing",
+      "Grounding",
+      "Sound healing",
+      "Digital detoxing"
+    ],
+    "a": 0,
+    "category": "Lifestyle",
+    "source": "https://www.ctvnews.ca/lifestyle/article/people-bathe-in-nature-to-get-respite-from-chaotic-news-cycle/"
+  },
+  {
+    "q": "In NCAA March Madness action on March 22, 2026, which #5 seed pulled off an upset against #4 seed Kansas to advance to the Sweet 16?",
+    "options": [
+      "St. John's",
+      "Alabama",
+      "Texas Tech",
+      "San Diego State"
+    ],
+    "a": 0,
+    "category": "Sports",
+    "source": "https://www.cbssports.com/college-basketball/news/march-madness-2026-second-round-live-updates-scores-bracket-sunday/live/"
+  },
+  {
+    "q": "Which star of 'Buffy the Vampire Slayer' was reported to have passed away at the age of 54 on March 22, 2026?",
+    "options": [
+      "James Marsters",
+      "David Boreanaz",
+      "Nicholas Brendon",
+      "Seth Green"
+    ],
+    "a": 2,
+    "category": "Celebrity",
+    "source": "https://www.latimes.com/california/story/2026-03-20/nicholas-brendon-star-in-buffy-vampire-slayer-dies-at-54"
+  },
+  {
+    "q": "On March 22, 2026, which Regina-based cultural event saw its largest post-pandemic turnout while raising funds for the ongoing conflict in Ukraine?",
+    "options": [
+      "Regina Folk Festival",
+      "Tavria Ukrainian Dance Festival",
+      "Mosaic: A Festival of Cultures",
+      "Regina Afrofest"
+    ],
+    "a": 1,
+    "category": "Pop Culture",
+    "location": {
+      "country": "Canada",
+      "city": "Regina",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.ctvnews.ca/regina/article/reginas-tavria-ukrainian-dance-festival-honours-those-fighting-lost-in-ukraine/"
+  },
+  {
+    "q": "On March 22, 2026, the Prince Albert Daily Herald reported that the Prince Albert Police Service had concluded a major operation that had restricted traffic in which area?",
+    "options": [
+      "800 block of Central Avenue",
+      "500 block of 13th Street East",
+      "West Hill leisure area",
+      "South Hill shopping district"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "location": {
+      "country": "Canada",
+      "city": "Prince Albert",
+      "region": "Saskatchewan"
+    },
+    "source": "https://paherald.sk.ca/increased-police-presence-on-13th-street-ended/"
+  },
+  {
+    "q": "On March 22, 2026, the Regina Police Service (RPS) announced that which missing person had been safely located unharmed?",
+    "options": [
+      "Annabella Desnomie-Wapemoose",
+      "Samuel Ironquill",
+      "Jessica Miller",
+      "Thomas Bear"
+    ],
+    "a": 0,
+    "category": "Politics",
+    "location": {
+      "country": "Canada",
+      "city": "Regina",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.reginapolice.ca/2026/03/22/update-missing-12-year-old-annabella-desnomie-wapemoose-located/"
+  },
+  {
+    "q": "Which credit ratings agency published a report on March 22, 2026, calling Saskatchewan's economy 'resilient' despite a projected $819 million deficit in the new budget?",
+    "options": [
+      "Moody's",
+      "Standard & Poor's",
+      "Morningstar DBRS",
+      "Fitch Ratings"
+    ],
+    "a": 2,
+    "category": "Economy",
+    "source": "https://www.cp24.com/news/canada/2026/03/22/saskatchewans-economy-deemed-resilient-by-credit-ratings-agency/"
+  },
+{
+    "q": "To mark World Water Day on March 22, 2026, Indigenous Services Canada highlighted the leadership of women in water stewardship and announced a $2.3 billion investment to renew which program?",
+    "options": [
+      "The Clean Water Act Initiative",
+      "The First Nations Water and Wastewater Enhanced Program",
+      "The Arctic Watershed Protection Fund",
+      "The Great Lakes Restoration Project"
+    ],
+    "a": 1,
+    "category": "Environment",
+    "source": "https://www.newswire.ca/news-releases/statement-on-world-water-day-2026-water-and-gender-804108258.html"
+  },
+  {
+    "q": "On March 22, 2026, global oil markets reacted sharply after which country threatened to 'completely close' the Strait of Hormuz following an ultimatum regarding its power plants?",
+    "options": [
+      "Saudi Arabia",
+      "Russia",
+      "Iran",
+      "Iraq"
+    ],
+    "a": 2,
+    "category": "Politics",
+    "source": "https://www.pbs.org/newshour/world/iran-threatens-to-completely-close-strait-of-hormuz-and-hit-power-plants-following-trumps-ultimatum"
+  },
+{
+    "q": "In a study published on March 22, 2026, researchers at New York University created a new type of 'time crystal' that breaks Newton’s Third Law of Motion by using what to levitate tiny beads?",
+    "options": [
+      "Quantum magnets",
+      "Sound waves",
+      "Liquid nitrogen",
+      "Static electricity"
+    ],
+    "a": 1,
+    "category": "Science",
+    "source": "https://www.sciencedaily.com/releases/2026/03/260322020258.htm"
+  },
+  {
+    "q": "A large-scale study published on March 22, 2026, revealed that GLP-1 medications like Ozempic may provide unexpected mental health benefits by significantly reducing the risk of what?",
+    "options": [
+      "Bipolar disorder",
+      "Depression and anxiety",
+      "Early-onset dementia",
+      "Sleep apnea"
+    ],
+    "a": 1,
+    "category": "Health",
+    "source": "https://www.sciencedaily.com/releases/2026/03/260322020250.htm"
+  }
+]
