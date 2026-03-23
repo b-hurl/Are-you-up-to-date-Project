@@ -85,11 +85,12 @@
     box-shadow: 0 6px 20px var(--primary-dim);
 }
         .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
-        body { transition: background-color 1s ease; }
+        body { transition: background-color 1s ease; background-color: #0f172a; }
+        body.theme-professional { background-color: #022c22; }
         body.dimmed { background-color: #020617 !important; }
     </style>
 </head>
-<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
+<body class="text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
 
     <!-- Dynamic Location Background -->
     <div id="dynamic-bg" class="fixed inset-0 z-0 bg-cover bg-center transition-all duration-1000 opacity-0 grayscale-[50%]"></div>
@@ -1029,17 +1030,25 @@ function renderQuestion() {
     
     // Dynamic Background Logic
     const bgDiv = document.getElementById('dynamic-bg');
+    // Reset Ken Burns effect instantly for next slide
+    bgDiv.style.transition = "none";
+    bgDiv.style.transform = "scale(1)";
+    bgDiv.offsetHeight; // Force reflow
+    bgDiv.style.transition = ""; // Revert to CSS class defaults
+
     const bgOverlay = document.getElementById('dynamic-bg-overlay');
+    const isPro = document.body.classList.contains('theme-professional');
+    const baseBg = isPro ? 'bg-emerald-950' : 'bg-slate-900';
     
     if (currentQ.location) {
         const locKeyword = currentQ.location.city || currentQ.location.region || currentQ.location.country;
         const safeKeyword = encodeURIComponent(locKeyword + " city scenic landmark");
         bgDiv.style.backgroundImage = `url('https://image.pollinations.ai/prompt/${safeKeyword}?width=1080&height=1920&nologo=true&seed=${currentIdx}')`;
         bgDiv.classList.remove('opacity-0');
-        bgOverlay.className = "fixed inset-0 z-0 bg-slate-900/80 transition-all duration-1000 pointer-events-none";
+        bgOverlay.className = `fixed inset-0 z-0 ${baseBg}/80 transition-all duration-1000 pointer-events-none`;
     } else {
         bgDiv.classList.add('opacity-0');
-        bgOverlay.className = "fixed inset-0 z-0 bg-slate-900/90 transition-all duration-1000 pointer-events-none";
+        bgOverlay.className = `fixed inset-0 z-0 ${baseBg}/90 transition-all duration-1000 pointer-events-none`;
     }
 
     const catDisplay = document.getElementById('category-display');
@@ -1064,7 +1073,6 @@ function renderQuestion() {
     // Clear action area to prevent duplicates on re-render
     document.getElementById('action-area').innerHTML = '';
     
-    const isPro = document.body.classList.contains('theme-professional');
     const themeColor = isPro ? 'emerald' : 'indigo';
     const confirmColor = isPro ? 'indigo' : 'emerald';
 
@@ -1106,6 +1114,13 @@ function confirmAnswer() {
     // Initialize the choices array if it doesn't exist
     if (!window.userChoices) window.userChoices = [];
     
+    // Trigger Ken Burns Zoom Effect
+    const bgDiv = document.getElementById('dynamic-bg');
+    if (bgDiv) {
+        bgDiv.style.transition = "transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease";
+        bgDiv.style.transform = "scale(1.15)";
+    }
+
     // SAVE the user's current selection index
     window.userChoices.push(selectedIdx);
 
