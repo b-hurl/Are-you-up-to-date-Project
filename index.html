@@ -1117,8 +1117,10 @@ function confirmAnswer() {
     // Trigger Ken Burns Zoom Effect
     const bgDiv = document.getElementById('dynamic-bg');
     if (bgDiv) {
+        const panX = (Math.random() * 40) - 20; // Random shift -20px to 20px
+        const panY = (Math.random() * 40) - 20;
         bgDiv.style.transition = "transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 1s ease";
-        bgDiv.style.transform = "scale(1.15)";
+        bgDiv.style.transform = `scale(1.2) translate(${panX}px, ${panY}px)`;
     }
 
     // SAVE the user's current selection index
