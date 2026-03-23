@@ -164,6 +164,9 @@
     <!-- Weekly Leaderboard Modal -->
     <div id="weekly-leaderboard-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-md w-full shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col max-h-[80vh]">
+            <button onclick="openWeeklyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500 z-10" title="Refresh">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            </button>
             <button onclick="closeWeeklyLeaderboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
             <div class="text-center mb-6">
                 <h2 class="text-2xl font-black text-white mb-1">Weekly Standings</h2>
@@ -347,6 +350,24 @@
                 <button onclick="doLogout()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3">Sign Out</button>
                 <button onclick="deleteAccount()" class="w-full bg-red-900/20 hover:bg-red-900/40 text-red-400 border border-red-500/20 py-3 rounded-xl font-bold text-sm transition-all">Delete Account</button>
             </div>
+        </div>
+    </div>
+
+    <!-- Post Login Name Modal -->
+    <div id="post-login-modal" class="fixed inset-0 z-[65] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">👋</div>
+            <h2 class="text-2xl font-black text-white mb-2">Welcome!</h2>
+            <p class="text-slate-300 text-sm mb-6">How should we call you on the leaderboard?</p>
+            
+            <div class="mb-4 relative text-left">
+                <label class="text-[10px] text-slate-400 font-bold uppercase ml-1 mb-1 block">Display Name</label>
+                <input type="text" id="post-login-name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" oninput="updateCharCounter(this, 'post-login-counter')">
+                <span id="post-login-counter" class="absolute right-3 bottom-3 text-xs text-slate-500">0/15</span>
+            </div>
+
+            <button onclick="saveProfileName()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all mb-3">Looks Good!</button>
+            <button onclick="closePostLoginModal()" class="text-xs text-slate-400 hover:text-white transition-colors">Skip (Use Default)</button>
         </div>
     </div>
 
@@ -571,7 +592,7 @@
     </div>
 
     <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity">
-        <a href="mailto:support@example.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact & Feedback</a>
+        <a href="mailto:bfehurl@gmail.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact & Feedback</a>
     </footer>
 
     <script>
@@ -602,6 +623,7 @@
         let currentHistoryFilter = 'all';
         let currentInviteGroupId = null;
         let remoteUserProgress = null;
+        let leaderboardMode = 'casual';
 
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
@@ -1161,6 +1183,7 @@ function showFinalResults() {
     const playedModes = session.playedModes || [];
     const otherModeSection = document.getElementById('play-other-mode-section');
     const otherModeBtn = document.getElementById('play-other-mode-btn');
+    leaderboardMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
 
     if (playedModes.length === 1) {
         const otherMode = playedModes[0] === 'casual' ? 'professional' : 'casual';
@@ -1370,6 +1393,8 @@ async function submitScore() {
                     💬 Add a Taunt
                 </button>
             </div>`;
+        
+        leaderboardMode = lastMode;
         fetchAndDisplayLeaderboard(); // Refresh the leaderboard with the new score
     } catch (error) {
         console.error("Error submitting score: ", error);
@@ -1506,6 +1531,11 @@ async function fetchAndDisplayLeaderboard() {
     try {
         // Show Invite Button + Loading
         display.innerHTML = `
+            <div class="mx-auto mb-3 w-44 p-1 flex justify-between items-center bg-slate-900/40 rounded-full border border-slate-700/50 relative">
+                <div class="absolute top-1 left-1 h-7 w-[calc(50%-4px)] rounded-full transition-all duration-300 ease-in-out ${leaderboardMode === 'casual' ? 'translate-x-0 bg-indigo-600' : 'translate-x-full bg-emerald-600'}"></div>
+                <button onclick="switchLeaderboardMode('casual')" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'casual' ? 'text-white' : 'text-slate-400 hover:text-white'}">Casual</button>
+                <button onclick="switchLeaderboardMode('professional')" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'professional' ? 'text-white' : 'text-slate-400 hover:text-white'}">Pro</button>
+            </div>
             <div class="mb-3 flex flex-wrap justify-center gap-2">
                 <button onclick="openInviteModal('${currentGroup.id}')" id="invite-btn" class="group relative text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30 transition-all">
                     📨 Invite Friends
@@ -1538,6 +1568,7 @@ async function fetchAndDisplayLeaderboard() {
             const d = doc.data();
             // Filter if daily
             if (d.date !== todayDate) return;
+            if ((d.mode || 'casual') !== leaderboardMode) return;
 
             if (!userTotals[d.userId]) {
                 userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0, games: 0 };
@@ -1558,6 +1589,11 @@ async function fetchAndDisplayLeaderboard() {
         // 4. Render
         // Keep invite button at top
         const inviteBtnHTML = `
+            <div class="mx-auto mb-3 w-44 p-1 flex justify-between items-center bg-slate-900/40 rounded-full border border-slate-700/50 relative">
+                <div class="absolute top-1 left-1 h-7 w-[calc(50%-4px)] rounded-full transition-all duration-300 ease-in-out ${leaderboardMode === 'casual' ? 'translate-x-0 bg-indigo-600' : 'translate-x-full bg-emerald-600'}"></div>
+                <button onclick="switchLeaderboardMode('casual')" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'casual' ? 'text-white' : 'text-slate-400 hover:text-white'}">Casual</button>
+                <button onclick="switchLeaderboardMode('professional')" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'professional' ? 'text-white' : 'text-slate-400 hover:text-white'}">Pro</button>
+            </div>
             <div class="mb-3 flex flex-wrap justify-center gap-2">
                 <button onclick="openInviteModal('${currentGroup.id}')" id="invite-btn" class="group relative text-[10px] bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded-full uppercase tracking-wider text-primary-300 font-bold border border-primary-500/30 transition-all">
                     📨 Invite Friends
@@ -1638,6 +1674,17 @@ async function fetchAndDisplayLeaderboard() {
     }
 }
 
+function switchLeaderboardMode(mode) {
+    leaderboardMode = mode;
+    fetchAndDisplayLeaderboard();
+}
+
+function switchWeeklyLeaderboardMode(mode) {
+    leaderboardMode = mode;
+    openWeeklyLeaderboard();
+    fetchAndDisplayLeaderboard();
+}
+
 async function openWeeklyLeaderboard() {
     const modal = document.getElementById('weekly-leaderboard-modal');
     const content = document.getElementById('weekly-leaderboard-content');
@@ -1656,17 +1703,58 @@ async function openWeeklyLeaderboard() {
     }
     if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
     const currentGroup = groups[currentGroupIndex];
-    const currentWeek = getWeekId(getGameDate());
+    const todayStr = getGameDate();
+    const toggleHTML = `
+            <div class="mx-auto mb-4 w-44 p-1 flex justify-between items-center bg-slate-900/40 rounded-full border border-slate-700/50 relative">
+                <div class="absolute top-1 left-1 h-7 w-[calc(50%-4px)] rounded-full transition-all duration-300 ease-in-out ${leaderboardMode === 'casual' ? 'translate-x-0 bg-indigo-600' : 'translate-x-full bg-emerald-600'}"></div>
+                <button onclick="switchWeeklyLeaderboardMode('casual')" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'casual' ? 'text-white' : 'text-slate-400 hover:text-white'}">Casual</button>
+                <button onclick="switchWeeklyLeaderboardMode('professional')" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'professional' ? 'text-white' : 'text-slate-400 hover:text-white'}">Pro</button>
+            </div>`;
+    const currentWeek = getWeekId(todayStr);
+
+    // Calculate Previous Week ID
+    const dateParts = todayStr.split('-').map(Number);
+    const d = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
+    d.setUTCDate(d.getUTCDate() - 7);
+    const prevWeekId = getWeekId(d.toISOString().split('T')[0]);
 
     try {
-        const snapshot = await db.collection('scores')
+        // Fetch Current and Previous Week in parallel
+        const [currentSnapshot, prevSnapshot] = await Promise.all([
+            db.collection('scores')
             .where('groupIds', 'array-contains', currentGroup.id)
             .where('weekId', '==', currentWeek)
-            .get();
+            .get(),
+            db.collection('scores')
+            .where('groupIds', 'array-contains', currentGroup.id)
+            .where('weekId', '==', prevWeekId)
+            .get()
+        ]);
+
+        // Process Previous Week Winner
+        let prevWinnerHTML = '';
+        if (!prevSnapshot.empty) {
+            const prevTotals = {};
+            prevSnapshot.forEach(doc => {
+                const data = doc.data();
+                if ((data.mode || 'casual') !== leaderboardMode) return;
+                if (!prevTotals[data.userId]) prevTotals[data.userId] = { name: data.name, score: 0, maxTimestamp: 0 };
+                prevTotals[data.userId].score += (data.score || 0);
+                if (data.timestamp && data.timestamp.seconds > prevTotals[data.userId].maxTimestamp) {
+                    prevTotals[data.userId].maxTimestamp = data.timestamp.seconds;
+                }
+            });
+            const sortedPrev = Object.values(prevTotals).sort((a, b) => (b.score !== a.score) ? b.score - a.score : a.maxTimestamp - b.maxTimestamp);
+            if (sortedPrev.length > 0) {
+                const winner = sortedPrev[0];
+                prevWinnerHTML = `<div class="mb-6 p-4 rounded-2xl bg-gradient-to-r from-yellow-900/40 to-slate-900 border border-yellow-500/30 text-center relative overflow-hidden"><div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yellow-500 to-transparent opacity-50"></div><p class="text-[10px] uppercase tracking-widest text-yellow-500 font-bold mb-1">Last Week's Champion</p><div class="text-3xl mb-1">👑</div><h3 class="text-xl font-black text-white">${winner.name}</h3><p class="text-yellow-400 font-mono font-bold text-sm">${winner.score} pts</p></div>`;
+            }
+        }
 
         const userTotals = {};
-        snapshot.forEach(doc => {
+        currentSnapshot.forEach(doc => {
             const d = doc.data();
+            if ((d.mode || 'casual') !== leaderboardMode) return;
             if (!userTotals[d.userId]) {
                 userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0 };
             }
@@ -1676,12 +1764,7 @@ async function openWeeklyLeaderboard() {
 
         const sortedUsers = Object.values(userTotals).sort((a, b) => b.totalScore - a.totalScore);
         
-        if (sortedUsers.length === 0) {
-            content.innerHTML = '<p class="text-center text-slate-400">No scores this week yet.</p>';
-            return;
-        }
-
-        content.innerHTML = sortedUsers.map((user, index) => {
+        const listHTML = sortedUsers.length === 0 ? '<p class="text-center text-slate-400">No scores this week yet.</p>' : sortedUsers.map((user, index) => {
             const isMe = user.id === userId;
             const rank = index === 0 ? '🥇' : (index === 1 ? '🥈' : (index === 2 ? '🥉' : `${index + 1}.`));
             
@@ -1715,10 +1798,6 @@ async function openWeeklyLeaderboard() {
             }
 
             return `
-                <div class="flex items-center justify-between p-3 rounded-xl bg-slate-900/50 border border-slate-700/50 ${isMe ? 'ring-1 ring-emerald-500/50' : ''}">
-                    <div class="flex items-center gap-3">
-                        <span class="w-6 text-center font-bold text-slate-400">${rank}</span>
-                        <span class="font-bold ${isMe ? 'text-emerald-400' : 'text-white'}">${user.name}</span>
                 <div class="flex items-center justify-between px-4 rounded-xl border ${containerStyle} transition-all hover:scale-[1.01]">
                     <div class="flex items-center gap-4">
                         <div class="shrink-0 w-10 text-center">${rankIcon}</div>
@@ -1727,13 +1806,15 @@ async function openWeeklyLeaderboard() {
                             ${index === 0 ? '<span class="text-[9px] uppercase tracking-widest text-yellow-500 font-bold opacity-80">Current Leader</span>' : ''}
                         </div>
                     </div>
-                    <span class="font-mono font-bold text-primary-300">${user.totalScore} pts</span>
                     <span class="font-mono font-bold ${scoreStyle}">${user.totalScore} pts</span>
                 </div>`;
         }).join('');
 
+        content.innerHTML = toggleHTML + prevWinnerHTML + listHTML;
+
     } catch (e) {
-        content.innerHTML = '<p class="text-center text-red-400">Error loading data.</p>';
+        console.error(e);
+        content.innerHTML = toggleHTML + '<p class="text-center text-red-400">Error loading data.</p>';
     }
 }
 
@@ -2697,6 +2778,25 @@ function initFirebase() {
     auth = firebase.auth();
     userId = getOrSetUserId();
 
+    // Check for redirect result (useful for in-app browsers)
+    auth.getRedirectResult().then((result) => {
+        if (result.user) {
+            closeLoginModal();
+            openPostLoginModal(result.user);
+        }
+    }).catch((error) => {
+        console.error("Redirect Login Error:", error);
+        let msg = error.message;
+        if (error.code === 'auth/account-exists-with-different-credential') {
+            msg = "An account already exists with this email. Please sign in using the Email option below.";
+        }
+        // Open modal to show error if redirect failed
+        toggleLoginModal();
+        const errDisplay = document.getElementById('auth-error');
+        errDisplay.innerText = msg;
+        errDisplay.classList.remove('hidden');
+    });
+
     // CHECK FOR INVITE LINK
     const urlParams = new URLSearchParams(window.location.search);
     const inviteGroup = urlParams.get('group');
@@ -2828,10 +2928,22 @@ async function socialLogin(providerName) {
         provider.setCustomParameters({ prompt: 'select_account' });
     }
     
+    if (isInAppBrowser()) {
+        try {
+            await auth.signInWithRedirect(provider);
+            return;
+        } catch (error) {
+            console.error("Redirect Init Error:", error);
+            // Fallback to popup if redirect fails
+        }
+    }
+
     try {
-        await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-        await auth.signInWithPopup(provider);
+        // Persistence is LOCAL by default. Awaiting here causes delay that triggers popup blockers.
+        const result = await auth.signInWithPopup(provider);        
+        
         closeLoginModal();
+        openPostLoginModal(result.user);
     } catch (error) {
         console.error("Login Error:", error);
         let msg = error.message;
@@ -2843,6 +2955,8 @@ async function socialLogin(providerName) {
             msg = "This domain is not authorized. Add it in Firebase Console > Auth > Settings.";
         } else if (error.code === 'auth/account-exists-with-different-credential') {
             msg = "An account already exists with this email. Please sign in using the Email option below.";
+        } else if (error.code === 'auth/popup-blocked') {
+            msg = "Login popup was blocked. Please allow popups for this site or try a different browser.";
         } else if (error.message && error.message.includes("missing initial state")) {
             msg = "Browser privacy settings blocked the login. Please try disabling ad-blockers or allow cookies.";
         }
@@ -2987,6 +3101,54 @@ function togglePasswordVisibility() {
         openIcon.classList.remove('hidden');
         closedIcon.classList.add('hidden');
     }
+}
+
+function openPostLoginModal(user) {
+    const modal = document.getElementById('post-login-modal');
+    const input = document.getElementById('post-login-name');
+    
+    // Pre-fill with existing name from provider
+    input.value = user.displayName || "Player";
+    updateCharCounter(input, 'post-login-counter');
+
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+    }, 10);
+}
+
+async function saveProfileName() {
+    const input = document.getElementById('post-login-name');
+    const name = input.value.trim();
+    
+    const validation = isNameValid(name);
+    if (!validation.valid) {
+        alert(validation.message);
+        return;
+    }
+
+    const user = firebase.auth().currentUser;
+    if (user) {
+        try {
+            await user.updateProfile({ displayName: name });
+            localStorage.setItem('trivia-name', name);
+            
+            const nameInput = document.getElementById('player-name');
+            if (nameInput) nameInput.value = name;
+            document.getElementById('user-email-display').innerText = user.email || "Linked Account";
+        } catch (e) { console.error("Error updating name", e); }
+    }
+    closePostLoginModal();
+}
+
+function closePostLoginModal() {
+    const modal = document.getElementById('post-login-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
 }
 
 function doLogout() {
