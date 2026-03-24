@@ -1517,6 +1517,9 @@ async function fetchAndDisplayLeaderboard() {
     if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
     const currentGroup = groups[currentGroupIndex];
 
+    // AUTO-HEAL: If the groups collection was deleted, restore this group from local data
+    healGroupMetadata(currentGroup.id, currentGroup.name);
+
     // Update Title with Switcher UI
     const switcherHTML = groups.length > 1 
         ? `<div class="flex items-center justify-center gap-2 mt-1">
@@ -1816,6 +1819,27 @@ async function openWeeklyLeaderboard() {
         console.error(e);
         content.innerHTML = toggleHTML + '<p class="text-center text-red-400">Error loading data.</p>';
     }
+}
+
+async function healGroupMetadata(groupId, groupName) {
+    // Prevent spamming reads/writes: Only check once per session per group
+    const key = `trivia-healed-${groupId}`;
+    if (sessionStorage.getItem(key)) return;
+
+    try {
+        const docRef = db.collection('groups').doc(groupId);
+        const doc = await docRef.get();
+        
+        if (!doc.exists) {
+            console.log(`Restoring missing group: ${groupName}`);
+            await docRef.set({
+                name: groupName,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+                restored: true
+            });
+        }
+        sessionStorage.setItem(key, 'true');
+    } catch (e) { console.warn("Group heal skipped", e); }
 }
 
 function closeWeeklyLeaderboard() {
