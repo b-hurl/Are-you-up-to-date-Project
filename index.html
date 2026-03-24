@@ -85,36 +85,11 @@
     box-shadow: 0 6px 20px var(--primary-dim);
 }
         .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
-        body { transition: background-color 1s ease; background-color: #0f172a; }
+        body { transition: background-color 1s ease; }
         body.dimmed { background-color: #020617 !important; }
-
-        /* Dramatic Grayscale Effect for Wrong Answers */
-        body.wrong-answer-effect #dynamic-bg,
-        body.wrong-answer-effect #dynamic-bg-overlay,
-        body.wrong-answer-effect #game-header,
-        body.wrong-answer-effect #category-display,
-        body.wrong-answer-effect #question-text,
-        body.wrong-answer-effect footer,
-        body.wrong-answer-effect .option-btn:not(.correct):not(.incorrect) {
-            filter: grayscale(100%);
-            opacity: 0.4;
-            transition: filter 0.5s ease, opacity 0.5s ease;
-        }
-        body.wrong-answer-effect {
-            background-color: #000000 !important;
-        }
-        body.wrong-answer-effect #main-card {
-            background-color: #1c1917 !important; /* Force neutral gray bg */
-            border-color: #44403c !important;
-            transition: background-color 0.5s ease;
-        }
     </style>
 </head>
-<body class="text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
-
-    <!-- Dynamic Location Background -->
-    <div id="dynamic-bg" class="fixed inset-0 z-0 bg-cover bg-center transition-all duration-1000 opacity-0 grayscale-[50%]"></div>
-    <div id="dynamic-bg-overlay" class="fixed inset-0 z-0 bg-slate-900/90 transition-all duration-1000 pointer-events-none"></div>
+<body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
 
     <!-- Tutorial Modal -->
     <div id="tutorial-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
@@ -327,12 +302,6 @@
                 <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Sync Stats & Leaderboards</p>
             </div>
             
-            <div class="mb-4 relative">
-                <label class="text-[10px] text-slate-400 font-bold uppercase ml-1 mb-1 block">Display Name (Optional)</label>
-                <input type="text" id="social-auth-name" placeholder="Name for Leaderboard" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" oninput="updateCharCounter(this, 'social-name-counter')">
-                <span id="social-name-counter" class="absolute right-3 bottom-3 text-xs text-slate-500">0/15</span>
-            </div>
-
             <div id="login-options" class="space-y-3 mb-6">
                 <button onclick="socialLogin('google')" class="w-full bg-white text-gray-700 hover:bg-gray-50 py-3 rounded-xl font-bold flex items-center justify-center gap-3 transition-all relative overflow-hidden">
                     <svg class="w-5 h-5" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
@@ -484,7 +453,7 @@
         <span id="mute-icon" class="text-xl">🔊</span>
     </button>
 
-    <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative z-10">
+    <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative">
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
             <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
@@ -544,7 +513,7 @@
         </div>
     </div>
 
-    <div id="results-card" class="hidden w-full max-w-md text-center bg-slate-800 rounded-3xl shadow-2xl p-10 border border-slate-700 relative z-10">
+    <div id="results-card" class="hidden w-full max-w-md text-center bg-slate-800 rounded-3xl shadow-2xl p-10 border border-slate-700">
         <div class="text-5xl mb-4" id="result-emoji">🏆</div>
         <h2 class="text-3xl font-black mb-2">Daily Complete!</h2>
         
@@ -622,7 +591,7 @@
         </div>
     </div>
 
-    <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity relative z-10">
+    <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity">
         <a href="mailto:support@example.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact & Feedback</a>
     </footer>
 
@@ -778,7 +747,7 @@
             } catch (e) { return null; }
         }
 
-        async function selectMode(mode) {
+        function selectMode(mode) {
             const btn = document.getElementById(`btn-mode-${mode}`);
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
 
@@ -802,9 +771,6 @@
             
             const CASUAL_CATS = ['Entertainment', 'Gaming', 'Sports', 'Lifestyle', 'Reality TV', 'Music', 'Movies', 'Celebrity', 'Pop Culture'];
             const PRO_CATS = ['Economy', 'Politics', 'Business', 'World', 'Technology', 'Environment', 'Weather', 'Science', 'Health', 'Finance'];
-
-            // Ensure location is ready before filtering
-            await determineUserLocation();
 
             // Filter questions based on mode
             updateTheme(mode);
@@ -1044,50 +1010,13 @@ function renderQuestion() {
         return;
     }
 
-    // Reset visual effects from previous question
-    document.body.classList.remove('wrong-answer-effect');
-
     const currentQ = gameData.questions[currentIdx];
     document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
     document.getElementById('question-text').innerText = currentQ.q;
     
-    // Dynamic Background Logic
-    const bgDiv = document.getElementById('dynamic-bg');
-    // Reset Ken Burns effect instantly for next slide
-    bgDiv.style.transition = "none";
-    bgDiv.style.transform = "scale(1)";
-    bgDiv.offsetHeight; // Force reflow
-    bgDiv.style.transition = ""; // Revert to CSS class defaults
-
-    const bgOverlay = document.getElementById('dynamic-bg-overlay');
-    const isPro = document.body.classList.contains('theme-professional');
-    const baseBg = 'bg-slate-900';
-    
-    let promptText = "";
-    if (currentQ.location) {
-        const locKeyword = currentQ.location.city || currentQ.location.region || currentQ.location.country;
-        promptText = locKeyword + " city scenic landmark";
-    } else {
-        const cat = currentQ.category || "knowledge";
-        promptText = cat + " concept art wallpaper minimal";
-    }
-
-    const safeKeyword = encodeURIComponent(promptText);
-    bgDiv.style.backgroundImage = `url('https://image.pollinations.ai/prompt/${safeKeyword}?width=1080&height=1920&nologo=true&seed=${currentIdx}')`;
-    bgDiv.classList.remove('opacity-0');
-    bgOverlay.className = `fixed inset-0 z-0 ${baseBg}/80 transition-all duration-1000 pointer-events-none`;
-
     const catDisplay = document.getElementById('category-display');
-    const catSpan = catDisplay.querySelector('span');
-
-    if (currentQ.location) {
-        const locName = currentQ.location.city || currentQ.location.region || 'Local';
-        catSpan.innerHTML = `📍 ${locName} <span class="opacity-50 mx-1">•</span> ${currentQ.category || ''}`;
-        catSpan.className = "inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-500/30 shadow-[0_0_10px_rgba(16,185,129,0.2)]";
-        catDisplay.classList.remove('hidden');
-    } else if (currentQ.category) {
-        catSpan.innerText = currentQ.category;
-        catSpan.className = "inline-block bg-primary-500/20 text-primary-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-primary-500/30";
+    if (currentQ.category) {
+        catDisplay.querySelector('span').innerText = currentQ.category;
         catDisplay.classList.remove('hidden');
     } else {
         catDisplay.classList.add('hidden');
@@ -1099,6 +1028,7 @@ function renderQuestion() {
     // Clear action area to prevent duplicates on re-render
     document.getElementById('action-area').innerHTML = '';
     
+    const isPro = document.body.classList.contains('theme-professional');
     const themeColor = isPro ? 'emerald' : 'indigo';
     const confirmColor = isPro ? 'indigo' : 'emerald';
 
@@ -1140,16 +1070,6 @@ function confirmAnswer() {
     // Initialize the choices array if it doesn't exist
     if (!window.userChoices) window.userChoices = [];
     
-    // Trigger Ken Burns Zoom Effect
-    const bgDiv = document.getElementById('dynamic-bg');
-    if (bgDiv) {
-        const panX = (Math.random() * 50) - 25; 
-        const panY = (Math.random() * 50) - 25;
-        // Faster transition (3s) to be noticeable during the 1.5s result delay
-        bgDiv.style.transition = "transform 3s ease-out";
-        bgDiv.style.transform = `scale(1.25) translate(${panX}px, ${panY}px)`;
-    }
-
     // SAVE the user's current selection index
     window.userChoices.push(selectedIdx);
 
@@ -1183,7 +1103,6 @@ function confirmAnswer() {
         
         // Highlight the correct answer if the user chose wrong
         const currentQ = gameData.questions[currentIdx];
-        document.body.classList.add('wrong-answer-effect'); // Trigger B&W mode
         buttons.forEach(btn => {
             if (btn.innerText === currentQ.correctText) {
                 btn.classList.add('correct');
@@ -1214,8 +1133,6 @@ function confirmAnswer() {
 function showFinalResults() {
 // Force the UI to switch to results mode
     document.body.classList.add('dimmed');
-    document.body.classList.remove('wrong-answer-effect');
-
     document.getElementById('main-card').classList.add('hidden');
     document.getElementById('game-header').classList.add('hidden'); // Hide the score/progress bar
     document.getElementById('results-card').classList.remove('hidden');
@@ -2861,6 +2778,28 @@ function initFirebase() {
     auth = firebase.auth();
     userId = getOrSetUserId();
 
+    // Check for redirect result (useful for in-app browsers)
+    auth.getRedirectResult().then((result) => {
+        if (result.user) {
+            closeLoginModal();
+            // Only prompt for name if it's a new user or they don't have one
+            if ((result.additionalUserInfo && result.additionalUserInfo.isNewUser) || !result.user.displayName) {
+                openPostLoginModal(result.user);
+            }
+        }
+    }).catch((error) => {
+        console.error("Redirect Login Error:", error);
+        let msg = error.message;
+        if (error.code === 'auth/account-exists-with-different-credential') {
+            msg = "An account already exists with this email. Please sign in using the Email option below.";
+        }
+        // Open modal to show error if redirect failed
+        toggleLoginModal();
+        const errDisplay = document.getElementById('auth-error');
+        errDisplay.innerText = msg;
+        errDisplay.classList.remove('hidden');
+    });
+
     // CHECK FOR INVITE LINK
     const urlParams = new URLSearchParams(window.location.search);
     const inviteGroup = urlParams.get('group');
@@ -2981,19 +2920,6 @@ function closeLoginModal() {
 }
 
 async function socialLogin(providerName) {
-    // Capture and validate custom name if provided
-    const customNameInput = document.getElementById('social-auth-name');
-    const customName = customNameInput ? customNameInput.value.trim() : '';
-
-    if (customName) {
-        const nameValidation = isNameValid(customName);
-        if (!nameValidation.valid) {
-            document.getElementById('auth-error').innerText = nameValidation.message;
-            document.getElementById('auth-error').classList.remove('hidden');
-            return;
-        }
-    }
-
     let provider;
     if (providerName === 'google') {
         provider = new firebase.auth.GoogleAuthProvider();
@@ -3005,20 +2931,25 @@ async function socialLogin(providerName) {
         provider.setCustomParameters({ prompt: 'select_account' });
     }
     
-    try {
-        await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-        const result = await auth.signInWithPopup(provider);  
-        
-        // If user provided a custom name, update their profile
-        if (customName) {
-            await result.user.updateProfile({ displayName: customName });
-            localStorage.setItem('trivia-name', customName);
-            const playerNameInput = document.getElementById('player-name');
-            if (playerNameInput) playerNameInput.value = customName;
+    if (isInAppBrowser()) {
+        try {
+            await auth.signInWithRedirect(provider);
+            return;
+        } catch (error) {
+            console.error("Redirect Init Error:", error);
+            // Fallback to popup if redirect fails
         }
+    }
+
+    try {
+        // Persistence is LOCAL by default. Awaiting here causes delay that triggers popup blockers.
+        const result = await auth.signInWithPopup(provider);        
         
         closeLoginModal();
-        openPostLoginModal(result.user);
+        // Only prompt for name if it's a new user or they don't have one
+        if ((result.additionalUserInfo && result.additionalUserInfo.isNewUser) || !result.user.displayName) {
+            openPostLoginModal(result.user);
+        }
     } catch (error) {
         console.error("Login Error:", error);
         let msg = error.message;
@@ -3030,6 +2961,8 @@ async function socialLogin(providerName) {
             msg = "This domain is not authorized. Add it in Firebase Console > Auth > Settings.";
         } else if (error.code === 'auth/account-exists-with-different-credential') {
             msg = "An account already exists with this email. Please sign in using the Email option below.";
+        } else if (error.code === 'auth/popup-blocked') {
+            msg = "Login popup was blocked. Please allow popups for this site or try a different browser.";
         } else if (error.message && error.message.includes("missing initial state")) {
             msg = "Browser privacy settings blocked the login. Please try disabling ad-blockers or allow cookies.";
         }
