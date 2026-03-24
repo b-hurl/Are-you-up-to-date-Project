@@ -1,0 +1,156 @@
+[
+  {
+    "q": "On March 23, 2026, which luxury cruise brand announced an exclusive partnership with celebrity fashion stylist Micaela Erlanger to define 'style at sea'?",
+    "options": [
+      "Royal Caribbean",
+      "Cunard",
+      "Viking Cruises",
+      "Celebrity Cruises"
+    ],
+    "a": 1,
+    "category": "Lifestyle",
+    "source": "https://www.newswire.ca/news-releases/entertainment-media-latest-news/entertainment-list/"
+  },
+{
+    "q": "What is the title of the new Netflix documentary featuring BTS that was officially announced to the public on March 23, 2026?",
+    "options": [
+      "Beyond the Stage",
+      "The Return",
+      "Permission to Dance",
+      "Seven Phases"
+    ],
+    "a": 1,
+    "category": "Music",
+    "source": "https://apnews.com/entertainment"
+  },
+  {
+    "q": "In a legal development on March 23, 2026, a California civil jury found which former TV icon liable for a 1972 sexual assault, awarding the victim over $19 million?",
+    "options": [
+      "Bill Cosby",
+      "Harvey Weinstein",
+      "Danny Masterson",
+      "Kevin Spacey"
+    ],
+    "a": 0,
+    "category": "Celebrity",
+    "source": "https://www.newswire.ca/news-releases/entertainment-media-latest-news/entertainment-list/"
+  },
+{
+    "q": "On March 23, 2026, which NHL legend became only the second player in league history to reach the 1,000-goal milestone (regular season and playoffs combined)?",
+    "options": [
+      "Sidney Crosby",
+      "Connor McDavid",
+      "Alex Ovechkin",
+      "Jaromir Jagr"
+    ],
+    "a": 2,
+    "category": "Sports",
+    "source": "https://media.nhl.com/public/news/19639"
+  },
+{
+    "q": "Disney released a new trailer on March 23, 2026, for the live-action adaptation of which beloved animated film, starring Catherine Lagaʻaia and Dwayne Johnson?",
+    "options": [
+      "Moana",
+      "Lilo & Stitch",
+      "Hercules",
+      "The Princess and the Frog"
+    ],
+    "a": 0,
+    "category": "Movies",
+    "source": "https://www.justjared.com/2026/03/23/moana-trailer-catherine-lagaaia-dwayne-johnson-star-in-new-disney-live-action-movie-watch-now/"
+  },
+  {
+    "q": "On March 23, 2026, Regina Public Schools expressed disappointment after the provincial government paused several projects, including major renovations to which collegiate?",
+    "options": [
+      "Balfour Collegiate",
+      "Campbell Collegiate",
+      "Thom Collegiate",
+      "Johnson Collegiate"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "location": {
+      "country": "Canada",
+      "city": "Regina",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.620ckrm.com/2026/03/23/disappointing-regina-public-schools-faces-delays-to-multiple-projects/"
+  },
+  {
+    "q": "On March 23, 2026, the Saskatchewan Conservation Officer Service donated 326 pounds of elk meat to the Salvation Army in Prince Albert following a fire at which location?",
+    "options": [
+      "The Rawlinson Centre",
+      "The Victoria Hospital",
+      "The Salvation Army building",
+      "The Midtown Community Centre"
+    ],
+    "a": 2,
+    "category": "Lifestyle",
+    "location": {
+      "country": "Canada",
+      "city": "Prince Albert",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.mbcradio.com/2026/03/elk-donation-helps-prince-albert-after-christmas-day-fire"
+  },
+  {
+    "q": "On March 23, 2026, the Government of Canada announced it is extending a 40% increase to which financial support program for the 2026-27 academic year to help approximately 571,000 students?",
+    "options": [
+      "Canada Student Grants",
+      "Canada Workers Benefit",
+      "Canada Child Benefit",
+      "Canada Training Credit"
+    ],
+    "a": 0,
+    "category": "Finance",
+    "source": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-extends-financial-supports-for-post-secondary-students.html"
+  },
+  {
+    "q": "Which Canadian railway company published its 'Climate Insights' report on March 23, 2026, highlighting the deployment of 100 new Tier 4 locomotives to reduce carbon emissions?",
+    "options": [
+      "CN Rail",
+      "CPKC (Canadian Pacific Kansas City)",
+      "Via Rail",
+      "Ontario Northland"
+    ],
+    "a": 1,
+    "category": "Environment",
+    "source": "https://www.newswire.ca/news-releases/cpkc-publishes-update-on-low-carbon-transition-strategy-830006430.html"
+  },
+{
+    "q": "On March 23, 2026, representatives from eighteen countries met in Montréal to begin in-person negotiations for the creation of which new multilateral financial institution?",
+    "options": [
+      "The Global Green Energy Bank",
+      "The Defence, Security and Resilience Bank (DSRB)",
+      "The NATO Infrastructure Fund",
+      "The Arctic Sovereignty Reserve"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "source": "https://www.canada.ca/en/department-finance/news/2026/03/canada-hosts-partners-to-advance-establishment-of-the-defence-security-and-resilience-bank.html"
+  },
+  {
+    "q": "In a March 23, 2026, industry report, Montreal-based tech firm Alithya noted that what technology is now the 'center of every long-term strategy' for Canadian healthcare and financial services?",
+    "options": [
+      "Blockchain",
+      "Agentic AI",
+      "Quantum Encryption",
+      "Virtual Reality"
+    ],
+    "a": 1,
+    "category": "Technology",
+    "source": "https://www.newswire.ca/news-releases/alithya-s-industry-insights-reveal-2026-priorities-and-ai-trends-across-financial-services-manufacturing-and-healthcare-850942885.html"
+  },
+{
+    "q": "On March 23, 2026, the Bank of Canada announced the departure of which two members of its Governing Council, including a Deputy Governor moving to Toronto?",
+    "options": [
+      "Tiff Macklem and Carolyn Rogers",
+      "Rhys Mendes and Sharon Kozicki",
+      "Toni Gravelle and Nicolas Vincent",
+      "Stephen Poloz and Wilkins Lynn"
+    ],
+    "a": 1,
+    "category": "Economy",
+    "source": "https://www.bnnbloomberg.ca/business/politics/2026/03/23/bank-of-canada-says-mendes-leaving-central-bank-kozicki-to-retire/"
+  }
+]
