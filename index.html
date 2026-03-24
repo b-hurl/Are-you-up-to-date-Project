@@ -86,7 +86,6 @@
 }
         .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
         body { transition: background-color 1s ease; background-color: #0f172a; }
-        body.theme-professional { background-color: #022c22; }
         body.dimmed { background-color: #020617 !important; }
 
         /* Dramatic Grayscale Effect for Wrong Answers */
@@ -100,6 +99,9 @@
             filter: grayscale(100%);
             opacity: 0.4;
             transition: filter 0.5s ease, opacity 0.5s ease;
+        }
+        body.wrong-answer-effect {
+            background-color: #000000 !important;
         }
         body.wrong-answer-effect #main-card {
             background-color: #1c1917 !important; /* Force neutral gray bg */
