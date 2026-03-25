@@ -89,6 +89,8 @@
         body { transition: background-color 1s ease; }
         body.dimmed { background-color: #020617 !important; }
         body.grayscale-mode { filter: grayscale(1); -webkit-filter: grayscale(1); }
+        @keyframes slide-in-up { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+        .animate-slide-in { animation: slide-in-up 0.5s ease-out forwards; }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -473,6 +475,9 @@
             </div>
             <div class="w-full h-40 mb-4 bg-slate-800/30 rounded-xl border border-slate-700/30 p-2 relative">
                 <canvas id="adminDAUChart"></canvas>
+            </div>
+            <div class="w-full h-40 mb-4 bg-slate-800/30 rounded-xl border border-slate-700/30 p-2 relative">
+                <canvas id="adminRegionChart"></canvas>
             </div>
             <div class="mb-4 bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
                 <label class="text-[10px] text-slate-400 font-bold uppercase block mb-2">Global Banner Message</label>
@@ -1428,7 +1433,9 @@ async function submitScore() {
         return;
     }
 
-    const name = document.getElementById('player-name').value.trim();
+    const nameInput = document.getElementById('player-name');
+    const name = nameInput ? nameInput.value.trim() : localStorage.getItem('trivia-name');
+
     if (!name) {
         alert("Please enter a name for the leaderboard.");
         return;
@@ -1443,6 +1450,21 @@ async function submitScore() {
     const btn = document.getElementById('submit-score-btn');
     btn.disabled = true;
     btn.innerText = "Submitting...";
+
+    // Taunt Logic
+    const tauntInput = document.getElementById('player-taunt');
+    const taunt = tauntInput ? tauntInput.value.trim() : null;
+    
+    if (taunt) {
+        const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
+        const hasSlur = banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(taunt));
+        if (hasSlur) {
+            alert("Please keep the taunt clean.");
+            btn.disabled = false;
+            btn.innerText = "Submit Score";
+            return;
+        }
+    }
 
     const gameDate = getGameDate();
     const streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
@@ -1472,7 +1494,8 @@ async function submitScore() {
         userId: userId,
         groupIds: groupIds,         // Save ALL Group IDs
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        playedModes: shouldResetModes ? [lastMode] : firebase.firestore.FieldValue.arrayUnion(lastMode)
+        playedModes: shouldResetModes ? [lastMode] : firebase.firestore.FieldValue.arrayUnion(lastMode),
+        taunt: taunt // Save taunt directly with score
     };
 
     try {
@@ -1588,15 +1611,28 @@ async function checkIfSubmitted() {
     }
     
     // Not submitted yet: Ensure default form is visible (restores form if user just logged in)
-    formContainer.innerHTML = `
-        <div class="relative flex-1">
-            <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
-            <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
-        </div>
-        <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
-    `;
     const storedName = localStorage.getItem('trivia-name');
-    if (storedName) document.getElementById('player-name').value = storedName;
+    
+    if (storedName) {
+        formContainer.innerHTML = `
+            <div class="flex-1 flex flex-col gap-1">
+                <div class="flex justify-between items-center px-1">
+                    <span class="text-[10px] text-slate-400">Playing as <strong class="text-white">${storedName}</strong></span>
+                </div>
+                <input type="text" id="player-taunt" placeholder="Add a taunt (optional)" maxlength="60" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2 text-white text-sm focus:outline-none focus:border-primary-500 animate-slide-in">
+                <input type="hidden" id="player-name" value="${storedName}">
+            </div>
+            <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all h-[42px] self-end">Submit</button>
+        `;
+    } else {
+        formContainer.innerHTML = `
+            <div class="relative flex-1">
+                <input type="text" id="player-name" placeholder="Enter Your Name" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" onchange="localStorage.setItem('trivia-name', this.value)" oninput="updateCharCounter(this, 'player-name-counter')">
+                <span id="player-name-counter" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-slate-500">0/15</span>
+            </div>
+            <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
+        `;
+    }
 
     return false;
 }
@@ -1926,6 +1962,8 @@ async function openWeeklyLeaderboard() {
                 scoreStyle = 'text-slate-500 text-sm';
             }
 
+            const displayName = isMe ? `${user.name} (You)` : user.name;
+
             if (isMe) {
                 containerStyle += ' ring-2 ring-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.2)]';
                 nameStyle = 'text-emerald-400 font-black'; 
@@ -1936,7 +1974,7 @@ async function openWeeklyLeaderboard() {
                     <div class="flex items-center gap-4">
                         <div class="shrink-0 w-10 text-center">${rankIcon}</div>
                         <div class="flex flex-col">
-                            <span class="font-bold ${nameStyle}">${user.name}</span>
+                            <span class="font-bold ${nameStyle}">${displayName}</span>
                             ${index === 0 ? '<span class="text-[9px] uppercase tracking-widest text-yellow-500 font-bold opacity-80">Current Leader</span>' : ''}
                         </div>
                     </div>
@@ -2108,9 +2146,9 @@ function showCreateGroupUI() {
 }
 
 async function createGroup() {
-    const nameInput = document.getElementById('new-group-name');
+    const groupNameInput = document.getElementById('new-group-name');
     const btn = document.getElementById('create-group-btn');
-    const groupName = nameInput.value.trim() || "Trivia Squad";
+    const groupName = groupNameInput.value.trim() || "Trivia Squad";
 
     if(btn) { btn.disabled = true; btn.innerText = "Creating..."; }
 
@@ -2129,13 +2167,21 @@ async function createGroup() {
         currentGroupIndex = groups.length - 1; // Switch to new group
         exportStateToURL();
         
+        // Ensure the submit form is visible/ready for the new group context
+        await checkIfSubmitted();
+
         // Auto-submit score to the new group if a name is entered
-        const nameInput = document.getElementById('player-name');
-        if (nameInput && nameInput.value.trim()) {
+        const playerNameInput = document.getElementById('player-name');
+        const storedName = localStorage.getItem('trivia-name');
+
+        if (playerNameInput && !playerNameInput.value.trim() && storedName) {
+            playerNameInput.value = storedName;
+        }
+
+        if (playerNameInput && playerNameInput.value.trim()) {
             await submitScore();
         } else {
             await fetchAndDisplayLeaderboard();
-            await checkIfSubmitted();
         }
     } catch (error) {
         console.error("Error creating group:", error);
@@ -2417,11 +2463,14 @@ async function submitFeedback(encodedQ, type, btn) {
     // Visual Feedback
     parent.innerHTML = `<span class="text-[10px] text-slate-400 animate-pulse font-bold">${type === 'up' ? 'Thanks!' : 'Flagged'}</span>`;
 
+    const userLoc = JSON.parse(localStorage.getItem('trivia-location') || '{}');
+
     try {
         await db.collection('feedback').add({
             question: qText,
             vote: type, // 'up' or 'down'
             user: userId || 'anonymous',
+            location: userLoc,
             date: getGameDate(),
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
@@ -4036,6 +4085,7 @@ function closeStats() {
             loadFeedback('down');
             renderAdminChart();
             renderDAUChart();
+            renderRegionChart();
             checkMaintenanceMode(); // Update toggle state
 
             // Load current message
@@ -4120,8 +4170,9 @@ function closeStats() {
                         <div id="${detailsId}" class="hidden mt-3 pt-3 border-t border-slate-700 space-y-2">
                             ${group.reports.map(report => {
                                 const reportDate = report.timestamp ? new Date(report.timestamp.seconds * 1000).toLocaleString() : report.date;
+                                const loc = report.location ? `[${report.location.country_code || '?'}${report.location.region_code ? '-'+report.location.region_code : ''}] ` : '';
                                 return `<div class="text-xs text-slate-500 flex justify-between items-center">
-                                            <span>User: ${report.user}</span>
+                                            <span>${loc}User: ${report.user}</span>
                                             <span class="font-mono text-[10px]">${reportDate}</span>
                                         </div>`;
                             }).join('')}
@@ -4259,6 +4310,43 @@ function closeStats() {
                     scales: { x: { display: true, grid: { display: false }, ticks: { color: '#64748b', font: {size: 10} } }, y: { display: true, beginAtZero: true, grid: { color: '#334155' }, ticks: { color: '#64748b', font: {size: 10}, precision: 0 } } }
                 }
             });
+        }
+
+        let adminRegionChartInstance = null;
+        async function renderRegionChart() {
+            const ctx = document.getElementById('adminRegionChart');
+            if (!ctx) return;
+
+            try {
+                const snapshot = await db.collection('feedback').orderBy('timestamp', 'desc').limit(300).get();
+                const regionCounts = {};
+
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    const country = (data.location && data.location.country_code) ? data.location.country_code : 'Unknown';
+                    if (!regionCounts[country]) regionCounts[country] = { up: 0, down: 0 };
+                    if (data.vote === 'up') regionCounts[country].up++;
+                    else if (data.vote === 'down') regionCounts[country].down++;
+                });
+
+                const labels = Object.keys(regionCounts);
+                const upData = labels.map(l => regionCounts[l].up);
+                const downData = labels.map(l => regionCounts[l].down);
+
+                if (adminRegionChartInstance) adminRegionChartInstance.destroy();
+                adminRegionChartInstance = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: labels,
+                        datasets: [{ label: 'Likes', data: upData, backgroundColor: '#10b981' }, { label: 'Issues', data: downData, backgroundColor: '#f87171' }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        scales: { x: { stacked: true, ticks: { color: '#64748b' } }, y: { stacked: true, beginAtZero: true, grid: { color: '#334155' }, ticks: { color: '#64748b' } } },
+                        plugins: { legend: { display: true, labels: { color: '#94a3b8', font: {size: 10} } }, title: { display: true, text: 'Feedback by Region', color: '#94a3b8' } }
+                    }
+                });
+            } catch (e) { console.log("Region Chart error", e); }
         }
 
         async function editQuestionText(encodedText, docIds) {

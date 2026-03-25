@@ -1,0 +1,174 @@
+[
+  {
+    "q": "The Government of Canada announced today that the federal minimum wage will increase on April 1, 2026. What will the new hourly rate be?",
+    "options": [
+      "$15.50",
+      "$17.30",
+      "$18.15",
+      "$20.00"
+    ],
+    "a": 2,
+    "category": "Economy",
+    "source": "https://www.canada.ca/en/employment-social-development/news/2026/03/government-of-canada-raises-the-federal-minimum-wage.html"
+  },
+  {
+    "q": "Which two countries issued a joint statement today, March 24, 2026, to increase their cooperation in scientific research areas like the Arctic and AI?",
+    "options": [
+      "Canada and Norway",
+      "Canada and Japan",
+      "Canada and Australia",
+      "Canada and Brazil"
+    ],
+    "a": 0,
+    "category": "Science",
+    "source": "https://www.canada.ca/en/innovation-science-economic-development/news/2026/03/canada-norway-joint-statement-on-research-cooperation.html"
+  },
+  {
+    "q": "On March 24, 2026, the Canadian Minister of International Trade announced a trip to which African country to represent Canada at a World Trade Organization conference?",
+    "options": [
+      "South Africa",
+      "Cameroon",
+      "Egypt",
+      "Kenya"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "source": "https://www.canada.ca/en/global-affairs/news/2026/03/minister-sidhu-to-advance-canadas-trade-priorities-at-the-14th-wto-ministerial-conference-in-cameroon.html"
+  },
+  {
+    "q": "In Prince Albert news today, March 24, 2026, police laid charges against a suspect following reports that a man was assaulted and held against his will in what type of building?",
+    "options": [
+      "A shopping mall",
+      "A library",
+      "An apartment",
+      "A park"
+    ],
+    "a": 2,
+    "category": "World",
+    "location": {
+      "country": "Canada",
+      "city": "Prince Albert",
+      "region": "Saskatchewan"
+    },
+    "source": "https://paherald.sk.ca/man-alleges-he-was-assaulted-and-held-against-his-will-in-pa-apartment-police-lay-charges-2/"
+  },
+{
+    "q": "On March 24, 2026, the Future of Sport in Canada Commission released a final report with 98 'Calls to Action.' What was one of its major recommendations to address maltreatment in sports?",
+    "options": [
+      "A total ban on professional sports for minors",
+      "The creation of a single Pan-Canadian Safe Sport Authority",
+      "Mandatory body cameras for all high school coaches",
+      "Disbanding the current Olympic committee"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "source": "https://www.canada.ca/en/canadian-heritage/campaigns/future-sport/media/news-release-2026-03.html"
+  },
+  {
+    "q": "The Canadian Competition Bureau issued a warning today, March 24, 2026, regarding a rise in scammers using what specific technology to impersonate government officials?",
+    "options": [
+      "AI-generated deepfakes",
+      "Automated radio signals",
+      "Encrypted fax machines",
+      "Satellite-linked text messages"
+    ],
+    "a": 0,
+    "category": "Technology",
+    "source": "https://www.canada.ca/en/competition-bureau/news/2026/03/competition-bureaus-experts-available-to-discuss-ai-generated-government-impersonation-scams-with-media.html"
+  },
+  
+  {
+    "q": "On March 24, 2026, which comedian announced a Saskatchewan tour stop in both Regina and Saskatoon for this coming November?",
+    "options": [
+      "John Mulaney",
+      "Bill Hader",
+      "Pete Davidson",
+      "Seth Meyers"
+    ],
+    "a": 0,
+    "category": "Pop Culture",
+    "source": "https://www.ctvnews.ca/regina/article/comedian-john-mulaney-coming-to-regina-saskatoon/"
+  },
+  {
+    "q": "Which major social media platform returned as a sponsor for the Juno Awards on March 24, 2026, following a reversal of a federal shutdown order?",
+    "options": [
+      "Instagram",
+      "TikTok",
+      "Snapchat",
+      "X (formerly Twitter)"
+    ],
+    "a": 1,
+    "category": "Entertainment",
+    "source": "https://www.ctvnews.ca/entertainment/article/tiktok-returns-to-junos-as-sponsor-after-reversal-of-federal-shutdown-order/"
+  },
+  {
+    "q": "Which soccer star announced on March 24, 2026, that he will be leaving Liverpool at the end of the current season after nine years with the club?",
+    "options": [
+      "Virgil van Dijk",
+      "Trent Alexander-Arnold",
+      "Mohamed Salah",
+      "Luis Díaz"
+    ],
+    "a": 2,
+    "category": "Sports",
+    "source": "https://www.sportsnet.ca/premier-league/article/mohamed-salah-to-leave-liverpool-at-end-of-season-after-nine-years-with-club/tik"
+  },
+  {
+    "q": "On March 24, 2026, which luxury car brand officially opened a new 6,000-square-foot facility in Regina operated by the Dilawri Group?",
+    "options": [
+      "Lexus",
+      "Genesis",
+      "Audi",
+      "BMW"
+    ],
+    "a": 1,
+    "category": "Lifestyle",
+    "source": "https://www.newswire.ca/news-releases/dilawri-celebrates-the-opening-of-the-new-genesis-regina-facility-861224377.html"
+  },
+{
+    "q": "On March 24, 2026, which artist officially made history as 'Choosin' Texas' topped the Billboard Hot 100 for a fourth week, breaking a record previously held by Taylor Swift?",
+    "options": [
+      "Lainey Wilson",
+      "Ella Langley",
+      "Megan Moroney",
+      "Kelsea Ballerini"
+    ],
+    "a": 1,
+    "category": "Music",
+    "source": "https://musicrow.com/2026/03/ella-langley-notches-fourth-week-atop-billboard-hot-100/"
+  },
+  {
+    "q": "In Regina on March 24, 2026, local resident Teco Bird made headlines for winning $102,000 in which tournament at Casino Regina?",
+    "options": [
+      "Blackjack Bonanza",
+      "Station Poker Classic",
+      "Saskatchewan Slots Championship",
+      "Queen City Roulette Open"
+    ],
+    "a": 1,
+    "category": "Lifestyle",
+    "location": {
+      "country": "Canada",
+      "city": "Regina",
+      "region": "Saskatchewan"
+    },
+    "source": "https://larongenow.com/2026/03/24/local-man-claims-102k-poker-prize-in-regina/"
+  },
+  {
+    "q": "On March 24, 2026, the City of Prince Albert issued a warning to residents that which seasonal road issue may 'reappear' until more stable warm weather arrives?",
+    "options": [
+      "Black ice patches",
+      "Gravel washouts",
+      "Potholes",
+      "Flash flooding"
+    ],
+    "a": 2,
+    "category": "Lifestyle",
+    "location": {
+      "country": "Canada",
+      "city": "Prince Albert",
+      "region": "Saskatchewan"
+    },
+    "source": "https://sasknow.com/2026/03/24/city-warns-potholes-may-reappear-until-better-weather-allows-for-more-permanent-fix/"
+  }
+]
