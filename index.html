@@ -44,6 +44,7 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>
         :root {
@@ -87,9 +88,24 @@
         .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
         body { transition: background-color 1s ease; }
         body.dimmed { background-color: #020617 !important; }
+        body.grayscale-mode { filter: grayscale(1); -webkit-filter: grayscale(1); }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Maintenance Modal -->
+    <div id="maintenance-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900 hidden">
+        <div class="text-center p-8 max-w-md">
+            <div class="text-6xl mb-4 animate-bounce">🚧</div>
+            <h2 class="text-3xl font-black text-white mb-2">Under Maintenance</h2>
+            <p class="text-slate-400 mb-6">We're currently updating the game. Please check back later!</p>
+            <button onclick="window.location.reload()" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-xl font-bold transition-all">Try Again</button>
+            <div id="admin-bypass-login" class="mt-8 hidden">
+                 <p class="text-xs text-slate-600 mb-2">Admin Access</p>
+                 <button onclick="toggleLoginModal()" class="text-xs text-primary-500 hover:underline">Sign In</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Tutorial Modal -->
     <div id="tutorial-modal" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
@@ -444,6 +460,48 @@
         </div>
     </div>
 
+    <!-- Admin Dashboard Modal -->
+    <div id="admin-modal" class="fixed inset-0 z-[90] flex items-center justify-center bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-900 border border-slate-700 p-6 rounded-3xl max-w-2xl w-full h-[80vh] shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col">
+            <button onclick="closeAdminDashboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black text-white mb-1">Admin Dashboard</h2>
+                <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Feedback & Reports</p>
+            </div>
+            <div class="w-full h-40 mb-4 bg-slate-800/30 rounded-xl border border-slate-700/30 p-2 relative">
+                <canvas id="adminStatsChart"></canvas>
+            </div>
+            <div class="w-full h-40 mb-4 bg-slate-800/30 rounded-xl border border-slate-700/30 p-2 relative">
+                <canvas id="adminDAUChart"></canvas>
+            </div>
+            <div class="mb-4 bg-slate-800/50 p-3 rounded-xl border border-slate-700/50">
+                <label class="text-[10px] text-slate-400 font-bold uppercase block mb-2">Global Banner Message</label>
+                <div class="flex gap-2">
+                    <input type="text" id="admin-global-msg" placeholder="Enter message..." class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-white text-xs focus:outline-none focus:border-primary-500">
+                    <button onclick="updateGlobalMessage()" class="bg-primary-600 hover:bg-primary-500 text-white px-3 py-2 rounded-lg text-xs font-bold transition-all">Set</button>
+                    <button onclick="clearGlobalMessage()" class="bg-slate-700 hover:bg-slate-600 text-slate-300 px-3 py-2 rounded-lg text-xs font-bold transition-all">Clear</button>
+                </div>
+            </div>
+            <div class="mb-4 bg-slate-800/50 p-3 rounded-xl border border-slate-700/50 flex items-center justify-between">
+                <div>
+                    <label class="text-[10px] text-slate-400 font-bold uppercase block">Maintenance Mode</label>
+                    <p class="text-[10px] text-slate-500">Lock game for non-admins</p>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="admin-maintenance-toggle" onchange="toggleMaintenance()" class="sr-only peer">
+                    <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600"></div>
+                </label>
+            </div>
+            <div class="flex gap-2 mb-4 justify-center">
+                <button onclick="loadFeedback('down')" id="admin-filter-down" class="px-3 py-1 rounded-full text-xs font-bold bg-red-900/50 text-red-400 border border-red-500/30">Issues (👎)</button>
+                <button onclick="loadFeedback('up')" id="admin-filter-up" class="px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">Likes (👍)</button>
+            </div>
+            <div id="admin-content" class="flex-1 overflow-y-auto space-y-3 pr-2 scrollbar-hide">
+                <p class="text-center text-slate-500 text-xs">Loading...</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Buttons -->
     <button id="user-btn" onclick="toggleLoginModal()" class="fixed top-4 right-20 z-50 bg-slate-800/80 p-3 rounded-full border border-slate-700 hover:bg-slate-700 transition-all hidden">
         <span id="user-icon-display" class="text-xl">👤</span>
@@ -454,9 +512,21 @@
     </button>
 
     <div id="main-card" class="w-full max-w-md bg-slate-800 rounded-3xl shadow-2xl p-8 border border-slate-700 relative">
+        <div id="global-message-banner" class="hidden mb-6 p-3 bg-indigo-900/30 border border-indigo-500/50 rounded-xl flex items-start gap-3">
+            <span class="text-xl">📢</span>
+            <div class="flex-1">
+                <h3 class="text-[10px] font-bold text-indigo-300 uppercase tracking-widest mb-0.5">Announcement</h3>
+                <p id="global-message-text" class="text-xs text-white leading-tight"></p>
+            </div>
+            <button id="global-message-close" class="text-indigo-300 hover:text-white transition-colors text-lg leading-none px-2" title="Dismiss">✕</button>
+        </div>
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
             <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
+            <div class="flex items-center gap-2">
+                <span id="mode-icon" class="text-xl filter drop-shadow-md transition-transform hover:scale-110 cursor-help" title="Current Mode">🎮</span>
+                <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
+            </div>
         </div>
         <div id="content-area" class="text-center">
             <div id="category-display" class="mb-4 hidden">
@@ -467,6 +537,19 @@
                 <div class="mb-4">
                     <h2 class="text-2xl font-black text-white mb-1">Select Difficulty</h2>
                     <p class="text-slate-400 text-xs uppercase tracking-widest">Choose your path</p>
+                </div>
+                
+                <div id="homepage-timer-container" class="hidden bg-slate-900/50 p-6 rounded-2xl border border-slate-700/50 mb-6">
+                    <div class="text-4xl mb-2">🎉</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Daily Complete!</h3>
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2">Next Trivia In</p>
+                    <div class="flex items-center justify-center gap-3">
+                        <div class="countdown-timer text-3xl font-mono font-bold text-primary-400">00:00:00</div>
+                        <button id="notify-btn" onclick="requestPermissions()" class="hidden bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold py-2 px-3 rounded-xl border border-slate-700 transition-all flex items-center gap-2">
+                            <span>🔔</span> Notify Me
+                        </button>
+                    </div>
+                    <p class="text-slate-500 text-xs mt-4">You've mastered today's challenges.</p>
                 </div>
                 
                 <button id="btn-mode-casual" onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
@@ -519,7 +602,7 @@
         
         <div id="next-timer-container" class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
             <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
-            <div id="next-trivia-timer" class="text-xl font-mono font-bold text-primary-400">00:00:00</div>
+            <div id="next-trivia-timer" class="countdown-timer text-xl font-mono font-bold text-primary-400">00:00:00</div>
         </div>
 
         <div class="flex justify-center gap-4 mb-6">
@@ -591,13 +674,13 @@
         </div>
     </div>
 
-    <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity">
-        <a href="mailto:support@example.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact & Feedback</a>
+    <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity space-x-4">
+        <a href="mailto:support@example.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact</a>
+        <button onclick="openAdminDashboard()" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Admin</button>
     </footer>
 
     <script>
         // --- CONFIG & AUDIO ---
-        const UNLOCK_HOUR = 8;
         const SOUNDS = {
             correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
             wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
@@ -624,6 +707,7 @@
         let currentInviteGroupId = null;
         let remoteUserProgress = null;
         let leaderboardMode = 'casual';
+        let timerInterval = null;
 
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
@@ -714,10 +798,19 @@
 
         function updateTheme(mode) {
             const body = document.body;
+            const modeIcon = document.getElementById('mode-icon');
             if (mode === 'professional') {
                 body.classList.add('theme-professional');
+                if (modeIcon) {
+                    modeIcon.innerText = '💼';
+                    modeIcon.setAttribute('title', 'Professional Mode');
+                }
             } else {
                 body.classList.remove('theme-professional');
+                if (modeIcon) {
+                    modeIcon.innerText = '🎮';
+                    modeIcon.setAttribute('title', 'Casual Mode');
+                }
             }
         }
 
@@ -853,13 +946,14 @@
         }
 
 // 8:00 AM CST is 14:00 UTC
-const UNLOCK_UTC_HOUR = 14; 
+const UNLOCK_UTC_HOUR = 14;
+const ADMIN_EMAIL = "bfehurl@gmail.com"; // REPLACE WITH YOUR EMAIL
 
 // HELPER: Get the "Game Date" (Adjusts for the 8AM cutoff)
 function getGameDate() {
     const now = new Date();
     // If it's before 14:00 UTC, the "Game Day" is actually yesterday
-    if (now.getUTCHours() < 14) {
+    if (now.getUTCHours() < UNLOCK_UTC_HOUR) {
         now.setUTCDate(now.getUTCDate() - 1);
     }
     // Return a simple string: "2026-03-11"
@@ -869,6 +963,8 @@ function getGameDate() {
 async function startApp() {
     const gameDate = getGameDate(); // e.g., "2026-03-12"
     console.log("Attempting to load trivia for date:", gameDate);
+    checkGlobalMessage();
+    checkMaintenanceMode();
     determineUserLocation(); // Trigger background location check
     
     try {
@@ -903,7 +999,7 @@ async function startApp() {
                 window.userChoices = session.userChoices || [];
                 selectedIdx = session.selectedIdx ?? null;
                 
-                const lastMode = (session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual';
+                const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
                 updateTheme(lastMode);
 
                 if (session.isFinished) {
@@ -1100,6 +1196,7 @@ function confirmAnswer() {
         currentStreak = 0;
         buttons[selectedIdx].classList.add('incorrect');
         playSound('wrong');
+        document.body.classList.add('grayscale-mode');
         
         // Highlight the correct answer if the user chose wrong
         const currentQ = gameData.questions[currentIdx];
@@ -1117,6 +1214,7 @@ function confirmAnswer() {
     const transitionDelay = (isCurrentSelectionCorrect && currentStreak >= 2) ? 1500 : 1000;
 
     setTimeout(() => {
+        document.body.classList.remove('grayscale-mode');
         if (currentIdx < gameData.questions.length - 1) {
             currentIdx++;
             selectedIdx = null; // Reset selection for the next question
@@ -1183,7 +1281,7 @@ function showFinalResults() {
     const playedModes = session.playedModes || [];
     const otherModeSection = document.getElementById('play-other-mode-section');
     const otherModeBtn = document.getElementById('play-other-mode-btn');
-    leaderboardMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
+    leaderboardMode = session.activeMode || (playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual');
 
     if (playedModes.length === 1) {
         const otherMode = playedModes[0] === 'casual' ? 'professional' : 'casual';
@@ -1272,7 +1370,9 @@ function playOtherMode() {
 // Helper to get ISO Week ID (e.g., "2026-W11")
 function getWeekId(dateStr) {
     const date = new Date(dateStr);
-    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    // Shift by 1 day to make Sunday the start of the week
+    date.setUTCDate(date.getUTCDate() + 1);
+    const d = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()));
     const dayNum = d.getUTCDay() || 7;
     d.setUTCDate(d.getUTCDate() + 4 - dayNum);
     const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
@@ -1302,13 +1402,19 @@ async function setTaunt() {
     const gameDate = getGameDate();
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
     const playedModes = session.playedModes || [];
-    const lastMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
+    const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
     const docId = `${gameDate}_${userId}_${lastMode}`;
     
     try {
         await db.collection('scores').doc(docId).update({
             taunt: taunt.trim()
         });
+
+        // Invalidate cache for current group so taunt appears immediately
+        const groups = getMyGroups();
+        if (groups.length > 0 && groups[currentGroupIndex]) {
+             localStorage.removeItem(`leaderboard_${groups[currentGroupIndex].id}_${gameDate}_${lastMode}`);
+        }
         fetchAndDisplayLeaderboard();
     } catch (error) {
         console.error("Error setting taunt:", error);
@@ -1324,7 +1430,6 @@ async function submitScore() {
 
     const name = document.getElementById('player-name').value.trim();
     if (!name) {
-        alert("Please enter a name to submit your score.");
         alert("Please enter a name for the leaderboard.");
         return;
     }
@@ -1345,11 +1450,17 @@ async function submitScore() {
     // Get the mode for the game just played
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
     const playedModes = session.playedModes || [];
-    const lastMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
+    const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
 
     // Get ALL group IDs the user belongs to
     const groups = getMyGroups();
     const groupIds = groups.map(g => g.id);
+
+    // Determine if we need to reset playedModes (New Day)
+    let shouldResetModes = false;
+    if (remoteUserProgress && remoteUserProgress.lastPlayedDate !== gameDate) {
+        shouldResetModes = true;
+    }
 
     const scoreData = {
         name: name,
@@ -1361,7 +1472,7 @@ async function submitScore() {
         userId: userId,
         groupIds: groupIds,         // Save ALL Group IDs
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-        playedModes: firebase.firestore.FieldValue.arrayUnion(lastMode)
+        playedModes: shouldResetModes ? [lastMode] : firebase.firestore.FieldValue.arrayUnion(lastMode)
     };
 
     try {
@@ -1371,21 +1482,33 @@ async function submitScore() {
         await db.collection('scores').doc(docId).set(scoreData, { merge: true });
 
         // Sync User Stats for Cloud Functions (Streak Tracking)
-        await db.collection('users').doc(userId).set({
+        const userUpdate = {
             name: name,
             lastPlayedDate: gameDate,
             currentStreak: streak,
             lastMode: lastMode,
-            playedModes: firebase.firestore.FieldValue.arrayUnion(lastMode)
-        }, { merge: true });
+            playedModes: shouldResetModes ? [lastMode] : firebase.firestore.FieldValue.arrayUnion(lastMode)
+        };
+        await db.collection('users').doc(userId).set(userUpdate, { merge: true });
 
         // Update local cache immediately so we don't need a reload to know this mode is done
         if (!remoteUserProgress) remoteUserProgress = {};
+        
+        if (shouldResetModes) {
+            remoteUserProgress.playedModes = [];
+        }
+        
         remoteUserProgress.lastPlayedDate = gameDate;
         remoteUserProgress.lastMode = lastMode;
         if (!remoteUserProgress.playedModes) remoteUserProgress.playedModes = [];
         if (!remoteUserProgress.playedModes.includes(lastMode)) remoteUserProgress.playedModes.push(lastMode);
         
+        // Invalidate Leaderboard Cache for all groups this score was posted to
+        groups.forEach(g => {
+            const cacheKey = `leaderboard_${g.id}_${gameDate}_${lastMode}`;
+            localStorage.removeItem(cacheKey);
+        });
+
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full">
                 <p class="text-emerald-400 text-sm font-bold">✅ Score Submitted!</p>
@@ -1417,7 +1540,7 @@ async function checkIfSubmitted() {
 
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
     const playedModes = session.playedModes || [];
-    const currentMode = playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual';
+    const currentMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
 
     const docId = `${getGameDate()}_${userId}_${currentMode}`;
     const doc = await db.collection('scores').doc(docId).get();
@@ -1553,41 +1676,50 @@ async function fetchAndDisplayLeaderboard() {
             <p class="text-slate-400 text-sm text-center">Loading scores...</p>
         `;
 
-        const currentWeek = getWeekId(getGameDate());
-
-        // NEW QUERY: array-contains
-        // Note: This requires a composite index: groupIds (Arrays) + weekId (Ascending)
-        // If this fails, check console for Firebase link to create index.
-        const snapshot = await db.collection('scores')
-            .where('groupIds', 'array-contains', currentGroup.id)
-            .where('weekId', '==', currentWeek)
-            .get();
-
-        // 3. Client-side Aggregation (Sum scores by user for the week)
-        const userTotals = {};
         const todayDate = getGameDate();
 
-        snapshot.forEach(doc => {
-            const d = doc.data();
-            // Filter if daily
-            if (d.date !== todayDate) return;
-            if ((d.mode || 'casual') !== leaderboardMode) return;
+        // Cache Check (5 minutes)
+        const cacheKey = `leaderboard_${currentGroup.id}_${todayDate}_${leaderboardMode}`;
+        const cachedRaw = localStorage.getItem(cacheKey);
+        let sortedUsers = null;
 
-            if (!userTotals[d.userId]) {
-                userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0, games: 0 };
-            }
-            userTotals[d.userId].totalScore += (d.score || 0);
-            userTotals[d.userId].games += 1;
-            // Always take the most recent name used
-            userTotals[d.userId].name = d.name;
-            // Capture taunt if present
-            if (d.taunt) userTotals[d.userId].taunt = d.taunt;
-            // Capture streak (use max found for the period)
-            if (d.streak) userTotals[d.userId].streak = Math.max(userTotals[d.userId].streak || 0, d.streak);
-        });
+        if (cachedRaw) {
+            try {
+                const c = JSON.parse(cachedRaw);
+                if (Date.now() - c.ts < 5 * 60 * 1000) sortedUsers = c.data;
+            } catch(e) {}
+        }
 
-        // Convert to array and sort
-        const sortedUsers = Object.values(userTotals).sort((a, b) => b.totalScore - a.totalScore);
+        if (!sortedUsers) {
+            // Optimized Query: Filter by Date directly instead of fetching whole week
+            const snapshot = await db.collection('scores')
+                .where('groupIds', 'array-contains', currentGroup.id)
+                .where('date', '==', todayDate)
+                .get();
+
+            // 3. Client-side Processing
+            const userTotals = {};
+
+            snapshot.forEach(doc => {
+                const d = doc.data();
+                if ((d.mode || 'casual') !== leaderboardMode) return;
+
+                if (!userTotals[d.userId]) {
+                    userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0, games: 0 };
+                }
+                userTotals[d.userId].totalScore += (d.score || 0);
+                userTotals[d.userId].games += 1;
+                userTotals[d.userId].name = d.name; // Always take the most recent name used
+                if (d.taunt) userTotals[d.userId].taunt = d.taunt;
+                if (d.streak) userTotals[d.userId].streak = Math.max(userTotals[d.userId].streak || 0, d.streak);
+            });
+
+            // Convert to array and sort
+            sortedUsers = Object.values(userTotals).sort((a, b) => b.totalScore - a.totalScore);
+            
+            // Save to Cache
+            localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), data: sortedUsers }));
+        }
 
         // 4. Render
         // Keep invite button at top
@@ -1769,7 +1901,6 @@ async function openWeeklyLeaderboard() {
         
         const listHTML = sortedUsers.length === 0 ? '<p class="text-center text-slate-400">No scores this week yet.</p>' : sortedUsers.map((user, index) => {
             const isMe = user.id === userId;
-            const rank = index === 0 ? '🥇' : (index === 1 ? '🥈' : (index === 2 ? '🥉' : `${index + 1}.`));
             
             let rankIcon, containerStyle, nameStyle, scoreStyle;
             
@@ -2160,14 +2291,15 @@ function copyGroupLink(groupId) {
 }
 
 function startNextTimer() {
-    const timerElem = document.getElementById('next-trivia-timer');
+    if (timerInterval) clearInterval(timerInterval);
+    const timerElems = document.querySelectorAll('.countdown-timer');
     
     const tick = () => {
         const now = new Date();
         let target = new Date();
-        target.setUTCHours(14, 0, 0, 0);
+        target.setUTCHours(UNLOCK_UTC_HOUR, 0, 0, 0);
 
-        if (now.getUTCHours() >= 14) {
+        if (now.getUTCHours() >= UNLOCK_UTC_HOUR) {
             target.setUTCDate(target.getUTCDate() + 1);
         }
 
@@ -2187,11 +2319,12 @@ function startNextTimer() {
         const m = Math.floor((diff % 3600000) / 60000);
         const s = Math.floor((diff % 60000) / 1000);
         
-        timerElem.innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        const timeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+        timerElems.forEach(el => el.innerText = timeStr);
     };
 
     tick();
-    setInterval(tick, 1000);
+    timerInterval = setInterval(tick, 1000);
 }
 function updateStreak() {
     const currentGameDate = getGameDate(); // The ID for today's game
@@ -2210,7 +2343,7 @@ function updateStreak() {
         
         // Use a temporary adjustment to see what the Game Date was 24h ago
         let prevDateObj = new Date();
-        if (new Date().getUTCHours() < 14) {
+        if (new Date().getUTCHours() < UNLOCK_UTC_HOUR) {
             prevDateObj.setUTCDate(prevDateObj.getUTCDate() - 2); // Was already yesterday, go back one more
         } else {
             prevDateObj.setUTCDate(prevDateObj.getUTCDate() - 1); // Was today, go back to yesterday
@@ -2251,8 +2384,14 @@ function renderReview() {
         const div = document.createElement('div');
         div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
         
-        const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted">Source ↗</a>` : '';
-        const reportBtn = `<button onclick="reportQuestion(${i})" class="text-[10px] text-slate-500 hover:text-red-400 underline decoration-dotted ml-2">Report 🚩</button>`;
+        const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
+        const qEncoded = encodeURIComponent(q.q);
+        const feedbackBtns = `
+            <div class="flex items-center gap-2 inline-flex">
+                <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
+                <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
+            </div>
+        `;
 
         div.innerHTML = `
             <p class="text-xs font-bold mb-2">${q.q}</p>
@@ -2264,32 +2403,30 @@ function renderReview() {
             </div>
             <div class="mt-2 text-right flex justify-end items-center">
                 ${sourceLink}
-                ${reportBtn}
+                ${feedbackBtns}
             </div>
         `;
         review.appendChild(div);
     });
 }
 
-async function reportQuestion(idx) {
-    if (!gameData || !gameData.questions[idx]) return;
-    const q = gameData.questions[idx];
+async function submitFeedback(encodedQ, type, btn) {
+    const qText = decodeURIComponent(encodedQ);
+    const parent = btn.parentElement;
     
-    const reason = prompt("What is the issue with this question? (e.g. Typo, Factually Incorrect)");
-    if (!reason) return;
+    // Visual Feedback
+    parent.innerHTML = `<span class="text-[10px] text-slate-400 animate-pulse font-bold">${type === 'up' ? 'Thanks!' : 'Flagged'}</span>`;
 
     try {
-        await db.collection('reports').add({
-            question: q.q,
-            reason: reason,
+        await db.collection('feedback').add({
+            question: qText,
+            vote: type, // 'up' or 'down'
             user: userId || 'anonymous',
             date: getGameDate(),
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         });
-        alert("Report submitted. Thanks for helping improve the game!");
     } catch (e) {
-        console.error("Error reporting:", e);
-        alert("Could not send report.");
+        console.error("Feedback error:", e);
     }
 }
 
@@ -2460,6 +2597,9 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
     if (newMode && !playedModes.includes(newMode)) {
         playedModes.push(newMode);
     }
+    
+    let activeMode = currentSession.activeMode || 'casual';
+    if (newMode) activeMode = newMode;
 
     const session = {
         date: getGameDate(),
@@ -2470,7 +2610,8 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
         isFinished: isFinished,
         userChoices: window.userChoices || [],
         selectedIdx: selectedIdx,
-        playedModes: playedModes // Save the array
+        playedModes: playedModes, // Save the array
+        activeMode: activeMode
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
     exportStateToURL();
@@ -2525,9 +2666,7 @@ function archiveSession(session) {
             choicesList.push(ans);
         });
 
-        const lastMode = (session.playedModes && session.playedModes.length > 0) 
-            ? session.playedModes[session.playedModes.length - 1] 
-            : 'casual';
+        const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
 
         archive[session.date] = {
             answers: answersMap,
@@ -2665,6 +2804,7 @@ async function checkWeeklyWinner() {
                 modal.querySelector('div').classList.remove('scale-95');
                 modal.querySelector('div').classList.add('scale-100');
                 fireConfetti();
+                playSound('perfect');
             }, 100);
         }
     } catch (e) {
@@ -2727,6 +2867,26 @@ async function checkRemoteProgress(user) {
                         if (desc) desc.innerHTML = '<span class="text-emerald-400 font-bold">✅ Completed</span>';
                     }
                 });
+
+                // CHECK IF BOTH MODES COMPLETE
+                if (modes.includes('casual') && modes.includes('professional')) {
+                    const container = document.getElementById('homepage-timer-container');
+                    const casualBtn = document.getElementById('btn-mode-casual');
+                    const proBtn = document.getElementById('btn-mode-professional');
+                    const subText = document.querySelector('#mode-selection p');
+                    
+                    if (container) container.classList.remove('hidden');
+                    if (casualBtn) casualBtn.classList.add('hidden');
+                    if (proBtn) proBtn.classList.add('hidden');
+                    if (subText) subText.classList.add('hidden');
+                    
+                    startNextTimer();
+                    
+                    if ("Notification" in window && Notification.permission !== "granted") {
+                        const nBtn = document.getElementById('notify-btn');
+                        if (nBtn) nBtn.classList.remove('hidden');
+                    }
+                }
             }
 
             // CLOUD SYNC: Restore session if remote is newer/valid
@@ -2758,7 +2918,7 @@ async function checkRemoteProgress(user) {
                     window.userChoices = s.userChoices || [];
                     selectedIdx = s.selectedIdx;
                     
-                    const lastMode = (s.playedModes && s.playedModes.length > 0) ? s.playedModes[s.playedModes.length - 1] : 'casual';
+                    const lastMode = s.activeMode || ((s.playedModes && s.playedModes.length > 0) ? s.playedModes[s.playedModes.length - 1] : 'casual');
                     updateTheme(lastMode);
 
                     if (s.isFinished) {
@@ -2880,6 +3040,7 @@ function initFirebase() {
             // Check for weekly winner modal
             setTimeout(checkWeeklyWinner, 4000);
             checkRemoteProgress(user);
+            checkMaintenanceMode(); // Re-check in case maintenance is on but this user is admin
         } else {
             // Hide user button when logged out
             if (userBtnElement) userBtnElement.classList.add('hidden');
@@ -2913,6 +3074,7 @@ function initFirebase() {
                 fetchAndDisplayLeaderboard();
                 checkIfSubmitted();
             }
+            checkMaintenanceMode(); // Re-check to lock out if maintenance is on
         }
     });
 }
@@ -3391,7 +3553,13 @@ function playOfflineJoin() {
 
         async function requestPermissions() {
             if ("Notification" in window) {
-                try { await Notification.requestPermission(); } catch (e) { console.error(e); }
+                try { 
+                    await Notification.requestPermission();
+                    if (Notification.permission === "granted") {
+                        const nBtn = document.getElementById('notify-btn');
+                        if (nBtn) nBtn.classList.add('hidden');
+                    }
+                } catch (e) { console.error(e); }
             }
             if ("geolocation" in navigator) {
                 navigator.geolocation.getCurrentPosition(() => {}, () => {}, { timeout: 5000 });
@@ -3712,7 +3880,15 @@ function closeStats() {
 
                 game.questions.forEach((q, idx) => {
                     const correctAnswer = q.options[q.a];
-                    const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline ml-2 decoration-dotted">Source ↗</a>` : '';
+                    const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
+                    
+                    const qEncoded = encodeURIComponent(q.q);
+                    const feedbackBtns = `
+                        <div class="flex items-center gap-2 inline-flex">
+                            <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
+                            <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
+                        </div>
+                    `;
                      
                     let answerHTML = `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`;
                     let userPick = null;
@@ -3747,7 +3923,7 @@ function closeStats() {
                         <div class="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
                             <p class="text-xs font-bold mb-2 text-slate-300">${q.q}</p>
                             ${answerHTML}
-                            <div class="mt-2 text-right">${source}</div>
+                            <div class="mt-2 text-right flex justify-end items-center">${source}${feedbackBtns}</div>
                         </div>
                     `;
                 });
@@ -3837,6 +4013,390 @@ function closeStats() {
             });
         });
 
+        // --- ADMIN DASHBOARD LOGIC ---
+        let currentAdminFilter = 'down';
+
+        async function openAdminDashboard() {
+            if (!auth.currentUser || auth.currentUser.email !== ADMIN_EMAIL) {
+                const pwd = prompt("Enter Admin Password:");
+                if (pwd !== "T4i5155pAm4cc0unt") {
+                    alert("Access Denied");
+                    return;
+                }
+            }
+
+            const modal = document.getElementById('admin-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+            
+            loadFeedback('down');
+            renderAdminChart();
+            renderDAUChart();
+            checkMaintenanceMode(); // Update toggle state
+
+            // Load current message
+            db.collection('config').doc('globalMessage').get().then(doc => {
+                if (doc.exists && doc.data().text) {
+                    document.getElementById('admin-global-msg').value = doc.data().text;
+                }
+            });
+        }
+
+        function closeAdminDashboard() {
+            const modal = document.getElementById('admin-modal');
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.remove('scale-100');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        async function loadFeedback(filterType) {
+            currentAdminFilter = filterType;
+            const content = document.getElementById('admin-content');
+            
+            // Update Tabs
+            document.getElementById('admin-filter-down').className = filterType === 'down' 
+                ? "px-3 py-1 rounded-full text-xs font-bold bg-red-900/50 text-red-400 border border-red-500/30" 
+                : "px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700";
+            document.getElementById('admin-filter-up').className = filterType === 'up' 
+                ? "px-3 py-1 rounded-full text-xs font-bold bg-emerald-900/50 text-emerald-400 border border-emerald-500/30" 
+                : "px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700";
+
+            content.innerHTML = '<p class="text-center text-slate-500 text-xs animate-pulse">Fetching and grouping reports...</p>';
+
+            try {
+                const snapshot = await db.collection('feedback')
+                    .where('vote', '==', filterType)
+                    .orderBy('timestamp', 'desc')
+                    .limit(300) // Fetch more to group effectively
+                    .get();
+
+                if (snapshot.empty) {
+                    content.innerHTML = '<p class="text-center text-slate-500 text-xs">No feedback found.</p>';
+                    return;
+                }
+                
+                // Aggregate in JavaScript
+                const questionGroups = {};
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    const qText = data.question;
+                    if (!questionGroups[qText]) {
+                        questionGroups[qText] = { question: qText, count: 0, reports: [] };
+                    }
+                    questionGroups[qText].count++;
+                    questionGroups[qText].reports.push({ ...data, id: doc.id });
+                });
+
+                // Convert to array and sort by most reported
+                const sortedGroups = Object.values(questionGroups).sort((a, b) => b.count - a.count);
+
+                content.innerHTML = '';
+                sortedGroups.forEach((group, index) => {
+                    const div = document.createElement('div');
+                    div.className = "p-4 bg-slate-800/50 rounded-xl border border-slate-700 relative group";
+                    const badge = filterType === 'down' ? '👎' : '👍';
+                    const docIds = group.reports.map(r => r.id);
+                    const docIdsString = JSON.stringify(docIds);
+                    const detailsId = `details-${index}`;
+                    const qEncoded = encodeURIComponent(group.question);
+                    
+                    div.innerHTML = `
+                        <div class="flex justify-between items-start mb-2 gap-4">
+                            <p class="text-sm text-slate-200 font-bold pr-4">"${group.question}"</p>
+                            <span class="flex-shrink-0 text-lg font-black ${filterType === 'down' ? 'text-red-400' : 'text-emerald-400'}">${group.count} ${badge}</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-3">
+                            <div class="flex gap-2">
+                                <button onclick="document.getElementById('${detailsId}').classList.toggle('hidden')" class="text-[10px] text-slate-400 hover:text-white underline decoration-dotted">Show/Hide Reports</button>
+                                <button onclick='editQuestionText("${qEncoded}", ${docIdsString})' class="text-[10px] text-blue-400 hover:text-blue-300 font-bold border border-blue-500/30 px-2 py-1 rounded">Edit</button>
+                            </div>
+                            ${filterType === 'down' ? `<button onclick='dismissGroup(${docIdsString})' class="text-[10px] text-red-400 hover:text-red-300 font-bold border border-red-500/30 px-2 py-1 rounded">Dismiss All (${group.count})</button>` : ''}
+                        </div>
+                        <div id="${detailsId}" class="hidden mt-3 pt-3 border-t border-slate-700 space-y-2">
+                            ${group.reports.map(report => {
+                                const reportDate = report.timestamp ? new Date(report.timestamp.seconds * 1000).toLocaleString() : report.date;
+                                return `<div class="text-xs text-slate-500 flex justify-between items-center">
+                                            <span>User: ${report.user}</span>
+                                            <span class="font-mono text-[10px]">${reportDate}</span>
+                                        </div>`;
+                            }).join('')}
+                        </div>
+                    `;
+                    content.appendChild(div);
+                });
+            } catch (e) {
+                console.error(e);
+                content.innerHTML = `<p class="text-center text-red-400 text-xs">Error loading data.<br>Check console or create Index.</p>`;
+            }
+        }
+
+        let adminChartInstance = null;
+        async function renderAdminChart() {
+            const ctx = document.getElementById('adminStatsChart');
+            if (!ctx) return;
+
+            // 1. Prepare Dates (Last 7 Game Days)
+            const days = 7;
+            const labels = [];
+            const dateKeys = [];
+            const todayGameDate = getGameDate();
+            const parts = todayGameDate.split('-').map(Number);
+            const baseDate = new Date(Date.UTC(parts[0], parts[1]-1, parts[2]));
+
+            for (let i = days - 1; i >= 0; i--) {
+                const d = new Date(baseDate);
+                d.setUTCDate(d.getUTCDate() - i);
+                const dateStr = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+                dateKeys.push(dateStr);
+                labels.push(`${String(d.getUTCMonth() + 1).padStart(2, '0')}/${String(d.getUTCDate()).padStart(2, '0')}`);
+            }
+
+            const upData = new Array(days).fill(0);
+            const downData = new Array(days).fill(0);
+
+            // 2. Fetch & Aggregate Data
+            try {
+                const snapshot = await db.collection('feedback')
+                    .orderBy('timestamp', 'desc')
+                    .limit(500)
+                    .get();
+
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    const idx = dateKeys.indexOf(data.date);
+                    if (idx !== -1) {
+                        if (data.vote === 'up') upData[idx]++;
+                        if (data.vote === 'down') downData[idx]++;
+                    }
+                });
+            } catch (e) { console.log("Chart load error", e); }
+
+            // 3. Render Chart
+            if (adminChartInstance) adminChartInstance.destroy();
+
+            adminChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        { label: 'Likes', data: upData, borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', tension: 0.3, fill: true, pointRadius: 3 },
+                        { label: 'Reports', data: downData, borderColor: '#f87171', backgroundColor: 'rgba(248, 113, 113, 0.1)', tension: 0.3, fill: true, pointRadius: 3 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: true, labels: { color: '#94a3b8', font: {size: 10}, boxWidth: 10 } }
+                    },
+                    scales: {
+                        x: { display: true, grid: { display: false }, ticks: { color: '#64748b', font: {size: 10} } },
+                        y: { display: false, beginAtZero: true }
+                    },
+                    interaction: { mode: 'index', intersect: false }
+                }
+            });
+        }
+
+        let adminDAUChartInstance = null;
+        async function renderDAUChart() {
+            const ctx = document.getElementById('adminDAUChart');
+            if (!ctx) return;
+
+            // 1. Prepare Dates (Last 7 Game Days)
+            const days = 7;
+            const labels = [];
+            const dateKeys = [];
+            const todayGameDate = getGameDate();
+            const parts = todayGameDate.split('-').map(Number);
+            const baseDate = new Date(Date.UTC(parts[0], parts[1]-1, parts[2]));
+
+            for (let i = days - 1; i >= 0; i--) {
+                const d = new Date(baseDate);
+                d.setUTCDate(d.getUTCDate() - i);
+                const dateStr = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+                dateKeys.push(dateStr);
+                labels.push(`${String(d.getUTCMonth() + 1).padStart(2, '0')}/${String(d.getUTCDate()).padStart(2, '0')}`);
+            }
+
+            const dauData = new Array(days).fill(0);
+
+            // 2. Fetch Data (Unique Users per Day)
+            try {
+                const snapshot = await db.collection('scores')
+                    .where('date', 'in', dateKeys)
+                    .get();
+
+                const uniqueUsersPerDay = {}; 
+                dateKeys.forEach(k => uniqueUsersPerDay[k] = new Set());
+
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    if (uniqueUsersPerDay[data.date]) {
+                        uniqueUsersPerDay[data.date].add(data.userId);
+                    }
+                });
+
+                dateKeys.forEach((k, idx) => dauData[idx] = uniqueUsersPerDay[k].size);
+            } catch (e) { console.log("DAU Chart load error", e); }
+
+            // 3. Render Chart
+            if (adminDAUChartInstance) adminDAUChartInstance.destroy();
+            adminDAUChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{ label: 'Active Users', data: dauData, backgroundColor: 'rgba(56, 189, 248, 0.5)', borderColor: '#38bdf8', borderWidth: 1, borderRadius: 4 }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false }, title: { display: true, text: 'Daily Active Players', color: '#94a3b8', font: {size: 12} } },
+                    scales: { x: { display: true, grid: { display: false }, ticks: { color: '#64748b', font: {size: 10} } }, y: { display: true, beginAtZero: true, grid: { color: '#334155' }, ticks: { color: '#64748b', font: {size: 10}, precision: 0 } } }
+                }
+            });
+        }
+
+        async function editQuestionText(encodedText, docIds) {
+            const currentText = decodeURIComponent(encodedText);
+            const newText = prompt("Edit Question Text (Updates Firestore reports only):", currentText);
+            if (!newText || newText === currentText) return;
+            
+            const batch = db.batch();
+            docIds.forEach(id => {
+                batch.update(db.collection('feedback').doc(id), { question: newText });
+            });
+
+            try {
+                await batch.commit();
+                loadFeedback(currentAdminFilter);
+            } catch(e) { 
+                console.error("Error updating question text:", e);
+                alert("Update failed.");
+            }
+        }
+
+        async function dismissGroup(docIds) {
+            if (!confirm(`Dismiss all ${docIds.length} reports for this question?`)) return;
+            
+            const batch = db.batch();
+            docIds.forEach(id => {
+                batch.delete(db.collection('feedback').doc(id));
+            });
+
+            try {
+                await batch.commit();
+                loadFeedback(currentAdminFilter);
+            } catch(e) { 
+                console.error("Error dismissing group:", e);
+                alert("Error dismissing reports.");
+            }
+        }
+
+        async function checkGlobalMessage() {
+            try {
+                const doc = await db.collection('config').doc('globalMessage').get();
+                if (doc.exists) {
+                    const data = doc.data();
+                    // Track unique message version by timestamp or text
+                    const msgId = (data.updatedAt && typeof data.updatedAt.toMillis === 'function') ? data.updatedAt.toMillis().toString() : data.text;
+                    const lastSeen = localStorage.getItem('trivia-global-msg-seen');
+
+                    if (data.text && data.text.trim() !== "" && lastSeen !== msgId) {
+                        const banner = document.getElementById('global-message-banner');
+                        const text = document.getElementById('global-message-text');
+                        const closeBtn = document.getElementById('global-message-close');
+
+                        if (banner && text) {
+                            text.innerText = data.text;
+                            banner.classList.remove('hidden');
+                            
+                            if (closeBtn) {
+                                closeBtn.onclick = () => {
+                                    localStorage.setItem('trivia-global-msg-seen', msgId);
+                                    banner.classList.add('hidden');
+                                };
+                            }
+                        }
+                    }
+                }
+            } catch (e) { console.log("Msg check skipped", e); }
+        }
+
+        async function updateGlobalMessage() {
+            const input = document.getElementById('admin-global-msg');
+            const text = input.value.trim();
+            if (!text) return;
+            if (!confirm("Update global banner to: " + text + "?")) return;
+            try {
+                await db.collection('config').doc('globalMessage').set({ text: text, updatedAt: firebase.firestore.FieldValue.serverTimestamp() });
+                alert("Banner updated. Refresh to see changes.");
+            } catch(e) { alert("Error updating banner"); }
+        }
+
+        async function clearGlobalMessage() {
+            if (!confirm("Clear global banner?")) return;
+            try {
+                await db.collection('config').doc('globalMessage').delete();
+                document.getElementById('admin-global-msg').value = "";
+                document.getElementById('global-message-banner').classList.add('hidden');
+                alert("Banner cleared.");
+            } catch(e) { alert("Error clearing banner"); }
+        }
+
+        async function checkMaintenanceMode() {
+            try {
+                const doc = await db.collection('config').doc('maintenance').get();
+                const isMaintenance = doc.exists && doc.data().enabled;
+                
+                const modal = document.getElementById('maintenance-modal');
+                const bypass = document.getElementById('admin-bypass-login');
+                const toggle = document.getElementById('admin-maintenance-toggle'); // For admin dashboard sync
+                
+                if (toggle) toggle.checked = isMaintenance;
+
+                if (isMaintenance) {
+                    // Check if user is admin
+                    if (auth.currentUser && auth.currentUser.email === ADMIN_EMAIL) {
+                        if (modal) modal.classList.add('hidden');
+                        return; 
+                    }
+                    
+                    // Not admin or not logged in
+                    if (modal) {
+                        modal.classList.remove('hidden');
+                        // Show login option only if not logged in, so admin can login
+                        if (!auth.currentUser) bypass.classList.remove('hidden');
+                        else bypass.classList.add('hidden');
+                    }
+                } else {
+                    if (modal) modal.classList.add('hidden');
+                }
+            } catch (e) { console.error("Maintenance check failed", e); }
+        }
+
+        async function toggleMaintenance() {
+            const toggle = document.getElementById('admin-maintenance-toggle');
+            const enabled = toggle.checked;
+            
+            if (!confirm(`Turn Maintenance Mode ${enabled ? 'ON' : 'OFF'}?`)) {
+                toggle.checked = !enabled;
+                return;
+            }
+            
+            try {
+                await db.collection('config').doc('maintenance').set({ enabled: enabled, updatedAt: firebase.firestore.FieldValue.serverTimestamp() });
+                alert(`Maintenance Mode is now ${enabled ? 'ON' : 'OFF'}.`);
+            } catch(e) { 
+                alert("Error updating maintenance mode.");
+                toggle.checked = !enabled;
+            }
+        }
+
         window.addEventListener('appinstalled', () => {
             hideInstallButtons();
             deferredPrompt = null;
@@ -3850,5 +4410,3 @@ function closeStats() {
     </script>
 </body>
 </html>
-</body>
-</html> 
