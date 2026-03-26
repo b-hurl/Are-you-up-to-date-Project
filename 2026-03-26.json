@@ -1,0 +1,123 @@
+[
+{
+    "q": "According to the Associated Press (AP) on March 25, 2026, the U.S. Justice Department agreed to a $1.2 million settlement to resolve a 'malicious prosecution' lawsuit filed by which former National Security Adviser?",
+    "options": [
+      "H.R. McMaster",
+      "John Bolton",
+      "Michael Flynn",
+      "Susan Rice"
+    ],
+    "a": 2,
+    "category": "Politics",
+    "source": "https://www.pbs.org/newshour/politics/ap-report-justice-department-settles-lawsuit-from-trump-ally-michael-flynn-for-1-2-million"
+  },
+  {
+    "q": "As reported by Bloomberg on March 25, 2026, Canadian farmland values saw what percentage increase in the past year despite a broader softening in the domestic economy?",
+    "options": [
+      "4.2 per cent",
+      "7.5 per cent",
+      "9.3 per cent",
+      "12.1 per cent"
+    ],
+    "a": 2,
+    "category": "Economy",
+    "source": "https://www.bnnbloomberg.ca/investing/market-outlook/2026/03/25/market-outlook-canadian-farmland-values-rise-93-per-cent/"
+  },
+  {
+    "q": "The Verge reported on March 25, 2026, that Disney’s new CEO, Josh D’Amaro, is facing a strategy crisis after the collapse of two tech partnerships totaling $2.5 billion, including a failed AI deal with which company?",
+    "options": [
+      "Google DeepMind",
+      "OpenAI (Sora)",
+      "Anthropic",
+      "NVIDIA"
+    ],
+    "a": 1,
+    "category": "Technology",
+    "source": "https://www.techbuzz.ai/articles/disney-s-2-5b-ai-and-metaverse-bets-collapse-under-new-ceo"
+  },
+  {
+    "q": "In a Science News update from March 25, 2026, researchers confirmed that a car-sized asteroid designated '2026 FM3' safely passed Earth at a distance closer than what landmark?",
+    "options": [
+      "The Geostationary Orbit",
+      "The International Space Station",
+      "The Moon's orbit",
+      "The Kuiper Belt"
+    ],
+    "a": 2,
+    "category": "Science",
+    "source": "https://timesofindia.indiatimes.com/science/nasa-alert-car-sized-asteroid-2026-fm3-set-to-pass-238000-km-from-earth-could-it-pose-a-threat/articleshow/129798176.cms"
+  },
+  {
+    "q": "As reported by Grist and other partners on March 25, 2026, the U.S. administration is paying French energy firm TotalEnergies nearly $1 billion to halt the construction of what in the Atlantic Ocean?",
+    "options": [
+      "A deep-sea oil rig",
+      "An offshore wind farm",
+      "A tidal energy turbine",
+      "A trans-continental data cable"
+    ],
+    "a": 1,
+    "category": "Environment",
+    "source": "https://www.wvtf.org/2026-03-25/trump-administration-pays-nearly-1b-to-stop-company-from-building-an-offshore-wind-farm"
+  },
+{
+    "q": "On March 25, 2026, Variety reported that which late-night host is developing a new 'Lord of the Rings' film with his son at Warner Bros.?",
+    "options": [
+      "Jimmy Fallon",
+      "Stephen Colbert",
+      "Jimmy Kimmel",
+      "Seth Meyers"
+    ],
+    "a": 1,
+    "category": "Entertainment",
+    "source": "https://au.variety.com/2026/film/news/lord-of-the-rings-movie-stephen-colbert-warner-bros-34612/"
+  },
+  {
+    "q": "Which Marvel actor recently called out Sony and Disney to 'get their s—t together' regarding rights so his character can fight Spider-Man, as reported by Variety on March 25, 2026?",
+    "options": [
+      "Charlie Cox",
+      "Vincent D'Onofrio",
+      "Jon Bernthal",
+      "Willem Dafoe"
+    ],
+    "a": 1,
+    "category": "Movies",
+    "source": "https://au.variety.com/2026/film/news/vincent-donofrio-marvel-sony-spider-man-kingpin-34614/"
+  },
+  {
+    "q": "According to a TMZ report on March 25, 2026, which 'Buffy the Vampire Slayer' star was tragically found dead by a friend, with no foul play suspected?",
+    "options": [
+      "James Marsters",
+      "David Boreanaz",
+      "Nicholas Brendon",
+      "Seth Green"
+    ],
+    "a": 2,
+    "category": "Celebrity",
+    "source": "https://www.dailymail.co.uk/tvshowbiz/article-15679817/buffy-star-nicholas-brendon-dead-friend-no-foul-play.html"
+  },
+  {
+    "q": "On March 25, 2026, the WNBA officially announced that the Expansion Draft for its two newest teams, Portland and Toronto, will take place on which date on ESPN?",
+    "options": [
+      "Friday, March 27",
+      "Monday, March 30",
+      "Friday, April 3",
+      "Monday, April 13"
+    ],
+    "a": 2,
+    "category": "Sports",
+    "source": "https://www.wnba.com/news/wnba-expansion-draft-2026-set-for-april-3"
+  },
+  {
+    "q": "As reported by IGN on March 25, 2026, Sony and Honda have officially scrapped their collaboration to develop which product that was intended to stream PS5 games?",
+    "options": [
+      "The Afeela electric car",
+      "The PlayStation Portable 2",
+      "A Sony-branded VR headset",
+      "A cloud-gaming smart TV"
+    ],
+    "a": 0,
+    "category": "Gaming",
+    "source": "https://www.ign.com/articles/sonys-honda-afeela-playstation-cars-are-getting-scrapped-now-too"
+  }
+
+]

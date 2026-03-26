@@ -395,6 +395,10 @@
                 <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-2">Signed In As</p>
                 <p id="user-email-display" class="text-white font-mono text-sm bg-slate-900 py-2 px-3 rounded-lg border border-slate-700 mb-6 truncate"></p>
                 <button id="admin-access-btn" onclick="openAdminDashboard()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 hidden">Admin Dashboard</button>
+                <button onclick="forceCloudSync()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 flex items-center justify-center gap-2">
+                    <span id="sync-icon" class="text-lg">🔄</span>
+                    <span>Refresh All Data</span>
+                </button>
                 <button onclick="doLogout()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3">Sign Out</button>
                 <button onclick="deleteAccount()" class="w-full bg-red-900/20 hover:bg-red-900/40 text-red-400 border border-red-500/20 py-3 rounded-xl font-bold text-sm transition-all">Delete Account</button>
             </div>
@@ -563,8 +567,12 @@
             </div>
         </div>
         <div id="content-area" class="text-center">
-            <div id="category-display" class="mb-4 hidden">
-                <span class="inline-block bg-primary-500/20 text-primary-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-primary-500/30"></span>
+            <div id="category-display" class="mb-4 hidden flex flex-wrap justify-center gap-2">
+                <span id="category-label" class="inline-block bg-primary-500/20 text-primary-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-primary-500/30"></span>
+                <span id="location-badge" class="hidden bg-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-emerald-500/30 flex items-center gap-1">
+                    <span>📍</span>
+                    <span id="location-badge-text">Local</span>
+                </span>
             </div>
             
             <div id="mode-selection" class="hidden text-center space-y-4 py-2 relative">
@@ -722,7 +730,7 @@
     </div>
 
     <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity space-x-4">
-        <a href="mailto:support@example.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact</a>
+        <a href="mailto:bfehurl@gmail.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact</a>
     </footer>
 
     <!-- Toast Notification -->
@@ -761,6 +769,7 @@
         let leaderboardMode = 'casual';
         let timerInterval = null;
         let rankingsListener = null;
+        let locationPromise = null;
         let toastTimeout = null;
 
         // --- CROSS-BROWSER STATE SYNC ---
@@ -869,10 +878,13 @@
         }
 
         // --- LOCATION SERVICES ---
-        async function determineUserLocation() {
+        function determineUserLocation() {
+            if (locationPromise) return locationPromise;
+            
+            locationPromise = (async () => {
             // Check cache first to avoid API rate limits
             const cached = localStorage.getItem('trivia-location');
-            if (cached) return JSON.parse(cached);
+                if (cached) return JSON.parse(cached);
 
             try {
                 // Use a free IP-geolocation service (approximate location)
@@ -892,9 +904,12 @@
                 console.log("Location detected:", loc);
                 return loc;
             } catch (e) { return null; }
+            })();
+            
+            return locationPromise;
         }
 
-        function selectMode(mode) {
+        async function selectMode(mode) {
             const btn = document.getElementById(`btn-mode-${mode}`);
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
 
@@ -1165,11 +1180,23 @@ function renderQuestion() {
     document.getElementById('question-text').innerText = currentQ.q;
     
     const catDisplay = document.getElementById('category-display');
+    const catLabel = document.getElementById('category-label');
+    const locBadge = document.getElementById('location-badge');
+    const locText = document.getElementById('location-badge-text');
+
     if (currentQ.category) {
-        catDisplay.querySelector('span').innerText = currentQ.category;
+        catLabel.innerText = currentQ.category;
         catDisplay.classList.remove('hidden');
     } else {
-        catDisplay.classList.add('hidden');
+        catLabel.innerText = "";
+    }
+
+    if (currentQ.location) {
+        locBadge.classList.remove('hidden');
+        locText.innerText = currentQ.location.city || currentQ.location.region || "Local";
+        catDisplay.classList.remove('hidden');
+    } else {
+        locBadge.classList.add('hidden');
     }
 
     const container = document.getElementById('options-container');
@@ -2432,6 +2459,14 @@ async function createGroup() {
         groups.push({ id: newGroupId, name: groupName });
         localStorage.setItem('trivia-groups', JSON.stringify(groups));
         currentGroupIndex = groups.length - 1; // Switch to new group
+
+        // Sync groups to cloud
+        if (auth && auth.currentUser) {
+            await db.collection('users').doc(userId).set({
+                groups: groups
+            }, { merge: true });
+        }
+
         exportStateToURL();
         
         // Ensure the submit form is visible/ready for the new group context
@@ -2511,6 +2546,13 @@ async function confirmLeaveGroup(groupId) {
         let groups = getMyGroups();
         groups = groups.filter(g => g.id !== groupId);
         localStorage.setItem('trivia-groups', JSON.stringify(groups));
+
+        // Sync groups to cloud
+        if (auth && auth.currentUser) {
+            await db.collection('users').doc(userId).set({
+                groups: groups
+            }, { merge: true });
+        }
         
         currentGroupIndex = 0;
         exportStateToURL();
@@ -3155,6 +3197,16 @@ async function checkRemoteProgress(user) {
             if (data.currentStreak !== undefined) localStorage.setItem('trivia-streak', data.currentStreak);
             if (data.lastPlayedDate) localStorage.setItem('trivia-last-date', data.lastPlayedDate);
 
+            // SYNC GROUPS: Restore group list from cloud
+            if (data.groups && Array.isArray(data.groups)) {
+                localStorage.setItem('trivia-groups', JSON.stringify(data.groups));
+                // If we are on the results screen, refresh the leaderboard UI to show synced groups
+                if (!document.getElementById('results-card').classList.contains('hidden')) {
+                    fetchAndDisplayLeaderboard();
+                    checkIfSubmitted();
+                }
+            }
+
             if (data.lastPlayedDate === today) {
                 // Determine played modes
                 let modes = data.playedModes || [];
@@ -3555,10 +3607,10 @@ async function emailAuth(type) {
             await result.user.updateProfile({ displayName: name });
             localStorage.setItem('trivia-name', name);
             
-            errDisplay.innerText = "Account creation successful! Going to main screen...";
+            errDisplay.innerText = "Account created!";
         } else {
             await auth.signInWithEmailAndPassword(email, password);
-            errDisplay.innerText = "Login complete, loading information...";
+            errDisplay.innerText = "Login successful!";
         }
         
         errDisplay.className = "text-emerald-400 text-sm font-bold text-center mt-4 animate-pulse";
@@ -3566,11 +3618,11 @@ async function emailAuth(type) {
 
         setTimeout(() => {
             closeLoginModal();
-            errDisplay.classList.add('hidden');
             loginBtn.disabled = false;
             loginBtn.innerText = originalBtnText;
             loginBtn.classList.remove('text-glow-pulse');
-        }, 1500);
+            setTimeout(() => errDisplay.classList.add('hidden'), 500);
+        }, 600);
 
     } catch (error) {
         errDisplay.innerText = error.message;
@@ -3813,6 +3865,14 @@ async function confirmJoinGroup(groupId, groupName) {
     groups.push({ id: groupId, name: groupName });
     localStorage.setItem('trivia-groups', JSON.stringify(groups));
     currentGroupIndex = groups.length - 1;
+
+    // Sync groups to cloud
+    if (auth && auth.currentUser) {
+        await db.collection('users').doc(auth.currentUser.uid).set({
+            groups: groups
+        }, { merge: true });
+    }
+
     exportStateToURL();
     console.log("Joined new group:", groupName);
     
