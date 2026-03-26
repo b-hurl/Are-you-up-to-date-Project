@@ -86,9 +86,18 @@
     box-shadow: 0 6px 20px var(--primary-dim);
 }
         .glass-panel { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
-        body { transition: background-color 1s ease; }
+        body { transition: background-color 0.5s ease; }
         body.dimmed { background-color: #020617 !important; }
-        body.grayscale-mode { filter: grayscale(1); -webkit-filter: grayscale(1); }
+        
+        /* Enhanced failure state */
+        body.failure-active { background-color: #000000 !important; }
+        body.failure-active #question-text, 
+        body.failure-active #game-header, 
+        body.failure-active #category-display,
+        body.failure-active .option-btn:not(.correct):not(.incorrect) { 
+            filter: grayscale(1); 
+            opacity: 0.4; 
+        }
         @keyframes score-bump { 0% { transform: scale(1); } 50% { transform: scale(1.2); background-color: #10b981; } 100% { transform: scale(1); } }
         .animate-score-up { animation: score-bump 0.4s ease-out; }
         @keyframes slide-in-up { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
@@ -1247,7 +1256,7 @@ function confirmAnswer() {
         currentStreak = 0;
         buttons[selectedIdx].classList.add('incorrect');
         playSound('wrong');
-        document.body.classList.add('grayscale-mode');
+        document.body.classList.add('failure-active');
         
         // Highlight the correct answer if the user chose wrong
         const currentQ = gameData.questions[currentIdx];
@@ -1265,7 +1274,7 @@ function confirmAnswer() {
     const transitionDelay = (isCurrentSelectionCorrect && currentStreak >= 2) ? 1500 : 1000;
 
     setTimeout(() => {
-        document.body.classList.remove('grayscale-mode');
+        document.body.classList.remove('failure-active');
         if (currentIdx < gameData.questions.length - 1) {
             currentIdx++;
             selectedIdx = null; // Reset selection for the next question
