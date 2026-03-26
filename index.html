@@ -656,7 +656,7 @@
                 </div>
             </div>
 
-            <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8">Loading Today's Challenge...</h2>
+            <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8 hidden">Loading Today's Challenge...</h2>
             <div id="options-container" class="space-y-3 mb-6"></div>
             <div id="action-area"></div>
         </div>
@@ -1135,6 +1135,7 @@ async function startApp() {
     checkGlobalMessage();
     checkMaintenanceMode();
     determineUserLocation(); // Trigger background location check
+    startNextTimer(); // Start global countdown immediately
     
     try {
         const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
@@ -1195,6 +1196,7 @@ async function startApp() {
     } catch (err) {
         console.error("Error loading trivia:", err);
         document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
+        document.getElementById('question-text').classList.remove('hidden');
     }
 }
 
@@ -1600,6 +1602,9 @@ async function setTaunt() {
              localStorage.removeItem(`leaderboard_${groups[currentGroupIndex].id}_${gameDate}_${lastMode}`);
         }
         fetchAndDisplayLeaderboard();
+    if (!document.getElementById('daily-leaderboard-modal').classList.contains('hidden')) {
+        updateDailyLeaderboardModal();
+    }
     } catch (error) {
         console.error("Error setting taunt:", error);
         alert("You need to play today's trivia before you can taunt!");
@@ -2001,9 +2006,11 @@ async function fetchAndDisplayLeaderboard() {
             const displayName = isMe ? `${user.name} (You)` : user.name;
             const gmIcon = user.isGrandMaster ? '<span class="ml-1 grand-master-shimmer font-black text-[10px]" title="Grand Master Status">🏆</span>' : '';
             const streakHTML = (user.streak > 0) ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : '';
-            const cleanTaunt = censorTaunt(user.taunt);
+            const hasTaunt = user.taunt && user.taunt.trim().length > 0;
+            const cleanTaunt = hasTaunt ? censorTaunt(user.taunt) : null;
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}" 👇</div>` : '';
-            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 bg-slate-700 hover:bg-slate-600 text-primary-300 text-[10px] px-2 py-0.5 rounded border border-primary-500/30 transition-all">💬 Taunt</button>` : '';
+            const tauntBtnClass = hasTaunt ? "bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30" : "bg-amber-500/20 hover:bg-amber-500/40 text-amber-400 border-amber-500/50";
+            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 ${tauntBtnClass} text-[10px] px-2 py-0.5 rounded border transition-all">💬 ${hasTaunt ? 'Taunt' : 'Add Taunt'}</button>` : '';
             
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
 
@@ -2397,12 +2404,12 @@ async function updateDailyLeaderboardModal() {
             }
 
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
-            const cleanTaunt = censorTaunt(user.taunt);
+            const hasTaunt = user.taunt && user.taunt.trim().length > 0;
+            const cleanTaunt = hasTaunt ? censorTaunt(user.taunt) : null;
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}"</div>` : '';
             const gmIcon = user.isGrandMaster ? '<span class="ml-1 grand-master-shimmer font-black text-[10px]">🏆</span>' : '';
-            
-            const locLabel = (user.location && (user.location.city || user.location.region_code)) ? 
-                `<span class="text-[9px] text-slate-500 flex items-center gap-0.5 mt-0.5">📍 ${user.location.city || user.location.region}</span>` : '';
+            const tauntBtnClass = hasTaunt ? "bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30" : "bg-amber-500/20 hover:bg-amber-600/40 text-amber-400 border-amber-500/50";
+            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 ${tauntBtnClass} text-[10px] px-2 py-0.5 rounded border transition-all">💬 ${hasTaunt ? 'Taunt' : 'Add Taunt'}</button>` : '';
 
             return `
                 <div class="flex flex-col p-3 rounded-xl border ${rowStyle}">
@@ -2413,9 +2420,9 @@ async function updateDailyLeaderboardModal() {
                                 <div class="flex items-center">
                                     <span class="${isMe ? 'text-emerald-400 font-bold' : 'text-slate-200'} truncate max-w-[140px]">${user.name}${isMe ? ' (You)' : ''}</span>
                                     ${gmIcon}
+                                    ${actionBtn}
                                     ${user.streak > 0 ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : ''}
                                 </div>
-                                ${locLabel}
                             </div>
                         </div>
                         <span class="font-mono bg-slate-900/50 px-2 py-1 rounded text-primary-300 text-xs border border-primary-500/20">${user.score} pts</span>
@@ -2847,7 +2854,16 @@ function startNextTimer() {
         const s = Math.floor((diff % 60000) / 1000);
         
         const timeStr = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-        timerElems.forEach(el => el.innerText = timeStr);
+        timerElems.forEach(el => {
+            el.innerText = timeStr;
+            if (diff < 3600000) { // Less than 1 hour (60 * 60 * 1000 ms)
+                el.classList.remove('text-primary-400');
+                el.classList.add('text-red-500');
+            } else {
+                el.classList.remove('text-red-500');
+                el.classList.add('text-primary-400');
+            }
+        });
     };
 
     tick();
