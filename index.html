@@ -1277,7 +1277,8 @@ function startNewSession(data, date, mode) {
 // Update the renderQuestion to handle the new format
 function renderQuestion() {
     if (!gameData || !gameData.questions || !gameData.questions[currentIdx]) {
-        document.getElementById('question-text').innerText = "Error loading question.";
+        console.error("renderQuestion called with invalid state", { gameData, currentIdx });
+        document.getElementById('question-text').classList.add('hidden');
         return;
     }
 
@@ -3316,7 +3317,12 @@ async function checkDailyWinnerNotification() {
             new Notification(title, { body, icon: 'https://cdn-icons-png.flaticon.com/512/5968/5968923.png' });
             localStorage.setItem('trivia-notified-winner-date', todayGameDate);
         }
-    } catch (e) { console.log("Notification check skipped:", e); }
+    } catch (e) { 
+        if (e.message && e.message.includes("index")) {
+            console.error("Daily winner check requires a composite index. PLEASE CLICK THE LINK BELOW TO CREATE IT:");
+            console.error(e);
+        }
+    }
 }
 
 async function checkWeeklyWinner() {
@@ -3483,12 +3489,10 @@ async function checkRemoteProgress(user) {
             
             refreshModeSelectionUI();
 
-            // If the user has already completed both modes, stop here.
-            // This prevents the app from trying to "resume" a cloud session that might be behind or incomplete.
-            const currentSessionState = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-            if (currentSessionState.date === today && currentSessionState.playedModes && 
-                currentSessionState.playedModes.includes('casual') && 
-                currentSessionState.playedModes.includes('professional')) return;
+            // If the app is already showing results or the home screen timer, 
+            // don't let cloud sync force a UI jump unless it's a "Finished" state.
+            const isHome = !document.getElementById('mode-selection').classList.contains('hidden');
+            const isResults = !document.getElementById('results-card').classList.contains('hidden');
 
             // CLOUD SYNC: Restore session if remote is newer/valid
             if (data.currentSession && data.currentSession.date === today) {
@@ -3533,10 +3537,10 @@ async function checkRemoteProgress(user) {
 
                     if (allDone) {
                         showModeSelection();
-                    } else if (s.isFinished) {
+                    } else if (s.isFinished && !isResults) {
                         archiveSession(s);
                         showFinalResults();
-                    } else {
+                    } else if (!s.isFinished && !isHome && !isResults) {
                         // Resume Game UI
                         document.getElementById('mode-selection').classList.add('hidden');
                         document.getElementById('question-text').classList.remove('hidden');
