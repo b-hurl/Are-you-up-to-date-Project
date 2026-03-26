@@ -3526,6 +3526,9 @@ async function checkRemoteProgress(user) {
                     currentIdx = s.currentIdx;
                     score = s.score;
                     currentStreak = s.currentStreak;
+                    currentIdx = parseInt(s.currentIdx) || 0;
+                    score = parseInt(s.score) || 0;
+                    currentStreak = parseInt(s.currentStreak) || 0;
                     window.userChoices = s.userChoices || [];
                     selectedIdx = s.selectedIdx;
                     
@@ -3541,6 +3544,7 @@ async function checkRemoteProgress(user) {
                         archiveSession(s);
                         showFinalResults();
                     } else if (!s.isFinished && !isHome && !isResults) {
+                    } else if (!s.isFinished && !isResults) {
                         // Resume Game UI
                         document.getElementById('mode-selection').classList.add('hidden');
                         document.getElementById('question-text').classList.remove('hidden');
