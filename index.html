@@ -196,6 +196,7 @@
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-md w-full shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col max-h-[80vh]">
             <button onclick="openWeeklyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500 z-10" title="Refresh">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                <svg id="weekly-refresh-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
             </button>
             <button onclick="closeWeeklyLeaderboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
             <div class="text-center mb-6">
@@ -213,6 +214,7 @@
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-md w-full shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col max-h-[80vh]">
             <button onclick="openDailyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500 z-10" title="Refresh">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                <svg id="daily-refresh-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
             </button>
             <button onclick="closeDailyLeaderboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
             <div class="text-center mb-6">
@@ -685,6 +687,7 @@
                 <div id="leaderboard-controls" class="flex items-center gap-3">
                     <button onclick="fetchAndDisplayLeaderboard()" class="text-slate-500 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500" title="Refresh">
                         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        <svg id="leaderboard-refresh-icon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                     </button>
                     <div class="flex items-center gap-1.5">
                         <input type="checkbox" id="profanity-filter-toggle" onchange="toggleProfanityFilter()" class="h-3.5 w-3.5 bg-slate-700 border-slate-600 rounded text-primary-500 focus:ring-primary-600 focus:ring-offset-slate-800 cursor-pointer">
@@ -1104,16 +1107,7 @@ function showModeSelection() {
     document.getElementById('game-header').classList.add('hidden');
     document.getElementById('options-container').innerHTML = '';
 
-            // Show loading overlay if user is logged in but progress isn't loaded yet
-            const overlay = document.getElementById('mode-loading-overlay');
-            if (auth && auth.currentUser && remoteUserProgress === null) {
-                document.getElementById('mode-loading-overlay').classList.remove('hidden');
-                overlay.classList.remove('hidden');
-                overlay.classList.remove('opacity-0');
-            } else {
-                document.getElementById('mode-loading-overlay').classList.add('hidden');
-                overlay.classList.add('hidden');
-            }
+    refreshModeSelectionUI();
 }
 
 function startNewSession(data, date, mode) {
@@ -1534,6 +1528,10 @@ async function submitScore() {
     btn.disabled = true;
     btn.innerText = "Submitting...";
 
+    // Spin the leaderboard icon during submission
+    const refreshIcon = document.getElementById('leaderboard-refresh-icon');
+    if (refreshIcon) refreshIcon.classList.add('animate-spin');
+
     // Taunt Logic
     const tauntInput = document.getElementById('player-taunt');
     const taunt = tauntInput ? tauntInput.value.trim() : null;
@@ -1551,6 +1549,7 @@ async function submitScore() {
 
     const gameDate = getGameDate();
     const streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
+    const userLoc = JSON.parse(localStorage.getItem('trivia-location') || '{}');
     
     // Get the mode for the game just played
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
@@ -1578,7 +1577,8 @@ async function submitScore() {
         groupIds: groupIds,         // Save ALL Group IDs
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         playedModes: shouldResetModes ? [lastMode] : firebase.firestore.FieldValue.arrayUnion(lastMode),
-        taunt: taunt // Save taunt directly with score
+        taunt: taunt, // Save taunt directly with score
+        location: userLoc // Include location for the pin
     };
 
     try {
@@ -1633,6 +1633,8 @@ async function submitScore() {
         btn.disabled = false;
         btn.innerText = "Submit Score";
     }
+    
+    if (refreshIcon) refreshIcon.classList.remove('animate-spin');
 }
 
 async function checkIfSubmitted() {
@@ -1727,6 +1729,9 @@ async function fetchAndDisplayLeaderboard() {
     const title = document.getElementById('leaderboard-title');
     const submitForm = document.getElementById('leaderboard-submit-form');
     const controls = document.getElementById('leaderboard-controls');
+    const refreshIcon = document.getElementById('leaderboard-refresh-icon');
+
+    if (refreshIcon) refreshIcon.classList.add('animate-spin');
     
     if (!auth.currentUser) {
         title.innerText = "Leaderboard";
@@ -1734,6 +1739,7 @@ async function fetchAndDisplayLeaderboard() {
         if (submitForm) submitForm.classList.remove('hidden');
         if (controls) controls.classList.add('hidden');
         display.innerHTML = `<div class="text-center p-8 text-slate-500 text-xs italic"><p>🔒 Sign in to create groups and view leaderboards</p></div>`;
+        if (refreshIcon) refreshIcon.classList.remove('animate-spin');
         return;
     }
     if (controls) controls.classList.remove('hidden');
@@ -1751,6 +1757,7 @@ async function fetchAndDisplayLeaderboard() {
                 <button onclick="createGroup()" id="create-group-btn" class="bg-primary-500 hover:bg-primary-400 text-white px-4 py-2 rounded-xl text-sm font-bold transition-all w-full">Create Friend Group</button>
             </div>
         `;
+        if (refreshIcon) refreshIcon.classList.remove('animate-spin');
         return;
     }
 
@@ -1927,6 +1934,8 @@ async function fetchAndDisplayLeaderboard() {
         } else {
             display.innerHTML = `<p class="text-red-400 text-xs text-center mt-2">Error: ${error.code || error.message}</p>`;
         }
+    } finally {
+        if (refreshIcon) refreshIcon.classList.remove('animate-spin');
     }
 }
 
@@ -1944,6 +1953,7 @@ function switchWeeklyLeaderboardMode(mode) {
 async function openWeeklyLeaderboard() {
     const modal = document.getElementById('weekly-leaderboard-modal');
     const content = document.getElementById('weekly-leaderboard-content');
+    const refreshIcon = document.getElementById('weekly-refresh-icon');
     
     modal.classList.remove('hidden');
     setTimeout(() => {
@@ -1952,9 +1962,12 @@ async function openWeeklyLeaderboard() {
         modal.querySelector('div').classList.add('scale-100');
     }, 10);
 
+    if (refreshIcon) refreshIcon.classList.add('animate-spin');
+
     const groups = getMyGroups();
     if (groups.length === 0) {
         content.innerHTML = '<p class="text-center text-slate-400">Join a group to see weekly standings.</p>';
+        if (refreshIcon) refreshIcon.classList.remove('animate-spin');
         return;
     }
     if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
@@ -2072,6 +2085,8 @@ async function openWeeklyLeaderboard() {
     } catch (e) {
         console.error(e);
         content.innerHTML = toggleHTML + '<p class="text-center text-red-400">Error loading data.</p>';
+    } finally {
+        if (refreshIcon) refreshIcon.classList.remove('animate-spin');
     }
 }
 
@@ -2185,15 +2200,34 @@ function clearRankingsBadge() {
 async function updateDailyLeaderboardModal() {
     const content = document.getElementById('daily-leaderboard-modal-content');
     const subtitle = document.getElementById('daily-modal-subtitle');
+    const refreshIcon = document.getElementById('daily-refresh-icon');
     
     if (!auth.currentUser) {
         content.innerHTML = `<div class="text-center p-8 text-slate-500 text-xs italic"><p>🔒 Sign in to view group rankings</p><button onclick="toggleLoginModal()" class="mt-4 bg-primary-600 text-white px-4 py-2 rounded-lg font-bold not-italic">Sign In</button></div>`;
         return;
     }
 
+    if (refreshIcon) refreshIcon.classList.add('animate-spin');
+
     const groups = getMyGroups();
     if (groups.length === 0) {
-        content.innerHTML = '<p class="text-center text-slate-400 p-4">Join or create a group to see today\'s rankings!</p>';
+        content.innerHTML = `
+            <div class="text-center p-6 bg-slate-900/40 rounded-2xl border border-slate-700/50">
+                <div class="text-4xl mb-3">🏆</div>
+                <h3 class="text-white font-bold mb-2">Start a Leaderboard</h3>
+                <p class="text-slate-400 text-xs mb-4">You haven't joined any groups yet. Create one to compete with friends!</p>
+                <div class="space-y-3">
+                    <input type="text" id="modal-new-group-name" placeholder="Group Name (e.g. The Fam)" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500 text-center">
+                    <button onclick="createGroupFromModal()" id="modal-create-group-btn" class="w-full bg-primary-600 hover:bg-primary-500 text-white py-3 rounded-xl font-bold text-xs transition-all shadow-lg shadow-primary-500/20">
+                        Create Friend Group
+                    </button>
+                </div>
+                <div class="mt-6 pt-4 border-t border-slate-700/50">
+                    <p class="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Have an invite code?</p>
+                    <p class="text-[10px] text-slate-400 mt-1">Ask a friend for their invite link to join an existing group!</p>
+                </div>
+            </div>`;
+        if (refreshIcon) refreshIcon.classList.remove('animate-spin');
         return;
     }
 
@@ -2222,7 +2256,7 @@ async function updateDailyLeaderboardModal() {
             const d = doc.data();
             if ((d.mode || 'casual') !== leaderboardMode) return;
             if (!userTotals[d.userId]) {
-                userTotals[d.userId] = { id: d.userId, name: d.name, score: 0, streak: d.streak || 0, taunt: d.taunt };
+                userTotals[d.userId] = { id: d.userId, name: d.name, score: 0, streak: d.streak || 0, taunt: d.taunt, location: d.location };
             }
             userTotals[d.userId].score = Math.max(userTotals[d.userId].score, d.score || 0);
         });
@@ -2253,14 +2287,22 @@ async function updateDailyLeaderboardModal() {
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
             const cleanTaunt = censorTaunt(user.taunt);
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}"</div>` : '';
+            
+            const locLabel = (user.location && (user.location.city || user.location.region_code)) ? 
+                `<span class="text-[9px] text-slate-500 flex items-center gap-0.5 mt-0.5">📍 ${user.location.city || user.location.region}</span>` : '';
 
             return `
                 <div class="flex flex-col p-3 rounded-xl border ${rowStyle}">
                     <div class="flex justify-between items-center w-full">
                         <div class="flex items-center">
                             ${badge}
-                            <span class="${isMe ? 'text-emerald-400 font-bold' : 'text-slate-200'} truncate max-w-[140px]">${user.name}${isMe ? ' (You)' : ''}</span>
-                            ${user.streak > 0 ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : ''}
+                            <div class="flex flex-col">
+                                <div class="flex items-center">
+                                    <span class="${isMe ? 'text-emerald-400 font-bold' : 'text-slate-200'} truncate max-w-[140px]">${user.name}${isMe ? ' (You)' : ''}</span>
+                                    ${user.streak > 0 ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : ''}
+                                </div>
+                                ${locLabel}
+                            </div>
                         </div>
                         <span class="font-mono bg-slate-900/50 px-2 py-1 rounded text-primary-300 text-xs border border-primary-500/20">${user.score} pts</span>
                     </div>
@@ -2279,7 +2321,23 @@ async function updateDailyLeaderboardModal() {
     } catch (e) {
         console.error(e);
         content.innerHTML = toggleHTML + '<p class="text-center text-red-400">Error loading leaderboard.</p>';
+    } finally {
+        if (refreshIcon) refreshIcon.classList.remove('animate-spin');
     }
+}
+
+async function createGroupFromModal() {
+    const input = document.getElementById('modal-new-group-name');
+    const btn = document.getElementById('modal-create-group-btn');
+    if (!input || !input.value.trim()) {
+        alert("Please enter a group name");
+        return;
+    }
+    // Temporarily swap ID so existing createGroup logic works
+    const originalId = "new-group-name";
+    input.id = originalId;
+    await createGroup();
+    updateDailyLeaderboardModal();
 }
 
 function switchDailyLeaderboardMode(mode) {
@@ -3226,35 +3284,7 @@ async function checkRemoteProgress(user) {
                      localStorage.setItem('trivia-session', JSON.stringify(session));
                 }
 
-                // UI Update: Disable buttons for played modes
-                modes.forEach(mode => {
-                    const btn = document.getElementById(`btn-mode-${mode}`);
-                    if (btn) {
-                        btn.classList.add('opacity-50', 'cursor-not-allowed', 'pointer-events-none');
-                        const desc = btn.querySelector('p');
-                        if (desc) desc.innerHTML = '<span class="text-emerald-400 font-bold">✅ Completed</span>';
-                    }
-                });
-
-                // CHECK IF BOTH MODES COMPLETE
-                if (modes.includes('casual') && modes.includes('professional')) {
-                    const container = document.getElementById('homepage-timer-container');
-                    const casualBtn = document.getElementById('btn-mode-casual');
-                    const proBtn = document.getElementById('btn-mode-professional');
-                    const subText = document.querySelector('#mode-selection p');
-                    
-                    if (container) container.classList.remove('hidden');
-                    if (casualBtn) casualBtn.classList.add('hidden');
-                    if (proBtn) proBtn.classList.add('hidden');
-                    if (subText) subText.classList.add('hidden');
-                    
-                    startNextTimer();
-                    
-                    if ("Notification" in window && Notification.permission !== "granted") {
-                        const nBtn = document.getElementById('notify-btn');
-                        if (nBtn) nBtn.classList.remove('hidden');
-                    }
-                }
+                refreshModeSelectionUI();
             }
 
             // CLOUD SYNC: Restore session if remote is newer/valid
@@ -3422,6 +3452,9 @@ function initFirebase() {
                 rankingsListener = null;
                 localStorage.removeItem('trivia-userId');
             }
+            
+            remoteUserProgress = null;
+            refreshModeSelectionUI();
             userId = getOrSetUserId();
             userIconDisplay.innerHTML = "👤";
             loginOptions.classList.remove('hidden');
