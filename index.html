@@ -105,6 +105,8 @@
         .animate-score-up { animation: score-bump 0.4s ease-out; }
         @keyframes slide-in-up { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
         .animate-slide-in { animation: slide-in-up 0.5s ease-out forwards; }
+        @keyframes fade-out { from { opacity: 1; } to { opacity: 0.4; } }
+        .animate-fade-out { animation: fade-out 1s forwards; animation-delay: 3s; }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -601,6 +603,10 @@
                             <span>🔔</span> Notify Me
                         </button>
                     </div>
+                    <button onclick="viewResultsFromHome()" class="mt-6 w-full bg-slate-800 hover:bg-slate-700 py-3 rounded-xl font-bold text-primary-300 text-xs transition-all uppercase tracking-widest border border-slate-700/50 flex items-center justify-center gap-2 shadow-lg">
+                        <span>📜</span> Review Today's Answers
+                    </button>
+
                     <div id="home-gm-badge" class="hidden mt-4 py-1.5 px-4 bg-yellow-500/10 border border-yellow-500/30 rounded-full inline-flex items-center gap-2">
                         <span class="text-sm">🏆</span>
                         <span class="grand-master-shimmer font-black text-xs uppercase tracking-tighter">Grand Master</span>
@@ -1008,6 +1014,11 @@
             if (gmBadge) gmBadge.classList.toggle('hidden', !allDone);
         }
 
+        function viewResultsFromHome() {
+            // Simply trigger the results card display
+            showFinalResults();
+        }
+
         async function selectMode(mode) {
             const btn = document.getElementById(`btn-mode-${mode}`);
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
@@ -1180,6 +1191,7 @@ async function startApp() {
                 // Resume game UI
                 document.getElementById('score-display').innerText = `Score: ${score}`;
                 document.getElementById('game-header').classList.remove('hidden');
+                        document.getElementById('question-text').classList.remove('hidden');
                 renderQuestion();
             }
         } else {
@@ -1567,6 +1579,25 @@ function getWeekId(dateStr) {
 }
 
 async function setTaunt() {
+    if (!auth || !auth.currentUser) {
+        toggleLoginModal();
+        return;
+    }
+
+    const gameDate = getGameDate();
+    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+    const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
+    const docId = `${gameDate}_${userId}_${lastMode}`;
+
+    // Enforce "once per day" rule by checking if a taunt already exists in the cloud
+    try {
+        const doc = await db.collection('scores').doc(docId).get();
+        if (doc.exists && doc.data().taunt && doc.data().taunt.trim().length > 0) {
+            alert("You have already set your taunt for today! To keep the stakes high, you can only set it once per day.");
+            return;
+        }
+    } catch (e) { console.log("Taunt check skipped or score not found", e); }
+
     const MAX_LEN = 60;
     const taunt = prompt(`Enter a taunt message for the player ranked below you (Max ${MAX_LEN} chars):`);
     if (taunt === null) return;
@@ -1584,13 +1615,6 @@ async function setTaunt() {
         alert("Let's keep it friendly-ish! No slurs or hate speech allowed.");
         return;
     }
-    
-    const gameDate = getGameDate();
-    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-    const playedModes = session.playedModes || [];
-    const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
-    const docId = `${gameDate}_${userId}_${lastMode}`;
-    
     try {
         await db.collection('scores').doc(docId).update({
             taunt: taunt.trim()
@@ -1726,11 +1750,12 @@ async function submitScore() {
             localStorage.removeItem(cacheKey);
         });
 
+        const hasTauntNow = taunt && taunt.trim().length > 0;
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full">
                 <p class="text-emerald-400 text-sm font-bold">✅ Score Submitted!</p>
-                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-primary-300 py-1.5 px-3 rounded-lg border border-primary-500/30 transition-all">
-                    💬 Add a Taunt
+                <button onclick="setTaunt()" title="${hasTauntNow ? 'You have already used your daily taunt.' : 'Click to add a message others see under your name!'}" class="text-xs ${hasTauntNow ? 'bg-slate-800/50 text-slate-500 border-slate-700 cursor-not-allowed animate-fade-out' : 'bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30'} py-1.5 px-3 rounded-lg border transition-all">
+                    💬 ${hasTauntNow ? 'Taunt Locked' : 'Update Taunt'}
                 </button>
             </div>`;
         
@@ -1800,11 +1825,12 @@ async function checkIfSubmitted() {
             return true;
         }
         }
+        const hasTaunt = data.taunt && data.taunt.trim().length > 0;
         document.getElementById('leaderboard-submit-form').innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full">
                 <p class="text-emerald-400 text-sm font-bold">✅ Your score is on the board!</p>
-                <button onclick="setTaunt()" class="text-xs bg-slate-700 hover:bg-slate-600 text-primary-300 py-1.5 px-3 rounded-lg border border-primary-500/30 transition-all">
-                    💬 Update Taunt
+                <button onclick="setTaunt()" title="${hasTaunt ? 'You have already used your daily taunt.' : 'Click to add a message others see under your name!'}" class="text-xs ${hasTaunt ? 'bg-slate-800/50 text-slate-500 border-slate-700 cursor-not-allowed animate-fade-out' : 'bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30'} py-1.5 px-3 rounded-lg border transition-all">
+                    💬 ${hasTaunt ? 'Taunt Locked' : 'Update Taunt'}
                 </button>
             </div>`;
         return true;
@@ -2009,8 +2035,9 @@ async function fetchAndDisplayLeaderboard() {
             const hasTaunt = user.taunt && user.taunt.trim().length > 0;
             const cleanTaunt = hasTaunt ? censorTaunt(user.taunt) : null;
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}" 👇</div>` : '';
-            const tauntBtnClass = hasTaunt ? "bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30" : "bg-amber-500/20 hover:bg-amber-500/40 text-amber-400 border-amber-500/50";
-            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 ${tauntBtnClass} text-[10px] px-2 py-0.5 rounded border transition-all">💬 ${hasTaunt ? 'Taunt' : 'Add Taunt'}</button>` : '';
+            const tauntBtnText = hasTaunt ? 'Taunt Locked' : 'Update Taunt';
+            const tauntBtnClass = hasTaunt ? 'bg-slate-800/50 text-slate-500 border-slate-700 cursor-not-allowed animate-fade-out' : 'bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30';
+            const actionBtn = isMe ? `<button onclick="setTaunt()" title="${hasTaunt ? 'You have already used your daily taunt.' : 'Click to add a message others see under your name!'}" class="ml-2 ${tauntBtnClass} text-[10px] px-2 py-0.5 rounded border transition-all">💬 ${tauntBtnText}</button>` : '';
             
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
 
@@ -2408,8 +2435,9 @@ async function updateDailyLeaderboardModal() {
             const cleanTaunt = hasTaunt ? censorTaunt(user.taunt) : null;
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}"</div>` : '';
             const gmIcon = user.isGrandMaster ? '<span class="ml-1 grand-master-shimmer font-black text-[10px]">🏆</span>' : '';
-            const tauntBtnClass = hasTaunt ? "bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30" : "bg-amber-500/20 hover:bg-amber-600/40 text-amber-400 border-amber-500/50";
-            const actionBtn = isMe ? `<button onclick="setTaunt()" class="ml-2 ${tauntBtnClass} text-[10px] px-2 py-0.5 rounded border transition-all">💬 ${hasTaunt ? 'Taunt' : 'Add Taunt'}</button>` : '';
+            const tauntBtnText = hasTaunt ? 'Taunt Locked' : 'Update Taunt';
+            const tauntBtnClass = hasTaunt ? 'bg-slate-800/50 text-slate-500 border-slate-700 cursor-not-allowed animate-fade-out' : 'bg-slate-700 hover:bg-slate-600 text-primary-300 border-primary-500/30';
+            const actionBtn = isMe ? `<button onclick="setTaunt()" title="${hasTaunt ? 'You have already used your daily taunt.' : 'Click to add a message others see under your name!'}" class="ml-2 ${tauntBtnClass} text-[10px] px-2 py-0.5 rounded border transition-all">💬 ${tauntBtnText}</button>` : '';
 
             return `
                 <div class="flex flex-col p-3 rounded-xl border ${rowStyle}">
@@ -3468,7 +3496,12 @@ async function checkRemoteProgress(user) {
                     const lastMode = s.activeMode || ((s.playedModes && s.playedModes.length > 0) ? s.playedModes[s.playedModes.length - 1] : 'casual');
                     updateTheme(lastMode);
 
-                    if (s.isFinished) {
+                    const playedModes = s.playedModes || [];
+                    const allDone = playedModes.includes('casual') && playedModes.includes('professional');
+
+                    if (allDone) {
+                        showModeSelection();
+                    } else if (s.isFinished) {
                         archiveSession(s);
                         showFinalResults();
                     } else {
