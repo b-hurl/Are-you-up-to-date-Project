@@ -194,7 +194,7 @@
     <!-- Weekly Leaderboard Modal -->
     <div id="weekly-leaderboard-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-md w-full shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col max-h-[80vh]">
-            <button onclick="openWeeklyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500 z-10" title="Refresh">
+            <button onclick="openWeeklyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 z-10" title="Refresh">
                 <svg id="weekly-refresh-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
             </button>
             <button onclick="closeWeeklyLeaderboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
@@ -211,7 +211,7 @@
     <!-- Daily Leaderboard Modal -->
     <div id="daily-leaderboard-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
         <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-md w-full shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col max-h-[80vh]">
-            <button onclick="openDailyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500 z-10" title="Refresh">
+            <button onclick="openDailyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 z-10" title="Refresh">
                 <svg id="daily-refresh-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
             </button>
             <button onclick="closeDailyLeaderboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
@@ -683,7 +683,7 @@
             <div class="flex justify-between items-center mb-3">
                 <h3 id="leaderboard-title" class="text-primary-400 font-bold uppercase tracking-widest text-[10px]">Today's Leaderboard</h3>
                 <div id="leaderboard-controls" class="flex items-center gap-3">
-                    <button onclick="fetchAndDisplayLeaderboard()" class="text-slate-500 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500" title="Refresh">
+                    <button onclick="fetchAndDisplayLeaderboard()" class="text-slate-500 hover:text-primary-400" title="Refresh">
                         <svg id="leaderboard-refresh-icon" class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
                     </button>
                     <div class="flex items-center gap-1.5">
@@ -3280,9 +3280,9 @@ async function checkRemoteProgress(user) {
                      session.playedModes = Array.from(combined);
                      localStorage.setItem('trivia-session', JSON.stringify(session));
                 }
-
-                refreshModeSelectionUI();
             }
+            
+            refreshModeSelectionUI();
 
             // CLOUD SYNC: Restore session if remote is newer/valid
             if (data.currentSession && data.currentSession.date === today) {
@@ -3450,8 +3450,6 @@ function initFirebase() {
                 localStorage.removeItem('trivia-userId');
             }
             
-            remoteUserProgress = null;
-            refreshModeSelectionUI();
             userId = getOrSetUserId();
             userIconDisplay.innerHTML = "👤";
             loginOptions.classList.remove('hidden');
@@ -3459,6 +3457,9 @@ function initFirebase() {
             userInfo.classList.add('hidden');
             const adminBtn = document.getElementById('admin-access-btn');
             if (adminBtn) adminBtn.classList.add('hidden');
+            
+            remoteUserProgress = null;
+            refreshModeSelectionUI();
             if (viewRankingsBtn) viewRankingsBtn.classList.add('hidden');
             
             if (startScreenLogin) {
@@ -3761,16 +3762,17 @@ function doLogout() {
 
 async function confirmLogout() {
     try {
-        await auth.signOut();
-        // Clear remote progress reference
+        // Clear remote progress first
         remoteUserProgress = null;
-        
+
         // 1. Clear all local game state
         localStorage.removeItem('trivia-session');
         localStorage.removeItem('trivia-streak');
         localStorage.removeItem('trivia-last-date');
         localStorage.removeItem('trivia-best');
         localStorage.removeItem('trivia-name');
+
+        await auth.signOut();
         
         // 2. Reset UI to Start Screen (Hide Results)
         document.body.classList.remove('dimmed');
