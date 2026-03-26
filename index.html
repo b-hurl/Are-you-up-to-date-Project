@@ -75,6 +75,8 @@
         .text-glow-pulse { animation: text-glow 1.5s infinite ease-in-out; }
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        .grand-master-shimmer { background: linear-gradient(90deg, #fbbf24 0%, #fef3c7 50%, #fbbf24 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .share-btn {
     background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
@@ -306,16 +308,18 @@
 
     <!-- Sign Out Confirm Modal -->
     <div id="signout-confirm-modal" class="fixed inset-0 z-[80] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
-        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
-            <div class="text-5xl mb-4">👋</div>
-            <h2 class="text-2xl font-black text-white mb-2">Sign Out?</h2>
-            <p class="text-slate-300 text-sm mb-6">Are you sure you want to sign out?</p>
+        <div class="bg-slate-900 border border-primary-500/30 p-8 rounded-3xl max-w-sm w-full shadow-[0_0_50px_rgba(0,0,0,0.5)] relative transform scale-95 translate-y-4 transition-all duration-500 ease-out text-center overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-primary-600 via-primary-400 to-primary-600"></div>
+            <div class="text-5xl mb-4 mt-2">👋</div>
+            <h2 class="text-2xl font-black text-white mb-1">Sign Out?</h2>
+            <p class="text-primary-400 text-xs font-bold uppercase tracking-widest mb-6">End Current Session</p>
+            <p class="text-slate-400 text-sm mb-8">Are you sure you want to sign out? Your local session will be cleared and the page will refresh.</p>
             
             <div class="space-y-3">
-                <button onclick="confirmLogout()" class="w-full bg-red-600 hover:bg-red-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-red-500/20 transition-all">
-                    Yes, Sign Out
+                <button onclick="confirmLogout()" class="w-full bg-gradient-to-r from-red-600 to-red-800 hover:from-red-500 hover:to-red-700 py-4 rounded-2xl font-bold text-white shadow-xl shadow-red-900/20 transition-all transform active:scale-95">
+                    Confirm Sign Out
                 </button>
-                <button onclick="closeSignOutModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white transition-all">
+                <button onclick="closeSignOutModal()" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl font-bold text-slate-400 hover:text-white transition-all">
                     Cancel
                 </button>
             </div>
@@ -394,6 +398,7 @@
             <div id="user-info-display" class="hidden text-center">
                 <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-2">Signed In As</p>
                 <p id="user-email-display" class="text-white font-mono text-sm bg-slate-900 py-2 px-3 rounded-lg border border-slate-700 mb-6 truncate"></p>
+                <p id="last-synced-display" class="text-[10px] text-slate-500 mb-4 uppercase tracking-widest -mt-4">Not Synced This Session</p>
                 <button id="admin-access-btn" onclick="openAdminDashboard()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 hidden">Admin Dashboard</button>
                 <button onclick="forceCloudSync()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 flex items-center justify-center gap-2">
                     <span id="sync-icon" class="text-lg">🔄</span>
@@ -561,7 +566,12 @@
         </div>
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3">
+                <!-- New Sync Status -->
+                <div id="header-sync-status" class="hidden flex items-center gap-1 opacity-0 transition-opacity duration-300">
+                     <span id="header-sync-icon" class="text-[10px]">🔄</span>
+                     <span id="header-sync-text" class="text-[9px] font-bold uppercase tracking-tighter text-slate-500">Syncing</span>
+                </div>
                 <span id="mode-icon" class="text-xl filter drop-shadow-md transition-transform hover:scale-110 cursor-help" title="Current Mode">🎮</span>
                 <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
             </div>
@@ -590,6 +600,10 @@
                         <button id="notify-btn" onclick="requestPermissions()" class="hidden bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold py-2 px-3 rounded-xl border border-slate-700 transition-all flex items-center gap-2">
                             <span>🔔</span> Notify Me
                         </button>
+                    </div>
+                    <div id="home-gm-badge" class="hidden mt-4 py-1.5 px-4 bg-yellow-500/10 border border-yellow-500/30 rounded-full inline-flex items-center gap-2">
+                        <span class="text-sm">🏆</span>
+                        <span class="grand-master-shimmer font-black text-xs uppercase tracking-tighter">Grand Master</span>
                     </div>
                     <p class="text-slate-500 text-xs mt-4">You've mastered today's challenges.</p>
                 </div>
@@ -652,6 +666,10 @@
         <div class="text-5xl mb-4" id="result-emoji">🏆</div>
         <h2 class="text-3xl font-black mb-2">Daily Complete!</h2>
         
+        <div id="results-gm-badge" class="hidden mb-4 py-2 px-6 bg-yellow-500/10 border border-yellow-500/40 rounded-2xl inline-block animate-bounce">
+            <span class="grand-master-shimmer font-black text-sm uppercase tracking-widest">🏆 GRAND MASTER 🏆</span>
+        </div>
+
         <div id="next-timer-container" class="mb-6 p-3 bg-slate-900/30 rounded-xl border border-slate-700/50">
             <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold mb-1">Next Trivia In</p>
             <div id="next-trivia-timer" class="countdown-timer text-xl font-mono font-bold text-primary-400">00:00:00</div>
@@ -909,6 +927,87 @@
             return locationPromise;
         }
 
+        function updateHeaderSyncStatus(status) {
+            const container = document.getElementById('header-sync-status');
+            const icon = document.getElementById('header-sync-icon');
+            const text = document.getElementById('header-sync-text');
+            
+            if (!container || !icon || !text) return;
+            
+            if (!auth || !auth.currentUser) {
+                container.classList.add('hidden', 'opacity-0');
+                return;
+            }
+
+            container.classList.remove('hidden');
+            
+            if (status === 'syncing') {
+                container.classList.remove('opacity-0');
+                icon.innerText = "🔄";
+                icon.classList.add('animate-spin');
+                text.innerText = "Syncing";
+                text.className = "text-[9px] font-bold uppercase tracking-tighter text-slate-500";
+            } else if (status === 'complete') {
+                container.classList.remove('opacity-0');
+                icon.innerText = "✅";
+                icon.classList.remove('animate-spin');
+                text.innerText = "Synced";
+                text.className = "text-[9px] font-bold uppercase tracking-tighter text-emerald-500";
+                
+                setTimeout(() => {
+                    if (text.innerText === "Synced") {
+                        container.classList.add('opacity-0');
+                        setTimeout(() => {
+                            if (container.classList.contains('opacity-0')) container.classList.add('hidden');
+                        }, 300);
+                    }
+                }, 2000);
+            } else if (status === 'failed') {
+                container.classList.remove('opacity-0');
+                icon.innerText = "❌";
+                icon.classList.remove('animate-spin');
+                text.innerText = "Failed";
+                text.className = "text-[9px] font-bold uppercase tracking-tighter text-red-500";
+            }
+        }
+
+        function refreshModeSelectionUI() {
+            const today = getGameDate();
+            const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+            let playedModes = [];
+
+            // Get modes played from local session
+            if (session.date === today && session.playedModes) {
+                playedModes = session.playedModes;
+            }
+
+            // Merge with remote progress if available
+            if (remoteUserProgress && remoteUserProgress.lastPlayedDate === today) {
+                const remoteModes = remoteUserProgress.playedModes || [];
+                playedModes = Array.from(new Set([...playedModes, ...remoteModes]));
+            }
+
+            const casualBtn = document.getElementById('btn-mode-casual');
+            const proBtn = document.getElementById('btn-mode-professional');
+            const timerContainer = document.getElementById('homepage-timer-container');
+            const selectionHeader = document.querySelector('#mode-selection > div.mb-4');
+
+            const casualPlayed = playedModes.includes('casual');
+            const proPlayed = playedModes.includes('professional');
+
+            // Hide specific mode buttons if they are completed
+            if (casualBtn) casualBtn.classList.toggle('hidden', casualPlayed);
+            if (proBtn) proBtn.classList.toggle('hidden', proPlayed);
+
+            // If ALL modes are completed, show the "Daily Complete" message and hide the difficulty header
+            const allDone = casualPlayed && proPlayed;
+            if (timerContainer) timerContainer.classList.toggle('hidden', !allDone);
+            if (selectionHeader) selectionHeader.classList.toggle('hidden', allDone);
+            
+            const gmBadge = document.getElementById('home-gm-badge');
+            if (gmBadge) gmBadge.classList.toggle('hidden', !allDone);
+        }
+
         async function selectMode(mode) {
             const btn = document.getElementById(`btn-mode-${mode}`);
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
@@ -918,6 +1017,7 @@
                 let pModes = remoteUserProgress.playedModes || [];
                 if (pModes.length === 0 && remoteUserProgress.lastMode) pModes = [remoteUserProgress.lastMode];
                 if (pModes.includes(mode)) {
+                    refreshModeSelectionUI();
                     alert("You've already completed this mode today!");
                     return;
                 }
@@ -1360,6 +1460,11 @@ function showFinalResults() {
     const playedModes = session.playedModes || [];
     const otherModeSection = document.getElementById('play-other-mode-section');
     const otherModeBtn = document.getElementById('play-other-mode-btn');
+    
+    const allDone = playedModes.includes('casual') && playedModes.includes('professional');
+    const resultsGM = document.getElementById('results-gm-badge');
+    if (resultsGM) resultsGM.classList.toggle('hidden', !allDone);
+
     leaderboardMode = session.activeMode || (playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual');
 
     if (playedModes.length === 1) {
@@ -1528,6 +1633,7 @@ async function submitScore() {
     // Spin the leaderboard icon during submission
     const refreshIcon = document.getElementById('leaderboard-refresh-icon');
     if (refreshIcon) refreshIcon.classList.add('animate-spin');
+    updateHeaderSyncStatus('syncing');
 
     // Taunt Logic
     const tauntInput = document.getElementById('player-taunt');
@@ -1551,6 +1657,7 @@ async function submitScore() {
     // Get the mode for the game just played
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
     const playedModes = session.playedModes || [];
+    const isGM = playedModes.includes('casual') && playedModes.includes('professional');
     const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
 
     // Get ALL group IDs the user belongs to
@@ -1567,6 +1674,7 @@ async function submitScore() {
         name: name,
         score: score,
         mode: lastMode,
+        isGrandMaster: isGM,
         streak: streak,
         date: gameDate,
         weekId: getWeekId(gameDate), // Save the Week ID
@@ -1590,6 +1698,7 @@ async function submitScore() {
             lastPlayedDate: gameDate,
             currentStreak: streak,
             lastMode: lastMode,
+            isGrandMaster: isGM,
             playedModes: shouldResetModes ? [lastMode] : firebase.firestore.FieldValue.arrayUnion(lastMode)
         };
         await db.collection('users').doc(userId).set(userUpdate, { merge: true });
@@ -1622,10 +1731,12 @@ async function submitScore() {
         
         leaderboardMode = lastMode;
         fetchAndDisplayLeaderboard(); // Refresh the leaderboard with the new score
+        updateHeaderSyncStatus('complete');
         showToast("Score Synced!", "✅", 2000);
     } catch (error) {
         console.error("Error submitting score: ", error);
         alert("Could not submit score. Please try again.");
+        updateHeaderSyncStatus('failed');
         showToast("Sync Failed", "❌", 3000);
         btn.disabled = false;
         btn.innerText = "Submit Score";
@@ -1835,6 +1946,7 @@ async function fetchAndDisplayLeaderboard() {
                 userTotals[d.userId].totalScore += (d.score || 0);
                 userTotals[d.userId].games += 1;
                 userTotals[d.userId].name = d.name; // Always take the most recent name used
+                if (d.isGrandMaster) userTotals[d.userId].isGrandMaster = true;
                 if (d.taunt) userTotals[d.userId].taunt = d.taunt;
                 if (d.streak) userTotals[d.userId].streak = Math.max(userTotals[d.userId].streak || 0, d.streak);
             });
@@ -1887,6 +1999,7 @@ async function fetchAndDisplayLeaderboard() {
             const isMe = user.id === userId;
             const nameColor = isMe ? "text-emerald-400 font-bold" : (index < 3 ? "text-white" : "text-slate-300");
             const displayName = isMe ? `${user.name} (You)` : user.name;
+            const gmIcon = user.isGrandMaster ? '<span class="ml-1 grand-master-shimmer font-black text-[10px]" title="Grand Master Status">🏆</span>' : '';
             const streakHTML = (user.streak > 0) ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : '';
             const cleanTaunt = censorTaunt(user.taunt);
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}" 👇</div>` : '';
@@ -1901,6 +2014,7 @@ async function fetchAndDisplayLeaderboard() {
                     <div class="flex items-center">
                         ${badge}
                         <span class="${nameColor} truncate max-w-[140px]">${displayName}</span>
+                            ${gmIcon}
                         ${streakHTML}
                         ${actionBtn}
                     </div>
@@ -2256,6 +2370,7 @@ async function updateDailyLeaderboardModal() {
                 userTotals[d.userId] = { id: d.userId, name: d.name, score: 0, streak: d.streak || 0, taunt: d.taunt, location: d.location };
             }
             userTotals[d.userId].score = Math.max(userTotals[d.userId].score, d.score || 0);
+                if (d.isGrandMaster) userTotals[d.userId].isGrandMaster = true;
         });
 
         const sortedUsers = Object.values(userTotals).sort((a, b) => b.score - a.score);
@@ -2284,6 +2399,7 @@ async function updateDailyLeaderboardModal() {
             if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
             const cleanTaunt = censorTaunt(user.taunt);
             const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}"</div>` : '';
+            const gmIcon = user.isGrandMaster ? '<span class="ml-1 grand-master-shimmer font-black text-[10px]">🏆</span>' : '';
             
             const locLabel = (user.location && (user.location.city || user.location.region_code)) ? 
                 `<span class="text-[9px] text-slate-500 flex items-center gap-0.5 mt-0.5">📍 ${user.location.city || user.location.region}</span>` : '';
@@ -2296,6 +2412,7 @@ async function updateDailyLeaderboardModal() {
                             <div class="flex flex-col">
                                 <div class="flex items-center">
                                     <span class="${isMe ? 'text-emerald-400 font-bold' : 'text-slate-200'} truncate max-w-[140px]">${user.name}${isMe ? ' (You)' : ''}</span>
+                                    ${gmIcon}
                                     ${user.streak > 0 ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : ''}
                                 </div>
                                 ${locLabel}
@@ -3031,6 +3148,8 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
 
     // CLOUD SYNC: Save session to Firestore
     if (syncToCloud && auth && auth.currentUser) {
+        updateHeaderSyncStatus('syncing');
+        let promise;
         // OPTIMIZATION: Only send full questions array on new game start
         // For updates, use dot notation to merge specific fields without overwriting/sending the large questions array
         if (currentIdx > 0 || isFinished) {
@@ -3045,13 +3164,16 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
                 'currentSession.date': session.date,
                 'lastUpdated': firebase.firestore.FieldValue.serverTimestamp()
             };
-            db.collection('users').doc(auth.currentUser.uid).set(partialPayload, { merge: true }).catch(e => console.error("Cloud sync failed", e));
+            promise = db.collection('users').doc(auth.currentUser.uid).set(partialPayload, { merge: true });
         } else {
-            db.collection('users').doc(auth.currentUser.uid).set({
+            promise = db.collection('users').doc(auth.currentUser.uid).set({
                 currentSession: session,
                 lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true }).catch(e => console.error("Cloud sync failed", e));
+            }, { merge: true });
         }
+        
+        promise.then(() => updateHeaderSyncStatus('complete'))
+               .catch(e => { console.error("Cloud sync failed", e); updateHeaderSyncStatus('failed'); });
     }
 
     if (isFinished) {
@@ -3249,17 +3371,28 @@ async function checkRemoteProgress(user) {
             remoteUserProgress = data; 
             
             // SYNC STREAK: Ensure local storage matches cloud data immediately
-            if (data.currentStreak !== undefined) localStorage.setItem('trivia-streak', data.currentStreak);
+            const localStreak = parseInt(localStorage.getItem('trivia-streak') || '0');
+            if (data.currentStreak !== undefined && data.currentStreak > localStreak) {
+                localStorage.setItem('trivia-streak', data.currentStreak);
+            }
             if (data.lastPlayedDate) localStorage.setItem('trivia-last-date', data.lastPlayedDate);
 
-            // SYNC GROUPS: Restore group list from cloud
-            if (data.groups && Array.isArray(data.groups)) {
-                localStorage.setItem('trivia-groups', JSON.stringify(data.groups));
-                // If we are on the results screen, refresh the leaderboard UI to show synced groups
-                if (!document.getElementById('results-card').classList.contains('hidden')) {
-                    fetchAndDisplayLeaderboard();
-                    checkIfSubmitted();
-                }
+            // SYNC GROUPS: Merge local and remote groups
+            const localGroups = getMyGroups();
+            const remoteGroups = data.groups || [];
+            const groupMap = new Map();
+            
+            // Merge by ID to prevent duplicates
+            localGroups.forEach(g => groupMap.set(g.id, g));
+            remoteGroups.forEach(g => groupMap.set(g.id, g));
+            
+            const mergedGroups = Array.from(groupMap.values());
+            localStorage.setItem('trivia-groups', JSON.stringify(mergedGroups));
+
+            // If local had groups the cloud didn't, push them up now
+            if (mergedGroups.length > remoteGroups.length) {
+                db.collection('users').doc(user.uid).set({ groups: mergedGroups }, { merge: true })
+                    .catch(e => console.error("Cloud group sync failed", e));
             }
 
             if (data.lastPlayedDate === today) {
@@ -3281,6 +3414,9 @@ async function checkRemoteProgress(user) {
                      localStorage.setItem('trivia-session', JSON.stringify(session));
                 }
             }
+            
+            const syncDisplay = document.getElementById('last-synced-display');
+            if (syncDisplay) syncDisplay.innerText = `Last Synced: ${new Date().toLocaleTimeString()}`;
             
             refreshModeSelectionUI();
 
@@ -3329,8 +3465,40 @@ async function checkRemoteProgress(user) {
                     }
                 }
             }
+
+            // Final UI Refresh now that data is merged and synced
+            if (!document.getElementById('results-card').classList.contains('hidden')) {
+                fetchAndDisplayLeaderboard();
+                checkIfSubmitted();
+            }
         }
     } catch (e) { console.error("Error checking remote progress", e); }
+}
+
+async function forceCloudSync() {
+    if (!auth || !auth.currentUser) return;
+    
+    const icon = document.getElementById('sync-icon');
+    if (icon) icon.classList.add('animate-spin');
+    showToast("Syncing with Cloud...", "🔄");
+    updateHeaderSyncStatus('syncing');
+
+    try {
+        // Re-run the core sync logic
+        await checkRemoteProgress(auth.currentUser);
+        // Refresh UI components
+        if (!document.getElementById('results-card').classList.contains('hidden')) {
+            await fetchAndDisplayLeaderboard();
+        }
+        updateHeaderSyncStatus('complete');
+        showToast("Sync Complete!", "✅", 2000);
+    } catch (e) {
+        console.error("Manual sync failed:", e);
+        updateHeaderSyncStatus('failed');
+        showToast("Sync Failed", "❌", 3000);
+    } finally {
+        if (icon) icon.classList.remove('animate-spin');
+    }
 }
 
 function initFirebase() {
@@ -3419,11 +3587,6 @@ function initFirebase() {
             if (viewRankingsBtn) viewRankingsBtn.classList.remove('hidden');
             
             setupRankingsNotificationListener();
-            // Refresh data context
-            if (!document.getElementById('results-card').classList.contains('hidden')) {
-                fetchAndDisplayLeaderboard();
-                checkIfSubmitted();
-            }
 
             // Check if there was a pending group invite waiting for login
             const urlParams = new URLSearchParams(window.location.search);
@@ -3493,7 +3656,9 @@ function toggleLoginModal() {
         setTimeout(() => {
             modal.classList.remove('opacity-0');
             modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.remove('translate-y-4');
             modal.querySelector('div').classList.add('scale-100');
+            modal.querySelector('div').classList.add('translate-y-0');
         }, 10);
     } else {
         closeLoginModal();
@@ -3504,7 +3669,9 @@ function closeLoginModal() {
     const modal = document.getElementById('login-modal');
     modal.classList.add('opacity-0');
     modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.remove('translate-y-0');
     modal.querySelector('div').classList.add('scale-95');
+    modal.querySelector('div').classList.add('translate-y-4');
     setTimeout(() => {
         modal.classList.add('hidden');
         toggleSignupView(false); // Reset for next time
@@ -3765,27 +3932,24 @@ async function confirmLogout() {
         // Clear remote progress first
         remoteUserProgress = null;
 
-        // 1. Clear all local game state
+        // 1. Clear all user-specific local data
         localStorage.removeItem('trivia-session');
         localStorage.removeItem('trivia-streak');
         localStorage.removeItem('trivia-last-date');
         localStorage.removeItem('trivia-best');
         localStorage.removeItem('trivia-name');
+        localStorage.removeItem('trivia-groups');
+        localStorage.removeItem('trivia-archive');
+        localStorage.removeItem('trivia-userId');
 
         await auth.signOut();
         
-        // 2. Reset UI to Start Screen (Hide Results)
-        document.body.classList.remove('dimmed');
-        document.getElementById('results-card').classList.add('hidden');
-        document.getElementById('game-header').classList.add('hidden');
-        document.getElementById('main-card').classList.remove('hidden');
-        
-        updateTheme('casual');
-        showModeSelection();
-        
-        closeSignOutModal();
-        closeLoginModal();
-    } catch (e) { console.error(e); }
+        // Refresh the page to ensure all state is wiped and the UI resets completely
+        window.location.reload();
+    } catch (e) { 
+        console.error("Logout error:", e); 
+        window.location.reload();
+    }
 }
 
 function closeSignOutModal() {
