@@ -3199,40 +3199,37 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
 
     // CLOUD SYNC: Save session to Firestore
     if (syncToCloud && auth && auth.currentUser) {
-        updateHeaderSyncStatus('syncing');
-        
-        // SAFEGUARD: Ensure the questions are uploaded at least once successfully for this specific session.
-        const syncKey = `trivia-sync-init-${session.date}-${session.activeMode}`;
-        const isInitialSyncDone = localStorage.getItem(syncKey) === 'true';
+        (async () => {
+            updateHeaderSyncStatus('syncing');
+            const syncKey = `trivia-sync-init-${session.date}-${session.activeMode}`;
+            const isInitialSyncDone = localStorage.getItem(syncKey) === 'true';
 
-        let promise;
-        // OPTIMIZATION: Only send full questions array on new game start
-        // For updates, use dot notation to merge specific fields without overwriting/sending the large questions array
-        if (isInitialSyncDone && (currentIdx > 0 || isFinished)) {
-            const partialPayload = {
-                'currentSession.currentIdx': session.currentIdx,
-                'currentSession.score': session.score,
-                'currentSession.currentStreak': session.currentStreak,
-                'currentSession.isFinished': session.isFinished,
-                'currentSession.userChoices': session.userChoices,
-                'currentSession.selectedIdx': session.selectedIdx,
-                'currentSession.playedModes': session.playedModes,
-                'currentSession.date': session.date,
-                'lastUpdated': firebase.firestore.FieldValue.serverTimestamp()
-            };
-            promise = db.collection('users').doc(auth.currentUser.uid).set(partialPayload, { merge: true });
-        } else {
-            promise = db.collection('users').doc(auth.currentUser.uid).set({
-                currentSession: session,
-                lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
-            }, { merge: true });
-
-            // On success, mark that we have successfully uploaded the questions
-            promise.then(() => localStorage.setItem(syncKey, 'true'));
-        }
-        
-        promise.then(() => updateHeaderSyncStatus('complete'))
-               .catch(e => { console.error("Cloud sync failed", e); updateHeaderSyncStatus('failed'); });
+            try {
+                if (isInitialSyncDone && (currentIdx > 0 || isFinished)) {
+                    await db.collection('users').doc(auth.currentUser.uid).set({
+                        'currentSession.currentIdx': session.currentIdx,
+                        'currentSession.score': session.score,
+                        'currentSession.currentStreak': session.currentStreak,
+                        'currentSession.isFinished': session.isFinished,
+                        'currentSession.userChoices': session.userChoices,
+                        'currentSession.selectedIdx': session.selectedIdx,
+                        'currentSession.playedModes': session.playedModes,
+                        'currentSession.date': session.date,
+                        'lastUpdated': firebase.firestore.FieldValue.serverTimestamp()
+                    }, { merge: true });
+                } else {
+                    await db.collection('users').doc(auth.currentUser.uid).set({
+                        currentSession: session,
+                        lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+                    }, { merge: true });
+                    localStorage.setItem(syncKey, 'true');
+                }
+                updateHeaderSyncStatus('complete');
+            } catch (e) {
+                console.error("Cloud sync failed", e);
+                updateHeaderSyncStatus('failed');
+            }
+        })();
     }
 
     if (isFinished) {
@@ -3491,7 +3488,6 @@ async function checkRemoteProgress(user) {
 
             // If the app is already showing results or the home screen timer, 
             // don't let cloud sync force a UI jump unless it's a "Finished" state.
-            const isHome = !document.getElementById('mode-selection').classList.contains('hidden');
             const isResults = !document.getElementById('results-card').classList.contains('hidden');
 
             // CLOUD SYNC: Restore session if remote is newer/valid
@@ -3523,9 +3519,6 @@ async function checkRemoteProgress(user) {
                     // Restore global state
                     const s = data.currentSession;
                     gameData = { questions: s.shuffledQuestions };
-                    currentIdx = s.currentIdx;
-                    score = s.score;
-                    currentStreak = s.currentStreak;
                     currentIdx = parseInt(s.currentIdx) || 0;
                     score = parseInt(s.score) || 0;
                     currentStreak = parseInt(s.currentStreak) || 0;
@@ -3538,12 +3531,9 @@ async function checkRemoteProgress(user) {
                     const playedModes = s.playedModes || [];
                     const allDone = playedModes.includes('casual') && playedModes.includes('professional');
 
-                    if (allDone) {
+                    if (allDone || s.isFinished) {
                         showModeSelection();
-                    } else if (s.isFinished && !isResults) {
-                        archiveSession(s);
-                        showFinalResults();
-                    } else if (!s.isFinished && !isHome && !isResults) {
+                        if (s.isFinished) archiveSession(s);
                     } else if (!s.isFinished && !isResults) {
                         // Resume Game UI
                         document.getElementById('mode-selection').classList.add('hidden');
@@ -3552,16 +3542,18 @@ async function checkRemoteProgress(user) {
                         document.getElementById('score-display').innerText = `Score: ${score}`;
                         renderQuestion();
                     }
+
+                    // Final UI Refresh now that data is merged and synced
+                    if (!document.getElementById('results-card').classList.contains('hidden')) {
+                        fetchAndDisplayLeaderboard();
+                        checkIfSubmitted();
+                    }
                 }
             }
-
-            // Final UI Refresh now that data is merged and synced
-            if (!document.getElementById('results-card').classList.contains('hidden')) {
-                fetchAndDisplayLeaderboard();
-                checkIfSubmitted();
-            }
         }
-    } catch (e) { console.error("Error checking remote progress", e); }
+    } catch (e) {
+        console.error("Remote progress check failed:", e);
+    }
 }
 
 async function forceCloudSync() {
@@ -5102,12 +5094,13 @@ function closeStats() {
                 } else {
                     if (modal) modal.classList.add('hidden');
                 }
-            }  catch (e) { 
-            if (e.code !== 'permission-denied') {
-                console.error("Maintenance check failed:", e.message); 
+            } catch (e) { 
+                if (e.code !== 'permission-denied') {
+                    console.error("Maintenance check failed:", e.message); 
+                }
             }
         }
-    }
+    
         
         
 
@@ -5133,7 +5126,7 @@ function closeStats() {
             hideInstallButtons();
             deferredPrompt = null;
         });
-
+    
         // Run Import before initialization
         importStateFromURL();
         initFirebase();
