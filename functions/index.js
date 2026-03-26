@@ -21,11 +21,12 @@ exports.resetStreaks = onSchedule({
     yesterday.setUTCDate(now.getUTCDate() - 1);
     const yesterdayGameDate = formatDate(yesterday); 
 
-    console.log(`Checking for streaks broken before ${yesterdayGameDate}`);
+    console.log(`Querying users who missed the cutoff: ${yesterdayGameDate}`);
 
-    // Query: Users with a streak > 0 (We filter date in memory to avoid Firestore multi-field inequality error)
+    // Optimized Query: Filter by both streak and date at the database level
     const snapshot = await db.collection('users')
         .where('currentStreak', '>', 0)
+        .where('lastPlayedDate', '<', yesterdayGameDate)
         .get();
 
     if (snapshot.empty) {
@@ -33,23 +34,43 @@ exports.resetStreaks = onSchedule({
         return null;
     }
 
-    const batch = db.batch();
-    let count = 0;
-
-    snapshot.docs.forEach(doc => {
-        const data = doc.data();
-        if (data.lastPlayedDate < yesterdayGameDate) {
-            batch.update(doc.ref, { currentStreak: 0 });
-            count++;
-        }
-    });
-
-    if (count > 0) {
-        await batch.commit();
-        console.log(`Reset streaks for ${count} users.`);
-    } else {
-        console.log('No streaks needed resetting.');
+    // Firestore batches are limited to 500 operations
+    const chunks = [];
+    for (let i = 0; i < snapshot.docs.length; i += 500) {
+        chunks.push(snapshot.docs.slice(i, i + 500));
     }
+
+    let successCount = 0;
+    let failureCount = 0;
+    const MAX_RETRIES = 3;
+    const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+    for (const chunk of chunks) {
+        let attempts = 0;
+        let committed = false;
+
+        while (attempts < MAX_RETRIES && !committed) {
+            try {
+                const batch = db.batch();
+                chunk.forEach(doc => batch.update(doc.ref, { currentStreak: 0 }));
+                await batch.commit();
+                successCount += chunk.length;
+                committed = true;
+            } catch (error) {
+                attempts++;
+                if (attempts >= MAX_RETRIES) {
+                    console.error(`Batch commit failed after ${MAX_RETRIES} attempts:`, error);
+                    failureCount += chunk.length;
+                } else {
+                    const waitTime = Math.pow(2, attempts - 1) * 1000;
+                    console.warn(`Attempt ${attempts} failed. Retrying in ${waitTime / 1000}s...`);
+                    await delay(waitTime);
+                }
+            }
+        }
+    }
+
+    console.log(`Streak reset complete. Successes: ${successCount}, Failures: ${failureCount}`);
     return null;
 });
 

@@ -1680,7 +1680,8 @@ async function submitScore() {
     }
 
     const gameDate = getGameDate();
-    const streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
+    const rawStreak = localStorage.getItem('trivia-streak');
+    const streak = (rawStreak && !isNaN(parseInt(rawStreak))) ? parseInt(rawStreak) : 0;
     const userLoc = JSON.parse(localStorage.getItem('trivia-location') || '{}');
     
     // Get the mode for the game just played
@@ -2861,7 +2862,9 @@ function startNextTimer() {
         let target = new Date();
         target.setUTCHours(UNLOCK_UTC_HOUR, 0, 0, 0);
 
-        if (now.getUTCHours() >= UNLOCK_UTC_HOUR) {
+        // If we are past 8AM UTC today, the next unlock is tomorrow at 8AM
+        // Using a 10-second buffer to prevent instant reload loops
+        if (now.getTime() > target.getTime() - 10000) {
             target.setUTCDate(target.getUTCDate() + 1);
         }
 
@@ -3407,6 +3410,11 @@ function closeWeeklyWinnerModal() {
 async function checkRemoteProgress(user) {
     if (!user) return;
     const today = getGameDate();
+    
+    // Ensure startApp has finished loading the trivia JSON before we try to render results
+    while (!freshGameData) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+    }
     
     try {
         const doc = await db.collection('users').doc(user.uid).get();
