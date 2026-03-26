@@ -14,6 +14,7 @@
 <meta name="twitter:title" content="Daily Trivia Challenge">
 <meta name="twitter:description" content="I just scored on today's trivia! Come play.">
 <meta name="theme-color" content="#0f172a">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 <link rel="manifest" href="manifest.json">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -5093,8 +5094,14 @@ function closeStats() {
                 } else {
                     if (modal) modal.classList.add('hidden');
                 }
-            } catch (e) { console.error("Maintenance check failed", e); }
+            }  catch (e) { 
+            if (e.code !== 'permission-denied') {
+                console.error("Maintenance check failed:", e.message); 
+            }
         }
+    }
+        
+        
 
         async function toggleMaintenance() {
             const toggle = document.getElementById('admin-maintenance-toggle');
