@@ -89,6 +89,8 @@
         body { transition: background-color 1s ease; }
         body.dimmed { background-color: #020617 !important; }
         body.grayscale-mode { filter: grayscale(1); -webkit-filter: grayscale(1); }
+        @keyframes score-bump { 0% { transform: scale(1); } 50% { transform: scale(1.2); background-color: #10b981; } 100% { transform: scale(1); } }
+        .animate-score-up { animation: score-bump 0.4s ease-out; }
         @keyframes slide-in-up { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
         .animate-slide-in { animation: slide-in-up 0.5s ease-out forwards; }
     </style>
@@ -191,6 +193,23 @@
                 <p class="text-primary-400 text-xs font-bold uppercase tracking-widest">Who's winning the week?</p>
             </div>
             <div id="weekly-leaderboard-content" class="flex-1 overflow-y-auto scrollbar-hide space-y-2">
+                <p class="text-center text-slate-500 text-xs">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Leaderboard Modal -->
+    <div id="daily-leaderboard-modal" class="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-6 rounded-3xl max-w-md w-full shadow-2xl relative transform scale-95 transition-transform duration-300 flex flex-col max-h-[80vh]">
+            <button onclick="openDailyLeaderboard()" class="absolute top-4 left-4 text-slate-400 hover:text-primary-400 transition-colors transform active:rotate-180 duration-500 z-10" title="Refresh">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+            </button>
+            <button onclick="closeDailyLeaderboard()" class="absolute top-4 right-4 text-slate-400 hover:text-white z-10">✕</button>
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-black text-white mb-1">Today's Rankings</h2>
+                <p id="daily-modal-subtitle" class="text-primary-400 text-xs font-bold uppercase tracking-widest">Global Standings</p>
+            </div>
+            <div id="daily-leaderboard-modal-content" class="flex-1 overflow-y-auto scrollbar-hide space-y-2">
                 <p class="text-center text-slate-500 text-xs">Loading...</p>
             </div>
         </div>
@@ -365,6 +384,7 @@
             <div id="user-info-display" class="hidden text-center">
                 <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-2">Signed In As</p>
                 <p id="user-email-display" class="text-white font-mono text-sm bg-slate-900 py-2 px-3 rounded-lg border border-slate-700 mb-6 truncate"></p>
+                <button id="admin-access-btn" onclick="openAdminDashboard()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 hidden">Admin Dashboard</button>
                 <button onclick="doLogout()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3">Sign Out</button>
                 <button onclick="deleteAccount()" class="w-full bg-red-900/20 hover:bg-red-900/40 text-red-400 border border-red-500/20 py-3 rounded-xl font-bold text-sm transition-all">Delete Account</button>
             </div>
@@ -527,7 +547,6 @@
         </div>
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
-            <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
             <div class="flex items-center gap-2">
                 <span id="mode-icon" class="text-xl filter drop-shadow-md transition-transform hover:scale-110 cursor-help" title="Current Mode">🎮</span>
                 <span id="score-display" class="bg-primary-600 px-4 py-1 rounded-full text-xs font-bold shadow-lg shadow-primary-500/20">Score: 0</span>
@@ -577,14 +596,24 @@
                     </div>
                 </button>
 
-                <div id="start-screen-login" class="pt-2">
-                    <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
-                        Login to Save Progress
+                <div class="grid grid-cols-2 gap-3 pt-2">
+                    <div id="start-screen-login">
+                        <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20 h-full">
+                            Login
+                        </button>
+                    </div>
+                    <button onclick="openTutorial()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+                        How to Play
                     </button>
                 </div>
 
-                <div id="start-screen-install-container" class="pt-2 hidden">
-                    <button id="install-btn-start" class="w-full py-3 rounded-xl bg-slate-800 border border-slate-600 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-bold transition-all uppercase tracking-widest flex items-center justify-center gap-2">
+                <button id="view-rankings-btn" onclick="openDailyLeaderboard()" class="w-full mt-3 bg-slate-800/50 hover:bg-slate-700/50 py-3 rounded-xl font-bold text-slate-300 text-xs transition-all uppercase tracking-widest border border-slate-700 flex items-center justify-center gap-2 hidden relative">
+                    <span>🏆</span> View Today's Rankings
+                    <span id="rankings-badge" class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-slate-800 hidden animate-pulse"></span>
+                </button>
+
+                <div id="start-screen-install-container" class="hidden">
+                    <button id="install-btn-start" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 border border-slate-700 transition-all text-sm uppercase tracking-widest">
                         <span class="text-xl">📲</span> Install App
                     </button>
                 </div>
@@ -663,6 +692,9 @@
                 <button onclick="openHistory()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
                     <span class="text-xl">📜</span> History
                 </button>
+                <button onclick="openTutorial()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
+                    <span class="text-xl">❓</span> How to Play
+                </button>
             </div>
             
             <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-lg shadow-primary-500/20 transition-all">Share Text Result</button>
@@ -681,8 +713,13 @@
 
     <footer class="mt-12 mb-6 text-center opacity-50 hover:opacity-100 transition-opacity space-x-4">
         <a href="mailto:support@example.com" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Contact</a>
-        <button onclick="openAdminDashboard()" class="text-slate-500 text-[10px] font-bold uppercase tracking-widest hover:text-primary-400 transition-colors">Admin</button>
     </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] bg-slate-800 border border-primary-500/50 px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+        <div id="toast-icon" class="text-xl">⏳</div>
+        <div id="toast-message" class="text-sm font-bold text-white tracking-wide">Score Syncing...</div>
+    </div>
 
     <script>
         // --- CONFIG & AUDIO ---
@@ -713,6 +750,8 @@
         let remoteUserProgress = null;
         let leaderboardMode = 'casual';
         let timerInterval = null;
+        let rankingsListener = null;
+        let toastTimeout = null;
 
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
@@ -1182,6 +1221,13 @@ function confirmAnswer() {
         score++;
         currentStreak++;
         
+        const scoreEl = document.getElementById('score-display');
+        if (scoreEl) {
+            scoreEl.classList.remove('animate-score-up');
+            void scoreEl.offsetWidth; // Trigger reflow to restart animation
+            scoreEl.classList.add('animate-score-up');
+        }
+        
         if (currentStreak >= 2) {
             const streakMsg = document.createElement('div');
             streakMsg.className = "absolute top-1/3 left-0 w-full text-center z-50 pointer-events-none streak-anim";
@@ -1321,7 +1367,7 @@ function showFinalResults() {
     if (db) {
         fetchAndDisplayLeaderboard();
         checkIfSubmitted().then(submitted => {
-            if (auth.currentUser && !submitted && autoSubmit && storedName && storedName.trim() && getMyGroups().length > 0) {
+            if (auth.currentUser && !submitted && storedName && storedName.trim()) {
                 submitScore();
             }
         });
@@ -1542,9 +1588,11 @@ async function submitScore() {
         
         leaderboardMode = lastMode;
         fetchAndDisplayLeaderboard(); // Refresh the leaderboard with the new score
+        showToast("Score Synced!", "✅", 2000);
     } catch (error) {
         console.error("Error submitting score: ", error);
         alert("Could not submit score. Please try again.");
+        showToast("Sync Failed", "❌", 3000);
         btn.disabled = false;
         btn.innerText = "Submit Score";
     }
@@ -2019,6 +2067,189 @@ function closeWeeklyLeaderboard() {
     setTimeout(() => modal.classList.add('hidden'), 300);
 }
 
+async function openDailyLeaderboard() {
+    const modal = document.getElementById('daily-leaderboard-modal');
+    const content = document.getElementById('daily-leaderboard-modal-content');
+    
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modal.querySelector('div').classList.remove('scale-95');
+        modal.querySelector('div').classList.add('scale-100');
+    }, 10);
+
+        clearRankingsBadge();
+    updateDailyLeaderboardModal();
+}
+
+function closeDailyLeaderboard() {
+    const modal = document.getElementById('daily-leaderboard-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+}
+
+function setupRankingsNotificationListener() {
+    if (rankingsListener) rankingsListener(); // Unsubscribe existing
+    if (!auth.currentUser) return;
+
+    const groups = getMyGroups();
+    if (groups.length === 0) return;
+
+    const groupIds = groups.map(g => g.id);
+    const today = getGameDate();
+
+    // Listen for any scores in the user's groups for today
+    rankingsListener = db.collection('scores')
+        .where('date', '==', today)
+        .where('groupIds', 'array-contains-any', groupIds.slice(0, 10)) // Firestore limit is 10 for array-contains-any
+        .onSnapshot(snapshot => {
+            const modal = document.getElementById('daily-leaderboard-modal');
+            const isModalOpen = !modal.classList.contains('hidden');
+            
+            const totalScores = snapshot.size;
+            const lastSeenCount = parseInt(localStorage.getItem(`seen-scores-${today}`) || '0');
+
+            if (isModalOpen) {
+                // If viewing, update the seen count
+                localStorage.setItem(`seen-scores-${today}`, totalScores);
+                clearRankingsBadge();
+            } else if (totalScores > lastSeenCount) {
+                // New scores found while modal is closed
+                showRankingsBadge();
+            }
+        }, err => console.error("Rankings listener error:", err));
+}
+
+function showRankingsBadge() {
+    const badge = document.getElementById('rankings-badge');
+    if (badge) badge.classList.remove('hidden');
+    
+    // Also update the button style to draw attention
+    const btn = document.getElementById('view-rankings-btn');
+    if (btn) {
+        btn.classList.replace('border-slate-700', 'border-primary-500/50');
+        btn.classList.add('shadow-[0_0_15px_rgba(99,102,241,0.2)]');
+    }
+}
+
+function clearRankingsBadge() {
+    const badge = document.getElementById('rankings-badge');
+    if (badge) badge.classList.add('hidden');
+
+    const btn = document.getElementById('view-rankings-btn');
+    if (btn) {
+        btn.classList.replace('border-primary-500/50', 'border-slate-700');
+        btn.classList.remove('shadow-[0_0_15px_rgba(99,102,241,0.2)]');
+    }
+}
+
+async function updateDailyLeaderboardModal() {
+    const content = document.getElementById('daily-leaderboard-modal-content');
+    const subtitle = document.getElementById('daily-modal-subtitle');
+    
+    if (!auth.currentUser) {
+        content.innerHTML = `<div class="text-center p-8 text-slate-500 text-xs italic"><p>🔒 Sign in to view group rankings</p><button onclick="toggleLoginModal()" class="mt-4 bg-primary-600 text-white px-4 py-2 rounded-lg font-bold not-italic">Sign In</button></div>`;
+        return;
+    }
+
+    const groups = getMyGroups();
+    if (groups.length === 0) {
+        content.innerHTML = '<p class="text-center text-slate-400 p-4">Join or create a group to see today\'s rankings!</p>';
+        return;
+    }
+
+    if (currentGroupIndex >= groups.length) currentGroupIndex = 0;
+    const currentGroup = groups[currentGroupIndex];
+    subtitle.innerText = currentGroup.name;
+
+    const toggleHTML = `
+        <div class="mx-auto mb-4 w-44 p-1 flex justify-between items-center bg-slate-900/40 rounded-full border border-slate-700/50 relative">
+            <div class="absolute top-1 left-1 h-7 w-[calc(50%-4px)] rounded-full transition-all duration-300 ease-in-out ${leaderboardMode === 'casual' ? 'translate-x-0 bg-indigo-600' : 'translate-x-full bg-emerald-600'}"></div>
+            <button onclick="leaderboardMode='casual';updateDailyLeaderboardModal()" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'casual' ? 'text-white' : 'text-slate-400 hover:text-white'}">Casual</button>
+            <button onclick="leaderboardMode='professional';updateDailyLeaderboardModal()" class="w-1/2 py-1 rounded-full text-xs font-bold z-10 transition-colors ${leaderboardMode === 'professional' ? 'text-white' : 'text-slate-400 hover:text-white'}">Pro</button>
+        </div>`;
+
+    content.innerHTML = toggleHTML + '<p class="text-center text-slate-500 text-xs animate-pulse">Fetching scores...</p>';
+
+    try {
+        const todayDate = getGameDate();
+        const snapshot = await db.collection('scores')
+            .where('groupIds', 'array-contains', currentGroup.id)
+            .where('date', '==', todayDate)
+            .get();
+
+        const userTotals = {};
+        snapshot.forEach(doc => {
+            const d = doc.data();
+            if ((d.mode || 'casual') !== leaderboardMode) return;
+            if (!userTotals[d.userId]) {
+                userTotals[d.userId] = { id: d.userId, name: d.name, score: 0, streak: d.streak || 0, taunt: d.taunt };
+            }
+            userTotals[d.userId].score = Math.max(userTotals[d.userId].score, d.score || 0);
+        });
+
+        const sortedUsers = Object.values(userTotals).sort((a, b) => b.score - a.score);
+
+        if (sortedUsers.length === 0) {
+            content.innerHTML = toggleHTML + `<p class="text-center text-slate-400 py-8">No ${leaderboardMode} scores yet for this group today.</p>`;
+            return;
+        }
+
+        const listHTML = sortedUsers.map((user, index) => {
+            const isMe = user.id === userId;
+            let badge = `<span class="text-slate-500 font-mono w-6 text-center inline-block mr-2 text-xs">${index + 1}.</span>`;
+            let rowStyle = "bg-slate-900/30 border-slate-700/50";
+            
+            if (index === 0) {
+                badge = `<span class="text-lg w-6 text-center inline-block mr-2">🥇</span>`;
+                rowStyle = "bg-yellow-500/10 border-yellow-500/30 shadow-[0_0_15px_rgba(234,179,8,0.1)]";
+            } else if (index === 1) {
+                badge = `<span class="text-lg w-6 text-center inline-block mr-2">🥈</span>`;
+                rowStyle = "bg-slate-400/10 border-slate-400/30";
+            } else if (index === 2) {
+                badge = `<span class="text-lg w-6 text-center inline-block mr-2">🥉</span>`;
+                rowStyle = "bg-orange-500/10 border-orange-500/30";
+            }
+
+            if (isMe) rowStyle += " ring-1 ring-emerald-500/30 bg-emerald-900/10";
+            const cleanTaunt = censorTaunt(user.taunt);
+            const tauntHTML = cleanTaunt ? `<div class="text-[10px] text-slate-400 font-normal italic mt-1 ml-8 border-l-2 border-slate-600 pl-2">"${cleanTaunt}"</div>` : '';
+
+            return `
+                <div class="flex flex-col p-3 rounded-xl border ${rowStyle}">
+                    <div class="flex justify-between items-center w-full">
+                        <div class="flex items-center">
+                            ${badge}
+                            <span class="${isMe ? 'text-emerald-400 font-bold' : 'text-slate-200'} truncate max-w-[140px]">${user.name}${isMe ? ' (You)' : ''}</span>
+                            ${user.streak > 0 ? `<span class="ml-1 text-[10px] text-orange-400 font-bold">🔥${user.streak}</span>` : ''}
+                        </div>
+                        <span class="font-mono bg-slate-900/50 px-2 py-1 rounded text-primary-300 text-xs border border-primary-500/20">${user.score} pts</span>
+                    </div>
+                    ${tauntHTML}
+                </div>`;
+        }).join('');
+
+        const groupSwitcher = groups.length > 1 ? `
+            <div class="flex items-center justify-center gap-4 mt-4 py-2 border-t border-slate-700/50">
+                <button onclick="switchGroup(-1);setTimeout(updateDailyLeaderboardModal, 50)" class="text-primary-400 hover:text-white text-xs font-bold">◀ Previous Group</button>
+                <button onclick="switchGroup(1);setTimeout(updateDailyLeaderboardModal, 50)" class="text-primary-400 hover:text-white text-xs font-bold">Next Group ▶</button>
+            </div>` : '';
+
+        content.innerHTML = toggleHTML + `<div class="space-y-2">${listHTML}</div>` + groupSwitcher;
+
+    } catch (e) {
+        console.error(e);
+        content.innerHTML = toggleHTML + '<p class="text-center text-red-400">Error loading leaderboard.</p>';
+    }
+}
+
+function switchDailyLeaderboardMode(mode) {
+    leaderboardMode = mode;
+    updateDailyLeaderboardModal();
+}
+
 function toggleProfanityFilter() {
     const checkbox = document.getElementById('profanity-filter-toggle');
     localStorage.setItem('trivia-censor', checkbox.checked);
@@ -2031,6 +2262,32 @@ function toggleAutoSubmit() {
     const checkbox = document.getElementById('auto-submit-toggle');
     localStorage.setItem('trivia-autosubmit', checkbox.checked);
     exportStateToURL();
+}
+
+function showToast(message, icon = '⏳', duration = 3000) {
+    const toast = document.getElementById('toast-notification');
+    const msgEl = document.getElementById('toast-message');
+    const iconEl = document.getElementById('toast-icon');
+    
+    if (!toast || !msgEl || !iconEl) return;
+
+    clearTimeout(toastTimeout);
+    msgEl.innerText = message;
+    iconEl.innerText = icon;
+    
+    toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    
+    if (duration) {
+        toastTimeout = setTimeout(hideToast, duration);
+    }
+}
+
+function hideToast() {
+    const toast = document.getElementById('toast-notification');
+    if (!toast) return;
+    toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+    toast.classList.remove('opacity-100', 'translate-y-0');
 }
 
 function updateCharCounter(input, counterId) {
@@ -3048,6 +3305,7 @@ function initFirebase() {
         const userInfo = document.getElementById('user-info-display');
         const emailAuthSection = document.getElementById('email-auth-section');
         const startScreenLogin = document.getElementById('start-screen-login');
+        const viewRankingsBtn = document.getElementById('view-rankings-btn');
 
         if (user) {
             // Show user button only when logged in
@@ -3069,7 +3327,16 @@ function initFirebase() {
             userInfo.classList.remove('hidden');
             document.getElementById('user-email-display').innerText = user.email || "Linked Account";
             if (startScreenLogin) startScreenLogin.classList.add('hidden');
+
+            // Admin Check
+            const adminBtn = document.getElementById('admin-access-btn');
+            if (adminBtn) {
+                if (user.email === ADMIN_EMAIL) adminBtn.classList.remove('hidden');
+                else adminBtn.classList.add('hidden');
+            }
+            if (viewRankingsBtn) viewRankingsBtn.classList.remove('hidden');
             
+            setupRankingsNotificationListener();
             // Refresh data context
             if (!document.getElementById('results-card').classList.contains('hidden')) {
                 fetchAndDisplayLeaderboard();
@@ -3096,6 +3363,8 @@ function initFirebase() {
             // Logged Out
             if (localStorage.getItem('trivia-userId') && !localStorage.getItem('trivia-userId').startsWith('user_')) {
                 // If we were using an auth ID, reset to a random one so we don't keep using the old account locally
+                if (rankingsListener) rankingsListener();
+                rankingsListener = null;
                 localStorage.removeItem('trivia-userId');
             }
             userId = getOrSetUserId();
@@ -3103,6 +3372,7 @@ function initFirebase() {
             loginOptions.classList.remove('hidden');
             if (emailAuthSection) emailAuthSection.classList.remove('hidden');
             userInfo.classList.add('hidden');
+            if (viewRankingsBtn) viewRankingsBtn.classList.add('hidden');
             
             if (startScreenLogin) {
                 startScreenLogin.classList.remove('hidden');
@@ -3643,6 +3913,17 @@ function closeTutorial() {
                 checkPermissions();
     }, 300);
 }
+
+        function openTutorial() {
+            const modal = document.getElementById('tutorial-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('div').classList.remove('scale-95');
+                modal.querySelector('div').classList.add('scale-100');
+            }, 10);
+        }
+
 
 function checkSignupPrompt() {
     // Check if seen before
