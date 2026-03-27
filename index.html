@@ -108,6 +108,8 @@
         .animate-slide-in { animation: slide-in-up 0.5s ease-out forwards; }
         @keyframes fade-out { from { opacity: 1; } to { opacity: 0.4; } }
         .animate-fade-out { animation: fade-out 1s forwards; animation-delay: 3s; }
+        @keyframes pulse-sync { 0% { border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); } 70% { border-color: rgba(99, 102, 241, 1); box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); } 100% { border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); } }
+        .sync-pulse { animation: pulse-sync 2s infinite; border-width: 2px !important; }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -403,10 +405,11 @@
                 <p id="user-email-display" class="text-white font-mono text-sm bg-slate-900 py-2 px-3 rounded-lg border border-slate-700 mb-6 truncate"></p>
                 <p id="last-synced-display" class="text-[10px] text-slate-500 mb-4 uppercase tracking-widest -mt-4">Not Synced This Session</p>
                 <button id="admin-access-btn" onclick="openAdminDashboard()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 hidden">Admin Dashboard</button>
-                <button onclick="forceCloudSync()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 flex items-center justify-center gap-2">
-                    <span id="sync-icon" class="text-lg">🔄</span>
-                    <span>Refresh All Data</span>
+                <button id="sync-to-cloud-btn" onclick="forceCloudSync()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 flex items-center justify-center gap-2 border border-transparent">
+                    <span id="sync-icon" class="text-lg">📤</span>
+                    <span>Sync to Cloud</span>
                 </button>
+                <p id="last-backup-time" class="text-[9px] text-slate-500 mb-4 uppercase tracking-tighter -mt-2">No Cloud Backup Found</p>
                 <button onclick="doLogout()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3">Sign Out</button>
                 <button onclick="deleteAccount()" class="w-full bg-red-900/20 hover:bg-red-900/40 text-red-400 border border-red-500/20 py-3 rounded-xl font-bold text-sm transition-all">Delete Account</button>
             </div>
@@ -3469,14 +3472,35 @@ async function checkRemoteProgress(user) {
             if (data.weeklyWinnerSeen) {
                 localStorage.setItem('trivia-weekly-winner-seen', data.weeklyWinnerSeen);
             }
+
+            // Collect local data once for syncing and UI checks
+            const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            const localGroups = getMyGroups();
+
             if (data.archive) {
                 // Merge cloud archive with local to preserve history from other devices
-                const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
                 localStorage.setItem('trivia-archive', JSON.stringify({ ...localArchive, ...data.archive }));
             }
 
+            const hasNewArchive = Object.keys(localArchive).length > Object.keys(data.archive || {}).length;
+            const hasHigherStreak = localStreak > (data.currentStreak || 0);
+            const hasHigherBest = localBest > (data.bestStreak || 0);
+            const hasDifferentGroups = JSON.stringify(localGroups) !== JSON.stringify(data.groups || []);
+
+            const syncBtn = document.getElementById('sync-to-cloud-btn');
+            if (syncBtn) {
+                syncBtn.classList.toggle('sync-pulse', hasNewArchive || hasHigherStreak || hasHigherBest || hasDifferentGroups);
+            }
+
+            // Update the "Last Backed Up" timestamp from cloud metadata
+            const backupDisplay = document.getElementById('last-backup-time');
+            if (backupDisplay && (data.lastManualBackup || data.lastUpdated)) {
+                const ts = data.lastManualBackup || data.lastUpdated;
+                const date = ts.toDate ? ts.toDate() : new Date(ts);
+                backupDisplay.innerText = `Last Backed Up: ${date.toLocaleDateString()} ${date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}`;
+            }
+
             // SYNC GROUPS: Merge local and remote groups
-            const localGroups = getMyGroups();
             const remoteGroups = data.groups || [];
             const groupMap = new Map();
             
@@ -3596,18 +3620,39 @@ async function forceCloudSync() {
     
     const icon = document.getElementById('sync-icon');
     if (icon) icon.classList.add('animate-spin');
-    showToast("Syncing with Cloud...", "🔄");
+    showToast("Backing up local data...", "📤");
     updateHeaderSyncStatus('syncing');
 
     try {
-        // Re-run the core sync logic
+        // 1. Collect all local data to push
+        const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        const localStreak = parseInt(localStorage.getItem('trivia-streak') || '0');
+        const localBest = parseInt(localStorage.getItem('trivia-best') || '0');
+        const lastDate = localStorage.getItem('trivia-last-date');
+        const localGroups = getMyGroups();
+
+        // 2. Upload to Firestore (Merge with existing cloud data)
+        await db.collection('users').doc(auth.currentUser.uid).set({
+            archive: localArchive,
+            currentStreak: localStreak,
+            bestStreak: localBest,
+            lastPlayedDate: lastDate,
+            groups: localGroups,
+            lastManualBackup: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true });
+
+        // 3. Re-run core sync logic to refresh local UI/state
         await checkRemoteProgress(auth.currentUser);
-        // Refresh UI components
+        
         if (!document.getElementById('results-card').classList.contains('hidden')) {
             await fetchAndDisplayLeaderboard();
         }
+        
+        const syncBtn = document.getElementById('sync-to-cloud-btn');
+        if (syncBtn) syncBtn.classList.remove('sync-pulse');
+
         updateHeaderSyncStatus('complete');
-        showToast("Sync Complete!", "✅", 2000);
+        showToast("Backup Successful!", "✅", 2000);
     } catch (e) {
         console.error("Manual sync failed:", e);
         updateHeaderSyncStatus('failed');
