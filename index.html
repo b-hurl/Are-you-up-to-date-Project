@@ -2936,6 +2936,15 @@ function updateStreak() {
             best = streak;
             localStorage.setItem('trivia-best', best);
         }
+
+        // Sync streak and best to cloud immediately
+        if (auth && auth.currentUser) {
+            db.collection('users').doc(auth.currentUser.uid).set({
+                currentStreak: streak,
+                lastPlayedDate: currentGameDate,
+                bestStreak: best
+            }, { merge: true }).catch(e => console.error("Cloud streak sync failed", e));
+        }
     }
 
     document.getElementById('streak-count').innerText = streak;
@@ -3452,9 +3461,18 @@ async function checkRemoteProgress(user) {
             if (data.currentStreak !== undefined && data.currentStreak > localStreak) {
                 localStorage.setItem('trivia-streak', data.currentStreak);
             }
+            const localBest = parseInt(localStorage.getItem('trivia-best') || '0');
+            if (data.bestStreak !== undefined && data.bestStreak > localBest) {
+                localStorage.setItem('trivia-best', data.bestStreak);
+            }
             if (data.lastPlayedDate) localStorage.setItem('trivia-last-date', data.lastPlayedDate);
             if (data.weeklyWinnerSeen) {
                 localStorage.setItem('trivia-weekly-winner-seen', data.weeklyWinnerSeen);
+            }
+            if (data.archive) {
+                // Merge cloud archive with local to preserve history from other devices
+                const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+                localStorage.setItem('trivia-archive', JSON.stringify({ ...localArchive, ...data.archive }));
             }
 
             // SYNC GROUPS: Merge local and remote groups
