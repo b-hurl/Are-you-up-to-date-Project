@@ -404,6 +404,18 @@
                 <p class="text-slate-400 text-xs uppercase tracking-widest font-bold mb-2">Signed In As</p>
                 <p id="user-email-display" class="text-white font-mono text-sm bg-slate-900 py-2 px-3 rounded-lg border border-slate-700 mb-6 truncate"></p>
                 <p id="last-synced-display" class="text-[10px] text-slate-500 mb-4 uppercase tracking-widest -mt-4">Not Synced This Session</p>
+                
+                <div id="location-opt-out-container" class="mb-4 bg-slate-900 p-3 rounded-xl border border-slate-700 flex items-center justify-between">
+                    <div class="text-left">
+                        <p class="text-[10px] text-slate-400 font-bold uppercase">Regional Questions</p>
+                        <p class="text-[9px] text-slate-500">Hide questions for my city/region</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" id="location-opt-out-toggle" onchange="toggleLocationOptOut()" class="sr-only peer">
+                        <div class="w-9 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-600"></div>
+                    </label>
+                </div>
+
                 <button id="admin-access-btn" onclick="openAdminDashboard()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 hidden">Admin Dashboard</button>
                 <button id="sync-to-cloud-btn" onclick="forceCloudSync()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all mb-3 flex items-center justify-center gap-2 border border-transparent">
                     <span id="sync-icon" class="text-lg">📤</span>
@@ -1051,11 +1063,15 @@
             
             // Get user location for regional filtering
             const userLoc = JSON.parse(localStorage.getItem('trivia-location') || '{}');
+            const isLocOptedOut = localStorage.getItem('trivia-opt-out-location') === 'true';
 
             let filteredQuestions = freshGameData.questions.filter(q => {
                 // 1. Regional Filter
                 // Questions can have a "location" object: { country: "Canada", region: "Ontario", city: "Toronto" }
                 if (q.location) {
+                    // If user opted out of regional content, skip these entirely
+                    if (isLocOptedOut) return false;
+
                     // If we don't know the user's location, skip regional questions (safest bet)
                     if (!userLoc.country_code) return false;
 
@@ -2544,6 +2560,30 @@ function switchDailyLeaderboardMode(mode) {
     updateDailyLeaderboardModal();
 }
 
+async function toggleLocationOptOut() {
+    const checkbox = document.getElementById('location-opt-out-toggle');
+    const isOptedOut = checkbox.checked;
+    
+    localStorage.setItem('trivia-opt-out-location', isOptedOut);
+    
+    // Sync to Firebase if logged in
+    if (auth && auth.currentUser) {
+        updateHeaderSyncStatus('syncing');
+        try {
+            await db.collection('users').doc(auth.currentUser.uid).set({
+                locationOptOut: isOptedOut
+            }, { merge: true });
+            updateHeaderSyncStatus('complete');
+        } catch (e) {
+            console.error("Failed to sync location preference:", e);
+            updateHeaderSyncStatus('failed');
+        }
+    }
+
+    // Sync to URL state for cross-browser persistence if in-app
+    if (typeof exportStateToURL === 'function') exportStateToURL();
+}
+
 function toggleProfanityFilter() {
     const checkbox = document.getElementById('profanity-filter-toggle');
     localStorage.setItem('trivia-censor', checkbox.checked);
@@ -3521,6 +3561,9 @@ async function checkRemoteProgress(user) {
             if (data.weeklyWinnerSeen) {
                 localStorage.setItem('trivia-weekly-winner-seen', data.weeklyWinnerSeen);
             }
+            if (data.locationOptOut !== undefined) {
+                localStorage.setItem('trivia-opt-out-location', data.locationOptOut);
+            }
 
             // Collect local data once for syncing and UI checks
             const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
@@ -3688,6 +3731,7 @@ async function forceCloudSync() {
         const localStreak = parseInt(localStorage.getItem('trivia-streak') || '0');
         const localBest = parseInt(localStorage.getItem('trivia-best') || '0');
         const lastDate = localStorage.getItem('trivia-last-date');
+        const isLocOptedOut = localStorage.getItem('trivia-opt-out-location') === 'true';
         const localGroups = getMyGroups();
 
         // 2. Upload to Firestore (Merge with existing cloud data)
@@ -3695,6 +3739,7 @@ async function forceCloudSync() {
             archive: localArchive,
             currentStreak: localStreak,
             bestStreak: localBest,
+            locationOptOut: isLocOptedOut,
             lastPlayedDate: lastDate,
             groups: localGroups,
             lastManualBackup: firebase.firestore.FieldValue.serverTimestamp()
@@ -3872,6 +3917,14 @@ function initFirebase() {
 function toggleLoginModal() {
     const modal = document.getElementById('login-modal');
     if (modal.classList.contains('hidden')) {
+        // Setup the location opt-out UI state
+        const optOutContainer = document.getElementById('location-opt-out-container');
+        const isGameActive = !document.getElementById('question-text').classList.contains('hidden');
+        const checkbox = document.getElementById('location-opt-out-toggle');
+        
+        if (optOutContainer) optOutContainer.classList.toggle('hidden', isGameActive);
+        if (checkbox) checkbox.checked = localStorage.getItem('trivia-opt-out-location') === 'true';
+
         modal.classList.remove('hidden');
         setTimeout(() => {
             modal.classList.remove('opacity-0');
