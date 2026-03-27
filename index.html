@@ -3609,11 +3609,19 @@ async function checkRemoteProgress(user) {
 
             const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
             
-            // Fix: Deep Merge Cloud Archive into Local Storage at the mode level
+            // FIX: Deep Merge and Normalize Cloud Archive to prevent UI crashes
             if (data.archive) {
                 const mergedArchive = { ...localArchive };
                 for (const date in data.archive) {
-                    mergedArchive[date] = { ...(mergedArchive[date] || {}), ...data.archive[date] };
+                    const cloudEntry = data.archive[date];
+                    // Normalization: Ensure cloud entry follows the { mode: { ... } } structure
+                    if (cloudEntry.answers || cloudEntry.choices) {
+                        const mode = cloudEntry.mode || 'casual';
+                        mergedArchive[date] = mergedArchive[date] || {};
+                        mergedArchive[date][mode] = cloudEntry;
+                    } else {
+                        mergedArchive[date] = { ...(mergedArchive[date] || {}), ...cloudEntry };
+                    }
                 }
                 localStorage.setItem('trivia-archive', JSON.stringify(mergedArchive));
             }
@@ -3747,6 +3755,10 @@ async function checkRemoteProgress(user) {
                 if (!document.getElementById('results-card').classList.contains('hidden')) {
                     fetchAndDisplayLeaderboard();
                     checkIfSubmitted();
+            }
+            
+            if (!document.getElementById('history-modal').classList.contains('hidden')) {
+                loadHistoryData();
                 }
             }
         } 
@@ -4770,13 +4782,20 @@ function closeStats() {
 
             // Iterate through dates
             games.forEach(game => {
-                const dateRecord = archive[game.date];
-                if (!dateRecord) return;
+                const rawDateRecord = archive[game.date];
+                if (!rawDateRecord) return;
 
-                // Since we now support multiple modes per day, dateRecord is a map: { casual: {...}, professional: {...} }
+                // Fail-safe: Detect and repair legacy records on the fly
+                const modesToProcess = {};
+                if (rawDateRecord.answers || rawDateRecord.choices) {
+                    modesToProcess[rawDateRecord.mode || 'casual'] = rawDateRecord;
+                } else {
+                    Object.assign(modesToProcess, rawDateRecord);
+                }
+
                 // We iterate through each mode found for this date
-                Object.keys(dateRecord).forEach(modeKey => {
-                    const userRecord = dateRecord[modeKey];
+                Object.keys(modesToProcess).forEach(modeKey => {
+                    const userRecord = modesToProcess[modeKey];
                     // Apply filter
                     if (currentHistoryFilter !== 'all' && modeKey !== currentHistoryFilter) return;
 
@@ -4813,8 +4832,8 @@ function closeStats() {
                         `;
                         
                         let userPick = null;
-                        if (userRecord.answers && userRecord.answers[q.q] !== undefined) {
-                            userPick = userRecord.answers[q.q];
+                        if (userRecord.answers && userRecord.answers[qKey] !== undefined) {
+                            userPick = userRecord.answers[qKey];
                         } else if (!userRecord.answers && userRecord.choices && userRecord.choices[idx]) {
                             userPick = userRecord.choices[idx];
                         }
