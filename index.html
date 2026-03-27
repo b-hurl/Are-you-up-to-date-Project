@@ -1227,10 +1227,8 @@ async function startApp() {
         }
     } catch (err) {
         console.error("Error loading trivia:", err);
-        document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
         localStorage.removeItem('trivia-session');
-        alert("There was an issue loading today's trivia. Please try again.");
-        window.location.reload();
+        document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
         document.getElementById('question-text').classList.remove('hidden');
     }
 }
@@ -3508,9 +3506,13 @@ async function checkRemoteProgress(user) {
     const today = getGameDate();
     
     // Ensure startApp has finished loading the trivia JSON before we try to render results
-    while (!freshGameData) {
+    // Added a safety timeout (5 seconds) to prevent infinite hanging if the file fails to load
+    let attempts = 0;
+    while (!freshGameData && attempts < 50) {
         await new Promise(resolve => setTimeout(resolve, 100));
+        attempts++;
     }
+    if (!freshGameData) return;
     
     try {
         const doc = await db.collection('users').doc(user.uid).get();
@@ -3533,15 +3535,6 @@ async function checkRemoteProgress(user) {
             }
             if (data.locationOptOut !== undefined) {
                 localStorage.setItem('trivia-opt-out-location', data.locationOptOut);
-            }
-
-            // Collect local data once for syncing and UI checks
-            const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-            const localGroups = getMyGroups();
-
-            if (data.archive) {
-                // Merge cloud archive with local to preserve history from other devices
-                localStorage.setItem('trivia-archive', JSON.stringify({ ...localArchive, ...data.archive }));
             }
 
             const hasNewArchive = Object.keys(localArchive).length > Object.keys(data.archive || {}).length;
@@ -3636,14 +3629,8 @@ async function checkRemoteProgress(user) {
                     
                     // Restore global state
                     const s = data.currentSession;
-                    // CRITICAL: Flatten and Repair cloud data in case Firebase is holding the "bugged" version
-                    const rawCloudQuestions = Array.isArray(s.shuffledQuestions) ? s.shuffledQuestions.flat(Infinity) : [];
-                    // Sanitize data coming from the cloud
+                    // Sanitize data coming from the cloud to repair any "undefined" properties or nested arrays
                     gameData = {
-                        questions: rawCloudQuestions.map(q => ({
-                            ...q,
-                            correctText: q.correctText || (q.options && q.options[q.a] ? q.options[q.a] : "")
-                        })),
                         questions: sanitizeQuestions(s.shuffledQuestions)
                     };
 
