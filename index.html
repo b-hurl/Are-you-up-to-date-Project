@@ -3060,13 +3060,14 @@ function renderReview() {
         const userClickedIdx = choices[i];
         const userClickedText = q.options[userClickedIdx];
         const isCorrect = userClickedText === q.correctText;
+        const qKey = q.q.trim();
         
         const div = document.createElement('div');
         div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
         
         const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
         const qEncoded = encodeURIComponent(q.q);
-        const existingVote = votedQuestions[q.q];
+        const existingVote = votedQuestions[qKey];
         const feedbackBtns = existingVote 
             ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
             : `
@@ -3094,7 +3095,7 @@ function renderReview() {
 }
 
 async function submitFeedback(encodedQ, type, btn) {
-    const qText = decodeURIComponent(encodedQ);
+    const qText = decodeURIComponent(encodedQ).trim();
     const parent = btn.parentElement;
 
     // Prevent spamming by checking and saving to localStorage
@@ -4765,103 +4766,94 @@ function closeStats() {
             try { archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}'); } catch(e){}
             const votedQuestions = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
 
-            // Filter games to only include those that have been played and are in the archive.
-            const playedGames = games.filter(game => {
-                const record = archive[game.date];
-                if (!record) return false;
-                
-                // Filter Logic
-                if (currentHistoryFilter !== 'all') {
-                    const recordMode = record.mode || 'casual'; // Default to casual for legacy data
-                    if (recordMode !== currentHistoryFilter) return false;
-                }
-                return true;
-            });
+            let gamesRendered = 0;
 
-            if (playedGames.length === 0) {
-                content.innerHTML = '<p class="text-center text-slate-400 p-8">No games found for this category.</p>';
-                return;
-            }
+            // Iterate through dates
+            games.forEach(game => {
+                const dateRecord = archive[game.date];
+                if (!dateRecord) return;
 
-            playedGames.forEach(game => {
-                const dateParts = game.date.split('-').map(Number);
-                const gameDate = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
-                const formattedDate = gameDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
- 
-                const dayContainer = document.createElement('div');
-                dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50';
-                
-                const userRecord = archive[game.date];
-                const modeBadge = (userRecord.mode === 'professional') 
-                    ? '<span class="text-[10px] bg-emerald-900/50 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30 ml-2">PRO</span>'
-                    : '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
-                
-                let questionsHTML = '';
-                let visibleQuestionsCount = 0;
+                // Since we now support multiple modes per day, dateRecord is a map: { casual: {...}, professional: {...} }
+                // We iterate through each mode found for this date
+                Object.keys(dateRecord).forEach(modeKey => {
+                    const userRecord = dateRecord[modeKey];
+                    // Apply filter
+                    if (currentHistoryFilter !== 'all' && modeKey !== currentHistoryFilter) return;
 
-                game.questions.forEach((q, idx) => {
-                    const correctAnswer = q.options[q.a];
-                    const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
-                    
-                    const qEncoded = encodeURIComponent(q.q);
-                    const existingVote = votedQuestions[q.q];
-                    const feedbackBtns = existingVote 
-                        ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
-                        : `
-                        <div class="flex items-center gap-2 inline-flex">
-                            <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
-                            <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
-                        </div>
-                    `;
-                     
-                    let answerHTML = `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`;
-                    let userPick = null;
-                     
-                    // Try finding the answer by Question Text first (New Robust Way)
-                    if (userRecord.answers && userRecord.answers[q.q] !== undefined) {
-                        userPick = userRecord.answers[q.q];
-                    } 
-                    // Fallback to Index (Legacy Way) - only if answers map missing
-                    else if (!userRecord.answers && userRecord.choices && userRecord.choices[idx]) {
-                        userPick = userRecord.choices[idx];
-                    }
+                    gamesRendered++;
 
-                    // If we filtered by mode, hide questions the user didn't actually play
-                    // (This assumes userRecord.answers is populated correctly)
-                    if (userRecord.answers && !userPick) return;
-                    
-                    visibleQuestionsCount++;
+                    const dateParts = game.date.split('-').map(Number);
+                    const gameDate = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
+                    const formattedDate = gameDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
 
-                    if (userPick) {
+                    const dayContainer = document.createElement('div');
+                    dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50 mb-4';
+
+                    const modeBadge = (modeKey === 'professional') 
+                        ? '<span class="text-[10px] bg-emerald-900/50 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30 ml-2">PRO</span>'
+                        : '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
+
+                    let questionsHTML = '';
+                    let visibleQuestions = 0;
+
+                    game.questions.forEach((q, idx) => {
+                        const qKey = q.q.trim();
+                        const correctAnswer = q.options[q.a];
+                        const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
+                        
+                        const qEncoded = encodeURIComponent(q.q);
+                        const existingVote = votedQuestions[qKey];
+                        const feedbackBtns = existingVote 
+                            ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
+                            : `
+                            <div class="flex items-center gap-2 inline-flex">
+                                <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
+                                <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
+                            </div>
+                        `;
+                        
+                        let userPick = null;
+                        if (userRecord.answers && userRecord.answers[q.q] !== undefined) {
+                            userPick = userRecord.answers[q.q];
+                        } else if (!userRecord.answers && userRecord.choices && userRecord.choices[idx]) {
+                            userPick = userRecord.choices[idx];
+                        }
+
+                        if (!userPick) return; // Skip questions not part of this mode's session
+                        visibleQuestions++;
+
                         const isCorrect = userPick === correctAnswer;
-                         
-                        if (!isCorrect) {
-                            answerHTML = `
+                        const answerHTML = isCorrect 
+                            ? `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`
+                            : `
                                 <p class="text-red-400 text-[11px] font-bold mb-1">❌ Your Answer: ${userPick}</p>
                                 <p class="text-emerald-400 text-[11px] font-bold">✅ Correct: ${correctAnswer}</p>
                             `;
-                        }
-                    }
- 
-                    questionsHTML += `
-                        <div class="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
-                            <p class="text-xs font-bold mb-2 text-slate-300">${q.q}</p>
-                            ${answerHTML}
-                            <div class="mt-2 text-right flex justify-end items-center">${source}${feedbackBtns}</div>
-                        </div>
-                    `;
-                });
- 
-                if (visibleQuestionsCount === 0) return; // Don't show empty days
 
-                dayContainer.innerHTML = `
-                    <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
-                        ${formattedDate} ${modeBadge}
-                    </h3>
-                    <div class="space-y-3">${questionsHTML}</div>
-                `;
-                content.appendChild(dayContainer);
+                        questionsHTML += `
+                            <div class="p-3 bg-slate-800/50 rounded-xl border border-slate-700 mb-2">
+                                <p class="text-xs font-bold mb-2 text-slate-300">${q.q}</p>
+                                ${answerHTML}
+                                <div class="mt-2 text-right flex justify-end items-center">${source}${feedbackBtns}</div>
+                            </div>
+                        `;
+                    });
+
+                    if (visibleQuestions > 0) {
+                        dayContainer.innerHTML = `
+                            <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
+                                ${formattedDate} ${modeBadge}
+                            </h3>
+                            <div class="space-y-1">${questionsHTML}</div>
+                        `;
+                        content.appendChild(dayContainer);
+                    }
+                });
             });
+
+            if (gamesRendered === 0) {
+                content.innerHTML = '<p class="text-center text-slate-400 p-8">No games found for this category.</p>';
+            }
         }
 
         // --- PWA INSTALL LOGIC ---
