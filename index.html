@@ -1151,12 +1151,27 @@ async function startApp() {
     
     try {
         const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
-        if (!response.ok) throw new Error();
-        freshGameData = await response.json();
+        if (!response.ok) throw new Error(`Failed to load ${gameDate}.json`);
         
-        if (Array.isArray(freshGameData)) {
-            freshGameData = { questions: freshGameData };
+        let loadedData = await response.json(); // Use a temporary variable for validation
+        
+        // Normalize format (Array vs Object with "questions" key)
+        if (Array.isArray(loadedData)) {
+            loadedData = { questions: loadedData };
         }
+
+        // Validation: Ensure 'questions' array exists and is valid
+        if (!loadedData || !Array.isArray(loadedData.questions) || loadedData.questions.length === 0) {
+            throw new Error("Loaded JSON data is empty or malformed.");
+        }
+
+        for (const q of loadedData.questions) {
+            if (!q || typeof q !== 'object' || !q.q || !Array.isArray(q.options) || q.options.length === 0) {
+                throw new Error("One or more questions in the JSON data are malformed.");
+            }
+        }
+
+        freshGameData = loadedData; // Assign to global variable after validation passes
         
         const saved = localStorage.getItem('trivia-session');
         
@@ -1208,7 +1223,11 @@ async function startApp() {
         
     } catch (err) {
         console.error("Error loading trivia:", err);
+        // If an error occurs during JSON loading or validation, clear local session and reload
         document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
+        localStorage.removeItem('trivia-session'); // Clear potentially corrupted session
+        alert("There was an issue loading today's trivia. Please try again.");
+        window.location.reload(); // Force a full reload to clear any potential bad state
         document.getElementById('question-text').classList.remove('hidden');
     }
 }
