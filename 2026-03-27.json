@@ -1,0 +1,124 @@
+[
+  {
+    "q": "As reported by the Associated Press (AP) on March 26, 2026, President Trump officially extended the deadline for Iran to reopen the Strait of Hormuz to which new date?",
+    "options": [
+      "March 31",
+      "April 6",
+      "April 15",
+      "May 1"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "source": "https://apnews.com/live/iran-war-israel-trump-03-26-2026"
+  },
+  {
+    "q": "According to Bloomberg on March 26, 2026, the OECD warned that the escalating Middle East conflict has entirely erased a previously planned 0.3 percentage point upward revision to what?",
+    "options": [
+      "The US Dollar exchange rate",
+      "Global GDP growth for 2026",
+      "Gold price forecasts",
+      "European employment rates"
+    ],
+    "a": 1,
+    "category": "Economy",
+    "source": "https://www.bnnbloomberg.ca/business/2026/03/26/oecd-iran-war-erases-global-growth-upgrade-fans-inflation/"
+  },
+  {
+    "q": "The Verge and other tech outlets reported today that LG Display has become the first company to mass-produce a '1-120Hz' laptop LCD panel, which is reportedly being branded as what?",
+    "options": [
+      "SipPower LCD",
+      "Oxide 1Hz",
+      "EcoRefresh",
+      "VariableFlow"
+    ],
+    "a": 1,
+    "category": "Technology",
+    "source": "https://mobilesyrup.com/2026/03/26/laptop-battery-life-improvements-display-tech-efficient-chips/"
+  },
+{
+  "q": "As reported by Grist and Canadian agricultural agencies on March 26, 2026, the federal government has officially launched a new national strategy to protect what specific 'critical asset' against erosion and climate change?",
+  "options": [
+    "Old-growth cedar forests",
+    "Agricultural soil health",
+    "Freshwater aquifer depths",
+    "Arctic permafrost stability"
+  ],
+  "a": 1,
+  "category": "Environment",
+  "source": "https://discoverweyburn.com/articles/canada-launches-work-on-national-agricultural-soil-health-strategy"
+},
+  {
+    "q": "According to Science News on March 26, 2026, researchers are studying 'ghost forests'—groups of dead trees along the Atlantic coast—to understand how ecosystems respond to what specific trigger?",
+    "options": [
+      "Invasive beetle species",
+      "Rising sea levels and saltwater intrusion",
+      "Increased lightning strike frequency",
+      "Soil depletion from over-farming"
+    ],
+    "a": 1,
+    "category": "Science",
+    "source": "https://www.eurekalert.org/news-releases/1119518"
+  },
+  [
+  {
+    "q": "On March 25, 2026, HBO officially released the first teaser for its highly anticipated 'Harry Potter' television series. What is the official title of the first season?",
+    "options": [
+      "Harry Potter and the Sorcerer's Stone",
+      "Harry Potter and the Philosopher's Stone",
+      "Harry Potter: The Boy Who Lived",
+      "Harry Potter: Year One"
+    ],
+    "a": 1,
+    "category": "Entertainment",
+    "source": "https://www.usatoday.com/story/entertainment/tv/2026/03/25/harry-potter-series-release-date-trailer/89320554007/"
+  },
+  {
+    "q": "According to a March 26, 2026 report by The Athletic, which NBA superstar and former champion is reportedly 'headed for divorce' from the Milwaukee Bucks this summer?",
+    "options": [
+      "Damian Lillard",
+      "Khris Middleton",
+      "Giannis Antetokounmpo",
+      "Brook Lopez"
+    ],
+    "a": 2,
+    "category": "Sports",
+    "source": "https://www.yardbarker.com/nba/articles/giannis_antetokounmpo_bucks_reportedly_headed_for_divorce/s1_17038_43650283"
+  },
+  {
+    "q": "Which actor made a surprise appearance at a New York theater on March 26, 2026, to tell audiences that it is Hollywood's job—not the moviegoers'—to keep theaters open by making things 'worth' seeing?",
+    "options": [
+      "Tom Holland",
+      "Ryan Gosling",
+      "Austin Butler",
+      "Timothée Chalamet"
+    ],
+    "a": 1,
+    "category": "Movies",
+    "source": "https://au.variety.com/2026/film/news/ryan-gosling-saving-movie-theatres-good-movies-34631/"
+  },
+  {
+    "q": "On March 26, 2026, which Latin American musical duo officially began the general ticket onsale for their 'FREE SPIRITS' World Tour, which includes dates at Red Rocks and Radio City Music Hall?",
+    "options": [
+      "Bad Bunny & J Balvin",
+      "CA7RIEL & Paco Amoroso",
+      "Rosalía & Rauw Alejandro",
+      "Anuel AA & Ozuna"
+    ],
+    "a": 1,
+    "category": "Music",
+    "source": "https://newsroom.livenation.com/news/ca7riel-paco-amoroso-announce-global-tour-with-dates-across-north-america-europe-uk-and-latin-america/"
+  },
+  {
+    "q": "As reported by Tech4Gamers on March 26, 2026, Sony has shut down which first-party studio led by former Call of Duty developer Jason Blundell?",
+    "options": [
+      "Deviation Games",
+      "Dark Outlaw Games",
+      "London Studio",
+      "PixelOpus"
+    ],
+    "a": 1,
+    "category": "Gaming",
+    "source": "https://tech4gamers.com/dark-outlaw-games-closure-sony/"
+  }
+]
+]
