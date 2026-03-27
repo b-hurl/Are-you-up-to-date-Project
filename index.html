@@ -3589,6 +3589,13 @@ async function checkRemoteProgress(user) {
             }
 
             const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            
+            // CRITICAL: Merge Cloud Archive into Local Storage
+            if (data.archive) {
+                const mergedArchive = { ...data.archive, ...localArchive };
+                localStorage.setItem('trivia-archive', JSON.stringify(mergedArchive));
+            }
+
             const localGroups = getMyGroups();
 
             const hasNewArchive = Object.keys(localArchive).length > Object.keys(data.archive || {}).length;
@@ -4710,8 +4717,8 @@ function closeStats() {
                     const response = await fetch(`${dateString}.json?v=hist`);
                     if (!response.ok) continue; 
                     let data = await response.json();
-                    if (Array.isArray(data)) data = { questions: data };
-                    pastGames.push({ date: dateString, ...data });
+                    let questions = Array.isArray(data) ? data : (data.questions || []);
+                    pastGames.push({ date: dateString, questions: sanitizeQuestions(questions) });
                 } catch (error) {
                     console.log(`No history found for ${dateString}`);
                 }
