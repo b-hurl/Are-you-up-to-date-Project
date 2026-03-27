@@ -604,8 +604,8 @@
                             <span>🔔</span> Notify Me
                         </button>
                     </div>
-                    <button onclick="viewResultsFromHome()" class="mt-6 w-full bg-slate-800 hover:bg-slate-700 py-3 rounded-xl font-bold text-primary-300 text-xs transition-all uppercase tracking-widest border border-slate-700/50 flex items-center justify-center gap-2 shadow-lg">
-                        <span>📜</span> Review Today's Answers
+                    <button onclick="openHistory()" class="mt-6 w-full bg-slate-800 hover:bg-slate-700 py-3 rounded-xl font-bold text-primary-300 text-xs transition-all uppercase tracking-widest border border-slate-700/50 flex items-center justify-center gap-2 shadow-lg">
+                        <span>📜</span> View Game History
                     </button>
 
                     <div id="home-gm-badge" class="hidden mt-4 py-1.5 px-4 bg-yellow-500/10 border border-yellow-500/30 rounded-full inline-flex items-center gap-2">
@@ -820,7 +820,8 @@
                     mute: localStorage.getItem('trivia-muted'),
                     cens: localStorage.getItem('trivia-censor'),
                     asub: localStorage.getItem('trivia-autosubmit'),
-                    sess: localStorage.getItem('trivia-session')
+                    sess: localStorage.getItem('trivia-session'),
+                    wseen: localStorage.getItem('trivia-weekly-winner-seen')
                 };
                 
                 // UTF-8 Safe Base64 encoding
@@ -859,6 +860,7 @@
                 if (state.cens) localStorage.setItem('trivia-censor', state.cens);
                 if (state.asub) localStorage.setItem('trivia-autosubmit', state.asub);
                 if (state.sess) localStorage.setItem('trivia-session', state.sess);
+                if (state.wseen) localStorage.setItem('trivia-weekly-winner-seen', state.wseen);
 
                 // Clean URL so the user doesn't accidentally share their session link later
                 url.searchParams.delete('x-state');
@@ -1013,11 +1015,6 @@
             
             const gmBadge = document.getElementById('home-gm-badge');
             if (gmBadge) gmBadge.classList.toggle('hidden', !allDone);
-        }
-
-        function viewResultsFromHome() {
-            // Simply trigger the results card display
-            showFinalResults();
         }
 
         async function selectMode(mode) {
@@ -3325,6 +3322,14 @@ async function checkDailyWinnerNotification() {
 async function checkWeeklyWinner() {
     if (!auth.currentUser) return;
     
+    const modal = document.getElementById('weekly-winner-modal');
+    if (!modal || !modal.classList.contains('hidden')) return;
+
+    // Only show on home screen or results screen to avoid interrupting gameplay
+    const isHome = !document.getElementById('mode-selection').classList.contains('hidden');
+    const isResults = !document.getElementById('results-card').classList.contains('hidden');
+    if (!isHome && !isResults) return;
+
     const groups = getMyGroups();
     if (groups.length === 0) return;
 
@@ -3393,7 +3398,6 @@ async function checkWeeklyWinner() {
             document.getElementById('weekly-winner-taunt').innerText = `"${censorTaunt(winner.taunt)}"`;
             
             // Show Modal
-            const modal = document.getElementById('weekly-winner-modal');
             modal.classList.remove('hidden');
             setTimeout(() => {
                 modal.classList.remove('opacity-0');
@@ -3414,6 +3418,13 @@ function closeWeeklyWinnerModal() {
     const currentWeekId = getWeekId(todayStr);
     
     localStorage.setItem('trivia-weekly-winner-seen', currentWeekId);
+
+    // Sync to cloud to prevent repeat across devices
+    if (auth && auth.currentUser) {
+        db.collection('users').doc(auth.currentUser.uid).set({
+            weeklyWinnerSeen: currentWeekId
+        }, { merge: true }).catch(e => console.error("Cloud weekly seen sync failed", e));
+    }
     
     modal.classList.add('opacity-0');
     modal.querySelector('div').classList.remove('scale-100');
@@ -3442,6 +3453,9 @@ async function checkRemoteProgress(user) {
                 localStorage.setItem('trivia-streak', data.currentStreak);
             }
             if (data.lastPlayedDate) localStorage.setItem('trivia-last-date', data.lastPlayedDate);
+            if (data.weeklyWinnerSeen) {
+                localStorage.setItem('trivia-weekly-winner-seen', data.weeklyWinnerSeen);
+            }
 
             // SYNC GROUPS: Merge local and remote groups
             const localGroups = getMyGroups();
