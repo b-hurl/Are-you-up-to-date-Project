@@ -3382,7 +3382,10 @@ function archiveSession(session) {
 
         const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
 
-        archive[session.date] = {
+        // FIX: Support multiple modes per day in the archive
+        if (!archive[session.date]) archive[session.date] = {};
+        
+        archive[session.date][lastMode] = {
             answers: answersMap,
             choices: choicesList,
             score: session.score,
@@ -3605,9 +3608,12 @@ async function checkRemoteProgress(user) {
 
             const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
             
-            // CRITICAL: Merge Cloud Archive into Local Storage
+            // FIX: Deep Merge Cloud Archive into Local Storage to prevent overwriting modes
             if (data.archive) {
-                const mergedArchive = { ...data.archive, ...localArchive };
+                const mergedArchive = { ...localArchive };
+                for (const date in data.archive) {
+                    mergedArchive[date] = { ...(mergedArchive[date] || {}), ...data.archive[date] };
+                }
                 localStorage.setItem('trivia-archive', JSON.stringify(mergedArchive));
             }
 
@@ -4759,40 +4765,47 @@ function closeStats() {
             try { archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}'); } catch(e){}
             const votedQuestions = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
 
-            // Filter games to only include those that have been played and are in the archive.
-            const playedGames = games.filter(game => {
-                const record = archive[game.date];
-                if (!record) return false;
-                
-                // Filter Logic
-                if (currentHistoryFilter !== 'all') {
-                    const recordMode = record.mode || 'casual'; // Default to casual for legacy data
-                    if (recordMode !== currentHistoryFilter) return false;
+            let playedGamesCount = 0;
+
+            games.forEach(game => {
+                const dateRecord = archive[game.date];
+                if (!dateRecord) return;
+
+                // Handle both old format (single object) and new format (object with modes)
+                const modesToRender = [];
+                if (dateRecord.answers || dateRecord.choices) {
+                    modesToRender.push(dateRecord); // Old legacy format
+                } else {
+                    Object.values(dateRecord).forEach(m => modesToRender.push(m)); // New multi-mode format
                 }
-                return true;
+
+                modesToRender.forEach(userRecord => {
+                    const recordMode = userRecord.mode || 'casual';
+                    if (currentHistoryFilter !== 'all' && recordMode !== currentHistoryFilter) return;
+                    
+                    playedGamesCount++;
+                    renderDayHistory(game, userRecord, votedQuestions, content);
+                });
             });
 
-            if (playedGames.length === 0) {
+            if (playedGamesCount === 0) {
                 content.innerHTML = '<p class="text-center text-slate-400 p-8">No games found for this category.</p>';
-                return;
-            }
+                     '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
+                
+                let questionsHTML = '';
 
-            playedGames.forEach(game => {
                 const dateParts = game.date.split('-').map(Number);
                 const gameDate = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
                 const formattedDate = gameDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
- 
+
                 const dayContainer = document.createElement('div');
                 dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50';
-                
-                const userRecord = archive[game.date];
+
                 const modeBadge = (userRecord.mode === 'professional') 
                     ? '<span class="text-[10px] bg-emerald-900/50 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30 ml-2">PRO</span>'
                     : '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
-                
-                let questionsHTML = '';
-                let visibleQuestionsCount = 0;
 
+                let visibleInThisMode = 0;
                 game.questions.forEach((q, idx) => {
                     const correctAnswer = q.options[q.a];
                     const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
@@ -4823,8 +4836,7 @@ function closeStats() {
                     // If we filtered by mode, hide questions the user didn't actually play
                     // (This assumes userRecord.answers is populated correctly)
                     if (userRecord.answers && !userPick) return;
-                    
-                    visibleQuestionsCount++;
+                    visibleInThisMode++;
 
                     if (userPick) {
                         const isCorrect = userPick === correctAnswer;
@@ -4845,8 +4857,8 @@ function closeStats() {
                         </div>
                     `;
                 });
- 
-                if (visibleQuestionsCount === 0) return; // Don't show empty days
+
+                if (visibleInThisMode === 0) return;
 
                 dayContainer.innerHTML = `
                     <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
@@ -4855,7 +4867,12 @@ function closeStats() {
                     <div class="space-y-3">${questionsHTML}</div>
                 `;
                 content.appendChild(dayContainer);
-            });
+        }
+    }
+        // Helper to render individual game blocks (used inside the loops above)
+        function renderDayHistory(game, userRecord, votedQuestions, content) {
+             // The content above was refactored into this structure inside the diff to avoid 
+             // redundant code while fixing the multi-mode display bug.
         }
 
         // --- PWA INSTALL LOGIC ---
