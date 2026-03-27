@@ -3254,9 +3254,11 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
                     }, { merge: true });
                     localStorage.setItem(syncKey, 'true');
                 }
+                console.log("☁️ Session progress successfully synced to Cloud.");
                 updateHeaderSyncStatus('complete');
             } catch (e) {
-                console.error("Cloud sync failed", e);
+                console.error("❌ Firebase Session Sync Error:", e.code, e.message);
+                console.dir(e);
                 updateHeaderSyncStatus('failed');
             }
         })();
