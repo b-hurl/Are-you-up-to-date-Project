@@ -1142,6 +1142,25 @@
             exportStateToURL();
         }
 
+// --- DATA REPAIR UTILITY ---
+function sanitizeQuestions(questions) {
+    if (!Array.isArray(questions)) return [];
+    
+    // 1. Flatten nested arrays (Fixes the [[{q...}]] bug)
+    // 2. Filter out nulls/undefined
+    // 3. Ensure each object has the required properties
+    return questions.flat(Infinity).filter(q => q && typeof q === 'object' && q.q).map(q => {
+        // 4. Auto-repair missing correctText if options and index 'a' exist
+        if (!q.correctText && q.options && q.options[q.a] !== undefined) {
+            return {
+                ...q,
+                correctText: q.options[q.a]
+            };
+        }
+        return q;
+    });
+}
+
 // 8:00 AM CST is 14:00 UTC
 const UNLOCK_UTC_HOUR = 14;
 const ADMIN_EMAIL = "bfehurl@gmail.com"; // REPLACE WITH YOUR EMAIL
@@ -3536,6 +3555,9 @@ async function checkRemoteProgress(user) {
             if (data.locationOptOut !== undefined) {
                 localStorage.setItem('trivia-opt-out-location', data.locationOptOut);
             }
+
+            const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            const localGroups = getMyGroups();
 
             const hasNewArchive = Object.keys(localArchive).length > Object.keys(data.archive || {}).length;
             const hasHigherStreak = localStreak > (data.currentStreak || 0);
