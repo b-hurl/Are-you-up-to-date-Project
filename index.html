@@ -3382,7 +3382,7 @@ function archiveSession(session) {
 
         const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
 
-        // FIX: Support multiple modes per day in the archive
+        // Fix: Allow multiple modes per day by nesting them
         if (!archive[session.date]) archive[session.date] = {};
         
         archive[session.date][lastMode] = {
@@ -3608,7 +3608,7 @@ async function checkRemoteProgress(user) {
 
             const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
             
-            // FIX: Deep Merge Cloud Archive into Local Storage to prevent overwriting modes
+            // Fix: Deep Merge Cloud Archive into Local Storage at the mode level
             if (data.archive) {
                 const mergedArchive = { ...localArchive };
                 for (const date in data.archive) {
@@ -4765,110 +4765,103 @@ function closeStats() {
             try { archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}'); } catch(e){}
             const votedQuestions = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
 
-            let playedGamesCount = 0;
-
-            games.forEach(game => {
-                const dateRecord = archive[game.date];
-                if (!dateRecord) return;
-
-                // Handle both old format (single object) and new format (object with modes)
-                const modesToRender = [];
-                if (dateRecord.answers || dateRecord.choices) {
-                    modesToRender.push(dateRecord); // Old legacy format
-                } else {
-                    Object.values(dateRecord).forEach(m => modesToRender.push(m)); // New multi-mode format
-                }
-
-                modesToRender.forEach(userRecord => {
-                    const recordMode = userRecord.mode || 'casual';
-                    if (currentHistoryFilter !== 'all' && recordMode !== currentHistoryFilter) return;
-                    
-                    playedGamesCount++;
-                    renderDayHistory(game, userRecord, votedQuestions, content);
-                });
-            });
-
-            if (playedGamesCount === 0) {
-                content.innerHTML = '<p class="text-center text-slate-400 p-8">No games found for this category.</p>';
-            }
-        }
-
-        // Helper to render individual game blocks
-        function renderDayHistory(game, userRecord, votedQuestions, content) {
-            let questionsHTML = '';
-
-            const dateParts = game.date.split('-').map(Number);
-            const gameDate = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
-            const formattedDate = gameDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
-
-            const dayContainer = document.createElement('div');
-            dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50 mb-4';
-
-            const modeBadge = (userRecord.mode === 'professional') 
-                ? '<span class="text-[10px] bg-emerald-900/50 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30 ml-2">PRO</span>'
-                : '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
-
-            let visibleInThisMode = 0;
-            game.questions.forEach((q, idx) => {
-                const correctAnswer = q.options[q.a];
-                const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
+            // Filter games to only include those that have been played and are in the archive.
+            const playedGames = games.filter(game => {
+                const record = archive[game.date];
+                if (!record) return false;
                 
-                const qEncoded = encodeURIComponent(q.q);
-                const existingVote = votedQuestions[q.q];
-                const feedbackBtns = existingVote 
-                    ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
-                    : `
-                    <div class="flex items-center gap-2 inline-flex">
-                        <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
-                        <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
-                    </div>
-                `;
-                 
-                let answerHTML = `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`;
-                let userPick = null;
-                 
-                // Try finding the answer by Question Text first (New Robust Way)
-                if (userRecord.answers && userRecord.answers[q.q] !== undefined) {
-                    userPick = userRecord.answers[q.q];
-                } 
-                // Fallback to Index (Legacy Way) - only if answers map missing
-                else if (!userRecord.answers && userRecord.choices && userRecord.choices[idx]) {
-                    userPick = userRecord.choices[idx];
+                // Filter Logic
+                if (currentHistoryFilter !== 'all') {
+                    const recordMode = record.mode || 'casual'; // Default to casual for legacy data
+                    if (recordMode !== currentHistoryFilter) return false;
                 }
-
-                // If we filtered by mode, hide questions the user didn't actually play
-                if (userRecord.answers && !userPick) return;
-                visibleInThisMode++;
-
-                if (userPick) {
-                    const isCorrect = userPick === correctAnswer;
-                     
-                    if (!isCorrect) {
-                        answerHTML = `
-                            <p class="text-red-400 text-[11px] font-bold mb-1">❌ Your Answer: ${userPick}</p>
-                            <p class="text-emerald-400 text-[11px] font-bold">✅ Correct: ${correctAnswer}</p>
-                        `;
-                    }
-                }
-
-                questionsHTML += `
-                    <div class="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
-                        <p class="text-xs font-bold mb-2 text-slate-300">${q.q}</p>
-                        ${answerHTML}
-                        <div class="mt-2 text-right flex justify-end items-center">${source}${feedbackBtns}</div>
-                    </div>
-                `;
+                return true;
             });
 
-            if (visibleInThisMode === 0) return;
+            if (playedGames.length === 0) {
+                content.innerHTML = '<p class="text-center text-slate-400 p-8">No games found for this category.</p>';
+                return;
+            }
 
-            dayContainer.innerHTML = `
-                <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
-                    ${formattedDate} ${modeBadge}
-                </h3>
-                <div class="space-y-3">${questionsHTML}</div>
-            `;
-            content.appendChild(dayContainer);
+            playedGames.forEach(game => {
+                const dateParts = game.date.split('-').map(Number);
+                const gameDate = new Date(Date.UTC(dateParts[0], dateParts[1] - 1, dateParts[2]));
+                const formattedDate = gameDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' });
+ 
+                const dayContainer = document.createElement('div');
+                dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50';
+                
+                const userRecord = archive[game.date];
+                const modeBadge = (userRecord.mode === 'professional') 
+                    ? '<span class="text-[10px] bg-emerald-900/50 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30 ml-2">PRO</span>'
+                    : '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
+                
+                let questionsHTML = '';
+                let visibleQuestionsCount = 0;
+
+                game.questions.forEach((q, idx) => {
+                    const correctAnswer = q.options[q.a];
+                    const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
+                    
+                    const qEncoded = encodeURIComponent(q.q);
+                    const existingVote = votedQuestions[q.q];
+                    const feedbackBtns = existingVote 
+                        ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
+                        : `
+                        <div class="flex items-center gap-2 inline-flex">
+                            <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
+                            <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
+                        </div>
+                    `;
+                     
+                    let answerHTML = `<p class="text-emerald-400 text-[11px] font-bold">✅ ${correctAnswer}</p>`;
+                    let userPick = null;
+                     
+                    // Try finding the answer by Question Text first (New Robust Way)
+                    if (userRecord.answers && userRecord.answers[q.q] !== undefined) {
+                        userPick = userRecord.answers[q.q];
+                    } 
+                    // Fallback to Index (Legacy Way) - only if answers map missing
+                    else if (!userRecord.answers && userRecord.choices && userRecord.choices[idx]) {
+                        userPick = userRecord.choices[idx];
+                    }
+
+                    // If we filtered by mode, hide questions the user didn't actually play
+                    // (This assumes userRecord.answers is populated correctly)
+                    if (userRecord.answers && !userPick) return;
+                    
+                    visibleQuestionsCount++;
+
+                    if (userPick) {
+                        const isCorrect = userPick === correctAnswer;
+                         
+                        if (!isCorrect) {
+                            answerHTML = `
+                                <p class="text-red-400 text-[11px] font-bold mb-1">❌ Your Answer: ${userPick}</p>
+                                <p class="text-emerald-400 text-[11px] font-bold">✅ Correct: ${correctAnswer}</p>
+                            `;
+                        }
+                    }
+ 
+                    questionsHTML += `
+                        <div class="p-3 bg-slate-800/50 rounded-xl border border-slate-700">
+                            <p class="text-xs font-bold mb-2 text-slate-300">${q.q}</p>
+                            ${answerHTML}
+                            <div class="mt-2 text-right flex justify-end items-center">${source}${feedbackBtns}</div>
+                        </div>
+                    `;
+                });
+ 
+                if (visibleQuestionsCount === 0) return; // Don't show empty days
+
+                dayContainer.innerHTML = `
+                    <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
+                        ${formattedDate} ${modeBadge}
+                    </h3>
+                    <div class="space-y-3">${questionsHTML}</div>
+                `;
+                content.appendChild(dayContainer);
+            });
         }
 
         // --- PWA INSTALL LOGIC ---
