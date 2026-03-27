@@ -1188,8 +1188,10 @@ async function startApp() {
                 showModeSelection(); 
             } 
             else {
-                // It is TODAY'S session, so we restore it
-                gameData = { questions: session.shuffledQuestions };
+                // Restore and FLATTEN to fix any bad data saved in the session
+                gameData = { 
+                    questions: Array.isArray(session.shuffledQuestions) ? session.shuffledQuestions.flat(Infinity) : [] 
+                };
                 currentIdx = session.currentIdx;
                 score = session.score;
                 currentStreak = session.currentStreak || 0;
@@ -3593,7 +3595,10 @@ async function checkRemoteProgress(user) {
                     
                     // Restore global state
                     const s = data.currentSession;
-                    gameData = { questions: s.shuffledQuestions };
+                    // CRITICAL: Flatten cloud data in case Firebase is holding the "bugged" version
+                    gameData = { 
+                        questions: Array.isArray(s.shuffledQuestions) ? s.shuffledQuestions.flat(Infinity) : [] 
+                    };
                     currentIdx = parseInt(s.currentIdx) || 0;
                     score = parseInt(s.score) || 0;
                     currentStreak = parseInt(s.currentStreak) || 0;
