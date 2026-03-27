@@ -1155,10 +1155,11 @@ async function startApp() {
         
         let loadedData = await response.json(); // Use a temporary variable for validation
         
-        // Normalize format (Array vs Object with "questions" key)
+        // Normalize format (Array vs Object with "questions" key) and Flatten
         if (Array.isArray(loadedData)) {
             loadedData = { questions: loadedData };
         }
+        loadedData.questions = loadedData.questions.flat(Infinity);
 
         // Validation: Ensure 'questions' array exists and is valid
         if (!loadedData || !Array.isArray(loadedData.questions) || loadedData.questions.length === 0) {
@@ -1188,10 +1189,16 @@ async function startApp() {
                 showModeSelection(); 
             } 
             else {
-                // Restore and FLATTEN to fix any bad data saved in the session
-                gameData = { 
-                    questions: Array.isArray(session.shuffledQuestions) ? session.shuffledQuestions.flat(Infinity) : [] 
+                // Restore and REPAIR bad data saved in the session
+                const rawQuestions = Array.isArray(session.shuffledQuestions) ? session.shuffledQuestions.flat(Infinity) : [];
+                gameData = {
+                    questions: rawQuestions.map(q => ({
+                        ...q,
+                        // Ensure correctText exists even if the session was saved before the patch
+                        correctText: q.correctText || (q.options && q.options[q.a] ? q.options[q.a] : "")
+                    }))
                 };
+
                 currentIdx = session.currentIdx;
                 score = session.score;
                 currentStreak = session.currentStreak || 0;
@@ -1244,8 +1251,11 @@ function showModeSelection() {
 }
 
 function startNewSession(data, date, mode) {
+    // Fail-safe: Ensure incoming data is flat
+    const flatSource = Array.isArray(data.questions) ? data.questions.flat(Infinity) : [];
+
     // 1. Map the correct answer text to each question BEFORE shuffling
-    const allQuestions = data.questions.map(q => {
+    const allQuestions = flatSource.map(q => {
         return {
             ...q,
             correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
@@ -1297,13 +1307,19 @@ function startNewSession(data, date, mode) {
 
 // Update the renderQuestion to handle the new format
 function renderQuestion() {
-    if (!gameData || !gameData.questions || !gameData.questions[currentIdx]) {
-        console.error("renderQuestion called with invalid state", { gameData, currentIdx });
+    // FINAL DEFENSE: If somehow a nested array or null reached this point, fix it.
+    if (gameData && Array.isArray(gameData.questions)) {
+        gameData.questions = gameData.questions.flat(Infinity);
+    }
+
+    const currentQ = gameData?.questions?.[currentIdx];
+
+    if (!currentQ || typeof currentQ !== 'object' || !currentQ.q) {
+        console.error("CRITICAL: Malformed question detected at index", currentIdx, currentQ);
         showModeSelection(); 
         return;
     }
 
-    const currentQ = gameData.questions[currentIdx];
     document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
     document.getElementById('question-text').innerText = currentQ.q;
     
@@ -3597,10 +3613,15 @@ async function checkRemoteProgress(user) {
                     
                     // Restore global state
                     const s = data.currentSession;
-                    // CRITICAL: Flatten cloud data in case Firebase is holding the "bugged" version
-                    gameData = { 
-                        questions: Array.isArray(s.shuffledQuestions) ? s.shuffledQuestions.flat(Infinity) : [] 
+                    // CRITICAL: Flatten and Repair cloud data in case Firebase is holding the "bugged" version
+                    const rawCloudQuestions = Array.isArray(s.shuffledQuestions) ? s.shuffledQuestions.flat(Infinity) : [];
+                    gameData = {
+                        questions: rawCloudQuestions.map(q => ({
+                            ...q,
+                            correctText: q.correctText || (q.options && q.options[q.a] ? q.options[q.a] : "")
+                        }))
                     };
+
                     currentIdx = parseInt(s.currentIdx) || 0;
                     score = parseInt(s.score) || 0;
                     currentStreak = parseInt(s.currentStreak) || 0;
