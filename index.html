@@ -1156,6 +1156,7 @@ async function startApp() {
         let loadedData = await response.json(); // Use a temporary variable for validation
         
         // Normalize format (Array vs Object with "questions" key) and Flatten
+        // Normalize format (Array vs Object with "questions" key)
         if (Array.isArray(loadedData)) {
             loadedData = { questions: loadedData };
         }
@@ -1165,14 +1166,19 @@ async function startApp() {
         if (!loadedData || !Array.isArray(loadedData.questions) || loadedData.questions.length === 0) {
             throw new Error("Loaded JSON data is empty or malformed.");
         }
+        // Repair the source questions immediately
+        loadedData.questions = sanitizeQuestions(loadedData.questions);
 
         for (const q of loadedData.questions) {
             if (!q || typeof q !== 'object' || !q.q || !Array.isArray(q.options) || q.options.length === 0) {
                 throw new Error("One or more questions in the JSON data are malformed.");
             }
+        if (loadedData.questions.length === 0) {
+            throw new Error("No valid questions found after sanitization.");
         }
 
         freshGameData = loadedData; // Assign to global variable after validation passes
+        freshGameData = loadedData; 
         
         const saved = localStorage.getItem('trivia-session');
         
@@ -1191,12 +1197,14 @@ async function startApp() {
             else {
                 // Restore and REPAIR bad data saved in the session
                 const rawQuestions = Array.isArray(session.shuffledQuestions) ? session.shuffledQuestions.flat(Infinity) : [];
+                // Restore and sanitize session questions
                 gameData = {
                     questions: rawQuestions.map(q => ({
                         ...q,
                         // Ensure correctText exists even if the session was saved before the patch
                         correctText: q.correctText || (q.options && q.options[q.a] ? q.options[q.a] : "")
-                    }))
+                    })),
+                    questions: sanitizeQuestions(session.shuffledQuestions)
                 };
 
                 currentIdx = session.currentIdx;
@@ -1230,7 +1238,9 @@ async function startApp() {
             checkRemoteProgress(auth.currentUser);
         }
         
-    } catch (err) {
+    } 
+    
+}catch (err) {
         console.error("Error loading trivia:", err);
         // If an error occurs during JSON loading or validation, clear local session and reload
         document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
@@ -3615,11 +3625,13 @@ async function checkRemoteProgress(user) {
                     const s = data.currentSession;
                     // CRITICAL: Flatten and Repair cloud data in case Firebase is holding the "bugged" version
                     const rawCloudQuestions = Array.isArray(s.shuffledQuestions) ? s.shuffledQuestions.flat(Infinity) : [];
+                    // Sanitize data coming from the cloud
                     gameData = {
                         questions: rawCloudQuestions.map(q => ({
                             ...q,
                             correctText: q.correctText || (q.options && q.options[q.a] ? q.options[q.a] : "")
-                        }))
+                        })),
+                        questions: sanitizeQuestions(s.shuffledQuestions)
                     };
 
                     currentIdx = parseInt(s.currentIdx) || 0;
