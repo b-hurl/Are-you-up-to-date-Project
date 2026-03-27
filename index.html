@@ -77,7 +77,7 @@
         @keyframes gold-glow { 0%, 100% { text-shadow: 0 0 5px #fcd34d; transform: scale(1); } 50% { text-shadow: 0 0 20px #fbbf24; transform: scale(1.05); } }
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
-        .grand-master-shimmer { background: linear-gradient(90deg, #fbbf24 0%, #fef3c7 50%, #fbbf24 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite; }
+        .grand-master-shimmer { background: linear-gradient(90deg, #fbbf24 0%, #fef3c7 50%, #fbbf24 100%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite; }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .share-btn {
     background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
@@ -1278,7 +1278,7 @@ function startNewSession(data, date, mode) {
 function renderQuestion() {
     if (!gameData || !gameData.questions || !gameData.questions[currentIdx]) {
         console.error("renderQuestion called with invalid state", { gameData, currentIdx });
-        document.getElementById('question-text').classList.add('hidden');
+        showModeSelection(); 
         return;
     }
 
@@ -3531,10 +3531,12 @@ async function checkRemoteProgress(user) {
                     const playedModes = s.playedModes || [];
                     const allDone = playedModes.includes('casual') && playedModes.includes('professional');
 
-                    if (allDone || s.isFinished) {
+                    if (s.isFinished) {
+                        showFinalResults();
+                        archiveSession(s);
+                    } else if (allDone) {
                         showModeSelection();
-                        if (s.isFinished) archiveSession(s);
-                    } else if (!s.isFinished && !isResults) {
+                    } else if (!isResults) {
                         // Resume Game UI
                         document.getElementById('mode-selection').classList.add('hidden');
                         document.getElementById('question-text').classList.remove('hidden');
@@ -3542,19 +3544,20 @@ async function checkRemoteProgress(user) {
                         document.getElementById('score-display').innerText = `Score: ${score}`;
                         renderQuestion();
                     }
+                }
 
-                    // Final UI Refresh now that data is merged and synced
-                    if (!document.getElementById('results-card').classList.contains('hidden')) {
-                        fetchAndDisplayLeaderboard();
-                        checkIfSubmitted();
-                    }
+                // Final UI Refresh now that data is merged and synced
+                if (!document.getElementById('results-card').classList.contains('hidden')) {
+                    fetchAndDisplayLeaderboard();
+                    checkIfSubmitted();
                 }
             }
+        } 
+    }catch (e) {
+            console.error("Remote progress check failed:", e);
+            updateHeaderSyncStatus('failed');
         }
-    } catch (e) {
-        console.error("Remote progress check failed:", e);
-    }
-}
+    } 
 
 async function forceCloudSync() {
     if (!auth || !auth.currentUser) return;
@@ -5101,6 +5104,7 @@ function closeStats() {
             }
         }
     
+        
         
         
 
