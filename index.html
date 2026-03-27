@@ -3629,7 +3629,6 @@ async function checkRemoteProgress(user) {
                     
                     // Restore global state
                     const s = data.currentSession;
-                    // Sanitize data coming from the cloud to repair any "undefined" properties or nested arrays
                     gameData = {
                         questions: sanitizeQuestions(s.shuffledQuestions)
                     };
