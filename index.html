@@ -1159,6 +1159,8 @@
         }
 
 // Helper to ensure keys always match regardless of JSON formatting typos
+// --- UTILITIES ---
+// Use a standard function to ensure hoisting (available everywhere in script)
 function normalizeQKey(str) { return str ? str.replace(/\s+/g, ' ').trim() : ""; }
 
 // --- DATA REPAIR UTILITY ---
