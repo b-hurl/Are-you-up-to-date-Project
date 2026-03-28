@@ -1050,6 +1050,9 @@
             const btn = document.getElementById(`btn-mode-${mode}`);
             if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
 
+    // If they start a new mode, they lose any pending manual sync chance from a previous completion
+    localStorage.removeItem('trivia-manual-sync-available');
+
             // Double check against remote progress if available
             if (remoteUserProgress && remoteUserProgress.lastPlayedDate === getGameDate()) {
                 let pModes = remoteUserProgress.playedModes || [];
@@ -1230,6 +1233,7 @@ async function startApp() {
             if (session.date !== gameDate) {
                 console.log("Old session detected. Clearing for new day...");
                 archiveSession(session);
+                localStorage.removeItem('trivia-manual-sync-available');
                 localStorage.removeItem('trivia-session');
                 window.userChoices = [];
                 updateTheme('casual');
@@ -3385,6 +3389,7 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
 
     if (isFinished) {
         archiveSession(session);
+        localStorage.setItem('trivia-manual-sync-available', 'true');
     }
 }
 
@@ -3684,9 +3689,11 @@ async function checkRemoteProgress(user) {
             const hasHigherBest = localBest > (data.bestStreak || 0);
             const hasDifferentGroups = JSON.stringify(localGroups) !== JSON.stringify(data.groups || []);
 
+            const syncAvailable = localStorage.getItem('trivia-manual-sync-available') === 'true';
+
             const syncBtn = document.getElementById('sync-to-cloud-btn');
             if (syncBtn) {
-                syncBtn.classList.toggle('sync-pulse', hasNewArchive || hasHigherStreak || hasHigherBest || hasDifferentGroups);
+                syncBtn.classList.toggle('sync-pulse', syncAvailable && (hasNewArchive || hasHigherStreak || hasHigherBest || hasDifferentGroups));
             }
 
             // Update the "Last Backed Up" timestamp from cloud metadata
@@ -3822,6 +3829,11 @@ async function checkRemoteProgress(user) {
 async function forceCloudSync() {
     if (!auth || !auth.currentUser) return;
     
+    if (localStorage.getItem('trivia-manual-sync-available') !== 'true') {
+        alert("Manual sync is only available once per mode completion. You have already used your sync for this round or haven't finished one yet!");
+        return;
+    }
+
     const icon = document.getElementById('sync-icon');
     if (icon) icon.classList.add('animate-spin');
     showToast("Backing up local data...", "📤");
@@ -3854,12 +3866,20 @@ async function forceCloudSync() {
         // 3. Re-run core sync logic to refresh local UI/state
         await checkRemoteProgress(auth.currentUser);
         
+        // Consume the sync credit
+        localStorage.removeItem('trivia-manual-sync-available');
+        
         if (!document.getElementById('results-card').classList.contains('hidden')) {
             await fetchAndDisplayLeaderboard();
         }
         
         const syncBtn = document.getElementById('sync-to-cloud-btn');
-        if (syncBtn) syncBtn.classList.remove('sync-pulse');
+        if (syncBtn) {
+            syncBtn.classList.remove('sync-pulse');
+            syncBtn.disabled = true;
+            syncBtn.style.opacity = "0.5";
+            syncBtn.style.cursor = "not-allowed";
+        }
 
         updateHeaderSyncStatus('complete');
         showToast("Backup Successful!", "✅", 2000);
@@ -4037,6 +4057,16 @@ function toggleLoginModal() {
         if (optOutContainer) optOutContainer.classList.toggle('hidden', isGameActive);
         if (cityCheckbox) cityCheckbox.checked = localStorage.getItem('trivia-opt-out-city') === 'true';
         if (provinceCheckbox) provinceCheckbox.checked = localStorage.getItem('trivia-opt-out-province') === 'true';
+
+        // Update Manual Sync button state
+        const syncBtn = document.getElementById('sync-to-cloud-btn');
+        const syncAvailable = localStorage.getItem('trivia-manual-sync-available') === 'true';
+        if (syncBtn) {
+            syncBtn.disabled = !syncAvailable;
+            syncBtn.style.opacity = syncAvailable ? "1" : "0.5";
+            syncBtn.style.cursor = syncAvailable ? "pointer" : "not-allowed";
+            syncBtn.title = syncAvailable ? "Backup your progress to the cloud" : "Complete a mode to enable manual backup";
+        }
 
         modal.classList.remove('hidden');
         setTimeout(() => {
