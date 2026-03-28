@@ -3106,7 +3106,13 @@ async function submitFeedback(encodedQ, type, btn) {
     const qText = normalizeQKey(decodeURIComponent(encodedQ));
     const parent = btn.parentElement;
 
-    // Prevent spamming by checking and saving to localStorage
+    // Update UI immediately to "Thanks" state.
+    // This ensures the buttons disappear even if the vote already exists in localStorage (UI sync).
+    if (parent) {
+        parent.innerHTML = `<span class="text-[10px] text-primary-400 font-bold animate-pulse">Thanks for the feedback!</span>`;
+    }
+
+    // Check if already voted to prevent duplicate database writes
     const votedQuestions = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
     if (votedQuestions[qText]) return;
 
@@ -3396,11 +3402,21 @@ function archiveSession(session) {
             archive[session.date] = {};
         }
         
-        // Migration: If the existing record for this date is in the old "flat" format, move it to its own mode key
+        // Migration: If the existing record for this date is in the old "flat" format, move only that data
         if (archive[session.date].answers || archive[session.date].choices) {
             const oldMode = archive[session.date].mode || 'casual';
-            const oldData = { ...archive[session.date] };
-            archive[session.date] = { [oldMode]: oldData };
+            const oldData = { 
+                answers: archive[session.date].answers, 
+                choices: archive[session.date].choices, 
+                score: archive[session.date].score, 
+                mode: oldMode 
+            };
+            // Clean flat data from top-level to prevent hybrid structure
+            delete archive[session.date].answers;
+            delete archive[session.date].choices;
+            delete archive[session.date].score;
+            delete archive[session.date].mode;
+            archive[session.date][oldMode] = oldData;
         }
 
         archive[session.date][lastMode] = {
