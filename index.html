@@ -4797,12 +4797,12 @@ function closeStats() {
 
                 // Fail-safe: Detect and repair legacy records on the fly
                 const modesToProcess = {};
-                if (rawDateRecord.answers || rawDateRecord.choices) {
+                // 1. Capture nested modes (casual/professional)
+                ['casual', 'professional'].forEach(m => { if (rawDateRecord[m]) modesToProcess[m] = rawDateRecord[m]; });
+                // 2. Fallback: If flat data exists and wasn't already captured in a nested key
+                if ((rawDateRecord.answers || rawDateRecord.choices) && !modesToProcess[rawDateRecord.mode || 'casual']) {
                     modesToProcess[rawDateRecord.mode || 'casual'] = rawDateRecord;
-                } else {
-                    Object.assign(modesToProcess, rawDateRecord);
                 }
-
                 // We iterate through each mode found for this date
                 Object.keys(modesToProcess).forEach(modeKey => {
                     const userRecord = modesToProcess[modeKey];
