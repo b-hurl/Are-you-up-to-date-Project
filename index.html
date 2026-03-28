@@ -3063,6 +3063,8 @@ function renderReview() {
     
     const choices = window.userChoices || [];
     const votedQuestions = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
+    const hasSeenFeedback = localStorage.getItem('trivia-feedback-seen') === 'true';
+    let highlightShown = false;
 
     gameData.questions.forEach((q, i) => {
         const userClickedIdx = choices[i];
@@ -3076,12 +3078,22 @@ function renderReview() {
         const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
         const qEncoded = encodeURIComponent(q.q).replace(/'/g, "%27");
         const existingVote = votedQuestions[qKey];
+        const showHighlight = !hasSeenFeedback && !existingVote && !highlightShown;
+        if (showHighlight) highlightShown = true;
+
         const feedbackBtns = existingVote 
             ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
             : `
-            <div class="flex items-center gap-2 inline-flex">
-                <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
-                <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
+            <div class="flex items-center gap-2 inline-flex relative ${showHighlight ? 'feedback-highlight bg-primary-500/10 px-2 py-1 rounded-lg border border-primary-500/30' : ''}">
+                ${showHighlight ? `
+                    <div class="absolute bottom-full mb-3 right-0 bg-primary-600 text-white text-[9px] font-bold px-3 py-1.5 rounded-xl whitespace-nowrap shadow-2xl animate-bounce">
+                        Help us improve the questions!
+                        <div class="absolute -bottom-1 right-4 w-2 h-2 bg-primary-600 rotate-45"></div>
+                    </div>
+                ` : ''}
+                ${showHighlight ? '<span class="text-[8px] font-black text-primary-400 mr-1 animate-pulse tracking-tighter">NEW: FEEDBACK</span>' : ''}
+                <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="${showHighlight ? 'opacity-100' : 'opacity-30'} hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
+                <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="${showHighlight ? 'opacity-100' : 'opacity-30'} hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
             </div>
         `;
 
@@ -3103,6 +3115,7 @@ function renderReview() {
 }
 
 async function submitFeedback(encodedQ, type, btn) {
+    localStorage.setItem('trivia-feedback-seen', 'true');
     const qText = normalizeQKey(decodeURIComponent(encodedQ));
     const parent = btn.parentElement;
 
@@ -4815,6 +4828,8 @@ function closeStats() {
             let archive = {};
             try { archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}'); } catch(e){}
             const votedQuestions = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
+            const hasSeenFeedback = localStorage.getItem('trivia-feedback-seen') === 'true';
+            let highlightShown = false;
 
             let gamesRendered = 0;
 
@@ -4865,12 +4880,22 @@ function closeStats() {
                         
                         const qEncoded = encodeURIComponent(q.q).replace(/'/g, "%27");
                         const existingVote = votedQuestions[qKey];
+                        const showHighlight = !hasSeenFeedback && !existingVote && !highlightShown;
+                        if (showHighlight) highlightShown = true;
+
                         const feedbackBtns = existingVote 
                             ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
                             : `
-                            <div class="flex items-center gap-2 inline-flex">
-                                <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
-                                <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="opacity-30 hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
+                            <div class="flex items-center gap-2 inline-flex relative ${showHighlight ? 'feedback-highlight bg-primary-500/10 px-2 py-1 rounded-lg border border-primary-500/30' : ''}">
+                                ${showHighlight ? `
+                                    <div class="absolute bottom-full mb-3 right-0 bg-primary-600 text-white text-[9px] font-bold px-3 py-1.5 rounded-xl whitespace-nowrap shadow-2xl animate-bounce">
+                                        Help us improve!
+                                        <div class="absolute -bottom-1 right-4 w-2 h-2 bg-primary-600 rotate-45"></div>
+                                    </div>
+                                ` : ''}
+                                ${showHighlight ? '<span class="text-[8px] font-black text-primary-400 mr-1 animate-pulse tracking-tighter">NEW: FEEDBACK</span>' : ''}
+                                <button onclick="submitFeedback('${qEncoded}', 'up', this)" class="${showHighlight ? 'opacity-100' : 'opacity-30'} hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Good Question">👍</button>
+                                <button onclick="submitFeedback('${qEncoded}', 'down', this)" class="${showHighlight ? 'opacity-100' : 'opacity-30'} hover:opacity-100 transition-opacity hover:scale-110 text-sm" title="Report Issue">👎</button>
                             </div>
                         `;
                         
