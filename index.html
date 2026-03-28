@@ -3119,6 +3119,15 @@ function renderReview() {
 }
 
 async function submitFeedback(encodedQ, type, btn) {
+    const action = type === 'up' ? 'liked' : 'disliked';
+    const commentInput = prompt(`(Optional) Why ${action} this question? (Max 60 characters):`);
+    
+    const trimmedComment = (commentInput || "").trim();
+    if (trimmedComment.length > 60) {
+        alert("Please limit your feedback to 60 characters.");
+        return;
+    }
+
     localStorage.setItem('trivia-feedback-seen', 'true');
     const qText = normalizeQKey(decodeURIComponent(encodedQ));
     const parent = btn.parentElement;
@@ -3152,6 +3161,7 @@ async function submitFeedback(encodedQ, type, btn) {
         await db.collection('feedback').add({
             question: qText,
             vote: type, // 'up' or 'down'
+            comment: trimmedComment || null,
             user: userId || 'anonymous',
             location: userLoc,
             date: getGameDate(),
@@ -5155,9 +5165,12 @@ function closeStats() {
                             ${group.reports.map(report => {
                                 const reportDate = report.timestamp ? new Date(report.timestamp.seconds * 1000).toLocaleString() : report.date;
                                 const loc = report.location ? `[${report.location.country_code || '?'}${report.location.region_code ? '-'+report.location.region_code : ''}] ` : '';
-                                return `<div class="text-xs text-slate-500 flex justify-between items-center">
-                                            <span>${loc}User: ${report.user}</span>
-                                            <span class="font-mono text-[10px]">${reportDate}</span>
+                                return `<div class="text-xs text-slate-500 border-b border-slate-700/30 pb-1 mb-1 last:border-0">
+                                            <div class="flex justify-between items-center">
+                                                <span>${loc}User: ${report.user}</span>
+                                                <span class="font-mono text-[10px]">${reportDate}</span>
+                                            </div>
+                                            ${report.comment ? `<p class="text-slate-400 italic mt-0.5 ml-2 font-serif text-[11px]">"${report.comment}"</p>` : ''}
                                         </div>`;
                             }).join('')}
                         </div>
