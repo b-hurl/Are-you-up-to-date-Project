@@ -4797,13 +4797,15 @@ function closeStats() {
 
                 // Fail-safe: Detect and repair legacy records on the fly
                 const modesToProcess = {};
-                // 1. Capture nested modes (casual/professional) independently
-                ['casual', 'professional'].forEach(m => { 
-                    if (rawDateRecord[m] && typeof rawDateRecord[m] === 'object') modesToProcess[m] = rawDateRecord[m]; 
+                // 1. Scan for nested mode objects (casual/professional)
+                Object.entries(rawDateRecord).forEach(([key, val]) => {
+                    if (val && typeof val === 'object' && (val.answers || val.choices)) {
+                        modesToProcess[key] = val;
+                    }
                 });
                 
-                // 2. Fallback: Only capture top-level data if the specific mode wasn't already found nested
-                if ((rawDateRecord.answers || rawDateRecord.choices) && !modesToProcess[rawDateRecord.mode || 'casual']) {
+                // 2. Fallback: If no nested records found, treat top-level as legacy flat record
+                if (Object.keys(modesToProcess).length === 0 && (rawDateRecord.answers || rawDateRecord.choices)) {
                     modesToProcess[rawDateRecord.mode || 'casual'] = rawDateRecord;
                 }
                 // We iterate through each mode found for this date
