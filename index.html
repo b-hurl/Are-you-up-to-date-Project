@@ -3391,16 +3391,18 @@ function archiveSession(session) {
 
         const lastMode = session.activeMode || 'casual';
 
-        // Ensure date record exists
+        // Ensure the date record exists as an object
         if (!archive[session.date] || typeof archive[session.date] !== 'object') {
             archive[session.date] = {};
         }
-        // Migration: If existing record for today is flat (legacy), wrap it into a mode key
+        
+        // Migration: If the existing record for this date is in the old "flat" format, move it to its own mode key
         if (archive[session.date].answers || archive[session.date].choices) {
             const oldMode = archive[session.date].mode || 'casual';
-            archive[session.date] = { [oldMode]: { ...archive[session.date] } };
+            const oldData = { ...archive[session.date] };
+            archive[session.date] = { [oldMode]: oldData };
         }
-        
+
         archive[session.date][lastMode] = {
             answers: answersMap,
             choices: choicesList,
@@ -4808,13 +4810,13 @@ function closeStats() {
                 // Fail-safe: Detect and repair legacy records on the fly
                 const modesToProcess = {};
                     // 1. Scan for nested modes (casual/professional)
-                    ['casual', 'professional'].forEach(m => { 
-                        if (rawDateRecord[m] && typeof rawDateRecord[m] === 'object') {
-                            modesToProcess[m] = rawDateRecord[m];
+                    Object.entries(rawDateRecord).forEach(([key, val]) => {
+                        if (val && typeof val === 'object' && (val.answers || val.choices)) {
+                            modesToProcess[key] = val;
                         }
                     });
                     
-                    // 2. Fallback: Capture flat data ONLY if no nested modes were found
+                    // 2. Fallback: If no nested modes, treat the top-level as a legacy record
                     if (Object.keys(modesToProcess).length === 0 && (rawDateRecord.answers || rawDateRecord.choices)) {
                         modesToProcess[rawDateRecord.mode || 'casual'] = rawDateRecord;
                     }
