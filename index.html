@@ -3760,18 +3760,18 @@ async function checkRemoteProgress(user) {
                 if (!document.getElementById('results-card').classList.contains('hidden')) {
                     fetchAndDisplayLeaderboard();
                     checkIfSubmitted();
-            }
-            
-            if (!document.getElementById('history-modal').classList.contains('hidden')) {
-                loadHistoryData();
+                }
+                
+                if (!document.getElementById('history-modal').classList.contains('hidden')) {
+                    loadHistoryData();
                 }
             }
-        } 
-    }catch (e) {
-            console.error("Remote progress check failed:", e);
-            updateHeaderSyncStatus('failed');
         }
-    } 
+    } catch (e) {
+        console.error("Remote progress check failed:", e);
+        updateHeaderSyncStatus('failed');
+    }
+}
 
 async function forceCloudSync() {
     if (!auth || !auth.currentUser) return;
@@ -4843,7 +4843,7 @@ function closeStats() {
                             userPick = userRecord.choices[idx];
                         }
 
-                        if (!userPick) return; // Skip questions not part of this mode's session
+                        if (userPick === null || userPick === undefined) return; 
                         visibleQuestions++;
 
                         const isCorrect = userPick === correctAnswer;
