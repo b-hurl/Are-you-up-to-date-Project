@@ -4798,8 +4798,11 @@ function closeStats() {
                 // Fail-safe: Detect and repair legacy records on the fly
                 const modesToProcess = {};
                 // 1. Capture nested modes (casual/professional)
-                ['casual', 'professional'].forEach(m => { if (rawDateRecord[m]) modesToProcess[m] = rawDateRecord[m]; });
-                // 2. Fallback: If flat data exists and wasn't already captured in a nested key
+                ['casual', 'professional'].forEach(m => { 
+                    if (rawDateRecord[m] && typeof rawDateRecord[m] === 'object') modesToProcess[m] = rawDateRecord[m]; 
+                });
+                
+                // 2. Fallback: If flat legacy data exists and wasn't already captured by the nested keys
                 if ((rawDateRecord.answers || rawDateRecord.choices) && !modesToProcess[rawDateRecord.mode || 'casual']) {
                     modesToProcess[rawDateRecord.mode || 'casual'] = rawDateRecord;
                 }
