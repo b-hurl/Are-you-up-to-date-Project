@@ -1164,8 +1164,11 @@ function sanitizeQuestions(questions) {
     
     // 1. Flatten nested arrays (Fixes the [[{q...}]] bug)
     // 2. Filter out nulls/undefined
-    // 3. Ensure each object has the required properties
+    // 3. Normalize whitespace in question text to ensure keys match consistently
     return questions.flat(Infinity).filter(q => q && typeof q === 'object' && q.q).map(q => {
+        // Collapse internal whitespace and trim (e.g. "Who  won?" -> "Who won?")
+        q.q = q.q.replace(/\s+/g, ' ').trim();
+
         // 4. Auto-repair missing correctText if options and index 'a' exist
         if (!q.correctText && q.options && q.options[q.a] !== undefined) {
             return {
@@ -3614,13 +3617,14 @@ async function checkRemoteProgress(user) {
                 const mergedArchive = { ...localArchive };
                 for (const date in data.archive) {
                     const cloudEntry = data.archive[date];
+                    mergedArchive[date] = mergedArchive[date] || {};
+
                     // Normalization: Ensure cloud entry follows the { mode: { ... } } structure
                     if (cloudEntry.answers || cloudEntry.choices) {
                         const mode = cloudEntry.mode || 'casual';
-                        mergedArchive[date] = mergedArchive[date] || {};
                         mergedArchive[date][mode] = cloudEntry;
                     } else {
-                        mergedArchive[date] = { ...(mergedArchive[date] || {}), ...cloudEntry };
+                        mergedArchive[date] = { ...mergedArchive[date], ...cloudEntry };
                     }
                 }
                 localStorage.setItem('trivia-archive', JSON.stringify(mergedArchive));
