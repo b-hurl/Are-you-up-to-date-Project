@@ -3063,7 +3063,7 @@ function renderReview() {
         const userClickedIdx = choices[i];
         const userClickedText = q.options[userClickedIdx];
         const isCorrect = userClickedText === q.correctText;
-        const qKey = q.q.trim();
+        const qKey = normalizeQKey(q.q);
         
         const div = document.createElement('div');
         div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
@@ -3098,7 +3098,7 @@ function renderReview() {
 }
 
 async function submitFeedback(encodedQ, type, btn) {
-    const qText = decodeURIComponent(encodedQ).trim();
+    const qText = normalizeQKey(decodeURIComponent(encodedQ));
     const parent = btn.parentElement;
 
     // Prevent spamming by checking and saving to localStorage
@@ -3617,13 +3617,14 @@ async function checkRemoteProgress(user) {
                 const mergedArchive = { ...localArchive };
                 for (const date in data.archive) {
                     const cloudEntry = data.archive[date];
-                    mergedArchive[date] = mergedArchive[date] || {};
+                    if (!mergedArchive[date]) mergedArchive[date] = {};
 
-                    // Normalization: Ensure cloud entry follows the { mode: { ... } } structure
+                    // If this date entry is in the old flat format, convert it to mode-based
                     if (cloudEntry.answers || cloudEntry.choices) {
-                        const mode = cloudEntry.mode || 'casual';
-                        mergedArchive[date][mode] = cloudEntry;
+                        const legacyMode = cloudEntry.mode || 'casual';
+                        mergedArchive[date][legacyMode] = cloudEntry;
                     } else {
+                        // Deep merge the modes for this date
                         mergedArchive[date] = { ...mergedArchive[date], ...cloudEntry };
                     }
                 }
@@ -4820,7 +4821,7 @@ function closeStats() {
                     let visibleQuestions = 0;
 
                     game.questions.forEach((q, idx) => {
-                        const qKey = q.q.trim();
+                        const qKey = normalizeQKey(q.q);
                         const correctAnswer = q.options[q.a];
                         const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
                         
