@@ -3379,29 +3379,26 @@ function archiveSession(session) {
         // we can still find the specific answer the user gave to a specific question.
         const answersMap = {};
         const choicesList = []; // Keep linear list for legacy safety
-
-        session.shuffledQuestions.forEach((q, i) => {
         const questions = Array.isArray(session.shuffledQuestions) ? session.shuffledQuestions.flat(Infinity) : [];
         questions.forEach((q, i) => {
             let ans = null;
-             if (session.userChoices && session.userChoices[i] !== undefined && session.userChoices[i] !== null) {
+            if (session.userChoices && session.userChoices[i] !== undefined && session.userChoices[i] !== null) {
                 ans = q.options[session.userChoices[i]];
             }
-            if (ans) answersMap[q.q] = ans;
             if (ans) answersMap[normalizeQKey(q.q)] = ans;
             choicesList.push(ans);
         });
 
-        const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
+        const lastMode = session.activeMode || 'casual';
 
-        // Fix: Allow multiple modes per day by nesting them
-        if (!archive[session.date]) archive[session.date] = {};
-        if (!archive[session.date]) {
+        // Ensure date record exists
+        if (!archive[session.date] || typeof archive[session.date] !== 'object') {
             archive[session.date] = {};
-        } else if (archive[session.date].answers || archive[session.date].choices) {
-            // Migrate legacy flat record to its own mode key to avoid hybrid structure
-            const oldData = { ...archive[session.date] };
-            archive[session.date] = { [oldData.mode || 'casual']: oldData };
+        }
+        // Migration: If existing record for today is flat (legacy), wrap it into a mode key
+        if (archive[session.date].answers || archive[session.date].choices) {
+            const oldMode = archive[session.date].mode || 'casual';
+            archive[session.date] = { [oldMode]: { ...archive[session.date] } };
         }
         
         archive[session.date][lastMode] = {
@@ -3412,8 +3409,8 @@ function archiveSession(session) {
         };
         
         localStorage.setItem('trivia-archive', JSON.stringify(archive));
-    })
- } catch (e) { console.error("Archive failed", e); }
+    }
+  catch (e) { console.error("Archive failed", e); }
     
 }
 
@@ -4810,17 +4807,17 @@ function closeStats() {
 
                 // Fail-safe: Detect and repair legacy records on the fly
                 const modesToProcess = {};
-                // 1. Scan for nested mode objects (casual/professional)
-                Object.entries(rawDateRecord).forEach(([key, val]) => {
-                    if (val && typeof val === 'object' && (val.answers || val.choices)) {
-                        modesToProcess[key] = val;
+                    // 1. Scan for nested modes (casual/professional)
+                    ['casual', 'professional'].forEach(m => { 
+                        if (rawDateRecord[m] && typeof rawDateRecord[m] === 'object') {
+                            modesToProcess[m] = rawDateRecord[m];
+                        }
+                    });
+                    
+                    // 2. Fallback: Capture flat data ONLY if no nested modes were found
+                    if (Object.keys(modesToProcess).length === 0 && (rawDateRecord.answers || rawDateRecord.choices)) {
+                        modesToProcess[rawDateRecord.mode || 'casual'] = rawDateRecord;
                     }
-                });
-                
-                // 2. Fallback: If no nested records found, treat top-level as legacy flat record
-                if (Object.keys(modesToProcess).length === 0 && (rawDateRecord.answers || rawDateRecord.choices)) {
-                    modesToProcess[rawDateRecord.mode || 'casual'] = rawDateRecord;
-                }
                 // We iterate through each mode found for this date
                 Object.keys(modesToProcess).forEach(modeKey => {
                     const userRecord = modesToProcess[modeKey];
