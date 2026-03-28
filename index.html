@@ -3381,11 +3381,14 @@ function archiveSession(session) {
         const choicesList = []; // Keep linear list for legacy safety
 
         session.shuffledQuestions.forEach((q, i) => {
+        const questions = Array.isArray(session.shuffledQuestions) ? session.shuffledQuestions.flat(Infinity) : [];
+        questions.forEach((q, i) => {
             let ans = null;
              if (session.userChoices && session.userChoices[i] !== undefined && session.userChoices[i] !== null) {
                 ans = q.options[session.userChoices[i]];
             }
             if (ans) answersMap[q.q] = ans;
+            if (ans) answersMap[normalizeQKey(q.q)] = ans;
             choicesList.push(ans);
         });
 
@@ -3393,6 +3396,13 @@ function archiveSession(session) {
 
         // Fix: Allow multiple modes per day by nesting them
         if (!archive[session.date]) archive[session.date] = {};
+        if (!archive[session.date]) {
+            archive[session.date] = {};
+        } else if (archive[session.date].answers || archive[session.date].choices) {
+            // Migrate legacy flat record to its own mode key to avoid hybrid structure
+            const oldData = { ...archive[session.date] };
+            archive[session.date] = { [oldData.mode || 'casual']: oldData };
+        }
         
         archive[session.date][lastMode] = {
             answers: answersMap,
@@ -3402,8 +3412,11 @@ function archiveSession(session) {
         };
         
         localStorage.setItem('trivia-archive', JSON.stringify(archive));
-    } catch (e) { console.error("Archive failed", e); }
+    })
+ } catch (e) { console.error("Archive failed", e); }
+    
 }
+
 
 async function checkDailyWinnerNotification() {
     // 1. Permissions & Auth Check
