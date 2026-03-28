@@ -1166,8 +1166,8 @@ function sanitizeQuestions(questions) {
     // 2. Filter out nulls/undefined
     // 3. Normalize whitespace in question text to ensure keys match consistently
     return questions.flat(Infinity).filter(q => q && typeof q === 'object' && q.q).map(q => {
-        // Collapse internal whitespace and trim (e.g. "Who  won?" -> "Who won?")
-        q.q = q.q.replace(/\s+/g, ' ').trim();
+        // Use the unified normalization helper
+        q.q = normalizeQKey(q.q);
 
         // 4. Auto-repair missing correctText if options and index 'a' exist
         if (!q.correctText && q.options && q.options[q.a] !== undefined) {
