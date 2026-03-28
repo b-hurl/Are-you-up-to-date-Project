@@ -1158,6 +1158,9 @@
             exportStateToURL();
         }
 
+// Helper to ensure keys always match regardless of JSON formatting typos
+function normalizeQKey(str) { return str ? str.replace(/\s+/g, ' ').trim() : ""; }
+
 // --- DATA REPAIR UTILITY ---
 function sanitizeQuestions(questions) {
     if (!Array.isArray(questions)) return [];

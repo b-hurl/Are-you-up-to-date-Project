@@ -1,0 +1,157 @@
+
+[
+  {
+    "q": "On March 27, 2026, U.S. Secretary of State Marco Rubio met with G7 Foreign Ministers in France and stated that he expects the current military operation in which country to conclude in 'weeks, not months'?",
+    "options": [
+      "Sudan",
+      "Ukraine",
+      "Iran",
+      "Yemen"
+    ],
+    "a": 2,
+    "category": "Politics",
+    "source": "https://www.mirror.co.uk/news/us-news/marco-rubio-warns-uss-iran-36935752"
+  },
+{
+    "q": "On March 27, 2026, the S&P 500 closed out its worst week since the war in Iran began, marking how many consecutive weeks of losses for U.S. markets?",
+    "options": [
+      "Three",
+      "Four",
+      "Five",
+      "Six"
+    ],
+    "a": 2,
+    "category": "Economy",
+    "source": "https://www.cbc.ca/news/business/markets-friday-march-27-9.7144264"
+  },
+  {
+    "q": "Which major international hacking group claimed on March 27, 2026, to have accessed the personal email account of FBI Director Kash Patel, releasing historical photos and documents online?",
+    "options": [
+      "Anonymous",
+      "Handala",
+      "LulzSec",
+      "The Shadow Brokers"
+    ],
+    "a": 1,
+    "category": "Technology",
+    "source": "https://globalnews.ca/news/11749260/kash-patel-iran-hack-account-fbi/"
+  },
+  {
+    "q": "On March 27, 2026, the Canadian government announced that Royal Assent was granted to amendments for which Act, intended to modernize biosecurity oversight for scientific research?",
+    "options": [
+      "The Quarantine Act",
+      "The Human Pathogens and Toxins Act (HPTA)",
+      "The Canada Health Act",
+      "The Environmental Protection Act"
+    ],
+    "a": 1,
+    "category": "Science",
+    "source": "https://www.canada.ca/en/public-health/news/2026/03/government-of-canada-strengthens-oversight-and-security-for-the-handling-of-human-pathogens-and-toxins.html"
+  },
+  {
+    "q": "Which major Canadian city officially made history today, March 27, 2026, by swearing in its first-ever Black female police officer, Constable Desiree Ates?",
+    "options": [
+      "Saskatoon",
+      "Prince Albert",
+      "Regina",
+      "Winnipeg"
+    ],
+    "a": 2,
+    "category": "Politics",
+    "location": {
+      "country": "Canada",
+      "city": "Regina",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.cp24.com/news/canada/2026/03/27/representation-is-important-says-first-black-female-officer-in-regina-police-history/"
+  },
+  {
+    "q": "According to reports on March 27, 2026, a 26-year-old Prince Albert man was charged with attempted murder after allegedly striking an RCMP officer with an SUV in which Saskatchewan community?",
+    "options": [
+      "Meadow Lake",
+      "Melfort",
+      "Shellbrook",
+      "La Ronge"
+    ],
+    "a": 0,
+    "category": "World",
+    "location": {
+      "country": "Canada",
+      "city": "Prince Albert",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.ckom.com/2026/03/27/man-charged-with-attempted-murder-after-allegedly-hitting-mountie-with-suv-in-meadow-lake/"
+  },
+  {
+    "q": "As reported on March 27, 2026, which major Canadian province projected a $13.8 billion deficit in its latest budget while introducing a 30% tax cut for small businesses?",
+    "options": [
+      "British Columbia",
+      "Alberta",
+      "Ontario",
+      "Quebec"
+    ],
+    "a": 2,
+    "category": "Finance",
+    "source": "https://www.bnnbloomberg.ca/investing/market-outlook/2026/03/27/market-outlook-ontario-deficit-hits-138b-as-tax-cuts-expand/"
+  },
+{
+    "q": "On March 27, 2026, which veteran character actor, beloved for his roles as the hard-nosed Vice Principal Strickland in 'Back to the Future' and Stinger in 'Top Gun', was reported to have passed away at age 94?",
+    "options": [
+      "Thomas F. Wilson",
+      "James Tolkan",
+      "Crispin Glover",
+      "Michael Ironside"
+    ],
+    "a": 1,
+    "category": "Entertainment",
+    "source": "https://www.livenowfox.com/news/james-tolkan-dies-actor-back-to-the-future-top-gun"
+  },
+{
+  "q": "According to massive leaks from prominent insider NateTheHate on March 27, 2026, which legendary Nintendo 64 title is reportedly receiving a 'from the ground up' remake for the Switch 2 holiday lineup?",
+  "options": [
+    "Super Mario 64",
+    "The Legend of Zelda: Ocarina of Time",
+    "GoldenEye 007",
+    "Star Fox 64"
+  ],
+  "a": 1,
+  "category": "Gaming",
+  "source": "https://www.gamesradar.com/games/the-legend-of-zelda/the-legend-of-zelda-ocarina-of-time-remake-could-be-launching-this-year-on-switch-2-prominent-nintendo-leaker-claims-but-dont-expect-a-new-3d-mario-until-2027/"
+},
+  {
+    "q": "Which K-pop boy group was featured on Rolling Stone's 'Future 25' list on March 27, 2026, and is currently holding a three-day fan meeting in Seoul at the Ticketlink Live Arena?",
+    "options": [
+      "Stray Kids",
+      "TWS",
+      "RIIZE",
+      "ZEROBASEONE"
+    ],
+    "a": 1,
+    "category": "Music",
+    "source": "https://www.koreatimes.co.kr/entertainment/k-pop/20260327/tws-lands-on-rolling-stones-future-25-set-for-seoul-fan-meeting-this-week"
+  },
+  {
+    "q": "On March 27, 2026, which college basketball star set a new NCAA all-time sophomore scoring record with 892 points while leading the Vanderbilt Commodores into the Sweet 16?",
+    "options": [
+      "JuJu Watkins",
+      "Mikayla Blakes",
+      "Hannah Hidalgo",
+      "MiLaysia Fulwiley"
+    ],
+    "a": 1,
+    "category": "Sports",
+    "source": "https://vucommodores.com/set-for-the-sweet-16/"
+  },
+  {
+    "q": "As reported by TMZ on March 27, 2026, which actor was spotted walking arm-in-arm with his girlfriend in L.A. following a viral video of an intense public argument between them in Rome?",
+    "options": [
+      "Ezra Miller",
+      "Shia LaBeouf",
+      "Jonathan Majors",
+      "Miles Teller"
+    ],
+    "a": 1,
+    "category": "Celebrity",
+    "source": "https://www.tmz.com/2026/03/27/shia-labeouf-is-seen-with-girlfriend-after-public-argument/"
+  }
+]
