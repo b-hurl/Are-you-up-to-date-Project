@@ -3074,7 +3074,7 @@ function renderReview() {
         div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
         
         const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
-        const qEncoded = encodeURIComponent(q.q);
+        const qEncoded = encodeURIComponent(q.q).replace(/'/g, "%27");
         const existingVote = votedQuestions[qKey];
         const feedbackBtns = existingVote 
             ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
@@ -4863,7 +4863,7 @@ function closeStats() {
                         const correctAnswer = q.options[q.a];
                         const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
                         
-                        const qEncoded = encodeURIComponent(q.q);
+                        const qEncoded = encodeURIComponent(q.q).replace(/'/g, "%27");
                         const existingVote = votedQuestions[qKey];
                         const feedbackBtns = existingVote 
                             ? `<span class="text-[10px] text-primary-400 font-bold">Thanks for the feedback!</span>`
@@ -5082,7 +5082,7 @@ function closeStats() {
                     const docIds = group.reports.map(r => r.id);
                     const docIdsString = JSON.stringify(docIds);
                     const detailsId = `details-${index}`;
-                    const qEncoded = encodeURIComponent(group.question);
+                    const qEncoded = encodeURIComponent(group.question).replace(/'/g, "%27");
                     
                     div.innerHTML = `
                         <div class="flex justify-between items-start mb-2 gap-4">
