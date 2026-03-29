@@ -1,0 +1,173 @@
+[
+  {
+    "q": "On March 28, 2026, the federal and Saskatchewan governments announced $15.6 million in joint funding to provide relief for workers and employers in which specific economic sector?",
+    "options": [
+      "Potash and uranium mining",
+      "Tariff-affected industries",
+      "Specialty coffee roasting",
+      "Small-scale software development"
+    ],
+    "a": 1,
+    "category": "Economy",
+    "source": "https://www.cjme.com/2026/03/28/feds-province-announce-15-6-million-in-saskatchewan-tariff-relief/"
+  },
+  {
+    "q": "Which major Saskatchewan city became the site of a protest on March 28, 2026, where residents organized a letter-writing campaign against a proposed large-scale AI data centre?",
+    "options": [
+      "Saskatoon",
+      "Prince Albert",
+      "Moose Jaw",
+      "Regina"
+    ],
+    "a": 3,
+    "category": "Politics",
+    "source": "https://www.ctvnews.ca/saskatoon/regina/article/regina-residents-against-ai-data-centre-start-letter-writing-campaign/"
+  },
+  {
+    "q": "In a study published by Chiba University on March 28, 2026, scientists announced a breakthrough in carbon capture using a new material that can release CO2 at temperatures below what threshold?",
+    "options": [
+      "60°C",
+      "100°C",
+      "150°C",
+      "200°C"
+    ],
+    "a": 0,
+    "category": "Science",
+    "source": "https://www.sciencedaily.com/releases/2026/03/260328043549.htm"
+  },
+  {
+    "q": "New health research released on March 28, 2026, has linked which common sugar substitute—often found in keto snacks and diet drinks—to an increased risk of stroke and brain blood vessel damage?",
+    "options": [
+      "Stevia",
+      "Erythritol",
+      "Aspartame",
+      "Xylitol"
+    ],
+    "a": 1,
+    "category": "Health",
+    "source": "https://www.sciencedaily.com/releases/2026/03/260328065333.htm"
+  },
+  {
+    "q": "Following a tense week of debate, the Saskatchewan Legislature officially passed the provincial budget on March 28, 2026. What is the projected deficit for this fiscal year?",
+    "options": [
+      "$250 million",
+      "$485 million",
+      "$819 million",
+      "$1.2 billion"
+    ],
+    "a": 2,
+    "category": "Finance",
+    "source": "https://www.620ckrm.com/2026/03/28/budget-passes-after-a-tense-week-at-the-legislature/"
+  },
+
+{
+    "q": "On March 28, 2026, which legendary rock band celebrated the 60th anniversary of their first-ever compilation album, 'Big Hits (High Tide and Green Grass)'?",
+    "options": [
+      "The Beatles",
+      "The Rolling Stones",
+      "The Who",
+      "The Kinks"
+    ],
+    "a": 1,
+    "category": "Music",
+    "source": "https://www.noise11.com/news/rolling-stones-big-hits-high-tide-and-green-grass-60th-anniversary-20260328"
+  },
+  {
+    "q": "According to reports on March 28, 2026, Microsoft is allegedly working on a new Xbox Game Pass tier codenamed 'TRITON' that would feature what specific content?",
+    "options": [
+      "Indie games only",
+      "First-party games only",
+      "Cloud-streaming only",
+      "Retro games only"
+    ],
+    "a": 1,
+    "category": "Gaming",
+    "source": "https://tech4gamers.com/xbox-game-pass-first-party/"
+  },
+  {
+    "q": "Which 2025 World Series runner-up team turned to newly signed free-agent pitcher Dylan Cease for his debut start on March 28, 2026?",
+    "options": [
+      "New York Yankees",
+      "Toronto Blue Jays",
+      "Los Angeles Dodgers",
+      "San Diego Padres"
+    ],
+    "a": 1,
+    "category": "Sports",
+    "source": "https://fieldlevelmedia.com/mlb/fresh-off-late-rally-jays-turn-to-dylan-cease-in-rematch-vs-as/"
+  },
+  {
+    "q": "On March 28, 2026, which pop star broke her silence on social media for the first time since her March 5 arrest for suspicion of driving under the influence?",
+    "options": [
+      "Madonna",
+      "Britney Spears",
+      "Christina Aguilera",
+      "Jessica Simpson"
+    ],
+    "a": 1,
+    "category": "Celebrity",
+    "source": "https://www.ladbible.com/entertainment/celebrity/britney-spears-dui-arrest-social-media-post-530146-20260328"
+  },
+  {
+    "q": "Which Hideo Kojima-directed title reportedly crossed 2 million sales on March 28, 2026, following a highly successful port to Steam?",
+    "options": [
+      "Death Stranding 2",
+      "Physint",
+      "OD",
+      "Metal Gear Solid Delta"
+    ],
+    "a": 0,
+    "category": "Gaming",
+    "source": "https://tech4gamers.com/death-stranding-2-crosses-2-million-sales/"
+  },
+  {
+    "q": "On March 28, 2026, the Alberta provincial government confirmed a record investment in which sector, including a $3.5-million increase for the Alberta Foundation for the Arts?",
+    "options": [
+      "Renewable energy",
+      "Arts and culture",
+      "Agricultural technology",
+      "Artificial intelligence"
+    ],
+    "a": 1,
+    "category": "Economy",
+    "location": {
+      "country": "Canada",
+      "city": "Calgary",
+      "region": "Alberta"
+    },
+    "source": "https://calgarysun.com/news/provincial-budget-record-level-funding-alberta-arts"
+  },
+{
+    "q": "On March 28, 2026, Alberta Premier Danielle Smith used her radio program 'Your Province, Your Premier' to clarify that 'Alberta stays' in Canada, reacting to a separation petition promoted by which UCP MLA?",
+    "options": [
+      "Jason Nixon",
+      "Jason Stephan",
+      "Devin Dreeshen",
+      "Adriana LaGrange"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "location": {
+      "country": "Canada",
+      "region": "Alberta"
+    },
+    "source": "https://www.ctvnews.ca/calgary/article/danielle-smith-reacts-to-ucp-mla-op-ed-inviting-signatures-for-separation-referendum/"
+  },
+{
+    "q": "On March 28, 2026, Environment Canada issued a special weather statement for Calgary and southern Alberta, warning of 15 to 25 centimetres of snow along which major highway corridor?",
+    "options": [
+      "Highway 63 (Fort McMurray)",
+      "Highway 1 and Highway 2",
+      "The Yellowhead Highway",
+      "Highway 3 (Crowsnest Pass)"
+    ],
+    "a": 1,
+    "category": "Weather",
+    "location": {
+      "country": "Canada",
+      "city": "Calgary",
+      "region": "Alberta"
+    },
+    "source": "https://calgary.citynews.ca/2026/03/28/special-weather-statement-issued-for-calgary-with-snowy-sunday-expected/"
+  }
+]
