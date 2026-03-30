@@ -1,0 +1,172 @@
+[
+  {
+    "q": "On March 29, 2026, which Canadian political figure was officially named the new leader of the federal NDP following a convention in Winnipeg?",
+    "options": [
+      "Naheed Nenshi",
+      "Avi Lewis",
+      "Sarah Jama",
+      "Jagmeet Singh"
+    ],
+    "a": 1,
+    "category": "Politics",
+    "source": "https://panow.com/2026/03/29/the-ndps-next-leader-to-be-announced-as-winnipeg-convention-concludes/"
+  },
+  {
+    "q": "Environment Canada issued a special weather statement today, March 29, 2026, for a late-season snowstorm. Which two Saskatchewan cities are forecast to be in the path of the heaviest snow bands?",
+    "options": [
+      "Saskatoon and Prince Albert",
+      "Moose Jaw and Regina",
+      "Swift Current and Estevan",
+      "Yorkton and Melville"
+    ],
+    "a": 1,
+    "category": "Weather",
+    "location": {
+      "country": "Canada",
+      "city": "Regina",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.discovermoosejaw.com/articles/moose-jaw-regina-in-path-of-heaviest-band-of-spring-snowstorm"
+  },
+  {
+    "q": "Saskatchewan RCMP reported on March 29, 2026, that two people were killed in a collision on Highway 39 after a truck fled from a police traffic stop in which city?",
+    "options": [
+      "Weyburn",
+      "Estevan",
+      "Humboldt",
+      "Melfort"
+    ],
+    "a": 1,
+    "category": "World",
+    "location": {
+      "country": "Canada",
+      "region": "Saskatchewan"
+    },
+    "source": "https://www.ctvnews.ca/regina/article/two-dead-after-truck-fleeing-estevan-police-crashes-on-sask-highway/"
+  },
+  {
+    "q": "In Calgary news on March 29, 2026, police closed a northeast intersection after a 'suspicious object' was discovered in which local park?",
+    "options": [
+      "Nose Hill Park",
+      "Bowness Park",
+      "Nose Creek Park",
+      "Confederation Park"
+    ],
+    "a": 2,
+    "category": "World",
+    "location": {
+      "country": "Canada",
+      "city": "Calgary",
+      "region": "Alberta"
+    },
+    "source": "https://www.ctvnews.ca/calgary/article/police-close-northeast-intersection-after-suspicious-object-found-in-nose-creek-park/"
+  },
+  {
+    "q": "On March 29, 2026, Canadian Minister of International Trade Maninder Sidhu concluded meetings in Cameroon with representatives from which major trade bloc to discuss a new free trade agreement?",
+    "options": [
+      "EU",
+      "ASEAN",
+      "Mercosur",
+      "AU"
+    ],
+    "a": 2,
+    "category": "Economy",
+    "source": "https://www.canada.ca/en/global-affairs/news/2026/03/minister-sidhu-meets-with-brazils-minister-of-foreign-affairs.html"
+  },
+  {
+    "q": "The federal government announced a $900 million investment on March 29, 2026, as part of a new National Defence Industrial Strategy focusing on which emerging technology?",
+    "options": [
+      "Deep-sea mining",
+      "Quantum innovation",
+      "Small modular reactors",
+      "Hydrogen fuel cells"
+    ],
+    "a": 1,
+    "category": "Economy",
+    "source": "https://www.westcentralonline.com/articles/canada-investing-900m-in-defence-strategy-to-boost-innovation-economy"
+  },
+  {
+    "q": "In Toronto on March 29, 2026, hundreds of activists gathered for the triennial International Women's Conference of which major North American industrial union?",
+    "options": [
+      "Unifor",
+      "United Steelworkers (USW)",
+      "Public Service Alliance of Canada (PSAC)",
+      "Teamsters Canada"
+    ],
+    "a": 1,
+    "category": "Economy",
+    "source": "https://usw.ca/iwc-2026-advisory/"
+  },
+  {
+    "q": "Immigration, Refugees and Citizenship Canada (IRCC) confirmed on March 29, 2026, that application fees for most economic-class permanent resident streams will increase by what average percentage on April 30?",
+    "options": [
+      "5 per cent",
+      "8 per cent",
+      "12 per cent",
+      "15 per cent"
+    ],
+    "a": 2,
+    "category": "Economy",
+    "source": "https://www.visahq.com/news/2026-03-29/ca/ircc-confirms-permanent-resident-application-fees-will-jump-12-on-april-30/"
+  },
+  {
+    "q": "On March 29, 2026, which K-pop group's comeback album 'ARIRANG' officially debuted at No. 1 on the Billboard 200, marking their first full-group release in seven years?",
+    "options": [
+      "Stray Kids",
+      "SEVENTEEN",
+      "BTS",
+      "EXO"
+    ],
+    "a": 2,
+    "category": "Music",
+    "source": "https://www.justjared.com/2026/03/29/bts-arirang-debuts-at-no-1-on-billboard-chart-break-their-own-record-for-biggest-album-debut-in-us/"
+  },
+  {
+    "q": "During the 2026 Formula 1 Japanese Grand Prix on March 29, which TGR Haas F1 driver was involved in a high-speed crash into the wall at 50Gs after taking avoiding action?",
+    "options": [
+      "Franco Colapinto",
+      "Ollie Bearman",
+      "Liam Lawson",
+      "Jack Doohan"
+    ],
+    "a": 1,
+    "category": "Sports",
+    "source": "https://www.justjared.com/2026/03/29/f1-driver-ollie-bearman-speaks-out-after-scary-crash-during-japanese-grand-prix/"
+  },
+  {
+    "q": "Which gaming company faced significant online backlash on March 29, 2026, after laying off a senior developer who was battling terminal brain cancer?",
+    "options": [
+      "Ubisoft",
+      "Epic Games",
+      "Activision Blizzard",
+      "Electronic Arts"
+    ],
+    "a": 1,
+    "category": "Gaming",
+    "source": "https://tech4gamers.com/epic-laying-off-developer-with-cancer/"
+  },
+  {
+    "q": "In an interview with TMZ on March 29, 2026, which veteran actor credited 'years of therapy' for helping him return to the industry after past controversies and a potential eviction?",
+    "options": [
+      "Nicolas Cage",
+      "Mickey Rourke",
+      "Charlie Sheen",
+      "Mel Gibson"
+    ],
+    "a": 1,
+    "category": "Celebrity",
+    "source": "https://www.blasttheradio.com/news/the-blast/mickey-rourke-slammed-by-therapist-following-recent-controversy-no-accountability-or-concern/"
+  },
+  {
+    "q": "According to a March 29, 2026 update, which MLB team signed star second baseman Nico Hoerner to a $141 million extension that included a mandatory full no-trade clause?",
+    "options": [
+      "New York Yankees",
+      "Chicago Cubs",
+      "Toronto Blue Jays",
+      "Los Angeles Dodgers"
+    ],
+    "a": 1,
+    "category": "Sports",
+    "source": "https://heavy.com/sports/mlb/chicago-cubs/deal-nico-hoerner-receives-interesting-update/"
+  }
+]
