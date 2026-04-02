@@ -1,0 +1,50 @@
+name: Daily Trivia Update
+
+on:
+  schedule:
+    # This runs at 13:30 UTC (7:30 AM CST / 8:30 AM EST) every day
+    - cron: '30 13 * * *'
+  workflow_dispatch:
+    # This adds a "Run workflow" button in the GitHub Actions tab for manual testing
+
+jobs:
+  generate-and-mix:
+    runs-on: ubuntu-latest
+    
+    # Critical: This allows the action to push the generated JSON files back to your repo
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          # This caches your npm dependencies so it runs faster next time
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install @google/generative-ai axios
+
+      - name: Generate Raw Categories
+        # This script creates the individual files (tech.json, science.json, etc.)
+        run: node generate-trivia.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: Create Casual & Professional Mixes
+        # This script combines them into the 10-question "Mix" files
+        run: node combine-trivia.js
+
+      - name: Commit and Push Changes
+        # This part detects the new .json files and saves them to your repo
+        run: |
+          git config --global user.name 'TriviaBot'
+          git config --global user.email 'bot@trivia-app.com'
+          git add questions/*.json
+          # We use "|| exit 0" so the action doesn't fail if there are no new questions today
+          git commit -m "Daily Trivia Update: $(date +'%Y-%m-%d')" || exit 0
+          git push
