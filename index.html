@@ -1257,7 +1257,7 @@
                 if (isLegacy) {
                     updateTheme(mode);
                 } else {
-                    updateTheme('casual'); // Default theme for single category selection
+                    updateTheme(mode); // Use the selected category for the theme
                 }
                 startNewSession(modeData, getGameDate(), mode);
             } catch (e) {
@@ -1445,6 +1445,7 @@ function renderQuestion() {
     }
 
     document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
+    console.log("Current Question Category:", currentQ.category); // Added for debugging
     document.getElementById('question-text').innerText = currentQ.q;
     
     const catDisplay = document.getElementById('category-display');
