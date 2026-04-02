@@ -51,6 +51,7 @@
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="GameSettings.jsx"></script>
 
     <style>
         :root {
@@ -868,12 +869,17 @@
         }
 
         function renderGameSettings() {
+            if (!window.GameSettings) {
+                // Babel transpilation takes time; retry if component isn't ready yet
+                setTimeout(renderGameSettings, 50);
+                return;
+            }
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             const playedModes = session.playedModes || [];
             
             const root = ReactDOM.createRoot(document.getElementById('game-settings-root'));
             root.render(
-                React.createElement(GameSettings, {
+                React.createElement(window.GameSettings, {
                     currentConfig: gameConfig,
                     onUpdate: handleConfigUpdate,
                     playedModes: playedModes

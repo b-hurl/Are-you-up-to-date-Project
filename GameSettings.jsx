@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
 const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
+    const { useState, useEffect } = React;
     const [gameMode, setGameMode] = useState(currentConfig?.gameMode || null); // 'solo' or 'multiplayer'
     const [soloSubMode, setSoloSubMode] = useState(currentConfig?.soloSubMode || null); // 'gauntlet' or 'categories'
     const [gauntletMode, setGauntletMode] = useState(currentConfig?.gauntletMode || null); // 'casual' or 'professional'
@@ -195,4 +194,5 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
     );
 };
 
-export default GameSettings;
+// Attach to window for global access in index.html
+window.GameSettings = GameSettings;
