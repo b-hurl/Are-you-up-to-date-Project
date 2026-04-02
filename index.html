@@ -1322,130 +1322,89 @@ function getGameDate() {
 }
 
 async function startApp() {
-    const gameDate = getGameDate(); // e.g., "2026-03-12"
-    console.log("Attempting to load trivia for date:", gameDate);
+    const gameDate = getGameDate();
+    console.log("Initializing app for date:", gameDate);
     checkGlobalMessage();
     checkMaintenanceMode();
     determineUserLocation(); // Trigger background location check
     startNextTimer(); // Start global countdown immediately
     
-       try {
-        const response = await fetch(`${gameDate}.json?v=${Date.now()}`);
-        if (!response.ok) throw new Error(`Failed to load ${gameDate}.json`);
+    const saved = localStorage.getItem('trivia-session');
+    
+    if (saved) {
+        const session = JSON.parse(saved);
         
-        const rawData = await response.json();
-        
-        // Normalize format and sanitize immediately
-        const questions = Array.isArray(rawData) ? rawData : (rawData.questions || []);
-        freshGameData = { questions: sanitizeQuestions(questions) };
-
-        if (freshGameData.questions.length === 0) {
-            throw new Error("No valid questions found after sanitization.");
-        }
-        
-        const saved = localStorage.getItem('trivia-session');
-        
-        if (saved) {
-            const session = JSON.parse(saved);
-            
-            if (session.date !== gameDate) {
-                console.log("Old session detected. Clearing for new day...");
-                archiveSession(session);
-                localStorage.removeItem('trivia-manual-sync-available');
-                localStorage.removeItem('trivia-session');
-                window.userChoices = [];
-                updateTheme('casual');
-                showModeSelection(); 
-            }
-            else {
-                // Restore today's saved session and sanitize it
-                gameData = {
-                    questions: sanitizeQuestions(session.shuffledQuestions)
-                };
-
-                currentIdx = session.currentIdx;
-                score = session.score;
-                currentStreak = session.currentStreak || 0;
-                window.userChoices = session.userChoices || [];
-                selectedIdx = session.selectedIdx ?? null;
-                
-                const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
-                updateTheme(lastMode);
-
-                if (session.isFinished) {
-                    showFinalResults();
-                    return;
-                }
-                
-                document.getElementById('score-display').innerText = `Score: ${score}`;
-                document.getElementById('game-header').classList.remove('hidden');
-                document.getElementById('question-text').classList.remove('hidden');
-                renderQuestion();
-            }
-        } else {
+        if (session.date !== gameDate) {
+            console.log("Old session detected. Archiving and clearing for new day...");
+            archiveSession(session);
+            localStorage.removeItem('trivia-manual-sync-available');
+            localStorage.removeItem('trivia-session');
+            window.userChoices = [];
             updateTheme('casual');
-            showModeSelection();
+            // The main menu is already rendered by renderGameSettings() and showModeSelection()
+        } else {
+            // Restore today's saved session
+            gameData = {
+                questions: sanitizeQuestions(session.shuffledQuestions)
+            };
+
+            currentIdx = session.currentIdx;
+            score = session.score;
+            currentStreak = session.currentStreak || 0;
+            window.userChoices = session.userChoices || [];
+            selectedIdx = session.selectedIdx ?? null;
+            
+            const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
+            updateTheme(lastMode);
+
+            if (session.isFinished) {
+                showFinalResults();
+                return;
+            }
+            
+            // Resume game UI
+            document.getElementById('game-settings-root').classList.add('hidden'); // Hide React menu
+            document.getElementById('score-display').innerText = `Score: ${score}`;
+            document.getElementById('game-header').classList.remove('hidden');
+            document.getElementById('question-text').classList.remove('hidden');
+            renderQuestion();
         }
-        
-        if (auth && auth.currentUser) {
-            checkRemoteProgress(auth.currentUser);
-        }
-    } catch (err) {
-        console.error("Error loading trivia:", err);
-        localStorage.removeItem('trivia-session');
-        document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
-        document.getElementById('question-text').classList.remove('hidden');
+    } else {
+        // No saved session, just show the main menu (already rendered by renderGameSettings() and showModeSelection())
+        updateTheme('casual');
+    }
+    
+    if (auth && auth.currentUser) {
+        checkRemoteProgress(auth.currentUser);
     }
 }
 
 
 
 function showModeSelection() {
-    document.getElementById('mode-selection').classList.remove('hidden');
+    const settingsRoot = document.getElementById('game-settings-root');
+    if (settingsRoot) settingsRoot.classList.remove('hidden');
+    
     document.getElementById('question-text').classList.add('hidden');
     document.getElementById('game-header').classList.add('hidden');
     document.getElementById('options-container').innerHTML = '';
 
-    checkLegacyMode();
-    refreshModeSelectionUI();
     renderGameSettings();
 }
 
 function startNewSession(data, date, mode) {
-    // Fail-safe: Ensure incoming data is flat
-    const flatSource = Array.isArray(data.questions) ? data.questions.flat(Infinity) : [];
-
-    // 1. Map the correct answer text to each question BEFORE shuffling
-    const allQuestions = flatSource.map(q => {
-        return {
-            ...q,
-            correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
-        };
-    });
-
-    // 2. Select up to 5 questions, prioritizing regional ones (if they passed the filter)
-    const regional = allQuestions.filter(q => q.location);
-    const standard = allQuestions.filter(q => !q.location);
-
-    // Shuffle source arrays for variety
-    shuffle(regional);
-    shuffle(standard);
-
-    let selectedQuestions = [...regional];
-
-    // Fill remaining spots with standard questions
-    const remainingSlots = 5 - selectedQuestions.length;
-    if (remainingSlots > 0) {
-        selectedQuestions = selectedQuestions.concat(standard.slice(0, remainingSlots));
-    }
-
-    // 3. Shuffle the final set so regional questions are mixed in randomly (not just at top)
-    // and hard cap to 5 questions per day
+    // data.questions should already be the final, filtered, and correctly sized list
+    // from loadGauntletTrivia or loadCategoryTrivia.
     gameData = {
-        questions: shuffle(selectedQuestions.slice(0, 5))
+        questions: data.questions.map(q => {
+            return {
+                ...q,
+                correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
+            };
+        })
     };
 
-    // 4. Shuffle options for all questions
+    // Shuffle options for all questions
     gameData.questions.forEach(q => {
         if (q.options && Array.isArray(q.options)) {
             q.options = shuffle([...q.options]);
@@ -1621,8 +1580,9 @@ function confirmAnswer() {
         }
     }, transitionDelay);
 }
+
 function showFinalResults() {
-// Force the UI to switch to results mode
+    // Force the UI to switch to results mode
     document.body.classList.add('dimmed');
     document.getElementById('main-card').classList.add('hidden');
     document.getElementById('game-header').classList.add('hidden'); // Hide the score/progress bar
@@ -3945,7 +3905,7 @@ async function checkRemoteProgress(user) {
                 }
 
                 // Final UI Refresh now that data is merged and synced
-                if (!document.getElementById('results-card').classList.contains('hidden')) {
+            if (!document.getElementById('results-card').classList.contains('hidden') && !isCategoryPlay) { // Only refresh leaderboard if not solo category/gauntlet
                     fetchAndDisplayLeaderboard();
                     checkIfSubmitted();
                 }
