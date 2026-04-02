@@ -174,8 +174,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
                                     : 'border-gray-200 hover:border-blue-300'
                             }`}
                         >
-                            <span className="block font-bold text-sm capitalize">{category}</span>
-                            <span className="text-[10px] text-gray-500">{isPlayed ? 'Completed' : '5 Questions'}</span>
+                            <span className="block font-bold text-base capitalize leading-tight mb-1">{category}</span>
+                            <span className="text-[10px] text-gray-500 block">{isPlayed ? 'Completed' : '5 Daily Questions'}</span>
                         </button>
                     );
                 })}

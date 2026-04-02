@@ -981,18 +981,14 @@
         function updateTheme(mode) { // mode here can be 'casual', 'professional', or a category name
             const body = document.body;
             const modeIcon = document.getElementById('mode-icon');
-            if (mode === 'professional') {
-                body.classList.add('theme-professional');
-                if (modeIcon) { // This icon might be removed or changed with new UI
-                    modeIcon.innerText = '💼';
-                    modeIcon.setAttribute('title', 'Professional Mode');
-                }
-            } else {
-                body.classList.remove('theme-professional');
-                if (modeIcon) {
-                    modeIcon.innerText = '🎮';
-                    modeIcon.setAttribute('title', 'Casual Mode');
-                }
+            
+            const isPro = mode === 'professional';
+            body.classList.toggle('theme-professional', isPro);
+
+            if (modeIcon) {
+                modeIcon.innerText = isPro ? '💼' : '🎮';
+                const displayName = mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : "Trivia";
+                modeIcon.setAttribute('title', `${displayName} Mode`);
             }
         }
         // The old updateTheme function is now less relevant as the UI is handled by React.
