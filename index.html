@@ -1326,7 +1326,6 @@ async function startApp() {
     console.log("Attempting to load trivia for date:", gameDate);
     checkGlobalMessage();
     checkMaintenanceMode();
-    checkLegacyMode();
     determineUserLocation(); // Trigger background location check
     startNextTimer(); // Start global countdown immediately
     
@@ -1357,8 +1356,8 @@ async function startApp() {
                 window.userChoices = [];
                 updateTheme('casual');
                 showModeSelection(); 
-            } 
-          else {
+            }
+            else {
                 // Restore today's saved session and sanitize it
                 gameData = {
                     questions: sanitizeQuestions(session.shuffledQuestions)
@@ -1387,29 +1386,30 @@ async function startApp() {
             updateTheme('casual');
             showModeSelection();
         }
+        
+        if (auth && auth.currentUser) {
+            checkRemoteProgress(auth.currentUser);
+        }
     } catch (err) {
         console.error("Error loading trivia:", err);
-        // Even if daily fetch fails, show the menu so they can play Categories
-        updateTheme('casual');
-        showModeSelection();
-    }
-
-    if (auth && auth.currentUser) {
-        checkRemoteProgress(auth.currentUser);
+        localStorage.removeItem('trivia-session');
+        document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
+        document.getElementById('question-text').classList.remove('hidden');
     }
 }
 
 
-        function showModeSelection() {
-            const settingsRoot = document.getElementById('game-settings-root');
-            if (settingsRoot) settingsRoot.classList.remove('hidden');
-            
-            document.getElementById('question-text').classList.add('hidden');
-            document.getElementById('game-header').classList.add('hidden');
-            document.getElementById('options-container').innerHTML = '';
 
-            renderGameSettings();
-        }
+function showModeSelection() {
+    document.getElementById('mode-selection').classList.remove('hidden');
+    document.getElementById('question-text').classList.add('hidden');
+    document.getElementById('game-header').classList.add('hidden');
+    document.getElementById('options-container').innerHTML = '';
+
+    checkLegacyMode();
+    refreshModeSelectionUI();
+    renderGameSettings();
+}
 
 function startNewSession(data, date, mode) {
     // Fail-safe: Ensure incoming data is flat
@@ -4925,22 +4925,7 @@ function closeStats() {
             currentHistoryFilter = mode;
             
             // Update UI Buttons
-            const buttons = [
-                'all', 
-                'casual', 'professional', // Daily modes
-                'casual-mix', 'professional-mix', // Gauntlet modes
-                'technology', 'science', 'sports', 'gaming', 'entertainment', 
-                'books', 'health', 'business', 'world', 'canada', 'usa' // Category modes
-            ];
-            
-            // Map mode keys to display names for buttons
-            const displayNames = {
-                'casual': 'Daily Casual', 'professional': 'Daily Pro',
-                'casual-mix': 'Gauntlet Casual', 'professional-mix': 'Gauntlet Pro',
-                'all': 'All'
-                // Categories use their own name
-            };
-
+            const buttons = ['all', 'casual', 'professional'];
             buttons.forEach(btnMode => {
                 const btn = document.getElementById(`hist-filter-${btnMode}`);
                 if (mode === btnMode) {
@@ -5108,8 +5093,8 @@ function closeStats() {
 
                     if (visibleQuestions > 0) {
                         dayContainer.innerHTML = `
-                            <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">
-                                ${modeIcon} ${formattedDate} <span class="text-base font-normal text-primary-300">${modeDisplayName}</span>
+                            <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
+                                ${formattedDate} ${modeBadge}
                             </h3>
                             <div class="space-y-1">${questionsHTML}</div>
                         `;
