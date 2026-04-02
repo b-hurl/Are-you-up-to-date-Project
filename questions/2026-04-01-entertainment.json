@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "Which voice actor, known for playing Gene on 'Bob's Burgers,' was hospitalized after a fiery car crash in Bedford, New Hampshire?",
+      "options": ["H. Jon Benjamin", "Dan Mintz", "Eugene Mirman", "John Roberts"],
+      "a": 2,
+      "correctText": "Eugene Mirman, the voice of Gene Belcher on 'Bob's Burgers,' was hospitalized after a serious car crash in Bedford, New Hampshire on April 1, 2026.",
+      "source": "https://www.tmz.com/2026/04/01/eugene-mirman-hospitalized-after-bedford-car-crash-fire/"
+    },
+    {
+      "q": "Which Fleetwood Mac legend was reportedly attacked with an 'unknown substance' by a stalking suspect in Santa Monica on April 1, 2026?",
+      "options": ["Stevie Nicks", "Mick Fleetwood", "Lindsey Buckingham", "Christine McVie"],
+      "a": 2,
+      "correctText": "Fleetwood Mac's Lindsey Buckingham was reportedly attacked with an 'unknown substance' by a woman described as a stalking suspect in Santa Monica on April 1, 2026.",
+      "source": "https://metro.co.uk/2026/04/01/fleetwood-mac-legend-lindsey-buckingham-unknown-substance-poured-attack-27806941/"
+    },
+    {
+      "q": "Bruce Springsteen kicked off his US 'Land of Hope and Dreams American Tour' on March 31, 2026, in which city, with a politically charged message?",
+      "options": ["Philadelphia", "New York City", "Minneapolis", "Boston"],
+      "a": 2,
+      "correctText": "Bruce Springsteen and The E Street Band launched their 'Land of Hope and Dreams American Tour' in Minneapolis, Minnesota, on March 31, 2026, with a politically charged message.",
+      "source": "https://consequence.net/2026/04/bruce-springsteen-minneapolis-tour-kickoff/"
+    },
+    {
+      "q": "During a podcast discussion with Billy Corgan on April 1, 2026, Courtney Love claimed a famous Nirvana lyric from 'Heart-Shaped Box' was inspired by her negative feelings towards which fellow musician?",
+      "options": ["Kim Gordon", "PJ Harvey", "Tori Amos", "Shirley Manson"],
+      "a": 0,
+      "correctText": "Courtney Love told Billy Corgan on his podcast on April 1, 2026, that the Nirvana lyric 'Forever in debt to your priceless advice' from 'Heart-Shaped Box' was 'literally about Kim' Gordon.",
+      "source": "https://consequence.net/2026/04/courtney-love-billy-corgan-horrible-kim-gordon/"
+    },
+    {
+      "q": "David Fincher's 'Fight Club' is receiving a 4K remaster and a one-night-only theatrical re-release on April 22, 2026. When will the 4K Ultra HD Steelbook be available?",
+      "options": ["April 22, 2026", "May 12, 2026", "June 1, 2026", "July 4, 2026"],
+      "a": 1,
+      "correctText": "David Fincher's 'Fight Club' will have a one-night-only theatrical re-release in 4K on April 22, 2026, with the 4K Ultra HD Steelbook set to be released on May 12, 2026.",
+      "source": "https://i.redd.it/pw3trfusqlsg1.jpeg"
+    }
+  ]
+}

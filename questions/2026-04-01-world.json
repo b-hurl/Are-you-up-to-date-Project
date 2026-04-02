@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "What was the ruling regarding the death of a refugee left at a Buffalo doughnut shop by Border Patrol?",
+      "options": ["Accidental", "Natural Causes", "Homicide", "Undetermined"],
+      "a": 2,
+      "correctText": "The death of the refugee was ruled a homicide.",
+      "source": "https://apnews.com/article/buffalo-new-york-refugee-death-482894a96ba31b8945f4186f823c38d2?utm_source=copy&amp;utm_medium=share"
+    },
+    {
+      "q": "According to a recent report, why did Iran state it will not reopen the Strait of Hormuz?",
+      "options": ["Due to upcoming military exercises", "Because of Trump’s 'ridiculous displays'", "To protest new sanctions", "To facilitate environmental cleanup"],
+      "a": 1,
+      "correctText": "Iran stated it will not reopen the Strait of Hormuz because of Trump's 'ridiculous displays'.",
+      "source": "https://www.pravda.com.ua/eng/news/2026/04/01/8028284/"
+    },
+    {
+      "q": "What major international organization is Donald Trump reportedly strongly considering pulling the US out of?",
+      "options": ["United Nations", "World Trade Organization", "NATO", "European Union"],
+      "a": 2,
+      "correctText": "Donald Trump is reportedly strongly considering pulling the US out of NATO.",
+      "source": "https://www.telegraph.co.uk/world-news/2026/04/01/donald-trump-strongly-considering-pulling-us-out-of-nato/?WT.mc_id=tmgoff_reddit_pulling-us-out-of-nato/&amp;accesscontrol=facebookchannel_open"
+    },
+    {
+      "q": "What message did the Iranian president convey in a recent letter regarding ordinary Americans?",
+      "options": ["Iran seeks closer economic ties", "Iran harbors no enmity towards them", "Iran is open to cultural exchanges", "Iran demands an apology"],
+      "a": 1,
+      "correctText": "The Iranian president conveyed in a letter that Iran harbors no enmity towards ordinary Americans.",
+      "source": "https://www.reuters.com/world/middle-east/iranian-president-says-letter-that-iran-harbors-no-enmity-towards-ordinary-2026-04-01/"
+    },
+    {
+      "q": "What significant space event did NASA recently launch for the first time in half a century?",
+      "options": ["A new Mars rover", "A crewed lunar mission", "A space telescope upgrade", "A mission to an asteroid"],
+      "a": 1,
+      "correctText": "NASA recently launched its first crewed lunar mission in half a century.",
+      "source": "https://www.reuters.com/science/nasa-launches-first-crewed-lunar-mission-half-century-2026-04-01/"
+    }
+  ]
+}

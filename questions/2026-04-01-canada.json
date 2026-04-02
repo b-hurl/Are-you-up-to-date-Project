@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "What is the name of NASA's first crewed mission to the Moon in over half a century, which launched on April 1, 2026, and includes Canadian astronaut Jeremy Hansen?",
+      "options": ["Artemis I", "Apollo 18", "Artemis II", "Lunar Gateway"],
+      "a": 2,
+      "correctText": "Artemis II is the mission that launched on April 1, 2026, as the first crewed lunar flyby in over 50 years, with Canadian Space Agency astronaut Jeremy Hansen aboard.",
+      "source": "https://www.cbc.ca/news/science/livestory/artemis-ii-launch-nasa-live-coverage-canada-9.7149222"
+    },
+    {
+      "q": "Who was elected as the leader of the New Democratic Party (NDP) on March 29, 2026, vowing to move the party to the left and stop oil industry expansion?",
+      "options": ["Jagmeet Singh", "Avi Lewis", "David Lewis", "Naomi Klein"],
+      "a": 1,
+      "correctText": "Avi Lewis was elected leader of the New Democratic Party on March 29, 2026, and is known for advocating for left-wing policies and stopping oil industry expansion.",
+      "source": "https://www.theglobeandmail.com/canada/article-ndp-leader-avi-lewis/"
+    },
+    {
+      "q": "On March 31, 2026, what major change did Canada Post announce it would implement to address financial pressures, converting many addresses to community mailboxes?",
+      "options": ["Increasing stamp prices by 50%", "Ending Saturday delivery", "Ending home mail delivery", "Opening new rural post offices"],
+      "a": 2,
+      "correctText": "Canada Post announced on March 31, 2026, its plan to move ahead with ending home mail delivery as part of a major restructuring to restore financial stability.",
+      "source": "https://globalnews.ca/news/11753120/canada-post-end-home-delivery/"
+    },
+    {
+      "q": "Maya Gebala, a survivor of the February 10, 2026, Tumbler Ridge mass shooting, was reported in April 2026 to be out of which critical care unit?",
+      "options": ["Emergency Room", "Recovery Ward", "Intensive Care", "Rehabilitation Center"],
+      "a": 2,
+      "correctText": "Maya Gebala, a 12-year-old survivor of the Tumbler Ridge mass shooting on February 10, 2026, was released from intensive care in April 2026.",
+      "source": "https://globalnews.ca/news/11754196/tumbler-ridge-shooting-survivor-maya-gebala-out-icu/"
+    },
+    {
+      "q": "Which Canadian Space Agency astronaut is part of the Artemis II mission, launched on April 1, 2026, marking the first time a Canadian will travel around the Moon?",
+      "options": ["Chris Hadfield", "David Saint-Jacques", "Jeremy Hansen", "Julie Payette"],
+      "a": 2,
+      "correctText": "Canadian Space Agency astronaut Jeremy Hansen is a mission specialist on the Artemis II flight, which launched on April 1, 2026, and will loop around the Moon.",
+      "source": "https://www.cbc.ca/news/science/artemis-mission-orion-sleeping-eating-toilet-9.7061728"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-01",
+  "type": "casual-mix",
+  "questions": [
+    {
+      "q": "When is the 'Free Lanes' update for Starfield scheduled to launch?",
+      "options": [
+        "Today, April 2nd, 2026.",
+        "May 1st, 2026.",
+        "April 7th, 2026.",
+        "Later this summer."
+      ],
+      "a": 2,
+      "correctText": "The 'Free Lanes' update for Starfield is scheduled to launch on April 7th, 2026.",
+      "source": "https://youtube.com/watch?v=zhG_2aOIGQA&amp;si=W9kl_whLqE1CQyX4",
+      "category": "gaming"
+    },
+    {
+      "q": "Which NFL wide receiver reportedly checked into a rehab facility on April 1, 2026, amid recent allegations?",
+      "options": [
+        "Cooper Kupp",
+        "Puka Nacua",
+        "Ja'Marr Chase",
+        "Justin Jefferson"
+      ],
+      "a": 1,
+      "correctText": "Puka Nacua, wide receiver for the Los Angeles Rams, reportedly entered a rehab facility on April 1, 2026, amid recent allegations.",
+      "source": "https://theramswire.usatoday.com/story/sports/nfl/rams/2026/04/01/rams-puka-nacua-rehab-allegations-bite-off-field/89427012007/",
+      "category": "sports"
+    },
+    {
+      "q": "What recent action did a U.S. patent examiner take regarding Nintendo's 'summon subcharacter and let it fight in 1 of 2 modes' patent?",
+      "options": [
+        "The patent was fully approved without changes.",
+        "The patent was fast-tracked for international protection.",
+        "The patent was rejected as obvious in a non-final ruling.",
+        "Nintendo voluntarily withdrew the patent application."
+      ],
+      "a": 2,
+      "correctText": "A U.S. patent examiner rejected Nintendo’s “summon subcharacter and let it fight in 1 of 2 modes” patent as obvious in a non-final ruling.",
+      "source": "https://gamesfray.com/u-s-patent-examiner-rejects-nintendos-summon-subcharacter-and-let-it-fight-in-1-of-2-modes-patent-as-obvious-non-final-ruling/",
+      "category": "gaming"
+    },
+    {
+      "q": "What gaming platform recently announced a 'refresh' to its Store Home?",
+      "options": [
+        "Epic Games Store",
+        "GOG Galaxy",
+        "Steam",
+        "Xbox Game Pass"
+      ],
+      "a": 2,
+      "correctText": "Steam recently announced a 'refresh' to its Store Home.",
+      "source": "https://steamcommunity.com/games/593110/announcements/detail/526496349181445157",
+      "category": "gaming"
+    },
+    {
+      "q": "David Fincher's 'Fight Club' is receiving a 4K remaster and a one-night-only theatrical re-release on April 22, 2026. When will the 4K Ultra HD Steelbook be available?",
+      "options": [
+        "April 22, 2026",
+        "May 12, 2026",
+        "June 1, 2026",
+        "July 4, 2026"
+      ],
+      "a": 1,
+      "correctText": "David Fincher's 'Fight Club' will have a one-night-only theatrical re-release in 4K on April 22, 2026, with the 4K Ultra HD Steelbook set to be released on May 12, 2026.",
+      "source": "https://i.redd.it/pw3trfusqlsg1.jpeg",
+      "category": "entertainment"
+    },
+    {
+      "q": "Which major European nation's men's football team failed to qualify for the 2026 FIFA World Cup, marking their third consecutive absence and sparking political debate on April 1, 2026?",
+      "options": [
+        "Germany",
+        "Spain",
+        "Italy",
+        "France"
+      ],
+      "a": 2,
+      "correctText": "Italy's national football team failed to qualify for the 2026 FIFA World Cup for the third straight time, leading to political tensions.",
+      "source": "https://www.politico.eu/article/italy-fifa-world-cup-tragedy-gets-political/",
+      "category": "sports"
+    },
+    {
+      "q": "Bruce Springsteen kicked off his US 'Land of Hope and Dreams American Tour' on March 31, 2026, in which city, with a politically charged message?",
+      "options": [
+        "Philadelphia",
+        "New York City",
+        "Minneapolis",
+        "Boston"
+      ],
+      "a": 2,
+      "correctText": "Bruce Springsteen and The E Street Band launched their 'Land of Hope and Dreams American Tour' in Minneapolis, Minnesota, on March 31, 2026, with a politically charged message.",
+      "source": "https://consequence.net/2026/04/bruce-springsteen-minneapolis-tour-kickoff/",
+      "category": "entertainment"
+    },
+    {
+      "q": "During a podcast discussion with Billy Corgan on April 1, 2026, Courtney Love claimed a famous Nirvana lyric from 'Heart-Shaped Box' was inspired by her negative feelings towards which fellow musician?",
+      "options": [
+        "Kim Gordon",
+        "PJ Harvey",
+        "Tori Amos",
+        "Shirley Manson"
+      ],
+      "a": 0,
+      "correctText": "Courtney Love told Billy Corgan on his podcast on April 1, 2026, that the Nirvana lyric 'Forever in debt to your priceless advice' from 'Heart-Shaped Box' was 'literally about Kim' Gordon.",
+      "source": "https://consequence.net/2026/04/courtney-love-billy-corgan-horrible-kim-gordon/",
+      "category": "entertainment"
+    },
+    {
+      "q": "Why did Gabe Newell reportedly 'step back' from making games at Valve after Portal 2?",
+      "options": [
+        "He wanted to focus on Steam development.",
+        "Everyone kept agreeing with his ideas, hindering collaboration.",
+        "He retired from the gaming industry.",
+        "He shifted his focus to Half-Life 3 development."
+      ],
+      "a": 1,
+      "correctText": "Gabe Newell 'stepped back' from actively making games because he wanted to be part of the team and come up with ideas, but everyone kept agreeing with him due to his position.",
+      "source": "https://www.gamesradar.com/games/gabe-newell-stepped-back-from-making-games-at-valve-after-portal-2-because-everyone-kept-agreeing-with-him-when-he-wanted-to-be-part-of-the-team-and-come-up-with-ideas/",
+      "category": "gaming"
+    },
+    {
+      "q": "On April 1, 2026, a judge granted which golfer permission to leave the U.S. for an intensive, out-of-country treatment program following a recent car crash and DUI charges?",
+      "options": [
+        "Phil Mickelson",
+        "Rory McIlroy",
+        "Tiger Woods",
+        "Jordan Spieth"
+      ],
+      "a": 2,
+      "correctText": "Tiger Woods was granted permission by a Florida judge on April 1, 2026, to leave the U.S. for treatment.",
+      "source": "https://www.straitstimes.com/sport/golf/tiger-woods-allowed-to-leave-us-for-intensive-treatment-program",
+      "category": "sports"
+    }
+  ]
+}

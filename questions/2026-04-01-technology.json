@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "What is the name of the new oral GLP-1 obesity pill by Eli Lilly that received FDA approval on April 1, 2026?",
+      "options": ["Foundayo", "Wegovy", "Ozempic", "Mounjaro"],
+      "a": 0,
+      "correctText": "Eli Lilly's new oral GLP-1 obesity pill is named Foundayo.",
+      "source": "https://www.npr.org/2026/04/01/nx-s1-5760899/weight-loss-pill-foundayo"
+    },
+    {
+      "q": "On April 1, 2026, the US Patent and Trademark Office revoked a patent belonging to which major video game company, related to summoning characters to battle?",
+      "options": ["Sony", "Nintendo", "Microsoft", "Sega"],
+      "a": 1,
+      "correctText": "The US Patent and Trademark Office revoked Nintendo's patent on summoning characters to battle.",
+      "source": "https://www.videogameschronicle.com/news/us-patent-office-revokes-nintendos-patent-on-summoning-characters-to-make-them-battle/"
+    },
+    {
+      "q": "What AI company experienced a significant leak of its Claude Code source code on April 1, 2026, leading to widespread copyright takedown requests?",
+      "options": ["OpenAI", "Google DeepMind", "Anthropic", "Stability AI"],
+      "a": 2,
+      "correctText": "Anthropic experienced a leak of its Claude Code source code and issued copyright takedown requests.",
+      "source": "https://www.wsj.com/tech/ai/anthropic-races-to-contain-leak-of-code-behind-claude-ai-agent-4bc5acc7?st=BQwoMN&amp;reflink=desktopwebshare_permalink"
+    },
+    {
+      "q": "According to a report on April 1, 2026, why did Valve's Gabe Newell reportedly 'step back' from direct involvement in game development after Portal 2?",
+      "options": ["He wanted to focus on Steam Deck", "He felt his ideas were stifling the team as everyone agreed with him", "He retired from the company", "He started a new venture"],
+      "a": 1,
+      "correctText": "Gabe Newell stepped back because he felt his ideas were stifling the team, as everyone kept agreeing with him.",
+      "source": "https://www.gamesradar.com/games/gabe-newell-stepped-back-from-making-games-at-valve-after-portal-2-because-everyone-kept-agreeing-with-him-when-he-wanted-to-be-part-of-the-team-and-come-up-with-ideas/"
+    },
+    {
+      "q": "On April 1, 2026, what major NASA mission involving an SLS rocket and Orion spacecraft launched for an approximately 10-day mission around the Moon and back?",
+      "options": ["Europa Clipper", "Mars Sample Return", "Artemis II", "James Webb Space Telescope"],
+      "a": 2,
+      "correctText": "NASA's Artemis II mission launched on April 1, 2026, for a mission around the Moon.",
+      "source": "https://www.nasa.gov/news/artemis/live-artemis-ii-launch-day-updates/"
+    }
+  ]
+}

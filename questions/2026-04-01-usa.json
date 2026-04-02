@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "What was the official ruling regarding the death of a refugee left at a Buffalo doughnut shop by Border Patrol?",
+      "options": ["Accidental death", "Natural causes", "Homicide", "Undetermined"],
+      "a": 2,
+      "correctText": "The death was ruled a homicide.",
+      "source": "https://apnews.com/article/buffalo-new-york-refugee-death-482894a96ba31b8945f4186f823c38d2"
+    },
+    {
+      "q": "What significant development occurred regarding the DHS funding bill on April 1, 2026?",
+      "options": ["Republicans refused to negotiate", "The bill was indefinitely postponed", "Speaker Mike Johnson caved to Democrats' demands", "A government shutdown began"],
+      "a": 2,
+      "correctText": "House Speaker Mike Johnson caved to Democrats' demands on the DHS funding bill.",
+      "source": "https://www.newsweek.com/mike-johnson-caves-to-democrats-dhs-funding-bill-demands-11771221"
+    },
+    {
+      "q": "Which high-profile figure abruptly left Supreme Court arguments concerning birthright citizenship on April 1, 2026?",
+      "options": ["Vice President Kamala Harris", "Former President Donald Trump", "Chief Justice John Roberts", "Attorney General Merrick Garland"],
+      "a": 1,
+      "correctText": "Donald Trump attended the Supreme Court arguments regarding birthright citizenship and left during the opposing party's arguments.",
+      "source": "https://www.newsweek.com/donald-trump-exit-supreme-court-birthright-citizenship-case-11769414"
+    },
+    {
+      "q": "What legislative action did the governors of Florida and Mississippi take on April 1, 2026?",
+      "options": ["Signed new environmental protection bills", "Approved bills to increase teacher salaries", "Signed proof-of-citizenship voting bills", "Ratified new state holiday declarations"],
+      "a": 2,
+      "correctText": "The governors of Florida and Mississippi signed proof-of-citizenship voting bills.",
+      "source": "https://www.theguardian.com/us-news/2026/apr/01/florida-new-voter-id-laws-proof-citizenship"
+    },
+    {
+      "q": "According to reports from late March 2026, what information related to a 13-year-old accuser of Donald Trump has the Justice Department reportedly kept secret?",
+      "options": ["Financial records of her family", "Dozens of Jeffrey Epstein files linked to her allegations", "Her medical history", "Details about her current whereabouts"],
+      "a": 1,
+      "correctText": "The Justice Department has not released dozens of Jeffrey Epstein files linked to allegations from a 13-year-old accuser against Donald Trump.",
+      "source": "https://www.thedailybeast.com/epstein-files-about-13-year-old-donald-trump-accuser-kept-secret/"
+    }
+  ]
+}

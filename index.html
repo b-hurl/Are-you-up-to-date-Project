@@ -47,6 +47,11 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- React and Babel for in-browser JSX transformation -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <style>
         :root {
             /* Default (Casual) - Indigo */
@@ -566,6 +571,16 @@
                     <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-red-600"></div>
                 </label>
             </div>
+            <div class="mb-4 bg-slate-800/50 p-3 rounded-xl border border-slate-700/50 flex items-center justify-between">
+                <div>
+                    <label class="text-[10px] text-slate-400 font-bold uppercase block">Legacy Mode</label>
+                    <p class="text-[10px] text-slate-500">Switch between Casual/Pro and Categories</p>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="admin-legacy-toggle" onchange="toggleLegacyMode()" class="sr-only peer">
+                    <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
+                </label>
+            </div>
             <div class="flex gap-2 mb-4 justify-center">
                 <button onclick="loadFeedback('down')" id="admin-filter-down" class="px-3 py-1 rounded-full text-xs font-bold bg-red-900/50 text-red-400 border border-red-500/30">Issues (👎)</button>
                 <button onclick="loadFeedback('up')" id="admin-filter-up" class="px-3 py-1 rounded-full text-xs font-bold bg-slate-800 text-slate-400 border border-slate-700">Likes (👍)</button>
@@ -615,85 +630,64 @@
                 </span>
             </div>
             
-            <div id="mode-selection" class="hidden text-center space-y-4 py-2 relative">
-                <div class="mb-4">
-                    <h2 class="text-2xl font-black text-white mb-1">Select Difficulty</h2>
-                    <p class="text-slate-400 text-xs uppercase tracking-widest">Choose your path</p>
-                </div>
-                
-                <div id="homepage-timer-container" class="hidden bg-slate-900/50 p-6 rounded-2xl border border-slate-700/50 mb-6">
-                    <div class="text-4xl mb-2">🎉</div>
-                    <h3 class="text-xl font-bold text-white mb-2">Daily Complete!</h3>
-                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2">Next Trivia In</p>
-                    <div class="flex items-center justify-center gap-3">
-                        <div class="countdown-timer text-3xl font-mono font-bold text-primary-400">00:00:00</div>
-                        <button id="notify-btn" onclick="requestPermissions()" class="hidden bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold py-2 px-3 rounded-xl border border-slate-700 transition-all flex items-center gap-2">
-                            <span>🔔</span> Notify Me
-                        </button>
-                    </div>
-                    <button onclick="openHistory()" class="mt-6 w-full bg-slate-800 hover:bg-slate-700 py-3 rounded-xl font-bold text-primary-300 text-xs transition-all uppercase tracking-widest border border-slate-700/50 flex items-center justify-center gap-2 shadow-lg">
-                        <span>📜</span> View Game History
-                    </button>
-
-                    <div id="home-gm-badge" class="hidden mt-4 py-1.5 px-4 bg-yellow-500/10 border border-yellow-500/30 rounded-full inline-flex items-center gap-2">
-                        <span class="text-sm">🏆</span>
-                        <span class="grand-master-shimmer font-black text-xs uppercase tracking-tighter">Grand Master</span>
-                    </div>
-                    <p class="text-slate-500 text-xs mt-4">You've mastered today's challenges.</p>
-                </div>
-                
-                <button id="btn-mode-casual" onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="bg-indigo-500/20 p-3 rounded-xl text-2xl">🎮</div>
-                        <div class="text-left">
-                            <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition-colors">Casual</h3>
-                            <p class="text-xs text-slate-400">Entertainment, Gaming, Sports, Lifestyle</p>
-                        </div>
-                    </div>
-                </button>
-            
-                <button id="btn-mode-professional" onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
-                    <div class="flex items-center gap-4">
-                        <div class="bg-emerald-500/20 p-3 rounded-xl text-2xl">💼</div>
-                        <div class="text-left">
-                            <h3 class="font-bold text-lg text-white group-hover:text-emerald-400 transition-colors">Professional</h3>
-                            <p class="text-xs text-slate-400">Economy, Politics, World, Tech</p>
-                        </div>
-                    </div>
-                </button>
-
-                <div class="grid grid-cols-2 gap-3 pt-2">
-                    <div id="start-screen-login">
-                        <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20 h-full">
-                            Login
-                        </button>
-                    </div>
-                    <button onclick="openTutorial()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
-                        How to Play
-                    </button>
-                </div>
-
-                <button id="view-rankings-btn" onclick="openDailyLeaderboard()" class="w-full mt-3 bg-slate-800/50 hover:bg-slate-700/50 py-3 rounded-xl font-bold text-slate-300 text-xs transition-all uppercase tracking-widest border border-slate-700 flex items-center justify-center gap-2 hidden relative">
-                    <span>🏆</span> View Today's Rankings
-                    <span id="rankings-badge" class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-slate-800 hidden animate-pulse"></span>
-                </button>
-
-                <div id="start-screen-install-container" class="hidden">
-                    <button id="install-btn-start" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 border border-slate-700 transition-all text-sm uppercase tracking-widest">
-                        <span class="text-xl">📲</span> Install App
-                    </button>
-                </div>
-
-                <div id="mode-loading-overlay" class="absolute inset-0 bg-slate-800/95 z-20 flex flex-col items-center justify-center rounded-2xl hidden backdrop-blur-sm border border-slate-700 transition-all duration-500">
-                    <div class="animate-spin text-4xl mb-3">⏳</div>
-                    <p class="text-primary-300 text-xs font-bold uppercase tracking-widest animate-pulse">Checking Progress...</p>
-                </div>
-            </div>
+            <!-- This div will be the root for the React GameSettings component -->
+            <div id="game-settings-root"></div>
 
             <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8 hidden">Loading Today's Challenge...</h2>
             <div id="options-container" class="space-y-3 mb-6"></div>
             <div id="action-area"></div>
         </div>
+    </div>
+
+    <!-- The old mode-selection content is now managed by the React component.
+         Keeping the timer and other elements outside the React root for now,
+         but they will be controlled by the main JS. -->
+    <div id="homepage-timer-container" class="hidden bg-slate-900/50 p-6 rounded-2xl border border-slate-700/50 mb-6">
+        <div class="text-4xl mb-2">🎉</div>
+        <h3 class="text-xl font-bold text-white mb-2">Daily Complete!</h3>
+        <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-2">Next Trivia In</p>
+        <div class="flex items-center justify-center gap-3">
+            <div class="countdown-timer text-3xl font-mono font-bold text-primary-400">00:00:00</div>
+            <button id="notify-btn" onclick="requestPermissions()" class="hidden bg-slate-800 hover:bg-slate-700 text-white text-xs font-bold py-2 px-3 rounded-xl border border-slate-700 transition-all flex items-center gap-2">
+                <span>🔔</span> Notify Me
+            </button>
+        </div>
+        <button onclick="openHistory()" class="mt-6 w-full bg-slate-800 hover:bg-slate-700 py-3 rounded-xl font-bold text-primary-300 text-xs transition-all uppercase tracking-widest border border-slate-700/50 flex items-center justify-center gap-2 shadow-lg">
+            <span>📜</span> View Game History
+        </button>
+
+        <div id="home-gm-badge" class="hidden mt-4 py-1.5 px-4 bg-yellow-500/10 border border-yellow-500/30 rounded-full inline-flex items-center gap-2">
+            <span class="text-sm">🏆</span>
+            <span class="grand-master-shimmer font-black text-xs uppercase tracking-tighter">Grand Master</span>
+        </div>
+        <p class="text-slate-500 text-xs mt-4">You've mastered today's challenges.</p>
+    </div>
+
+    <div id="start-screen-login" class="grid grid-cols-2 gap-3 pt-2 hidden">
+        <div>
+            <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20 h-full">
+                Login
+            </button>
+        </div>
+        <button onclick="openTutorial()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+            How to Play
+        </button>
+    </div>
+
+    <button id="view-rankings-btn" onclick="openDailyLeaderboard()" class="w-full mt-3 bg-slate-800/50 hover:bg-slate-700/50 py-3 rounded-xl font-bold text-slate-300 text-xs transition-all uppercase tracking-widest border border-slate-700 flex items-center justify-center gap-2 hidden relative">
+        <span>🏆</span> View Today's Rankings
+        <span id="rankings-badge" class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full border-2 border-slate-800 hidden animate-pulse"></span>
+    </button>
+
+    <div id="start-screen-install-container" class="hidden">
+        <button id="install-btn-start" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 border border-slate-700 transition-all text-sm uppercase tracking-widest">
+            <span class="text-xl">📲</span> Install App
+        </button>
+    </div>
+
+    <div id="mode-loading-overlay" class="absolute inset-0 bg-slate-800/95 z-20 flex flex-col items-center justify-center rounded-2xl hidden backdrop-blur-sm border border-slate-700 transition-all duration-500">
+        <div class="animate-spin text-4xl mb-3">⏳</div>
+        <p class="text-primary-300 text-xs font-bold uppercase tracking-widest animate-pulse">Checking Progress...</p>
     </div>
 
     <div id="results-card" class="hidden w-full max-w-md text-center bg-slate-800 rounded-3xl shadow-2xl p-10 border border-slate-700">
@@ -794,6 +788,7 @@
     <script>
         // --- CONFIG & AUDIO ---
         const SOUNDS = {
+            // ... existing sounds ...
             correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
             wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
             finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',
@@ -823,6 +818,68 @@
         let rankingsListener = null;
         let locationPromise = null;
         let toastTimeout = null;
+
+        // Global state for game configuration, managed by React component
+        let gameConfig = {
+            gameMode: null, // 'solo' or 'multiplayer'
+            soloSubMode: null, // 'gauntlet' or 'categories'
+            gauntletMode: null, // 'casual' or 'professional'
+            activeSelection: null // Specific category for 'categories' or 'casual'/'professional' for gauntlet
+        };
+
+        // --- REACT INTEGRATION ---
+        function handleConfigUpdate(config) {
+            gameConfig = { ...gameConfig, ...config };
+            
+            if (gameConfig.gameMode === 'solo' && gameConfig.activeSelection) {
+                if (gameConfig.soloSubMode === 'gauntlet') {
+                    selectMode(gameConfig.activeSelection); 
+                } else if (gameConfig.soloSubMode === 'categories') {
+                    loadCategoryTrivia(gameConfig.activeSelection);
+                }
+            }
+        }
+
+        async function loadCategoryTrivia(category) {
+            const gameDate = getGameDate();
+            const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
+            
+            updateHeaderSyncStatus('syncing');
+            try {
+                const response = await fetch(filePath + `?v=${Date.now()}`);
+                if (!response.ok) throw new Error("Category file not found");
+                
+                const data = await response.json();
+                const questions = Array.isArray(data) ? data : (data.questions || []);
+                const modeData = { questions: sanitizeQuestions(questions) };
+                
+                // Hide settings and show game
+                document.getElementById('game-settings-root').classList.add('hidden');
+                document.getElementById('question-text').classList.remove('hidden');
+                
+                updateTheme('casual'); 
+                startNewSession(modeData, gameDate, category);
+            } catch (e) {
+                console.error(e);
+                alert(`Could not load ${category} trivia for today. This might be available soon!`);
+            } finally {
+                updateHeaderSyncStatus('complete');
+            }
+        }
+
+        function renderGameSettings() {
+            const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+            const playedModes = session.playedModes || [];
+            
+            const root = ReactDOM.createRoot(document.getElementById('game-settings-root'));
+            root.render(
+                React.createElement(GameSettings, {
+                    currentConfig: gameConfig,
+                    onUpdate: handleConfigUpdate,
+                    playedModes: playedModes
+                })
+            );
+        }
 
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
@@ -915,12 +972,12 @@
             return id;
         }
 
-        function updateTheme(mode) {
+        function updateTheme(mode) { // mode here can be 'casual', 'professional', or a category name
             const body = document.body;
             const modeIcon = document.getElementById('mode-icon');
             if (mode === 'professional') {
                 body.classList.add('theme-professional');
-                if (modeIcon) {
+                if (modeIcon) { // This icon might be removed or changed with new UI
                     modeIcon.innerText = '💼';
                     modeIcon.setAttribute('title', 'Professional Mode');
                 }
@@ -932,6 +989,10 @@
                 }
             }
         }
+        // The old updateTheme function is now less relevant as the UI is handled by React.
+        // However, the theme-professional class is still used for styling.
+        // We'll keep this function but its usage will change.
+
 
         // --- LOCATION SERVICES ---
         function determineUserLocation() {
@@ -1010,35 +1071,82 @@
         }
 
         function refreshModeSelectionUI() {
+            const isLegacy = localStorage.getItem('trivia-legacy-mode') === 'true';
             const today = getGameDate();
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             let playedModes = [];
 
-            // Get modes played from local session
             if (session.date === today && session.playedModes) {
                 playedModes = session.playedModes;
             }
 
-            // Merge with remote progress if available
             if (remoteUserProgress && remoteUserProgress.lastPlayedDate === today) {
                 const remoteModes = remoteUserProgress.playedModes || [];
                 playedModes = Array.from(new Set([...playedModes, ...remoteModes]));
             }
 
-            const casualBtn = document.getElementById('btn-mode-casual');
-            const proBtn = document.getElementById('btn-mode-professional');
+            const container = document.getElementById('mode-buttons-container');
+            if (!container) return;
+            container.innerHTML = '';
+
             const timerContainer = document.getElementById('homepage-timer-container');
             const selectionHeader = document.querySelector('#mode-selection > div.mb-4');
+            let allDone = false;
 
-            const casualPlayed = playedModes.includes('casual');
-            const proPlayed = playedModes.includes('professional');
+            if (isLegacy) {
+                const casualPlayed = playedModes.includes('casual');
+                const proPlayed = playedModes.includes('professional');
+                allDone = casualPlayed && proPlayed;
 
-            // Hide specific mode buttons if they are completed
-            if (casualBtn) casualBtn.classList.toggle('hidden', casualPlayed);
-            if (proBtn) proBtn.classList.toggle('hidden', proPlayed);
+                if (!casualPlayed) {
+                    container.innerHTML += `
+                        <button onclick="selectMode('casual')" class="w-full group relative bg-slate-700/50 hover:bg-indigo-600/40 active:bg-indigo-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-indigo-500 active:border-indigo-400 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-indigo-500/20 p-3 rounded-xl text-2xl">🎮</div>
+                                <div class="text-left">
+                                    <h3 class="font-bold text-lg text-white group-hover:text-indigo-400 transition-colors">Casual</h3>
+                                    <p class="text-xs text-slate-400">Entertainment, Sports, Lifestyle</p>
+                                </div>
+                            </div>
+                        </button>`;
+                }
+                if (!proPlayed) {
+                    container.innerHTML += `
+                        <button onclick="selectMode('professional')" class="w-full group relative bg-slate-700/50 hover:bg-emerald-600/40 active:bg-emerald-500/60 active:scale-95 p-4 rounded-2xl border border-slate-600 hover:border-emerald-500 active:border-emerald-400 transition-all">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-emerald-500/20 p-3 rounded-xl text-2xl">💼</div>
+                                <div class="text-left">
+                                    <h3 class="font-bold text-lg text-white group-hover:text-emerald-400 transition-colors">Professional</h3>
+                                    <p class="text-xs text-slate-400">Economy, Politics, Tech</p>
+                                </div>
+                            </div>
+                        </button>`;
+                }
+            } else if (freshGameData) {
+                const categories = [...new Set(freshGameData.questions.map(q => q.category).filter(Boolean))];
+                const availableCategories = categories.filter(cat => !playedModes.includes(cat));
+                allDone = categories.length > 0 && availableCategories.length === 0;
 
-            // If ALL modes are completed, show the "Daily Complete" message and hide the difficulty header
-            const allDone = casualPlayed && proPlayed;
+                if (availableCategories.length > 0) {
+                    if (selectionHeader) {
+                        selectionHeader.querySelector('h2').innerText = "Pick a Category";
+                        selectionHeader.querySelector('p').innerText = "5 Questions based on your choice";
+                    }
+                    availableCategories.forEach(cat => {
+                        container.innerHTML += `
+                            <button onclick="selectMode('${cat}')" class="w-full group bg-slate-700/50 hover:bg-primary-600/40 p-4 rounded-2xl border border-slate-600 hover:border-primary-500 transition-all">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-4">
+                                        <div class="bg-primary-500/20 p-2 rounded-lg text-xl">📁</div>
+                                        <h3 class="font-bold text-lg text-white group-hover:text-primary-400">${cat}</h3>
+                                    </div>
+                                    <span class="text-xs text-slate-500 font-mono">5 Questions</span>
+                                </div>
+                            </button>`;
+                    });
+                }
+            }
+
             if (timerContainer) timerContainer.classList.toggle('hidden', !allDone);
             if (selectionHeader) selectionHeader.classList.toggle('hidden', allDone);
             
@@ -1047,8 +1155,7 @@
         }
 
         async function selectMode(mode) {
-            const btn = document.getElementById(`btn-mode-${mode}`);
-            if (btn && (btn.classList.contains('pointer-events-none') || btn.classList.contains('opacity-50'))) return;
+            const isLegacy = localStorage.getItem('trivia-legacy-mode') === 'true';
 
     // If they start a new mode, they lose any pending manual sync chance from a previous completion
     localStorage.removeItem('trivia-manual-sync-available');
@@ -1088,8 +1195,10 @@
                 // Questions can have a "location" object: { country: "Canada", region: "Ontario", city: "Toronto" }
                 if (q.location) {
                     // Apply granular opt-outs
-                    if (isCityOptedOut && q.location.city) return false;
-                    if (isProvinceOptedOut && q.location.region) return false;
+                    if (isLegacy) {
+                        if (isCityOptedOut && q.location.city) return false;
+                        if (isProvinceOptedOut && q.location.region) return false;
+                    }
 
                     // If we don't know the user's location, skip regional questions (safest bet)
                     if (!userLoc.country_code) return false;
@@ -1112,10 +1221,14 @@
                 // 2. Category Filter
                 if (!q.category) return true; // Include uncategorized in both to be safe
                 const cat = q.category.trim();
-                if (mode === 'casual') {
-                    return CASUAL_CATS.some(c => cat.includes(c));
+                if (isLegacy) {
+                    if (mode === 'casual') {
+                        return CASUAL_CATS.some(c => cat.includes(c));
+                    } else {
+                        return PRO_CATS.some(c => cat.includes(c));
+                    }
                 } else {
-                    return PRO_CATS.some(c => cat.includes(c));
+                    return cat === mode;
                 }
             });
 
@@ -1139,6 +1252,11 @@
             document.getElementById('question-text').classList.remove('hidden');
             
             try {
+                if (isLegacy) {
+                    updateTheme(mode);
+                } else {
+                    updateTheme('casual'); // Default theme for single category selection
+                }
                 startNewSession(modeData, getGameDate(), mode);
             } catch (e) {
                 console.error("Game start error:", e);
@@ -1208,6 +1326,7 @@ async function startApp() {
     console.log("Attempting to load trivia for date:", gameDate);
     checkGlobalMessage();
     checkMaintenanceMode();
+    checkLegacyMode();
     determineUserLocation(); // Trigger background location check
     startNextTimer(); // Start global countdown immediately
     
@@ -1239,7 +1358,7 @@ async function startApp() {
                 updateTheme('casual');
                 showModeSelection(); 
             } 
-            else {
+          else {
                 // Restore today's saved session and sanitize it
                 gameData = {
                     questions: sanitizeQuestions(session.shuffledQuestions)
@@ -1281,14 +1400,15 @@ async function startApp() {
 }
 
 
-
 function showModeSelection() {
     document.getElementById('mode-selection').classList.remove('hidden');
     document.getElementById('question-text').classList.add('hidden');
     document.getElementById('game-header').classList.add('hidden');
     document.getElementById('options-container').innerHTML = '';
 
+    checkLegacyMode();
     refreshModeSelectionUI();
+    renderGameSettings();
 }
 
 function startNewSession(data, date, mode) {
@@ -1570,6 +1690,11 @@ function showFinalResults() {
     } else {
         otherModeSection.classList.add('hidden');
     }
+
+    // Ensure leaderboard visibility is correct based on play mode
+    const isCategoryPlay = gameConfig.soloSubMode === 'categories';
+    document.getElementById('leaderboard-section').classList.toggle('hidden', isCategoryPlay);
+    document.getElementById('view-rankings-btn').classList.toggle('hidden', isCategoryPlay);
 
     // Initialize UI states
     document.getElementById('profanity-filter-toggle').checked = localStorage.getItem('trivia-censor') === 'true';
@@ -4800,7 +4925,22 @@ function closeStats() {
             currentHistoryFilter = mode;
             
             // Update UI Buttons
-            const buttons = ['all', 'casual', 'professional'];
+            const buttons = [
+                'all', 
+                'casual', 'professional', // Daily modes
+                'casual-mix', 'professional-mix', // Gauntlet modes
+                'technology', 'science', 'sports', 'gaming', 'entertainment', 
+                'books', 'health', 'business', 'world', 'canada', 'usa' // Category modes
+            ];
+            
+            // Map mode keys to display names for buttons
+            const displayNames = {
+                'casual': 'Daily Casual', 'professional': 'Daily Pro',
+                'casual-mix': 'Gauntlet Casual', 'professional-mix': 'Gauntlet Pro',
+                'all': 'All'
+                // Categories use their own name
+            };
+
             buttons.forEach(btnMode => {
                 const btn = document.getElementById(`hist-filter-${btnMode}`);
                 if (mode === btnMode) {
@@ -4968,8 +5108,8 @@ function closeStats() {
 
                     if (visibleQuestions > 0) {
                         dayContainer.innerHTML = `
-                            <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
-                                ${formattedDate} ${modeBadge}
+                            <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center gap-2">
+                                ${modeIcon} ${formattedDate} <span class="text-base font-normal text-primary-300">${modeDisplayName}</span>
                             </h3>
                             <div class="space-y-1">${questionsHTML}</div>
                         `;

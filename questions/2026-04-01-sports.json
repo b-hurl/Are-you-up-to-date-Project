@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "Which NFL wide receiver reportedly checked into a rehab facility on April 1, 2026, amid recent allegations?",
+      "options": ["Cooper Kupp", "Puka Nacua", "Ja'Marr Chase", "Justin Jefferson"],
+      "a": 1,
+      "correctText": "Puka Nacua, wide receiver for the Los Angeles Rams, reportedly entered a rehab facility on April 1, 2026, amid recent allegations.",
+      "source": "https://theramswire.usatoday.com/story/sports/nfl/rams/2026/04/01/rams-puka-nacua-rehab-allegations-bite-off-field/89427012007/"
+    },
+    {
+      "q": "What major golf event did Tiger Woods decline to captain for the United States team for 2027, according to news from April 1, 2026?",
+      "options": ["The Masters", "The Open Championship", "The Ryder Cup", "The Presidents Cup"],
+      "a": 2,
+      "correctText": "Tiger Woods declined the captaincy for the 2027 Ryder Cup U.S. team, a decision announced on April 1, 2026, by the PGA of America.",
+      "source": "https://www.skysports.com/golf/news/12176/13527026/tiger-woods-will-not-captain-us-ryder-cup-team-for-2027-tournament-in-ireland-after-stepping-away-from-golf-after-car-crash"
+    },
+    {
+      "q": "Which major European nation's men's football team failed to qualify for the 2026 FIFA World Cup, marking their third consecutive absence and sparking political debate on April 1, 2026?",
+      "options": ["Germany", "Spain", "Italy", "France"],
+      "a": 2,
+      "correctText": "Italy's national football team failed to qualify for the 2026 FIFA World Cup for the third straight time, leading to political tensions.",
+      "source": "https://www.politico.eu/article/italy-fifa-world-cup-tragedy-gets-political/"
+    },
+    {
+      "q": "On April 1, 2026, a judge granted which golfer permission to leave the U.S. for an intensive, out-of-country treatment program following a recent car crash and DUI charges?",
+      "options": ["Phil Mickelson", "Rory McIlroy", "Tiger Woods", "Jordan Spieth"],
+      "a": 2,
+      "correctText": "Tiger Woods was granted permission by a Florida judge on April 1, 2026, to leave the U.S. for treatment.",
+      "source": "https://www.straitstimes.com/sport/golf/tiger-woods-allowed-to-leave-us-for-intensive-treatment-program"
+    },
+    {
+      "q": "Which NHL team achieved a season-high four-game winning streak on April 1, 2026, after defeating the Seattle Kraken?",
+      "options": ["Toronto Maple Leafs", "Edmonton Oilers", "Boston Bruins", "Montreal Canadiens"],
+      "a": 1,
+      "correctText": "The Edmonton Oilers extended their winning streak to a season-high four games on April 1, 2026.",
+      "source": "https://wtvb.com/2026/04/01/nhl-roundup-viktor-arvidsson-posts-hat-trick-as-bruins-extend-win-streak/"
+    }
+  ]
+}
