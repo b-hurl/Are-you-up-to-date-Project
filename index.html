@@ -1387,29 +1387,29 @@ async function startApp() {
             updateTheme('casual');
             showModeSelection();
         }
-        
-        if (auth && auth.currentUser) {
-            checkRemoteProgress(auth.currentUser);
-        }
     } catch (err) {
         console.error("Error loading trivia:", err);
-        localStorage.removeItem('trivia-session');
-        document.getElementById('question-text').innerText = "New Trivia at 8:00 AM CST";
-        document.getElementById('question-text').classList.remove('hidden');
+        // Even if daily fetch fails, show the menu so they can play Categories
+        updateTheme('casual');
+        showModeSelection();
+    }
+
+    if (auth && auth.currentUser) {
+        checkRemoteProgress(auth.currentUser);
     }
 }
 
 
-function showModeSelection() {
-    document.getElementById('mode-selection').classList.remove('hidden');
-    document.getElementById('question-text').classList.add('hidden');
-    document.getElementById('game-header').classList.add('hidden');
-    document.getElementById('options-container').innerHTML = '';
+        function showModeSelection() {
+            const settingsRoot = document.getElementById('game-settings-root');
+            if (settingsRoot) settingsRoot.classList.remove('hidden');
+            
+            document.getElementById('question-text').classList.add('hidden');
+            document.getElementById('game-header').classList.add('hidden');
+            document.getElementById('options-container').innerHTML = '';
 
-    checkLegacyMode();
-    refreshModeSelectionUI();
-    renderGameSettings();
-}
+            renderGameSettings();
+        }
 
 function startNewSession(data, date, mode) {
     // Fail-safe: Ensure incoming data is flat
