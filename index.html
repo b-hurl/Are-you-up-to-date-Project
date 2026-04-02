@@ -1342,6 +1342,7 @@ async function startApp() {
             window.userChoices = [];
             updateTheme('casual');
             // The main menu is already rendered by renderGameSettings() and showModeSelection()
+            showModeSelection();
         } else {
             // Restore today's saved session
             gameData = {
@@ -1372,6 +1373,7 @@ async function startApp() {
     } else {
         // No saved session, just show the main menu (already rendered by renderGameSettings() and showModeSelection())
         updateTheme('casual');
+        showModeSelection();
     }
     
     if (auth && auth.currentUser) {
