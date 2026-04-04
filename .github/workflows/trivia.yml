@@ -31,7 +31,7 @@ jobs:
 
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)
-        run: node generate-trivia.js
+        run: node node.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
