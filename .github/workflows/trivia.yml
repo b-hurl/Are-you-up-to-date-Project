@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '20'
           # This caches your npm dependencies so it runs faster next time
-          cache: 'npm'
+          #cache: 'npm'
 
       - name: Install Dependencies
         run: npm install @google/generative-ai axios
