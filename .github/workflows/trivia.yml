@@ -37,7 +37,7 @@ jobs:
 
       - name: Create Casual & Professional Mixes
         # This script combines them into the 10-question "Mix" files
-        run: node combine-trivia.js
+        run: node ./combine-triva.js
 
       - name: Commit and Push Changes
         # This part detects the new .json files and saves them to your repo
