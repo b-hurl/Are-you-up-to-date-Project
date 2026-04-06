@@ -1637,8 +1637,6 @@ function showFinalResults() {
         'main-card': { add: ['hidden'] },
         'game-header': { add: ['hidden'] },
         'results-card': { remove: ['hidden'] },
-        'results-gm-badge': { toggle: isGM },
-        'leaderboard-section': { toggle: !isCategoryPlay }
         'results-gm-badge': { toggle: isGM }
     };
 
@@ -1715,14 +1713,6 @@ function showFinalResults() {
         if (nameInput) nameInput.value = storedName || '';
     }
 
-    if (db) {
-        fetchAndDisplayLeaderboard();
-        checkIfSubmitted().then(submitted => {
-            if (auth.currentUser && !submitted && storedName && storedName.trim()) {
-                submitScore();
-            }
-        });
-    }
     // Temporarily disabled due to backend issues
     // if (db) {
     //     fetchAndDisplayLeaderboard();
