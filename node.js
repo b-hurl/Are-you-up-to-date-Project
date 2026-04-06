@@ -58,7 +58,11 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             const redditUrl = `https://www.reddit.com/r/${multiSub}/hot.json?limit=12`;
             
             const redditRes = await axios.get(redditUrl, {
-                headers: { 'User-Agent': 'v1:TriviaBot:1.0 (by /u/YourUsername)' }
+                headers: { 
+                    'User-Agent': 'NodeJs:DailyTriviaBot:v1.1 (Automated Script)',
+                    'Accept': 'application/json',
+                    'Cache-Control': 'no-cache'
+                }
             });
 
             // Extract External Links (ignoring ads/stickies/videos)
@@ -112,8 +116,8 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
         } catch (error) {
             console.error(`❌ Failed ${category}: ${error.message}`);
 
-            // Handle 503 Service Unavailable or general fetch/network failures by retrying
-            if (attempts[category] < retryLimit && (error.response?.status === 503 || !error.response)) {
+            // Handle 403 (Forbidden), 503 (Service Unavailable), or general fetch/network failures by retrying
+            if (attempts[category] < retryLimit && (error.response?.status === 503 || error.response?.status === 403 || !error.response)) {
                 console.log(`🔄 Transient error detected. Adding ${category} back to the end of the queue...`);
                 queue.push(category);
             }
