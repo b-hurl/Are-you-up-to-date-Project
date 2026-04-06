@@ -48,7 +48,7 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             };
 
             const outPath = path.join(questionsDir, `${dateStr}-${mixName}.json`);
-            fs.writeFileSync(outPath, JSON.stringify(finalSelection, null, 2));
+            fs.writeFileSync(`./questions/${dateStr}-${category}.json`, JSON.stringify(validated, null, 2));
             console.log(`✨ SUCCESS: Saved 10 questions to ${dateStr}-${mixName}.json`);
         } else {
             console.error(` ⛔ FAILURE: No questions found for ${mixName}. Check your filenames!`);

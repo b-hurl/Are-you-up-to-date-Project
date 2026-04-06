@@ -92,7 +92,7 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             JSON.parse(responseText); 
 
             const filePath = `./questions/${dateStr}-${category}.json`;
-            fs.writeFileSync(filePath, responseText);
+            fs.writeFileSync(`./questions/${dateStr}-${category}.json`, JSON.stringify(validated, null, 2));
             
             console.log(`✅ File Saved: ${filePath}`);
 
