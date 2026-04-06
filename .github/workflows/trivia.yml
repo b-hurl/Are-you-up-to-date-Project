@@ -42,9 +42,16 @@ jobs:
       - name: Commit and Push Changes
         # This part detects the new .json files and saves them to your repo
         run: |
-          git config --global user.name 'TriviaBot'
+          git config --global user.name 'Trivia Bot'
           git config --global user.email 'bot@trivia-app.com'
+          
+          echo "📂 Checking the questions folder..."
+          ls -la questions/
+          
           git add questions/*.json
-          # We use "|| exit 0" so the action doesn't fail if there are no new questions today
-          git commit -m "Daily Trivia Update: $(date +'%Y-%m-%d')" || exit 0
+          
+          echo "📊 Git Status output:"
+          git status
+          
+          git commit -m "Daily Trivia Update: $(date +'%Y-%m-%d')" || echo "No new changes found"
           git push

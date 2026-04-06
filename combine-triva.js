@@ -9,7 +9,7 @@ const MIXES = {
 function createDailyMixes() {
     // 1. USE LOCAL DATE (The fix we discussed for "Tomorrow" issue)
     const date = new Date();
-    const dateStr = date.toLocaleDateString('en-CA'); 
+    const dateStr = new Date().toLocaleDateString('en-CA');
     
     // 2. ABSOLUTE PATH (Ensures it finds the folder regardless of where you run it)
     const questionsDir = path.join(process.cwd(), 'questions');
