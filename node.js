@@ -31,18 +31,17 @@ const parser = new Parser({
 });
 
 // Initialize Gemini
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY, { apiVersion: "v1beta" });
 
 async function runAutomation() {
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
         model: "gemini-1.5-flash", 
-        tools: [{ googleSearchRetrieval: {} }] 
+        tools: [{ googleSearch: {} }] 
     });
 
-   // NEW (Local - matches your actual clock)
-const date = new Date();
-const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
+    const date = new Date();
+    const dateStr = date.toLocaleDateString('en-CA'); // Outputs "YYYY-MM-DD"
     
     // Ensure the output directory exists
     if (!fs.existsSync('./questions')) fs.mkdirSync('./questions');
