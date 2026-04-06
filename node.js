@@ -36,7 +36,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY, { apiVersion: "
 async function runAutomation() {
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash", 
+        model: "gemini-2.5-flash", 
         tools: [{ googleSearch: {} }] 
     });
 
