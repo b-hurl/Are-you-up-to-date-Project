@@ -57,107 +57,108 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
         });
     };
 
+
     const renderMainMenu = () => (
         <>
-            <h2 className="text-2xl font-bold mb-6 text-center">Are You Up To Date?</h2>
+            <h2 className="text-2xl font-black mb-6 text-center text-white">Are You Up To Date?</h2>
             <div className="grid grid-cols-1 gap-4 mb-8">
                 <button
                     onClick={() => handleGameModeSelection('solo')}
-                    className={`p-4 rounded-lg border-2 transition-all text-left ${
+                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
                         gameMode === 'solo' && !soloSubMode // Highlight if solo is selected but sub-menu not yet
-                        ? 'border-blue-600 bg-blue-50'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
                     }`}
                 >
                     <span className="block font-bold text-lg">Solo Play</span>
-                    <span className="text-sm text-gray-600">Test your knowledge against the clock.</span>
+                    <span className="text-sm text-slate-400">Test your knowledge against the clock.</span>
                 </button>
 
                 <button
                     onClick={() => handleGameModeSelection('multiplayer')}
-                    className={`p-4 rounded-lg border-2 transition-all text-left ${
+                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
                         gameMode === 'multiplayer'
-                        ? 'border-blue-600 bg-blue-50'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
                     }`}
                 >
                     <span className="block font-bold text-lg">Play Against Friends</span>
-                    <span className="text-sm text-gray-600">Challenge your friends and see who's more up to date.</span>
+                    <span className="text-sm text-slate-400">Challenge your friends and see who's more up to date.</span>
                 </button>
             </div>
-            <div className="border-t pt-4">
-                <p className="text-center text-gray-500 text-sm italic">Each round consists of 5 questions from your chosen category.</p>
+            <div className="border-t border-slate-700 pt-4">
+                <p className="text-center text-slate-500 text-[10px] uppercase tracking-widest font-bold">Each round consists of 5 questions.</p>
             </div>
         </>
     );
 
     const renderSoloSubMenu = () => (
         <>
-            <h2 className="text-2xl font-bold mb-6 text-center">Solo Play</h2>
+            <h2 className="text-2xl font-black mb-6 text-center text-white">Solo Play</h2>
             <div className="grid grid-cols-1 gap-4 mb-8">
                 <button
                     onClick={() => handleSoloSubModeSelection('gauntlet')}
-                    className={`p-4 rounded-lg border-2 transition-all text-left ${
+                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
                         soloSubMode === 'gauntlet'
-                        ? 'border-blue-600 bg-blue-50'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
                     }`}
                 >
                     <span className="block font-bold text-lg">Gauntlet</span>
-                    <span className="text-sm text-gray-600">10 questions: Casual or Professional mix.</span>
+                    <span className="text-sm text-slate-400">10 questions: Casual or Professional mix.</span>
                 </button>
 
                 <button
                     onClick={() => handleSoloSubModeSelection('categories')}
-                    className={`p-4 rounded-lg border-2 transition-all text-left ${
+                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
                         soloSubMode === 'categories'
-                        ? 'border-blue-600 bg-blue-50'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
                     }`}
                 >
                     <span className="block font-bold text-lg">Categories</span>
-                    <span className="text-sm text-gray-600">5 questions from a specific topic.</span>
+                    <span className="text-sm text-slate-400">5 questions from a specific topic.</span>
                 </button>
             </div>
-            <button onClick={() => handleGameModeSelection(null)} className="mt-4 text-blue-600 hover:underline">Back to Main Menu</button>
+            <button onClick={() => handleGameModeSelection(null)} className="mt-4 text-primary-400 hover:text-white font-bold transition-colors flex items-center gap-2 mx-auto uppercase tracking-widest text-[10px]"><span>←</span> Back to Main Menu</button>
         </>
     );
 
     const renderGauntletOptions = () => (
         <>
-            <h2 className="text-2xl font-bold mb-6 text-center">Gauntlet Mode</h2>
+            <h2 className="text-2xl font-black mb-6 text-center text-white">Gauntlet Mode</h2>
             <div className="grid grid-cols-1 gap-4 mb-8">
                 <button
                     onClick={() => handleGauntletModeSelection('casual')}
-                    className={`p-4 rounded-lg border-2 transition-all text-left ${
+                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
                         gauntletMode === 'casual'
-                        ? 'border-blue-600 bg-blue-50'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
                     }`}
                 >
                     <span className="block font-bold text-lg">Casual Gauntlet</span>
-                    <span className="text-sm text-gray-600">10 questions from entertainment, sports, etc.</span>
+                    <span className="text-sm text-slate-400">10 questions from entertainment, sports, etc.</span>
                 </button>
 
                 <button
                     onClick={() => handleGauntletModeSelection('professional')}
-                    className={`p-4 rounded-lg border-2 transition-all text-left ${
+                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
                         gauntletMode === 'professional'
-                        ? 'border-blue-600 bg-blue-50'
-                        : 'border-gray-200 hover:border-blue-300'
+                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
                     }`}
                 >
                     <span className="block font-bold text-lg">Professional Gauntlet</span>
-                    <span className="text-sm text-gray-600">10 questions from economy, politics, tech, etc.</span>
+                    <span className="text-sm text-slate-400">10 questions from economy, politics, tech, etc.</span>
                 </button>
             </div>
-            <button onClick={() => handleSoloSubModeSelection(null)} className="mt-4 text-blue-600 hover:underline">Back to Solo Play</button>
+            <button onClick={() => handleSoloSubModeSelection(null)} className="mt-4 text-primary-400 hover:text-white font-bold transition-colors flex items-center gap-2 mx-auto uppercase tracking-widest text-[10px]"><span>←</span> Back to Solo Play</button>
         </>
     );
 
     const renderCategoryOptions = () => (
         <>
-            <h2 className="text-2xl font-bold mb-6 text-center">Select a Category</h2>
+            <h2 className="text-2xl font-black mb-6 text-center text-white">Select a Category</h2>
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1">
                 {CATEGORIES.map(category => {
                     const isPlayed = playedModes.includes(category);
@@ -166,26 +167,30 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
                             key={category}
                             disabled={isPlayed}
                             onClick={() => handleCategorySelection(category)}
-                            className={`p-3 rounded-lg border-2 transition-all text-left ${
+                            className={`p-4 rounded-2xl border-2 transition-all text-left ${
                                 isPlayed 
-                                ? 'bg-gray-100 border-gray-200 opacity-50 cursor-not-allowed'
+                                ? 'bg-slate-900/50 border-slate-800 opacity-30 cursor-not-allowed grayscale'
                                 : selectedCategory === category
-                                    ? 'border-blue-600 bg-blue-50'
-                                    : 'border-gray-200 hover:border-blue-300'
+                                    ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+                                    : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
                             }`}
                         >
-                            <span className="block font-bold text-base capitalize leading-tight mb-1">{category}</span>
-                            <span className="text-[10px] text-gray-500 block">{isPlayed ? 'Completed' : '5 Daily Questions'}</span>
+                            <span className="block font-bold text-sm capitalize leading-tight mb-1">{category}</span>
+                            <span className="text-[9px] text-slate-500 uppercase tracking-tighter font-black block">{isPlayed ? 'Completed' : '5 Daily Questions'}</span>
                         </button>
                     );
                 })}
             </div>
-            <button onClick={() => handleSoloSubModeSelection(null)} className="mt-4 text-blue-600 hover:underline">Back to Solo Play</button>
+            <button onClick={() => handleSoloSubModeSelection(null)} className="mt-4 text-primary-400 hover:text-white font-bold transition-colors flex items-center gap-2 mx-auto uppercase tracking-widest text-[10px]"><span>←</span> Back to Solo Play</button>
         </>
     );
 
     return (
-        <div className="p-8 bg-white rounded-xl shadow-lg max-w-md mx-auto">
+        <div className="p-8 bg-slate-800 rounded-3xl shadow-2xl border border-slate-700 max-w-md mx-auto">
+            {!gameMode && renderMainMenu()}
+            {gameMode === 'solo' && !soloSubMode && renderSoloSubMenu()}
+            {gameMode === 'solo' && soloSubMode === 'gauntlet' && !gauntletMode && renderGauntletOptions()}
+
             {!gameMode && renderMainMenu()}
             {gameMode === 'solo' && !soloSubMode && renderSoloSubMenu()}
             {gameMode === 'solo' && soloSubMode === 'gauntlet' && !gauntletMode && renderGauntletOptions()}
