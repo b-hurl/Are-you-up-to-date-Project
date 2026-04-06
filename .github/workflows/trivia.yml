@@ -46,7 +46,7 @@ jobs:
           
           # Use "git add questions/" instead of "questions/*.json" 
           # to avoid the pathspec error if it's empty
-          git add questions/
+          git add .
           
           # This "if" statement check prevents the 128 error 
           # if no new files were actually created

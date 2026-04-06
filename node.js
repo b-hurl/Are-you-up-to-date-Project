@@ -1,6 +1,11 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const axios = require('axios');
 const fs = require('fs');
+const dir = './questions';
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
 
 // --- 1. CONFIGURATION: ADD CATEGORIES & SUBS HERE ---
 const CONFIG = {
@@ -36,8 +41,16 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
     // Ensure the output directory exists
     if (!fs.existsSync('./questions')) fs.mkdirSync('./questions');
 
-    for (const [category, subreddits] of Object.entries(CONFIG)) {
-        console.log(`\n🚀 Category: ${category.toUpperCase()}`);
+    let queue = Object.keys(CONFIG);
+    const retryLimit = 3;
+    const attempts = {};
+
+    while (queue.length > 0) {
+        const category = queue.shift();
+        const subreddits = CONFIG[category];
+        attempts[category] = (attempts[category] || 0) + 1;
+
+        console.log(`\n🚀 Category: ${category.toUpperCase()} (Attempt ${attempts[category]}/${retryLimit})`);
         
         try {
             // Fetch Hot Reddit Posts
@@ -89,24 +102,30 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             responseText = responseText.replace(/```json|```/g, "").trim();
             
             // Validate JSON before saving
-            JSON.parse(responseText); 
+            const validated = JSON.parse(responseText); 
 
             const filePath = `./questions/${dateStr}-${category}.json`;
-            fs.writeFileSync(`./questions/${dateStr}-${category}.json`, JSON.stringify(validated, null, 2));
+            fs.writeFileSync(filePath, JSON.stringify(validated, null, 2));
             
             console.log(`✅ File Saved: ${filePath}`);
 
         } catch (error) {
             console.error(`❌ Failed ${category}: ${error.message}`);
+
+            // Handle 503 Service Unavailable or general fetch/network failures by retrying
+            if (attempts[category] < retryLimit && (error.response?.status === 503 || !error.response)) {
+                console.log(`🔄 Transient error detected. Adding ${category} back to the end of the queue...`);
+                queue.push(category);
+            }
+
             if (error.response?.status === 404) {
                 console.error("   (Check if one of your subreddits is private or banned)");
             }
         }
         console.log(`😴 Waiting 15 seconds to avoid rate limits...`);
        await sleep(15000); 
-        }
     }
     console.log("\n✨ Daily Trivia Update Complete!");
-
+}
 
 runAutomation();

@@ -1,4 +1,9 @@
 const fs = require('fs');
+const dir = './questions';
+
+if (!fs.existsSync(dir)){
+    fs.mkdirSync(dir);
+}
 const path = require('path');
 
 const MIXES = {
