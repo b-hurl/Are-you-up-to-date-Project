@@ -22,13 +22,12 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '20'
           # This caches your npm dependencies so it runs faster next time
           #cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install @google/generative-ai axios
-         npm install rss-parser
+        run: npm install @google/generative-ai axios rss-parser
 
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)

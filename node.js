@@ -37,7 +37,7 @@ async function runAutomation() {
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
         model: "gemini-1.5-flash", 
-        tools: [{ googleSearch: {} }] 
+        tools: [{ googleSearchRetrieval: {} }] 
     });
 
    // NEW (Local - matches your actual clock)
