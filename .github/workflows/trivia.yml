@@ -28,6 +28,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install @google/generative-ai axios
+         npm install rss-parser
 
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)
