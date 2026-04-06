@@ -84,6 +84,10 @@
         .perfect-badge { color: #fbbf24; animation: gold-glow 2s infinite ease-in-out; font-weight: 900; letter-spacing: 0.1em; }
         @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
         .grand-master-shimmer { background: linear-gradient(90deg, #fbbf24 0%, #fef3c7 50%, #fbbf24 100%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite; }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #1e293b; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--primary-400); }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .share-btn {
     background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
@@ -718,10 +722,13 @@
         <div id="final-score" class="text-6xl font-black text-primary-400 mb-6">0/0</div>
         <div id="review-section" class="text-left mb-8 space-y-3 border-t border-slate-700 pt-6 max-h-64 overflow-y-auto pr-2 scrollbar-hide"></div>
 
-        <!-- Play Other Mode Section -->
-        <div id="play-other-mode-section" class="hidden my-6 border-t border-slate-700 pt-6">
-            <button onclick="playOtherMode()" id="play-other-mode-btn" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
-                <!-- Content set by JS -->
+        <!-- Post-Game Navigation Section -->
+        <div id="post-game-nav" class="my-6 border-t border-slate-700 pt-6 space-y-3">
+            <button onclick="returnToMenu('categories')" class="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary-500/20">
+                <span class="text-xl">📁</span> Go Back to Categories
+            </button>
+            <button onclick="returnToMenu('main')" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
+                <span class="text-xl">🏠</span> Go Back to Main Menu
             </button>
         </div>
 
@@ -1623,20 +1630,26 @@ function confirmAnswer() {
 }
 
 function showFinalResults() {
-    // Force the UI to switch to results mode
-    document.body.classList.add('dimmed');
-    document.getElementById('main-card').classList.add('hidden');
-    document.getElementById('game-header').classList.add('hidden'); // Hide the score/progress bar
-    document.getElementById('results-card').classList.remove('hidden');
-    
     const total = gameData.questions.length;
-    const finalScoreDisplay = document.getElementById('final-score');
-    const resultEmoji = document.getElementById('result-emoji');
-    const titleElem = document.querySelector('#results-card h2'); // Targets the "Daily Complete!" text
+    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+    const playedModes = session.playedModes || [];
+    const isCategoryPlay = gameConfig.soloSubMode === 'categories';
+    const isGM = playedModes.includes('casual') && playedModes.includes('professional');
 
-    // 1. Define the Ranks
+    // 1. Declarative visibility updates
+    const uiState = {
+        'body': { add: ['dimmed'] },
+        'main-card': { add: ['hidden'] },
+        'game-header': { add: ['hidden'] },
+        'results-card': { remove: ['hidden'] },
+        'results-gm-badge': { toggle: isGM },
+        'leaderboard-section': { toggle: !isCategoryPlay },
+        'view-rankings-btn': { toggle: !isCategoryPlay }
+    };
+
+    // 2. Rank Configuration
     const ranks = [
-        { title: "Ouch...", color: "#ef4444", emoji: "💀" },       // 0/5
+        { title: "Ouch...", color: "#ef4444", emoji: "💀" },
         { title: "Keep Trying!", color: "#f97316", emoji: "🐣" }, // 1/5
         { title: "Getting There", color: "#facc15", emoji: "🥉" }, // 2/5
         { title: "Solid Effort", color: "#a855f7", emoji: "🥈" },  // 3/5
@@ -1644,58 +1657,47 @@ function showFinalResults() {
         { title: "LEGENDARY!", color: "#fbbf24", emoji: "👑" }    // 5/5
     ];
 
-    // 2. Apply the Rank (Safety check: don't exceed array length)
     const rank = ranks[score] || ranks[0];
     
+    // Apply UI visibility state
+    Object.entries(uiState).forEach(([id, actions]) => {
+        const el = id === 'body' ? document.body : document.getElementById(id);
+        if (!el) return;
+        if (actions.add) el.classList.add(...actions.add);
+        if (actions.remove) el.classList.remove(...actions.remove);
+        if (actions.toggle !== undefined) el.classList.toggle('hidden', !actions.toggle);
+    });
+
+    const finalScoreDisplay = document.getElementById('final-score');
+    const resultEmoji = document.getElementById('result-emoji');
+    const titleElem = document.querySelector('#results-card h2');
+
     titleElem.innerText = rank.title;
     titleElem.style.color = rank.color;
     resultEmoji.innerText = rank.emoji;
     finalScoreDisplay.innerText = `${score}/${total}`;
 
-    // 3. Perfect Score Extras
+    // 3. Perfect Score badge logic (prevent duplicates)
+    const existingBadge = document.querySelector('.perfect-badge');
+    if (existingBadge) existingBadge.remove();
+
     if (score === total) {
         const badge = document.createElement('div');
         badge.className = "perfect-badge text-sm uppercase mb-4";
         badge.innerText = "✨ Perfect Score ✨";
         finalScoreDisplay.parentNode.insertBefore(badge, finalScoreDisplay);
-        
         playSound('perfect');
         fireConfetti();
     } else {
         playSound('finish');
-        
     }
 
+    // 4. Game flow & data updates
     startNextTimer();
     updateStreak();
     renderReview();
-
-    // NEW LOGIC for "Play Other Mode" button
-    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-    const playedModes = session.playedModes || [];
-    const otherModeSection = document.getElementById('play-other-mode-section');
-    const otherModeBtn = document.getElementById('play-other-mode-btn');
     
-    const allDone = playedModes.includes('casual') && playedModes.includes('professional');
-    const resultsGM = document.getElementById('results-gm-badge');
-    if (resultsGM) resultsGM.classList.toggle('hidden', !allDone);
-
-    leaderboardMode = session.activeMode || (playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual');
-
-    if (playedModes.length === 1) {
-        const otherMode = playedModes[0] === 'casual' ? 'professional' : 'casual';
-        const otherModeCapitalized = otherMode.charAt(0).toUpperCase() + otherMode.slice(1);
-        otherModeSection.classList.remove('hidden');
-        otherModeBtn.innerHTML = `<span class="text-xl">${otherMode === 'casual' ? '🎮' : '💼'}</span> Play ${otherModeCapitalized}`;
-        otherModeBtn.setAttribute('data-mode', otherMode); // Store the mode to play
-    } else {
-        otherModeSection.classList.add('hidden');
-    }
-
-    // Ensure leaderboard visibility is correct based on play mode
-    const isCategoryPlay = gameConfig.soloSubMode === 'categories';
-    document.getElementById('leaderboard-section').classList.toggle('hidden', isCategoryPlay);
-    document.getElementById('view-rankings-btn').classList.toggle('hidden', isCategoryPlay);
+    leaderboardMode = session.activeMode || (playedModes[playedModes.length - 1] || 'casual');
 
     // Initialize UI states
     document.getElementById('profanity-filter-toggle').checked = localStorage.getItem('trivia-censor') === 'true';
@@ -1727,47 +1729,42 @@ function showFinalResults() {
     }
 }
 
-function playOtherMode() {
-    const btn = document.getElementById('play-other-mode-btn');
-    const modeToPlay = btn.getAttribute('data-mode');
-
-    if (!modeToPlay || !freshGameData) {
-        console.error("Cannot play other mode, data missing.");
-        return;
-    }
-
-    // Check if user has already played this mode today (Local Check)
-    const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-    if (session.date === getGameDate() && session.playedModes && session.playedModes.includes(modeToPlay)) {
-        alert(`You have already completed ${modeToPlay} mode today!`);
-        return;
-    }
-
-    // Check if user has already played this mode today (Remote Check)
-    if (remoteUserProgress && (remoteUserProgress.playedModes || []).includes(modeToPlay)) {
-        alert(`You have already completed ${modeToPlay} mode today!`);
-        return;
-    }
-
-    // 1. Hide results, show main card
-    document.body.classList.remove('dimmed');
-    document.getElementById('results-card').classList.add('hidden');
-    document.getElementById('main-card').classList.remove('hidden');
-
-    // 2. Reset score and index for the new round
-    score = 0;
+function returnToMenu(target) {
+    // Reset internal game state
     currentIdx = 0;
+    score = 0;
     currentStreak = 0;
     selectedIdx = null;
     isProcessing = false;
     window.userChoices = [];
-
-    // 3. Remove the "Perfect Score" badge if it was added
+    
+    // Clear the perfect badge if it exists
     const perfectBadge = document.querySelector('.perfect-badge');
     if (perfectBadge) perfectBadge.remove();
 
-    // 4. Call selectMode with the new mode
-    selectMode(modeToPlay);
+    // Reset UI visibility
+    document.body.classList.remove('dimmed');
+    document.getElementById('results-card').classList.add('hidden');
+    document.getElementById('main-card').classList.remove('hidden');
+
+    // Update React State via global config
+    if (target === 'categories') {
+        gameConfig = {
+            gameMode: 'solo',
+            soloSubMode: 'categories',
+            gauntletMode: null,
+            activeSelection: null
+        };
+    } else {
+        gameConfig = {
+            gameMode: null,
+            soloSubMode: null,
+            gauntletMode: null,
+            activeSelection: null
+        };
+    }
+
+    showModeSelection();
 }
         // --- WRAP UP FUNCTIONS ---
 

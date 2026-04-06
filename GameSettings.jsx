@@ -1,45 +1,93 @@
+const MenuButton = ({ onClick, isSelected, isDisabled, title, description, isSmall }) => {
+    const baseClasses = `w-full transition-all text-left border-2 ${isSmall ? 'p-4 rounded-2xl' : 'p-5 rounded-2xl'}`;
+    const stateClasses = isDisabled
+        ? 'bg-slate-900/50 border-slate-800 opacity-30 cursor-not-allowed grayscale'
+        : isSelected
+            ? 'selected border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
+            : 'bg-slate-700/50 border-slate-600 hover:border-primary-500 hover:animate-[selection-pulse_2s_infinite_ease-in-out]';
+
+    return (
+        <button onClick={onClick} disabled={isDisabled} className={`${baseClasses} ${stateClasses}`}>
+            <span className={`block font-bold capitalize leading-tight ${isSmall ? 'text-sm mb-1' : 'text-lg'}`}>
+                {title}
+            </span>
+            {description && (
+                <span className={isSmall ? 'text-[9px] text-slate-500 uppercase tracking-tighter font-black block' : 'text-sm text-slate-400'}>
+                    {description}
+                </span>
+            )}
+        </button>
+    );
+};
+
+const MenuView = ({ title, children, footer, onBack, backLabel }) => (
+    <>
+        <h2 className="text-2xl font-black mb-6 text-center text-white">{title}</h2>
+        {children}
+        {footer && (
+            <div className="border-t border-slate-700 pt-4">
+                <p className="text-center text-slate-500 text-[10px] uppercase tracking-widest font-bold">{footer}</p>
+            </div>
+        )}
+        {onBack && (
+            <button 
+                onClick={onBack} 
+                className="mt-4 text-primary-400 hover:text-white font-bold transition-colors flex items-center gap-2 mx-auto uppercase tracking-widest text-[10px]"
+            >
+                <span>←</span> {backLabel}
+            </button>
+        )}
+    </>
+);
+
 const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
     const { useState, useEffect } = React;
-    const [gameMode, setGameMode] = useState(currentConfig?.gameMode || null); // 'solo' or 'multiplayer'
-    const [soloSubMode, setSoloSubMode] = useState(currentConfig?.soloSubMode || null); // 'gauntlet' or 'categories'
-    const [gauntletMode, setGauntletMode] = useState(currentConfig?.gauntletMode || null); // 'casual' or 'professional'
-    const [selectedCategory, setSelectedCategory] = useState(currentConfig?.activeSelection || null); // Specific category
+    const [config, setConfig] = useState({
+        gameMode: currentConfig?.gameMode || null,
+        soloSubMode: currentConfig?.soloSubMode || null,
+        gauntletMode: currentConfig?.gauntletMode || null,
+        activeSelection: currentConfig?.activeSelection || null
+    });
 
     const CATEGORIES = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
 
     // Reset sub-modes if gameMode changes
     useEffect(() => {
-        // Only update internal state if currentConfig is different from current internal state
-        if (currentConfig?.gameMode !== gameMode ||
-            currentConfig?.soloSubMode !== soloSubMode ||
-            currentConfig?.gauntletMode !== gauntletMode ||
-            currentConfig?.activeSelection !== selectedCategory) {
-            
-            setGameMode(currentConfig?.gameMode || null);
-            setSoloSubMode(currentConfig?.soloSubMode || null);
-            setGauntletMode(currentConfig?.gauntletMode || null);
-            setSelectedCategory(currentConfig?.activeSelection || null);
-        }
+        setConfig({
+            gameMode: currentConfig?.gameMode || null,
+            soloSubMode: currentConfig?.soloSubMode || null,
+            gauntletMode: currentConfig?.gauntletMode || null,
+            activeSelection: currentConfig?.activeSelection || null
+        });
     }, [currentConfig]);
 
     const handleGameModeSelection = (mode) => {
-        setGameMode(mode);
-        setSoloSubMode(null); // Reset sub-mode when main mode changes
-        setGauntletMode(null);
-        setSelectedCategory(null);
+        setConfig({
+            gameMode: mode,
+            soloSubMode: null,
+            gauntletMode: null,
+            activeSelection: null
+        });
         if (mode === 'multiplayer') {
             onUpdate({ gameMode: mode }); // Immediately update for multiplayer
         }
     };
 
     const handleSoloSubModeSelection = (subMode) => {
-        setSoloSubMode(subMode);
-        setGauntletMode(null);
-        setSelectedCategory(null);
+        setConfig(prev => ({
+            ...prev,
+            soloSubMode: subMode,
+            gauntletMode: null,
+            activeSelection: null
+        }));
     };
 
     const handleGauntletModeSelection = (mode) => {
-        setGauntletMode(mode);
+        setConfig(prev => ({
+            ...prev,
+            gauntletMode: mode,
+            activeSelection: mode
+        }));
         onUpdate({
             gameMode: 'solo',
             soloSubMode: 'gauntlet',
@@ -49,7 +97,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
     };
 
     const handleCategorySelection = (category) => {
-        setSelectedCategory(category);
+        setConfig(prev => ({
+            ...prev,
+            activeSelection: category
+        }));
         onUpdate({
             gameMode: 'solo',
             soloSubMode: 'categories',
@@ -59,142 +110,99 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
 
 
     const renderMainMenu = () => (
-        <>
-            <h2 className="text-2xl font-black mb-6 text-center text-white">Are You Up To Date?</h2>
+        <MenuView title="Are You Up To Date?" footer="Each round consists of 5 questions.">
             <div className="grid grid-cols-1 gap-4 mb-8">
-                <button
+                <MenuButton
                     onClick={() => handleGameModeSelection('solo')}
-                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
-                        gameMode === 'solo' && !soloSubMode // Highlight if solo is selected but sub-menu not yet
-                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
-                    }`}
-                >
-                    <span className="block font-bold text-lg">Solo Play</span>
-                    <span className="text-sm text-slate-400">Test your knowledge against the clock.</span>
-                </button>
+                    isSelected={config.gameMode === 'solo' && !config.soloSubMode}
+                    title="Solo Play"
+                    description="Test your knowledge against the clock."
+                />
 
-                <button
+                <MenuButton
                     onClick={() => handleGameModeSelection('multiplayer')}
-                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
-                        gameMode === 'multiplayer'
-                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
-                    }`}
-                >
-                    <span className="block font-bold text-lg">Play Against Friends</span>
-                    <span className="text-sm text-slate-400">Challenge your friends and see who's more up to date.</span>
-                </button>
+                    isSelected={config.gameMode === 'multiplayer'}
+                    title="Play Against Friends"
+                    description="Challenge your friends and see who's more up to date."
+                />
             </div>
-            <div className="border-t border-slate-700 pt-4">
-                <p className="text-center text-slate-500 text-[10px] uppercase tracking-widest font-bold">Each round consists of 5 questions.</p>
-            </div>
-        </>
+        </MenuView>
     );
 
     const renderSoloSubMenu = () => (
-        <>
-            <h2 className="text-2xl font-black mb-6 text-center text-white">Solo Play</h2>
+        <MenuView title="Solo Play" onBack={() => handleGameModeSelection(null)} backLabel="Back to Main Menu">
             <div className="grid grid-cols-1 gap-4 mb-8">
-                <button
+                <MenuButton
                     onClick={() => handleSoloSubModeSelection('gauntlet')}
-                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
-                        soloSubMode === 'gauntlet'
-                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
-                    }`}
-                >
-                    <span className="block font-bold text-lg">Gauntlet</span>
-                    <span className="text-sm text-slate-400">10 questions: Casual or Professional mix.</span>
-                </button>
+                    isSelected={config.soloSubMode === 'gauntlet'}
+                    title="Gauntlet"
+                    description="10 questions: Casual or Professional mix."
+                />
 
-                <button
+                <MenuButton
                     onClick={() => handleSoloSubModeSelection('categories')}
-                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
-                        soloSubMode === 'categories'
-                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
-                    }`}
-                >
-                    <span className="block font-bold text-lg">Categories</span>
-                    <span className="text-sm text-slate-400">5 questions from a specific topic.</span>
-                </button>
+                    isSelected={config.soloSubMode === 'categories'}
+                    title="Categories"
+                    description="5 questions from a specific topic."
+                />
             </div>
-            <button onClick={() => handleGameModeSelection(null)} className="mt-4 text-primary-400 hover:text-white font-bold transition-colors flex items-center gap-2 mx-auto uppercase tracking-widest text-[10px]"><span>←</span> Back to Main Menu</button>
-        </>
+        </MenuView>
     );
 
     const renderGauntletOptions = () => (
-        <>
-            <h2 className="text-2xl font-black mb-6 text-center text-white">Gauntlet Mode</h2>
+        <MenuView title="Gauntlet Mode" onBack={() => handleSoloSubModeSelection(null)} backLabel="Back to Solo Play">
             <div className="grid grid-cols-1 gap-4 mb-8">
-                <button
+                <MenuButton
                     onClick={() => handleGauntletModeSelection('casual')}
-                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
-                        gauntletMode === 'casual'
-                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
-                    }`}
-                >
-                    <span className="block font-bold text-lg">Casual Gauntlet</span>
-                    <span className="text-sm text-slate-400">10 questions from entertainment, sports, etc.</span>
-                </button>
+                    isSelected={config.gauntletMode === 'casual'}
+                    title="Casual Gauntlet"
+                    description="10 questions from entertainment, sports, etc."
+                />
 
-                <button
+                <MenuButton
                     onClick={() => handleGauntletModeSelection('professional')}
-                    className={`p-5 rounded-2xl border-2 transition-all text-left ${
-                        gauntletMode === 'professional'
-                        ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-                        : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
-                    }`}
-                >
-                    <span className="block font-bold text-lg">Professional Gauntlet</span>
-                    <span className="text-sm text-slate-400">10 questions from economy, politics, tech, etc.</span>
-                </button>
+                    isSelected={config.gauntletMode === 'professional'}
+                    title="Professional Gauntlet"
+                    description="10 questions from economy, politics, tech, etc."
+                />
             </div>
-            <button onClick={() => handleSoloSubModeSelection(null)} className="mt-4 text-primary-400 hover:text-white font-bold transition-colors flex items-center gap-2 mx-auto uppercase tracking-widest text-[10px]"><span>←</span> Back to Solo Play</button>
-        </>
+        </MenuView>
     );
 
     const renderCategoryOptions = () => (
-        <>
-            <h2 className="text-2xl font-black mb-6 text-center text-white">Select a Category</h2>
-            <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1">
+        <MenuView title="Select a Category" onBack={() => handleSoloSubModeSelection(null)} backLabel="Back to Solo Play">
+            <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
                 {CATEGORIES.map(category => {
                     const isPlayed = playedModes.includes(category);
                     return (
-                        <button
+                        <MenuButton
                             key={category}
-                            disabled={isPlayed}
                             onClick={() => handleCategorySelection(category)}
-                            className={`p-4 rounded-2xl border-2 transition-all text-left ${
-                                isPlayed 
-                                ? 'bg-slate-900/50 border-slate-800 opacity-30 cursor-not-allowed grayscale'
-                                : selectedCategory === category
-                                    ? 'border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-                                    : 'bg-slate-700/50 border-slate-600 hover:border-primary-500'
-                            }`}
-                        >
-                            <span className="block font-bold text-sm capitalize leading-tight mb-1">{category}</span>
-                            <span className="text-[9px] text-slate-500 uppercase tracking-tighter font-black block">{isPlayed ? 'Completed' : '5 Daily Questions'}</span>
-                        </button>
+                            isSelected={config.activeSelection === category}
+                            isDisabled={isPlayed}
+                            isSmall={true}
+                            title={category}
+                            description={isPlayed ? 'Completed' : '5 Daily Questions'}
+                        />
                     );
                 })}
             </div>
-            <button onClick={() => handleSoloSubModeSelection(null)} className="mt-4 text-primary-400 hover:text-white font-bold transition-colors flex items-center gap-2 mx-auto uppercase tracking-widest text-[10px]"><span>←</span> Back to Solo Play</button>
-        </>
+        </MenuView>
     );
+
+    const renderActiveView = () => {
+        if (!config.gameMode) return renderMainMenu();
+        if (config.gameMode === 'solo') {
+            if (!config.soloSubMode) return renderSoloSubMenu();
+            if (config.soloSubMode === 'gauntlet' && !config.gauntletMode) return renderGauntletOptions();
+            if (config.soloSubMode === 'categories') return renderCategoryOptions();
+        }
+        return null;
+    };
 
     return (
         <div className="p-8 bg-slate-800 rounded-3xl shadow-2xl border border-slate-700 max-w-md mx-auto">
-            {!gameMode && renderMainMenu()}
-            {gameMode === 'solo' && !soloSubMode && renderSoloSubMenu()}
-            {gameMode === 'solo' && soloSubMode === 'gauntlet' && !gauntletMode && renderGauntletOptions()}
-
-            {!gameMode && renderMainMenu()}
-            {gameMode === 'solo' && !soloSubMode && renderSoloSubMenu()}
-            {gameMode === 'solo' && soloSubMode === 'gauntlet' && !gauntletMode && renderGauntletOptions()}
-            {gameMode === 'solo' && soloSubMode === 'categories' && renderCategoryOptions()}
+            {renderActiveView()}
         </div>
     );
 };
