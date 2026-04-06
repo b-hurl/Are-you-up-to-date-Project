@@ -58,10 +58,9 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             const redditUrl = `https://www.reddit.com/r/${multiSub}/hot.json?limit=12`;
             
             const redditRes = await axios.get(redditUrl, {
-                headers: { 
-                    'User-Agent': 'NodeJs:DailyTriviaBot:v1.1 (Automated Script)',
-                    'Accept': 'application/json',
-                    'Cache-Control': 'no-cache'
+                headers: {
+                    'User-Agent': 'script:daily.trivia.bot:v1.2 (by /u/trivia_dev_bot)',
+                    'Accept': 'application/json'
                 }
             });
 
@@ -118,7 +117,11 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
 
             // Handle 403 (Forbidden), 503 (Service Unavailable), or general fetch/network failures by retrying
             if (attempts[category] < retryLimit && (error.response?.status === 503 || error.response?.status === 403 || !error.response)) {
-                console.log(`🔄 Transient error detected. Adding ${category} back to the end of the queue...`);
+                console.log(`🔄 Transient error (${error.response?.status || 'Network'}) detected.`);
+                if (error.response?.status === 403) {
+                    console.log("⚠️ 403 Forbidden: Reddit is throttling this IP. Increasing wait time...");
+                    await sleep(30000); // Extra 30s cooldown for 403s
+                }
                 queue.push(category);
             }
 
