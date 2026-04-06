@@ -1,6 +1,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const axios = require('axios');
 const fs = require('fs');
+const Parser = require('rss-parser');
 const dir = './questions';
 
 if (!fs.existsSync(dir)){
@@ -24,13 +25,18 @@ const CONFIG = {
 };
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+// Initialize RSS Parser with a custom User-Agent
+const parser = new Parser({
+    headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) DailyTriviaBot/1.0' }
+});
+
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function runAutomation() {
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash", 
+        model: "gemini-1.5-flash", 
         tools: [{ googleSearch: {} }] 
     });
 
@@ -58,16 +64,11 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             // Try subreddits individually to bypass "multi-sub" scrap-detection filters
             for (const sub of subreddits) {
                 try {
-                    const redditUrl = `https://www.reddit.com/r/${sub}/hot.json?limit=10`;
-                    const response = await axios.get(redditUrl, {
-                        headers: {
-                            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-                            'Accept': 'application/json',
-                            'Referer': 'https://www.google.com/'
-                        }
-                    });
-                    if (response.data?.data?.children?.length > 0) {
-                        redditData = response.data.data.children;
+                    const rssUrl = `https://www.reddit.com/r/${sub}/.rss`;
+                    const feed = await parser.parseURL(rssUrl);
+                    
+                    if (feed.items && feed.items.length > 0) {
+                        redditData = feed.items;
                         break; 
                     }
                 } catch (e) {
@@ -79,9 +80,8 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             if (!redditData) throw new Error("Could not fetch data from any subreddits in this category.");
 
             const newsPool = redditData
-                .filter(p => !p.data.is_self && !p.data.over_18 && !p.data.is_video)
                 .slice(0, 8)
-                .map(p => `Headline: ${p.data.title} | Source: ${p.data.url}`)
+                .map(item => `Headline: ${item.title} | Source: ${item.link}`)
                 .join("\n");
 
             if (!newsPool) {
@@ -132,7 +132,7 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
             if (attempts[category] < retryLimit && (error.response?.status === 503 || error.response?.status === 403 || !error.response)) {
                 console.log(`🔄 Transient error (${error.response?.status || 'Network'}) detected.`);
                 if (error.response?.status === 403) {
-                    const extraWait = Math.floor(Math.random() * 30000) + 30000;
+                    const extraWait = Math.floor(Math.random() * 60000) + 60000; // Wait 1-2 minutes on 403
                     console.log(`⚠️ 403 Forbidden: Reddit IP throttle. Cool-down: ${extraWait/1000}s...`);
                     await sleep(extraWait); 
                 }
