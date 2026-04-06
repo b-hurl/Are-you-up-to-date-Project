@@ -40,18 +40,19 @@ jobs:
         run: node ./combine-triva.js
 
       - name: Commit and Push Changes
-        # This part detects the new .json files and saves them to your repo
         run: |
-          # Use the official GitHub bot identity to avoid 128 errors
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           
-          git add questions/*.json
+          # Use "git add questions/" instead of "questions/*.json" 
+          # to avoid the pathspec error if it's empty
+          git add questions/
           
-          # Only commit if there are actually changes
+          # This "if" statement check prevents the 128 error 
+          # if no new files were actually created
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Daily Trivia Update: $(date +'%Y-%m-%d')"
             git push
           else
-            echo "Nothing new to push today."
+            echo "No new files found to commit."
           fi
