@@ -31,7 +31,7 @@ async function runAutomation() {
 
    // NEW (Local - matches your actual clock)
 const date = new Date();
-const dateStr = new Date().toLocaleDateString('en-CA');
+const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
     
     // Ensure the output directory exists
     if (!fs.existsSync('./questions')) fs.mkdirSync('./questions');
