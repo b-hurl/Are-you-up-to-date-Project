@@ -1328,6 +1328,30 @@ async function startApp() {
     console.log("Initializing app for date:", gameDate);
     checkGlobalMessage();
     checkMaintenanceMode();
+
+    // Load today's trivia data for legacy modes (casual/professional mix)
+    // and for general question pool for category mode filtering.
+    try {
+        const [casualResponse, professionalResponse] = await Promise.all([
+            fetch(`questions/${gameDate}-casual-mix.json?v=${Date.now()}`),
+            fetch(`questions/${gameDate}-professional-mix.json?v=${Date.now()}`)
+        ]);
+
+        let allQuestions = [];
+        if (casualResponse.ok) {
+            const data = await casualResponse.json();
+            allQuestions = allQuestions.concat(sanitizeQuestions(data.questions).map(q => ({...q, category: q.category || 'Casual'})));
+        }
+        if (professionalResponse.ok) {
+            const data = await professionalResponse.json();
+            allQuestions = allQuestions.concat(sanitizeQuestions(data.questions).map(q => ({...q, category: q.category || 'Professional'})));
+        }
+        freshGameData = { questions: allQuestions };
+        console.log("Loaded freshGameData with", freshGameData.questions.length, "questions.");
+    } catch (e) {
+        console.error("Error loading daily mix trivia:", e);
+        freshGameData = { questions: [] }; // Ensure it's an object even on error
+    }
     determineUserLocation(); // Trigger background location check
     startNextTimer(); // Start global countdown immediately
     
