@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "q": "What record did NASA’s Artemis II astronauts break on April 6, 2026?",
+      "options": [
+        "The record for the longest spacewalk.",
+        "The record for the fastest spacecraft.",
+        "The record for the farthest distance traveled from Earth by humans.",
+        "The record for the most days spent on the moon."
+      ],
+      "a": 2,
+      "correctText": "The Artemis II astronauts officially became the farthest humans from Earth, surpassing the record set by Apollo 13 in 1970.",
+      "source": "https://www.scientificamerican.com/article/nasas-artemis-ii-astronauts-break-apollos-distance-record/"
+    },
+    {
+      "q": "Which previous mission's distance record did the Artemis II astronauts surpass on April 6, 2026?",
+      "options": [
+        "Apollo 11",
+        "Voyager 1",
+        "Apollo 13",
+        "International Space Station Expedition 1"
+      ],
+      "a": 2,
+      "correctText": "On April 6, 2026, the Artemis II crew exceeded the distance record held by the Apollo 13 crew for 56 years.",
+      "source": "https://www.scientificamerican.com/article/nasas-artemis-ii-astronauts-break-apollos-distance-record/"
+    },
+    {
+      "q": "On April 6, 2026, what did Iran reject in relation to the Strait of Hormuz?",
+      "options": [
+        "A permanent peace treaty.",
+        "A temporary ceasefire to reopen the Strait.",
+        "A joint military exercise with the US.",
+        "An international aid package."
+      ],
+      "a": 1,
+      "correctText": "Iran rejected a proposal for a temporary ceasefire to reopen the Strait of Hormuz on April 6, 2026.",
+      "source": "https://www.telegraph.co.uk/world-news/2026/04/06/iran-strait-of-hormuz-temporary-ceasefire/"
+    },
+    {
+      "q": "What was Iran's primary demand in response to the ceasefire proposal regarding the Strait of Hormuz on April 6, 2026?",
+      "options": [
+        "An increase in oil prices.",
+        "A permanent end to the war.",
+        "The immediate lifting of all international sanctions.",
+        "The release of all Iranian prisoners."
+      ],
+      "a": 1,
+      "correctText": "Iran's primary demand in response to the ceasefire proposal was a permanent end to the war and a protocol for safe passage through the Strait of Hormuz.",
+      "source": "https://www.aol.com/articles/iran-rejects-call-temporary-ceasefire-090748450.html"
+    },
+    {
+      "q": "On April 6, 2026, Steve Bannon won a Supreme Court order that is likely to lead to the dismissal of his conviction for what crime?",
+      "options": [
+        "Tax evasion.",
+        "Contempt of Congress.",
+        "Espionage.",
+        "Perjury."
+      ],
+      "a": 1,
+      "correctText": "Steve Bannon won a Supreme Court order that is expected to lead to the dismissal of his criminal conviction for contempt of Congress.",
+      "source": "https://apnews.com/article/supreme-court-capitol-riot-bannon-trump-4a4cf324096fc1bfed204d42b54d191e/"
+    }
+  ]
+}

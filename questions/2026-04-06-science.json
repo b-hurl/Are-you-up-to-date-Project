@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "q": "What has a recent analysis published in Economic Modeling associated with the enactment of cannabis legalization laws?",
+      "options": [
+        "Declining crime rates",
+        "Increased traffic accidents",
+        "Higher rates of drug abuse",
+        "No significant change in public safety"
+      ],
+      "a": 0,
+      "correctText": "A recent analysis has associated the enactment of cannabis legalization laws with declining crime rates.",
+      "source": "https://norml.org/news/2026/03/26/analysis-cannabis-legalization-laws-associated-with-lower-crime-rates/"
+    },
+    {
+      "q": "Which plastic chemicals have been linked to millions of preterm births and thousands of infant deaths worldwide in a recent study?",
+      "options": [
+        "Phthalates",
+        "Polyethylene",
+        "Polystyrene",
+        "Polypropylene"
+      ],
+      "a": 0,
+      "correctText": "A new study has linked phthalates, specifically DEHP and DiNP, to millions of preterm births and thousands of infant deaths.",
+      "source": "https://www.cnn.com/2026/03/31/health/phthalates-infant-death-prematurity-wellness?cid=ios_app"
+    },
+    {
+      "q": "According to a recent twin study, what factors primarily explain the link between higher formal education and lower scores on right-wing authoritarianism?",
+      "options": [
+        "Childhood environments and genetics",
+        "Income level and social status",
+        "Direct impact of schooling only",
+        "Geographic location and cultural background"
+      ],
+      "a": 0,
+      "correctText": "A twin study reveals that most of the link between higher formal education and lower scores on right-wing authoritarianism is explained by childhood environments and genetics.",
+      "source": "https://www.psypost.org/twin-study-untangles-the-links-between-higher-education-and-authoritarian-attitu/"
+    },
+    {
+      "q": "What type of event did a Starlink satellite experience recently, resulting in it breaking apart into 'tens of objects'?",
+      "options": [
+        "An 'anomaly on-orbit'",
+        "A planned deorbit maneuver",
+        "A collision with space debris",
+        "A software update failure"
+      ],
+      "a": 0,
+      "correctText": "A Starlink satellite experienced an 'anomaly on-orbit' resulting in it breaking apart into 'tens of objects', with SpaceX confirming the event as a 'fragment creation event'.",
+      "source": "https://arstechnica.com/tech-policy/2026/03/starlink-satellite-breaks-apart-into-tens-of-objects-spacex-confirms-anomaly/"
+    },
+    {
+      "q": "A recent study has linked childhood trauma to an elevated risk of what in old age?",
+      "options": [
+        "Simultaneous physical and mental illness",
+        "Improved cognitive function",
+        "Early retirement",
+        "Increased bone density"
+      ],
+      "a": 0,
+      "correctText": "Childhood trauma has been linked to an elevated risk of simultaneous physical and mental illness in old age, predicting the later coexistence of chronic physical diseases and clinical depression.",
+      "source": "https://www.psypost.org/childhood-trauma-linked-to-elevated-risk-of-simultaneous-physical-and-mental-ill/"
+    }
+  ]
+}

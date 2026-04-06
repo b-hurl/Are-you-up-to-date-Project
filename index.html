@@ -843,11 +843,22 @@
 
         async function loadCategoryTrivia(category) {
             const gameDate = getGameDate();
-            const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
+            let filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
+            const response = await fetch(filePath + `?v=${Date.now()}`);
             
             updateHeaderSyncStatus('syncing');
             try {
-                const response = await fetch(filePath + `?v=${Date.now()}`);
+                let response = await fetch(filePath + `?v=${Date.now()}`);
+                
+                // Fallback to 'world' news if the specific category file is missing
+                if (!response.ok && category.toLowerCase() !== 'world') {
+                    console.warn(`Category ${category} not found for today. Attempting fallback to World news...`);
+                    filePath = `questions/${gameDate}-world.json`;
+                    response = await fetch(filePath + `?v=${Date.now()}`);
+                    category = 'World'; // Update category label for UI
+                }
+                
+
                 if (!response.ok) throw new Error("Category file not found");
                 
                 const data = await response.json();
@@ -1427,6 +1438,7 @@ function startNewSession(data, date, mode) {
         questions: data.questions.map(q => {
             return {
                 ...q,
+                category: q.category || (mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : "Trivia"),
                 correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
             };
         })

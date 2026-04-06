@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "q": "What Canadian government agency has invited citizens to participate in a survey regarding the brightness of car headlights?",
+      "options": [
+        "Transport Canada",
+        "Environment Canada",
+        "Health Canada",
+        "Public Safety Canada"
+      ],
+      "a": 0,
+      "correctText": "Transport Canada is conducting a survey to gather feedback on car headlight glare and its potential safety risks.",
+      "source": "https://www.cbc.ca/news/canada/london/transport-canada-headlight-glare-survey-9.7152195"
+    },
+    {
+      "q": "In which country did a Canadian individual recently face terrorism charges after a machete attack on a mosque?",
+      "options": [
+        "South Africa",
+        "Egypt",
+        "Kenya",
+        "Nigeria"
+      ],
+      "a": 2,
+      "correctText": "A Canadian man has been charged with terrorism after a machete attack at a mosque in Kenya.",
+      "source": "https://globalnews.ca/news/11758298/canadian-terrorism-charge-kenya-machete-attack-mosque/"
+    },
+    {
+      "q": "How long did it take a man in the Yukon to successfully grow a pineapple at home?",
+      "options": [
+        "1 year",
+        "3 years",
+        "5 years",
+        "9 years"
+      ],
+      "a": 3,
+      "correctText": "A man in the Yukon successfully grew a pineapple at home, a process that took him nine years.",
+      "source": "https://www.cbc.ca/news/canada/north/yukon-man-grows-pineapple-at-home-9.7152274"
+    },
+    {
+      "q": "According to a recent poll, what percentage of Canadians thought it would be a good idea for Canada to formally join the European Union?",
+      "options": [
+        "10 percent",
+        "25 percent",
+        "40 percent",
+        "58 percent"
+      ],
+      "a": 1,
+      "correctText": "A survey by Spark Advocacy's polling arm found that one in four respondents (25%) thought it would be a good idea for Canada to formally join the European Union, with a further 58% indicating it was a proposal worth exploring.",
+      "source": "https://www.bnnbloomberg.ca/business/economics/2026/04/06/canada-in-the-european-union-poll-suggests-broad-openness-to-the-idea/?lid=m7ascp3pqirx"
+    },
+    {
+      "q": "In the latest Liaison federal poll, which political party held a commanding 11-percentage-point lead?",
+      "options": [
+        "Conservative Party of Canada",
+        "New Democratic Party",
+        "Liberal Party of Canada",
+        "Bloc Québécois"
+      ],
+      "a": 2,
+      "correctText": "The latest Weekly Federal Tracker from Liaison Stratégies shows the Liberal Party maintaining an 11-percentage-point lead over the Conservatives.",
+      "source": "https://press.liaisonstrategies.ca/federal-tracker-liberals-maintain-double-digit-lead/"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "Which nation qualified for the 2026 World Cup after defeating Italy in a penalty shootout?",
+      "options": ["Bosnia-Herzegovina", "Sweden", "North Macedonia", "Wales"],
+      "a": 0,
+      "correctText": "Bosnia-Herzegovina qualified for the 2026 World Cup by beating Italy in a penalty shootout.",
+      "source": "https://www.fifa.com/en/match-centre/match/520/288329/288341/400021427"
+    },
+    {
+      "q": "What was the primary reason the NFL reportedly scrapped dual Monday Night Football games, citing fan feedback?",
+      "options": ["Low viewership numbers", "Scheduling conflicts with other sports", "Fans felt conflicted to choose between games", "Player safety concerns"],
+      "a": 2,
+      "correctText": "The NFL scrapped dual Monday Night Football games, as fans reportedly felt conflicted to choose between them, among other criticisms.",
+      "source": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/nfl-scrapped-dual-mnf-games-after-concluding-fans-felt-like-they-were-conflicted-to-choose"
+    },
+    {
+      "q": "For the first time in their history, Italy has failed to qualify for how many consecutive World Cups?",
+      "options": ["One", "Two", "Three", "Four"],
+      "a": 2,
+      "correctText": "Italy failed to qualify for three consecutive World Cups (2018, 2022, and 2026) for the first time in their history.",
+      "source": "https://www.cbssports.com/soccer/news/world-cup-qualifying-italy-sweden-turkiye-czechia/"
+    },
+    {
+      "q": "When was the last time Italy won a knockout match at the World Cup, which due to recent qualification failures, means they will now wait a minimum of 24 years to potentially win another?",
+      "options": ["1982", "1994", "2006", "2010"],
+      "a": 2,
+      "correctText": "The last time Italy won a knockout match at the World Cup was the 2006 final. Due to failing to qualify for the 2026 World Cup, it will be a minimum of 24 years until they can win a knockout match again.",
+      "source": "http://news.bbc.co.uk/sport1/hi/football/world_cup_2006/4991652.stm"
+    },
+    {
+      "q": "Cleveland Browns Head Coach Todd Monken missed the NFL Head Coach Group Photo for what ironic reason?",
+      "options": ["He was stuck in traffic", "He was getting a haircut for the photo", "He was at another team event", "He was feeling unwell"],
+      "a": 1,
+      "correctText": "Todd Monken missed the NFL Head Coach Group Photo because he was getting a haircut for the photo itself.",
+      "source": "https://www.cleveland.com/browns/2026/03/todd-monken-solves-the-mystery-of-missing-his-1st-nfl-coachs-photo.html"
+    }
+  ]
+}

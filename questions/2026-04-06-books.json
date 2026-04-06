@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "q": "Who wrote the dystopian novel \"1984\"?",
+      "options": [
+        "Aldous Huxley",
+        "George Orwell",
+        "Ray Bradbury",
+        "F. Scott Fitzgerald"
+      ],
+      "a": 1,
+      "correctText": "George Orwell is the author of the renowned dystopian novel \"1984\".",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG_RagqD0-r7Mf7sKRq-HkhQJx_XW-TTPcZOsfrmba-3Yd_QNY0U0OfjO8Yvl0U7eyXv0Ic8lP-su1-ZybItj2ibUYl8uxv8x6SK99IgGiK7PtaArXlywt8VwqNE11irnYg-lnWmm13AuzkF_W0C6lW1mc="
+    },
+    {
+      "q": "Which book is widely considered the best-selling single non-religious book of all time?",
+      "options": [
+        "A Tale of Two Cities",
+        "The Lord of the Rings",
+        "Don Quixote",
+        "The Little Prince"
+      ],
+      "a": 2,
+      "correctText": "\"Don Quixote\" by Miguel de Cervantes is widely recognized as the best-selling non-religious book of all time, with an estimated 500 million copies sold.",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkVfw72vHYqZVSMADRyyHE7APnXiCmD5eJZytV3Pweo9uLn2hw0-HPjAx8iIsLVKrcBEsYnIa_PQIKhfnv79B63FPW6oECCRulCW_U8E1YslzpngKA3hkXkryCHKa_x8BSvDbmlwgvcA4="
+    },
+    {
+      "q": "In which major city is Charles Dickens' novel \"Great Expectations\" primarily set?",
+      "options": [
+        "Paris",
+        "London",
+        "Edinburgh",
+        "Dublin"
+      ],
+      "a": 1,
+      "correctText": "The novel \"Great Expectations\" by Charles Dickens is primarily set in Kent and London during the early to mid-19th century.",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ-vi4YG9zwyotVrca4KBuSETgU7OWOEWE5kiSQQFBc5xyNxmRc0h3txgwO0XLye8JbUN4DGzm5RXpleMyumWv3oauLNJkE5Pwy7u_cDfxBkCCRdGX7WxBay475T3uHDSECq-K_bFjrH0tcg=="
+    },
+    {
+      "q": "Which author created the iconic detective character Sherlock Holmes?",
+      "options": [
+        "Agatha Christie",
+        "Arthur Conan Doyle",
+        "Edgar Allan Poe",
+        "Mark Twain"
+      ],
+      "a": 1,
+      "correctText": "Sir Arthur Conan Doyle is the Scottish writer best known for creating the character Sherlock Holmes.",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbNzOiRU2QqLqfrc5ZIL4QXUGJsjB5-5Vx_9IjNan7ldaZ0IC8Re_EpwMmoi8KNqJi50IuqzML99xxx1dNATJbvH8RGss2ogstpXnqAEGsR1p14tG7Hr2vogS6cetpl6g7AdpXdtGD7jWwQlM_BGgv5jw="
+    },
+    {
+      "q": "What is the original British title of the first book in the Harry Potter series?",
+      "options": [
+        "Harry Potter and the Chamber of Secrets",
+        "Harry Potter and the Prisoner of Azkaban",
+        "Harry Potter and the Philosopher's Stone",
+        "Harry Potter and the Goblet of Fire"
+      ],
+      "a": 2,
+      "correctText": "The first novel in the Harry Potter series, published in the United Kingdom, is titled \"Harry Potter and the Philosopher's Stone\".",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQgx1J1ta7TfEqwKEBpSXOa_hiJwc7cz6WyMkuTkdiwl8tOh5iDv8Ypc4RrJDdkC1GlNO7esMfAJcYv81MvtFnSujmWKPDJ6RwQ08D1roLdgFAlfgfrTHNwjFEeDj1LiR1LEr-bgAjDOk-7E1LD93YGNCR-FYT9YyfYE8ovdbv3FxEnw=="
+    }
+  ]
+}

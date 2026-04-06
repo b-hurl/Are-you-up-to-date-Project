@@ -105,6 +105,7 @@ async function runAutomation() {
                   "options": ["Correct", "Wrong", "Wrong", "Wrong"],
                   "a": 0,
                   "correctText": "Correct",
+                  "category": "${category.charAt(0).toUpperCase() + category.slice(1)}",
                   "source": "URL to the news story"
                 }
               ]
@@ -117,7 +118,12 @@ async function runAutomation() {
             responseText = responseText.replace(/```json|```/g, "").trim();
             
             // Validate JSON before saving
-            const validated = JSON.parse(responseText); 
+            let validated = JSON.parse(responseText); 
+
+            // Manually inject category metadata to ensure frontend compatibility
+            if (validated.questions && Array.isArray(validated.questions)) {
+                validated.questions = validated.questions.map(q => ({ ...q, category: category.charAt(0).toUpperCase() + category.slice(1) }));
+            }
 
             const filePath = `./questions/${dateStr}-${category}.json`;
             fs.writeFileSync(filePath, JSON.stringify(validated, null, 2));

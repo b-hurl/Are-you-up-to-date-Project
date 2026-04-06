@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "What was the codename of the 7+ year in-development title that Eidos Montreal recently canceled, leading to significant layoffs?",
+      "options": ["Wildlands", "Project Atlas", "Starfall", "Epoch"],
+      "a": 0,
+      "correctText": "Eidos Montreal canceled a project codenamed 'Wildlands' (also known as P11) that had been in development for over seven years and cost hundreds of millions of dollars.",
+      "source": "https://insider-gaming.com/eidos-montreal-wildlands-cancellation/"
+    },
+    {
+      "q": "Which game, featuring iconic Nintendo and Sega characters, was recently delisted from the Nintendo Switch eShop in various regions?",
+      "options": ["Mario Kart 8 Deluxe", "Super Smash Bros. Ultimate", "Mario & Sonic at the Olympic Games Tokyo 2020", "Sonic Frontiers"],
+      "a": 2,
+      "correctText": "Mario & Sonic at the Olympic Games Tokyo 2020 was delisted from the Nintendo Switch eShop in North America, Australia, and Japan.",
+      "source": "https://gonintendo.com/contents/59429-mario-sonic-at-the-olympic-games-tokyo-2020-delisted-from-the-switch-eshop"
+    },
+    {
+      "q": "Which survival game recently released its fifth and final episode of the Wintermute story mode, 'The Light at the End of All Things,' almost a decade after its initial early access launch?",
+      "options": ["Subnautica", "Rust", "The Long Dark", "ARK: Survival Evolved"],
+      "a": 2,
+      "correctText": "The Long Dark released 'The Light at the End of All Things,' its fifth and final episode of the Wintermute story mode, almost a decade after the game's initial launch.",
+      "source": "https://store.steampowered.com/news/app/305620/view/526497504443760877?l=english"
+    },
+    {
+      "q": "Build a Rocket Boy's CEO, Mark Gerhard, recently claimed that a new mission in which of their games would include evidence of alleged sabotage?",
+      "options": ["EVERYWHERE", "MindsEye", "Project C", "Frontier"],
+      "a": 1,
+      "correctText": "Build a Rocket Boy CEO Mark Gerhard announced a new mission for MindsEye, titled 'Blacklist,' which he claims will feature evidence of alleged sabotage against the game.",
+      "source": "https://www.ign.com/articles/new-mindseye-mission-will-reveal-evidence-the-game-was-sabotaged-claims-ceo"
+    },
+    {
+      "q": "What new Pokémon game, released in March 2026, is credited with significantly increasing Nintendo Switch 2 sales in the UK?",
+      "options": ["Pokémon Scarlet and Violet", "Pokémon Legends: Arceus", "Pokémon Pokopia", "Pokémon Unite"],
+      "a": 2,
+      "correctText": "Nintendo Switch 2 sales in the UK more than doubled following the release of Pokémon Pokopia in March 2026.",
+      "source": "https://gameobserver.com/switch-2-sales-more-than-doubled-in-uk-following-pokemon-pokopia-release/"
+    }
+  ]
+}

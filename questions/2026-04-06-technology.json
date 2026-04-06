@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "Which country has reportedly threatened to attack major U.S. tech companies like Apple, Google, and Microsoft starting April 1, 2026?",
+      "options": ["Iran", "North Korea", "China", "Russia"],
+      "a": 0,
+      "correctText": "Iran",
+      "source": "https://gizmodo.com/iran-threatens-to-attack-u-s-tech-companies-starting-april-1-2000740363"
+    },
+    {
+      "q": "A recent report highlighted a stealthy startup that pitched 'brainless human clones' for full-body replacement as a pathway to eternal life. What is the name of this startup?",
+      "options": ["R3 Bio", "Immortal Solutions", "NeuroClone Inc.", "Vitality Genesis"],
+      "a": 0,
+      "correctText": "R3 Bio",
+      "source": "https://www.technologyreview.com/2026/03/30/1134780/r3-bio-brainless-human-clones-full-body-replacement-john-schloendorn-aging-longevity/"
+    },
+    {
+      "q": "Researchers at which renowned institution recently announced advancements in improving cartilage repair through cell therapy?",
+      "options": ["Massachusetts Institute of Technology (MIT)", "Stanford University", "California Institute of Technology (Caltech)", "Harvard University"],
+      "a": 0,
+      "correctText": "Massachusetts Institute of Technology (MIT)",
+      "source": "https://news.mit.edu/2026/improving-cartilage-repair-through-cell-therapy-0319"
+    },
+    {
+      "q": "According to a recent FTC report, which popular dating app was found to have shared approximately 3 million user photos with a facial recognition firm without explicit user consent?",
+      "options": ["OkCupid", "Tinder", "Bumble", "Hinge"],
+      "a": 0,
+      "correctText": "OkCupid",
+      "source": "https://arstechnica.com/tech-policy/2026/03/okcupid-match-pay-no-fine-for-sharing-user-photos-with-facial-recognition-firm/"
+    },
+    {
+      "q": "Google recently rolled out a long-awaited feature for Gmail users. What new capability allows users to change their primary @gmail.com address without losing emails or data?",
+      "options": ["Changing their email address without deleting the account", "Implementing end-to-end encryption for all emails", "Integrating with a new social media platform", "Offering unlimited cloud storage for all users"],
+      "a": 0,
+      "correctText": "Changing their email address without deleting the account",
+      "source": "https://www.kare11.com/article/news/nation-world/gmail-users-can-now-change-their-email-address-heres-how/85-3269b9f9-aa11-409d-8d5f-141a27e7706d"
+    }
+  ]
+}

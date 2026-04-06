@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "q": "How many episodes of 'Sesame Street' is Tubi adding to its free streaming service starting April 1, 2026?",
+      "options": ["250", "100", "500", "75"],
+      "a": 0,
+      "correctText": "Tubi is adding 250 episodes of 'Sesame Street' to its free streaming service.",
+      "source": "https://variety.com/2026/tv/news/tubi-sesame-street-free-streaming-1236703842/"
+    },
+    {
+      "q": "Which actor announced the official wrap of 'Jumanji 3' production, dedicating it to Robin Williams?",
+      "options": ["Kevin Hart", "Jack Black", "Dwayne Johnson", "Karen Gillan"],
+      "a": 2,
+      "correctText": "Dwayne Johnson announced the official wrap of 'Jumanji 3' production and dedicated the final installment to Robin Williams.",
+      "source": "https://www.hungamaexpress.com/news/44060-dwayne-johnson-gets-emotional-as-jumanji-journey-comes-to-an-end"
+    },
+    {
+      "q": "The original voice cast of 'The Powerpuff Girls' recently reunited. Which character's voice actor, Tom Kane, was part of this reunion after suffering a stroke in 2020?",
+      "options": ["Blossom", "Bubbles", "Buttercup", "Professor Utonium"],
+      "a": 3,
+      "correctText": "The original voice cast of 'The Powerpuff Girls' reunited, including Tom Kane, the voice actor for Professor Utonium, who suffered a stroke in 2020.",
+      "source": "https://people.com/powerpuff-girls-cast-reunites-lexington-comic-and-toy-convention-11937656"
+    },
+    {
+      "q": "What is the reason for the strike by Alamo Drafthouse workers in Colorado, starting April 1, 2026?",
+      "options": ["Low wages", "Poor working conditions", "Shift to phone orders during movies", "Lack of benefits"],
+      "a": 2,
+      "correctText": "Alamo Drafthouse workers in Colorado are striking over the shift to phone orders during movies.",
+      "source": "https://www.thewrap.com/creative-content/movies/alamo-drafthouse-colorado-strike-phone-orders/"
+    },
+    {
+      "q": "When is the new 'Supergirl' movie, for which an official trailer was recently released, scheduled to land in cinemas?",
+      "options": ["May 29, 2026", "June 26, 2026", "July 11, 2026", "December 25, 2026"],
+      "a": 1,
+      "correctText": "The new 'Supergirl' movie is scheduled to land in cinemas on June 26, 2026.",
+      "source": "https://www.youtube.com/watch?v=UyoSARnKIRU"
+    }
+  ]
+}
