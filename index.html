@@ -77,6 +77,8 @@
         @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-5px); } }
         .shake { animation: shake 0.4s ease-in-out; }
         .shake-infinite { animation: shake 0.3s ease-in-out infinite; }
+        @keyframes heartbeat { 0% { transform: scale(1); } 14% { transform: scale(1.1); } 28% { transform: scale(1); } 42% { transform: scale(1.1); } 70% { transform: scale(1); } }
+        .heartbeat-pulse { animation: heartbeat 0.6s infinite; }
         @keyframes streak-pop { 0% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(0); opacity: 0; } }
         .streak-anim { animation: streak-pop 1.4s ease-in-out forwards; }
         @keyframes text-glow { 0%, 100% { opacity: 1; text-shadow: 0 0 0 transparent; } 50% { opacity: 0.8; text-shadow: 0 0 10px rgba(255,255,255,0.8); } }
@@ -622,8 +624,11 @@
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
             <div class="flex items-center gap-3">
-                <!-- New Timer Display -->
-                <div id="question-timer" class="text-xl font-bold text-primary-400">60</div>
+                <!-- Question Timer with Progress Bar -->
+                <div id="question-timer-container" class="relative w-24 h-6 bg-slate-700 rounded-full overflow-hidden transition-transform duration-300">
+                    <div id="question-progress-bar" class="absolute top-0 left-0 h-full bg-primary-400 transition-all duration-1000 ease-linear"></div>
+                    <div id="question-timer" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-white z-10">60</div>
+                </div>
                 <!-- New Sync Status -->
                 <div id="header-sync-status" class="hidden flex items-center gap-1 opacity-0 transition-opacity duration-300">
                      <span id="header-sync-icon" class="text-[10px]">🔄</span>
@@ -805,7 +810,9 @@
             finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',
             perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
             streak: 'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3',
-            lock: 'https://assets.mixkit.co/active_storage/sfx/2859/2859-preview.mp3'
+            lock: 'https://assets.mixkit.co/active_storage/sfx/2859/2859-preview.mp3',
+            tick: 'https://assets.mixkit.co/active_storage/sfx/650/650-preview.mp3',
+            heartbeat: 'https://assets.mixkit.co/active_storage/sfx/219/219-preview.mp3'
         };
 
         let isMuted = localStorage.getItem('trivia-muted') === 'true';
@@ -1556,7 +1563,13 @@ function renderQuestion() {
             progressBar.style.width = `${percentage}%`;
             progressBar.classList.toggle('bg-red-500', timeLeft <= 10);
             progressBar.classList.toggle('bg-primary-400', timeLeft > 10);
-            progressBar.parentElement.classList.toggle('shake-infinite', timeLeft <= 10 && timeLeft > 0);
+                progressBar.parentElement.classList.toggle('shake-infinite', timeLeft <= 10 && timeLeft > 3);
+                progressBar.parentElement.classList.toggle('heartbeat-pulse', timeLeft <= 3 && timeLeft > 0);
+                if (timeLeft <= 10 && timeLeft > 3) {
+                    playSound('tick');
+                } else if (timeLeft <= 3 && timeLeft > 0) {
+                    playSound('heartbeat');
+                }
         }
     };
 
@@ -1680,7 +1693,6 @@ function confirmAnswer() {
         playSound('correct');
     } else {
         currentStreak = 0;
-        buttons[selectedIdx].classList.add('incorrect');
         playSound('wrong');
         document.body.classList.add('failure-active');
         
