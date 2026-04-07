@@ -881,14 +881,17 @@
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             const playedModes = session.playedModes || [];
 
-            // Determine available categories. 
-            // 1. If freshGameData is null, we haven't even tried loading (pass null).
-            // 2. If it is an object, the fetch finished (even if empty). return the array.
-            const available = freshGameData 
-                ? [...new Set((freshGameData.questions || [])
+            // Determine available categories.
+            // 1. Loading state (freshGameData is null): Pass null to show all.
+            // 2. Data found: Pass the unique list of categories.
+            // 3. Pool is empty (Outage/Error): Pass null to show all as a fallback so the UI isn't blank.
+            const foundCats = (freshGameData && freshGameData.questions && freshGameData.questions.length > 0)
+                ? [...new Set(freshGameData.questions
                     .filter(q => q && q.category)
                     .map(q => q.category.toLowerCase().trim()))]
-                : null;
+                : [];
+
+            const available = foundCats.length > 0 ? foundCats : null;
 
             const container = document.getElementById('game-settings-root');
             if (!window.gameSettingsRoot) {
