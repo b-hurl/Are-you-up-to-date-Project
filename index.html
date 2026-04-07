@@ -3678,8 +3678,6 @@ async function checkWeeklyWinner() {
     if (!modal || !modal.classList.contains('hidden')) return;
 
     // Only show on home screen or results screen to avoid interrupting gameplay
-    const isHome = !document.getElementById('mode-selection').classList.contains('hidden');
-    const isResults = !document.getElementById('results-card').classList.contains('hidden');
         const settingsRoot = document.getElementById('game-settings-root');
         const resultsCard = document.getElementById('results-card');
         
