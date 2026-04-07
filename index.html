@@ -3974,7 +3974,8 @@ async function checkRemoteProgress(user) {
                 }
 
                 // Final UI Refresh now that data is merged and synced
-            if (!document.getElementById('results-card').classList.contains('hidden') && !isCategoryPlay) { // Only refresh leaderboard if not solo category/gauntlet
+            const isCategoryPlay = gameConfig.soloSubMode === 'categories';
+            if (!document.getElementById('results-card').classList.contains('hidden') && !isCategoryPlay) { 
                     fetchAndDisplayLeaderboard();
                     checkIfSubmitted();
                 }
