@@ -1281,6 +1281,8 @@
             
             // UI Updates
             document.getElementById('mode-selection').classList.add('hidden');
+            const settingsRoot = document.getElementById('game-settings-root');
+            if (settingsRoot) settingsRoot.classList.add('hidden');
             document.getElementById('question-text').classList.remove('hidden');
             
             try {
@@ -1294,6 +1296,8 @@
                 console.error("Game start error:", e);
                 document.getElementById('question-text').innerText = "Something went wrong starting the game. Please refresh.";
                 document.getElementById('mode-selection').classList.remove('hidden');
+                const settingsRoot = document.getElementById('game-settings-root');
+                if (settingsRoot) settingsRoot.classList.remove('hidden');
             }
         }
 
@@ -3676,6 +3680,11 @@ async function checkWeeklyWinner() {
     // Only show on home screen or results screen to avoid interrupting gameplay
     const isHome = !document.getElementById('mode-selection').classList.contains('hidden');
     const isResults = !document.getElementById('results-card').classList.contains('hidden');
+        const settingsRoot = document.getElementById('game-settings-root');
+        const resultsCard = document.getElementById('results-card');
+        
+        const isHome = settingsRoot && !settingsRoot.classList.contains('hidden');
+        const isResults = resultsCard && !resultsCard.classList.contains('hidden');
     if (!isHome && !isResults) return;
 
     const groups = getMyGroups();
