@@ -40,7 +40,7 @@ const MenuView = ({ title, children, footer, onBack, backLabel }) => (
     </>
 );
 
-const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
+const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCategories = [] }) => {
     const { useState, useEffect } = React;
     const [config, setConfig] = useState({
         gameMode: currentConfig?.gameMode || null,
@@ -172,7 +172,11 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [] }) => {
     const renderCategoryOptions = () => (
         <MenuView title="Select a Category" onBack={() => handleSoloSubModeSelection(null)} backLabel="Back to Solo Play">
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
-                {CATEGORIES.map(category => {
+                {CATEGORIES.filter(cat => 
+                    // Only show category if it has questions available today 
+                    // or if the data hasn't loaded yet (to prevent a blank screen)
+                    availableCategories.length === 0 || availableCategories.includes(cat)
+                ).map(category => {
                     const isPlayed = playedModes.includes(category);
                     return (
                         <MenuButton

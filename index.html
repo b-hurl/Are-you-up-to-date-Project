@@ -889,13 +889,20 @@
             }
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             const playedModes = session.playedModes || [];
+
+                    // Determine which categories actually have questions available today
+            const available = freshGameData?.questions 
+            ? [...new Set(freshGameData.questions.map(q => q.category.toLowerCase().trim()))] 
+            : [];
+
             
             const root = ReactDOM.createRoot(document.getElementById('game-settings-root'));
             root.render(
                 React.createElement(window.GameSettings, {
                     currentConfig: gameConfig,
                     onUpdate: handleConfigUpdate,
-                    playedModes: playedModes
+                playedModes: playedModes,
+                availableCategories: available
                 })
             );
         }
