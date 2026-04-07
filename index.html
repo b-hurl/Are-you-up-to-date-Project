@@ -1612,7 +1612,6 @@ function renderQuestion() {
     // Start Countdown Interval
     questionTimerInterval = setInterval(() => {
         timeLeft--;
-    const isPro = document.body.classList.contains('theme-professional');
         updateTimerUI();
         if (timeLeft <= 0) {
             clearInterval(questionTimerInterval);
