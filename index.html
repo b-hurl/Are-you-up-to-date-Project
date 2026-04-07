@@ -819,6 +819,7 @@
         let currentInviteGroupId = null;
         let remoteUserProgress = null;
         let leaderboardMode = 'casual';
+        let verifiedCategories = null;
         let timerInterval = null;
         let rankingsListener = null;
         let locationPromise = null;
@@ -881,17 +882,11 @@
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             const playedModes = session.playedModes || [];
 
-            // Determine available categories.
-            // 1. Loading state (freshGameData is null): Pass null to show all.
-            // 2. Data found: Pass the unique list of categories.
-            // 3. Pool is empty (Outage/Error): Pass null to show all as a fallback so the UI isn't blank.
-            const foundCats = (freshGameData && freshGameData.questions && freshGameData.questions.length > 0)
-                ? [...new Set(freshGameData.questions
-                    .filter(q => q && q.category)
-                    .map(q => q.category.toLowerCase().trim()))]
-                : [];
-
-            const available = foundCats.length > 0 ? foundCats : null;
+            // Determine available categories. 
+            // We now use verifiedCategories (probed filenames) as the source of truth.
+            // If null (loading), React shows all as a fallback.
+            // If an array (even empty), React strictly filters.
+            const available = verifiedCategories;
 
             const container = document.getElementById('game-settings-root');
             if (!window.gameSettingsRoot) {
@@ -902,8 +897,8 @@
                 React.createElement(window.GameSettings, {
                     currentConfig: gameConfig,
                     onUpdate: handleConfigUpdate,
-                playedModes: playedModes,
-                availableCategories: available
+                    playedModes: playedModes,
+                    availableCategories: available
                 })
             );
         }
@@ -1302,6 +1297,24 @@
             exportStateToURL();
         }
 
+        async function probeAvailableCategories() {
+            const gameDate = getGameDate();
+            const categories = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
+            const available = [];
+            
+            // Check for individual category files using HEAD requests (fast, no body download)
+            const checks = categories.map(async (cat) => {
+                try {
+                    const response = await fetch(`questions/${gameDate}-${cat}.json`, { method: 'HEAD' });
+                    if (response.ok) available.push(cat);
+                } catch (e) {}
+            });
+            
+            await Promise.all(checks);
+            verifiedCategories = available;
+            renderGameSettings(); // Refresh React UI with strict filtering
+        }
+
 // Helper to ensure keys always match regardless of JSON formatting typos
 // --- UTILITIES ---
 // Use a standard function to ensure hoisting (available everywhere in script)
@@ -1349,6 +1362,7 @@ async function startApp() {
     console.log("Initializing app for date:", gameDate);
     checkGlobalMessage();
     checkMaintenanceMode();
+    probeAvailableCategories(); // Probe file existence in background
 
     // Load today's trivia data for legacy modes (casual/professional mix)
     // and for general question pool for category mode filtering.
