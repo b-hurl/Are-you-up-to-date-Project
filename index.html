@@ -1640,9 +1640,12 @@ function confirmAnswer() {
 
     const buttons = document.querySelectorAll('.option-btn');
     document.getElementById('action-area').innerHTML = '';
-    buttons[selectedIdx].classList.remove('selected');
+            
+            if (selectedIdx !== null) {
+                buttons[selectedIdx].classList.remove('selected');
+            }
 
-    if (isCurrentSelectionCorrect) {
+            if (selectedIdx !== null && isCurrentSelectionCorrect) {
         score++;
         currentStreak++;
         
