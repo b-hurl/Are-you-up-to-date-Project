@@ -1637,13 +1637,21 @@ function renderQuestion() {
 let isProcessing = false; // Add this at the top of your script
 
 function confirmAnswer() {
-    if (isProcessing) return; 
-    isProcessing = true;
-
+    // Stop the timer immediately, even if we are already processing,
+    // to prevent the "counting down between questions" bug.
     if (questionTimerInterval) {
         clearInterval(questionTimerInterval);
         questionTimerInterval = null;
     }
+
+    if (isProcessing) return; 
+    isProcessing = true;
+
+    // Reset the timer variables immediately so the next question 
+    // starts fresh and the UI doesn't show the old time during transition.
+    globalTimeLeft = QUESTION_TIME_LIMIT;
+    const progressBar = document.getElementById('question-progress-bar');
+    if (progressBar) progressBar.parentElement.classList.remove('shake-infinite', 'heartbeat-pulse');
     
     // Initialize the choices array if it doesn't exist
     if (!window.userChoices) window.userChoices = [];
