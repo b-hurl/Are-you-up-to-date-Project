@@ -838,8 +838,9 @@
         let locationPromise = null;
         let toastTimeout = null;
         // New timer variables for question timer
-        let questionTimerInterval = null;
+        let questionTimerInterval = null; // Interval ID for the timer
         const QUESTION_TIME_LIMIT = 60; // 60 seconds for each question
+        let globalTimeLeft = QUESTION_TIME_LIMIT; // Global variable to store remaining time
 
         // Global state for game configuration, managed by React component
         let gameConfig = {
@@ -1433,6 +1434,7 @@ async function startApp() {
             currentIdx = session.currentIdx;
             score = session.score;
             currentStreak = session.currentStreak || 0;
+            globalTimeLeft = session.timeLeft || QUESTION_TIME_LIMIT; // Restore remaining time
             window.userChoices = session.userChoices || [];
             selectedIdx = session.selectedIdx ?? null;
             
@@ -1483,6 +1485,7 @@ function showModeSelection() {
 }
 
 function startNewSession(data, date, mode) {
+    globalTimeLeft = QUESTION_TIME_LIMIT; // Reset for a new question/session
     console.log("startNewSession called. Initial questions (before client-side shuffle):", data.questions.map(q => q.q));
     if (questionTimerInterval) {
         clearInterval(questionTimerInterval);
@@ -1554,28 +1557,27 @@ function renderQuestion() {
     if (questionTimerInterval) clearInterval(questionTimerInterval);
 
     // Reset timer
-    let timeLeft = QUESTION_TIME_LIMIT;
     const timerDisplay = document.getElementById('question-timer');
     const progressBar = document.getElementById('question-progress-bar');
-    // Reset overlay for new question
+    // Reset overlay for the new question
     document.getElementById('times-up-overlay').classList.add('hidden');
 
     const updateTimerUI = () => {
-        const percentage = (timeLeft / QUESTION_TIME_LIMIT) * 100;
+        const percentage = (globalTimeLeft / QUESTION_TIME_LIMIT) * 100;
         if (timerDisplay) {
-            timerDisplay.innerText = timeLeft;
-            timerDisplay.classList.toggle('text-red-500', timeLeft <= 10);
-            timerDisplay.classList.toggle('text-white', timeLeft > 10);
+            timerDisplay.innerText = globalTimeLeft;
+            timerDisplay.classList.toggle('text-red-500', globalTimeLeft <= 10);
+            timerDisplay.classList.toggle('text-white', globalTimeLeft > 10);
         }
         if (progressBar) {
-            progressBar.style.width = `${percentage}%`;
-            progressBar.classList.toggle('bg-red-500', timeLeft <= 10);
-            progressBar.classList.toggle('bg-primary-400', timeLeft > 10);
-                progressBar.parentElement.classList.toggle('shake-infinite', timeLeft <= 10 && timeLeft > 3);
-                progressBar.parentElement.classList.toggle('heartbeat-pulse', timeLeft <= 3 && timeLeft > 0);
-                if (timeLeft <= 10 && timeLeft > 3) {
+            progressBar.style.width = `${percentage}%`; // Use globalTimeLeft
+            progressBar.classList.toggle('bg-red-500', globalTimeLeft <= 10);
+            progressBar.classList.toggle('bg-primary-400', globalTimeLeft > 10);
+            progressBar.parentElement.classList.toggle('shake-infinite', globalTimeLeft <= 10 && globalTimeLeft > 3);
+            progressBar.parentElement.classList.toggle('heartbeat-pulse', globalTimeLeft <= 3 && globalTimeLeft > 0);
+            if (globalTimeLeft <= 10 && globalTimeLeft > 3) {
                     playSound('tick');
-                } else if (timeLeft <= 3 && timeLeft > 0) {
+            } else if (globalTimeLeft <= 3 && globalTimeLeft > 0) {
                     playSound('heartbeat');
                 }
         }
@@ -1640,9 +1642,9 @@ function renderQuestion() {
 
     // Start Countdown Interval
     questionTimerInterval = setInterval(() => {
-        timeLeft--;
+        globalTimeLeft--; // Decrement globalTimeLeft
         updateTimerUI();
-        if (timeLeft <= 0) {
+        if (globalTimeLeft <= 0) { // Check globalTimeLeft
             clearInterval(questionTimerInterval);
             questionTimerInterval = null;
             confirmAnswer(); // Automatically confirm the answer. If nothing is selected, it will be treated as skipped.
@@ -3602,7 +3604,8 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
         userChoices: window.userChoices || [],
         selectedIdx: selectedIdx,
         playedModes: playedModes, // Save the array
-        activeMode: activeMode
+        activeMode: activeMode,
+        timeLeft: globalTimeLeft // Save the remaining time
     };
     localStorage.setItem('trivia-session', JSON.stringify(session));
     exportStateToURL();
@@ -3622,6 +3625,7 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
                         'currentSession.currentStreak': session.currentStreak,
                         'currentSession.isFinished': session.isFinished,
                         'currentSession.userChoices': session.userChoices,
+                        'currentSession.timeLeft': session.timeLeft,
                         'currentSession.selectedIdx': session.selectedIdx,
                         'currentSession.playedModes': session.playedModes,
                         'currentSession.date': session.date,
@@ -4045,6 +4049,7 @@ async function checkRemoteProgress(user) {
                     currentIdx = parseInt(s.currentIdx) || 0;
                     score = parseInt(s.score) || 0;
                     currentStreak = parseInt(s.currentStreak) || 0;
+                    globalTimeLeft = parseInt(s.timeLeft) || QUESTION_TIME_LIMIT; // Restore timeLeft
                     window.userChoices = s.userChoices || [];
                     selectedIdx = s.selectedIdx;
                     
