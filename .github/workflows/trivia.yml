@@ -27,13 +27,14 @@ jobs:
           #cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install @google/generative-ai axios rss-parser
+        run: npm install @google/generative-ai axios rss-parser https-proxy-agent
 
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)
         run: node node.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PROXY_URL: ${{ secrets.PROXY_URL }}
 
       - name: Create Casual & Professional Mixes
         # This script combines them into the 10-question "Mix" files

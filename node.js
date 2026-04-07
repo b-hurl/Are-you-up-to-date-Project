@@ -2,6 +2,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const axios = require('axios');
 const fs = require('fs');
 const Parser = require('rss-parser');
+const { HttpsProxyAgent } = require('https-proxy-agent');
 const dir = './questions';
 
 if (!fs.existsSync(dir)){
@@ -48,6 +49,10 @@ async function runAutomation() {
     const retryLimit = 3;
     const attempts = {};
 
+    // Initialize Proxy Agent if PROXY_URL is provided
+    const proxyUrl = process.env.PROXY_URL;
+    const httpsAgent = proxyUrl ? new HttpsProxyAgent(proxyUrl) : null;
+
     while (queue.length > 0) {
         const category = queue.shift();
         const subreddits = CONFIG[category];
@@ -68,6 +73,7 @@ async function runAutomation() {
                             'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
                             'Cache-Control': 'no-cache'
                         },
+                        httpsAgent,
                         timeout: 10000
                     });
                     
