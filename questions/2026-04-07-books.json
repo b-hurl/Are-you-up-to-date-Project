@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What U.S. state recently had an appellate court rule that it can enforce a law restricting LGBTQ+ books and topics in schools?",
+      "options": [
+        "Iowa",
+        "Ohio",
+        "Idaho",
+        "Illinois"
+      ],
+      "a": 0,
+      "correctText": "Iowa",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "According to an April 6, 2026, appellate court ruling, in what grade levels can Iowa schools now restrict teachers from discussing LGBTQ+ topics?",
+      "options": [
+        "K-6",
+        "7-12",
+        "K-12",
+        "All grades"
+      ],
+      "a": 0,
+      "correctText": "Kindergarten through sixth grade (K-6)",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "The Iowa law allowing for restrictions on LGBTQ+ books and topics in schools, which was recently cleared for enforcement by an appellate court, was initially approved by the governor and legislature in what year?",
+      "options": [
+        "2023",
+        "2024",
+        "2025",
+        "2022"
+      ],
+      "a": 0,
+      "correctText": "2023",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "What is the title of Yann Martel's new novel, which was recently featured with an exclusive excerpt and discussed at the Toronto Reference Library on April 7, 2026?",
+      "options": [
+        "Son of Nobody",
+        "Life of Pi Returns",
+        "The Trojan Scroll",
+        "Harlow's Epic"
+      ],
+      "a": 0,
+      "correctText": "Son of Nobody",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sen86g/yann_martel_is_coming_to_the_toronto_reference/"
+    },
+    {
+      "q": "Yann Martel, author of the recently released novel 'Son of Nobody', is most famously known for what Booker Prize-winning novel?",
+      "options": [
+        "Life of Pi",
+        "The High Mountains of Portugal",
+        "Beatrice and Virgil",
+        "The Facts Behind the Helsinki Roccamatios"
+      ],
+      "a": 0,
+      "correctText": "Life of Pi",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sen86g/yann_martel_is_coming_to_the_toronto_reference/"
+    }
+  ]
+}

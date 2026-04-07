@@ -26,9 +26,7 @@ const CONFIG = {
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Initialize RSS Parser with a custom User-Agent
-const parser = new Parser({
-    headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) DailyTriviaBot/1.0' }
-});
+const parser = new Parser();
 
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY, { apiVersion: "v1beta" });
@@ -64,8 +62,16 @@ async function runAutomation() {
             for (const sub of subreddits) {
                 try {
                     const rssUrl = `https://www.reddit.com/r/${sub}/.rss`;
-                    const feed = await parser.parseURL(rssUrl);
+                    const response = await axios.get(rssUrl, {
+                        headers: {
+                            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                            'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
+                            'Cache-Control': 'no-cache'
+                        },
+                        timeout: 10000
+                    });
                     
+                    const feed = await parser.parseString(response.data);
                     if (feed.items && feed.items.length > 0) {
                         redditData = feed.items;
                         break; 

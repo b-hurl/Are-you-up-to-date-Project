@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which actor, known for roles in 'Stranger Things' and 'Power Rangers', is hosting an AMA on Reddit today, April 7, 2026, to promote his new horror film 'Faces of Death'?",
+      "options": [
+        "Dacre Montgomery",
+        "Joe Keery",
+        "Finn Wolfhard",
+        "Caleb McLaughlin"
+      ],
+      "a": 0,
+      "correctText": "Dacre Montgomery is hosting an AMA on Reddit today, April 7, 2026.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sevonm/hi_rmovies_im_dacre_montgomery_you_may_know_me/"
+    },
+    {
+      "q": "Sony Pictures Entertainment announced a massive reorganization today, April 7, 2026, leading to layoffs across which divisions?",
+      "options": [
+        "Film, Television, and Corporate",
+        "Music and Gaming",
+        "Animation and Theme Parks",
+        "Publishing and Merchandising"
+      ],
+      "a": 0,
+      "correctText": "Sony Pictures Entertainment announced layoffs across its film, television, and corporate divisions.",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/sony-pictures-entertainment-layoffs-restructure-film-tv-corporate-april-7-2026/"
+    },
+    {
+      "q": "What was a key development reported today, April 7, 2026, regarding the Michael Jackson biopic 'Michael', involving a significant cost in reshoots?",
+      "options": [
+        "Adding new concert scenes",
+        "Removing child abuse allegations scenes",
+        "Changing the lead actor",
+        "Filming new documentary footage"
+      ],
+      "a": 1,
+      "correctText": "The Michael Jackson biopic underwent $10-15 million in reshoots to remove scenes depicting child abuse allegations.",
+      "category": "Entertainment",
+      "source": "https://theplaylist.net/michael-lionsgates-antoine-fuqua-directed-biopic-underwent-15m-reshoots-after-child-abuse-allegation-scenes-in-third-act-were-cut-report-20260407/"
+    },
+    {
+      "q": "Which director's new A24 film, starring Seth Rogen, Penélope Cruz, and Edward Norton, had its official trailer released today, April 7, 2026, for a movie titled 'The Invite'?",
+      "options": [
+        "Greta Gerwig",
+        "Wes Anderson",
+        "Olivia Wilde",
+        "Denis Villeneuve"
+      ],
+      "a": 2,
+      "correctText": "Olivia Wilde's new A24 film 'The Invite' had its official trailer released today, April 7, 2026.",
+      "category": "Entertainment",
+      "source": "https://vanyaland.com/2026/04/07/olivia-wildes-the-invite-gets-an-awkward-funny-trailer/"
+    },
+    {
+      "q": "What new movie trailer for a superhero film was revealed today, April 7, 2026, and discussed by a Kansas City comic store owner?",
+      "options": [
+        "Batman: Gotham's Reckoning",
+        "Superman: Last Son",
+        "Spider-Man: Brand New Day",
+        "Wonder Woman: Amazon Princess"
+      ],
+      "a": 2,
+      "correctText": "The new movie trailer for 'Spider-Man: Brand New Day' was revealed today, April 7, 2026.",
+      "category": "Entertainment",
+      "source": "https://missourinet.com/2026/04/07/kansas-city-comic-store-reveals-the-details-of-new-spider-man-movie-trailer-listen/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who is the projected No. 1 overall pick in the 2026 NFL Draft who announced on April 7, 2026, that he will not attend the draft in Pittsburgh?",
+      "options": [
+        "Fernando Mendoza",
+        "Caleb Williams",
+        "Quinn Ewers",
+        "Marvin Harrison Jr."
+      ],
+      "a": 0,
+      "correctText": "Fernando Mendoza, the Indiana quarterback and Heisman Trophy winner, announced his decision to skip the draft in Pittsburgh on April 7, 2026.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sf2yxm/projected_no_1_overall_pick_fernando_mendoza_has/"
+    },
+    {
+      "q": "Which team won the 2026 NCAA Men's Basketball National Championship on April 6, 2026, securing their first title since 1989?",
+      "options": [
+        "Michigan Wolverines",
+        "UConn Huskies",
+        "Duke Blue Devils",
+        "Kansas Jayhawks"
+      ],
+      "a": 0,
+      "correctText": "The Michigan Wolverines defeated the UConn Huskies 69-63 on April 6, 2026, to win the NCAA Men's Basketball National Championship, their first since 1989.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sekiaq/michigan_wolverines_win_the_national_ncaa_mens/"
+    },
+    {
+      "q": "What former Chicago Bears icon was posthumously diagnosed with Stage 3 CTE on April 7, 2026, nearly a year after his death?",
+      "options": [
+        "Steve McMichael",
+        "Walter Payton",
+        "Mike Singletary",
+        "Dick Butkus"
+      ],
+      "a": 0,
+      "correctText": "Chicago Bears legend Steve 'Mongo' McMichael was posthumously diagnosed with Stage 3 CTE on April 7, 2026. He passed away on April 23, 2025, after a five-year battle with ALS.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sf37et/bears_icon_steve_mcmichael_diagnosed_with_cte/"
+    },
+    {
+      "q": "On April 6, 2026, which WNBA team acquired two-time All-Star Angel Reese from the Chicago Sky in exchange for two first-round draft picks?",
+      "options": [
+        "Atlanta Dream",
+        "Las Vegas Aces",
+        "New York Liberty",
+        "Seattle Storm"
+      ],
+      "a": 0,
+      "correctText": "The Atlanta Dream acquired Angel Reese from the Chicago Sky on April 6, 2026, in a trade that sent two first-round picks to the Sky.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1se2umj/wnbas_sky_trades_angel_reese_to_dream_for_2/"
+    },
+    {
+      "q": "The Michigan Wolverines defeated which team with a score of 69-63 in the 2026 NCAA Men's Basketball National Championship game?",
+      "options": [
+        "UConn Huskies",
+        "Duke Blue Devils",
+        "Purdue Boilermakers",
+        "Arizona Wildcats"
+      ],
+      "a": 0,
+      "correctText": "Michigan defeated the UConn Huskies 69-63 in the 2026 NCAA Men's Basketball National Championship game.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sekjoy/michigan_beats_uconn_for_1st_national_title_since/"
+    }
+  ]
+}

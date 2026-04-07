@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What major milestone did the Artemis II mission, launched on April 1, 2026, achieve as it journeyed around the Moon?",
+      "options": [
+        "Successfully landed humans on the lunar surface.",
+        "Established a permanent lunar base.",
+        "Broke the record for the farthest distance humans have traveled from Earth.",
+        "Discovered water ice at the lunar south pole."
+      ],
+      "a": 2,
+      "correctText": "The Artemis II mission, launched on April 1, 2026, is expected to break the record for the farthest distance humans have travelled from Earth as it performs a lunar flyby.",
+      "category": "Science",
+      "source": "https://www.aljazeera.com/news/2026/4/6/a-visual-guide-to-artemis-ii-and-previous-missions-to-the-moon"
+    },
+    {
+      "q": "A recent large-scale study identified a \"neural fingerprint\" common to several psychedelic drugs. What is a key characteristic of this shared effect on the brain?",
+      "options": [
+        "Decreased communication between brain networks.",
+        "Increased cross-talk between different brain systems.",
+        "Suppressed visual cortex activity only.",
+        "Reduced serotonin production."
+      ],
+      "a": 1,
+      "correctText": "A new major study identified a common 'neural fingerprint' of psychedelic drugs, finding they increase cross-talk between different brain systems.",
+      "category": "Science",
+      "source": "https://www.theguardian.com/science/2026/apr/06/scientists-identify-neural-fingerprint-of-psychedelic-drugs-in-the-brain"
+    },
+    {
+      "q": "According to a new study on human echolocation, what happens in the brains of expert blind echolocators as they use mouth clicks to perceive their surroundings?",
+      "options": [
+        "The brain processes a single \"optimal snapshot\" of sound.",
+        "Neural activity related to object location weakens with more clicks.",
+        "Information about object location accumulates over successive clicks, building spatial representations.",
+        "Only visual areas of the brain are activated."
+      ],
+      "a": 2,
+      "correctText": "New experimental EEG studies found that the accuracy of expert echolocators improved with each click, suggesting the brain accumulates acoustic evidence over time to build spatial representations.",
+      "category": "Science",
+      "source": "https://www.iflscience.com/blind-people-can-use-echolocation-to-see-and-now-we-know-whats-happening-in-their-brain-when-they-do-it-80727"
+    },
+    {
+      "q": "What significant geological activity was recently reported regarding Japan's Kikai Caldera, one of Earth's most explosive volcanoes?",
+      "options": [
+        "It has completely run out of magma and is now dormant.",
+        "Its enormous magma chamber is slowly refilling.",
+        "A new island has formed directly above it.",
+        "It experienced a minor eruption that caused no damage."
+      ],
+      "a": 1,
+      "correctText": "Researchers have revealed that Japan's Kikai Caldera, an underwater supervolcano, is slowly refilling with magma after its massive eruption 7,300 years ago.",
+      "category": "Science",
+      "source": "https://www.sciencealert.com/one-of-earths-most-explosive-volcanoes-is-quietly-refilling-with-magma"
+    },
+    {
+      "q": "Scientists recently identified the gene SLC35F2, solving a 30-year mystery. What is the primary function of the nutrient, queuosine, that this gene helps transport into human cells?",
+      "options": [
+        "It regulates blood sugar levels.",
+        "It strengthens bone density.",
+        "It is crucial for brain health, memory, stress response, and cancer defense.",
+        "It is responsible for muscle growth and repair."
+      ],
+      "a": 2,
+      "correctText": "Scientists identified the gene SLC35F2, which is responsible for transporting queuosine, a rare micronutrient crucial for brain health, memory, stress response, and cancer defense, into human cells.",
+      "category": "Science",
+      "source": "https://ufnews.ufl.edu/2026/04/07/scientists-solve-30-year-mystery-of-a-hidden-nutrient-that-protects-the-brain-and-fights-cancer/"
+    }
+  ]
+}

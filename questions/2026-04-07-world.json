@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What major Iranian oil facility was reportedly struck by US forces on April 7, 2026?",
+      "options": [
+        "Abadan Refinery",
+        "Kharg Island",
+        "Lavan Island",
+        "Bandar Abbas Refinery"
+      ],
+      "a": 1,
+      "correctText": "On April 7, 2026, US forces reportedly conducted new strikes on military targets on Iran's Kharg Island, a vital location for Iran's oil exports.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1settic/us_strikes_irans_main_oil_hub_on_kharg_island_as/"
+    },
+    {
+      "q": "On April 7, 2026, what action did Iran reportedly take regarding its direct diplomatic communications with the United States?",
+      "options": [
+        "Increased ambassadorial presence",
+        "Cut all direct diplomatic channels",
+        "Proposed new direct talks",
+        "Requested UN mediation for direct talks"
+      ],
+      "a": 1,
+      "correctText": "On April 7, 2026, Iran reportedly cut off direct diplomatic communications with the United States, although indirect talks were continuing through mediators.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sey6ua/iran_cuts_all_diplomatic_channels_with_us_ahead/"
+    },
+    {
+      "q": "Which two permanent members of the UN Security Council vetoed a resolution aimed at protecting shipping in the Strait of Hormuz on April 7, 2026?",
+      "options": [
+        "United States and United Kingdom",
+        "France and Germany",
+        "China and Russia",
+        "Russia and United Kingdom"
+      ],
+      "a": 2,
+      "correctText": "On April 7, 2026, China and Russia vetoed a UN Security Council resolution that aimed to protect commercial shipping in the Strait of Hormuz.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sf0cc4/china_and_russia_veto_un_resolution_on_protecting/"
+    },
+    {
+      "q": "According to a leaked phone call reported on April 7, 2026, which European leader reportedly offered extensive assistance to Russian President Vladimir Putin and compared himself to a 'mouse' helping a 'lion'?",
+      "options": [
+        "Emmanuel Macron",
+        "Olaf Scholz",
+        "Viktor Orbán",
+        "Giorgia Meloni"
+      ],
+      "a": 2,
+      "correctText": "On April 7, 2026, reports emerged of a leaked phone call from October 2025 where Hungarian Prime Minister Viktor Orbán offered extensive assistance to Russian President Vladimir Putin, reportedly comparing himself to a 'mouse' helping a 'lion'.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sewmv3/putins_mouse_leaked_phone_call_reveals_lengths/"
+    },
+    {
+      "q": "What specific deadline did US President Donald Trump set for Iran on April 7, 2026, regarding the Strait of Hormuz?",
+      "options": [
+        "To agree to a nuclear deal",
+        "To cease all military activity",
+        "To reopen the Strait of Hormuz",
+        "To release all prisoners"
+      ],
+      "a": 2,
+      "correctText": "On April 7, 2026, President Donald Trump set an 8 p.m. Eastern time deadline for Iran to agree to a deal to reopen the Strait of Hormuz, threatening severe consequences if it did not.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sev0hb/trump_says_a_whole_civilization_will_die_tonight/"
+    }
+  ]
+}

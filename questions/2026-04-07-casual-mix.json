@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-07",
+  "type": "casual-mix",
+  "questions": [
+    {
+      "q": "What U.S. state recently had an appellate court rule that it can enforce a law restricting LGBTQ+ books and topics in schools?",
+      "options": [
+        "Iowa",
+        "Ohio",
+        "Idaho",
+        "Illinois"
+      ],
+      "a": 0,
+      "correctText": "Iowa",
+      "category": "books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "The Michigan Wolverines defeated which team with a score of 69-63 in the 2026 NCAA Men's Basketball National Championship game?",
+      "options": [
+        "UConn Huskies",
+        "Duke Blue Devils",
+        "Purdue Boilermakers",
+        "Arizona Wildcats"
+      ],
+      "a": 0,
+      "correctText": "Michigan defeated the UConn Huskies 69-63 in the 2026 NCAA Men's Basketball National Championship game.",
+      "category": "sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sekjoy/michigan_beats_uconn_for_1st_national_title_since/"
+    },
+    {
+      "q": "What governmental body announced arrests in a multi-million dollar hospice fraud scheme today, April 7, 2026, involving health workers enrolling non-terminally ill patients, including a man with dementia, for 'sham hospice' benefits?",
+      "options": [
+        "Department of Justice (DOJ)",
+        "Federal Bureau of Investigation (FBI)",
+        "Centers for Medicare & Medicaid Services (CMS)",
+        "Department of Health and Human Services (HHS)"
+      ],
+      "a": 0,
+      "correctText": "The Department of Justice announced arrests in a significant hospice fraud case where health workers allegedly enrolled non-dying patients to claim Medicare benefits.",
+      "category": "health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlbkiAAD1h05RNWexGnGpgr5mdbVjQ2VqQccsOgVTtn8kuTfBYQsFJFFnKFmY7ChFY_mMZJybiS6XBgZ30CSqxHtrbQfU-Ld-PSLcjNWZd2ny0zmKE53YLVEXmlyEsVhWkIRlIZvmS-NUg1v8dvSwliYS3i1D0glu62f-GwlQn6xD4KZMyRp0rCygjZumuiOpwD9RFZQmmYuRFCSwvB7_FMKK5ZG8OfNW7_RXD4mF2mmV6uLBb3MmCdorbgG6ij0Vp4uLjsIDaF-cQ83-Se1v4GZ6nhw9kDxrKAGf7ij7oAw-L28PDVEnvAQ=="
+    },
+    {
+      "q": "Who is the projected No. 1 overall pick in the 2026 NFL Draft who announced on April 7, 2026, that he will not attend the draft in Pittsburgh?",
+      "options": [
+        "Fernando Mendoza",
+        "Caleb Williams",
+        "Quinn Ewers",
+        "Marvin Harrison Jr."
+      ],
+      "a": 0,
+      "correctText": "Fernando Mendoza, the Indiana quarterback and Heisman Trophy winner, announced his decision to skip the draft in Pittsburgh on April 7, 2026.",
+      "category": "sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sf2yxm/projected_no_1_overall_pick_fernando_mendoza_has/"
+    },
+    {
+      "q": "The Iowa law allowing for restrictions on LGBTQ+ books and topics in schools, which was recently cleared for enforcement by an appellate court, was initially approved by the governor and legislature in what year?",
+      "options": [
+        "2023",
+        "2024",
+        "2025",
+        "2022"
+      ],
+      "a": 0,
+      "correctText": "2023",
+      "category": "books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "What former Chicago Bears icon was posthumously diagnosed with Stage 3 CTE on April 7, 2026, nearly a year after his death?",
+      "options": [
+        "Steve McMichael",
+        "Walter Payton",
+        "Mike Singletary",
+        "Dick Butkus"
+      ],
+      "a": 0,
+      "correctText": "Chicago Bears legend Steve 'Mongo' McMichael was posthumously diagnosed with Stage 3 CTE on April 7, 2026. He passed away on April 23, 2025, after a five-year battle with ALS.",
+      "category": "sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sf37et/bears_icon_steve_mcmichael_diagnosed_with_cte/"
+    },
+    {
+      "q": "What was a key development reported today, April 7, 2026, regarding the Michael Jackson biopic 'Michael', involving a significant cost in reshoots?",
+      "options": [
+        "Adding new concert scenes",
+        "Removing child abuse allegations scenes",
+        "Changing the lead actor",
+        "Filming new documentary footage"
+      ],
+      "a": 1,
+      "correctText": "The Michael Jackson biopic underwent $10-15 million in reshoots to remove scenes depicting child abuse allegations.",
+      "category": "entertainment",
+      "source": "https://theplaylist.net/michael-lionsgates-antoine-fuqua-directed-biopic-underwent-15m-reshoots-after-child-abuse-allegation-scenes-in-third-act-were-cut-report-20260407/"
+    },
+    {
+      "q": "A free PlayStation 5 Pro update, including 4K visuals and enhanced ray tracing, for which game is set to be available on April 8, 2026?",
+      "options": [
+        "The Witcher 3: Wild Hunt",
+        "Red Dead Redemption 2",
+        "Cyberpunk 2077",
+        "Grand Theft Auto V"
+      ],
+      "a": 2,
+      "correctText": "A free PlayStation 5 Pro update for Cyberpunk 2077, featuring 4K, ray tracing, and up to 90 FPS modes, is scheduled for release on April 8, 2026.",
+      "category": "gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sf0f21/free_cyberpunk_2077_playstation_5_pro_update/"
+    },
+    {
+      "q": "According to an April 6, 2026, appellate court ruling, in what grade levels can Iowa schools now restrict teachers from discussing LGBTQ+ topics?",
+      "options": [
+        "K-6",
+        "7-12",
+        "K-12",
+        "All grades"
+      ],
+      "a": 0,
+      "correctText": "Kindergarten through sixth grade (K-6)",
+      "category": "books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "Which classic RPG's remake began pre-orders on April 7, 2026, with console versions including the original 'Gothic Classic' as a bonus?",
+      "options": [
+        "Gothic 1 Remake",
+        "Fable Remastered",
+        "Diablo II Resurrected",
+        "Titan Quest Anniversary Edition"
+      ],
+      "a": 0,
+      "correctText": "Pre-orders for 'Gothic 1 Remake' began on April 7, 2026, offering 'Gothic Classic' as a free bonus for console purchasers.",
+      "category": "gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1seyb2z/gothic_1_remake_preorder_trailer/"
+    }
+  ]
+}

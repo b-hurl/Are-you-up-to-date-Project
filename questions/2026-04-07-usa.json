@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What new authority did Florida Governor Ron DeSantis sign into law on April 7, 2026, regarding groups and student supporters?",
+      "options": [
+        "The ability to label groups as terrorist organizations and expel student supporters",
+        "The ability to ban certain books from state university libraries",
+        "The authority to increase tuition fees for out-of-state students",
+        "The power to regulate social media content for state university students"
+      ],
+      "a": 0,
+      "correctText": "The ability to label groups as terrorist organizations and expel student supporters",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcJSfk42MLJatDb37fT6g1yBM1WTDde6hOKgvqBwCa5KHkvx_u_2pqaJhmAvadqh4BJ8d55wr-ncjBogXUYK2pf064qhcRiPWh4DYlO_Z5qaf6V3MXiI3_lFf89AgMHUOfzh9ZTLLgGZmA5ro9q-2A8OhE6N38ychcwDXQPJVVh2HYn0YmXv1soMXYgT5FoaK9Zxd1rVinvCLk4Uso2uNmUA8HqRjnglLLqDt8GhH0uFHe4LXIM27nqAFdMirgfGxFv9Y="
+    },
+    {
+      "q": "In what US state was the wife of a US Army staff sergeant detained, leading to an effort to halt her deportation, days after their wedding?",
+      "options": [
+        "Texas",
+        "Florida",
+        "Louisiana",
+        "California"
+      ],
+      "a": 2,
+      "correctText": "Louisiana",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVRKliXf1itjoWQ57OoyoLCkH2aVwjnlYIweoc48uo55TZ25emc7XsF3mspha5JnjZW4kXGWUT9-_ZKsd7rVFiaE6G8WvfPZfHQ8yFmGKyl-Ns2byMcYVHTpOJoX0oMvevp0YY_zz3EVBdb72z0q1TPB_xvy79o9vBFQJOS40Sqs_bSg=="
+    },
+    {
+      "q": "An American woman was reported missing on April 7, 2026, after allegedly falling overboard during a boat trip in which country?",
+      "options": [
+        "Mexico",
+        "Bahamas",
+        "Jamaica",
+        "Canada"
+      ],
+      "a": 1,
+      "correctText": "Bahamas",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjTEKApIwY5Rd7UfqzDcru1awA-kA9o6WYPEIvjrED_U1ZRP2FSWSa1YXcYrZcurUYuZoZGRhBKq9PV9lJX38lThdDEhFRLLjR5vTW_ca3eIgYilD25jFHERPOj2JjKr3Rkmi_ojUN26zj2g--kc_m66xn4087b0bWxck9eyOuMHbepf4_Pk2lkRA36iy2rpygpga6S3isE8ie--zUdLyRwAwmUfM9aVQ0jMOSt1eCWr-mT_AxmrLMyLJfxzCPWE4="
+    },
+    {
+      "q": "According to reports on April 7, 2026, more than 800 people were arrested by US Immigration and Customs Enforcement (ICE) following tips from what federal airport security agency?",
+      "options": [
+        "FBI",
+        "CIA",
+        "TSA",
+        "DEA"
+      ],
+      "a": 2,
+      "correctText": "TSA (Transportation Security Administration)",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw2WLBUH6Ruom7M43YFY3OmI1fh4hV7VOHlKuK0u773si2wJUjIJGvDVh_Ah6ckY8N4raTadhJHiswFAAh0ampeWRP3VtMyzpot5WeHaLhlQZf2au-NFxgY5yKich_Y3Tp3G9H9x9LklnxtY0Y_tUofS-nhm-1CcaRtqpA4otK5w9MYA=="
+    },
+    {
+      "q": "What major US agricultural equipment manufacturer agreed to pay $99 million to settle a 'right to repair' class-action lawsuit on April 7, 2026?",
+      "options": [
+        "Caterpillar",
+        "John Deere (Deere & Co.)",
+        "Case IH",
+        "Kubota"
+      ],
+      "a": 1,
+      "correctText": "John Deere (Deere & Co.)",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTLM9RGooVWGdGYXMX4eOtjJOKtiRdv_VgEGvlQ4vsa7pYEc36RUBNa6XlO8PzzY61JXBh9F3F-_Jcyjq57J5GRJyPSO3jWZaHxuwJNQZKYd-QUiK2THF8Ufgs_lltWBDt4lCiPBnHyC04jU-B07Eqb2i9ODmRaWtvMrMKOav3uXj3mhKKhI2bU8Xf9Odi1A-d"
+    }
+  ]
+}

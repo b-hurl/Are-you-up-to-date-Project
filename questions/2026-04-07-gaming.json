@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which game creator recently stated he would no longer reveal what he's working on due to concerns about theft or AI 'slurping'?",
+      "options": [
+        "Hideo Kojima",
+        "Lucas Pope",
+        "Todd Howard",
+        "Shigeru Miyamoto"
+      ],
+      "a": 1,
+      "correctText": "Lucas Pope, the creator of 'Papers, Please', recently expressed concerns about generative AI and idea theft, leading him to decide against revealing his current projects.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1seu6fr/papers_please_creator_lucas_pope_says_he_no/"
+    },
+    {
+      "q": "What Bethesda game received both the free 'Free Lanes Update' and the 'Terran Armada' DLC on April 7, 2026?",
+      "options": [
+        "Fallout 76",
+        "The Elder Scrolls Online",
+        "Starfield",
+        "Doom Eternal"
+      ],
+      "a": 2,
+      "correctText": "Starfield received its 'Free Lanes Update' and the 'Terran Armada' DLC on April 7, 2026.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sezlzf/everything_in_starfields_free_lanes_update_terran/"
+    },
+    {
+      "q": "Which classic RPG's remake began pre-orders on April 7, 2026, with console versions including the original 'Gothic Classic' as a bonus?",
+      "options": [
+        "Gothic 1 Remake",
+        "Fable Remastered",
+        "Diablo II Resurrected",
+        "Titan Quest Anniversary Edition"
+      ],
+      "a": 0,
+      "correctText": "Pre-orders for 'Gothic 1 Remake' began on April 7, 2026, offering 'Gothic Classic' as a free bonus for console purchasers.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1seyb2z/gothic_1_remake_preorder_trailer/"
+    },
+    {
+      "q": "A free PlayStation 5 Pro update, including 4K visuals and enhanced ray tracing, for which game is set to be available on April 8, 2026?",
+      "options": [
+        "The Witcher 3: Wild Hunt",
+        "Red Dead Redemption 2",
+        "Cyberpunk 2077",
+        "Grand Theft Auto V"
+      ],
+      "a": 2,
+      "correctText": "A free PlayStation 5 Pro update for Cyberpunk 2077, featuring 4K, ray tracing, and up to 90 FPS modes, is scheduled for release on April 8, 2026.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sf0f21/free_cyberpunk_2077_playstation_5_pro_update/"
+    },
+    {
+      "q": "Which highly anticipated roguelike sequel was recently announced to be coming to Xbox Game Pass in April 2026?",
+      "options": [
+        "Dead Cells 2",
+        "Hades II",
+        "Slay the Spire 2",
+        "The Binding of Isaac: Rebirth 2"
+      ],
+      "a": 1,
+      "correctText": "Hades II was among the games recently announced to be coming to Xbox Game Pass in April 2026, with its arrival scheduled for April 14.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sevam3/coming_to_xbox_game_pass_kiln_hades_ii_vampire/"
+    }
+  ]
+}

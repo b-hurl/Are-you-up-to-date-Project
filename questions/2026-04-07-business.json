@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Under a new agreement effective April 7, 2026, what percentage of Amazon's existing package volume will the U.S. Postal Service (USPS) continue to handle?",
+      "options": [
+        "100%",
+        "80%",
+        "60%",
+        "50%"
+      ],
+      "a": 1,
+      "correctText": "The U.S. Postal Service will continue to handle approximately 80% of Amazon's existing package volume under their new deal.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6C8j2lQb16YfESUk3ltrX5YWeBuKMsNZ9ZSuGJaWGFir9iovlTNzA13MT6DkOsmIGcIhFmrZxHBG6TyfNtXS-SfyLELoapQXzzgFEuYQG_bTBoHIZh0HEL0keh91IrwWwmBoAoglp9eybJ4gQkqSj94bIqns3L2XYi2BBiP0I1kni5EtNkflp4oj5VxmIiwaFgg04Tg=="
+    },
+    {
+      "q": "As of April 3, 2026, how much did United Airlines increase its first checked bag fee by for flights within the U.S., Mexico, Canada, and Latin America?",
+      "options": [
+        "$5",
+        "$10",
+        "$15",
+        "$20"
+      ],
+      "a": 1,
+      "correctText": "United Airlines increased its first checked bag fee by $10, making it $45 for flights within the U.S., Mexico, Canada, and Latin America.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxaGVM_bn-Gmsp4qg5RgYMPwbM5aJNVoECyePBfxKg_MV6j094bbhnQujOFn5qmFP_WhVPyMhzSJDwgOXQJC8-hX2BLBUIF6K_dpKtaDIjAwpgCVJbTWHSGrsJ4P_u8W8XIEdTtwfdNfqhDBcIe3eMpDQtCEWS-6Qmi4kTPVhSEOwjpElWtDDwo76gRSdsIsqf5Gc8D0qdlf_zNSVOQs4YHfhTh8208g3SIEzUm1Uu1nkvjK6-"
+    },
+    {
+      "q": "Paramount Skydance has reportedly secured significant funding from Gulf investors for its proposed acquisition of Warner Bros. Discovery. Approximately how much funding was secured?",
+      "options": [
+        "$10 billion",
+        "$15 billion",
+        "$24 billion",
+        "$50 billion"
+      ],
+      "a": 2,
+      "correctText": "Paramount Skydance has reportedly secured nearly $24 billion in backing from Gulf investors for its proposed acquisition of Warner Bros. Discovery.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHICGG9klLnwP_BCd3orYWTsOFAjLGThOBV2vJab95m-P-EtkbGxpbG19YrLBkxKK6_2EwiB8xsvXnbQAHDhw89TXCWDFCWQtqeBEm4H7c-UsEpJnNLlQN276oIz-f60eRlAIX_15C31C-ZknoL8KGQwSsXcgoMIzdfrsmquluVGNNYzp2rg4_TYr1lUEHnucnkYW7j1PVebPrvabmWBFCgGg=="
+    },
+    {
+      "q": "The Writers Guild of America (WGA) and the Alliance of Motion Picture and Television Producers (AMPTP) recently reached a tentative deal for a new Minimum Basic Agreement. What is the duration of this new agreement?",
+      "options": [
+        "One year",
+        "Two years",
+        "Three years",
+        "Four years"
+      ],
+      "a": 3,
+      "correctText": "The WGA and AMPTP reached a tentative four-year deal for a new Minimum Basic Agreement.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ-Gs4xkiJEkt4OP46a5lsj7mMuQpXWSoiWljyiF7Z-RyX6pXcracN7u7RhKUBlGJuVUP1AcW6NHno6tCrQDXvQRuibC8g_0DBenb0INnaZ8o7Bs02l9Idaxusz8KU07bU1oAFqfIZnaY1SQMX1cJvgQvkFCeTNSWYGlDTvL_ZpUYX-ryLZIqPHC2PeFs421LcskkNpuasvFZVc1DD0KlbcRQg"
+    },
+    {
+      "q": "Which life science-focused specialty finance company did Runway Growth Finance Corp. recently acquire for $249.0 million, expanding its healthcare and life sciences exposure?",
+      "options": [
+        "BioMed Holdings",
+        "PharmaVest Corp.",
+        "SWK Holdings Corporation",
+        "HealthCapital Group"
+      ],
+      "a": 2,
+      "correctText": "Runway Growth Finance Corp. closed its acquisition of SWK Holdings Corporation for $249.0 million.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaQHC5P7safKIU42LCOW1CYufiBkmIN63z7t8LbWq741JAD_fPQHWcNhksDp0zr3VUnOYnts9vXDMiKrPH_bsX-rhcD7wcxZ7r8kpEyyQk4om2b_mfD3Fr8pZyS2lS2hyQFR5wgZ8ymJFNltLIWg0yyx2rVZvYX5pFZdnSbu_W0MBhC-gHx3527clyJ1KqV5F4S7rDN-Bkidir7p8197RAylzr67Wwu18l_oYplf9I1QcwcsaokqbT0UlixA=="
+    }
+  ]
+}

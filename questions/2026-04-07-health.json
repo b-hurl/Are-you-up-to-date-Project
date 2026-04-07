@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What governmental body announced arrests in a multi-million dollar hospice fraud scheme today, April 7, 2026, involving health workers enrolling non-terminally ill patients, including a man with dementia, for 'sham hospice' benefits?",
+      "options": [
+        "Department of Justice (DOJ)",
+        "Federal Bureau of Investigation (FBI)",
+        "Centers for Medicare & Medicaid Services (CMS)",
+        "Department of Health and Human Services (HHS)"
+      ],
+      "a": 0,
+      "correctText": "The Department of Justice announced arrests in a significant hospice fraud case where health workers allegedly enrolled non-dying patients to claim Medicare benefits.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlbkiAAD1h05RNWexGnGpgr5mdbVjQ2VqQccsOgVTtn8kuTfBYQsFJFFnKFmY7ChFY_mMZJybiS6XBgZ30CSqxHtrbQfU-Ld-PSLcjNWZd2ny0zmKE53YLVEXmlyEsVhWkIRlIZvmS-NUg1v8dvSwliYS3i1D0glu62f-GwlQn6xD4KZMyRp0rCygjZumuiOpwD9RFZQmmYuRFCSwvB7_FMKK5ZG8OfNW7_RXD4mF2mmV6uLBb3MmCdorbgG6ij0Vp4uLjsIDaF-cQ83-Se1v4GZ6nhw9kDxrKAGf7ij7oAw-L28PDVEnvAQ=="
+    },
+    {
+      "q": "What major global event, reported on April 7, 2026, is causing medical supplies to be stuck in Dubai and contributing to shortages in clinics worldwide?",
+      "options": [
+        "A global pandemic resurgence",
+        "An economic recession",
+        "The war in Iran impacting shipping lanes",
+        "A massive cyberattack on logistics networks"
+      ],
+      "a": 2,
+      "correctText": "The war in Iran has slowed down international shipping, especially through the Strait of Hormuz, causing medical and humanitarian goods to be stuck in Dubai and leading to global shortages.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG49j4rCQFPTzFm7gsj3xdsNQcEPexwqJYzgDNFO_MsYtF4rRi2O6JDJyJeGR49m_F2wAcQyfe3OhizM1R5Jod4V5j_j-nDy6dx8TGY-3shaWz28HD103EhR0ECtGCC31uDv1A1JcyYw7Tj9zw6-F8AZA77oJ6vVCFmCzLFNh_NWPVXhywHQ_aNQdRlX5gGQM8ep3FtvDc2e2VNnprFfMirS2k="
+    },
+    {
+      "q": "According to recent scientific findings from April 2026, what unexpected role do red blood cells play in lowering diabetes rates for people living in high-altitude environments?",
+      "options": [
+        "They produce more insulin.",
+        "They convert glucose into a substance that aids oxygen distribution.",
+        "They break down fat cells more efficiently.",
+        "They increase metabolic rate directly."
+      ],
+      "a": 1,
+      "correctText": "New research suggests that in low-oxygen conditions at high altitudes, red blood cells absorb extra glucose from the bloodstream and convert it into a compound that helps release oxygen to tissues, thus lowering blood sugar levels.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5DR20mpaY-B9-wLMY2XxLEWMBYLkJUrtuCFAZ7XkYO_BVWUd-R4s3qi2oCZw5HNO1i72NoqMTyNinB7solVZ9IUngyPe4kZxdR1V3clfQk5uupaBlvyZ-qpt-J4pkTV1cgBXwmgj59GES_9BeLO4jMXfU01dzY5_UBC8M-eqMBSY1XjKdCMPI4QLea6YaU7eqfTo3O3Gh7VyP1VSc-xybbcsd5kNfP6K2FOF6iT0q3idrw3DgwiOVALT-qpBRpc4g1iOh-xGQEPZSWWJ8JK68_ptnEqY6EsRvd_Z50EB6g69EXYw0ehnQoizkyZvBT_pdwWRNRA16jgki9yZRsX0SJRnYHUc5NpFJqwjNyiMgRa71GHEAxEJpYKl4mOj-QvlgyRlK30D8kbsu4pbwosV_zQ=="
+    },
+    {
+      "q": "What negative mental health phenomenon, involving AI chatbots like ChatGPT, was reported on April 7, 2026, where users can spiral into anxiety or delusions by compulsively seeking health reassurance?",
+      "options": [
+        "AI-induced amnesia",
+        "Technological regression",
+        "The 'ChatGPT Symptom Spiral' or AI Psychosis",
+        "Digital hypochondria"
+      ],
+      "a": 2,
+      "correctText": "Reports from April 7, 2026, highlight the 'ChatGPT Symptom Spiral' and 'AI Psychosis', where users can develop crippling health anxiety or even delusions due to compulsive reassurance-seeking from chatbots.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvJM1r2OhXdMk8IF9afPRKAxiNhJCtJMq3K1rJRXy-Gr-qNcd-B-SrYosvESOL0r5dX1Kl-NFIA_FSJs4UfSAr4XuWvB3KBm9PpPzWgPE1DN1D8NPTUvHSFjsNn1in802gNOPxChHeaT6qovlwGOthxsF1IpOGgw6cikfe6eEFEEnoc24IRQTGbQ1w3BoW-36bACMQAIZHi382Pe0XaUQo5Lm_"
+    },
+    {
+      "q": "What is the direct connection between scents and emotions, as highlighted in a health article from April 7, 2026?",
+      "options": [
+        "Scents activate the brain's logical processing center.",
+        "Scent receptors in the nose are directly linked to the brain's limbic system, the emotional center.",
+        "Smells impact only short-term memory, not emotions.",
+        "The connection is primarily psychological, not physiological."
+      ],
+      "a": 1,
+      "correctText": "Scent receptors in the nose are directly connected to the brain's limbic system, the emotional center, allowing smells to immediately impact mood and memory, bypassing rational thought.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQ32j26XEki5vnpy2PyG3bsam7wWJua4s29z9aTh-iAPMx4fDiO5Y8tqiyxM52hE6xrbNDSrmUdxbuDSbniMrlYw1TnM1YoUXB9xdyeI-GdryZwUvTOnGrYQ4u9YcpaH3qex11v-AdYGQXCW0pOZjx0uxxrH23r3cF8jpSySVOf-7GWCwltkwzUtUL4fetfjUoLQnJfxuzwotU4eiG"
+    }
+  ]
+}

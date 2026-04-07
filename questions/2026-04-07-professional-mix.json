@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-07",
+  "type": "professional-mix",
+  "questions": [
+    {
+      "q": "An American woman was reported missing on April 7, 2026, after allegedly falling overboard during a boat trip in which country?",
+      "options": [
+        "Mexico",
+        "Bahamas",
+        "Jamaica",
+        "Canada"
+      ],
+      "a": 1,
+      "correctText": "Bahamas",
+      "category": "usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjTEKApIwY5Rd7UfqzDcru1awA-kA9o6WYPEIvjrED_U1ZRP2FSWSa1YXcYrZcurUYuZoZGRhBKq9PV9lJX38lThdDEhFRLLjR5vTW_ca3eIgYilD25jFHERPOj2JjKr3Rkmi_ojUN26zj2g--kc_m66xn4087b0bWxck9eyOuMHbepf4_Pk2lkRA36iy2rpygpga6S3isE8ie--zUdLyRwAwmUfM9aVQ0jMOSt1eCWr-mT_AxmrLMyLJfxzCPWE4="
+    },
+    {
+      "q": "On April 7, 2026, which Canadian astronaut did Donald Trump praise for his courage following the Artemis II moon flyby, mentioning that even Wayne Gretzky might not 'want to do that'?",
+      "options": [
+        "Chris Hadfield",
+        "Jeremy Hansen",
+        "Julie Payette",
+        "Robert Thirsk"
+      ],
+      "a": 1,
+      "correctText": "Donald Trump praised Canadian Space Agency astronaut Jeremy Hansen for his courage after the Artemis II mission, where he traveled farther from Earth than any human in history.",
+      "category": "canada",
+      "source": "https://www.cbsnews.com/news/trump-calls-artemis-ii-astronauts-modern-day-pioneers-in-live-conversation-after-circling-the-moon/"
+    },
+    {
+      "q": "Under a new agreement effective April 7, 2026, what percentage of Amazon's existing package volume will the U.S. Postal Service (USPS) continue to handle?",
+      "options": [
+        "100%",
+        "80%",
+        "60%",
+        "50%"
+      ],
+      "a": 1,
+      "correctText": "The U.S. Postal Service will continue to handle approximately 80% of Amazon's existing package volume under their new deal.",
+      "category": "business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6C8j2lQb16YfESUk3ltrX5YWeBuKMsNZ9ZSuGJaWGFir9iovlTNzA13MT6DkOsmIGcIhFmrZxHBG6TyfNtXS-SfyLELoapQXzzgFEuYQG_bTBoHIZh0HEL0keh91IrwWwmBoAoglp9eybJ4gQkqSj94bIqns3L2XYi2BBiP0I1kni5EtNkflp4oj5VxmIiwaFgg04Tg=="
+    },
+    {
+      "q": "On April 7, 2026, what action did Iran reportedly take regarding its direct diplomatic communications with the United States?",
+      "options": [
+        "Increased ambassadorial presence",
+        "Cut all direct diplomatic channels",
+        "Proposed new direct talks",
+        "Requested UN mediation for direct talks"
+      ],
+      "a": 1,
+      "correctText": "On April 7, 2026, Iran reportedly cut off direct diplomatic communications with the United States, although indirect talks were continuing through mediators.",
+      "category": "world",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sey6ua/iran_cuts_all_diplomatic_channels_with_us_ahead/"
+    },
+    {
+      "q": "Which U.S. state is close to passing a moratorium on the construction of new datacenters, with its House and Senate both passing bill LD 307?",
+      "options": [
+        "California",
+        "Texas",
+        "New York",
+        "Maine"
+      ],
+      "a": 3,
+      "correctText": "Maine is getting closer to passing a moratorium on new datacenter construction, with both its House and Senate passing bill LD 307.",
+      "category": "technology",
+      "source": "https://www.404media.co/maine-is-close-to-passing-a-moratorium-on-new-datacenters/"
+    },
+    {
+      "q": "The Writers Guild of America (WGA) and the Alliance of Motion Picture and Television Producers (AMPTP) recently reached a tentative deal for a new Minimum Basic Agreement. What is the duration of this new agreement?",
+      "options": [
+        "One year",
+        "Two years",
+        "Three years",
+        "Four years"
+      ],
+      "a": 3,
+      "correctText": "The WGA and AMPTP reached a tentative four-year deal for a new Minimum Basic Agreement.",
+      "category": "business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ-Gs4xkiJEkt4OP46a5lsj7mMuQpXWSoiWljyiF7Z-RyX6pXcracN7u7RhKUBlGJuVUP1AcW6NHno6tCrQDXvQRuibC8g_0DBenb0INnaZ8o7Bs02l9Idaxusz8KU07bU1oAFqfIZnaY1SQMX1cJvgQvkFCeTNSWYGlDTvL_ZpUYX-ryLZIqPHC2PeFs421LcskkNpuasvFZVc1DD0KlbcRQg"
+    },
+    {
+      "q": "Which two permanent members of the UN Security Council vetoed a resolution aimed at protecting shipping in the Strait of Hormuz on April 7, 2026?",
+      "options": [
+        "United States and United Kingdom",
+        "France and Germany",
+        "China and Russia",
+        "Russia and United Kingdom"
+      ],
+      "a": 2,
+      "correctText": "On April 7, 2026, China and Russia vetoed a UN Security Council resolution that aimed to protect commercial shipping in the Strait of Hormuz.",
+      "category": "world",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sf0cc4/china_and_russia_veto_un_resolution_on_protecting/"
+    },
+    {
+      "q": "According to reports on April 7, 2026, more than 800 people were arrested by US Immigration and Customs Enforcement (ICE) following tips from what federal airport security agency?",
+      "options": [
+        "FBI",
+        "CIA",
+        "TSA",
+        "DEA"
+      ],
+      "a": 2,
+      "correctText": "TSA (Transportation Security Administration)",
+      "category": "usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw2WLBUH6Ruom7M43YFY3OmI1fh4hV7VOHlKuK0u773si2wJUjIJGvDVh_Ah6ckY8N4raTadhJHiswFAAh0ampeWRP3VtMyzpot5WeHaLhlQZf2au-NFxgY5yKich_Y3Tp3G9H9x9LklnxtY0Y_tUofS-nhm-1CcaRtqpA4otK5w9MYA=="
+    },
+    {
+      "q": "Retailer Target recently updated its terms and conditions regarding its upcoming AI shopping assistant, stating that customers will be responsible for errors made by the AI. What specific AI technology is mentioned as powering this tool?",
+      "options": [
+        "ChatGPT",
+        "Copilot",
+        "Gemini",
+        "Watson"
+      ],
+      "a": 2,
+      "correctText": "Target's terms state that if a customer authorizes the Gemini agent to act on their behalf, any transaction performed by the AI would be 'considered transactions authorized by you.'",
+      "category": "technology",
+      "source": "https://techspot.com/news/102604-target-ai-shopping-assistant-errors.html"
+    },
+    {
+      "q": "In what US state was the wife of a US Army staff sergeant detained, leading to an effort to halt her deportation, days after their wedding?",
+      "options": [
+        "Texas",
+        "Florida",
+        "Louisiana",
+        "California"
+      ],
+      "a": 2,
+      "correctText": "Louisiana",
+      "category": "usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVRKliXf1itjoWQ57OoyoLCkH2aVwjnlYIweoc48uo55TZ25emc7XsF3mspha5JnjZW4kXGWUT9-_ZKsd7rVFiaE6G8WvfPZfHQ8yFmGKyl-Ns2byMcYVHTpOJoX0oMvevp0YY_zz3EVBdb72z0q1TPB_xvy79o9vBFQJOS40Sqs_bSg=="
+    }
+  ]
+}

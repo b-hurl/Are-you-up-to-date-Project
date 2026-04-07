@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the name of the new fund Prime Minister Mark Carney launched on April 7, 2026, to address infrastructure gaps across Canada with a $51-billion investment over 10 years?",
+      "options": [
+        "Build Communities Strong Fund",
+        "National Infrastructure Initiative",
+        "Canada's Growth Fund",
+        "Future Ready Canada Fund"
+      ],
+      "a": 0,
+      "correctText": "Prime Minister Mark Carney officially launched the Build Communities Strong Fund, a $51 billion investment over 10 years, on April 7, 2026, to address infrastructure gaps across the country.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/carney-infrastructure-plan-51-billion-1.7166123"
+    },
+    {
+      "q": "According to news reports from April 7, 2026, what is the current trend for house prices in Canada's most expensive cities?",
+      "options": [
+        "Significantly increasing",
+        "Slightly increasing",
+        "Dropping",
+        "Remaining stable"
+      ],
+      "a": 2,
+      "correctText": "Housing prices are dipping in Canada's priciest markets, though experts suggest it may still not be a good market for first-time homebuyers.",
+      "category": "Canada",
+      "source": "https://www.canadianpress.ca/2026/04/07/house-prices-dropping-in-canadas-most-expensive-cities-but-still-out-of-reach-for-many/"
+    },
+    {
+      "q": "On April 7, 2026, which Canadian astronaut did Donald Trump praise for his courage following the Artemis II moon flyby, mentioning that even Wayne Gretzky might not 'want to do that'?",
+      "options": [
+        "Chris Hadfield",
+        "Jeremy Hansen",
+        "Julie Payette",
+        "Robert Thirsk"
+      ],
+      "a": 1,
+      "correctText": "Donald Trump praised Canadian Space Agency astronaut Jeremy Hansen for his courage after the Artemis II mission, where he traveled farther from Earth than any human in history.",
+      "category": "Canada",
+      "source": "https://www.cbsnews.com/news/trump-calls-artemis-ii-astronauts-modern-day-pioneers-in-live-conversation-after-circling-the-moon/"
+    },
+    {
+      "q": "What is the new price for a Lotto Max ticket in Canada, effective April 7, 2026, according to Globalnews.ca?",
+      "options": [
+        "$4",
+        "$5",
+        "$6",
+        "$7"
+      ],
+      "a": 2,
+      "correctText": "Starting April 7, 2026, the cost of a Lotto Max ticket is increasing from $5 to $6.",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/9605274/lotto-max-ticket-price-rise-odds-change/"
+    },
+    {
+      "q": "Why did Montreal withdraw its candidacy to host 2026 FIFA World Cup games, according to news reports on April 7, 2026?",
+      "options": [
+        "Lack of suitable stadiums",
+        "Public protests",
+        "Restrictive FIFA conditions and funding issues",
+        "Competing bids from other Canadian cities"
+      ],
+      "a": 2,
+      "correctText": "Montreal withdrew its bid to host 2026 FIFA World Cup games due to restrictive FIFA conditions and funding issues, as revealed in an investigative program.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/montreal/why-montreal-isn-t-hosting-world-cup-fifa-strict-conditions-toronto-vancouver-1.7165039"
+    }
+  ]
+}

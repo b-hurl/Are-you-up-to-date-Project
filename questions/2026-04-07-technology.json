@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which automaker's President and CEO, Toshihiro Mibe, recently stated, 'We have no chance against this' after visiting a Chinese auto supplier, referring to the speed and cost efficiency of Chinese companies?",
+      "options": [
+        "Toyota",
+        "Nissan",
+        "Honda",
+        "Hyundai"
+      ],
+      "a": 2,
+      "correctText": "Honda's President and CEO, Toshihiro Mibe, made the statement after visiting a Chinese auto supplier.",
+      "category": "Technology",
+      "source": "https://www.motor1.com/news/792130/honda-reacts-china-supplier-strength/"
+    },
+    {
+      "q": "What entertainment company announced massive layoffs across its TV, film, and corporate divisions in a recent reorganization?",
+      "options": [
+        "Warner Bros. Discovery",
+        "Paramount Global",
+        "Sony Pictures Entertainment",
+        "Universal Studios"
+      ],
+      "a": 2,
+      "correctText": "Sony Pictures Entertainment announced hundreds of layoffs in a recent reorganization.",
+      "category": "Technology",
+      "source": "https://variety.com/2026/04/07/sony-pictures-entertainment-layoffs-reorganization-1235964036/"
+    },
+    {
+      "q": "Scientists at which organization recently discovered a powerful new opioid that relieves pain without dangerous side effects, as published in Nature?",
+      "options": [
+        "World Health Organization (WHO)",
+        "National Institutes of Health (NIH)",
+        "Centers for Disease Control and Prevention (CDC)",
+        "Food and Drug Administration (FDA)"
+      ],
+      "a": 1,
+      "correctText": "Researchers at the National Institutes of Health (NIH) identified a new opioid that provides strong pain relief without typical risks.",
+      "category": "Technology",
+      "source": "https://scitechdaily.com/nih-scientists-discover-powerful-new-opioid-that-relieves-pain-without-dangerous-side-effects/"
+    },
+    {
+      "q": "Retailer Target recently updated its terms and conditions regarding its upcoming AI shopping assistant, stating that customers will be responsible for errors made by the AI. What specific AI technology is mentioned as powering this tool?",
+      "options": [
+        "ChatGPT",
+        "Copilot",
+        "Gemini",
+        "Watson"
+      ],
+      "a": 2,
+      "correctText": "Target's terms state that if a customer authorizes the Gemini agent to act on their behalf, any transaction performed by the AI would be 'considered transactions authorized by you.'",
+      "category": "Technology",
+      "source": "https://techspot.com/news/102604-target-ai-shopping-assistant-errors.html"
+    },
+    {
+      "q": "Which U.S. state is close to passing a moratorium on the construction of new datacenters, with its House and Senate both passing bill LD 307?",
+      "options": [
+        "California",
+        "Texas",
+        "New York",
+        "Maine"
+      ],
+      "a": 3,
+      "correctText": "Maine is getting closer to passing a moratorium on new datacenter construction, with both its House and Senate passing bill LD 307.",
+      "category": "Technology",
+      "source": "https://www.404media.co/maine-is-close-to-passing-a-moratorium-on-new-datacenters/"
+    }
+  ]
+}
