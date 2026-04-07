@@ -1483,6 +1483,7 @@ function showModeSelection() {
 }
 
 function startNewSession(data, date, mode) {
+    console.log("startNewSession called. Initial questions (before client-side shuffle):", data.questions.map(q => q.q));
     if (questionTimerInterval) {
         clearInterval(questionTimerInterval);
         questionTimerInterval = null;
@@ -1507,12 +1508,19 @@ function startNewSession(data, date, mode) {
         })
     };
 
+        // Randomize the order of the questions
+        gameData.questions = shuffle([...gameData.questions]);
+        console.log("Questions after client-side shuffling order:", gameData.questions.map(q => q.q));
+
     // Shuffle options for all questions
-    gameData.questions.forEach(q => {
+    gameData.questions.forEach((q, qIndex) => {
         if (q.options && Array.isArray(q.options)) {
-            q.options = shuffle([...q.options]);
+                // Shuffle the options to prevent the correct answer from always being at index 0
+                q.options = shuffle([...q.options]); 
+                console.log(`  Question ${qIndex + 1} options after shuffling:`, q.options);
         } else {
             q.options = [];
+            console.warn(`  Question ${qIndex + 1} has no options or invalid options.`);
         }
     });
 
@@ -1607,6 +1615,7 @@ function renderQuestion() {
     const isPro = document.body.classList.contains('theme-professional');
     const themeColor = isPro ? 'emerald' : 'indigo';
     const confirmColor = isPro ? 'indigo' : 'emerald';
+    console.log(`Rendering Question ${currentIdx + 1}: "${currentQ.q}" with options:`, currentQ.options);
 
     currentQ.options.forEach((opt, i) => {
         const btn = document.createElement('button');
