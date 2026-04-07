@@ -1705,6 +1705,13 @@ function confirmAnswer() {
         playSound('wrong');
         document.body.classList.add('failure-active');
         
+        if (selectedIdx !== null) {
+            buttons[selectedIdx].classList.add('incorrect');
+        } else {
+            // Show overlay if failure was caused by timeout (null selection)
+            document.getElementById('times-up-overlay').classList.remove('hidden');
+        }
+        
         // Highlight the correct answer if the user chose wrong
         const currentQ = gameData.questions[currentIdx];
         buttons.forEach(btn => {

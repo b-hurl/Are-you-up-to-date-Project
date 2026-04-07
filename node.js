@@ -36,7 +36,6 @@ async function runAutomation() {
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
         model: "gemini-2.5-flash", 
-        tools: [{ googleSearch: {} }] 
     });
 
     const date = new Date();
