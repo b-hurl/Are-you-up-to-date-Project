@@ -881,11 +881,12 @@
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             const playedModes = session.playedModes || [];
 
-            // Determine available categories.
-            // Use null while loading OR if the pool is empty to prevent a blank screen.
-            const available = (freshGameData && freshGameData.questions && freshGameData.questions.length > 0)
-                ? [...new Set(freshGameData.questions
-                    .filter(q => q && q.category) // Safety: ignore questions with no category
+            // Determine available categories. 
+            // 1. If freshGameData is null, we haven't even tried loading (pass null).
+            // 2. If it is an object, the fetch finished (even if empty). return the array.
+            const available = freshGameData 
+                ? [...new Set((freshGameData.questions || [])
+                    .filter(q => q && q.category)
                     .map(q => q.category.toLowerCase().trim()))]
                 : null;
 
@@ -1251,11 +1252,7 @@
                 }
             });
 
-            // Fallback: If filter results in 0 questions (e.g. mismatched categories), default to all to prevent empty game
-            if (filteredQuestions.length === 0) {
-                console.log("No questions matched mode, falling back to all.");
-                filteredQuestions = freshGameData.questions;
-            }
+
 
             if (filteredQuestions.length === 0) {
                 document.getElementById('question-text').innerText = "Unable to load questions.";
