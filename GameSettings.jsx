@@ -45,6 +45,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     const [config, setConfig] = useState({
         gameMode: currentConfig?.gameMode || null,
         soloSubMode: currentConfig?.soloSubMode || null,
+        multiSubMode: currentConfig?.multiSubMode || null,
         gauntletMode: currentConfig?.gauntletMode || null,
         activeSelection: currentConfig?.activeSelection || null
     });
@@ -56,6 +57,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         setConfig({
             gameMode: currentConfig?.gameMode || null,
             soloSubMode: currentConfig?.soloSubMode || null,
+            multiSubMode: currentConfig?.multiSubMode || null,
             gauntletMode: currentConfig?.gauntletMode || null,
             activeSelection: currentConfig?.activeSelection || null
         });
@@ -65,12 +67,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         setConfig({
             gameMode: mode,
             soloSubMode: null,
+            multiSubMode: null,
             gauntletMode: null,
             activeSelection: null
         });
-        if (mode === 'multiplayer') {
-            onUpdate({ gameMode: mode }); // Immediately update for multiplayer
-        }
     };
 
     const handleSoloSubModeSelection = (subMode) => {
@@ -82,28 +82,39 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         }));
     };
 
+    const handleMultiSubModeSelection = (subMode) => {
+        setConfig(prev => ({
+            ...prev,
+            multiSubMode: subMode,
+            gauntletMode: null,
+            activeSelection: null
+        }));
+    };
+
     const handleGauntletModeSelection = (mode) => {
+        const isSolo = config.gameMode === 'solo';
         setConfig(prev => ({
             ...prev,
             gauntletMode: mode,
             activeSelection: mode
         }));
         onUpdate({
-            gameMode: 'solo',
-            soloSubMode: 'gauntlet',
+            gameMode: config.gameMode,
+            [isSolo ? 'soloSubMode' : 'multiSubMode']: 'gauntlet',
             gauntletMode: mode,
             activeSelection: mode // For gauntlet, activeSelection is casual/professional
         });
     };
 
     const handleCategorySelection = (category) => {
+        const isSolo = config.gameMode === 'solo';
         setConfig(prev => ({
             ...prev,
             activeSelection: category
         }));
         onUpdate({
-            gameMode: 'solo',
-            soloSubMode: 'categories',
+            gameMode: config.gameMode,
+            [isSolo ? 'soloSubMode' : 'categories']: 'categories',
             activeSelection: category
         });
     };
@@ -124,6 +135,26 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     isSelected={config.gameMode === 'multiplayer'}
                     title="Play Against Friends"
                     description="Challenge your friends and see who's more up to date."
+                />
+            </div>
+        </MenuView>
+    );
+
+    const renderMultiSubMenu = () => (
+        <MenuView title="Multiplayer" onBack={() => handleGameModeSelection(null)} backLabel="Back to Main Menu">
+            <div className="grid grid-cols-1 gap-4 mb-8">
+                <MenuButton
+                    onClick={() => handleMultiSubModeSelection('gauntlet')}
+                    isSelected={config.multiSubMode === 'gauntlet'}
+                    title="Gauntlet"
+                    description="10 questions: Compete on the group leaderboard."
+                />
+
+                <MenuButton
+                    onClick={() => handleMultiSubModeSelection('categories')}
+                    isSelected={config.multiSubMode === 'categories'}
+                    title="Categories"
+                    description="5 questions: 1v1 challenge mode."
                 />
             </div>
         </MenuView>
@@ -150,7 +181,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     );
 
     const renderGauntletOptions = () => (
-        <MenuView title="Gauntlet Mode" onBack={() => handleSoloSubModeSelection(null)} backLabel="Back to Solo Play">
+        <MenuView title="Gauntlet Mode" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
             <div className="grid grid-cols-1 gap-4 mb-8">
                 <MenuButton
                     onClick={() => handleGauntletModeSelection('casual')}
@@ -170,7 +201,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     );
 
     const renderCategoryOptions = () => (
-        <MenuView title="Select a Category" onBack={() => handleSoloSubModeSelection(null)} backLabel="Back to Solo Play">
+        <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
                 {CATEGORIES.filter(cat =>
                     // Only show category if it has questions available today
@@ -200,6 +231,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             if (!config.soloSubMode) return renderSoloSubMenu();
             if (config.soloSubMode === 'gauntlet' && !config.gauntletMode) return renderGauntletOptions();
             if (config.soloSubMode === 'categories') return renderCategoryOptions();
+        } else if (config.gameMode === 'multiplayer') {
+            if (!config.multiSubMode) return renderMultiSubMenu();
+            if (config.multiSubMode === 'gauntlet' && !config.gauntletMode) return renderGauntletOptions();
+            if (config.multiSubMode === 'categories') return renderCategoryOptions();
         }
         return null;
     };

@@ -68,6 +68,13 @@
             --primary-600: #059669; --primary-700: #047857; --primary-800: #065f46; --primary-900: #064e3b;
             --primary-dim: rgba(5, 150, 105, 0.4);
         }
+        body.theme-multiplayer {
+            /* Multiplayer - Fuchsia/Purple */
+            --primary-50: #fdf4ff; --primary-100: #fae8ff; --primary-200: #f5d0fe;
+            --primary-300: #f0abfc; --primary-400: #e879f9; --primary-500: #d946ef;
+            --primary-600: #c026d3; --primary-700: #a21caf; --primary-800: #86198f; --primary-900: #701a75;
+            --primary-dim: rgba(217, 70, 239, 0.4);
+        }
 
         .option-btn { transition: all 0.2s ease; }
         @keyframes selection-pulse { 0%, 100% { box-shadow: 0 0 20px var(--primary-dim); transform: scale(1.02); } 50% { box-shadow: 0 0 35px var(--primary-400); transform: scale(1.04); } }
@@ -1015,13 +1022,25 @@
             const body = document.body;
             const modeIcon = document.getElementById('mode-icon');
             
+            // Reset theme classes
+            body.classList.remove('theme-professional', 'theme-multiplayer');
+            
+            const isMulti = gameConfig.gameMode === 'multiplayer';
             const isPro = mode === 'professional';
-            body.classList.toggle('theme-professional', isPro);
+            
+            if (isMulti) {
+                body.classList.add('theme-multiplayer');
+            } else if (isPro) {
+                body.classList.add('theme-professional');
+            }
 
             if (modeIcon) {
-                modeIcon.innerText = isPro ? '💼' : '🎮';
-                const displayName = mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : "Trivia";
-                modeIcon.setAttribute('title', `${displayName} Mode`);
+                if (isMulti) modeIcon.innerText = '👥';
+                else if (isPro) modeIcon.innerText = '💼';
+                else modeIcon.innerText = '🎮';
+                
+                const modeName = isMulti ? 'Multiplayer' : (mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : "Trivia");
+                modeIcon.setAttribute('title', `${modeName} Mode`);
             }
         }
         // The old updateTheme function is now less relevant as the UI is handled by React.
