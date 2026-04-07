@@ -881,11 +881,12 @@
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             const playedModes = session.playedModes || [];
 
-            // Determine available categories. 
-            // Pass null if not loaded yet so React shows all as a fallback.
-            // Pass an array once loaded (even if empty) to enforce strict filtering.
-            const available = freshGameData 
-                ? [...new Set((freshGameData.questions || []).map(q => q.category.toLowerCase().trim()))]
+            // Determine available categories.
+            // Use null while loading OR if the pool is empty to prevent a blank screen.
+            const available = (freshGameData && freshGameData.questions && freshGameData.questions.length > 0)
+                ? [...new Set(freshGameData.questions
+                    .filter(q => q && q.category) // Safety: ignore questions with no category
+                    .map(q => q.category.toLowerCase().trim()))]
                 : null;
 
             const container = document.getElementById('game-settings-root');
@@ -1246,7 +1247,7 @@
                         return PRO_CATS.some(c => cat.includes(c));
                     }
                 } else {
-                    return cat === mode;
+                    return cat.toLowerCase() === mode.toLowerCase();
                 }
             });
 

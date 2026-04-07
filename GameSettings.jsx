@@ -174,7 +174,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
                 {CATEGORIES.filter(cat =>
                     // Only show category if it has questions available today
-                    // or if the data hasn't loaded yet (null) to prevent a blank screen
+                    // or if the data hasn't loaded (or failed to load) yet (null)
                     availableCategories === null || availableCategories.includes(cat)
                 ).map(category => {
                     const isPlayed = playedModes.includes(category);
