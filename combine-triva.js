@@ -6,23 +6,21 @@ if (!fs.existsSync(dir)){
 }
 const path = require('path');
 
-const MIXES = {
-    'casual-mix': ['gaming', 'entertainment', 'sports', 'books', 'health'],
-    'professional-mix': ['technology', 'science', 'world', 'business', 'canada', 'usa']
+const GAUNTLET_GROUPS = {
+    'casual': ['gaming', 'entertainment', 'sports', 'books', 'health'],
+    'professional': ['technology', 'science', 'world', 'business', 'canada', 'usa']
 };
 
 function createDailyMixes() {
-    // 1. USE LOCAL DATE (The fix we discussed for "Tomorrow" issue)
-const date = new Date();
-const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
+    const date = new Date();
+    const dateStr = date.toLocaleDateString('en-CA'); 
     
-    // 2. ABSOLUTE PATH (Ensures it finds the folder regardless of where you run it)
     const questionsDir = path.join(process.cwd(), 'questions');
     console.log(`🔍 Looking for files in: ${questionsDir}`);
 
-    for (const [mixName, categories] of Object.entries(MIXES)) {
+    for (const [groupName, categories] of Object.entries(GAUNTLET_GROUPS)) {
         let pool = [];
-        console.log(`\n🌀 Building ${mixName}...`);
+        console.log(`\n🌀 Building pools for ${groupName.toUpperCase()} gauntlets...`);
 
         categories.forEach(cat => {
             const fileName = `${dateStr}-${cat}.json`;
@@ -30,33 +28,47 @@ const dateStr = date.toLocaleDateString('en-CA'); // Outputs "2026-04-06"
 
             if (fs.existsSync(filePath)) {
                 const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-                if (data.questions && data.questions.length > 0) {
-                    pool = pool.concat(data.questions.map(q => ({ ...q, category: cat })));
-                    console.log(` ✅ Found ${data.questions.length} questions in ${fileName}`);
+                const questions = data.questions || [];
+                if (questions.length > 0) {
+                    // Tag the category for display and add to pool
+                    pool = pool.concat(questions.map(q => ({ 
+                        ...q, 
+                        category: q.category || (cat.charAt(0).toUpperCase() + cat.slice(1)) 
+                    })));
+                    console.log(`   ✅ Found ${questions.length} questions in ${fileName}`);
                 }
             } else {
-                console.warn(` ❌ Could not find: ${fileName}`);
+                console.warn(`   ❌ Missing source file: ${fileName}`);
             }
         });
 
-        // 3. ONLY SAVE IF WE FOUND QUESTIONS
         if (pool.length > 0) {
+            // Shuffle the entire master pool once to ensure randomness
             for (let i = pool.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [pool[i], pool[j]] = [pool[j], pool[i]];
             }
 
-            const finalSelection = {
-                date: dateStr,
-                type: mixName,
-                questions: pool.slice(0, 10)
-            };
+            // Create distinct splits: Solo (0-10) and Multiplayer (10-20)
+            const gauntletDefinitions = [
+                { name: `solo-${groupName}-gauntlet`, questions: pool.slice(0, 10) },
+                { name: `multiplayer-${groupName}-gauntlet`, questions: pool.slice(10, 20) }
+            ];
 
-            const outPath = path.join(questionsDir, `${dateStr}-${mixName}.json`);
-            fs.writeFileSync(outPath, JSON.stringify(finalSelection, null, 2));
-            console.log(`✨ SUCCESS: Saved 10 questions to ${dateStr}-${mixName}.json`);
+            gauntletDefinitions.forEach(mix => {
+                if (mix.questions.length > 0) {
+                    const output = {
+                        date: dateStr,
+                        type: mix.name,
+                        questions: mix.questions
+                    };
+                    const outPath = path.join(questionsDir, `${dateStr}-${mix.name}.json`);
+                    fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
+                    console.log(`✨ SUCCESS: Saved ${mix.questions.length} unique questions to ${dateStr}-${mix.name}.json`);
+                }
+            });
         } else {
-            console.error(` ⛔ FAILURE: No questions found for ${mixName}. Check your filenames!`);
+            console.error(` ⛔ FAILURE: No questions found for ${groupName} pool.`);
         }
     }
 }
