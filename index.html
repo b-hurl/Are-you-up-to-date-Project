@@ -1209,16 +1209,16 @@
             const isProvinceOptedOut = localStorage.getItem('trivia-opt-out-province') === 'true';
 
             let filteredQuestions = freshGameData.questions.filter(q => {
-                // 1. Regional Filter
-                // Questions can have a "location" object: { country: "Canada", region: "Ontario", city: "Toronto" }
+                // 1. Regional Filter (Always apply if opted out, regardless of game mode)
                 if (q.location) {
-                    // Apply granular opt-outs
-                    if (isLegacy) {
-                        if (isCityOptedOut && q.location.city) return false;
-                        if (isProvinceOptedOut && q.location.region) return false;
+                    if (isCityOptedOut && q.location.city) {
+                        return false;
+                    }
+                    if (isProvinceOptedOut && q.location.region) {
+                        return false;
                     }
 
-                    // If we don't know the user's location, skip regional questions (safest bet)
+                    // If we don't know the user's location, skip regional questions (safest bet for location-specific questions)
                     if (!userLoc.country_code) return false;
 
                     // Hierarchy Check:
@@ -1237,20 +1237,22 @@
                 }
 
                 // 2. Category Filter
-                if (!q.category) return true; // Include uncategorized in both to be safe
-                const cat = q.category.trim();
-                if (isLegacy) {
-                    if (mode === 'casual') {
-                        return CASUAL_CATS.some(c => cat.includes(c));
-                    } else {
-                        return PRO_CATS.some(c => cat.includes(c));
+                if (!q.category) return true; // Include uncategorized questions by default
+                const cat = q.category.trim().toLowerCase(); // Normalize category from question
+
+                if (gameConfig.soloSubMode === 'gauntlet') {
+                    // For Gauntlet, 'mode' is 'casual' or 'professional'
+                    if (mode === 'casual') { // Casual Gauntlet
+                        return CASUAL_CATS.some(c => cat.includes(c.toLowerCase()));
+                    } else if (mode === 'professional') { // Professional Gauntlet
+                        return PRO_CATS.some(c => cat.includes(c.toLowerCase()));
                     }
-                } else {
-                    return cat.toLowerCase() === mode.toLowerCase();
+                } else if (gameConfig.soloSubMode === 'categories') {
+                    // For Categories, 'mode' is the specific category name (e.g., 'technology')
+                    return cat === mode.toLowerCase();
                 }
+                return true; // Fallback: if no specific mode/submode matches, include the question
             });
-
-
 
             if (filteredQuestions.length === 0) {
                 document.getElementById('question-text').innerText = "Unable to load questions.";
@@ -1262,9 +1264,8 @@
             const modeData = { questions: filteredQuestions };
             
             // UI Updates
-            document.getElementById('mode-selection').classList.add('hidden');
-            const settingsRoot = document.getElementById('game-settings-root');
-            if (settingsRoot) settingsRoot.classList.add('hidden');
+            const settingsRoot = document.getElementById('game-settings-root'); // Container for React component
+            if (settingsRoot) settingsRoot.classList.add('hidden'); // Hide the React component
             document.getElementById('question-text').classList.remove('hidden');
             
             try {
