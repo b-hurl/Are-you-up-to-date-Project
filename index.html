@@ -892,14 +892,22 @@
             const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
             const playedModes = session.playedModes || [];
 
-                    // Determine which categories actually have questions available today
-            const available = freshGameData?.questions 
-            ? [...new Set(freshGameData.questions.map(q => q.category.toLowerCase().trim()))] 
-            : [];
+            // Determine available categories. 
+            // 1. If freshGameData is null, we are still loading (pass [] to show all as fallback).
+            // 2. If it's loaded but empty, we pass a dummy value to suppress the "show all" logic.
+            // 3. Otherwise, return the unique list of categories found in the pool.
+            const available = freshGameData 
+                ? (freshGameData.questions?.length > 0 
+                    ? [...new Set(freshGameData.questions.map(q => q.category.toLowerCase().trim()))] 
+                    : ["__EMPTY_POOL__"])
+                : [];
 
-            
-            const root = ReactDOM.createRoot(document.getElementById('game-settings-root'));
-            root.render(
+            const container = document.getElementById('game-settings-root');
+            if (!window.gameSettingsRoot) {
+                window.gameSettingsRoot = ReactDOM.createRoot(container);
+            }
+
+            window.gameSettingsRoot.render(
                 React.createElement(window.GameSettings, {
                     currentConfig: gameConfig,
                     onUpdate: handleConfigUpdate,
