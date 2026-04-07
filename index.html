@@ -76,6 +76,7 @@
         .incorrect { background-color: #ef4444 !important; border-color: #dc2626 !important; }
         @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 50% { transform: translateX(5px); } 75% { transform: translateX(-5px); } }
         .shake { animation: shake 0.4s ease-in-out; }
+        .shake-infinite { animation: shake 0.3s ease-in-out infinite; }
         @keyframes streak-pop { 0% { transform: scale(0); opacity: 0; } 50% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(0); opacity: 0; } }
         .streak-anim { animation: streak-pop 1.4s ease-in-out forwards; }
         @keyframes text-glow { 0%, 100% { opacity: 1; text-shadow: 0 0 0 transparent; } 50% { opacity: 0.8; text-shadow: 0 0 10px rgba(255,255,255,0.8); } }
@@ -122,6 +123,8 @@
         .animate-fade-out { animation: fade-out 1s forwards; animation-delay: 3s; }
         @keyframes pulse-sync { 0% { border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); } 70% { border-color: rgba(99, 102, 241, 1); box-shadow: 0 0 0 10px rgba(99, 102, 241, 0); } 100% { border-color: rgba(99, 102, 241, 0.4); box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); } }
         .sync-pulse { animation: pulse-sync 2s infinite; border-width: 2px !important; }
+        @keyframes times-up-flash { 0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 0.2; transform: translate(-50%, -50%) scale(1.1); } }
+        .times-up-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 50; pointer-events: none; color: #ef4444; font-size: 3.5rem; font-weight: 900; text-shadow: 0 0 30px rgba(239, 68, 68, 0.6); letter-spacing: -0.05em; animation: times-up-flash 0.4s infinite; }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -645,6 +648,7 @@
             <h2 id="question-text" class="text-2xl font-bold leading-tight mb-8 hidden">Loading Today's Challenge...</h2>
             <div id="options-container" class="space-y-3 mb-6"></div>
             <div id="action-area"></div>
+            <div id="times-up-overlay" class="hidden times-up-overlay">TIME'S UP!</div>
         </div>
     </div>
 
@@ -1538,6 +1542,8 @@ function renderQuestion() {
     let timeLeft = QUESTION_TIME_LIMIT;
     const timerDisplay = document.getElementById('question-timer');
     const progressBar = document.getElementById('question-progress-bar');
+    // Reset overlay for new question
+    document.getElementById('times-up-overlay').classList.add('hidden');
 
     const updateTimerUI = () => {
         const percentage = (timeLeft / QUESTION_TIME_LIMIT) * 100;
@@ -1550,6 +1556,7 @@ function renderQuestion() {
             progressBar.style.width = `${percentage}%`;
             progressBar.classList.toggle('bg-red-500', timeLeft <= 10);
             progressBar.classList.toggle('bg-primary-400', timeLeft > 10);
+            progressBar.parentElement.classList.toggle('shake-infinite', timeLeft <= 10 && timeLeft > 0);
         }
     };
 
@@ -1645,7 +1652,7 @@ function confirmAnswer() {
                 buttons[selectedIdx].classList.remove('selected');
             }
 
-            if (selectedIdx !== null && isCurrentSelectionCorrect) {
+    if (isCurrentSelectionCorrect) {
         score++;
         currentStreak++;
         
