@@ -619,11 +619,8 @@
         <div id="game-header" class="flex justify-between items-center mb-8 hidden">
             <span id="progress-text" class="text-slate-400 text-xs font-black uppercase tracking-widest">Question 1/5</span>
             <div class="flex items-center gap-3">
-                <!-- Question Timer with Progress Bar -->
-                <div id="question-timer-container" class="relative w-24 h-6 bg-slate-700 rounded-full overflow-hidden">
-                    <div id="question-progress-bar" class="absolute top-0 left-0 h-full bg-primary-400 transition-all duration-1000 ease-linear"></div>
-                    <div id="question-timer" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-white z-10">60</div>
-                </div>
+                <!-- New Timer Display -->
+                <div id="question-timer" class="text-xl font-bold text-primary-400">60</div>
                 <!-- New Sync Status -->
                 <div id="header-sync-status" class="hidden flex items-center gap-1 opacity-0 transition-opacity duration-300">
                      <span id="header-sync-icon" class="text-[10px]">🔄</span>
@@ -1528,38 +1525,39 @@ function renderQuestion() {
     }
 
     const currentQ = gameData?.questions?.[currentIdx];
-
-    // Clear any existing timer
-    if (questionTimerInterval) {
-        clearInterval(questionTimerInterval);
-    }
-
-    // Reset timer
-    let timeLeft = QUESTION_TIME_LIMIT;
-    const timerDisplay = document.getElementById('question-timer');
-    if (timerDisplay) {
-        timerDisplay.innerText = timeLeft;
-        timerDisplay.classList.remove('text-red-500'); // Reset color
-        timerDisplay.classList.add('text-primary-400');
-    }
-
-    // Start new timer
-    questionTimerInterval = setInterval(() => {
-        timeLeft--;
-        if (timerDisplay) {
-            timerDisplay.innerText = timeLeft;
-            timerDisplay.classList.toggle('text-red-500', timeLeft <= 10);
-            timerDisplay.classList.toggle('text-primary-400', timeLeft > 10);
-        }
-
     if (!currentQ || typeof currentQ !== 'object' || !currentQ.q) {
         console.error("CRITICAL: Malformed question detected at index", currentIdx, currentQ);
         showModeSelection(); 
         return;
     }
 
+    // Clear any existing timer
+    if (questionTimerInterval) clearInterval(questionTimerInterval);
+
+    // Reset timer
+    let timeLeft = QUESTION_TIME_LIMIT;
+    const timerDisplay = document.getElementById('question-timer');
+    const progressBar = document.getElementById('question-progress-bar');
+
+    const updateTimerUI = () => {
+        const percentage = (timeLeft / QUESTION_TIME_LIMIT) * 100;
+        if (timerDisplay) {
+            timerDisplay.innerText = timeLeft;
+            timerDisplay.classList.toggle('text-red-500', timeLeft <= 10);
+            timerDisplay.classList.toggle('text-white', timeLeft > 10);
+        }
+        if (progressBar) {
+            progressBar.style.width = `${percentage}%`;
+            progressBar.classList.toggle('bg-red-500', timeLeft <= 10);
+            progressBar.classList.toggle('bg-primary-400', timeLeft > 10);
+        }
+    };
+
+    // Initial UI state setup
+    updateTimerUI();
+
+    // Render Question UI (Done only once per question)
     document.getElementById('progress-text').innerText = `Question ${currentIdx + 1}/${gameData.questions.length}`;
-    console.log("Current Question Category:", currentQ.category); // Added for debugging
     document.getElementById('question-text').innerText = currentQ.q;
     
     const catDisplay = document.getElementById('category-display');
@@ -1584,8 +1582,6 @@ function renderQuestion() {
 
     const container = document.getElementById('options-container');
     container.innerHTML = '';
-    
-    // Clear action area to prevent duplicates on re-render
     document.getElementById('action-area').innerHTML = '';
     
     const isPro = document.body.classList.contains('theme-professional');
@@ -1595,42 +1591,38 @@ function renderQuestion() {
     currentQ.options.forEach((opt, i) => {
         const btn = document.createElement('button');
         const isSelected = (i === selectedIdx);
-        if (isSelected) isCurrentSelectionCorrect = (opt === currentQ.correctText);
-        
         btn.className = `option-btn w-full text-left p-5 rounded-2xl bg-slate-700/50 border border-slate-600 font-semibold hover:bg-${themeColor}-600/40 hover:border-${themeColor}-500 active:bg-${themeColor}-500/60 active:border-${themeColor}-400 active:scale-95 transition-all opacity-0 animate-fade-in ${isSelected ? 'selected' : ''}`;
         btn.style.animationDelay = `${i * 0.1}s`;
         btn.innerText = opt;
         btn.onclick = () => {
             selectedIdx = i;
-            saveSession(false, null, false); // Save locally, skip cloud to save writes
-            // Check if the text of this button matches our stored correct text
+            saveSession(false, null, false);
             isCurrentSelectionCorrect = (opt === currentQ.correctText);
-            
-            document.querySelectorAll('.option-btn').forEach((b, idx) => 
-                b.classList.toggle('selected', idx === i));
-            
-            document.getElementById('action-area').innerHTML = 
-                `<button onclick="confirmAnswer()" class="w-full bg-${confirmColor}-600 hover:bg-${confirmColor}-500 py-3 rounded-xl font-bold transition-all">Confirm Answer</button>`;
+            document.querySelectorAll('.option-btn').forEach((b, idx) => b.classList.toggle('selected', idx === i));
+            document.getElementById('action-area').innerHTML = `<button onclick="confirmAnswer()" class="w-full bg-${confirmColor}-600 hover:bg-${confirmColor}-500 py-3 rounded-xl font-bold transition-all">Confirm Answer</button>`;
         };
         container.appendChild(btn);
+    });
 
+    if (selectedIdx !== null) {
+        isCurrentSelectionCorrect = (currentQ.options[selectedIdx] === currentQ.correctText);
+        document.getElementById('action-area').innerHTML = `<button onclick="confirmAnswer()" class="w-full bg-${confirmColor}-600 hover:bg-${confirmColor}-500 py-3 rounded-xl font-bold transition-all">Confirm Answer</button>`;
+    }
+
+    // Start Countdown Interval
+    questionTimerInterval = setInterval(() => {
+        timeLeft--;
+    const isPro = document.body.classList.contains('theme-professional');
+        updateTimerUI();
         if (timeLeft <= 0) {
             clearInterval(questionTimerInterval);
             questionTimerInterval = null;
             confirmAnswer(); // Automatically confirm the answer. If nothing is selected, it will be treated as skipped.
         }
     }, 1000);
-
-
-    // If we restored a selection, ensure the confirm button is visible
-    if (selectedIdx !== null) {
-        document.getElementById('action-area').innerHTML = 
-            `<button onclick="confirmAnswer()" class="w-full bg-${confirmColor}-600 hover:bg-${confirmColor}-500 py-3 rounded-xl font-bold transition-all">Confirm Answer</button>`;
-    }
-})
 }
 
-
+let isProcessing = false; // Add this at the top of your script
 
 function confirmAnswer() {
     if (isProcessing) return; 
