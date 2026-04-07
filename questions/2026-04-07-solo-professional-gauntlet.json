@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-07",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A recent large-scale study identified a \"neural fingerprint\" common to several psychedelic drugs. What is a key characteristic of this shared effect on the brain?",
+      "options": [
+        "Decreased communication between brain networks.",
+        "Increased cross-talk between different brain systems.",
+        "Suppressed visual cortex activity only.",
+        "Reduced serotonin production."
+      ],
+      "a": 1,
+      "correctText": "A new major study identified a common 'neural fingerprint' of psychedelic drugs, finding they increase cross-talk between different brain systems.",
+      "category": "Science",
+      "source": "https://www.theguardian.com/science/2026/apr/06/scientists-identify-neural-fingerprint-of-psychedelic-drugs-in-the-brain"
+    },
+    {
+      "q": "Why did Montreal withdraw its candidacy to host 2026 FIFA World Cup games, according to news reports on April 7, 2026?",
+      "options": [
+        "Lack of suitable stadiums",
+        "Public protests",
+        "Restrictive FIFA conditions and funding issues",
+        "Competing bids from other Canadian cities"
+      ],
+      "a": 2,
+      "correctText": "Montreal withdrew its bid to host 2026 FIFA World Cup games due to restrictive FIFA conditions and funding issues, as revealed in an investigative program.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/montreal/why-montreal-isn-t-hosting-world-cup-fifa-strict-conditions-toronto-vancouver-1.7165039"
+    },
+    {
+      "q": "What new authority did Florida Governor Ron DeSantis sign into law on April 7, 2026, regarding groups and student supporters?",
+      "options": [
+        "The ability to label groups as terrorist organizations and expel student supporters",
+        "The ability to ban certain books from state university libraries",
+        "The authority to increase tuition fees for out-of-state students",
+        "The power to regulate social media content for state university students"
+      ],
+      "a": 0,
+      "correctText": "The ability to label groups as terrorist organizations and expel student supporters",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcJSfk42MLJatDb37fT6g1yBM1WTDde6hOKgvqBwCa5KHkvx_u_2pqaJhmAvadqh4BJ8d55wr-ncjBogXUYK2pf064qhcRiPWh4DYlO_Z5qaf6V3MXiI3_lFf89AgMHUOfzh9ZTLLgGZmA5ro9q-2A8OhE6N38ychcwDXQPJVVh2HYn0YmXv1soMXYgT5FoaK9Zxd1rVinvCLk4Uso2uNmUA8HqRjnglLLqDt8GhH0uFHe4LXIM27nqAFdMirgfGxFv9Y="
+    },
+    {
+      "q": "What major Iranian oil facility was reportedly struck by US forces on April 7, 2026?",
+      "options": [
+        "Abadan Refinery",
+        "Kharg Island",
+        "Lavan Island",
+        "Bandar Abbas Refinery"
+      ],
+      "a": 1,
+      "correctText": "On April 7, 2026, US forces reportedly conducted new strikes on military targets on Iran's Kharg Island, a vital location for Iran's oil exports.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1settic/us_strikes_irans_main_oil_hub_on_kharg_island_as/"
+    },
+    {
+      "q": "What is the new price for a Lotto Max ticket in Canada, effective April 7, 2026, according to Globalnews.ca?",
+      "options": [
+        "$4",
+        "$5",
+        "$6",
+        "$7"
+      ],
+      "a": 2,
+      "correctText": "Starting April 7, 2026, the cost of a Lotto Max ticket is increasing from $5 to $6.",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/9605274/lotto-max-ticket-price-rise-odds-change/"
+    },
+    {
+      "q": "What specific deadline did US President Donald Trump set for Iran on April 7, 2026, regarding the Strait of Hormuz?",
+      "options": [
+        "To agree to a nuclear deal",
+        "To cease all military activity",
+        "To reopen the Strait of Hormuz",
+        "To release all prisoners"
+      ],
+      "a": 2,
+      "correctText": "On April 7, 2026, President Donald Trump set an 8 p.m. Eastern time deadline for Iran to agree to a deal to reopen the Strait of Hormuz, threatening severe consequences if it did not.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sev0hb/trump_says_a_whole_civilization_will_die_tonight/"
+    },
+    {
+      "q": "Retailer Target recently updated its terms and conditions regarding its upcoming AI shopping assistant, stating that customers will be responsible for errors made by the AI. What specific AI technology is mentioned as powering this tool?",
+      "options": [
+        "ChatGPT",
+        "Copilot",
+        "Gemini",
+        "Watson"
+      ],
+      "a": 2,
+      "correctText": "Target's terms state that if a customer authorizes the Gemini agent to act on their behalf, any transaction performed by the AI would be 'considered transactions authorized by you.'",
+      "category": "Technology",
+      "source": "https://techspot.com/news/102604-target-ai-shopping-assistant-errors.html"
+    },
+    {
+      "q": "The Writers Guild of America (WGA) and the Alliance of Motion Picture and Television Producers (AMPTP) recently reached a tentative deal for a new Minimum Basic Agreement. What is the duration of this new agreement?",
+      "options": [
+        "One year",
+        "Two years",
+        "Three years",
+        "Four years"
+      ],
+      "a": 3,
+      "correctText": "The WGA and AMPTP reached a tentative four-year deal for a new Minimum Basic Agreement.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJ-Gs4xkiJEkt4OP46a5lsj7mMuQpXWSoiWljyiF7Z-RyX6pXcracN7u7RhKUBlGJuVUP1AcW6NHno6tCrQDXvQRuibC8g_0DBenb0INnaZ8o7Bs02l9Idaxusz8KU07bU1oAFqfIZnaY1SQMX1cJvgQvkFCeTNSWYGlDTvL_ZpUYX-ryLZIqPHC2PeFs421LcskkNpuasvFZVc1DD0KlbcRQg"
+    },
+    {
+      "q": "What significant geological activity was recently reported regarding Japan's Kikai Caldera, one of Earth's most explosive volcanoes?",
+      "options": [
+        "It has completely run out of magma and is now dormant.",
+        "Its enormous magma chamber is slowly refilling.",
+        "A new island has formed directly above it.",
+        "It experienced a minor eruption that caused no damage."
+      ],
+      "a": 1,
+      "correctText": "Researchers have revealed that Japan's Kikai Caldera, an underwater supervolcano, is slowly refilling with magma after its massive eruption 7,300 years ago.",
+      "category": "Science",
+      "source": "https://www.sciencealert.com/one-of-earths-most-explosive-volcanoes-is-quietly-refilling-with-magma"
+    },
+    {
+      "q": "Which U.S. state is close to passing a moratorium on the construction of new datacenters, with its House and Senate both passing bill LD 307?",
+      "options": [
+        "California",
+        "Texas",
+        "New York",
+        "Maine"
+      ],
+      "a": 3,
+      "correctText": "Maine is getting closer to passing a moratorium on new datacenter construction, with both its House and Senate passing bill LD 307.",
+      "category": "Technology",
+      "source": "https://www.404media.co/maine-is-close-to-passing-a-moratorium-on-new-datacenters/"
+    }
+  ]
+}

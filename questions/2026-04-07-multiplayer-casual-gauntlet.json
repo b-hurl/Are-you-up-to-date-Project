@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-07",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "What former Chicago Bears icon was posthumously diagnosed with Stage 3 CTE on April 7, 2026, nearly a year after his death?",
+      "options": [
+        "Steve McMichael",
+        "Walter Payton",
+        "Mike Singletary",
+        "Dick Butkus"
+      ],
+      "a": 0,
+      "correctText": "Chicago Bears legend Steve 'Mongo' McMichael was posthumously diagnosed with Stage 3 CTE on April 7, 2026. He passed away on April 23, 2025, after a five-year battle with ALS.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sf37et/bears_icon_steve_mcmichael_diagnosed_with_cte/"
+    },
+    {
+      "q": "Which actor, known for roles in 'Stranger Things' and 'Power Rangers', is hosting an AMA on Reddit today, April 7, 2026, to promote his new horror film 'Faces of Death'?",
+      "options": [
+        "Dacre Montgomery",
+        "Joe Keery",
+        "Finn Wolfhard",
+        "Caleb McLaughlin"
+      ],
+      "a": 0,
+      "correctText": "Dacre Montgomery is hosting an AMA on Reddit today, April 7, 2026.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sevonm/hi_rmovies_im_dacre_montgomery_you_may_know_me/"
+    },
+    {
+      "q": "What negative mental health phenomenon, involving AI chatbots like ChatGPT, was reported on April 7, 2026, where users can spiral into anxiety or delusions by compulsively seeking health reassurance?",
+      "options": [
+        "AI-induced amnesia",
+        "Technological regression",
+        "The 'ChatGPT Symptom Spiral' or AI Psychosis",
+        "Digital hypochondria"
+      ],
+      "a": 2,
+      "correctText": "Reports from April 7, 2026, highlight the 'ChatGPT Symptom Spiral' and 'AI Psychosis', where users can develop crippling health anxiety or even delusions due to compulsive reassurance-seeking from chatbots.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGvJM1r2OhXdMk8IF9afPRKAxiNhJCtJMq3K1rJRXy-Gr-qNcd-B-SrYosvESOL0r5dX1Kl-NFIA_FSJs4UfSAr4XuWvB3KBm9PpPzWgPE1DN1D8NPTUvHSFjsNn1in802gNOPxChHeaT6qovlwGOthxsF1IpOGgw6cikfe6eEFEEnoc24IRQTGbQ1w3BoW-36bACMQAIZHi382Pe0XaUQo5Lm_"
+    },
+    {
+      "q": "On April 6, 2026, which WNBA team acquired two-time All-Star Angel Reese from the Chicago Sky in exchange for two first-round draft picks?",
+      "options": [
+        "Atlanta Dream",
+        "Las Vegas Aces",
+        "New York Liberty",
+        "Seattle Storm"
+      ],
+      "a": 0,
+      "correctText": "The Atlanta Dream acquired Angel Reese from the Chicago Sky on April 6, 2026, in a trade that sent two first-round picks to the Sky.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1se2umj/wnbas_sky_trades_angel_reese_to_dream_for_2/"
+    },
+    {
+      "q": "The Iowa law allowing for restrictions on LGBTQ+ books and topics in schools, which was recently cleared for enforcement by an appellate court, was initially approved by the governor and legislature in what year?",
+      "options": [
+        "2023",
+        "2024",
+        "2025",
+        "2022"
+      ],
+      "a": 0,
+      "correctText": "2023",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "Which team won the 2026 NCAA Men's Basketball National Championship on April 6, 2026, securing their first title since 1989?",
+      "options": [
+        "Michigan Wolverines",
+        "UConn Huskies",
+        "Duke Blue Devils",
+        "Kansas Jayhawks"
+      ],
+      "a": 0,
+      "correctText": "The Michigan Wolverines defeated the UConn Huskies 69-63 on April 6, 2026, to win the NCAA Men's Basketball National Championship, their first since 1989.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sekiaq/michigan_wolverines_win_the_national_ncaa_mens/"
+    },
+    {
+      "q": "A free PlayStation 5 Pro update, including 4K visuals and enhanced ray tracing, for which game is set to be available on April 8, 2026?",
+      "options": [
+        "The Witcher 3: Wild Hunt",
+        "Red Dead Redemption 2",
+        "Cyberpunk 2077",
+        "Grand Theft Auto V"
+      ],
+      "a": 2,
+      "correctText": "A free PlayStation 5 Pro update for Cyberpunk 2077, featuring 4K, ray tracing, and up to 90 FPS modes, is scheduled for release on April 8, 2026.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sf0f21/free_cyberpunk_2077_playstation_5_pro_update/"
+    },
+    {
+      "q": "What is the title of Yann Martel's new novel, which was recently featured with an exclusive excerpt and discussed at the Toronto Reference Library on April 7, 2026?",
+      "options": [
+        "Son of Nobody",
+        "Life of Pi Returns",
+        "The Trojan Scroll",
+        "Harlow's Epic"
+      ],
+      "a": 0,
+      "correctText": "Son of Nobody",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sen86g/yann_martel_is_coming_to_the_toronto_reference/"
+    },
+    {
+      "q": "Which highly anticipated roguelike sequel was recently announced to be coming to Xbox Game Pass in April 2026?",
+      "options": [
+        "Dead Cells 2",
+        "Hades II",
+        "Slay the Spire 2",
+        "The Binding of Isaac: Rebirth 2"
+      ],
+      "a": 1,
+      "correctText": "Hades II was among the games recently announced to be coming to Xbox Game Pass in April 2026, with its arrival scheduled for April 14.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sevam3/coming_to_xbox_game_pass_kiln_hades_ii_vampire/"
+    },
+    {
+      "q": "What governmental body announced arrests in a multi-million dollar hospice fraud scheme today, April 7, 2026, involving health workers enrolling non-terminally ill patients, including a man with dementia, for 'sham hospice' benefits?",
+      "options": [
+        "Department of Justice (DOJ)",
+        "Federal Bureau of Investigation (FBI)",
+        "Centers for Medicare & Medicaid Services (CMS)",
+        "Department of Health and Human Services (HHS)"
+      ],
+      "a": 0,
+      "correctText": "The Department of Justice announced arrests in a significant hospice fraud case where health workers allegedly enrolled non-dying patients to claim Medicare benefits.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlbkiAAD1h05RNWexGnGpgr5mdbVjQ2VqQccsOgVTtn8kuTfBYQsFJFFnKFmY7ChFY_mMZJybiS6XBgZ30CSqxHtrbQfU-Ld-PSLcjNWZd2ny0zmKE53YLVEXmlyEsVhWkIRlIZvmS-NUg1v8dvSwliYS3i1D0glu62f-GwlQn6xD4KZMyRp0rCygjZumuiOpwD9RFZQmmYuRFCSwvB7_FMKK5ZG8OfNW7_RXD4mF2mmV6uLBb3MmCdorbgG6ij0Vp4uLjsIDaF-cQ83-Se1v4GZ6nhw9kDxrKAGf7ij7oAw-L28PDVEnvAQ=="
+    }
+  ]
+}

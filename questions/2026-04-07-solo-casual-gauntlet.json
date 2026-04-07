@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-07",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to an April 6, 2026, appellate court ruling, in what grade levels can Iowa schools now restrict teachers from discussing LGBTQ+ topics?",
+      "options": [
+        "K-6",
+        "7-12",
+        "K-12",
+        "All grades"
+      ],
+      "a": 0,
+      "correctText": "Kindergarten through sixth grade (K-6)",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "Who is the projected No. 1 overall pick in the 2026 NFL Draft who announced on April 7, 2026, that he will not attend the draft in Pittsburgh?",
+      "options": [
+        "Fernando Mendoza",
+        "Caleb Williams",
+        "Quinn Ewers",
+        "Marvin Harrison Jr."
+      ],
+      "a": 0,
+      "correctText": "Fernando Mendoza, the Indiana quarterback and Heisman Trophy winner, announced his decision to skip the draft in Pittsburgh on April 7, 2026.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sf2yxm/projected_no_1_overall_pick_fernando_mendoza_has/"
+    },
+    {
+      "q": "The Michigan Wolverines defeated which team with a score of 69-63 in the 2026 NCAA Men's Basketball National Championship game?",
+      "options": [
+        "UConn Huskies",
+        "Duke Blue Devils",
+        "Purdue Boilermakers",
+        "Arizona Wildcats"
+      ],
+      "a": 0,
+      "correctText": "Michigan defeated the UConn Huskies 69-63 in the 2026 NCAA Men's Basketball National Championship game.",
+      "category": "Sports",
+      "source": "https://www.reddit.com/r/sports/comments/1sekjoy/michigan_beats_uconn_for_1st_national_title_since/"
+    },
+    {
+      "q": "What is the direct connection between scents and emotions, as highlighted in a health article from April 7, 2026?",
+      "options": [
+        "Scents activate the brain's logical processing center.",
+        "Scent receptors in the nose are directly linked to the brain's limbic system, the emotional center.",
+        "Smells impact only short-term memory, not emotions.",
+        "The connection is primarily psychological, not physiological."
+      ],
+      "a": 1,
+      "correctText": "Scent receptors in the nose are directly connected to the brain's limbic system, the emotional center, allowing smells to immediately impact mood and memory, bypassing rational thought.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQ32j26XEki5vnpy2PyG3bsam7wWJua4s29z9aTh-iAPMx4fDiO5Y8tqiyxM52hE6xrbNDSrmUdxbuDSbniMrlYw1TnM1YoUXB9xdyeI-GdryZwUvTOnGrYQ4u9YcpaH3qex11v-AdYGQXCW0pOZjx0uxxrH23r3cF8jpSySVOf-7GWCwltkwzUtUL4fetfjUoLQnJfxuzwotU4eiG"
+    },
+    {
+      "q": "What U.S. state recently had an appellate court rule that it can enforce a law restricting LGBTQ+ books and topics in schools?",
+      "options": [
+        "Iowa",
+        "Ohio",
+        "Idaho",
+        "Illinois"
+      ],
+      "a": 0,
+      "correctText": "Iowa",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sehoin/iowa_can_restrict_lgbtq_books_and_topics_at/"
+    },
+    {
+      "q": "Yann Martel, author of the recently released novel 'Son of Nobody', is most famously known for what Booker Prize-winning novel?",
+      "options": [
+        "Life of Pi",
+        "The High Mountains of Portugal",
+        "Beatrice and Virgil",
+        "The Facts Behind the Helsinki Roccamatios"
+      ],
+      "a": 0,
+      "correctText": "Life of Pi",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1sen86g/yann_martel_is_coming_to_the_toronto_reference/"
+    },
+    {
+      "q": "Which classic RPG's remake began pre-orders on April 7, 2026, with console versions including the original 'Gothic Classic' as a bonus?",
+      "options": [
+        "Gothic 1 Remake",
+        "Fable Remastered",
+        "Diablo II Resurrected",
+        "Titan Quest Anniversary Edition"
+      ],
+      "a": 0,
+      "correctText": "Pre-orders for 'Gothic 1 Remake' began on April 7, 2026, offering 'Gothic Classic' as a free bonus for console purchasers.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1seyb2z/gothic_1_remake_preorder_trailer/"
+    },
+    {
+      "q": "What new movie trailer for a superhero film was revealed today, April 7, 2026, and discussed by a Kansas City comic store owner?",
+      "options": [
+        "Batman: Gotham's Reckoning",
+        "Superman: Last Son",
+        "Spider-Man: Brand New Day",
+        "Wonder Woman: Amazon Princess"
+      ],
+      "a": 2,
+      "correctText": "The new movie trailer for 'Spider-Man: Brand New Day' was revealed today, April 7, 2026.",
+      "category": "Entertainment",
+      "source": "https://missourinet.com/2026/04/07/kansas-city-comic-store-reveals-the-details-of-new-spider-man-movie-trailer-listen/"
+    },
+    {
+      "q": "What Bethesda game received both the free 'Free Lanes Update' and the 'Terran Armada' DLC on April 7, 2026?",
+      "options": [
+        "Fallout 76",
+        "The Elder Scrolls Online",
+        "Starfield",
+        "Doom Eternal"
+      ],
+      "a": 2,
+      "correctText": "Starfield received its 'Free Lanes Update' and the 'Terran Armada' DLC on April 7, 2026.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sezlzf/everything_in_starfields_free_lanes_update_terran/"
+    },
+    {
+      "q": "What major global event, reported on April 7, 2026, is causing medical supplies to be stuck in Dubai and contributing to shortages in clinics worldwide?",
+      "options": [
+        "A global pandemic resurgence",
+        "An economic recession",
+        "The war in Iran impacting shipping lanes",
+        "A massive cyberattack on logistics networks"
+      ],
+      "a": 2,
+      "correctText": "The war in Iran has slowed down international shipping, especially through the Strait of Hormuz, causing medical and humanitarian goods to be stuck in Dubai and leading to global shortages.",
+      "category": "Health",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG49j4rCQFPTzFm7gsj3xdsNQcEPexwqJYzgDNFO_MsYtF4rRi2O6JDJyJeGR49m_F2wAcQyfe3OhizM1R5Jod4V5j_j-nDy6dx8TGY-3shaWz28HD103EhR0ECtGCC31uDv1A1JcyYw7Tj9zw6-F8AZA77oJ6vVCFmCzLFNh_NWPVXhywHQ_aNQdRlX5gGQM8ep3FtvDc2e2VNnprFfMirS2k="
+    }
+  ]
+}

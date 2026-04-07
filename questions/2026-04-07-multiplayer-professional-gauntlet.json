@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-07",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Scientists at which organization recently discovered a powerful new opioid that relieves pain without dangerous side effects, as published in Nature?",
+      "options": [
+        "World Health Organization (WHO)",
+        "National Institutes of Health (NIH)",
+        "Centers for Disease Control and Prevention (CDC)",
+        "Food and Drug Administration (FDA)"
+      ],
+      "a": 1,
+      "correctText": "Researchers at the National Institutes of Health (NIH) identified a new opioid that provides strong pain relief without typical risks.",
+      "category": "Technology",
+      "source": "https://scitechdaily.com/nih-scientists-discover-powerful-new-opioid-that-relieves-pain-without-dangerous-side-effects/"
+    },
+    {
+      "q": "According to a new study on human echolocation, what happens in the brains of expert blind echolocators as they use mouth clicks to perceive their surroundings?",
+      "options": [
+        "The brain processes a single \"optimal snapshot\" of sound.",
+        "Neural activity related to object location weakens with more clicks.",
+        "Information about object location accumulates over successive clicks, building spatial representations.",
+        "Only visual areas of the brain are activated."
+      ],
+      "a": 2,
+      "correctText": "New experimental EEG studies found that the accuracy of expert echolocators improved with each click, suggesting the brain accumulates acoustic evidence over time to build spatial representations.",
+      "category": "Science",
+      "source": "https://www.iflscience.com/blind-people-can-use-echolocation-to-see-and-now-we-know-whats-happening-in-their-brain-when-they-do-it-80727"
+    },
+    {
+      "q": "According to reports on April 7, 2026, more than 800 people were arrested by US Immigration and Customs Enforcement (ICE) following tips from what federal airport security agency?",
+      "options": [
+        "FBI",
+        "CIA",
+        "TSA",
+        "DEA"
+      ],
+      "a": 2,
+      "correctText": "TSA (Transportation Security Administration)",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEw2WLBUH6Ruom7M43YFY3OmI1fh4hV7VOHlKuK0u773si2wJUjIJGvDVh_Ah6ckY8N4raTadhJHiswFAAh0ampeWRP3VtMyzpot5WeHaLhlQZf2au-NFxgY5yKich_Y3Tp3G9H9x9LklnxtY0Y_tUofS-nhm-1CcaRtqpA4otK5w9MYA=="
+    },
+    {
+      "q": "What entertainment company announced massive layoffs across its TV, film, and corporate divisions in a recent reorganization?",
+      "options": [
+        "Warner Bros. Discovery",
+        "Paramount Global",
+        "Sony Pictures Entertainment",
+        "Universal Studios"
+      ],
+      "a": 2,
+      "correctText": "Sony Pictures Entertainment announced hundreds of layoffs in a recent reorganization.",
+      "category": "Technology",
+      "source": "https://variety.com/2026/04/07/sony-pictures-entertainment-layoffs-reorganization-1235964036/"
+    },
+    {
+      "q": "Which life science-focused specialty finance company did Runway Growth Finance Corp. recently acquire for $249.0 million, expanding its healthcare and life sciences exposure?",
+      "options": [
+        "BioMed Holdings",
+        "PharmaVest Corp.",
+        "SWK Holdings Corporation",
+        "HealthCapital Group"
+      ],
+      "a": 2,
+      "correctText": "Runway Growth Finance Corp. closed its acquisition of SWK Holdings Corporation for $249.0 million.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaQHC5P7safKIU42LCOW1CYufiBkmIN63z7t8LbWq741JAD_fPQHWcNhksDp0zr3VUnOYnts9vXDMiKrPH_bsX-rhcD7wcxZ7r8kpEyyQk4om2b_mfD3Fr8pZyS2lS2hyQFR5wgZ8ymJFNltLIWg0yyx2rVZvYX5pFZdnSbu_W0MBhC-gHx3527clyJ1KqV5F4S7rDN-Bkidir7p8197RAylzr67Wwu18l_oYplf9I1QcwcsaokqbT0UlixA=="
+    },
+    {
+      "q": "What major US agricultural equipment manufacturer agreed to pay $99 million to settle a 'right to repair' class-action lawsuit on April 7, 2026?",
+      "options": [
+        "Caterpillar",
+        "John Deere (Deere & Co.)",
+        "Case IH",
+        "Kubota"
+      ],
+      "a": 1,
+      "correctText": "John Deere (Deere & Co.)",
+      "category": "Usa",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTLM9RGooVWGdGYXMX4eOtjJOKtiRdv_VgEGvlQ4vsa7pYEc36RUBNa6XlO8PzzY61JXBh9F3F-_Jcyjq57J5GRJyPSO3jWZaHxuwJNQZKYd-QUiK2THF8Ufgs_lltWBDt4lCiPBnHyC04jU-B07Eqb2i9ODmRaWtvMrMKOav3uXj3mhKKhI2bU8Xf9Odi1A-d"
+    },
+    {
+      "q": "What major milestone did the Artemis II mission, launched on April 1, 2026, achieve as it journeyed around the Moon?",
+      "options": [
+        "Successfully landed humans on the lunar surface.",
+        "Established a permanent lunar base.",
+        "Broke the record for the farthest distance humans have traveled from Earth.",
+        "Discovered water ice at the lunar south pole."
+      ],
+      "a": 2,
+      "correctText": "The Artemis II mission, launched on April 1, 2026, is expected to break the record for the farthest distance humans have travelled from Earth as it performs a lunar flyby.",
+      "category": "Science",
+      "source": "https://www.aljazeera.com/news/2026/4/6/a-visual-guide-to-artemis-ii-and-previous-missions-to-the-moon"
+    },
+    {
+      "q": "As of April 3, 2026, how much did United Airlines increase its first checked bag fee by for flights within the U.S., Mexico, Canada, and Latin America?",
+      "options": [
+        "$5",
+        "$10",
+        "$15",
+        "$20"
+      ],
+      "a": 1,
+      "correctText": "United Airlines increased its first checked bag fee by $10, making it $45 for flights within the U.S., Mexico, Canada, and Latin America.",
+      "category": "Business",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxaGVM_bn-Gmsp4qg5RgYMPwbM5aJNVoECyePBfxKg_MV6j094bbhnQujOFn5qmFP_WhVPyMhzSJDwgOXQJC8-hX2BLBUIF6K_dpKtaDIjAwpgCVJbTWHSGrsJ4P_u8W8XIEdTtwfdNfqhDBcIe3eMpDQtCEWS-6Qmi4kTPVhSEOwjpElWtDDwo76gRSdsIsqf5Gc8D0qdlf_zNSVOQs4YHfhTh8208g3SIEzUm1Uu1nkvjK6-"
+    },
+    {
+      "q": "What is the name of the new fund Prime Minister Mark Carney launched on April 7, 2026, to address infrastructure gaps across Canada with a $51-billion investment over 10 years?",
+      "options": [
+        "Build Communities Strong Fund",
+        "National Infrastructure Initiative",
+        "Canada's Growth Fund",
+        "Future Ready Canada Fund"
+      ],
+      "a": 0,
+      "correctText": "Prime Minister Mark Carney officially launched the Build Communities Strong Fund, a $51 billion investment over 10 years, on April 7, 2026, to address infrastructure gaps across the country.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/carney-infrastructure-plan-51-billion-1.7166123"
+    },
+    {
+      "q": "On April 7, 2026, what action did Iran reportedly take regarding its direct diplomatic communications with the United States?",
+      "options": [
+        "Increased ambassadorial presence",
+        "Cut all direct diplomatic channels",
+        "Proposed new direct talks",
+        "Requested UN mediation for direct talks"
+      ],
+      "a": 1,
+      "correctText": "On April 7, 2026, Iran reportedly cut off direct diplomatic communications with the United States, although indirect talks were continuing through mediators.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sey6ua/iran_cuts_all_diplomatic_channels_with_us_ahead/"
+    }
+  ]
+}

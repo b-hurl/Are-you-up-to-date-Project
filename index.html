@@ -854,8 +854,8 @@
         function handleConfigUpdate(config) {
             gameConfig = { ...gameConfig, ...config };
             
-            if (gameConfig.gameMode === 'solo' && gameConfig.activeSelection) {
-                if (gameConfig.soloSubMode === 'gauntlet') {
+            if (gameConfig.activeSelection) {
+                if (gameConfig.soloSubMode === 'gauntlet' || gameConfig.gameMode === 'multiplayer') {
                     selectMode(gameConfig.activeSelection); 
                 } else if (gameConfig.soloSubMode === 'categories') {
                     loadCategoryTrivia(gameConfig.activeSelection);
@@ -1193,13 +1193,15 @@
         }
 
         async function selectMode(mode) {
-            const isLegacy = localStorage.getItem('trivia-legacy-mode') === 'true';
+            const gameDate = getGameDate();
+            const gameMode = gameConfig.gameMode || 'solo';
+            const filePath = `questions/${gameDate}-${gameMode}-${mode}-gauntlet.json`;
 
     // If they start a new mode, they lose any pending manual sync chance from a previous completion
     localStorage.removeItem('trivia-manual-sync-available');
 
             // Double check against remote progress if available
-            if (remoteUserProgress && remoteUserProgress.lastPlayedDate === getGameDate()) {
+            if (remoteUserProgress && remoteUserProgress.lastPlayedDate === gameDate) {
                 let pModes = remoteUserProgress.playedModes || [];
                 if (pModes.length === 0 && remoteUserProgress.lastMode) pModes = [remoteUserProgress.lastMode];
                 if (pModes.includes(mode)) {
@@ -1209,16 +1211,22 @@
                 }
             }
 
-            if (!freshGameData) return;
-            
-            if (!freshGameData.questions || freshGameData.questions.length === 0) {
-                document.getElementById('question-text').innerText = "No questions found for today.";
-                document.getElementById('question-text').classList.remove('hidden');
-                return;
-            }
-            
-            const CASUAL_CATS = ['Entertainment', 'Gaming', 'Sports', 'Lifestyle', 'Reality TV', 'Music', 'Movies', 'Celebrity', 'Pop Culture', 'Books', 'Health'];
-            const PRO_CATS = ['Economy', 'Politics', 'Business', 'World', 'Technology', 'Environment', 'Weather', 'Science', 'Finance', 'Canada', 'Usa'];
+            updateHeaderSyncStatus('syncing');
+            try {
+                const response = await fetch(filePath + `?v=${Date.now()}`);
+                if (!response.ok) throw new Error("Gauntlet file not found");
+                
+                const data = await response.json();
+                const questions = sanitizeQuestions(data.questions || []);
+                
+                if (questions.length === 0) {
+                    document.getElementById('question-text').innerText = "No questions found for today.";
+                    document.getElementById('question-text').classList.remove('hidden');
+                    return;
+                }
+
+                const CASUAL_CATS = ['Entertainment', 'Gaming', 'Sports', 'Lifestyle', 'Reality TV', 'Music', 'Movies', 'Celebrity', 'Pop Culture', 'Books', 'Health'];
+                const PRO_CATS = ['Economy', 'Politics', 'Business', 'World', 'Technology', 'Environment', 'Weather', 'Science', 'Finance', 'Canada', 'Usa'];
 
             // Filter questions based on mode
             updateTheme(mode);
@@ -1228,7 +1236,7 @@
             const isCityOptedOut = localStorage.getItem('trivia-opt-out-city') === 'true';
             const isProvinceOptedOut = localStorage.getItem('trivia-opt-out-province') === 'true';
 
-            let filteredQuestions = freshGameData.questions.filter(q => {
+            let filteredQuestions = questions.filter(q => {
                 // 1. Regional Filter (Always apply if opted out, regardless of game mode)
                 if (q.location) {
                     if (isCityOptedOut && q.location.city) {
@@ -1260,7 +1268,7 @@
                 if (!q.category) return true; // Include uncategorized questions by default
                 const cat = q.category.trim().toLowerCase(); // Normalize category from question
 
-                if (gameConfig.soloSubMode === 'gauntlet') {
+                if (gameConfig.soloSubMode === 'gauntlet' || gameConfig.gameMode === 'multiplayer') {
                     // For Gauntlet, 'mode' is 'casual' or 'professional'
                     if (mode === 'casual') { // Casual Gauntlet
                         return CASUAL_CATS.some(c => cat.includes(c.toLowerCase()));
@@ -1288,19 +1296,13 @@
             if (settingsRoot) settingsRoot.classList.add('hidden'); // Hide the React component
             document.getElementById('question-text').classList.remove('hidden');
             
-            try {
-                if (isLegacy) {
-                    updateTheme(mode);
-                } else {
-                    updateTheme(mode); // Use the selected category for the theme
-                }
-                startNewSession(modeData, getGameDate(), mode);
+                startNewSession(modeData, gameDate, mode);
             } catch (e) {
-                console.error("Game start error:", e);
-                document.getElementById('question-text').innerText = "Something went wrong starting the game. Please refresh.";
-                document.getElementById('mode-selection').classList.remove('hidden');
-                const settingsRoot = document.getElementById('game-settings-root');
-                if (settingsRoot) settingsRoot.classList.remove('hidden');
+                console.error("Gauntlet load error:", e);
+                document.getElementById('question-text').innerText = "Something went wrong starting the game. Please try again.";
+                document.getElementById('question-text').classList.remove('hidden');
+            } finally {
+                updateHeaderSyncStatus('complete');
             }
         }
 
@@ -1385,29 +1387,9 @@ async function startApp() {
     checkMaintenanceMode();
     probeAvailableCategories(); // Probe file existence in background
 
-    // Load today's trivia data for legacy modes (casual/professional mix)
-    // and for general question pool for category mode filtering.
-    try {
-        const [casualResponse, professionalResponse] = await Promise.all([
-            fetch(`questions/${gameDate}-casual-mix.json?v=${Date.now()}`),
-            fetch(`questions/${gameDate}-professional-mix.json?v=${Date.now()}`)
-        ]);
+    // Initialize freshGameData to signify app is ready
+    freshGameData = { questions: [] };
 
-        let allQuestions = [];
-        if (casualResponse.ok) {
-            const data = await casualResponse.json();
-            allQuestions = allQuestions.concat(sanitizeQuestions(data.questions).map(q => ({...q, category: q.category || 'Casual'})));
-        }
-        if (professionalResponse.ok) {
-            const data = await professionalResponse.json();
-            allQuestions = allQuestions.concat(sanitizeQuestions(data.questions).map(q => ({...q, category: q.category || 'Professional'})));
-        }
-        freshGameData = { questions: allQuestions };
-        console.log("Loaded freshGameData with", freshGameData.questions.length, "questions.");
-    } catch (e) {
-        console.error("Error loading daily mix trivia:", e);
-        freshGameData = { questions: [] }; // Ensure it's an object even on error
-    }
     determineUserLocation(); // Trigger background location check
     startNextTimer(); // Start global countdown immediately
     
@@ -1844,15 +1826,14 @@ function showFinalResults() {
         if (nameInput) nameInput.value = storedName || '';
     }
 
-    // Temporarily disabled due to backend issues
-    // if (db) {
-    //     fetchAndDisplayLeaderboard();
-    //     checkIfSubmitted().then(submitted => {
-    //         if (auth.currentUser && !submitted && storedName && storedName.trim()) {
-    //             submitScore();
-    //         }
-    //     });
-    // }
+    if (db && gameConfig.gameMode === 'multiplayer') {
+        fetchAndDisplayLeaderboard();
+        checkIfSubmitted().then(submitted => {
+            if (auth.currentUser && !submitted && storedName && storedName.trim()) {
+                submitScore();
+            }
+        });
+    }
 }
 
 function returnToMenu(target) {
