@@ -27,7 +27,7 @@ jobs:
           #cache: 'npm'
 
       - name: Install Dependencies
-        run: npm install @google/generative-ai axios rss-parser https-proxy-agent --save
+        run: npm install
 
       - name: Checkout code
         uses: actions/checkout@v4
