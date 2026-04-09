@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What social media platform is reportedly rolling out unskippable ads lasting up to 90 seconds for TV users, causing user frustration?",
+      "options": [
+        "Facebook",
+        "TikTok",
+        "YouTube",
+        "Instagram"
+      ],
+      "a": 2,
+      "correctText": "YouTube is rolling out unskippable long ads, up to 90 seconds, to TV users.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcUqv8f4sKnQUsLcEJLP77cfEFEIwKwJG6KIXI5M71g-E65py8CTWb59U6S6VHxLK9iwpPFzO6iY8Kh49fHkPOk_UlEYKRCklVQijhrveCiL8yyVCJwBJSxv0Pbb7dKFFA3tAyQAYczLno2HheYMNV_3LrJrCUQUkglip8OsJfzooefWLxqtl1yZJ0ECT8GGVZO0qQKucIZtS1v93ss8RwwBXFtFZbK-RJe"
+    },
+    {
+      "q": "According to a recent report, what percentage of white-collar professionals are reportedly refusing to adopt AI tools despite employer mandates?",
+      "options": [
+        "50%",
+        "65%",
+        "80%",
+        "30%"
+      ],
+      "a": 2,
+      "correctText": "A staggering 80% of white-collar professionals are reportedly refusing to adopt AI tools.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTehol7FYcbE9K_bdgY4YpFIsfjqSG13EHIIaA8DethBz9FxMDGUECAFtWeOKDxoNHqrCx9KgRs7a8vyPxtl7sFKlwD5BuTE8F27Gr_IV74e3IRWakH4aIYqnKpesV7TbV7fy3SUqFxOxaOQBiikUlu6gRvijqM7EHqVYMINunotqPXux3HV9pjGYU5ogQdZqo_LEw7unk8C9CnfUQ-zS6b6Vb"
+    },
+    {
+      "q": "Which major tech company has begun removing its AI assistant, Copilot, from built-in Windows 11 apps like Notepad and Snipping Tool?",
+      "options": [
+        "Google",
+        "Apple",
+        "Microsoft",
+        "Amazon"
+      ],
+      "a": 2,
+      "correctText": "Microsoft has begun removing Copilot from Windows 11 apps such as Notepad and Snipping Tool.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjUGRHMMSuximZEa5NLO2GA9hoN2cp0VX0o7pdzGGNR7ozLOvNtoXHXcQVCIWHjcneWmQvtHd9rGlqGF3NeinsNv0n19FCKrdO2wijzy7gTPHEHLqbYk5J4tataAe8ZJgNCJUTTfy5eUgXSKlXlDFUeIT6qHjL76eVSBDeNpktElSf9iCEAVI96EaNKH1CgGkMkqZhRdftog=="
+    },
+    {
+      "q": "What government agency recently issued a warning to U.S. internet users to reboot their routers due to attackers targeting home networks?",
+      "options": [
+        "CIA",
+        "FBI",
+        "NSA",
+        "DHS"
+      ],
+      "a": 2,
+      "correctText": "The National Security Agency (NSA) issued a warning to reboot internet routers.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkPJikcjKCAs9uzrgajF1Ep3IQxSoSyn8MUFj-7wiN8FRHaA4nyB8nCrtNyGEl1MEJzWY9uuzqbMRZURnXOZSkJ0W4aJuGh8tdpobufpaLVstzRWs_KDQvfgrpJRzBMX3TAZdtSxI3Jm37EhUEGattnY2qWea3yCBARzkEqD9oBwfL5rG_sqCBUnVnVquMXvgVSWANfDPbNid-"
+    },
+    {
+      "q": "How was the FBI recently able to extract a suspect's deleted Signal messages from an iPhone, even after the app was uninstalled?",
+      "options": [
+        "Through iCloud backups",
+        "By brute-forcing the device password",
+        "From the iPhone's push notification database",
+        "By compelling Signal to provide data"
+      ],
+      "a": 2,
+      "correctText": "The FBI was able to forensically extract copies of incoming Signal messages from an iPhone's push notification database.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmqTZaIRZ_WIVvwhuJt8xxkxQrkuQn6ZtU3CUIiLIlGKxcK4ti9Z56LJRwGNBvmdhkH5udbXf-HVjFaQHhbOwc9T-bXEe4CtWmCGGmlgffAD3DFYolzgF8JEQtOPhuIRIjd4JkcvQzg4OBlK_nuKcTQZFw448s_nQ2keqBxM8Z7vaBh3A4AfS7kswiEPU2mySZxrVfydpazYYlUa5OYcMfiJZMrSv27dOR"
+    }
+  ]
+}
