@@ -34,12 +34,6 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:github-action
 
-      - name: Generate Trivia
-        run: node generate-trivia.js
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          # Pass your Home PC's Tailscale IP to the script
-          HOME_EXIT_NODE_IP: ${{ secrets.TS_EXIT_NODE_IP }}
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)
         run: node node.js
