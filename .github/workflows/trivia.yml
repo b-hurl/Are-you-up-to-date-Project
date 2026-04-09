@@ -33,22 +33,13 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:github-action
-          # This flag is the secret sauce for GitHub Actions
-          args: --accept-dns=false 
 
-      - name: Route Traffic through Regina Home
-        shell: bash
-        run: |
-          # 1. Give the background service a 5-second head start
-          sleep 5
-          
-          # 2. Set the exit node but DON'T force DNS (prevents the crash)
-          sudo tailscale set --exit-node=${{ secrets.TS_EXIT_NODE_IP }} --exit-node-allow-lan-access=true
-          
-          # 3. Verify connection with a retry loop
-          for i in {1..5}; do 
-            curl -s https://ifconfig.me && break || sleep 2; 
-          done
+      - name: Generate Trivia
+        run: node generate-trivia.js
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Pass your Home PC's Tailscale IP to the script
+          HOME_EXIT_NODE_IP: ${{ secrets.TS_EXIT_NODE_IP }}
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)
         run: node node.js
