@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Where is Costco opening its first standalone gas station with 40 pumps?",
+      "options": [
+        "Mission Viejo, California",
+        "Honolulu, Hawaii",
+        "Seattle, Washington",
+        "Dallas, Texas"
+      ],
+      "a": 0,
+      "correctText": "Costco's first standalone gas station, featuring 40 pumps, is set to open in Mission Viejo, California, in June.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sghia7/costco_is_starting_a_standalone_gas_station/"
+    },
+    {
+      "q": "What is the approximate capital expenditure Amazon CEO Andy Jassy is defending for 2026, primarily for AI infrastructure?",
+      "options": [
+        "$50 billion",
+        "$100 billion",
+        "$200 billion",
+        "$500 billion"
+      ],
+      "a": 2,
+      "correctText": "Amazon CEO Andy Jassy is publicly defending a $200 billion capital expenditure program for 2026, predominantly allocated to AI infrastructure.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgrg08/amazon_ceo_jassy_defends_200_billion_ai_spend/"
+    },
+    {
+      "q": "What is OpenAI's projected ad revenue for 2026, according to recent reports?",
+      "options": [
+        "$1 billion",
+        "$2.5 billion",
+        "$5 billion",
+        "$10 billion"
+      ],
+      "a": 1,
+      "correctText": "OpenAI projects $2.5 billion in ad revenue for 2026, with ambitious plans to reach $100 billion by 2030.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgvvn5/openai_projects_25_billion_in_ad_revenue_this/"
+    },
+    {
+      "q": "Under new CEO Josh D'Amaro, how many employees is Disney reportedly preparing to lay off?",
+      "options": [
+        "Up to 100",
+        "Up to 500",
+        "Up to 1,000",
+        "Up to 5,000"
+      ],
+      "a": 2,
+      "correctText": "Disney is preparing to lay off up to 1,000 employees, primarily within its marketing department, under the leadership of new CEO Josh D'Amaro.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgc183/disney_to_lay_off_up_to_1000_employees_in_first/"
+    },
+    {
+      "q": "How much was an Alabama jury awarded to a boat repairman in a lawsuit against Tyson Foods over a wastewater spill that caused a flesh-eating bacterial infection?",
+      "options": [
+        "$10 million",
+        "$25 million",
+        "$50 million",
+        "$70 million"
+      ],
+      "a": 3,
+      "correctText": "An Alabama jury awarded a boat repairman $70 million in a lawsuit against Tyson Foods after he contracted a flesh-eating bacterial infection due to a 2019 wastewater spill.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgahqk/alabama_jury_awards_boat_repairman_70_million_in/"
+    }
+  ]
+}

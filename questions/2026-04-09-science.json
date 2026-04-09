@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A recent study, reported today, indicates that coercive control in relationships is often viewed as less harmful when the victim is a what?",
+      "options": [
+        "Woman",
+        "Man",
+        "Child",
+        "Elderly person"
+      ],
+      "a": 1,
+      "correctText": "Research from April 9, 2026, indicates that people tend to view coercive control as less harmful when the victim is a man.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgnmbo/people_view_coercive_control_in_relationships_as/"
+    },
+    {
+      "q": "What innovative therapy, reported in news from April 9, 2026, helped a woman with three autoimmune diseases achieve remission by 'supercharging' her immune cells?",
+      "options": [
+        "Chemotherapy",
+        "Radiation therapy",
+        "CAR-T cell therapy",
+        "Hormone therapy"
+      ],
+      "a": 2,
+      "correctText": "CAR-T cell therapy, involving the modification and reintroduction of a patient's immune cells, was reported on April 9, 2026, to have led to remission for a woman with three autoimmune diseases.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgvvrl/woman_with_3_autoimmune_diseases_enters_remission/"
+    },
+    {
+      "q": "According to news from April 9, 2026, what social factor is linked to a lower risk of cancer, particularly for men?",
+      "options": [
+        "Higher education",
+        "Regular exercise",
+        "Marriage",
+        "Healthy diet"
+      ],
+      "a": 2,
+      "correctText": "News from April 9, 2026, indicates that marriage is linked to a lower risk of cancer, especially among men.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sglsc0/marriage_is_linked_to_lower_risk_of_cancer/"
+    },
+    {
+      "q": "A genetic study reported today, April 9, 2026, found that depression and anxiety often genetically pair with which physical health issue?",
+      "options": [
+        "Gastrointestinal problems",
+        "Genitourinary disorders",
+        "Sleep problems",
+        "Cardiovascular disease"
+      ],
+      "a": 3,
+      "correctText": "A genetic study published on April 9, 2026, revealed that mental illnesses like depression and anxiety often go hand-in-hand with cardiovascular disease.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgim0y/mental_physical_illnesses_often_go_hand_in_hand/"
+    },
+    {
+      "q": "A study reported on April 9, 2026, found gruesome infighting among chimpanzees, resulting in the deaths of how many infant chimps?",
+      "options": [
+        "5",
+        "10",
+        "19",
+        "25"
+      ],
+      "a": 2,
+      "correctText": "Reports from April 9, 2026, detail a study revealing that 19 infant chimpanzees were killed in infighting.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgz37j/chimpanzees_at_war_19_infant_chimps_were_killed/"
+    }
+  ]
+}

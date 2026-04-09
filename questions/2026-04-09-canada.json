@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 9, 2026, Netflix officially opened a new 110,000-square-foot animation studio in which Canadian city?",
+      "options": [
+        "Toronto",
+        "Montreal",
+        "Vancouver",
+        "Calgary"
+      ],
+      "a": 2,
+      "correctText": "Netflix officially opened a new 110,000-square-foot animation studio in Vancouver on April 9, 2026.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqOaT_hC7Eu6UQO0kEfRsEnwER04WiUu4wHGHB26wRe35WRsalhBcTQzLZBNj7-Nyod_Xyzp5Lntx9HUwuchCqJOI9mCljlHzbx8kpVqPOP0qVWGooEHY6omZpnDZLGRZWVL1EqclU2pyoix8fJIt6df3VHBtPwVhFUhFrew=="
+    },
+    {
+      "q": "What Canadian bank announced on April 9, 2026, its plan to launch a growth fund to invest up to $1 billion in Canadian companies?",
+      "options": [
+        "TD Bank",
+        "Scotiabank",
+        "RBC",
+        "BMO"
+      ],
+      "a": 2,
+      "correctText": "On April 9, 2026, RBC announced its plan to launch a growth fund to invest up to $1 billion in Canadian companies.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0b3fTFAbWirVTgAM7McLKYWO1QTi0av1FQDRrlpXqe_kZqj-_l6IqIh22U_tmBtmTY6cux4yzw4Ff-4uKs2Mz6uuHz1mD_P31Wsh_ZqIhrSfBXXOV41VvEDq9vwE9jsnHiQwPtkqfzql1VX_I3T_rrN63JzrBEqtdNyn2-JEMAkrvgLwHJdj6ephb460jZSY="
+    },
+    {
+      "q": "Which Canadian province is currently facing a court challenge from First Nations, including Sturgeon Lake Cree Nation, seeking to block a separatist referendum, as reported on April 9, 2026?",
+      "options": [
+        "Quebec",
+        "British Columbia",
+        "Alberta",
+        "Saskatchewan"
+      ],
+      "a": 2,
+      "correctText": "Alberta is currently facing a court challenge from First Nations, including Sturgeon Lake Cree Nation, seeking to block a separatist referendum, citing treaty infringement.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTqYg2F1H05TAyFhsyxhcSNaF3yThVR9NHeopTTHdZhBwOMKmwhX0TfeAAXK5uTkVKd8fegN-7AH0TOnIrDVxJV_naRPjYTDy0_T8wTJA3RWnIDZoLLTduq9H2pzM6nbFYgYI7ca7r3piOnRaMhxb_j4m-qnAEXyL11cyrH7gEPBEWTxdydA=="
+    },
+    {
+      "q": "According to a poll reported in early April 2026, a majority of Canadians are open to exploring the idea of joining which international political and economic bloc?",
+      "options": [
+        "NAFTA",
+        "ASEAN",
+        "European Union",
+        "African Union"
+      ],
+      "a": 2,
+      "correctText": "A poll reported in early April 2026 suggested that a majority of Canadians are open to exploring the idea of joining the European Union.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG21hhHYPnTm4eKHpJzAjWCsK4bsFuQS8F8Ciq-g2yXDAZnpkPRw3hm1Ur3yPv895FoRAefdLj6ngXM3dEpI7bZjfhpI6Cx5KyCShijhskGnADPPxMchiRZjpwrXB_cyHLl0fG3X1SmYVX8FeF0npE5XY6hcT5EVM7w_h71TTSv47iZnlOacOeeOnIEb1CKckcGa1wyvIHpFpPWhzUw4_cNRH_50m-z"
+    },
+    {
+      "q": "On April 7/8, 2026, Conservative MP Marilyn Gladu notably crossed the floor to join which political party, led by Prime Minister Mark Carney?",
+      "options": [
+        "New Democratic Party",
+        "Bloc Québécois",
+        "Liberal Party",
+        "Green Party"
+      ],
+      "a": 2,
+      "correctText": "Conservative MP Marilyn Gladu crossed the floor to join the Liberal Party, led by Prime Minister Mark Carney, on April 7 or 8, 2026.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWB11AZAmxmLIg9O2oMAsOB_Stvk2xkKOcZNMwnI9ahVuuJaYLU829ePrp0jQ0iZ96AyQCGw-tQB8oRHz5xVz4rt15Nsq5DwSz4_ui9mXPSuxlZFTLBYPgGV2mMsRfinu_blm1JlOcGIJYnKfzW_sufk6yxexgmdVaNcFchbEFiiJkBL7t"
+    }
+  ]
+}

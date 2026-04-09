@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-09",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to a recent report, what percentage of white-collar professionals are reportedly refusing to adopt AI tools despite employer mandates?",
+      "options": [
+        "50%",
+        "65%",
+        "80%",
+        "30%"
+      ],
+      "a": 2,
+      "correctText": "A staggering 80% of white-collar professionals are reportedly refusing to adopt AI tools.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTehol7FYcbE9K_bdgY4YpFIsfjqSG13EHIIaA8DethBz9FxMDGUECAFtWeOKDxoNHqrCx9KgRs7a8vyPxtl7sFKlwD5BuTE8F27Gr_IV74e3IRWakH4aIYqnKpesV7TbV7fy3SUqFxOxaOQBiikUlu6gRvijqM7EHqVYMINunotqPXux3HV9pjGYU5ogQdZqo_LEw7unk8C9CnfUQ-zS6b6Vb"
+    },
+    {
+      "q": "How much was an Alabama jury awarded to a boat repairman in a lawsuit against Tyson Foods over a wastewater spill that caused a flesh-eating bacterial infection?",
+      "options": [
+        "$10 million",
+        "$25 million",
+        "$50 million",
+        "$70 million"
+      ],
+      "a": 3,
+      "correctText": "An Alabama jury awarded a boat repairman $70 million in a lawsuit against Tyson Foods after he contracted a flesh-eating bacterial infection due to a 2019 wastewater spill.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgahqk/alabama_jury_awards_boat_repairman_70_million_in/"
+    },
+    {
+      "q": "Which Canadian province is currently facing a court challenge from First Nations, including Sturgeon Lake Cree Nation, seeking to block a separatist referendum, as reported on April 9, 2026?",
+      "options": [
+        "Quebec",
+        "British Columbia",
+        "Alberta",
+        "Saskatchewan"
+      ],
+      "a": 2,
+      "correctText": "Alberta is currently facing a court challenge from First Nations, including Sturgeon Lake Cree Nation, seeking to block a separatist referendum, citing treaty infringement.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTqYg2F1H05TAyFhsyxhcSNaF3yThVR9NHeopTTHdZhBwOMKmwhX0TfeAAXK5uTkVKd8fegN-7AH0TOnIrDVxJV_naRPjYTDy0_T8wTJA3RWnIDZoLLTduq9H2pzM6nbFYgYI7ca7r3piOnRaMhxb_j4m-qnAEXyL11cyrH7gEPBEWTxdydA=="
+    },
+    {
+      "q": "A genetic study reported today, April 9, 2026, found that depression and anxiety often genetically pair with which physical health issue?",
+      "options": [
+        "Gastrointestinal problems",
+        "Genitourinary disorders",
+        "Sleep problems",
+        "Cardiovascular disease"
+      ],
+      "a": 3,
+      "correctText": "A genetic study published on April 9, 2026, revealed that mental illnesses like depression and anxiety often go hand-in-hand with cardiovascular disease.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgim0y/mental_physical_illnesses_often_go_hand_in_hand/"
+    },
+    {
+      "q": "Under new CEO Josh D'Amaro, how many employees is Disney reportedly preparing to lay off?",
+      "options": [
+        "Up to 100",
+        "Up to 500",
+        "Up to 1,000",
+        "Up to 5,000"
+      ],
+      "a": 2,
+      "correctText": "Disney is preparing to lay off up to 1,000 employees, primarily within its marketing department, under the leadership of new CEO Josh D'Amaro.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgc183/disney_to_lay_off_up_to_1000_employees_in_first/"
+    },
+    {
+      "q": "A recent study, reported today, indicates that coercive control in relationships is often viewed as less harmful when the victim is a what?",
+      "options": [
+        "Woman",
+        "Man",
+        "Child",
+        "Elderly person"
+      ],
+      "a": 1,
+      "correctText": "Research from April 9, 2026, indicates that people tend to view coercive control as less harmful when the victim is a man.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgnmbo/people_view_coercive_control_in_relationships_as/"
+    },
+    {
+      "q": "A study reported on April 9, 2026, found gruesome infighting among chimpanzees, resulting in the deaths of how many infant chimps?",
+      "options": [
+        "5",
+        "10",
+        "19",
+        "25"
+      ],
+      "a": 2,
+      "correctText": "Reports from April 9, 2026, detail a study revealing that 19 infant chimpanzees were killed in infighting.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgz37j/chimpanzees_at_war_19_infant_chimps_were_killed/"
+    },
+    {
+      "q": "Where is Costco opening its first standalone gas station with 40 pumps?",
+      "options": [
+        "Mission Viejo, California",
+        "Honolulu, Hawaii",
+        "Seattle, Washington",
+        "Dallas, Texas"
+      ],
+      "a": 0,
+      "correctText": "Costco's first standalone gas station, featuring 40 pumps, is set to open in Mission Viejo, California, in June.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sghia7/costco_is_starting_a_standalone_gas_station/"
+    },
+    {
+      "q": "What is OpenAI's projected ad revenue for 2026, according to recent reports?",
+      "options": [
+        "$1 billion",
+        "$2.5 billion",
+        "$5 billion",
+        "$10 billion"
+      ],
+      "a": 1,
+      "correctText": "OpenAI projects $2.5 billion in ad revenue for 2026, with ambitious plans to reach $100 billion by 2030.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgvvn5/openai_projects_25_billion_in_ad_revenue_this/"
+    },
+    {
+      "q": "What Canadian bank announced on April 9, 2026, its plan to launch a growth fund to invest up to $1 billion in Canadian companies?",
+      "options": [
+        "TD Bank",
+        "Scotiabank",
+        "RBC",
+        "BMO"
+      ],
+      "a": 2,
+      "correctText": "On April 9, 2026, RBC announced its plan to launch a growth fund to invest up to $1 billion in Canadian companies.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0b3fTFAbWirVTgAM7McLKYWO1QTi0av1FQDRrlpXqe_kZqj-_l6IqIh22U_tmBtmTY6cux4yzw4Ff-4uKs2Mz6uuHz1mD_P31Wsh_ZqIhrSfBXXOV41VvEDq9vwE9jsnHiQwPtkqfzql1VX_I3T_rrN63JzrBEqtdNyn2-JEMAkrvgLwHJdj6ephb460jZSY="
+    }
+  ]
+}
