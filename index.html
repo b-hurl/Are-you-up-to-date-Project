@@ -3336,7 +3336,7 @@ function renderReview() {
         const div = document.createElement('div');
         div.className = `p-4 rounded-xl border mb-3 ${isCorrect ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-red-900/20 border-red-500/30'}`;
         
-        const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
+        const sourceLink = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-300 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
         const qEncoded = encodeURIComponent(q.q).replace(/'/g, "%27");
         const existingVote = votedQuestions[qKey];
         const showHighlight = !hasSeenFeedback && !existingVote && !highlightShown;
@@ -5178,7 +5178,7 @@ function closeStats() {
                     game.questions.forEach((q, idx) => {
                         const qKey = normalizeQKey(q.q);
                         const correctAnswer = q.options[q.a];
-                        const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-500 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
+                        const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-300 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
                         
                         const qEncoded = encodeURIComponent(q.q).replace(/'/g, "%27");
                         const existingVote = votedQuestions[qKey];
