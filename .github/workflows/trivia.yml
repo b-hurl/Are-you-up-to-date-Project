@@ -3,7 +3,7 @@ name: Daily Trivia Update
 on:
   schedule:
     # This runs at 13:30 UTC (7:30 AM CST / 8:30 AM EST) every day
-    - cron: '30 12 * * *'
+    - cron: '03 12 * * *'
   workflow_dispatch:
     # This adds a "Run workflow" button in the GitHub Actions tab for manual testing
 
