@@ -58,6 +58,7 @@ async function runAutomation() {
     let queue = Object.keys(CONFIG);
     const generalRetryLimit = 3; // General retry limit for a category
     const categoryAttempts = {}; // Tracks general attempts for each category
+    const _503attempts = {}; // Tracks 503 retries for each category
     const _503RetryLimit = 5; // Specific retry limit for 503 errors
 
     // Verify the system is actually routing through your home IP
