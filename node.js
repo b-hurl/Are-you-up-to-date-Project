@@ -126,7 +126,7 @@ async function runAutomation() {
                 } catch (e) {
                     lastError = e; // Store the error from the last subreddit attempt
                     console.warn(`   ⚠️ Subreddit r/${sub} failed (Error: ${e.code || e.message}).`);
-                    await sleep(3000); // Short pause between individual sub attempts
+                    await sleep(45000); // Short pause between individual sub attempts
                 }
             }
 
@@ -134,9 +134,9 @@ async function runAutomation() {
                 if (lastError && lastError.response?.status === 503) {
                     _503attempts[category] = (_503attempts[category] || 0) + 1;
                     if (_503attempts[category] <= _503RetryLimit) {
-                        console.log(`🔄 All subreddits for ${category} failed with 503. Retrying category in 30s (503 attempt ${_503attempts[category]}/${_503RetryLimit})...`);
+                        console.log(`🔄 All subreddits for ${category} failed with 503. Retrying category in 45s (503 attempt ${_503attempts[category]}/${_503RetryLimit})...`);
                         queue.unshift(category); // Add to front of queue to retry immediately
-                        await sleep(30000);
+                        await sleep(45000);
                         shouldRetryCategory = true; // Flag to skip Gemini and re-process category
                     } else {
                         console.warn(`⚠️ Max 503 retries reached for ${category}. Falling back to general retry logic.`);
@@ -152,9 +152,9 @@ async function runAutomation() {
             if (error.response?.status === 503) {
                 _503attempts[category] = (_503attempts[category] || 0) + 1;
                 if (_503attempts[category] <= _503RetryLimit) {
-                    console.log(`🔄 Reddit fetch for ${category} failed with 503. Retrying category in 30s (503 attempt ${_503attempts[category]}/${_503RetryLimit})...`);
+                    console.log(`🔄 Reddit fetch for ${category} failed with 503. Retrying category in 45s (503 attempt ${_503attempts[category]}/${_503RetryLimit})...`);
                     queue.unshift(category); // Add to front of queue to retry immediately
-                    await sleep(30000);
+                    await sleep(45000);
                     shouldRetryCategory = true; // Flag to skip Gemini and re-process category
                 } else {
                     console.warn(`⚠️ Max 503 retries reached for ${category}. Falling back to general retry logic.`);
@@ -185,8 +185,8 @@ async function runAutomation() {
             if (lastError?.response?.status === 404) {
                 console.error("   (Check if one of your subreddits is private or banned)");
             }
-            console.log(`😴 Waiting 15 seconds to avoid rate limits...`);
-            await sleep(15000);
+            console.log(`😴 Waiting 445 seconds to avoid rate limits...`);
+            await sleep(45000);
             continue; // Move to next category in queue
         }
 
