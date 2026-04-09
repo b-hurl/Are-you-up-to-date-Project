@@ -5,6 +5,9 @@ const Parser = require('rss-parser');
 const { HttpsProxyAgent } = require('https-proxy-agent');
 const dir = './questions';
 
+// This points to the proxy running on your home computer
+const proxyUrl = process.env.HOME_EXIT_NODE_IP ? `http://${process.env.HOME_EXIT_NODE_IP}:1080` : null;
+
 if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
 }
@@ -60,8 +63,7 @@ async function runAutomation() {
     const retryLimit = 3;
     const attempts = {};
 
-    // Initialize Proxy Agent if PROXY_URL is provided
-    const proxyUrl = process.env.PROXY_URL;
+    // Initialize Proxy Agent if HOME_EXIT_NODE_IP is provided
     const httpsAgent = proxyUrl ? new HttpsProxyAgent(proxyUrl) : null;
 
     while (queue.length > 0) {

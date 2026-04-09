@@ -39,7 +39,7 @@ jobs:
         run: node node.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PROXY_URL: ${{ secrets.PROXY_URL }}
+          HOME_EXIT_NODE_IP: ${{ secrets.TS_EXIT_NODE_IP }}
 
       - name: Create Casual & Professional Mixes
         # This script combines them into the 10-question "Mix" files
