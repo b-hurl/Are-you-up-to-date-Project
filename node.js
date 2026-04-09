@@ -2,11 +2,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const axios = require('axios');
 const fs = require('fs');
 const Parser = require('rss-parser');
-const { HttpsProxyAgent } = require('https-proxy-agent');
 const dir = './questions';
-
-// This points to the proxy running on your home computer
-const proxyUrl = process.env.HOME_EXIT_NODE_IP ? `http://${process.env.HOME_EXIT_NODE_IP}:1080` : null;
 
 if (!fs.existsSync(dir)){
     fs.mkdirSync(dir);
@@ -33,23 +29,23 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const parser = new Parser();
 
 // Initialize Gemini
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY, { apiVersion: "v1beta" });
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function checkOutboundIP() {
     try {
-        const res = await axios.get('https://api.ipify.org?format=json');
-        console.log(`🌐 Outbound IP: ${res.data.ip} (Verify this matches your Tailscale Exit Node)`);
+        const res = await axios.get('https://api.ipify.org?format=json', { 
+            timeout: 5000 
+        });
+        console.log(`🌐 Outbound IP (via Tailscale Exit Node): ${res.data.ip}`);
     } catch (e) {
-        console.warn("⚠️ Could not verify outbound IP.");
+        console.warn(`⚠️ Could not verify outbound IP: ${e.message}`);
     }
 }
 
 async function runAutomation() {
-    await checkOutboundIP();
-
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash", 
+        model: "gemini-1.5-flash", 
         tools: [{ googleSearch: {} }]
     });
 
@@ -63,8 +59,8 @@ async function runAutomation() {
     const retryLimit = 3;
     const attempts = {};
 
-    // Initialize Proxy Agent if HOME_EXIT_NODE_IP is provided
-    const httpsAgent = proxyUrl ? new HttpsProxyAgent(proxyUrl) : null;
+    // Verify the system is actually routing through your home IP
+    await checkOutboundIP();
 
     while (queue.length > 0) {
         const category = queue.shift();
@@ -86,7 +82,6 @@ async function runAutomation() {
                             'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
                             'Cache-Control': 'no-cache'
                         },
-                        httpsAgent,
                         timeout: 10000
                     });
                     
@@ -96,7 +91,7 @@ async function runAutomation() {
                         break; 
                     }
                 } catch (e) {
-                    console.warn(`   ⚠️ Subreddit r/${sub} failed (Status: ${e.response?.status || 'Network Error'}).`);
+                    console.warn(`   ⚠️ Subreddit r/${sub} failed (Error: ${e.code || e.message}).`);
                     await sleep(3000); // Short pause between individual sub attempts
                 }
             }

@@ -34,12 +34,16 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:github-action
 
+      - name: Route All Traffic Through Home
+        run: |
+          # Force all traffic (including node/axios) to use the home IP
+          sudo tailscale up --exit-node=${{ secrets.TS_EXIT_NODE_IP }} --reset --accept-dns=false
+
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)
         run: node node.js
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          HOME_EXIT_NODE_IP: ${{ secrets.TS_EXIT_NODE_IP }}
 
       - name: Create Casual & Professional Mixes
         # This script combines them into the 10-question "Mix" files
