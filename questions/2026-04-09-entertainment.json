@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the 20th-anniversary re-release date for Guillermo del Toro's 'Pan's Labyrinth'?",
+      "options": [
+        "October 9, 2026",
+        "September 9, 2026",
+        "November 9, 2026",
+        "October 20, 2026"
+      ],
+      "a": 0,
+      "correctText": "The film will be released in theaters nationwide on October 9, 2026.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgwwxu/official_poster_for_the_20th_anniversary_of/"
+    },
+    {
+      "q": "Which of the following actors is NOT listed in the cast of Brad Bird's upcoming animated film 'Ray Gun'?",
+      "options": [
+        "Sam Rockwell",
+        "Scarlett Johansson",
+        "Tom Waits",
+        "Denzel Washington"
+      ],
+      "a": 3,
+      "correctText": "Denzel Washington is not listed as part of the cast for 'Ray Gun'.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgqggf/first_image_of_arthur_hararis_the_unknown/"
+    },
+    {
+      "q": "As part of its restructuring under new CEO Josh D'Amaro, what is Disney reportedly planning to do?",
+      "options": [
+        "Launch a new streaming service",
+        "Lay off up to 1,000 employees",
+        "Acquire a major film studio",
+        "Release a new line of theme park merchandise"
+      ],
+      "a": 1,
+      "correctText": "Disney is reportedly planning to lay off up to 1,000 employees as part of its restructuring.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgbd7k/disney_to_lay_off_up_to_1000_employees_in_first/"
+    },
+    {
+      "q": "In the upcoming WWII drama 'Pressure', who portrays General Dwight D. Eisenhower?",
+      "options": [
+        "Andrew Scott",
+        "Chris Messina",
+        "Brendan Fraser",
+        "Damian Lewis"
+      ],
+      "a": 2,
+      "correctText": "Brendan Fraser portrays General Dwight D. Eisenhower in the film 'Pressure'.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgs52t/new_poster_for_pressure_the_fate_of_the_free/"
+    },
+    {
+      "q": "What is the premise of Arthur Harari's upcoming film 'The Unknown', starring Léa Seydoux?",
+      "options": [
+        "A detective investigating a series of alien abductions",
+        "A woman who discovers she has superpowers",
+        "A man who transforms into the body of a woman he had a one-night stand with",
+        "A historical drama about the French Revolution"
+      ],
+      "a": 2,
+      "correctText": "The film follows a man who transforms into the body of a woman he had a one-night stand with.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgrojl/first_image_of_arthur_hararis_the_unknown/"
+    }
+  ]
+}

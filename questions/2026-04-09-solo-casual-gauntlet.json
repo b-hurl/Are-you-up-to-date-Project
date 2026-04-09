@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-09",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "What is the real name of the author known as Freida McFadden, famous for \"The Housemaid\"?",
+      "options": [
+        "Sara Cohen",
+        "Amanda Seyfried",
+        "Sydney Sweeney",
+        "Jenna Fischer"
+      ],
+      "a": 0,
+      "correctText": "Sara Cohen",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/the-housemaid-author-freida-mcfadden-reveals-true-identity"
+    },
+    {
+      "q": "Which of the following actors is NOT listed in the cast of Brad Bird's upcoming animated film 'Ray Gun'?",
+      "options": [
+        "Sam Rockwell",
+        "Scarlett Johansson",
+        "Tom Waits",
+        "Denzel Washington"
+      ],
+      "a": 3,
+      "correctText": "Denzel Washington is not listed as part of the cast for 'Ray Gun'.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgqggf/first_image_of_arthur_hararis_the_unknown/"
+    },
+    {
+      "q": "Due to increased demand following the FDA's removal of black box warnings, what medication used for hormone replacement therapy is currently experiencing national shortages, leading to patient scrambles?",
+      "options": [
+        "Estrogen patches",
+        "Insulin pens",
+        "Epinephrine auto-injectors",
+        "Thyroid hormone capsules"
+      ],
+      "a": 0,
+      "correctText": "Estrogen patches are facing shortages due to a surge in demand after the FDA removed black box warnings, making them harder for patients to obtain.",
+      "category": "Health",
+      "source": "https://www.tradingview.com/news/tradingview:07151f6385700001e5b7f1b9014f8b3e:0-patients-scramble-to-find-estrogen-patches-as-shortage-worsens-after-us-fda-champions-use/"
+    },
+    {
+      "q": "Which of the following is a promising new vaccine candidate for Lyme disease that has completed Phase 3 clinical trials?",
+      "options": [
+        "PF-07307405 (VLA15)",
+        "GARDASIL 9",
+        "Shingrix",
+        "Prevnar 13"
+      ],
+      "a": 0,
+      "correctText": "PF-07307405, also known as VLA15, is a Lyme disease vaccine candidate that has completed Phase 3 trials and shown strong efficacy.",
+      "category": "Health",
+      "source": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-valneva-announce-lyme-disease-vaccine-candidate-demonstrates-strong-efficacy-phase-3-valor-trial"
+    },
+    {
+      "q": "Connor McDavid recently had a standout performance, recording a five-point night. How many goals did he score in that game?",
+      "options": [
+        "Three",
+        "Two",
+        "Four",
+        "One"
+      ],
+      "a": 0,
+      "correctText": "Three",
+      "category": "Sports",
+      "source": "https://www.espn.com/nhl/recap/_/gameId/401464286"
+    },
+    {
+      "q": "Which NFL team does Connor McDavid captain?",
+      "options": [
+        "Edmonton Oilers",
+        "San Jose Sharks",
+        "Vegas Golden Knights",
+        "Utah Hockey Club"
+      ],
+      "a": 0,
+      "correctText": "Edmonton Oilers",
+      "category": "Sports",
+      "source": "https://www.espn.com/nhl/recap/_/gameId/401464286"
+    },
+    {
+      "q": "A recent CDC report, delayed in publication, indicated that the COVID-19 vaccine reduced the likelihood of emergency department and urgent care visits by approximately what percentage in healthy adults between September and December of last year?",
+      "options": [
+        "50%",
+        "25%",
+        "75%",
+        "10%"
+      ],
+      "a": 0,
+      "correctText": "The report found a 50% reduction in emergency department and urgent care visits for healthy adults who received the vaccine.",
+      "category": "Health",
+      "source": "https://www.washingtonpost.com/health/2026/04/09/cdc-covid-vaccine-benefits-report-delay/"
+    },
+    {
+      "q": "The U.S. Department of Justice has opened an investigation into the NFL's media deals. What is the primary focus of this investigation?",
+      "options": [
+        "Anticompetitive practices and consumer impact",
+        "Player safety regulations",
+        "Draft pick tampering",
+        "Team relocation policies"
+      ],
+      "a": 0,
+      "correctText": "Anticompetitive practices and consumer impact",
+      "category": "Sports",
+      "source": "https://www.cbsnews.com/news/justice-department-investigating-nfl-broadcast-rights-practices-harm-consumers/"
+    },
+    {
+      "q": "Which new Castlevania game, set in 1499 Paris, was revealed with a gameplay trailer during the Triple-i Initiative Showcase?",
+      "options": [
+        "Castlevania: Symphony of the Night 2",
+        "Castlevania: Belmont's Curse",
+        "Castlevania: Lords of Shadow 3",
+        "Castlevania: Dracula's Legacy"
+      ],
+      "a": 1,
+      "correctText": "Castlevania: Belmont's Curse is set to launch in 2026 and features combat against corrupted historical figures like Joan of Arc.",
+      "category": "Gaming",
+      "source": "https://www.gamespress.com/Castlevania-Belmonts-Curse-revealed-during-Triple-i-Initiative-Showcase-2026"
+    },
+    {
+      "q": "The creators of the popular Minecraft mod 'Create' have been hired by which upcoming game studio?",
+      "options": [
+        "Mojang",
+        "Hytale",
+        "Riot Games",
+        "Hypixel Studios"
+      ],
+      "a": 1,
+      "correctText": "The developers behind the extensive Minecraft 'Create' mod have been hired by Hytale, suggesting a focus on automation and complex systems in the upcoming game.",
+      "category": "Gaming",
+      "source": "https://www.pcgamesn.com/hytale/creators-of-minecraft-mod-create-hired-by-hytale"
+    }
+  ]
+}

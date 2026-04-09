@@ -3,82 +3,95 @@
   "type": "solo-professional-gauntlet",
   "questions": [
     {
-      "q": "According to a recent report, what percentage of white-collar professionals are reportedly refusing to adopt AI tools despite employer mandates?",
+      "q": "Automatic registration for the U.S. military draft is set to begin in December for eligible men. This change was mandated by which act?",
       "options": [
-        "50%",
-        "65%",
-        "80%",
-        "30%"
+        "2026 National Defense Authorization Act",
+        "2025 Infrastructure Investment and Jobs Act",
+        "2024 Economic Growth and Tax Relief Reconciliation Act",
+        "2023 American Rescue Plan Act"
+      ],
+      "a": 0,
+      "correctText": "Automatic registration into Selective Service was mandated in December 2025, when President Donald Trump signed into law the fiscal year 2026 National Defense Authorization Act.",
+      "category": "Usa",
+      "source": "https://www.armytimes.com/news/your-military/2026/04/08/automatic-registration-for-us-military-draft-eligible-men-to-begin-in-december/"
+    },
+    {
+      "q": "As of April 9, 2026, how many days has the Russian invasion of Ukraine been ongoing, according to the /r/WorldNews live thread?",
+      "options": [
+        "1505",
+        "1500",
+        "1510",
+        "1499"
+      ],
+      "a": 0,
+      "correctText": "Day 1505.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sgf2yq/rworldnews_live_thread_russian_invasion_of/"
+    },
+    {
+      "q": "What is the approximate capital expenditure Amazon CEO Andy Jassy is defending for 2026, primarily for AI infrastructure?",
+      "options": [
+        "$50 billion",
+        "$100 billion",
+        "$200 billion",
+        "$500 billion"
       ],
       "a": 2,
-      "correctText": "A staggering 80% of white-collar professionals are reportedly refusing to adopt AI tools.",
+      "correctText": "Amazon CEO Andy Jassy is publicly defending a $200 billion capital expenditure program for 2026, predominantly allocated to AI infrastructure.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgrg08/amazon_ceo_jassy_defends_200_billion_ai_spend/"
+    },
+    {
+      "q": "What social media platform is reportedly rolling out unskippable ads lasting up to 90 seconds for TV users, causing user frustration?",
+      "options": [
+        "Facebook",
+        "TikTok",
+        "YouTube",
+        "Instagram"
+      ],
+      "a": 2,
+      "correctText": "YouTube is rolling out unskippable long ads, up to 90 seconds, to TV users.",
       "category": "Technology",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTehol7FYcbE9K_bdgY4YpFIsfjqSG13EHIIaA8DethBz9FxMDGUECAFtWeOKDxoNHqrCx9KgRs7a8vyPxtl7sFKlwD5BuTE8F27Gr_IV74e3IRWakH4aIYqnKpesV7TbV7fy3SUqFxOxaOQBiikUlu6gRvijqM7EHqVYMINunotqPXux3HV9pjGYU5ogQdZqo_LEw7unk8C9CnfUQ-zS6b6Vb"
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcUqv8f4sKnQUsLcEJLP77cfEFEIwKwJG6KIXI5M71g-E65py8CTWb59U6S6VHxLK9iwpPFzO6iY8Kh49fHkPOk_UlEYKRCklVQijhrveCiL8yyVCJwBJSxv0Pbb7dKFFA3tAyQAYczLno2HheYMNV_3LrJrCUQUkglip8OsJfzooefWLxqtl1yZJ0ECT8GGVZO0qQKucIZtS1v93ss8RwwBXFtFZbK-RJe"
     },
     {
-      "q": "How much was an Alabama jury awarded to a boat repairman in a lawsuit against Tyson Foods over a wastewater spill that caused a flesh-eating bacterial infection?",
+      "q": "According to a poll reported in early April 2026, a majority of Canadians are open to exploring the idea of joining which international political and economic bloc?",
       "options": [
-        "$10 million",
-        "$25 million",
-        "$50 million",
-        "$70 million"
-      ],
-      "a": 3,
-      "correctText": "An Alabama jury awarded a boat repairman $70 million in a lawsuit against Tyson Foods after he contracted a flesh-eating bacterial infection due to a 2019 wastewater spill.",
-      "category": "Business",
-      "source": "https://www.reddit.com/r/business/comments/1sgahqk/alabama_jury_awards_boat_repairman_70_million_in/"
-    },
-    {
-      "q": "Which Canadian province is currently facing a court challenge from First Nations, including Sturgeon Lake Cree Nation, seeking to block a separatist referendum, as reported on April 9, 2026?",
-      "options": [
-        "Quebec",
-        "British Columbia",
-        "Alberta",
-        "Saskatchewan"
+        "NAFTA",
+        "ASEAN",
+        "European Union",
+        "African Union"
       ],
       "a": 2,
-      "correctText": "Alberta is currently facing a court challenge from First Nations, including Sturgeon Lake Cree Nation, seeking to block a separatist referendum, citing treaty infringement.",
+      "correctText": "A poll reported in early April 2026 suggested that a majority of Canadians are open to exploring the idea of joining the European Union.",
       "category": "Canada",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTqYg2F1H05TAyFhsyxhcSNaF3yThVR9NHeopTTHdZhBwOMKmwhX0TfeAAXK5uTkVKd8fegN-7AH0TOnIrDVxJV_naRPjYTDy0_T8wTJA3RWnIDZoLLTduq9H2pzM6nbFYgYI7ca7r3piOnRaMhxb_j4m-qnAEXyL11cyrH7gEPBEWTxdydA=="
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG21hhHYPnTm4eKHpJzAjWCsK4bsFuQS8F8Ciq-g2yXDAZnpkPRw3hm1Ur3yPv895FoRAefdLj6ngXM3dEpI7bZjfhpI6Cx5KyCShijhskGnADPPxMchiRZjpwrXB_cyHLl0fG3X1SmYVX8FeF0npE5XY6hcT5EVM7w_h71TTSv47iZnlOacOeeOnIEb1CKckcGa1wyvIHpFpPWhzUw4_cNRH_50m-z"
     },
     {
-      "q": "A genetic study reported today, April 9, 2026, found that depression and anxiety often genetically pair with which physical health issue?",
+      "q": "On April 9, 2026, Netflix officially opened a new 110,000-square-foot animation studio in which Canadian city?",
       "options": [
-        "Gastrointestinal problems",
-        "Genitourinary disorders",
-        "Sleep problems",
-        "Cardiovascular disease"
-      ],
-      "a": 3,
-      "correctText": "A genetic study published on April 9, 2026, revealed that mental illnesses like depression and anxiety often go hand-in-hand with cardiovascular disease.",
-      "category": "Science",
-      "source": "https://www.reddit.com/r/science/comments/1sgim0y/mental_physical_illnesses_often_go_hand_in_hand/"
-    },
-    {
-      "q": "Under new CEO Josh D'Amaro, how many employees is Disney reportedly preparing to lay off?",
-      "options": [
-        "Up to 100",
-        "Up to 500",
-        "Up to 1,000",
-        "Up to 5,000"
+        "Toronto",
+        "Montreal",
+        "Vancouver",
+        "Calgary"
       ],
       "a": 2,
-      "correctText": "Disney is preparing to lay off up to 1,000 employees, primarily within its marketing department, under the leadership of new CEO Josh D'Amaro.",
-      "category": "Business",
-      "source": "https://www.reddit.com/r/business/comments/1sgc183/disney_to_lay_off_up_to_1000_employees_in_first/"
+      "correctText": "Netflix officially opened a new 110,000-square-foot animation studio in Vancouver on April 9, 2026.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqOaT_hC7Eu6UQO0kEfRsEnwER04WiUu4wHGHB26wRe35WRsalhBcTQzLZBNj7-Nyod_Xyzp5Lntx9HUwuchCqJOI9mCljlHzbx8kpVqPOP0qVWGooEHY6omZpnDZLGRZWVL1EqclU2pyoix8fJIt6df3VHBtPwVhFUhFrew=="
     },
     {
-      "q": "A recent study, reported today, indicates that coercive control in relationships is often viewed as less harmful when the victim is a what?",
+      "q": "How was the FBI recently able to extract a suspect's deleted Signal messages from an iPhone, even after the app was uninstalled?",
       "options": [
-        "Woman",
-        "Man",
-        "Child",
-        "Elderly person"
+        "Through iCloud backups",
+        "By brute-forcing the device password",
+        "From the iPhone's push notification database",
+        "By compelling Signal to provide data"
       ],
-      "a": 1,
-      "correctText": "Research from April 9, 2026, indicates that people tend to view coercive control as less harmful when the victim is a man.",
-      "category": "Science",
-      "source": "https://www.reddit.com/r/science/comments/1sgnmbo/people_view_coercive_control_in_relationships_as/"
+      "a": 2,
+      "correctText": "The FBI was able to forensically extract copies of incoming Signal messages from an iPhone's push notification database.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmqTZaIRZ_WIVvwhuJt8xxkxQrkuQn6ZtU3CUIiLIlGKxcK4ti9Z56LJRwGNBvmdhkH5udbXf-HVjFaQHhbOwc9T-bXEe4CtWmCGGmlgffAD3DFYolzgF8JEQtOPhuIRIjd4JkcvQzg4OBlK_nuKcTQZFw448s_nQ2keqBxM8Z7vaBh3A4AfS7kswiEPU2mySZxrVfydpazYYlUa5OYcMfiJZMrSv27dOR"
     },
     {
       "q": "A study reported on April 9, 2026, found gruesome infighting among chimpanzees, resulting in the deaths of how many infant chimps?",
@@ -94,43 +107,30 @@
       "source": "https://www.reddit.com/r/science/comments/1sgz37j/chimpanzees_at_war_19_infant_chimps_were_killed/"
     },
     {
-      "q": "Where is Costco opening its first standalone gas station with 40 pumps?",
+      "q": "What innovative therapy, reported in news from April 9, 2026, helped a woman with three autoimmune diseases achieve remission by 'supercharging' her immune cells?",
       "options": [
-        "Mission Viejo, California",
-        "Honolulu, Hawaii",
-        "Seattle, Washington",
-        "Dallas, Texas"
-      ],
-      "a": 0,
-      "correctText": "Costco's first standalone gas station, featuring 40 pumps, is set to open in Mission Viejo, California, in June.",
-      "category": "Business",
-      "source": "https://www.reddit.com/r/business/comments/1sghia7/costco_is_starting_a_standalone_gas_station/"
-    },
-    {
-      "q": "What is OpenAI's projected ad revenue for 2026, according to recent reports?",
-      "options": [
-        "$1 billion",
-        "$2.5 billion",
-        "$5 billion",
-        "$10 billion"
-      ],
-      "a": 1,
-      "correctText": "OpenAI projects $2.5 billion in ad revenue for 2026, with ambitious plans to reach $100 billion by 2030.",
-      "category": "Business",
-      "source": "https://www.reddit.com/r/business/comments/1sgvvn5/openai_projects_25_billion_in_ad_revenue_this/"
-    },
-    {
-      "q": "What Canadian bank announced on April 9, 2026, its plan to launch a growth fund to invest up to $1 billion in Canadian companies?",
-      "options": [
-        "TD Bank",
-        "Scotiabank",
-        "RBC",
-        "BMO"
+        "Chemotherapy",
+        "Radiation therapy",
+        "CAR-T cell therapy",
+        "Hormone therapy"
       ],
       "a": 2,
-      "correctText": "On April 9, 2026, RBC announced its plan to launch a growth fund to invest up to $1 billion in Canadian companies.",
-      "category": "Canada",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0b3fTFAbWirVTgAM7McLKYWO1QTi0av1FQDRrlpXqe_kZqj-_l6IqIh22U_tmBtmTY6cux4yzw4Ff-4uKs2Mz6uuHz1mD_P31Wsh_ZqIhrSfBXXOV41VvEDq9vwE9jsnHiQwPtkqfzql1VX_I3T_rrN63JzrBEqtdNyn2-JEMAkrvgLwHJdj6ephb460jZSY="
+      "correctText": "CAR-T cell therapy, involving the modification and reintroduction of a patient's immune cells, was reported on April 9, 2026, to have led to remission for a woman with three autoimmune diseases.",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgvvrl/woman_with_3_autoimmune_diseases_enters_remission/"
+    },
+    {
+      "q": "Oil tanker workers have been stranded in the Gulf for how many weeks, reaching their limit due to ongoing conflict and unsafe conditions?",
+      "options": [
+        "Six weeks",
+        "Four weeks",
+        "Eight weeks",
+        "Ten weeks"
+      ],
+      "a": 0,
+      "correctText": "Six weeks.",
+      "category": "World",
+      "source": "https://www.theguardian.com/business/2026/apr/09/mental-breakdown-oil-tanker-workers-stuck-in-gulf-for-six-weeks-are-reaching-their-limit"
     }
   ]
 }

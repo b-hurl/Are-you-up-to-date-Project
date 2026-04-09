@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-09",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "What emerging technology is being explored as a potential way to 'reboot' the immune system and treat autoimmune diseases like lupus and multiple sclerosis?",
+      "options": [
+        "CAR-T cell therapy",
+        "CRISPR gene editing",
+        "mRNA vaccine technology",
+        "Stem cell transplantation (HSCT)"
+      ],
+      "a": 3,
+      "correctText": "Stem cell transplantation (HSCT) is being explored as a method to reset the immune system by wiping it clean and rebuilding it with the patient's own stem cells, showing success in diseases like multiple sclerosis.",
+      "category": "Health",
+      "source": "https://www.shebaonline.org/can-autoimmune-disease-be-cured-new-discoveries-offer-hope-for-reversal-and-remission/"
+    },
+    {
+      "q": "Road to Vostok, a hardcore survival shooter, recently had a successful launch on Steam. What is a key feature of this game according to its description?",
+      "options": [
+        "It is a multiplayer-only experience.",
+        "It features a procedurally generated fantasy world.",
+        "It is a single-player survival game set in a post-apocalyptic border zone.",
+        "It is primarily a story-driven RPG with minimal combat."
+      ],
+      "a": 2,
+      "correctText": "Road to Vostok is described as a hardcore single-player survival game set in a post-apocalyptic border zone between Finland and Russia.",
+      "category": "Gaming",
+      "source": "https://www.gamesradar.com/road-to-vostoks-hot-start-on-steam-has-secured-the-entire-production-budget-the-finnish-survival-shooter-needs-for-years-to-come-dev-says/"
+    },
+    {
+      "q": "What type of blood test is showing promise in detecting over 50 types of cancer, including many for which there are no standard screening tests?",
+      "options": [
+        "Multi-cancer early detection (MCED) blood test",
+        "A complete blood count (CBC)",
+        "A lipid panel",
+        "A genetic testing panel for inherited diseases"
+      ],
+      "a": 0,
+      "correctText": "Multi-cancer early detection (MCED) blood tests, such as the Galleri test, can detect DNA fragments shed by tumors in the blood, potentially identifying over 50 types of cancer, including those without standard screening methods.",
+      "category": "Health",
+      "source": "https://news.ohsu.edu/2025/12/26/blood-test-finds-seven-times-more-cancers-than-standard-screenings/"
+    },
+    {
+      "q": "According to recent interviews, what is a key element that Joyce Carol Oates believes is crucial for bringing a novel together, often providing a sense of its totality?",
+      "options": [
+        "The title",
+        "The first sentence",
+        "The main character's backstory",
+        "A specific writing location"
+      ],
+      "a": 0,
+      "correctText": "The title",
+      "category": "Books",
+      "source": "https://www.youtube.com/watch?v=AUZIYQFOiYGooP_dTfF9nU8vfKuo2KtxLnVh1Z6eK4_nIQdtP11VOAOOF9lpM-SUbX5i59VNdZuk8-wlgTxy3gVe0AHYdbvSIMcmPkGAXWCjKuRjJsd9omBoknLSTV-MOgU77Js84QXxvCQ"
+    },
+    {
+      "q": "Starting in May 2026, which Kindle devices will no longer be able to purchase, borrow, or download new content from the Kindle Store?",
+      "options": [
+        "Devices released before 2013",
+        "Devices released before 2020",
+        "Devices released before 2018",
+        "All Kindle Fire devices"
+      ],
+      "a": 0,
+      "correctText": "Devices released before 2013",
+      "category": "Books",
+      "source": "https://9to5mac.com/2026/04/08/amazon-kindle-devices-may-20/"
+    },
+    {
+      "q": "Which author turned down a $175,000 Windham-Campbell prize due to promotional requirements?",
+      "options": [
+        "Helen DeWitt",
+        "Joyce Carol Oates",
+        "Gwendoline Riley",
+        "Freida McFadden"
+      ],
+      "a": 0,
+      "correctText": "Helen DeWitt",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/helen-dewitt-turns-down-windham-campbell-prize-unable-promote"
+    },
+    {
+      "q": "What is the 20th-anniversary re-release date for Guillermo del Toro's 'Pan's Labyrinth'?",
+      "options": [
+        "October 9, 2026",
+        "September 9, 2026",
+        "November 9, 2026",
+        "October 20, 2026"
+      ],
+      "a": 0,
+      "correctText": "The film will be released in theaters nationwide on October 9, 2026.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgwwxu/official_poster_for_the_20th_anniversary_of/"
+    },
+    {
+      "q": "In the upcoming WWII drama 'Pressure', who portrays General Dwight D. Eisenhower?",
+      "options": [
+        "Andrew Scott",
+        "Chris Messina",
+        "Brendan Fraser",
+        "Damian Lewis"
+      ],
+      "a": 2,
+      "correctText": "Brendan Fraser portrays General Dwight D. Eisenhower in the film 'Pressure'.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgs52t/new_poster_for_pressure_the_fate_of_the_free/"
+    },
+    {
+      "q": "What is the name of the new Don't Starve game announced during the Triple-i Initiative Showcase, which introduces new environments and terrain mechanics like hills?",
+      "options": [
+        "Don't Starve: The Wilderness",
+        "Don't Starve: New World",
+        "Don't Starve Elsewhere",
+        "Don't Starve: Survival Peaks"
+      ],
+      "a": 2,
+      "correctText": "Don't Starve Elsewhere was revealed with a world premiere trailer, promising new biomes, magical elements, and a multi-tiered wilderness.",
+      "category": "Gaming",
+      "source": "https://www.gamesradar.com/new-dont-starve-game-announced-klei-entertainment-brings-its-survival-crafting-juggernaut-back-with-magic-and-a-jump-button-in-dont-starve-elsewhere/"
+    },
+    {
+      "q": "What is the premise of Arthur Harari's upcoming film 'The Unknown', starring Léa Seydoux?",
+      "options": [
+        "A detective investigating a series of alien abductions",
+        "A woman who discovers she has superpowers",
+        "A man who transforms into the body of a woman he had a one-night stand with",
+        "A historical drama about the French Revolution"
+      ],
+      "a": 2,
+      "correctText": "The film follows a man who transforms into the body of a woman he had a one-night stand with.",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgrojl/first_image_of_arthur_hararis_the_unknown/"
+    }
+  ]
+}

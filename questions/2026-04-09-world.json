@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "As of April 9, 2026, how many days has the Russian invasion of Ukraine been ongoing, according to the /r/WorldNews live thread?",
+      "options": [
+        "1505",
+        "1500",
+        "1510",
+        "1499"
+      ],
+      "a": 0,
+      "correctText": "Day 1505.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sgf2yq/rworldnews_live_thread_russian_invasion_of/"
+    },
+    {
+      "q": "According to the International Union for Conservation of Nature (IUCN), what is the primary threat leading to the risk of extinction for Emperor Penguins?",
+      "options": [
+        "Mass drowning of chicks due to melting sea ice",
+        "Predation by leopard seals",
+        "Disease outbreaks",
+        "Overfishing by humans"
+      ],
+      "a": 0,
+      "correctText": "Mass drowning of chicks due to melting sea ice.",
+      "category": "World",
+      "source": "https://www.theguardian.com/environment/2026/apr/09/mass-drowning-of-chicks-puts-emperor-penguins-at-risk-of-extinction"
+    },
+    {
+      "q": "What event is scheduled to resume on Sunday, April 13, 2026, following the lifting of a state of emergency in Israel?",
+      "options": [
+        "Benjamin Netanyahu's corruption trial",
+        "A summit with Palestinian leaders",
+        "International trade negotiations",
+        "A military operation in Gaza"
+      ],
+      "a": 0,
+      "correctText": "Benjamin Netanyahu's corruption trial.",
+      "category": "World",
+      "source": "https://www.timesofisrael.com/netanyahu-trial-to-resume-on-sunday-after-halt-due-to-iran-war/"
+    },
+    {
+      "q": "Iranian President Masoud Pezeshkian stated that continued Israeli attacks on which country would render negotiations with the US 'meaningless'?",
+      "options": [
+        "Lebanon",
+        "Syria",
+        "Iraq",
+        "Gaza"
+      ],
+      "a": 0,
+      "correctText": "Lebanon.",
+      "category": "World",
+      "source": "https://www.middleeasteye.net/news/iran-president-israeli-strikes-lebanon-render-us-talks-meaningless"
+    },
+    {
+      "q": "Oil tanker workers have been stranded in the Gulf for how many weeks, reaching their limit due to ongoing conflict and unsafe conditions?",
+      "options": [
+        "Six weeks",
+        "Four weeks",
+        "Eight weeks",
+        "Ten weeks"
+      ],
+      "a": 0,
+      "correctText": "Six weeks.",
+      "category": "World",
+      "source": "https://www.theguardian.com/business/2026/apr/09/mental-breakdown-oil-tanker-workers-stuck-in-gulf-for-six-weeks-are-reaching-their-limit"
+    }
+  ]
+}
