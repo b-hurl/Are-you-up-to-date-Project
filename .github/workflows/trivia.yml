@@ -37,9 +37,10 @@ jobs:
       - name: Route Traffic through Regina Home
         run: |
           # This forces the GitHub runner to use your home IP
-          # Note: Ensure the Exit Node IP is a Tailscale IP (100.x.y.z) or the machine name
-          sudo tailscale up --exit-node=${{ secrets.TS_EXIT_NODE_IP }} --reset
-          curl https://ifconfig.me
+          # --accept-dns=false prevents Tailscale from breaking the runner's internet if home DNS is slow
+          sudo tailscale up --exit-node=${{ secrets.TS_EXIT_NODE_IP }} --reset --accept-dns=false
+          tailscale status
+          curl --connect-timeout 10 https://ifconfig.me
 
       - name: Generate Raw Categories
         # This script creates the individual files (tech.json, science.json, etc.)
