@@ -45,7 +45,7 @@ async function checkOutboundIP() {
 async function runAutomation() {
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash", 
+        model: "gemini-2.5-flash-lite", 
         tools: [{ googleSearch: {} }]
     });
 
