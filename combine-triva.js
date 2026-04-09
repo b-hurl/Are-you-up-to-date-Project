@@ -63,8 +63,11 @@ function createDailyMixes() {
                         questions: mix.questions
                     };
                     const outPath = path.join(questionsDir, `${dateStr}-${mix.name}.json`);
+                    if (fs.existsSync(outPath)) {
+                        console.log(`🔄 Overwriting existing file: ${dateStr}-${mix.name}.json`);
+                    }
                     fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
-                    console.log(`✨ SUCCESS: Saved ${mix.questions.length} unique questions to ${dateStr}-${mix.name}.json`);
+                    console.log(`✨ SUCCESS: Saved ${mix.questions.length} questions to ${dateStr}-${mix.name}.json`);
                 }
             });
         } else {
