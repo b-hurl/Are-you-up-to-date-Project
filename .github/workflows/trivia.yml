@@ -23,14 +23,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # This caches your npm dependencies so it runs faster next time
-          #cache: 'npm'
 
       - name: Install Dependencies
         run: npm ci
-
-      - name: Checkout code
-        uses: actions/checkout@v4
 
       - name: Connect to Tailscale
         uses: tailscale/github-action@v3
@@ -42,9 +37,8 @@ jobs:
       - name: Route Traffic through Regina Home
         run: |
           # This forces the GitHub runner to use your home IP
-          sudo tailscale set --exit-node=${{ secrets.TS_EXIT_NODE_IP }}
-          
-          # Optional: Verify your IP is now your home IP
+          # Note: Ensure the Exit Node IP is a Tailscale IP (100.x.y.z) or the machine name
+          sudo tailscale up --exit-node=${{ secrets.TS_EXIT_NODE_IP }} --reset
           curl https://ifconfig.me
 
       - name: Generate Raw Categories

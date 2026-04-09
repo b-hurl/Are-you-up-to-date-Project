@@ -32,7 +32,18 @@ const parser = new Parser();
 // Initialize Gemini
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY, { apiVersion: "v1beta" });
 
+async function checkOutboundIP() {
+    try {
+        const res = await axios.get('https://api.ipify.org?format=json');
+        console.log(`🌐 Outbound IP: ${res.data.ip} (Verify this matches your Tailscale Exit Node)`);
+    } catch (e) {
+        console.warn("⚠️ Could not verify outbound IP.");
+    }
+}
+
 async function runAutomation() {
+    await checkOutboundIP();
+
     // Initialize model with the Search Tool to prevent hallucinations
     const model = genAI.getGenerativeModel({ 
         model: "gemini-2.5-flash", 
