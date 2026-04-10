@@ -287,11 +287,11 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         if (!config.gameMode) return renderMainMenu();
         if (config.gameMode === 'solo') {
             if (!config.soloSubMode) return renderSoloSubMenu();
-            if (config.soloSubMode === 'gauntlet' && !config.gauntletMode) return renderGauntletOptions();
+            if (config.soloSubMode === 'gauntlet') return renderGauntletOptions();
             if (config.soloSubMode === 'categories') return renderCategoryOptions();
         } else if (config.gameMode === 'multiplayer') {
             if (!config.multiSubMode) return renderMultiSubMenu();
-            if (config.multiSubMode === 'gauntlet' && !config.gauntletMode) return renderGauntletOptions();
+            if (config.multiSubMode === 'gauntlet') return renderGauntletOptions();
             if (config.multiSubMode === 'categories') return renderCategoryOptions();
         }
         return null;

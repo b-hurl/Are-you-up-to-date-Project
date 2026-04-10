@@ -1062,12 +1062,6 @@
             }
 
             window.gameSettingsRoot.render(
-                React.createElement(window.GameSettings, {
-                    currentConfig: gameConfig,
-                    onUpdate: handleConfigUpdate,
-                    playedModes: playedModes,
-                    availableCategories: available
-                }),
                 React.createElement(ErrorBoundary, null,
                     React.createElement(window.GameSettings, {
                         currentConfig: gameConfig,
