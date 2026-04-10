@@ -277,7 +277,7 @@
             <h2 class="text-2xl font-black text-white mb-2">Invite Friends</h2>
             <p class="text-slate-300 text-sm mb-6">Share the code or scan to join.</p>
             
-            <div class="space-y-4">
+            <div class="space-y-6">
                  <div id="qrcode-container" class="bg-white p-4 rounded-xl mx-auto w-max hidden mb-4 shadow-lg"></div>
                  
                  <div class="grid grid-cols-2 gap-3">
@@ -288,6 +288,12 @@
                     <button onclick="copyInviteLinkFromModal()" id="btn-copy-link" class="bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white transition-all flex flex-col items-center justify-center gap-1 group">
                         <span class="text-2xl group-hover:scale-110 transition-transform">🔗</span>
                         <span id="btn-copy-link-text" class="text-xs">Copy Link</span>
+                    </button>
+                 </div>
+
+                 <div id="revoke-btn-container" class="hidden border-t border-slate-700 pt-6">
+                    <button onclick="window.revokeChallenge(gameConfig.activeSelection)" class="w-full bg-red-900/20 hover:bg-red-900/40 text-red-400 border border-red-500/20 py-3 rounded-xl font-bold text-[10px] transition-all uppercase tracking-widest">
+                        Revoke Challenge
                     </button>
                  </div>
             </div>
@@ -492,6 +498,29 @@
 
             <button onclick="saveProfileName()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all mb-3">Looks Good!</button>
             <button onclick="closePostLoginModal()" class="text-xs text-slate-400 hover:text-white transition-colors">Skip (Use Default)</button>
+        </div>
+    </div>
+
+    <!-- Name Prompt Modal -->
+    <div id="name-prompt-modal" class="fixed inset-0 z-[120] flex items-center justify-center bg-black/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 p-4">
+        <div class="bg-slate-800 border border-slate-700 p-8 rounded-3xl max-w-sm w-full shadow-2xl relative transform scale-95 transition-transform duration-300 text-center">
+            <div class="text-5xl mb-4">👤</div>
+            <h2 class="text-2xl font-black text-white mb-2">Identify Yourself</h2>
+            <p id="name-prompt-message" class="text-slate-300 text-sm mb-6">How should we call you on the leaderboard?</p>
+            
+            <div class="mb-4 relative text-left">
+                <label class="text-[10px] text-slate-400 font-bold uppercase ml-1 mb-1 block">Display Name</label>
+                <input type="text" id="name-prompt-input" maxlength="15" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-primary-500" oninput="updateCharCounter(this, 'name-prompt-counter')">
+                <span id="name-prompt-counter" class="absolute right-3 bottom-3 text-xs text-slate-500">0/15</span>
+            </div>
+
+            <div class="flex items-center justify-center gap-2 mb-6 cursor-pointer select-none" onclick="document.getElementById('name-prompt-remember').click()">
+                <input type="checkbox" id="name-prompt-remember" class="w-4 h-4 rounded border-slate-700 bg-slate-900 text-primary-600 focus:ring-primary-500" checked>
+                <label class="text-xs text-slate-400 font-bold uppercase tracking-wider">Remember Me</label>
+            </div>
+
+            <button onclick="submitNamePrompt()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold text-white shadow-lg shadow-primary-500/20 transition-all mb-3">Confirm Name</button>
+            <button onclick="cancelNamePrompt()" class="text-xs text-slate-500 hover:text-white transition-colors">Cancel</button>
         </div>
     </div>
 
@@ -854,7 +883,7 @@
             heartbeat: 'https://assets.mixkit.co/active_storage/sfx/219/219-preview.mp3'
         };
 
-        let isMuted = localStorage.getItem('trivia-muted') === 'true';
+    const storedName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
         let currentIdx = 0;
         let score = 0;
         let currentStreak = 0;
@@ -1850,6 +1879,11 @@ function showFinalResults() {
         clearInterval(questionTimerInterval);
         questionTimerInterval = null;
     }
+
+    if (challengeListener) {
+        challengeListener();
+        challengeListener = null;
+    }
     
     const total = gameData.questions.length;
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
@@ -2095,6 +2129,14 @@ async function create1v1Challenge() {
     try {
         const challengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
         
+        // Calculate TTL Expiration (Next 8:00 AM CST / 14:00 UTC)
+        const now = new Date();
+        const expiresAt = new Date(now);
+        expiresAt.setUTCHours(UNLOCK_UTC_HOUR, 0, 0, 0);
+        if (now.getUTCHours() >= UNLOCK_UTC_HOUR) {
+            expiresAt.setUTCDate(expiresAt.getUTCDate() + 1);
+        }
+
         await db.collection('challenges').doc(challengeId).set({
             date: getGameDate(),
             category: gameConfig.activeSelection,
@@ -2107,19 +2149,20 @@ async function create1v1Challenge() {
                 taunt: ""
             },
             status: 'pending',
-            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            expiresAt: firebase.firestore.Timestamp.fromDate(expiresAt)
         });
 
         activeChallengeId = challengeId;
         openInviteModal(challengeId);
         
-        // Track active challenges for UI feedback in the menu
+        // Track active challenges with their IDs to allow revoking
         const category = gameConfig.activeSelection;
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
         const today = getGameDate();
-        active[today] = active[today] || [];
-        if (category && !active[today].includes(category)) {
-            active[today].push(category);
+        active[today] = active[today] || {};
+        if (category) {
+            active[today][category] = challengeId;
         }
         localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
         
@@ -2137,9 +2180,19 @@ function setupChallengeListener(challengeId) {
     if (challengeListener) challengeListener();
     challengeListener = db.collection('challenges').doc(challengeId).onSnapshot(doc => {
         const data = doc.data();
-        if (data && data.status === 'completed') {
+        if (!data) return;
+
+        if (data.status === 'refused') {
+            showToast(`${data.p2?.name || 'Someone'} refused your challenge.`, "🚫", 5000);
+            closeInviteModal();
+            if (challengeListener) challengeListener();
+            challengeListener = null;
+        } else if (data.status === 'accepted') {
+            showToast(`${data.p2?.name} accepted! They are playing now...`, "⚔️", 4000);
+        } else if (data.status === 'completed') {
             display1v1Result(data);
             if (challengeListener) challengeListener();
+            challengeListener = null;
         }
     });
 }
@@ -2288,7 +2341,7 @@ async function submitScore() {
     }
 
     const nameInput = document.getElementById('player-name');
-    const name = nameInput ? nameInput.value.trim() : localStorage.getItem('trivia-name');
+    const name = nameInput ? nameInput.value.trim() : (localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name'));
 
     if (!name) {
         alert("Please enter a name for the leaderboard.");
@@ -3457,6 +3510,143 @@ function closeLeaveGroupModal() {
     }, 300);
 }
 
+async function revokeChallenge(category) {
+    const today = getGameDate();
+    const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+    const todayChallenges = active[today] || {};
+    // Get ID from the mapping object
+    const challengeId = (typeof todayChallenges === 'object' && !Array.isArray(todayChallenges)) ? todayChallenges[category] : null;
+
+    if (!confirm(`Are you sure you want to revoke this challenge? It will be deleted from the system.`)) return;
+
+    updateHeaderSyncStatus('syncing');
+    try {
+        if (challengeId) {
+            await db.collection('challenges').doc(challengeId).delete();
+        }
+
+        // Remove from local tracking (handles legacy array or new object format)
+        if (Array.isArray(todayChallenges)) {
+            active[today] = todayChallenges.filter(c => c !== category);
+        } else {
+            delete todayChallenges[category];
+            active[today] = todayChallenges;
+        }
+        localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
+        
+        if (activeChallengeId === challengeId) activeChallengeId = null;
+        
+        closeInviteModal();
+        renderGameSettings();
+        showToast("Challenge Revoked", "🗑️");
+    } catch (e) {
+        console.error("Revoke failed:", e);
+        showToast("Failed to revoke", "❌");
+    } finally {
+        updateHeaderSyncStatus('complete');
+    }
+}
+window.revokeChallenge = revokeChallenge;
+
+async function handle1v1Challenge(challengeId) {
+    updateHeaderSyncStatus('syncing');
+    
+    // Clear any existing listeners
+    if (challengeListener) {
+        challengeListener();
+        challengeListener = null;
+    }
+
+    try {
+        const doc = await db.collection('challenges').doc(challengeId).get();
+        
+        if (!doc.exists) {
+            showToast("Challenge not found.", "❓");
+            removeChallengeParam();
+            return;
+        }
+
+        const data = doc.data();
+        
+        // 1. Check for Expiration
+        const now = firebase.firestore.Timestamp.now();
+        if (data.expiresAt && now.seconds > data.expiresAt.seconds) {
+            showToast("This challenge has expired! ⏰", "❌", 5000);
+            removeChallengeParam();
+            return;
+        }
+
+        // 2. Check if the challenge is already completed
+        if (data.status === 'completed') {
+            display1v1Result(data);
+            return;
+        }
+
+        // 3. If the current user is P1 (the creator), show the invite modal
+        if (data.p1.uid === userId) {
+            activeChallengeId = challengeId;
+            openInviteModal(challengeId);
+            setupChallengeListener(challengeId);
+            return;
+        }
+
+        // 4. Otherwise, handle the recipient (P2) joining
+        let p2Name = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
+        if (!p2Name || p2Name.trim() === "") {
+            p2Name = await showNamePrompt("A friend has challenged you! Enter a display name to use for this versus:");
+            if (!p2Name) {
+                removeChallengeParam();
+                return;
+            }
+        }
+
+        const ready = confirm(`${data.p1.name} has challenged you to 1v1 trivia in "${data.category}"! Ready to play?`);
+        
+        if (ready) {
+            await db.collection('challenges').doc(challengeId).update({ 
+                status: 'accepted',
+                p2: { uid: userId, name: p2Name }
+            });
+
+            activeChallengeId = challengeId;
+            gameConfig.gameMode = 'multiplayer';
+            gameConfig.activeSelection = data.category;
+            
+            const modeData = { questions: sanitizeQuestions(data.questions) };
+            document.getElementById('game-settings-root').classList.add('hidden');
+            document.getElementById('question-text').classList.remove('hidden');
+            
+            // Listen for revocation while playing
+            challengeListener = db.collection('challenges').doc(challengeId).onSnapshot(snapshot => {
+                if (!snapshot.exists) {
+                    // Challenge was deleted/revoked by P1
+                    if (challengeListener) challengeListener();
+                    challengeListener = null;
+                    
+                    showToast("Challenge revoked by the host.", "🚫", 5000);
+                    returnToMenu('main');
+                }
+            });
+
+            updateTheme('casual'); 
+            startNewSession(modeData, data.date, data.category);
+        } else {
+            removeChallengeParam();
+        }
+    } catch (e) {
+        console.error("Challenge join error:", e);
+        showToast("Error joining challenge", "❌");
+    } finally {
+        updateHeaderSyncStatus('complete');
+    }
+}
+
+function removeChallengeParam() {
+    const url = new URL(window.location);
+    url.searchParams.delete('challenge');
+    window.history.replaceState({}, '', url);
+}
+
 function openInviteModal(groupId) {
     currentInviteGroupId = groupId;
     const modal = document.getElementById('invite-modal');
@@ -3466,6 +3656,12 @@ function openInviteModal(groupId) {
     document.getElementById('qrcode-container').classList.add('hidden');
     document.getElementById('btn-copy-link-text').innerText = "Copy Link";
     
+    // Show revoke button if this is a 1v1 challenge (has a category)
+    const revokeContainer = document.getElementById('revoke-btn-container');
+    if (revokeContainer) {
+        revokeContainer.classList.toggle('hidden', !activeChallengeId);
+    }
+
     modal.classList.remove('hidden');
     setTimeout(() => {
         modal.classList.remove('opacity-0');
@@ -3574,6 +3770,55 @@ function startNextTimer() {
     tick();
     timerInterval = setInterval(tick, 1000);
 }
+
+let namePromptResolve = null;
+function showNamePrompt(message) {
+    return new Promise((resolve) => {
+        namePromptResolve = resolve;
+        const modal = document.getElementById('name-prompt-modal');
+        const input = document.getElementById('name-prompt-input');
+        const checkbox = document.getElementById('name-prompt-remember');
+        
+        document.getElementById('name-prompt-message').innerText = message;
+        input.value = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name') || "";
+        updateCharCounter(input, 'name-prompt-counter');
+        checkbox.checked = true;
+
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+            input.focus();
+        }, 10);
+    });
+}
+
+function submitNamePrompt() {
+    const name = document.getElementById('name-prompt-input').value.trim();
+    const remember = document.getElementById('name-prompt-remember').checked;
+    const validation = isNameValid(name);
+    if (!validation.valid) { alert(validation.message); return; }
+    if (remember) { localStorage.setItem('trivia-name', name); } 
+    else { sessionStorage.setItem('trivia-name', name); localStorage.removeItem('trivia-name'); }
+    closeNamePromptModal();
+    if (namePromptResolve) { const res = namePromptResolve; namePromptResolve = null; res(name); }
+}
+
+function cancelNamePrompt() {
+    closeNamePromptModal();
+    if (namePromptResolve) { const res = namePromptResolve; namePromptResolve = null; res(null); }
+}
+
+function closeNamePromptModal() {
+    const modal = document.getElementById('name-prompt-modal');
+    modal.classList.add('opacity-0');
+    modal.querySelector('div').classList.remove('scale-100');
+    modal.querySelector('div').classList.add('scale-95');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+}
+window.showNamePrompt = showNamePrompt;
+
 function updateStreak() {
     const currentGameDate = getGameDate(); // The ID for today's game
     let streak = parseInt(localStorage.getItem('trivia-streak')) || 0;
@@ -4941,6 +5186,7 @@ async function confirmLogout() {
         localStorage.removeItem('trivia-groups');
         localStorage.removeItem('trivia-archive');
         localStorage.removeItem('trivia-userId');
+        sessionStorage.removeItem('trivia-name');
 
         // Clear sync tracking keys
         Object.keys(localStorage).forEach(key => {
@@ -5347,6 +5593,7 @@ function closeStats() {
     modal.querySelector('div').classList.add('scale-95');
     setTimeout(() => modal.classList.add('hidden'), 300);
 }
+window.isNameValid = isNameValid;
 
         // --- HISTORY MODAL ---
         async function openHistory() {

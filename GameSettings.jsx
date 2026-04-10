@@ -82,7 +82,20 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         }));
     };
 
-    const handleMultiSubModeSelection = (subMode) => {
+    const handleMultiSubModeSelection = async (subMode) => {
+        if (subMode === 'categories') {
+            const currentName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
+            if (!currentName || currentName.trim() === "") {
+                if (window.showNamePrompt) {
+                    const newName = await window.showNamePrompt("Enter a display name for multiplayer versus:");
+                    if (!newName) return; // Stay on multiplayer menu
+                } else {
+                    const newName = prompt("Enter a display name for multiplayer versus:");
+                    if (!newName) return;
+                    localStorage.setItem('trivia-name', newName);
+                }
+            }
+        }
         setConfig(prev => ({
             ...prev,
             multiSubMode: subMode,
@@ -206,7 +219,9 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                 {(() => {
                     const gameDate = typeof window.getGameDate === 'function' ? window.getGameDate() : '';
                     const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-                    const activeChallenges = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}')[gameDate] || [];
+                    const activeChallengesData = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}')[gameDate] || {};
+                    // Handle both legacy array format and new object mapping for isSent calculation
+                    const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData);
 
                 {CATEGORIES.filter(cat =>
                     // Only show category if it has questions available today
@@ -233,7 +248,20 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                             isSmall={true}
                             title={category}
                             description={isPlayed ? (
-                                isSent ? 'Challenge Sent ✉️' : 
+                                isSent ? (
+                                    <span className="flex items-center justify-between w-full">
+                                        <span>Challenge Sent ✉️</span>
+                                        <span 
+                                            onClick={(e) => {
+                                                e.stopPropagation(); // Prevent re-triggering the challenge creation
+                                                window.revokeChallenge(category);
+                                            }}
+                                            className="ml-2 px-2 py-0.5 bg-red-500/20 hover:bg-red-500/40 text-red-400 border border-red-500/30 rounded text-[8px] font-black uppercase tracking-tighter transition-all"
+                                        >
+                                            Revoke
+                                        </span>
+                                    </span>
+                                ) : 
                                 (savedScore !== undefined ? `Score: ${savedScore}/5 ${isMulti ? '⚔️' : ''}` : 'Completed')
                             ) : '5 Daily Questions'}
                         />
