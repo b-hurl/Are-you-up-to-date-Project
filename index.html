@@ -1001,9 +1001,12 @@
             gameConfig = { ...gameConfig, ...config };
             
             if (gameConfig.activeSelection) {
-                if (gameConfig.soloSubMode === 'gauntlet' || gameConfig.gameMode === 'multiplayer') {
-                    selectMode(gameConfig.activeSelection); 
-                } else if (gameConfig.soloSubMode === 'categories') {
+                const isGauntlet = gameConfig.soloSubMode === 'gauntlet' || gameConfig.multiSubMode === 'gauntlet';
+                const isCategory = gameConfig.soloSubMode === 'categories' || gameConfig.multiSubMode === 'categories';
+                
+                if (isGauntlet) {
+                    selectMode(gameConfig.activeSelection);
+                } else if (isCategory) {
                     loadCategoryTrivia(gameConfig.activeSelection);
                 }
             }

@@ -80,6 +80,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             gauntletMode: null,
             activeSelection: null
         }));
+        onUpdate({
+            gameMode: config.gameMode,
+            soloSubMode: subMode
+        });
     };
 
     const handleMultiSubModeSelection = async (subMode) => {
@@ -113,6 +117,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             gauntletMode: null,
             activeSelection: null
         }));
+        onUpdate({
+            gameMode: config.gameMode,
+            multiSubMode: subMode
+        });
     };
 
     const handleGauntletModeSelection = (mode) => {
@@ -138,7 +146,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         }));
         onUpdate({
             gameMode: config.gameMode,
-            [isSolo ? 'soloSubMode' : 'categories']: 'categories',
+            [isSolo ? 'soloSubMode' : 'multiSubMode']: 'categories',
             activeSelection: category
         });
     };
