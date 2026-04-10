@@ -876,6 +876,36 @@
             activeSelection: null // Specific category for 'categories' or 'casual'/'professional' for gauntlet
         };
 
+                // Moved to top of script to prevent "not defined" errors during init
+        function updateStartScreenLoginVisibility() {
+            const containers = [
+                document.getElementById('start-screen-login'),
+                document.getElementById('results-footer-login')
+            ];
+            
+            // "Answering" is defined as when the main card is visible AND question text is shown
+            const isAnswering = !document.getElementById('main-card').classList.contains('hidden') && 
+                                !document.getElementById('question-text').classList.contains('hidden');
+            const isLoggedIn = auth && auth.currentUser;
+
+            containers.forEach(container => {
+                if (!container) return;
+                if (isAnswering) {
+                    container.classList.add('hidden');
+                } else {
+                    container.classList.remove('hidden');
+                    const loginBtn = container.querySelector('button[onclick="toggleLoginModal()"]');
+                    if (isLoggedIn) {
+                        if (loginBtn) loginBtn.classList.add('hidden');
+                        container.classList.replace('grid-cols-2', 'grid-cols-1');
+                    } else {
+                        if (loginBtn) loginBtn.classList.remove('hidden');
+                        container.classList.replace('grid-cols-1', 'grid-cols-2');
+                    }
+                }
+            });
+        }
+
         // --- REACT INTEGRATION ---
         function handleConfigUpdate(config) {
             gameConfig = { ...gameConfig, ...config };
