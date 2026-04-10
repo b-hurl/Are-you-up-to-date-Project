@@ -807,13 +807,26 @@
 
             <!-- Results Screen Footer Actions -->
             <div id="results-footer-login" class="w-full grid grid-cols-2 gap-3 mt-4 pt-6 border-t border-slate-700 hidden">
-                <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl border border-slate-600 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+                <button onclick="toggleLoginModal()" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl border border-slate-700 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
                     Login to Save Progress
                 </button>
-                <button onclick="openTutorial()" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl border border-slate-600 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+                <button onclick="openTutorial()" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl border border-slate-700 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
                     How to Play
                 </button>
             </div>
+        </div>
+    </div>
+
+    <!-- 1v1 Challenge Result Modal -->
+    <div id="challenge-result-modal" class="fixed inset-0 z-[110] flex items-center justify-center bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-500 p-4">
+        <div class="bg-slate-900 border-2 border-primary-500 p-8 rounded-3xl max-w-sm w-full shadow-2xl text-center">
+            <div id="challenge-outcome-emoji" class="text-6xl mb-4">👑</div>
+            <h2 id="challenge-outcome-title" class="text-3xl font-black text-white mb-2">YOU WON!</h2>
+            <p id="challenge-outcome-subtitle" class="text-primary-400 text-xs font-bold uppercase tracking-widest mb-6">1v1 Challenge Result</p>
+            <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 mb-6">
+                <p id="challenge-winner-taunt" class="text-slate-300 italic font-serif text-lg">"..."</p>
+            </div>
+            <button onclick="document.getElementById('challenge-result-modal').classList.add('hidden')" class="w-full bg-primary-600 py-4 rounded-2xl font-bold text-white transition-all">Close</button>
         </div>
     </div>
 
@@ -858,6 +871,8 @@
         let currentInviteGroupId = null;
         let remoteUserProgress = null;
         let leaderboardMode = 'casual';
+        let activeChallengeId = null;
+        let challengeListener = null;
         let verifiedCategories = null;
         let timerInterval = null;
         let rankingsListener = null;
@@ -937,10 +952,15 @@
                 document.getElementById('question-text').classList.remove('hidden');
                 
                 updateTheme('casual'); 
-                startNewSession(modeData, gameDate, category);
+                if (gameConfig.gameMode === 'multiplayer') {
+                    // In multiplayer, we use the specific category display name
+                    startNewSession(modeData, gameDate, category);
+                } else {
+                    startNewSession(modeData, gameDate, category);
+                }
             } catch (e) {
                 console.error(e);
-                alert(`Could not load today's ${category} trivia. Please try another category!`);
+                showToast(`Category "${category}" not available yet today.`, "⏳");
             } finally {
                 updateHeaderSyncStatus('complete');
             }
@@ -1448,12 +1468,31 @@ function getGameDate() {
     return `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}-${String(now.getUTCDate()).padStart(2, '0')}`;
 }
 
+function cleanupActiveChallenges() {
+    const today = getGameDate();
+    const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+    let changed = false;
+
+    // Remove any challenge tracking keys that don't match the current game date
+    for (const date in active) {
+        if (date !== today) {
+            delete active[date];
+            changed = true;
+        }
+    }
+
+    if (changed) {
+        localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
+    }
+}
+
 async function startApp() {
     const gameDate = getGameDate();
     console.log("Initializing app for date:", gameDate);
     checkGlobalMessage();
     checkMaintenanceMode();
     probeAvailableCategories(); // Probe file existence in background
+    cleanupActiveChallenges(); // Clear stale challenge statuses from previous days
 
     // Initialize freshGameData to signify app is ready
     freshGameData = { questions: [] };
@@ -1995,9 +2034,180 @@ function returnToMenu(target) {
                 gauntletMode: null,
                 activeSelection: null
             };
+        showModeSelection();
+    }
+}
+
+async function prepareAndCreateChallenge(category) {
+    if (!auth.currentUser) {
+        showToast("Sign in to challenge friends!", "🔐");
+        toggleLoginModal();
+        return;
+    }
+
+    updateHeaderSyncStatus('syncing');
+    showToast(`Preparing ${category} challenge...`, "⚔️");
+    
+    const gameDate = getGameDate();
+    const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
+
+    try {
+        const response = await fetch(filePath + `?v=${Date.now()}`);
+        if (!response.ok) throw new Error("Category file not found");
+        
+        const data = await response.json();
+        const questions = sanitizeQuestions(data.questions || []);
+        
+        if (questions.length === 0) throw new Error("No questions available");
+
+        // Setup temporary game state for the challenge generator
+        gameData = { questions: questions };
+        gameConfig.activeSelection = category;
+        
+        // Use archived score for P1 (Person who already played)
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        const savedScore = archive[gameDate]?.[category]?.score || 0;
+        
+        // Temporarily override global score for the challenge record
+        const originalScore = score;
+        score = savedScore;
+        
+        await create1v1Challenge();
+        
+        // Restore global score state
+        score = originalScore;
+    } catch (e) {
+        console.error("Challenge Prep Error:", e);
+        showToast("Failed to prepare challenge.", "❌");
+    } finally {
+        updateHeaderSyncStatus('complete');
+    }
+}
+window.prepareAndCreateChallenge = prepareAndCreateChallenge;
+
+async function create1v1Challenge() {
+    if (!auth.currentUser) {
+        showToast("Sign in to challenge friends!", "🔐");
+        toggleLoginModal();
+        return;
+    }
+
+    try {
+        const challengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
+        
+        await db.collection('challenges').doc(challengeId).set({
+            date: getGameDate(),
+            category: gameConfig.activeSelection,
+            questions: gameData.questions,
+            p1: {
+                uid: userId,
+                name: localStorage.getItem('trivia-name') || "Player 1",
+                score: score,
+                completed: true,
+                taunt: ""
+            },
+            status: 'pending',
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+
+        activeChallengeId = challengeId;
+        openInviteModal(challengeId);
+        
+        // Track active challenges for UI feedback in the menu
+        const category = gameConfig.activeSelection;
+        const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+        const today = getGameDate();
+        active[today] = active[today] || [];
+        if (category && !active[today].includes(category)) {
+            active[today].push(category);
+        }
+        localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
+        
+        // Force React to update the "Sent" status on the button
+        renderGameSettings();
+
+        setupChallengeListener(challengeId);
+    } catch (e) {
+        console.error(e);
+        showToast("Failed to create challenge.", "❌");
+    }
+}
+
+function setupChallengeListener(challengeId) {
+    if (challengeListener) challengeListener();
+    challengeListener = db.collection('challenges').doc(challengeId).onSnapshot(doc => {
+        const data = doc.data();
+        if (data && data.status === 'completed') {
+            display1v1Result(data);
+            if (challengeListener) challengeListener();
+        }
+    });
+}
+
+async function finalize1v1Challenge() {
+    if (!activeChallengeId) return;
+    try {
+        await db.collection('challenges').doc(activeChallengeId).update({
+            p2: {
+                uid: userId,
+                name: localStorage.getItem('trivia-name') || "Player 2",
+                score: score,
+                completed: true,
+                taunt: ""
+            },
+            status: 'completed'
+        });
+    } catch (e) { console.error(e); }
+}
+
+async function display1v1Result(existingData = null) {
+    try {
+        const data = existingData || (await db.collection('challenges').doc(activeChallengeId).get()).data();
+        if (!data || data.status !== 'completed') return;
+
+        const isP1 = data.p1.uid === userId;
+        const me = isP1 ? data.p1 : data.p2;
+        const them = isP1 ? data.p2 : data.p1;
+
+        const modal = document.getElementById('challenge-result-modal');
+        const title = document.getElementById('challenge-outcome-title');
+        const emoji = document.getElementById('challenge-outcome-emoji');
+        const tauntText = document.getElementById('challenge-winner-taunt');
+
+        if (me.score > them.score) {
+            title.innerText = "YOU WON!";
+            emoji.innerText = "👑";
+            tauntText.innerText = "You showed them who's boss!";
+            fireConfetti();
+        } else if (me.score < them.score) {
+            title.innerText = "YOU LOST";
+            emoji.innerText = "💀";
+            tauntText.innerText = them.taunt ? `"${them.taunt}"` : `${them.name} was more up to date today.`;
+            
+            // Web Notification for the loser
+            if ("Notification" in window && Notification.permission === "granted") {
+                new Notification("Challenge Lost!", {
+                    body: `${them.name} beat you! Taunt: ${them.taunt || 'Better luck next time!'}`,
+                    icon: '/favicon.ico'
+                });
+            }
+        } else {
+            title.innerText = "IT'S A TIE!";
+            emoji.innerText = "🤝";
+            tauntText.innerText = "Perfectly matched knowledge.";
         }
 
-    showModeSelection();
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+        }, 100);
+        
+        // Clear challenge state so it doesn't repeat
+        activeChallengeId = null;
+        const url = new URL(window.location);
+        url.searchParams.delete('challenge');
+        window.history.replaceState({}, '', url);
+    } catch (e) { console.error(e); }
 }
         // --- WRAP UP FUNCTIONS ---
 
@@ -4314,6 +4524,11 @@ function initFirebase() {
     // CHECK FOR INVITE LINK
     const urlParams = new URLSearchParams(window.location.search);
     const inviteGroup = urlParams.get('group');
+    const challengeId = urlParams.get('challenge');
+
+    if (challengeId) {
+        handle1v1Challenge(challengeId);
+    }
     if (inviteGroup) {
         handleInvite(inviteGroup);
     }
@@ -5859,12 +6074,3 @@ function closeStats() {
         initFirebase();
         startApp();
         checkTutorial();
-    </script>
-</body>
-    </script>
-</body>
-</html>     
-</body>
-    </script>
-</body>
-</html>

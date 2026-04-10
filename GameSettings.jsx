@@ -203,24 +203,43 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     const renderCategoryOptions = () => (
         <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
+                {(() => {
+                    const gameDate = typeof window.getGameDate === 'function' ? window.getGameDate() : '';
+                    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+                    const activeChallenges = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}')[gameDate] || [];
+
                 {CATEGORIES.filter(cat =>
                     // Only show category if it has questions available today
                     // or if the data hasn't loaded (or failed to load) yet (null)
                     availableCategories === null || availableCategories.includes(cat)
                 ).map(category => {
                     const isPlayed = playedModes.includes(category);
+                    const isMulti = config.gameMode === 'multiplayer';
+                    const isSent = isMulti && activeChallenges.includes(category);
+                    const savedScore = archive[gameDate]?.[category]?.score;
+
                     return (
                         <MenuButton
                             key={category}
-                            onClick={() => handleCategorySelection(category)}
+                            onClick={() => {
+                                if (isMulti && isPlayed) {
+                                    window.prepareAndCreateChallenge(category);
+                                } else {
+                                    handleCategorySelection(category);
+                                }
+                            }}
                             isSelected={config.activeSelection === category}
-                            isDisabled={isPlayed}
+                            isDisabled={!isMulti && isPlayed}
                             isSmall={true}
                             title={category}
-                            description={isPlayed ? 'Completed' : '5 Daily Questions'}
+                            description={isPlayed ? (
+                                isSent ? 'Challenge Sent ✉️' : 
+                                (savedScore !== undefined ? `Score: ${savedScore}/5 ${isMulti ? '⚔️' : ''}` : 'Completed')
+                            ) : '5 Daily Questions'}
                         />
                     );
                 })}
+                })()}
             </div>
         </MenuView>
     );
