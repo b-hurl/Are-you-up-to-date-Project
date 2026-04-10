@@ -43,12 +43,6 @@ async function checkOutboundIP() {
 }
 
 async function runAutomation() {
-    // Initialize model with the Search Tool to prevent hallucinations
-    const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash-lite", 
-        tools: [{ googleSearch: {} }]
-    });
-
     const date = new Date();
     const dateStr = date.toLocaleDateString('en-CA'); // Outputs "YYYY-MM-DD"
     
@@ -93,6 +87,13 @@ async function runAutomation() {
         }
 
         console.log(`\n🚀 Category: ${category.toUpperCase()} (General Attempt ${categoryAttempts[category]}/${generalRetryLimit}, 503 Attempts: ${(_503attempts[category] || 0)})`);
+
+        // Dynamic Model Selection: Use 'Pro' for retries to ensure JSON validity
+        const modelName = categoryAttempts[category] > 1 ? "gemini-2.5-flash" : "gemini-2.5-flash-lite";
+        const model = genAI.getGenerativeModel({ 
+            model: modelName, 
+            tools: [{ googleSearch: {} }]
+        });
 
         let shouldRetryCategory = false; // Flag to indicate if the category needs to be re-queued for a 503 retry
         
@@ -185,7 +186,7 @@ async function runAutomation() {
             if (lastError?.response?.status === 404) {
                 console.error("   (Check if one of your subreddits is private or banned)");
             }
-            console.log(`😴 Waiting 445 seconds to avoid rate limits...`);
+            console.log(`😴 Waiting 45 seconds to avoid rate limits...`);
             await sleep(45000);
             continue; // Move to next category in queue
         }
@@ -206,33 +207,46 @@ async function runAutomation() {
             }
 
             // The "Triple-Lock" Prompt (Verify, Format, Fact-Check)
-            const prompt = `Today is ${dateStr}.Generate 5 trivia questions for "${category}".
-            1. Use Google Search to verify the facts in these headlines and that the news is from today's date.
-            2. If a headline is rumor or opinion, ignore it.
-            3. Return ONLY a valid JSON object.
+            const prompt = `Today's Date: ${dateStr}
+Target Category: ${category}
 
-            Context from Reddit:
-            ${newsPool}
+Task: Generate 5 trivia questions based EXCLUSIVELY on the high-quality news headlines provided in the Reddit context below.
 
-            Required JSON Structure:
-            {
-              "questions": [
-                {
-                  "q": "Question text here?",
-                  "options": ["Correct", "Wrong", "Wrong", "Wrong"],
-                  "a": 0,
-                  "correctText": "Correct",
-                  "category": "${category.charAt(0).toUpperCase() + category.slice(1)}",
-                  "source": "URL to the news story"
-                }
-              ]
-            }`;
+Reddit Context:
+${newsPool}
+
+Strict Rules for Trivia Generation:
+1. DATE VERIFICATION: Only use news that occurred on or within 24 hours of ${dateStr}.
+2. URL INTEGRITY: The "source" field MUST be the direct URL from the Reddit context. Do NOT shorten it, do NOT alter it, and do NOT invent a new URL. If a URL is missing or looks like a broken placeholder (e.g., "[link]"), discard that news item.
+3. FACTUALITY: Only use objective, hard news. If a story is labeled as "Rumor," "Leak," "Opinion," or "Discussion," skip it.
+4. VARIETY: Ensure the four options provided for each question are plausible but distinct.
+
+JSON Output Format (Return ONLY the object):
+{
+  "questions": [
+    {
+      "q": "Clear, concise question?",
+      "options": ["Correct Answer", "Distractor 1", "Distractor 2", "Distractor 3"],
+      "a": 0,
+      "correctText": "Correct Answer",
+      "category": "${category.charAt(0).toUpperCase() + category.slice(1)}",
+      "source": "https://actual-url-from-context.com"
+    }
+  ]
+}`;
 
             const result = await model.generateContent(prompt);
             let responseText = result.response.text();
             
-            // Clean AI formatting (remove markdown blocks)
-            responseText = responseText.replace(/```json|```/g, "").trim();
+            // Robust JSON extraction: find the first '{' and last '}'
+            const firstBracket = responseText.indexOf('{');
+            const lastBracket = responseText.lastIndexOf('}');
+
+            if (firstBracket === -1 || lastBracket === -1) {
+                throw new Error(`Invalid JSON structure received from AI: ${responseText.substring(0, 100)}...`);
+            }
+
+            responseText = responseText.substring(firstBracket, lastBracket + 1);
             
             // Validate JSON before saving
             let validated = JSON.parse(responseText); 

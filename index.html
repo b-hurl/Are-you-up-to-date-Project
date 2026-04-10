@@ -688,13 +688,11 @@
         <p class="text-slate-500 text-xs mt-4">You've mastered today's challenges.</p>
     </div>
 
-    <div id="start-screen-login" class="grid grid-cols-2 gap-3 pt-2 hidden">
-        <div>
-            <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20 h-full">
-                Login
-            </button>
-        </div>
-        <button onclick="openTutorial()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+    <div id="start-screen-login" class="w-full max-w-md grid grid-cols-2 gap-3 mt-6 hidden">
+        <button onclick="toggleLoginModal()" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl border border-slate-700 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+            Login to Save Progress
+        </button>
+        <button onclick="openTutorial()" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl border border-slate-700 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
             How to Play
         </button>
     </div>
@@ -1481,6 +1479,7 @@ function showModeSelection() {
     document.getElementById('game-header').classList.add('hidden');
     document.getElementById('category-display').classList.add('hidden');
     document.getElementById('options-container').innerHTML = '';
+    updateStartScreenLoginVisibility();
 
     renderGameSettings();
 }
@@ -1537,6 +1536,7 @@ function startNewSession(data, date, mode) {
 
     document.getElementById('score-display').innerText = `Score: ${score}`;
     document.getElementById('game-header').classList.remove('hidden');
+    updateStartScreenLoginVisibility();
     renderQuestion();
 }
 
@@ -1763,7 +1763,21 @@ function showFinalResults() {
     const total = gameData.questions.length;
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
     const playedModes = session.playedModes || [];
-    const isCategoryPlay = gameConfig.soloSubMode === 'categories';
+        const isCategoryPlay = gameConfig.soloSubMode === 'categories' || gameConfig.multiSubMode === 'categories';
+        const isGauntlet = gameConfig.soloSubMode === 'gauntlet' || gameConfig.multiSubMode === 'gauntlet';
+
+        // Update return button based on what was just played
+        const returnBtn = document.querySelector('button[onclick^="returnToMenu(\'categories\')"]');
+        if (returnBtn) {
+            if (isGauntlet) {
+                returnBtn.innerHTML = '<span class="text-xl">🛡️</span> Go Back to Gauntlet';
+                returnBtn.setAttribute('onclick', "returnToMenu('gauntlet')");
+            } else {
+                returnBtn.innerHTML = '<span class="text-xl">📁</span> Go Back to Categories';
+                returnBtn.setAttribute('onclick', "returnToMenu('categories')");
+            }
+        }
+
     const isGM = playedModes.includes('casual') && playedModes.includes('professional');
 
     // 1. Declarative visibility updates
@@ -1829,6 +1843,7 @@ function showFinalResults() {
     // 4. Game flow & data updates
     startNextTimer();
     updateStreak();
+        updateStartScreenLoginVisibility();
     renderReview();
     
     leaderboardMode = session.activeMode || (playedModes[playedModes.length - 1] || 'casual');
@@ -1880,23 +1895,29 @@ function returnToMenu(target) {
     document.body.classList.remove('dimmed');
     document.getElementById('results-card').classList.add('hidden');
     document.getElementById('main-card').classList.remove('hidden');
+    updateStartScreenLoginVisibility();
 
     // Update React State via global config
-    if (target === 'categories') {
-        gameConfig = {
-            gameMode: 'solo',
-            soloSubMode: 'categories',
-            gauntletMode: null,
-            activeSelection: null
-        };
-    } else {
-        gameConfig = {
-            gameMode: null,
-            soloSubMode: null,
-            gauntletMode: null,
-            activeSelection: null
-        };
-    }
+        if (target === 'gauntlet') {
+            // Keep current gameMode and subMode, but reset selection to show Gauntlet options
+            gameConfig.gauntletMode = null;
+            gameConfig.activeSelection = null;
+        } else if (target === 'categories') {
+            const mode = gameConfig.gameMode || 'solo';
+            gameConfig.gauntletMode = null;
+            gameConfig.activeSelection = null;
+            if (mode === 'solo') gameConfig.soloSubMode = 'categories';
+            else gameConfig.multiSubMode = 'categories';
+        } else {
+            // Return to Main Menu
+            gameConfig = {
+                gameMode: null,
+                soloSubMode: null,
+                multiSubMode: null,
+                gauntletMode: null,
+                activeSelection: null
+            };
+        }
 
     showModeSelection();
 }
@@ -4083,7 +4104,7 @@ async function checkRemoteProgress(user) {
                 }
 
                 // Final UI Refresh now that data is merged and synced
-            const isCategoryPlay = gameConfig.soloSubMode === 'categories';
+            const isCategoryPlay = gameConfig.soloSubMode === 'categories' || gameConfig.multiSubMode === 'categories';
             if (!document.getElementById('results-card').classList.contains('hidden') && !isCategoryPlay) { 
                     fetchAndDisplayLeaderboard();
                     checkIfSubmitted();
@@ -4248,7 +4269,7 @@ function initFirebase() {
             if (emailAuthSection) emailAuthSection.classList.add('hidden');
             userInfo.classList.remove('hidden');
             document.getElementById('user-email-display').innerText = user.email || "Linked Account";
-            if (startScreenLogin) startScreenLogin.classList.add('hidden');
+            updateStartScreenLoginVisibility();
             
             const adminBtn = document.getElementById('admin-access-btn');
             if (adminBtn) {
@@ -4293,19 +4314,17 @@ function initFirebase() {
             remoteUserProgress = null;
             refreshModeSelectionUI();
             
-            if (startScreenLogin) {
-                startScreenLogin.classList.remove('hidden');
-                // Custom Pulse Effect for High Streaks (3+ Days)
-                const savedStreak = parseInt(localStorage.getItem('trivia-streak')) || 0;
-                const loginBtn = startScreenLogin.querySelector('button');
-                if (loginBtn && savedStreak >= 3) {
-                    loginBtn.className = "w-full py-3 rounded-xl border-2 border-emerald-500 bg-emerald-900/30 text-emerald-400 hover:bg-emerald-900/50 text-xs font-bold transition-all uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.2)] animate-pulse";
-                    loginBtn.innerHTML = `🔥 Save Your ${savedStreak} Day Streak!`;
-                } else if (loginBtn) {
-                    loginBtn.className = "w-full bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20";
-                    loginBtn.innerHTML = "Login to Save Progress";
-                }
+            // Custom Pulse Effect for High Streaks (3+ Days)
+            const savedStreak = parseInt(localStorage.getItem('trivia-streak')) || 0;
+            const loginBtn = startScreenLogin ? startScreenLogin.querySelector('button') : null;
+            if (loginBtn && savedStreak >= 3) {
+                loginBtn.className = "w-full py-4 rounded-2xl border-2 border-emerald-500 bg-emerald-900/30 text-emerald-400 hover:bg-emerald-900/50 text-xs font-bold transition-all uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.2)] animate-pulse";
+                loginBtn.innerHTML = `🔥 Save Your ${savedStreak} Day Streak!`;
+            } else if (loginBtn) {
+                loginBtn.className = "w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl border border-slate-700 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20";
+                loginBtn.innerHTML = "Login to Save Progress";
             }
+            updateStartScreenLoginVisibility();
 
             // Refresh data context on logout as well
             if (!document.getElementById('results-card').classList.contains('hidden')) {
@@ -5765,3 +5784,16 @@ function closeStats() {
     </script>
 </body>
 </html>
+        function updateStartScreenLoginVisibility() {
+            const startScreenLogin = document.getElementById('start-screen-login');
+            if (!startScreenLogin) return;
+
+            const isGameActive = !document.getElementById('game-header').classList.contains('hidden');
+            const isLoggedIn = auth && auth.currentUser;
+
+            if (isLoggedIn || isGameActive) {
+                startScreenLogin.classList.add('hidden');
+            } else {
+                startScreenLogin.classList.remove('hidden');
+            }
+        }
