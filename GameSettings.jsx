@@ -83,6 +83,17 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     };
 
     const handleMultiSubModeSelection = async (subMode) => {
+        if (subMode === 'gauntlet') {
+            const isLoggedIn = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
+            if (!isLoggedIn) {
+                if (window.showGauntletAuthPrompt) {
+                    await window.showGauntletAuthPrompt();
+                } else {
+                    alert("You must be logged in to play the Multiplayer Gauntlet.");
+                }
+                return; // Stay on the multiplayer menu
+            }
+        }
         if (subMode === 'categories') {
             const currentName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
             if (!currentName || currentName.trim() === "") {
