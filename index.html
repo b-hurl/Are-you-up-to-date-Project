@@ -901,6 +901,10 @@
             heartbeat: 'https://assets.mixkit.co/active_storage/sfx/219/219-preview.mp3'
         };
 
+    const QUESTION_TIME_LIMIT = 60; // Define constants at the top
+    const UNLOCK_UTC_HOUR = 14;
+    const ADMIN_EMAIL = "bfehurl@gmail.com";
+
     const storedName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
     let isMuted = localStorage.getItem('trivia-muted') === 'true';
         let currentIdx = 0;
@@ -928,13 +932,13 @@
         let toastTimeout = null;
         // New timer variables for question timer
         let questionTimerInterval = null; // Interval ID for the timer
-        const QUESTION_TIME_LIMIT = 60; // 60 seconds for each question
         let globalTimeLeft = QUESTION_TIME_LIMIT; // Global variable to store remaining time
 
         // Global state for game configuration, managed by React component
         let gameConfig = {
             gameMode: null, // 'solo' or 'multiplayer'
             soloSubMode: null, // 'gauntlet' or 'categories'
+            multiSubMode: null, 
             gauntletMode: null, // 'casual' or 'professional'
             activeSelection: null // Specific category for 'categories' or 'casual'/'professional' for gauntlet
         };
@@ -1009,6 +1013,9 @@
                 } else if (isCategory) {
                     loadCategoryTrivia(gameConfig.activeSelection);
                 }
+            } else {
+                // If no selection is active, just ensure the menu is in sync
+                renderGameSettings();
             }
         }
 
@@ -1532,10 +1539,6 @@ function sanitizeQuestions(questions) {
         return q;
     });
 }
-
-// 8:00 AM CST is 14:00 UTC
-const UNLOCK_UTC_HOUR = 14;
-const ADMIN_EMAIL = "bfehurl@gmail.com"; // REPLACE WITH YOUR EMAIL
 
 // HELPER: Get the "Game Date" (Adjusts for the 8AM cutoff)
 function getGameDate() {

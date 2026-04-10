@@ -71,6 +71,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             gauntletMode: null,
             activeSelection: null
         });
+        onUpdate({
+            gameMode: mode,
+            activeSelection: null
+        });
     };
 
     const handleSoloSubModeSelection = (subMode) => {
@@ -302,7 +306,11 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             if (config.multiSubMode === 'gauntlet') return renderGauntletOptions();
             if (config.multiSubMode === 'categories') return renderCategoryOptions();
         }
-        return null;
+        return (
+            <div className="text-center p-4">
+                <p className="text-slate-500 text-xs animate-pulse">Initializing Menu...</p>
+            </div>
+        );
     };
 
     return (
