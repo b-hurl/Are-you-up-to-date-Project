@@ -5784,16 +5784,3 @@ function closeStats() {
     </script>
 </body>
 </html>
-        function updateStartScreenLoginVisibility() {
-            const startScreenLogin = document.getElementById('start-screen-login');
-            if (!startScreenLogin) return;
-
-            const isGameActive = !document.getElementById('game-header').classList.contains('hidden');
-            const isLoggedIn = auth && auth.currentUser;
-
-            if (isLoggedIn || isGameActive) {
-                startScreenLogin.classList.add('hidden');
-            } else {
-                startScreenLogin.classList.remove('hidden');
-            }
-        }
