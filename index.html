@@ -5808,29 +5808,6 @@ function closeStats() {
         checkTutorial();
     </script>
 </body>
-</html>         toggle.checked = !enabled;
-                return;
-            }
-            
-            try {
-                await db.collection('config').doc('maintenance').set({ enabled: enabled, updatedAt: firebase.firestore.FieldValue.serverTimestamp() });
-                alert(`Maintenance Mode is now ${enabled ? 'ON' : 'OFF'}.`);
-            } catch(e) { 
-                alert("Error updating maintenance mode.");
-                toggle.checked = !enabled;
-            }
-        }
-
-        window.addEventListener('appinstalled', () => {
-            hideInstallButtons();
-            deferredPrompt = null;
-        });
-    
-        // Run Import before initialization
-        importStateFromURL();
-        initFirebase();
-        startApp();
-        checkTutorial();
     </script>
 </body>
 </html>
