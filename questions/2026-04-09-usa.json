@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which state is set to become the first to implement a statewide ban on new data center construction, freezing projects of at least 20 megawatts until November 2027?",
+      "options": [
+        "Maine",
+        "New York",
+        "Florida",
+        "California"
+      ],
+      "a": 0,
+      "correctText": "Maine is poised to become the first U.S. state to prohibit the construction of data centers statewide, following the approval of a legislative bill this week.",
+      "category": "Usa",
+      "source": "https://www.binance.com/en/square/post/88959596"
+    },
+    {
+      "q": "The U.S. Postal Service announced it is suspending contributions to which employee pension plan to conserve cash amidst a severe financial crisis?",
+      "options": [
+        "Federal Employees Retirement System (FERS)",
+        "Thrift Savings Plan (TSP)",
+        "Social Security Administration Pension",
+        "Veterans Affairs Pension Fund"
+      ],
+      "a": 0,
+      "correctText": "The U.S. Postal Service is suspending its contributions to the Federal Employees Retirement System, a pension plan for its workers and other civil servants, as the agency struggles with mounting losses.",
+      "category": "Usa",
+      "source": "https://www.cbsnews.com/news/usps-suspends-contributions-to-employee-pensions-cash-crisis/"
+    },
+    {
+      "q": "What was the revised annualized growth rate of the U.S. economy in the fourth quarter, according to the Commerce Department's final estimate?",
+      "options": [
+        "0.5%",
+        "0.7%",
+        "1.4%",
+        "1.9%"
+      ],
+      "a": 0,
+      "correctText": "Gross domestic product increased at a downwardly revised 0.5 per cent annualized rate, the Commerce Department's Bureau of Economic Analysis said in its third GDP estimate.",
+      "category": "Usa",
+      "source": "https://www.business-standard.com/article/international/us-q4-gdp-growth-revised-down-to-0-5-as-economy-slows-more-than-expected-126040900934_1.html"
+    },
+    {
+      "q": "Automatic registration for the U.S. military draft is set to begin in December for eligible men. This change was mandated by which act?",
+      "options": [
+        "2026 National Defense Authorization Act",
+        "2025 Infrastructure Investment and Jobs Act",
+        "2024 Economic Growth and Tax Relief Reconciliation Act",
+        "2023 American Rescue Plan Act"
+      ],
+      "a": 0,
+      "correctText": "Automatic registration into Selective Service was mandated in December 2025, when President Donald Trump signed into law the fiscal year 2026 National Defense Authorization Act.",
+      "category": "Usa",
+      "source": "https://www.armytimes.com/news/your-military/2026/04/08/automatic-registration-for-us-military-draft-eligible-men-to-begin-in-december/"
+    },
+    {
+      "q": "In Florida, a teen has been charged with murder after a sex offender's body was found in what condition and location?",
+      "options": [
+        "Stuffed in a suitcase and left in a remote area",
+        "Buried in a shallow grave in a backyard",
+        "Dismembered and scattered in a public park",
+        "Thrown into a canal with weights attached"
+      ],
+      "a": 0,
+      "correctText": "Lucas Sander Jones, of Indialantic, is charged with the murder of 28-year-old Colie Lee Daniel, who was reported missing on March 22, according to an arrest affidavit obtained by Fox13. Daniel's remains were discovered inside the suitcase that was abandoned in an undeveloped 2,784-acre area known locally as “The Compound.”",
+      "category": "Usa",
+      "source": "https://www.independent.co.uk/news/world/americas/crime/florida-sex-offender-murder-suitcase-teen-charged-b2526518.html"
+    }
+  ]
+}

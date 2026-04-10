@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a recent study, what type of diet can activate gut bacteria to convert white fat into calorie-burning beige fat?",
+      "options": [
+        "A low-protein diet",
+        "A high-protein diet",
+        "A ketogenic diet",
+        "A vegan diet"
+      ],
+      "a": 0,
+      "correctText": "A low-protein diet",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1shbvak/this_dietgut_interaction_could_transform_fat_into/"
+    },
+    {
+      "q": "A family is suing an energy drink distributor, claiming the drink played a role in their daughter's fatal heart condition. What specific ingredient in energy drinks was cited as a potential cause?",
+      "options": [
+        "Excessive caffeine",
+        "High sugar content",
+        "Artificial sweeteners",
+        "Artificial colors"
+      ],
+      "a": 0,
+      "correctText": "Excessive caffeine",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1shmg7a/family_says_popular_energy_drink_played_role_in/"
+    },
+    {
+      "q": "Recent news suggests a new vaccine could curb infections of which tick-borne disease that is spreading?",
+      "options": [
+        "Lyme disease",
+        "Rocky Mountain Spotted Fever",
+        "Anaplasmosis",
+        "Babesiosis"
+      ],
+      "a": 0,
+      "correctText": "Lyme disease",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1sgvtzs/lyme_disease_is_spreadinga_new_vaccine_could_curb/"
+    },
+    {
+      "q": "What type of therapy is showing promise as a potential treatment for autoimmune diseases by resetting the immune system?",
+      "options": [
+        "Stem cell therapy",
+        "Gene therapy",
+        "Immunotherapy",
+        "Light therapy"
+      ],
+      "a": 0,
+      "correctText": "Stem cell therapy",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1sgt10p/the_biggest_hope_for_curing_autoimmune_disease/"
+    },
+    {
+      "q": "A recent CDC study indicated that COVID shots cut urgent care and hospitalization by approximately what percentage in healthy adults?",
+      "options": [
+        "50%",
+        "25%",
+        "75%",
+        "90%"
+      ],
+      "a": 0,
+      "correctText": "50%",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1sgxf1o/cdc_study_shows_covid_shot_benefits_trump/"
+    }
+  ]
+}

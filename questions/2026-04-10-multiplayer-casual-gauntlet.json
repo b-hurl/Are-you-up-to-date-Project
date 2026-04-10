@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-10",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "A family is suing an energy drink distributor, claiming the drink played a role in their daughter's fatal heart condition. What specific ingredient in energy drinks was cited as a potential cause?",
+      "options": [
+        "Excessive caffeine",
+        "High sugar content",
+        "Artificial sweeteners",
+        "Artificial colors"
+      ],
+      "a": 0,
+      "correctText": "Excessive caffeine",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1shmg7a/family_says_popular_energy_drink_played_role_in/"
+    },
+    {
+      "q": "The developers of which popular Minecraft mod have been hired by Hytale to work on new mechanics?",
+      "options": [
+        "Create",
+        "OptiFine",
+        "Biomes O' Plenty",
+        "Just Enough Items"
+      ],
+      "a": 0,
+      "correctText": "The creators of the popular Minecraft mod 'Create' have been hired by Hytale to work on developing new mechanics for the game.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sh0i9j/creators_of_one_of_the_biggest_minecraft_mods/"
+    },
+    {
+      "q": "The discussion around AI-generated novels often raises concerns about copyright, as AI-generated works currently cannot be copyrighted in the US due to the requirement of human authorship. What is a potential impact of AI novels on the self-publishing market?",
+      "options": [
+        "They will increase the value of traditionally published books.",
+        "They may devalue self-published books and create a stigma.",
+        "They will lead to greater demand for human-written novels.",
+        "They will be easily identifiable and filtered out by platforms like Amazon KDP."
+      ],
+      "a": 1,
+      "correctText": "There is concern that the proliferation of AI-generated novels could lower the bar for self-publishing and bring back negative stigmas associated with self-published books being of lower quality.",
+      "category": "Books",
+      "source": "https://www.youtube.com/watch?v=a3hV5tq4K1o"
+    },
+    {
+      "q": "According to a recent study, what type of diet can activate gut bacteria to convert white fat into calorie-burning beige fat?",
+      "options": [
+        "A low-protein diet",
+        "A high-protein diet",
+        "A ketogenic diet",
+        "A vegan diet"
+      ],
+      "a": 0,
+      "correctText": "A low-protein diet",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1shbvak/this_dietgut_interaction_could_transform_fat_into/"
+    },
+    {
+      "q": "Amazon is ending support for Kindle devices released in which year or earlier, starting May 20, 2026?",
+      "options": [
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ],
+      "a": 2,
+      "correctText": "Starting May 20, 2026, Amazon will end support for Kindle devices released in 2012 or earlier.",
+      "category": "Books",
+      "source": "https://www.kare11.com/article/news/nation-world/amazon-ending-support-older-kindle-devices/507-2506595b-98c5-4167-9811-a8689e839601"
+    },
+    {
+      "q": "Which director developed 'Interstellar' for a year before Christopher Nolan took over?",
+      "options": [
+        "Steven Spielberg",
+        "James Cameron",
+        "Ridley Scott",
+        "Denis Villeneuve"
+      ],
+      "a": 0,
+      "correctText": "Steven Spielberg was involved with 'Interstellar' for a year before Christopher Nolan took over as director.",
+      "category": "Entertainment",
+      "source": "https://www.gamesradar.com/steven-spielberg-almost-made-one-of-christopher-nolans-best-movies/"
+    },
+    {
+      "q": "In which year was the comedy film 'Talladega Nights: The Ballad of Ricky Bobby' released?",
+      "options": [
+        "2006",
+        "2005",
+        "2007",
+        "2010"
+      ],
+      "a": 0,
+      "correctText": "'Talladega Nights: The Ballad of Ricky Bobby' was released in 2006.",
+      "category": "Entertainment",
+      "source": "https://www.history.com/this-day-in-history/talladega-nights-premieres"
+    },
+    {
+      "q": "A recent CDC study indicated that COVID shots cut urgent care and hospitalization by approximately what percentage in healthy adults?",
+      "options": [
+        "50%",
+        "25%",
+        "75%",
+        "90%"
+      ],
+      "a": 0,
+      "correctText": "50%",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1sgxf1o/cdc_study_shows_covid_shot_benefits_trump/"
+    },
+    {
+      "q": "What is the title of Brad Bird's upcoming animated neo-noir sci-fi film starring Sam Rockwell and Scarlett Johansson?",
+      "options": [
+        "Ray Gunn",
+        "The Iron Giant",
+        "The Incredibles",
+        "Ratatouille"
+      ],
+      "a": 0,
+      "correctText": "Brad Bird's upcoming animated neo-noir sci-fi film is titled 'Ray Gunn.'",
+      "category": "Entertainment",
+      "source": "https://en.wikipedia.org/wiki/Ray_Gunn"
+    },
+    {
+      "q": "Connor McDavid achieved a significant milestone on April 10, 2026, by recording a hat trick and a total of how many points in a game against the San Jose Sharks?",
+      "options": [
+        "Three points",
+        "Four points",
+        "Five points",
+        "Six points"
+      ],
+      "a": 2,
+      "correctText": "Five points",
+      "category": "Sports",
+      "source": "https://www.tsn.ca/nhl/mc_david-s-hat-trick-leads-oilers-to-a-5-2-win-over-the-sharks-1.1913464"
+    }
+  ]
+}

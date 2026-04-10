@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the real name of the author known as Freida McFadden, famous for \"The Housemaid\"?",
+      "options": [
+        "Sara Cohen",
+        "Amanda Seyfried",
+        "Sydney Sweeney",
+        "Jenna Fischer"
+      ],
+      "a": 0,
+      "correctText": "Sara Cohen",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/the-housemaid-author-freida-mcfadden-reveals-true-identity"
+    },
+    {
+      "q": "Which author turned down a $175,000 Windham-Campbell prize due to promotional requirements?",
+      "options": [
+        "Helen DeWitt",
+        "Joyce Carol Oates",
+        "Gwendoline Riley",
+        "Freida McFadden"
+      ],
+      "a": 0,
+      "correctText": "Helen DeWitt",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/helen-dewitt-turns-down-windham-campbell-prize-unable-promote"
+    },
+    {
+      "q": "Starting in May 2026, which Kindle devices will no longer be able to purchase, borrow, or download new content from the Kindle Store?",
+      "options": [
+        "Devices released before 2013",
+        "Devices released before 2020",
+        "Devices released before 2018",
+        "All Kindle Fire devices"
+      ],
+      "a": 0,
+      "correctText": "Devices released before 2013",
+      "category": "Books",
+      "source": "https://9to5mac.com/2026/04/08/amazon-kindle-devices-may-20/"
+    },
+    {
+      "q": "Farrar, Straus and Giroux (FSG) is closing which of its imprints?",
+      "options": [
+        "MCD",
+        "FSG Originals",
+        "FSG Young Readers",
+        "Counterpoint Press"
+      ],
+      "a": 0,
+      "correctText": "MCD",
+      "category": "Books",
+      "source": "https://www.publishersweekly.com/pw/by-topic/industry-news/publisher-news/article/100124-fsg-closes-its-mcd-imprint.html"
+    },
+    {
+      "q": "According to recent interviews, what is a key element that Joyce Carol Oates believes is crucial for bringing a novel together, often providing a sense of its totality?",
+      "options": [
+        "The title",
+        "The first sentence",
+        "The main character's backstory",
+        "A specific writing location"
+      ],
+      "a": 0,
+      "correctText": "The title",
+      "category": "Books",
+      "source": "https://www.youtube.com/watch?v=AUZIYQFOiYGooP_dTfF9nU8vfKuo2KtxLnVh1Z6eK4_nIQdtP11VOAOOF9lpM-SUbX5i59VNdZuk8-wlgTxy3gVe0AHYdbvSIMcmPkGAXWCjKuRjJsd9omBoknLSTV-MOgU77Js84QXxvCQ"
+    }
+  ]
+}

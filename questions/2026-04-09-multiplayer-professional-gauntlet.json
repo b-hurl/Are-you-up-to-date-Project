@@ -3,6 +3,58 @@
   "type": "multiplayer-professional-gauntlet",
   "questions": [
     {
+      "q": "According to a recent report, what percentage of white-collar professionals are reportedly refusing to adopt AI tools despite employer mandates?",
+      "options": [
+        "50%",
+        "65%",
+        "80%",
+        "30%"
+      ],
+      "a": 2,
+      "correctText": "A staggering 80% of white-collar professionals are reportedly refusing to adopt AI tools.",
+      "category": "Technology",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTehol7FYcbE9K_bdgY4YpFIsfjqSG13EHIIaA8DethBz9FxMDGUECAFtWeOKDxoNHqrCx9KgRs7a8vyPxtl7sFKlwD5BuTE8F27Gr_IV74e3IRWakH4aIYqnKpesV7TbV7fy3SUqFxOxaOQBiikUlu6gRvijqM7EHqVYMINunotqPXux3HV9pjGYU5ogQdZqo_LEw7unk8C9CnfUQ-zS6b6Vb"
+    },
+    {
+      "q": "What event is scheduled to resume on Sunday, April 13, 2026, following the lifting of a state of emergency in Israel?",
+      "options": [
+        "Benjamin Netanyahu's corruption trial",
+        "A summit with Palestinian leaders",
+        "International trade negotiations",
+        "A military operation in Gaza"
+      ],
+      "a": 0,
+      "correctText": "Benjamin Netanyahu's corruption trial.",
+      "category": "World",
+      "source": "https://www.timesofisrael.com/netanyahu-trial-to-resume-on-sunday-after-halt-due-to-iran-war/"
+    },
+    {
+      "q": "According to the International Union for Conservation of Nature (IUCN), what is the primary threat leading to the risk of extinction for Emperor Penguins?",
+      "options": [
+        "Mass drowning of chicks due to melting sea ice",
+        "Predation by leopard seals",
+        "Disease outbreaks",
+        "Overfishing by humans"
+      ],
+      "a": 0,
+      "correctText": "Mass drowning of chicks due to melting sea ice.",
+      "category": "World",
+      "source": "https://www.theguardian.com/environment/2026/apr/09/mass-drowning-of-chicks-puts-emperor-penguins-at-risk-of-extinction"
+    },
+    {
+      "q": "What was the revised annualized growth rate of the U.S. economy in the fourth quarter, according to the Commerce Department's final estimate?",
+      "options": [
+        "0.5%",
+        "0.7%",
+        "1.4%",
+        "1.9%"
+      ],
+      "a": 0,
+      "correctText": "Gross domestic product increased at a downwardly revised 0.5 per cent annualized rate, the Commerce Department's Bureau of Economic Analysis said in its third GDP estimate.",
+      "category": "Usa",
+      "source": "https://www.business-standard.com/article/international/us-q4-gdp-growth-revised-down-to-0-5-as-economy-slows-more-than-expected-126040900934_1.html"
+    },
+    {
       "q": "What government agency recently issued a warning to U.S. internet users to reboot their routers due to attackers targeting home networks?",
       "options": [
         "CIA",
@@ -16,108 +68,56 @@
       "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkPJikcjKCAs9uzrgajF1Ep3IQxSoSyn8MUFj-7wiN8FRHaA4nyB8nCrtNyGEl1MEJzWY9uuzqbMRZURnXOZSkJ0W4aJuGh8tdpobufpaLVstzRWs_KDQvfgrpJRzBMX3TAZdtSxI3Jm37EhUEGattnY2qWea3yCBARzkEqD9oBwfL5rG_sqCBUnVnVquMXvgVSWANfDPbNid-"
     },
     {
-      "q": "Which major tech company has begun removing its AI assistant, Copilot, from built-in Windows 11 apps like Notepad and Snipping Tool?",
+      "q": "A recent study, reported today, indicates that coercive control in relationships is often viewed as less harmful when the victim is a what?",
       "options": [
-        "Google",
-        "Apple",
-        "Microsoft",
-        "Amazon"
+        "Woman",
+        "Man",
+        "Child",
+        "Elderly person"
       ],
-      "a": 2,
-      "correctText": "Microsoft has begun removing Copilot from Windows 11 apps such as Notepad and Snipping Tool.",
-      "category": "Technology",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHjUGRHMMSuximZEa5NLO2GA9hoN2cp0VX0o7pdzGGNR7ozLOvNtoXHXcQVCIWHjcneWmQvtHd9rGlqGF3NeinsNv0n19FCKrdO2wijzy7gTPHEHLqbYk5J4tataAe8ZJgNCJUTTfy5eUgXSKlXlDFUeIT6qHjL76eVSBDeNpktElSf9iCEAVI96EaNKH1CgGkMkqZhRdftog=="
-    },
-    {
-      "q": "On April 7/8, 2026, Conservative MP Marilyn Gladu notably crossed the floor to join which political party, led by Prime Minister Mark Carney?",
-      "options": [
-        "New Democratic Party",
-        "Bloc Québécois",
-        "Liberal Party",
-        "Green Party"
-      ],
-      "a": 2,
-      "correctText": "Conservative MP Marilyn Gladu crossed the floor to join the Liberal Party, led by Prime Minister Mark Carney, on April 7 or 8, 2026.",
-      "category": "Canada",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWB11AZAmxmLIg9O2oMAsOB_Stvk2xkKOcZNMwnI9ahVuuJaYLU829ePrp0jQ0iZ96AyQCGw-tQB8oRHz5xVz4rt15Nsq5DwSz4_ui9mXPSuxlZFTLBYPgGV2mMsRfinu_blm1JlOcGIJYnKfzW_sufk6yxexgmdVaNcFchbEFiiJkBL7t"
-    },
-    {
-      "q": "What social media platform is reportedly rolling out unskippable ads lasting up to 90 seconds for TV users, causing user frustration?",
-      "options": [
-        "Facebook",
-        "TikTok",
-        "YouTube",
-        "Instagram"
-      ],
-      "a": 2,
-      "correctText": "YouTube is rolling out unskippable long ads, up to 90 seconds, to TV users.",
-      "category": "Technology",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcUqv8f4sKnQUsLcEJLP77cfEFEIwKwJG6KIXI5M71g-E65py8CTWb59U6S6VHxLK9iwpPFzO6iY8Kh49fHkPOk_UlEYKRCklVQijhrveCiL8yyVCJwBJSxv0Pbb7dKFFA3tAyQAYczLno2HheYMNV_3LrJrCUQUkglip8OsJfzooefWLxqtl1yZJ0ECT8GGVZO0qQKucIZtS1v93ss8RwwBXFtFZbK-RJe"
-    },
-    {
-      "q": "What is the approximate capital expenditure Amazon CEO Andy Jassy is defending for 2026, primarily for AI infrastructure?",
-      "options": [
-        "$50 billion",
-        "$100 billion",
-        "$200 billion",
-        "$500 billion"
-      ],
-      "a": 2,
-      "correctText": "Amazon CEO Andy Jassy is publicly defending a $200 billion capital expenditure program for 2026, predominantly allocated to AI infrastructure.",
-      "category": "Business",
-      "source": "https://www.reddit.com/r/business/comments/1sgrg08/amazon_ceo_jassy_defends_200_billion_ai_spend/"
-    },
-    {
-      "q": "How was the FBI recently able to extract a suspect's deleted Signal messages from an iPhone, even after the app was uninstalled?",
-      "options": [
-        "Through iCloud backups",
-        "By brute-forcing the device password",
-        "From the iPhone's push notification database",
-        "By compelling Signal to provide data"
-      ],
-      "a": 2,
-      "correctText": "The FBI was able to forensically extract copies of incoming Signal messages from an iPhone's push notification database.",
-      "category": "Technology",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmqTZaIRZ_WIVvwhuJt8xxkxQrkuQn6ZtU3CUIiLIlGKxcK4ti9Z56LJRwGNBvmdhkH5udbXf-HVjFaQHhbOwc9T-bXEe4CtWmCGGmlgffAD3DFYolzgF8JEQtOPhuIRIjd4JkcvQzg4OBlK_nuKcTQZFw448s_nQ2keqBxM8Z7vaBh3A4AfS7kswiEPU2mySZxrVfydpazYYlUa5OYcMfiJZMrSv27dOR"
-    },
-    {
-      "q": "According to a poll reported in early April 2026, a majority of Canadians are open to exploring the idea of joining which international political and economic bloc?",
-      "options": [
-        "NAFTA",
-        "ASEAN",
-        "European Union",
-        "African Union"
-      ],
-      "a": 2,
-      "correctText": "A poll reported in early April 2026 suggested that a majority of Canadians are open to exploring the idea of joining the European Union.",
-      "category": "Canada",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG21hhHYPnTm4eKHpJzAjWCsK4bsFuQS8F8Ciq-g2yXDAZnpkPRw3hm1Ur3yPv895FoRAefdLj6ngXM3dEpI7bZjfhpI6Cx5KyCShijhskGnADPPxMchiRZjpwrXB_cyHLl0fG3X1SmYVX8FeF0npE5XY6hcT5EVM7w_h71TTSv47iZnlOacOeeOnIEb1CKckcGa1wyvIHpFpPWhzUw4_cNRH_50m-z"
-    },
-    {
-      "q": "On April 9, 2026, Netflix officially opened a new 110,000-square-foot animation studio in which Canadian city?",
-      "options": [
-        "Toronto",
-        "Montreal",
-        "Vancouver",
-        "Calgary"
-      ],
-      "a": 2,
-      "correctText": "Netflix officially opened a new 110,000-square-foot animation studio in Vancouver on April 9, 2026.",
-      "category": "Canada",
-      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqOaT_hC7Eu6UQO0kEfRsEnwER04WiUu4wHGHB26wRe35WRsalhBcTQzLZBNj7-Nyod_Xyzp5Lntx9HUwuchCqJOI9mCljlHzbx8kpVqPOP0qVWGooEHY6omZpnDZLGRZWVL1EqclU2pyoix8fJIt6df3VHBtPwVhFUhFrew=="
-    },
-    {
-      "q": "What innovative therapy, reported in news from April 9, 2026, helped a woman with three autoimmune diseases achieve remission by 'supercharging' her immune cells?",
-      "options": [
-        "Chemotherapy",
-        "Radiation therapy",
-        "CAR-T cell therapy",
-        "Hormone therapy"
-      ],
-      "a": 2,
-      "correctText": "CAR-T cell therapy, involving the modification and reintroduction of a patient's immune cells, was reported on April 9, 2026, to have led to remission for a woman with three autoimmune diseases.",
+      "a": 1,
+      "correctText": "Research from April 9, 2026, indicates that people tend to view coercive control as less harmful when the victim is a man.",
       "category": "Science",
-      "source": "https://www.reddit.com/r/science/comments/1sgvvrl/woman_with_3_autoimmune_diseases_enters_remission/"
+      "source": "https://www.reddit.com/r/science/comments/1sgnmbo/people_view_coercive_control_in_relationships_as/"
+    },
+    {
+      "q": "In Florida, a teen has been charged with murder after a sex offender's body was found in what condition and location?",
+      "options": [
+        "Stuffed in a suitcase and left in a remote area",
+        "Buried in a shallow grave in a backyard",
+        "Dismembered and scattered in a public park",
+        "Thrown into a canal with weights attached"
+      ],
+      "a": 0,
+      "correctText": "Lucas Sander Jones, of Indialantic, is charged with the murder of 28-year-old Colie Lee Daniel, who was reported missing on March 22, according to an arrest affidavit obtained by Fox13. Daniel's remains were discovered inside the suitcase that was abandoned in an undeveloped 2,784-acre area known locally as “The Compound.”",
+      "category": "Usa",
+      "source": "https://www.independent.co.uk/news/world/americas/crime/florida-sex-offender-murder-suitcase-teen-charged-b2526518.html"
+    },
+    {
+      "q": "What Canadian bank announced on April 9, 2026, its plan to launch a growth fund to invest up to $1 billion in Canadian companies?",
+      "options": [
+        "TD Bank",
+        "Scotiabank",
+        "RBC",
+        "BMO"
+      ],
+      "a": 2,
+      "correctText": "On April 9, 2026, RBC announced its plan to launch a growth fund to invest up to $1 billion in Canadian companies.",
+      "category": "Canada",
+      "source": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0b3fTFAbWirVTgAM7McLKYWO1QTi0av1FQDRrlpXqe_kZqj-_l6IqIh22U_tmBtmTY6cux4yzw4Ff-4uKs2Mz6uuHz1mD_P31Wsh_ZqIhrSfBXXOV41VvEDq9vwE9jsnHiQwPtkqfzql1VX_I3T_rrN63JzrBEqtdNyn2-JEMAkrvgLwHJdj6ephb460jZSY="
+    },
+    {
+      "q": "The U.S. Postal Service announced it is suspending contributions to which employee pension plan to conserve cash amidst a severe financial crisis?",
+      "options": [
+        "Federal Employees Retirement System (FERS)",
+        "Thrift Savings Plan (TSP)",
+        "Social Security Administration Pension",
+        "Veterans Affairs Pension Fund"
+      ],
+      "a": 0,
+      "correctText": "The U.S. Postal Service is suspending its contributions to the Federal Employees Retirement System, a pension plan for its workers and other civil servants, as the agency struggles with mounting losses.",
+      "category": "Usa",
+      "source": "https://www.cbsnews.com/news/usps-suspends-contributions-to-employee-pensions-cash-crisis/"
     },
     {
       "q": "According to news from April 9, 2026, what social factor is linked to a lower risk of cancer, particularly for men?",

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the full meaning of the acronym MMIWG2SLGBTQQIA+ as used in Canadian parliamentary discussions?",
+      "options": [
+        "Missing and Murdered Indigenous Women, Girls, and Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer, Questioning, Intersex, Asexual, and more",
+        "Missing and Marginalized Indigenous Women, Girls, and LGBTQIA+ Allies",
+        "Minority Matters for Indigenous Women, Girls, and Two-Spirit individuals in LGBTQIA+ Communities",
+        "Mandatory Measures for Indigenous Women, Girls, and Two-Spirit people facing Gender-based Violence"
+      ],
+      "a": 0,
+      "correctText": "The acronym MMIWG2SLGBTQQIA+ stands for Missing and Murdered Indigenous Women, Girls, and Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer, Questioning, Intersex, Asexual, and more.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/mmiwg2slgbtqqia-acronym-sparks-online-frenzy-1.7172246"
+    },
+    {
+      "q": "According to Prime Minister Mark Carney, what must Members of Parliament who join the Liberal caucus adhere to?",
+      "options": [
+        "Liberal values, including support for abortion and LGBTQ rights",
+        "A strict non-disclosure agreement regarding caucus discussions",
+        "The party's platform on economic policy and national security",
+        "The ability to demonstrate a minimum level of public service experience"
+      ],
+      "a": 0,
+      "correctText": "Prime Minister Mark Carney has stated that any Member of Parliament joining the Liberal caucus must adhere to Liberal values, particularly regarding support for abortion access and LGBTQ rights.",
+      "category": "Canada",
+      "source": "https://www.northshorenoun.com/carney-says-floor-crossing-mps-must-support-liberal-values-on-abortion-lgbtq-rights/"
+    },
+    {
+      "q": "What is Saab pitching to Canada in relation to the F-35 fighter jet contract?",
+      "options": [
+        "A Montreal-based, sovereign data hub",
+        "A joint research and development facility for aerospace technology",
+        "A proposal for co-production of F-35 components",
+        "A comprehensive cyber-security package for existing Canadian military assets"
+      ],
+      "a": 0,
+      "correctText": "Saab is pitching a Montreal-based, sovereign data hub to secure Canada's fighter jet contract, arguing it would keep mission-critical data out of U.S. hands.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/saab-data-centre-montreal-f-35-fighter-contract-1.7173055"
+    },
+    {
+      "q": "What action is the Canadian Immigration Department taking regarding approximately 30,000 refugee applicants?",
+      "options": [
+        "Informing them they may be ineligible for refugee hearings",
+        "Offering them expedited processing for permanent residency",
+        "Requesting additional documentation for a streamlined review",
+        "Granting them temporary status while their applications are processed"
+      ],
+      "a": 0,
+      "correctText": "Canada's Immigration Department is sending letters to tens of thousands of refugee claimants informing them that they may not be eligible for asylum, and in some cases, advising them to leave immediately.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/immigration-department-refugee-hearings-ineligible-1.7173226"
+    },
+    {
+      "q": "What is the stated reason for the culling of ostriches on a farm in Edgewood, B.C. in late 2025?",
+      "options": [
+        "Detection of avian flu (Influenza A virus subtype H5N1)",
+        "A legal dispute over land use and zoning regulations",
+        "Concerns about overpopulation impacting local wildlife",
+        "The farm failing to meet animal welfare standards"
+      ],
+      "a": 0,
+      "correctText": "The Canadian Food Inspection Agency (CFIA) ordered the culling of ostriches on a farm in Edgewood, B.C. after avian flu was detected in the flock.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/bc-ostrich-cull-costs-1.7172807"
+    }
+  ]
+}

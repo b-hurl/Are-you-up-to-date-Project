@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "The U.S. Department of Justice has opened an investigation into the NFL's media deals. What is the primary focus of this investigation?",
+      "options": [
+        "Anticompetitive practices and consumer impact",
+        "Player safety regulations",
+        "Draft pick tampering",
+        "Team relocation policies"
+      ],
+      "a": 0,
+      "correctText": "Anticompetitive practices and consumer impact",
+      "category": "Sports",
+      "source": "https://www.cbsnews.com/news/justice-department-investigating-nfl-broadcast-rights-practices-harm-consumers/"
+    },
+    {
+      "q": "Following his DUI arrest in Florida, what specific records are prosecutors seeking related to Tiger Woods?",
+      "options": [
+        "Prescription drug records",
+        "Financial records",
+        "Social media activity",
+        "Golf handicap history"
+      ],
+      "a": 0,
+      "correctText": "Prescription drug records",
+      "category": "Sports",
+      "source": "https://www.cbsnews.com/news/justice-department-investigating-nfl-broadcast-rights-practices-harm-consumers/"
+    },
+    {
+      "q": "Connor McDavid recently had a standout performance, recording a five-point night. How many goals did he score in that game?",
+      "options": [
+        "Three",
+        "Two",
+        "Four",
+        "One"
+      ],
+      "a": 0,
+      "correctText": "Three",
+      "category": "Sports",
+      "source": "https://www.espn.com/nhl/recap/_/gameId/401464286"
+    },
+    {
+      "q": "Arvid Lindblad is a racing driver who has shown promise in motorsport. What type of machines does he demonstrate for testing motorsport strength?",
+      "options": [
+        "Strength and conditioning equipment",
+        "Aerodynamic testing devices",
+        "Engine dynamometers",
+        "Tire pressure gauges"
+      ],
+      "a": 0,
+      "correctText": "Strength and conditioning equipment",
+      "category": "Sports",
+      "source": "https://www.youtube.com/watch?v=b0o204j50p8"
+    },
+    {
+      "q": "Which NFL team does Connor McDavid captain?",
+      "options": [
+        "Edmonton Oilers",
+        "San Jose Sharks",
+        "Vegas Golden Knights",
+        "Utah Hockey Club"
+      ],
+      "a": 0,
+      "correctText": "Edmonton Oilers",
+      "category": "Sports",
+      "source": "https://www.espn.com/nhl/recap/_/gameId/401464286"
+    }
+  ]
+}

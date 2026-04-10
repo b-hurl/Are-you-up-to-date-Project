@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which author, known for psychological thrillers like 'The Housemaid', recently revealed their real name is Sara Cohen and that they are also a doctor?",
+      "options": [
+        "Helen DeWitt",
+        "Freida McFadden",
+        "Shari Franke",
+        "Lauren Groff"
+      ],
+      "a": 1,
+      "correctText": "Freida McFadden is the pen name of Sara Cohen, a doctor who writes bestselling thrillers like 'The Housemaid'.",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/the-housemaid-author-freida-mcfadden-reveals-her-true-identity"
+    },
+    {
+      "q": "Amazon is ending support for Kindle devices released in which year or earlier, starting May 20, 2026?",
+      "options": [
+        "2010",
+        "2011",
+        "2012",
+        "2013"
+      ],
+      "a": 2,
+      "correctText": "Starting May 20, 2026, Amazon will end support for Kindle devices released in 2012 or earlier.",
+      "category": "Books",
+      "source": "https://www.kare11.com/article/news/nation-world/amazon-ending-support-older-kindle-devices/507-2506595b-98c5-4167-9811-a8689e839601"
+    },
+    {
+      "q": "Which author declined the $175,000 Windham-Campbell Prize due to promotional requirements?",
+      "options": [
+        "Freida McFadden",
+        "Helen DeWitt",
+        "Roald Dahl",
+        "Ray Bradbury"
+      ],
+      "a": 1,
+      "correctText": "Helen DeWitt turned down the $175,000 Windham-Campbell Prize because she was unable to fulfill the required promotional activities.",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/helen-dewitt-turns-down-windham-campbell-prize-unable-promote"
+    },
+    {
+      "q": "According to some accounts, which magazine, known for its adult content, also published significant literary works and well-paid short stories, contributing to literacy for some readers?",
+      "options": [
+        "Maxim",
+        "Esquire",
+        "Playboy",
+        "FHM"
+      ],
+      "a": 2,
+      "correctText": "Playboy magazine, despite its reputation, published significant literary works, including short stories that paid very well, and is credited by some with fostering literacy.",
+      "category": "Books",
+      "source": "https://www.youtube.com/watch?v=w5M6W1r1VfA"
+    },
+    {
+      "q": "The discussion around AI-generated novels often raises concerns about copyright, as AI-generated works currently cannot be copyrighted in the US due to the requirement of human authorship. What is a potential impact of AI novels on the self-publishing market?",
+      "options": [
+        "They will increase the value of traditionally published books.",
+        "They may devalue self-published books and create a stigma.",
+        "They will lead to greater demand for human-written novels.",
+        "They will be easily identifiable and filtered out by platforms like Amazon KDP."
+      ],
+      "a": 1,
+      "correctText": "There is concern that the proliferation of AI-generated novels could lower the bar for self-publishing and bring back negative stigmas associated with self-published books being of lower quality.",
+      "category": "Books",
+      "source": "https://www.youtube.com/watch?v=a3hV5tq4K1o"
+    }
+  ]
+}

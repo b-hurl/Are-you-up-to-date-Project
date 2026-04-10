@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which new Castlevania game, set in 1499 Paris, was revealed with a gameplay trailer during the Triple-i Initiative Showcase?",
+      "options": [
+        "Castlevania: Symphony of the Night 2",
+        "Castlevania: Belmont's Curse",
+        "Castlevania: Lords of Shadow 3",
+        "Castlevania: Dracula's Legacy"
+      ],
+      "a": 1,
+      "correctText": "Castlevania: Belmont's Curse is set to launch in 2026 and features combat against corrupted historical figures like Joan of Arc.",
+      "category": "Gaming",
+      "source": "https://www.gamespress.com/Castlevania-Belmonts-Curse-revealed-during-Triple-i-Initiative-Showcase-2026"
+    },
+    {
+      "q": "What is the name of the new Don't Starve game announced during the Triple-i Initiative Showcase, which introduces new environments and terrain mechanics like hills?",
+      "options": [
+        "Don't Starve: The Wilderness",
+        "Don't Starve: New World",
+        "Don't Starve Elsewhere",
+        "Don't Starve: Survival Peaks"
+      ],
+      "a": 2,
+      "correctText": "Don't Starve Elsewhere was revealed with a world premiere trailer, promising new biomes, magical elements, and a multi-tiered wilderness.",
+      "category": "Gaming",
+      "source": "https://www.gamesradar.com/new-dont-starve-game-announced-klei-entertainment-brings-its-survival-crafting-juggernaut-back-with-magic-and-a-jump-button-in-dont-starve-elsewhere/"
+    },
+    {
+      "q": "The creators of the popular Minecraft mod 'Create' have been hired by which upcoming game studio?",
+      "options": [
+        "Mojang",
+        "Hytale",
+        "Riot Games",
+        "Hypixel Studios"
+      ],
+      "a": 1,
+      "correctText": "The developers behind the extensive Minecraft 'Create' mod have been hired by Hytale, suggesting a focus on automation and complex systems in the upcoming game.",
+      "category": "Gaming",
+      "source": "https://www.pcgamesn.com/hytale/creators-of-minecraft-mod-create-hired-by-hytale"
+    },
+    {
+      "q": "Which of these games had its Early Access release date trailer shown during The Triple-i Initiative showcase on April 9, 2026?",
+      "options": [
+        "Graveyard Keeper 2",
+        "Road to Vostok",
+        "Alabaster Dawn",
+        "Prove You're Human"
+      ],
+      "a": 2,
+      "correctText": "Alabaster Dawn, an action RPG from the creators of CrossCode, had its Early Access release date trailer shown, with the game set to launch on May 7, 2026.",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/alabaster-dawn-launches-in-early-access-on-may-7"
+    },
+    {
+      "q": "Road to Vostok, a hardcore survival shooter, recently had a successful launch on Steam. What is a key feature of this game according to its description?",
+      "options": [
+        "It is a multiplayer-only experience.",
+        "It features a procedurally generated fantasy world.",
+        "It is a single-player survival game set in a post-apocalyptic border zone.",
+        "It is primarily a story-driven RPG with minimal combat."
+      ],
+      "a": 2,
+      "correctText": "Road to Vostok is described as a hardcore single-player survival game set in a post-apocalyptic border zone between Finland and Russia.",
+      "category": "Gaming",
+      "source": "https://www.gamesradar.com/road-to-vostoks-hot-start-on-steam-has-secured-the-entire-production-budget-the-finnish-survival-shooter-needs-for-years-to-come-dev-says/"
+    }
+  ]
+}

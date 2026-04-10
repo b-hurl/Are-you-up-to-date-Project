@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A recent CDC report, delayed in publication, indicated that the COVID-19 vaccine reduced the likelihood of emergency department and urgent care visits by approximately what percentage in healthy adults between September and December of last year?",
+      "options": [
+        "50%",
+        "25%",
+        "75%",
+        "10%"
+      ],
+      "a": 0,
+      "correctText": "The report found a 50% reduction in emergency department and urgent care visits for healthy adults who received the vaccine.",
+      "category": "Health",
+      "source": "https://www.washingtonpost.com/health/2026/04/09/cdc-covid-vaccine-benefits-report-delay/"
+    },
+    {
+      "q": "Due to increased demand following the FDA's removal of black box warnings, what medication used for hormone replacement therapy is currently experiencing national shortages, leading to patient scrambles?",
+      "options": [
+        "Estrogen patches",
+        "Insulin pens",
+        "Epinephrine auto-injectors",
+        "Thyroid hormone capsules"
+      ],
+      "a": 0,
+      "correctText": "Estrogen patches are facing shortages due to a surge in demand after the FDA removed black box warnings, making them harder for patients to obtain.",
+      "category": "Health",
+      "source": "https://www.tradingview.com/news/tradingview:07151f6385700001e5b7f1b9014f8b3e:0-patients-scramble-to-find-estrogen-patches-as-shortage-worsens-after-us-fda-champions-use/"
+    },
+    {
+      "q": "Which of the following is a promising new vaccine candidate for Lyme disease that has completed Phase 3 clinical trials?",
+      "options": [
+        "PF-07307405 (VLA15)",
+        "GARDASIL 9",
+        "Shingrix",
+        "Prevnar 13"
+      ],
+      "a": 0,
+      "correctText": "PF-07307405, also known as VLA15, is a Lyme disease vaccine candidate that has completed Phase 3 trials and shown strong efficacy.",
+      "category": "Health",
+      "source": "https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-valneva-announce-lyme-disease-vaccine-candidate-demonstrates-strong-efficacy-phase-3-valor-trial"
+    },
+    {
+      "q": "What emerging technology is being explored as a potential way to 'reboot' the immune system and treat autoimmune diseases like lupus and multiple sclerosis?",
+      "options": [
+        "CAR-T cell therapy",
+        "CRISPR gene editing",
+        "mRNA vaccine technology",
+        "Stem cell transplantation (HSCT)"
+      ],
+      "a": 3,
+      "correctText": "Stem cell transplantation (HSCT) is being explored as a method to reset the immune system by wiping it clean and rebuilding it with the patient's own stem cells, showing success in diseases like multiple sclerosis.",
+      "category": "Health",
+      "source": "https://www.shebaonline.org/can-autoimmune-disease-be-cured-new-discoveries-offer-hope-for-reversal-and-remission/"
+    },
+    {
+      "q": "What type of blood test is showing promise in detecting over 50 types of cancer, including many for which there are no standard screening tests?",
+      "options": [
+        "Multi-cancer early detection (MCED) blood test",
+        "A complete blood count (CBC)",
+        "A lipid panel",
+        "A genetic testing panel for inherited diseases"
+      ],
+      "a": 0,
+      "correctText": "Multi-cancer early detection (MCED) blood tests, such as the Galleri test, can detect DNA fragments shed by tumors in the blood, potentially identifying over 50 types of cancer, including those without standard screening methods.",
+      "category": "Health",
+      "source": "https://news.ohsu.edu/2025/12/26/blood-test-finds-seven-times-more-cancers-than-standard-screenings/"
+    }
+  ]
+}

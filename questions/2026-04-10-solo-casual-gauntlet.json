@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-10",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which of the following is NOT among the new features being added to Crimson Desert in upcoming updates?",
+      "options": [
+        "Boss Rematches",
+        "New Skills for Damiane and Oongka",
+        "Player housing customization",
+        "Difficulty Settings"
+      ],
+      "a": 2,
+      "correctText": "While Crimson Desert is receiving updates like Boss Rematches, new skills, and difficulty settings, player housing customization has not been announced as part of these upcoming features.",
+      "category": "Gaming",
+      "source": "https://www.vice.com/en/article/5gqpxk/crimson-desert-dev-reveals-massive-new-features-and-its-a-game-changer"
+    },
+    {
+      "q": "According to some accounts, which magazine, known for its adult content, also published significant literary works and well-paid short stories, contributing to literacy for some readers?",
+      "options": [
+        "Maxim",
+        "Esquire",
+        "Playboy",
+        "FHM"
+      ],
+      "a": 2,
+      "correctText": "Playboy magazine, despite its reputation, published significant literary works, including short stories that paid very well, and is credited by some with fostering literacy.",
+      "category": "Books",
+      "source": "https://www.youtube.com/watch?v=w5M6W1r1VfA"
+    },
+    {
+      "q": "Recent news suggests a new vaccine could curb infections of which tick-borne disease that is spreading?",
+      "options": [
+        "Lyme disease",
+        "Rocky Mountain Spotted Fever",
+        "Anaplasmosis",
+        "Babesiosis"
+      ],
+      "a": 0,
+      "correctText": "Lyme disease",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1sgvtzs/lyme_disease_is_spreadinga_new_vaccine_could_curb/"
+    },
+    {
+      "q": "What significant historical event occurred on April 10, 2026, involving LeBron James and his son Bronny in an NBA game?",
+      "options": [
+        "Bronny James assisted LeBron James for a dunk, marking the first son-to-father assist in NBA history.",
+        "LeBron James assisted Bronny James for a three-pointer, marking the first father-to-son assist in NBA history.",
+        "Both Bronny and LeBron James recorded triple-doubles in the same game.",
+        "They became the first father-son duo to start an NBA game together."
+      ],
+      "a": 0,
+      "correctText": "Bronny James assisted LeBron James for a dunk, marking the first son-to-father assist in NBA history.",
+      "category": "Sports",
+      "source": "https://www.sportsbusinessjournal.com/Journal/Issues/2026/04/10/News-and-Analysis/LeBron-Bronny-James-make-NBA-history-with-first-son-to-father-assist.aspx"
+    },
+    {
+      "q": "Which Denuvo-protected game released in 2026 was reportedly the first to be fully cracked by pirates?",
+      "options": [
+        "DOOM: The Dark Ages",
+        "Resident Evil Requiem",
+        "Crimson Desert",
+        "Phantom Blade Zero"
+      ],
+      "a": 1,
+      "correctText": "Resident Evil Requiem, a title released in 2026, has been reported as the first Denuvo-protected game of that year to be fully cracked by pirates.",
+      "category": "Gaming",
+      "source": "https://www.thegamer.com/denuvo-game-2026-cracked-pirates-resident-evil-requiem/"
+    },
+    {
+      "q": "Which author, known for psychological thrillers like 'The Housemaid', recently revealed their real name is Sara Cohen and that they are also a doctor?",
+      "options": [
+        "Helen DeWitt",
+        "Freida McFadden",
+        "Shari Franke",
+        "Lauren Groff"
+      ],
+      "a": 1,
+      "correctText": "Freida McFadden is the pen name of Sara Cohen, a doctor who writes bestselling thrillers like 'The Housemaid'.",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/the-housemaid-author-freida-mcfadden-reveals-her-true-identity"
+    },
+    {
+      "q": "FIFA has faced criticism regarding the 2026 World Cup ticketing for allegedly introducing what?",
+      "options": [
+        "A new category of significantly higher-priced pitch-side tickets after initial sales.",
+        "A lottery system for all ticket purchases.",
+        "Restrictions on the number of tickets fans can buy per match.",
+        "A complete ban on resale tickets."
+      ],
+      "a": 0,
+      "correctText": "A new category of significantly higher-priced pitch-side tickets after initial sales.",
+      "category": "Sports",
+      "source": "https://www.footballgroundguide.com/news/world-cup-news/fifa-create-new-2026-world-cup-ticket-category-just-months-before-tournament-leaving-fans-deceived/"
+    },
+    {
+      "q": "What is the release date for the horror film 'The Yeti' in the United States?",
+      "options": [
+        "April 10, 2026",
+        "April 3, 2026",
+        "May 19, 2026",
+        "April 1, 2026"
+      ],
+      "a": 0,
+      "correctText": "The film 'The Yeti' was released in the United States on April 10, 2026.",
+      "category": "Entertainment",
+      "source": "https://en.wikipedia.org/wiki/The_Yeti_(film)"
+    },
+    {
+      "q": "Which author declined the $175,000 Windham-Campbell Prize due to promotional requirements?",
+      "options": [
+        "Freida McFadden",
+        "Helen DeWitt",
+        "Roald Dahl",
+        "Ray Bradbury"
+      ],
+      "a": 1,
+      "correctText": "Helen DeWitt turned down the $175,000 Windham-Campbell Prize because she was unable to fulfill the required promotional activities.",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/apr/09/helen-dewitt-turns-down-windham-campbell-prize-unable-promote"
+    },
+    {
+      "q": "What type of weather was forecast for the AFL Gather Round matches in Adelaide on April 10, 2026?",
+      "options": [
+        "Clear skies and warm temperatures",
+        "Heavy snow",
+        "Rain and wind",
+        "High humidity and thunderstorms"
+      ],
+      "a": 2,
+      "correctText": "Rain and wind",
+      "category": "Sports",
+      "source": "https://www.zerohanger.com.au/afl-news/84758/afl-braces-for-gather-round-weather-shock"
+    }
+  ]
+}

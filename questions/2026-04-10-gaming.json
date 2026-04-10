@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the primary reason cited by Google for the removal of Doki Doki Literature Club from the Play Store?",
+      "options": [
+        "Depiction of sensitive themes",
+        "Copyright infringement",
+        "Inappropriate use of advertisements",
+        "Technical compatibility issues"
+      ],
+      "a": 0,
+      "correctText": "Google stated that the game's content violates their Terms of Service in its depiction of sensitive themes.",
+      "category": "Gaming",
+      "source": "https://www.gamesindustry.biz/google-removes-doki-doki-literature-club-from-play-store"
+    },
+    {
+      "q": "Which of the following is NOT among the new features being added to Crimson Desert in upcoming updates?",
+      "options": [
+        "Boss Rematches",
+        "New Skills for Damiane and Oongka",
+        "Player housing customization",
+        "Difficulty Settings"
+      ],
+      "a": 2,
+      "correctText": "While Crimson Desert is receiving updates like Boss Rematches, new skills, and difficulty settings, player housing customization has not been announced as part of these upcoming features.",
+      "category": "Gaming",
+      "source": "https://www.vice.com/en/article/5gqpxk/crimson-desert-dev-reveals-massive-new-features-and-its-a-game-changer"
+    },
+    {
+      "q": "What is the stance of Phantom Blade Zero's developer, S-Game, regarding generative AI in game development?",
+      "options": [
+        "They are fully embracing generative AI for all aspects of development.",
+        "They are selectively using generative AI for background assets only.",
+        "They are rejecting generative AI, emphasizing that all content is crafted by human artists.",
+        "They are currently experimenting with generative AI but have not made a final decision."
+      ],
+      "a": 2,
+      "correctText": "S-Game has explicitly stated that they are rejecting generative AI, emphasizing that every piece of content in Phantom Blade Zero has been crafted by human artists.",
+      "category": "Gaming",
+      "source": "https://www.eurogamer.net/phantom-blade-zero-developer-rejects-gen-ai-and-promises-every-single-piece-of-content-in-our-game-has-been-crafted-by-the-hands-of-real-artists"
+    },
+    {
+      "q": "Which Denuvo-protected game released in 2026 was reportedly the first to be fully cracked by pirates?",
+      "options": [
+        "DOOM: The Dark Ages",
+        "Resident Evil Requiem",
+        "Crimson Desert",
+        "Phantom Blade Zero"
+      ],
+      "a": 1,
+      "correctText": "Resident Evil Requiem, a title released in 2026, has been reported as the first Denuvo-protected game of that year to be fully cracked by pirates.",
+      "category": "Gaming",
+      "source": "https://www.thegamer.com/denuvo-game-2026-cracked-pirates-resident-evil-requiem/"
+    },
+    {
+      "q": "The developers of which popular Minecraft mod have been hired by Hytale to work on new mechanics?",
+      "options": [
+        "Create",
+        "OptiFine",
+        "Biomes O' Plenty",
+        "Just Enough Items"
+      ],
+      "a": 0,
+      "correctText": "The creators of the popular Minecraft mod 'Create' have been hired by Hytale to work on developing new mechanics for the game.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sh0i9j/creators_of_one_of_the_biggest_minecraft_mods/"
+    }
+  ]
+}
