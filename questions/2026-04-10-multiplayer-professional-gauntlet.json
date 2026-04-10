@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-10",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A study found that three simple movement habits in toddlerhood significantly predict a more physically active lifestyle a decade later. Which of the following is NOT one of these habits?",
+      "options": [
+        "Active play with parents",
+        "Sufficient sleep",
+        "Limited screen time",
+        "Balanced diet"
+      ],
+      "a": 3,
+      "correctText": "Balanced diet",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shi1gs/three_simple_movement_habits_in_toddlerhood/"
+    },
+    {
+      "q": "What is the primary reason cited for the surge in US consumer prices in March 2026?",
+      "options": [
+        "The war with Iran and rising oil prices",
+        "Increased tariffs on imported goods",
+        "A sudden increase in demand for electronics",
+        "Shortages in the agricultural sector"
+      ],
+      "a": 0,
+      "correctText": "The war with Iran and rising oil prices",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=US+consumer+prices+surge+March+2025"
+    },
+    {
+      "q": "Emil Michael, a U.S. defense official overseeing AI, reaped millions from selling his stock in which artificial intelligence company?",
+      "options": [
+        "xAI",
+        "OpenAI",
+        "DeepMind",
+        "Anthropic"
+      ],
+      "a": 0,
+      "correctText": "xAI",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=US+defense+official+overseeing+AI+reaped+millions+selling+xAI+stock+after+Pentagon+entered+agreement+with+company"
+    },
+    {
+      "q": "Which country's embassy has warned that a proposed 'comfort women' statue in New Zealand could jeopardize diplomatic relations?",
+      "options": [
+        "Japan",
+        "South Korea",
+        "China",
+        "United States"
+      ],
+      "a": 0,
+      "correctText": "Japan",
+      "category": "World",
+      "source": "https://www.theguardian.com/world/2026/apr/09/new-zealand-comfort-women-statue-could-jeopardise-diplomatic-relations-japan-says"
+    },
+    {
+      "q": "What is OpenAI's projected advertising revenue for the current year?",
+      "options": [
+        "$2.5 billion",
+        "$1 billion",
+        "$5 billion",
+        "$10 billion"
+      ],
+      "a": 0,
+      "correctText": "OpenAI projects it will generate $2.5 billion in advertising revenue this year.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgvvn5/openai_projects_25_billion_in_ad_revenue_this/"
+    },
+    {
+      "q": "The U.S. Postal Service is proposing to increase the price of a First-Class Mail Forever stamp. To what amount?",
+      "options": [
+        "82 cents",
+        "80 cents",
+        "85 cents",
+        "78 cents"
+      ],
+      "a": 0,
+      "correctText": "82 cents",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=USPS+to+suspend+pension+contributions%2C+seeks+4-cent+stamp+price+hike."
+    },
+    {
+      "q": "What is the full meaning of the acronym MMIWG2SLGBTQQIA+ as used in Canadian parliamentary discussions?",
+      "options": [
+        "Missing and Murdered Indigenous Women, Girls, and Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer, Questioning, Intersex, Asexual, and more",
+        "Missing and Marginalized Indigenous Women, Girls, and LGBTQIA+ Allies",
+        "Minority Matters for Indigenous Women, Girls, and Two-Spirit individuals in LGBTQIA+ Communities",
+        "Mandatory Measures for Indigenous Women, Girls, and Two-Spirit people facing Gender-based Violence"
+      ],
+      "a": 0,
+      "correctText": "The acronym MMIWG2SLGBTQQIA+ stands for Missing and Murdered Indigenous Women, Girls, and Two-Spirit, Lesbian, Gay, Bisexual, Transgender, Queer, Questioning, Intersex, Asexual, and more.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/mmiwg2slgbtqqia-acronym-sparks-online-frenzy-1.7172246"
+    },
+    {
+      "q": "What type of bill is OpenAI backing that would limit liability for AI-enabled harms?",
+      "options": [
+        "An Illinois state bill",
+        "A federal law",
+        "A European Union directive",
+        "A United Nations resolution"
+      ],
+      "a": 0,
+      "correctText": "An Illinois state bill",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shd0fx/openai_backs_bill_that_would_limit_liability_for/"
+    },
+    {
+      "q": "What action is the Canadian Immigration Department taking regarding approximately 30,000 refugee applicants?",
+      "options": [
+        "Informing them they may be ineligible for refugee hearings",
+        "Offering them expedited processing for permanent residency",
+        "Requesting additional documentation for a streamlined review",
+        "Granting them temporary status while their applications are processed"
+      ],
+      "a": 0,
+      "correctText": "Canada's Immigration Department is sending letters to tens of thousands of refugee claimants informing them that they may not be eligible for asylum, and in some cases, advising them to leave immediately.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/immigration-department-refugee-hearings-ineligible-1.7173226"
+    },
+    {
+      "q": "A federal judge has ordered the Pentagon to restore press access, ruling that a revised policy ignored a prior court order. Which Secretary of Defense was criticized for this policy?",
+      "options": [
+        "Pete Hegseth",
+        "Mark Esper",
+        "James Mattis",
+        "Lloyd Austin"
+      ],
+      "a": 0,
+      "correctText": "Pete Hegseth",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=US+judge+orders+Pentagon+to+restore+press+access"
+    }
+  ]
+}

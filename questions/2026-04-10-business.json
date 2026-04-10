@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is OpenAI's projected advertising revenue for the current year?",
+      "options": [
+        "$2.5 billion",
+        "$1 billion",
+        "$5 billion",
+        "$10 billion"
+      ],
+      "a": 0,
+      "correctText": "OpenAI projects it will generate $2.5 billion in advertising revenue this year.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgvvn5/openai_projects_25_billion_in_ad_revenue_this/"
+    },
+    {
+      "q": "Which automaker is halting production of its ID.4 electric SUV in the U.S. due to slowing EV demand?",
+      "options": [
+        "Volkswagen",
+        "Toyota",
+        "Ford",
+        "General Motors"
+      ],
+      "a": 0,
+      "correctText": "Volkswagen is halting U.S. production of its ID.4 electric SUV at its Chattanooga, Tennessee plant.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1shab4n/volkswagen_stops_building_id4s_in_the_us_has/"
+    },
+    {
+      "q": "Amazon CEO Andy Jassy is defending a significant capital expenditure plan for 2026, primarily focused on what area?",
+      "options": [
+        "Artificial Intelligence (AI)",
+        "Satellite Internet",
+        "Drone Delivery Network",
+        "International Warehousing"
+      ],
+      "a": 0,
+      "correctText": "Amazon CEO Andy Jassy is defending the company's $200 billion capital expenditure plan for 2026, which is largely earmarked for AI infrastructure.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgrg08/amazon_ceo_jassy_defends_200_billion_ai_spend/"
+    },
+    {
+      "q": "Paramount Global has secured permanent financing for its acquisition of Warner Bros. Discovery, reducing its debt commitments to what amount?",
+      "options": [
+        "$49 billion",
+        "$111 billion",
+        "$80 billion",
+        "$54 billion"
+      ],
+      "a": 0,
+      "correctText": "Paramount Global has secured permanent financing for its acquisition of Warner Bros. Discovery, reducing its debt commitments from $54 billion to $49 billion.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sh3kgc/paramount_reveals_jeff_shells_severance_pay_terms/"
+    },
+    {
+      "q": "Costco is expanding its retail operations by investing in what new type of standalone business venture?",
+      "options": [
+        "Gas Stations",
+        "Pharmacies",
+        "Car Wash Services",
+        "Electronics Repair Shops"
+      ],
+      "a": 0,
+      "correctText": "Costco is investing in and expanding its standalone gas station business.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sghia7/costco_is_starting_a_standalone_gas_station_empire/"
+    }
+  ]
+}

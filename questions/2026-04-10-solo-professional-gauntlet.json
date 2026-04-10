@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-10",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "France has announced plans to replace Microsoft's Windows operating system with which open-source alternative across all government desktops?",
+      "options": [
+        "Linux",
+        "macOS",
+        "ChromeOS",
+        "FreeBSD"
+      ],
+      "a": 0,
+      "correctText": "Linux",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shj7c3/france_launches_government_linux_desktop_plan_as/"
+    },
+    {
+      "q": "A study comparing vaccinated and unvaccinated males found that men who received the HPV vaccine had a lower risk of certain cancers. Which of the following is NOT listed as a cancer with a lower risk in vaccinated men?",
+      "options": [
+        "Head and neck cancers",
+        "Anal cancers",
+        "Lung cancers",
+        "Penile cancers"
+      ],
+      "a": 2,
+      "correctText": "Lung cancers",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shkoxx/hpv_vaccine_could_protect_men_from_cancer_too/"
+    },
+    {
+      "q": "According to analysts, what percentage of U.S. data centers planned for 2026 are expected to be delayed or canceled?",
+      "options": [
+        "Approximately half",
+        "About a quarter",
+        "Less than 10%",
+        "Over 75%"
+      ],
+      "a": 0,
+      "correctText": "Approximately half",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1sh4vty/half_of_data_centers_for_2026_cancelled_or_delayed/"
+    },
+    {
+      "q": "Which automaker is halting production of its ID.4 electric SUV in the U.S. due to slowing EV demand?",
+      "options": [
+        "Volkswagen",
+        "Toyota",
+        "Ford",
+        "General Motors"
+      ],
+      "a": 0,
+      "correctText": "Volkswagen is halting U.S. production of its ID.4 electric SUV at its Chattanooga, Tennessee plant.",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1shab4n/volkswagen_stops_building_id4s_in_the_us_has/"
+    },
+    {
+      "q": "Which European country expelled a Muslim leader for defending marriage to a 9-year-old girl?",
+      "options": [
+        "Italy",
+        "France",
+        "Germany",
+        "Spain"
+      ],
+      "a": 0,
+      "correctText": "Italy",
+      "category": "World",
+      "source": "https://www.reuters.com/world/europe/italy-deports-imam-who-defended-child-marriage-report-2026-04-03/"
+    },
+    {
+      "q": "In June 2026, the price of YouTube Premium individual plan in the US will increase to what amount per month?",
+      "options": [
+        "$15.99",
+        "$13.99",
+        "$11.99",
+        "$17.99"
+      ],
+      "a": 0,
+      "correctText": "$15.99",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shjrv1/youtube_is_raising_the_price_of_all_premium_plans/"
+    },
+    {
+      "q": "According to a 2025 review, insects may possess forms of subjective experience, including emotional states and attention, challenging the idea that consciousness requires a large brain. Which journal published this review?",
+      "options": [
+        "Philosophical Transactions of the Royal Society B",
+        "Nature Neuroscience",
+        "Cell",
+        "Science"
+      ],
+      "a": 0,
+      "correctText": "Philosophical Transactions of the Royal Society B",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shitwe/insects_including_bees_may_possess_forms_of/"
+    },
+    {
+      "q": "What is the stated reason for the culling of ostriches on a farm in Edgewood, B.C. in late 2025?",
+      "options": [
+        "Detection of avian flu (Influenza A virus subtype H5N1)",
+        "A legal dispute over land use and zoning regulations",
+        "Concerns about overpopulation impacting local wildlife",
+        "The farm failing to meet animal welfare standards"
+      ],
+      "a": 0,
+      "correctText": "The Canadian Food Inspection Agency (CFIA) ordered the culling of ostriches on a farm in Edgewood, B.C. after avian flu was detected in the flock.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/bc-ostrich-cull-costs-1.7172807"
+    },
+    {
+      "q": "Following Israeli strikes in Lebanon, which Pakistani minister deleted a social media post that called Israel a 'cancerous state'?",
+      "options": [
+        "Khawaja Asif",
+        "Bilawal Bhutto Zardari",
+        "Imran Khan",
+        "Shehbaz Sharif"
+      ],
+      "a": 0,
+      "correctText": "Khawaja Asif",
+      "category": "World",
+      "source": "https://www.timesofisrael.com/pakistan-defense-minister-deletes-post-calling-israel-cancerous-after-lebanon-strikes/"
+    },
+    {
+      "q": "According to Chinese President Xi Jinping, who is the chief culprit in undermining peace in the Taiwan Strait?",
+      "options": [
+        "Taiwan independence",
+        "US military presence",
+        "Economic sanctions",
+        "South China Sea disputes"
+      ],
+      "a": 0,
+      "correctText": "Taiwan independence",
+      "category": "World",
+      "source": "https://www.japantimes.co.jp/news/2026/04/10/asia-pacific/china-taiwan-independence-xi-jinping/"
+    }
+  ]
+}

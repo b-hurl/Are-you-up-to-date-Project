@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A federal judge has ordered the Pentagon to restore press access, ruling that a revised policy ignored a prior court order. Which Secretary of Defense was criticized for this policy?",
+      "options": [
+        "Pete Hegseth",
+        "Mark Esper",
+        "James Mattis",
+        "Lloyd Austin"
+      ],
+      "a": 0,
+      "correctText": "Pete Hegseth",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=US+judge+orders+Pentagon+to+restore+press+access"
+    },
+    {
+      "q": "What is the primary reason cited for the surge in US consumer prices in March 2026?",
+      "options": [
+        "The war with Iran and rising oil prices",
+        "Increased tariffs on imported goods",
+        "A sudden increase in demand for electronics",
+        "Shortages in the agricultural sector"
+      ],
+      "a": 0,
+      "correctText": "The war with Iran and rising oil prices",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=US+consumer+prices+surge+March+2025"
+    },
+    {
+      "q": "The U.S. Postal Service is proposing to increase the price of a First-Class Mail Forever stamp. To what amount?",
+      "options": [
+        "82 cents",
+        "80 cents",
+        "85 cents",
+        "78 cents"
+      ],
+      "a": 0,
+      "correctText": "82 cents",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=USPS+to+suspend+pension+contributions%2C+seeks+4-cent+stamp+price+hike."
+    },
+    {
+      "q": "Maine is set to become the first state to implement a ban on data center construction. Until when would this ban last?",
+      "options": [
+        "November 2027",
+        "December 2026",
+        "March 2027",
+        "January 2028"
+      ],
+      "a": 0,
+      "correctText": "November 2027",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=Maine+set+to+become+first+state+with+data+center+ban"
+    },
+    {
+      "q": "Emil Michael, a U.S. defense official overseeing AI, reaped millions from selling his stock in which artificial intelligence company?",
+      "options": [
+        "xAI",
+        "OpenAI",
+        "DeepMind",
+        "Anthropic"
+      ],
+      "a": 0,
+      "correctText": "xAI",
+      "category": "Usa",
+      "source": "https://www.google.com/search?q=US+defense+official+overseeing+AI+reaped+millions+selling+xAI+stock+after+Pentagon+entered+agreement+with+company"
+    }
+  ]
+}

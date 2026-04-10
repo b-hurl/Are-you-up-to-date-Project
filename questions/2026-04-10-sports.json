@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What significant historical event occurred on April 10, 2026, involving LeBron James and his son Bronny in an NBA game?",
+      "options": [
+        "Bronny James assisted LeBron James for a dunk, marking the first son-to-father assist in NBA history.",
+        "LeBron James assisted Bronny James for a three-pointer, marking the first father-to-son assist in NBA history.",
+        "Both Bronny and LeBron James recorded triple-doubles in the same game.",
+        "They became the first father-son duo to start an NBA game together."
+      ],
+      "a": 0,
+      "correctText": "Bronny James assisted LeBron James for a dunk, marking the first son-to-father assist in NBA history.",
+      "category": "Sports",
+      "source": "https://www.sportsbusinessjournal.com/Journal/Issues/2026/04/10/News-and-Analysis/LeBron-Bronny-James-make-NBA-history-with-first-son-to-father-assist.aspx"
+    },
+    {
+      "q": "Which major sports league is currently under investigation by the U.S. Department of Justice for potential anti-competitive practices related to its TV deals?",
+      "options": [
+        "Major League Baseball (MLB)",
+        "National Basketball Association (NBA)",
+        "National Football League (NFL)",
+        "National Hockey League (NHL)"
+      ],
+      "a": 2,
+      "correctText": "National Football League (NFL)",
+      "category": "Sports",
+      "source": "https://www.cbsnews.com/news/nfl-investigated-justice-department-anti-competitive-practices-tv-deals/"
+    },
+    {
+      "q": "Connor McDavid achieved a significant milestone on April 10, 2026, by recording a hat trick and a total of how many points in a game against the San Jose Sharks?",
+      "options": [
+        "Three points",
+        "Four points",
+        "Five points",
+        "Six points"
+      ],
+      "a": 2,
+      "correctText": "Five points",
+      "category": "Sports",
+      "source": "https://www.tsn.ca/nhl/mc_david-s-hat-trick-leads-oilers-to-a-5-2-win-over-the-sharks-1.1913464"
+    },
+    {
+      "q": "What type of weather was forecast for the AFL Gather Round matches in Adelaide on April 10, 2026?",
+      "options": [
+        "Clear skies and warm temperatures",
+        "Heavy snow",
+        "Rain and wind",
+        "High humidity and thunderstorms"
+      ],
+      "a": 2,
+      "correctText": "Rain and wind",
+      "category": "Sports",
+      "source": "https://www.zerohanger.com.au/afl-news/84758/afl-braces-for-gather-round-weather-shock"
+    },
+    {
+      "q": "FIFA has faced criticism regarding the 2026 World Cup ticketing for allegedly introducing what?",
+      "options": [
+        "A new category of significantly higher-priced pitch-side tickets after initial sales.",
+        "A lottery system for all ticket purchases.",
+        "Restrictions on the number of tickets fans can buy per match.",
+        "A complete ban on resale tickets."
+      ],
+      "a": 0,
+      "correctText": "A new category of significantly higher-priced pitch-side tickets after initial sales.",
+      "category": "Sports",
+      "source": "https://www.footballgroundguide.com/news/world-cup-news/fifa-create-new-2026-world-cup-ticket-category-just-months-before-tournament-leaving-fans-deceived/"
+    }
+  ]
+}

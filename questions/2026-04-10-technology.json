@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "France has announced plans to replace Microsoft's Windows operating system with which open-source alternative across all government desktops?",
+      "options": [
+        "Linux",
+        "macOS",
+        "ChromeOS",
+        "FreeBSD"
+      ],
+      "a": 0,
+      "correctText": "Linux",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shj7c3/france_launches_government_linux_desktop_plan_as/"
+    },
+    {
+      "q": "According to analysts, what percentage of U.S. data centers planned for 2026 are expected to be delayed or canceled?",
+      "options": [
+        "Approximately half",
+        "About a quarter",
+        "Less than 10%",
+        "Over 75%"
+      ],
+      "a": 0,
+      "correctText": "Approximately half",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1sh4vty/half_of_data_centers_for_2026_cancelled_or_delayed/"
+    },
+    {
+      "q": "What type of bill is OpenAI backing that would limit liability for AI-enabled harms?",
+      "options": [
+        "An Illinois state bill",
+        "A federal law",
+        "A European Union directive",
+        "A United Nations resolution"
+      ],
+      "a": 0,
+      "correctText": "An Illinois state bill",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shd0fx/openai_backs_bill_that_would_limit_liability_for/"
+    },
+    {
+      "q": "Mozilla has accused Microsoft of sabotaging Firefox through tactics involving which two Microsoft products/features?",
+      "options": [
+        "Windows and Copilot",
+        "Internet Explorer and Edge",
+        "Windows Media Player and OneDrive",
+        "Outlook and Teams"
+      ],
+      "a": 0,
+      "correctText": "Windows and Copilot",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shhkfl/mozilla_accuses_microsoft_of_sabotaging_firefox/"
+    },
+    {
+      "q": "In June 2026, the price of YouTube Premium individual plan in the US will increase to what amount per month?",
+      "options": [
+        "$15.99",
+        "$13.99",
+        "$11.99",
+        "$17.99"
+      ],
+      "a": 0,
+      "correctText": "$15.99",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shjrv1/youtube_is_raising_the_price_of_all_premium_plans/"
+    }
+  ]
+}

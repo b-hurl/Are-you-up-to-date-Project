@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which country's embassy has warned that a proposed 'comfort women' statue in New Zealand could jeopardize diplomatic relations?",
+      "options": [
+        "Japan",
+        "South Korea",
+        "China",
+        "United States"
+      ],
+      "a": 0,
+      "correctText": "Japan",
+      "category": "World",
+      "source": "https://www.theguardian.com/world/2026/apr/09/new-zealand-comfort-women-statue-could-jeopardise-diplomatic-relations-japan-says"
+    },
+    {
+      "q": "Scientists have observed what they are calling a 'civil war' among chimpanzees in which national park?",
+      "options": [
+        "Kibale National Park, Uganda",
+        "Serengeti National Park, Tanzania",
+        "Gombe Stream National Park, Tanzania",
+        "Volta Region, Ghana"
+      ],
+      "a": 0,
+      "correctText": "Kibale National Park, Uganda",
+      "category": "World",
+      "source": "https://www.livescience.com/chimpanzees-uganda-civil-war.html"
+    },
+    {
+      "q": "According to Chinese President Xi Jinping, who is the chief culprit in undermining peace in the Taiwan Strait?",
+      "options": [
+        "Taiwan independence",
+        "US military presence",
+        "Economic sanctions",
+        "South China Sea disputes"
+      ],
+      "a": 0,
+      "correctText": "Taiwan independence",
+      "category": "World",
+      "source": "https://www.japantimes.co.jp/news/2026/04/10/asia-pacific/china-taiwan-independence-xi-jinping/"
+    },
+    {
+      "q": "Which European country expelled a Muslim leader for defending marriage to a 9-year-old girl?",
+      "options": [
+        "Italy",
+        "France",
+        "Germany",
+        "Spain"
+      ],
+      "a": 0,
+      "correctText": "Italy",
+      "category": "World",
+      "source": "https://www.reuters.com/world/europe/italy-deports-imam-who-defended-child-marriage-report-2026-04-03/"
+    },
+    {
+      "q": "Following Israeli strikes in Lebanon, which Pakistani minister deleted a social media post that called Israel a 'cancerous state'?",
+      "options": [
+        "Khawaja Asif",
+        "Bilawal Bhutto Zardari",
+        "Imran Khan",
+        "Shehbaz Sharif"
+      ],
+      "a": 0,
+      "correctText": "Khawaja Asif",
+      "category": "World",
+      "source": "https://www.timesofisrael.com/pakistan-defense-minister-deletes-post-calling-israel-cancerous-after-lebanon-strikes/"
+    }
+  ]
+}

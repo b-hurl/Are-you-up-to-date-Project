@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a 2025 review, insects may possess forms of subjective experience, including emotional states and attention, challenging the idea that consciousness requires a large brain. Which journal published this review?",
+      "options": [
+        "Philosophical Transactions of the Royal Society B",
+        "Nature Neuroscience",
+        "Cell",
+        "Science"
+      ],
+      "a": 0,
+      "correctText": "Philosophical Transactions of the Royal Society B",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shitwe/insects_including_bees_may_possess_forms_of/"
+    },
+    {
+      "q": "A study found that three simple movement habits in toddlerhood significantly predict a more physically active lifestyle a decade later. Which of the following is NOT one of these habits?",
+      "options": [
+        "Active play with parents",
+        "Sufficient sleep",
+        "Limited screen time",
+        "Balanced diet"
+      ],
+      "a": 3,
+      "correctText": "Balanced diet",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shi1gs/three_simple_movement_habits_in_toddlerhood/"
+    },
+    {
+      "q": "A study comparing vaccinated and unvaccinated males found that men who received the HPV vaccine had a lower risk of certain cancers. Which of the following is NOT listed as a cancer with a lower risk in vaccinated men?",
+      "options": [
+        "Head and neck cancers",
+        "Anal cancers",
+        "Lung cancers",
+        "Penile cancers"
+      ],
+      "a": 2,
+      "correctText": "Lung cancers",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shkoxx/hpv_vaccine_could_protect_men_from_cancer_too/"
+    },
+    {
+      "q": "According to a study of over 200 men and women, using emojis at work makes you appear less competent. Which gender was more likely to judge negative IMs with emoji more harshly if they were ostensibly sent by women, compared to similar messages sent by men?",
+      "options": [
+        "Men",
+        "Women",
+        "Both equally",
+        "Neither"
+      ],
+      "a": 1,
+      "correctText": "Women",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shlt7g/using_emojis_at_work_makes_you_appear_less/"
+    },
+    {
+      "q": "A woman with three autoimmune diseases entered remission after a novel immune 'reset' therapy. What type of therapy was used?",
+      "options": [
+        "Gene therapy",
+        "Chimeric Antigen Receptor (CAR-) T cell therapy",
+        "Stem cell transplantation",
+        "Immunoglobulin therapy"
+      ],
+      "a": 1,
+      "correctText": "Chimeric Antigen Receptor (CAR-) T cell therapy",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sgvvrl/woman_with_3_autoimmune_diseases_enters_remission/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In what year was the movie 'Tremors 2: Aftershocks' released?",
+      "options": [
+        "1996",
+        "1990",
+        "2001",
+        "2006"
+      ],
+      "a": 0,
+      "correctText": "Tremors 2: Aftershocks was released on April 9, 1996.",
+      "category": "Entertainment",
+      "source": "https://en.wikipedia.org/wiki/Tremors_2:_Aftershocks"
+    },
+    {
+      "q": "Which director developed 'Interstellar' for a year before Christopher Nolan took over?",
+      "options": [
+        "Steven Spielberg",
+        "James Cameron",
+        "Ridley Scott",
+        "Denis Villeneuve"
+      ],
+      "a": 0,
+      "correctText": "Steven Spielberg was involved with 'Interstellar' for a year before Christopher Nolan took over as director.",
+      "category": "Entertainment",
+      "source": "https://www.gamesradar.com/steven-spielberg-almost-made-one-of-christopher-nolans-best-movies/"
+    },
+    {
+      "q": "What is the title of Brad Bird's upcoming animated neo-noir sci-fi film starring Sam Rockwell and Scarlett Johansson?",
+      "options": [
+        "Ray Gunn",
+        "The Iron Giant",
+        "The Incredibles",
+        "Ratatouille"
+      ],
+      "a": 0,
+      "correctText": "Brad Bird's upcoming animated neo-noir sci-fi film is titled 'Ray Gunn.'",
+      "category": "Entertainment",
+      "source": "https://en.wikipedia.org/wiki/Ray_Gunn"
+    },
+    {
+      "q": "In which year was the comedy film 'Talladega Nights: The Ballad of Ricky Bobby' released?",
+      "options": [
+        "2006",
+        "2005",
+        "2007",
+        "2010"
+      ],
+      "a": 0,
+      "correctText": "'Talladega Nights: The Ballad of Ricky Bobby' was released in 2006.",
+      "category": "Entertainment",
+      "source": "https://www.history.com/this-day-in-history/talladega-nights-premieres"
+    },
+    {
+      "q": "What is the release date for the horror film 'The Yeti' in the United States?",
+      "options": [
+        "April 10, 2026",
+        "April 3, 2026",
+        "May 19, 2026",
+        "April 1, 2026"
+      ],
+      "a": 0,
+      "correctText": "The film 'The Yeti' was released in the United States on April 10, 2026.",
+      "category": "Entertainment",
+      "source": "https://en.wikipedia.org/wiki/The_Yeti_(film)"
+    }
+  ]
+}
