@@ -234,50 +234,50 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     // Handle both legacy array format and new object mapping for isSent calculation
                     const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData);
 
-                {CATEGORIES.filter(cat =>
-                    // Only show category if it has questions available today
-                    // or if the data hasn't loaded (or failed to load) yet (null)
-                    availableCategories === null || availableCategories.includes(cat)
-                ).map(category => {
-                    const isPlayed = playedModes.includes(category);
-                    const isMulti = config.gameMode === 'multiplayer';
-                    const isSent = isMulti && activeChallenges.includes(category);
-                    const savedScore = archive[gameDate]?.[category]?.score;
+                    return CATEGORIES.filter(cat =>
+                        // Only show category if it has questions available today
+                        // or if the data hasn't loaded (or failed to load) yet (null)
+                        availableCategories === null || availableCategories.includes(cat)
+                    ).map(category => {
+                        const isPlayed = playedModes.includes(category);
+                        const isMulti = config.gameMode === 'multiplayer';
+                        const isSent = isMulti && activeChallenges.includes(category);
+                        const savedScore = archive[gameDate]?.[category]?.score;
 
-                    return (
-                        <MenuButton
-                            key={category}
-                            onClick={() => {
-                                if (isMulti && isPlayed) {
-                                    window.prepareAndCreateChallenge(category);
-                                } else {
-                                    handleCategorySelection(category);
-                                }
-                            }}
-                            isSelected={config.activeSelection === category}
-                            isDisabled={!isMulti && isPlayed}
-                            isSmall={true}
-                            title={category}
-                            description={isPlayed ? (
-                                isSent ? (
-                                    <span className="flex items-center justify-between w-full">
-                                        <span>Challenge Sent ✉️</span>
-                                        <span 
-                                            onClick={(e) => {
-                                                e.stopPropagation(); // Prevent re-triggering the challenge creation
-                                                window.revokeChallenge(category);
-                                            }}
-                                            className="ml-2 px-2 py-0.5 bg-red-500/20 hover:bg-red-500/40 text-red-400 border border-red-500/30 rounded text-[8px] font-black uppercase tracking-tighter transition-all"
-                                        >
-                                            Revoke
+                        return (
+                            <MenuButton
+                                key={category}
+                                onClick={() => {
+                                    if (isMulti && isPlayed) {
+                                        window.prepareAndCreateChallenge(category);
+                                    } else {
+                                        handleCategorySelection(category);
+                                    }
+                                }}
+                                isSelected={config.activeSelection === category}
+                                isDisabled={!isMulti && isPlayed}
+                                isSmall={true}
+                                title={category}
+                                description={isPlayed ? (
+                                    isSent ? (
+                                        <span className="flex items-center justify-between w-full">
+                                            <span>Challenge Sent ✉️</span>
+                                            <span 
+                                                onClick={(e) => {
+                                                    e.stopPropagation(); // Prevent re-triggering the challenge creation
+                                                    window.revokeChallenge(category);
+                                                }}
+                                                className="ml-2 px-2 py-0.5 bg-red-500/20 hover:bg-red-500/40 text-red-400 border border-red-500/30 rounded text-[8px] font-black uppercase tracking-tighter transition-all"
+                                            >
+                                                Revoke
+                                            </span>
                                         </span>
-                                    </span>
-                                ) : 
-                                (savedScore !== undefined ? `Score: ${savedScore}/5 ${isMulti ? '⚔️' : ''}` : 'Completed')
-                            ) : '5 Daily Questions'}
-                        />
-                    );
-                })}
+                                    ) : 
+                                    (savedScore !== undefined ? `Score: ${savedScore}/5 ${isMulti ? '⚔️' : ''}` : 'Completed')
+                                ) : '5 Daily Questions'}
+                            />
+                        );
+                    });
                 })()}
             </div>
         </MenuView>
