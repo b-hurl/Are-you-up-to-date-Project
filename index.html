@@ -134,6 +134,19 @@
         .sync-pulse { animation: pulse-sync 2s infinite; border-width: 2px !important; }
         @keyframes times-up-flash { 0%, 100% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 50% { opacity: 0.2; transform: translate(-50%, -50%) scale(1.1); } }
         .times-up-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 50; pointer-events: none; color: #ef4444; font-size: 3.5rem; font-weight: 900; text-shadow: 0 0 30px rgba(239, 68, 68, 0.6); letter-spacing: -0.05em; animation: times-up-flash 0.4s infinite; }
+
+        @keyframes gauntlet-master-pop {
+            0% { transform: scale(0) rotate(-10deg); opacity: 0; filter: blur(15px); }
+            70% { transform: scale(1.2) rotate(5deg); opacity: 1; filter: blur(0px); }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+        .gauntlet-master-reveal {
+            animation: gauntlet-master-pop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 25px rgba(251, 191, 36, 0.7));
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
@@ -662,6 +675,16 @@
             <div id="action-area"></div>
             <div id="times-up-overlay" class="hidden times-up-overlay">TIME'S UP!</div>
         </div>
+
+        <!-- Main Menu Footer Actions -->
+        <div id="start-screen-login" class="w-full grid grid-cols-2 gap-3 mt-8 pt-8 border-t border-slate-700 hidden">
+            <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl border border-slate-600 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+                Login to Save Progress
+            </button>
+            <button onclick="openTutorial()" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl border border-slate-600 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+                How to Play
+            </button>
+        </div>
     </div>
 
     <!-- The old mode-selection content is now managed by the React component.
@@ -686,15 +709,6 @@
             <span class="grand-master-shimmer font-black text-xs uppercase tracking-tighter">Grand Master</span>
         </div>
         <p class="text-slate-500 text-xs mt-4">You've mastered today's challenges.</p>
-    </div>
-
-    <div id="start-screen-login" class="w-full max-w-md grid grid-cols-2 gap-3 mt-6 hidden">
-        <button onclick="toggleLoginModal()" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl border border-slate-700 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
-            Login to Save Progress
-        </button>
-        <button onclick="openTutorial()" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl border border-slate-700 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
-            How to Play
-        </button>
     </div>
 
     <div id="start-screen-install-container" class="hidden">
@@ -777,9 +791,6 @@
                 <button onclick="openHistory()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
                     <span class="text-xl">📜</span> History
                 </button>
-                <button onclick="openTutorial()" class="bg-slate-700 hover:bg-slate-600 py-3 rounded-xl font-bold text-white text-sm transition-all flex items-center justify-center gap-2">
-                    <span class="text-xl">❓</span> How to Play
-                </button>
             </div>
             
             <button onclick="shareResults()" class="w-full bg-primary-600 hover:bg-primary-500 py-3 rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-lg shadow-primary-500/20 transition-all">Share Text Result</button>
@@ -791,6 +802,16 @@
             <div id="end-screen-install-container" class="mt-3 hidden">
                 <button id="install-btn-end" class="w-full bg-slate-800 hover:bg-slate-700 py-4 rounded-2xl font-bold text-white flex items-center justify-center gap-2 border border-slate-700 transition-all">
                     <span class="text-xl">📲</span> Install App
+                </button>
+            </div>
+
+            <!-- Results Screen Footer Actions -->
+            <div id="results-footer-login" class="w-full grid grid-cols-2 gap-3 mt-4 pt-6 border-t border-slate-700 hidden">
+                <button onclick="toggleLoginModal()" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl border border-slate-600 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+                    Login to Save Progress
+                </button>
+                <button onclick="openTutorial()" class="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl border border-slate-600 font-bold text-white text-xs transition-all uppercase tracking-widest shadow-lg shadow-slate-900/20">
+                    How to Play
                 </button>
             </div>
         </div>
@@ -846,31 +867,6 @@
         let questionTimerInterval = null; // Interval ID for the timer
         const QUESTION_TIME_LIMIT = 60; // 60 seconds for each question
         let globalTimeLeft = QUESTION_TIME_LIMIT; // Global variable to store remaining time
-
-        function updateStartScreenLoginVisibility() {
-            const startScreenLogin = document.getElementById('start-screen-login');
-            if (!startScreenLogin) return;
-            
-            // "Answering" is defined as when the main card is visible AND question text is shown
-            const isAnswering = !document.getElementById('main-card').classList.contains('hidden') && 
-                                !document.getElementById('question-text').classList.contains('hidden');
-            const isLoggedIn = auth && auth.currentUser;
-
-            if (isAnswering) {
-                startScreenLogin.classList.add('hidden');
-            } else {
-                startScreenLogin.classList.remove('hidden');
-                
-                const loginBtn = startScreenLogin.querySelector('button[onclick="toggleLoginModal()"]');
-                if (isLoggedIn) {
-                    if (loginBtn) loginBtn.classList.add('hidden');
-                    startScreenLogin.classList.replace('grid-cols-2', 'grid-cols-1');
-                } else {
-                    if (loginBtn) loginBtn.classList.remove('hidden');
-                    startScreenLogin.classList.replace('grid-cols-1', 'grid-cols-2');
-                }
-            }
-        }
 
         // Global state for game configuration, managed by React component
         let gameConfig = {
@@ -1504,6 +1500,7 @@ function showModeSelection() {
     document.getElementById('game-header').classList.add('hidden');
     document.getElementById('category-display').classList.add('hidden');
     document.getElementById('options-container').innerHTML = '';
+    document.getElementById('times-up-overlay').classList.add('hidden');
     updateStartScreenLoginVisibility();
 
     renderGameSettings();
@@ -1812,20 +1809,38 @@ function showFinalResults() {
         'game-header': { add: ['hidden'] },
         'results-card': { remove: ['hidden'] },
         'results-gm-badge': { toggle: isGM },
+        'times-up-overlay': { add: ['hidden'] },
         'leaderboard-section': { toggle: gameConfig.gameMode === 'multiplayer' }
     };
 
-    // 2. Rank Configuration
-    const ranks = [
-        { title: "Ouch...", color: "#ef4444", emoji: "💀" },
-        { title: "Keep Trying!", color: "#f97316", emoji: "🐣" }, // 1/5
-        { title: "Getting There", color: "#facc15", emoji: "🥉" }, // 2/5
-        { title: "Solid Effort", color: "#a855f7", emoji: "🥈" },  // 3/5
-        { title: "Trivia Pro!", color: "#3b82f6", emoji: "🥇" },   // 4/5
-        { title: "LEGENDARY!", color: "#fbbf24", emoji: "👑" }    // 5/5
-    ];
-
-    const rank = ranks[score] || ranks[0];
+    // 2. Rank Configuration - Scale based on total questions (5 for Category, 10 for Gauntlet)
+    let rank;
+    if (total > 5) {
+        const gauntletRanks = [
+            { title: "Ouch...", color: "#ef4444", emoji: "💀" },       // 0
+            { title: "Keep Trying!", color: "#f97316", emoji: "🐣" },  // 1
+            { title: "Keep Trying!", color: "#f97316", emoji: "🐣" },  // 2
+            { title: "Getting There", color: "#facc15", emoji: "🥉" }, // 3
+            { title: "Getting There", color: "#facc15", emoji: "🥉" }, // 4
+            { title: "Solid Effort", color: "#a855f7", emoji: "🥈" },  // 5
+            { title: "Solid Effort", color: "#a855f7", emoji: "🥈" },  // 6
+            { title: "Sharp Mind!", color: "#6366f1", emoji: "🧠" },   // 7
+            { title: "Sharp Mind!", color: "#6366f1", emoji: "🧠" },   // 8
+            { title: "Trivia Pro!", color: "#3b82f6", emoji: "🥇" },   // 9
+            { title: "GODLIKE!", color: "#fbbf24", emoji: "👑" }      // 10
+        ];
+        rank = gauntletRanks[score] || gauntletRanks[0];
+    } else {
+        const standardRanks = [
+            { title: "Ouch...", color: "#ef4444", emoji: "💀" },       // 0
+            { title: "Keep Trying!", color: "#f97316", emoji: "🐣" },  // 1
+            { title: "Getting There", color: "#facc15", emoji: "🥉" }, // 2
+            { title: "Solid Effort", color: "#a855f7", emoji: "🥈" },  // 3
+            { title: "Trivia Pro!", color: "#3b82f6", emoji: "🥇" },   // 4
+            { title: "LEGENDARY!", color: "#fbbf24", emoji: "👑" }    // 5
+        ];
+        rank = standardRanks[score] || standardRanks[0];
+    }
     
     // Apply UI visibility state
     Object.entries(uiState).forEach(([id, actions]) => {
@@ -1851,13 +1866,21 @@ function showFinalResults() {
     finalScoreDisplay.innerText = `${score}/${total}`;
 
     // 3. Perfect Score badge logic (prevent duplicates)
-    const existingBadge = document.querySelector('.perfect-badge');
+    const existingBadge = document.querySelector('.perfect-badge, .gauntlet-master-reveal');
     if (existingBadge) existingBadge.remove();
 
     if (score === total) {
         const badge = document.createElement('div');
-        badge.className = "perfect-badge text-sm uppercase mb-4";
-        badge.innerText = "✨ Perfect Score ✨";
+        if (total > 5) {
+            badge.className = "gauntlet-master-reveal text-4xl font-black uppercase mb-4 tracking-tighter";
+            badge.innerText = "🏆 GAUNTLET MASTER 🏆";
+            // Extra celebratory flair for 10/10
+            setTimeout(fireConfetti, 400);
+            setTimeout(fireConfetti, 800);
+        } else {
+            badge.className = "perfect-badge text-sm uppercase mb-4";
+            badge.innerText = "✨ Perfect Score ✨";
+        }
         finalScoreDisplay.parentNode.insertBefore(badge, finalScoreDisplay);
         playSound('perfect');
         fireConfetti();
@@ -5798,6 +5821,19 @@ function closeStats() {
 
         window.addEventListener('appinstalled', () => {
             hideInstallButtons();
+            deferredPrompt = null;
+        });
+    
+        // Run Import before initialization
+        importStateFromURL();
+        initFirebase();
+        startApp();
+        checkTutorial();
+    </script>
+</body>
+    </script>
+</body>
+</html>     hideInstallButtons();
             deferredPrompt = null;
         });
     
