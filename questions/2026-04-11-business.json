@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which country recently approved an additional $4 billion in funding for the chipmaker Rapidus?",
+      "options": [
+        "Japan",
+        "South Korea",
+        "United States",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Japan",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sif7p6/japan_approves_additional_4_bln_for_chipmaker/"
+    },
+    {
+      "q": "What company agreed to pay $17 million to settle a US government probe related to DEI initiatives?",
+      "options": [
+        "IBM",
+        "Microsoft",
+        "Oracle",
+        "Google"
+      ],
+      "a": 0,
+      "correctText": "IBM",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sif8be/ibm_to_pay_17_million_to_settle_us_government/"
+    },
+    {
+      "q": "Which company recently became the Masters golf tournament's fourth-ever media partner?",
+      "options": [
+        "Amazon",
+        "Apple",
+        "Netflix",
+        "Disney"
+      ],
+      "a": 0,
+      "correctText": "Amazon",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1si0rlo/amazon_debuts_masters_coverage_becoming_the_golf/"
+    },
+    {
+      "q": "Which automaker recently stopped building its ID.4 electric vehicles in the U.S.?",
+      "options": [
+        "Volkswagen",
+        "Ford",
+        "General Motors",
+        "Tesla"
+      ],
+      "a": 0,
+      "correctText": "Volkswagen",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1shab4n/volkswagen_stops_building_id4s_in_the_us_has/"
+    },
+    {
+      "q": "According to an Axios report, what is OpenAI's projected ad revenue for this year?",
+      "options": [
+        "$2.5 billion",
+        "$5 billion",
+        "$10 billion",
+        "$100 billion"
+      ],
+      "a": 0,
+      "correctText": "$2.5 billion",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sgvvn5/openai_projects_25_billion_in_ad_revenue_this/"
+    }
+  ]
+}

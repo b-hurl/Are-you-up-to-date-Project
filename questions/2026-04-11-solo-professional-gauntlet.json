@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-11",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which country's engineering team did Red Hat reportedly fire, with most members relocating to India?",
+      "options": [
+        "China",
+        "Russia",
+        "Brazil",
+        "Mexico"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1sieita/red_hat_appears_to_have_fired_its_entire/"
+    },
+    {
+      "q": "What has happened to rent prices in Canada recently, according to a National Rent Report?",
+      "options": [
+        "They have fallen at the fastest rate since the pandemic.",
+        "They have increased at their highest rate in a decade.",
+        "They have remained stagnant for the past year.",
+        "They have seen a slight increase in major urban centers."
+      ],
+      "a": 0,
+      "correctText": "They have fallen at the fastest rate since the pandemic.",
+      "category": "Canada",
+      "source": "https://www.reddit.com/r/canada/comments/1sib3k5/rent_prices_fall_at_fastest_rate_since_pandemic/"
+    },
+    {
+      "q": "What company agreed to pay $17 million to settle a US government probe related to DEI initiatives?",
+      "options": [
+        "IBM",
+        "Microsoft",
+        "Oracle",
+        "Google"
+      ],
+      "a": 0,
+      "correctText": "IBM",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sif8be/ibm_to_pay_17_million_to_settle_us_government/"
+    },
+    {
+      "q": "Which historic moon mission recently concluded with its crew splashing down safely in the Pacific Ocean?",
+      "options": [
+        "Artemis II",
+        "Apollo 18",
+        "Orion III",
+        "Starship I"
+      ],
+      "a": 0,
+      "correctText": "Artemis II",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1si3q35/artemis_ii_crew_splashes_down_safely_in_pacific/"
+    },
+    {
+      "q": "Which country recently approved an additional $4 billion in funding for the chipmaker Rapidus?",
+      "options": [
+        "Japan",
+        "South Korea",
+        "United States",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Japan",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sif7p6/japan_approves_additional_4_bln_for_chipmaker/"
+    },
+    {
+      "q": "According to CNN, what does US intelligence indicate China is preparing to ship to Iran?",
+      "options": [
+        "Weapons",
+        "Medical supplies",
+        "Humanitarian aid",
+        "Economic sanctions"
+      ],
+      "a": 0,
+      "correctText": "Weapons",
+      "category": "Usa",
+      "source": "https://www.reddit.com/r/news/comments/1sihrr9/us_intelligence_indicates_china_preparing_weapons/"
+    },
+    {
+      "q": "Which US Representative has been accused of sexual misconduct by four women, including a former staffer who says he raped her?",
+      "options": [
+        "Rep. Eric Swalwell",
+        "Rep. Kevin McCarthy",
+        "Sen. Ted Cruz",
+        "Rep. Adam Schiff"
+      ],
+      "a": 0,
+      "correctText": "Rep. Eric Swalwell",
+      "category": "Usa",
+      "source": "https://www.reddit.com/r/news/comments/1si2ky1/four_women_describe_sexual_misconduct_by_rep_eric/"
+    },
+    {
+      "q": "According to a new study, what percentage reduction in retail food cost was observed with a vegan Mediterranean diet compared to a traditional Mediterranean diet?",
+      "options": [
+        "16.3%",
+        "10.5%",
+        "22.1%",
+        "8.7%"
+      ],
+      "a": 0,
+      "correctText": "16.3%",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sii06o/a_new_study_found_a_vegan_mediterranean_diet/"
+    },
+    {
+      "q": "A survey of over 3,500 US political elites revealed a near-unanimous agreement among Democrats on the scientific consensus of global warming. In contrast, what percentage of Republicans affirmed anthropogenic climate change?",
+      "options": [
+        "Fewer than half",
+        "More than three-quarters",
+        "Exactly half",
+        "Almost all"
+      ],
+      "a": 0,
+      "correctText": "Fewer than half",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shzxfl/a_largescale_survey_of_over_3500_us_political/"
+    },
+    {
+      "q": "Which company plans to open 20 car dealerships in Canada this year?",
+      "options": [
+        "BYD",
+        "Tesla",
+        "Volkswagen",
+        "Toyota"
+      ],
+      "a": 0,
+      "correctText": "BYD",
+      "category": "Canada",
+      "source": "https://www.reddit.com/r/canada/comments/1sht72b/byd_to_open_20_car_dealerships_in_canada_this_year/"
+    }
+  ]
+}

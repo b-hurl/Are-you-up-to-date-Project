@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which demographic group is reportedly sabotaging their company's AI rollout due to job security fears?",
+      "options": [
+        "Gen Z",
+        "Millennials",
+        "Gen X",
+        "Baby Boomers"
+      ],
+      "a": 0,
+      "correctText": "Gen Z",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1si20pk/gen_z_workers_are_so_fearful_ai_will_take_their/"
+    },
+    {
+      "q": "What industry is described as being in 'dire straits' by the Framework CEO, who claims it's 'asking you to own nothing and be happy'?",
+      "options": [
+        "PC Industry",
+        "Smartphone Industry",
+        "Gaming Console Industry",
+        "Cloud Computing Industry"
+      ],
+      "a": 0,
+      "correctText": "PC Industry",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1si5u69/pc_industry_in_dire_straits_asking_you_to_own/"
+    },
+    {
+      "q": "Which company experienced its 8th consecutive week of losses, prompting JPMorgan to warn of a 60% downside?",
+      "options": [
+        "Tesla",
+        "Rivian",
+        "Lucid",
+        "Ford"
+      ],
+      "a": 0,
+      "correctText": "Tesla",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1shveii/tesla_plummets_into_8_consecutive_week_of/"
+    },
+    {
+      "q": "Which country's engineering team did Red Hat reportedly fire, with most members relocating to India?",
+      "options": [
+        "China",
+        "Russia",
+        "Brazil",
+        "Mexico"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1sieita/red_hat_appears_to_have_fired_its_entire/"
+    },
+    {
+      "q": "Which historic moon mission recently concluded with its crew splashing down safely in the Pacific Ocean?",
+      "options": [
+        "Artemis II",
+        "Apollo 18",
+        "Orion III",
+        "Starship I"
+      ],
+      "a": 0,
+      "correctText": "Artemis II",
+      "category": "Technology",
+      "source": "https://www.reddit.com/r/technology/comments/1si3q35/artemis_ii_crew_splashes_down_safely_in_pacific/"
+    }
+  ]
+}

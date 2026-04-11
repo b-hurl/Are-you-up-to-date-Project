@@ -1,0 +1,30 @@
+{
+  "questions": [
+    {
+      "q": "What recent action by Amazon, as reported on April 11, 2026, has led to user outcry?",
+      "options": [
+        "Ending support for older Kindle devices",
+        "Increasing the price of all Kindle e-readers",
+        "Removing popular book titles from the Kindle store",
+        "Requiring a new subscription service for all Kindle users"
+      ],
+      "a": 0,
+      "correctText": "Ending support for older Kindle devices",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1shied0/amazon_to_end_support_for_older_kindles_prompting/"
+    },
+    {
+      "q": "Which two organizations were reported on April 11, 2026, to have prevailed in a fight to protect libraries and museums nationwide?",
+      "options": [
+        "ALA and AFSCME",
+        "NLA and AAM",
+        "LC and NEH",
+        "PCA and IMLS"
+      ],
+      "a": 0,
+      "correctText": "ALA and AFSCME",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1shr2yh/ala_and_afscme_prevail_in_fight_to_protect/"
+    }
+  ]
+}
