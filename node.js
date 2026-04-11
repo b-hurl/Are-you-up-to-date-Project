@@ -198,7 +198,12 @@ async function runAutomation() {
 
             const newsPool = redditData
                 .slice(0, 8)
-                .map(item => `Headline: ${item.title} | Source: ${item.link}`)
+                .map(item => {
+                    // Reddit RSS embeds the external article URL in the HTML content as "[link]"
+                    const match = (item.content || "").match(/href="([^"]+)">\[link\]/);
+                    const sourceUrl = match ? match[1] : item.link;
+                    return `Headline: ${item.title} | Source: ${sourceUrl}`;
+                })
                 .join("\n");
 
             if (!newsPool) {
