@@ -593,7 +593,7 @@ console.log("✅ GameSettings component attached to window.");
 // Robust Handshake: Poll for the render function in index.html
 const attemptInitialRender = () => {
     if (typeof window.renderGameSettings === 'function') {
-        console.log("🔗 GameSettings: Handshake successful, triggering render.");t
+        console.log("🔗 GameSettings: Handshake successful, triggering render.");
         console.log("🔗 GameSettings: Handshake successful, triggering render.");
         window.renderGameSettings();
     } else {
