@@ -1,4 +1,5 @@
 console.log("📦 GameSettings.jsx: Transpilation starting...");
+window.GameSettingsReady = false;
 
 const MenuButton = ({ onClick, isSelected, isDisabled, title, description, isSmall }) => {
     const baseClasses = `w-full transition-all text-left border-2 ${isSmall ? 'p-4 rounded-2xl' : 'p-5 rounded-2xl'}`;
@@ -248,6 +249,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     try {
                         archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
                         const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+                        activeChallengesData = activeAll[gameDate] || {};
                         activeChallengesData = (gameDate && activeAll[gameDate]) ? activeAll[gameDate] : {};
                     } catch (e) {
                         console.warn("Failed to parse local storage trivia data", e);
@@ -332,14 +334,16 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
 
 // Explicitly attach to window for index.html access
 window.GameSettings = GameSettings;
+window.GameSettingsReady = true;
 console.log("✅ GameSettings component attached to window.");
 
-
-// Robust "Handshake": Keep trying to call the HTML's render function until it's ready
+// Robust Handshake: Poll for the render function in index.html
 const attemptInitialRender = () => {
     if (typeof window.renderGameSettings === 'function') {
+        console.log("🔗 GameSettings: Handshake successful, triggering render.");
         window.renderGameSettings();
     } else {
+        console.log("🔗 GameSettings: Waiting for index.html render function...");
         setTimeout(attemptInitialRender, 100);
     }
 };

@@ -891,6 +891,10 @@
     </div>
 
     <script>
+        // Explicitly globalize utility functions for GameSettings.jsx
+        window.getGameDate = getGameDate;
+        window.QUESTION_TIME_LIMIT = 60;
+
         // --- CONFIG & AUDIO ---
         const SOUNDS = {
             // ... existing sounds ...
@@ -1057,12 +1061,16 @@
             }
         }
 
-        function renderGameSettings() {
+        window.renderGameSettings = function() {
+            console.log("🎯 renderGameSettings: Heartbeat triggered.");
             const container = document.getElementById('game-settings-root');
-            if (!container) return;
+            if (!container) {
+                console.error("❌ renderGameSettings: 'game-settings-root' missing from DOM.");
+                return;
+            }
 
             if (!window.GameSettings) {
-                console.log("⏳ renderGameSettings: Waiting for GameSettings component...");
+                console.log("⏳ renderGameSettings: Component not attached to window yet.");
                 setTimeout(renderGameSettings, 50);
                 return;
             }
@@ -1071,12 +1079,14 @@
             try {
                 const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
                 playedModes = session.playedModes || [];
-            } catch (e) { console.warn("Failed to parse session for played modes"); }
+            } catch (e) { }
 
             if (!window.gameSettingsRoot) {
+                console.log("🏗️ renderGameSettings: Creating React root...");
                 window.gameSettingsRoot = ReactDOM.createRoot(container);
             }
 
+            console.log("🚀 renderGameSettings: Mounting component...");
             window.gameSettingsRoot.render(
                 React.createElement(ErrorBoundary, null,
                     React.createElement(window.GameSettings, {
@@ -1087,8 +1097,8 @@
                     })
                 )
             );
-        }
-        window.renderGameSettings = renderGameSettings;
+            console.log("✅ renderGameSettings: Render cycle complete.");
+        };
 
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
