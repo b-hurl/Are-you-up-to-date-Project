@@ -891,9 +891,7 @@
     </div>
 
     <script>
-        // Explicitly globalize utility functions for GameSettings.jsx
-        window.getGameDate = getGameDate;
-        window.QUESTION_TIME_LIMIT = 60;
+        // Global utility functions and constants for GameSettings.jsx
 
         // --- CONFIG & AUDIO ---
         const SOUNDS = {
@@ -1099,6 +1097,7 @@
             );
             console.log("✅ renderGameSettings: Render cycle complete.");
         }
+        window.renderGameSettings = renderGameSettings;
         // Explicitly attach to window so the external JSX can find it
         window.renderGameSettings = renderGameSettings;
     
