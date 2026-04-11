@@ -249,7 +249,6 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     try {
                         archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
                         const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
-                        activeChallengesData = activeAll[gameDate] || {};
                         activeChallengesData = (gameDate && activeAll[gameDate]) ? activeAll[gameDate] : {};
                     } catch (e) {
                         console.warn("Failed to parse local storage trivia data", e);

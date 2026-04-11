@@ -1061,7 +1061,7 @@
             }
         }
 
-        window.renderGameSettings = function() {
+        function renderGameSettings() {
             console.log("🎯 renderGameSettings: Heartbeat triggered.");
             const container = document.getElementById('game-settings-root');
             if (!container) {
@@ -1098,8 +1098,10 @@
                 )
             );
             console.log("✅ renderGameSettings: Render cycle complete.");
-        };
-
+        }
+        // Explicitly attach to window so the external JSX can find it
+        window.renderGameSettings = renderGameSettings;
+    
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
             const ua = navigator.userAgent || navigator.vendor || window.opera;
