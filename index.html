@@ -3907,6 +3907,38 @@ async function handleRematch(oldChallengeId) {
 }
 window.handleRematch = handleRematch;
 
+async function set1v1VictoryTaunt(challengeId) {
+    if (!auth || !auth.currentUser) {
+        showToast("Sign in to set taunts!", "🔐");
+        return;
+    }
+
+    const taunt = prompt("Enter a Victory Taunt (shown to your opponent if you win, max 60 chars):");
+    if (taunt === null) return;
+
+    const trimmed = taunt.trim().substring(0, 60);
+    const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
+    if (banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(trimmed))) {
+        showToast("Please keep it friendly!", "🚫");
+        return;
+    }
+
+    updateHeaderSyncStatus('syncing');
+    try {
+        await db.collection('challenges').doc(challengeId).update({
+            victoryTaunt: trimmed
+        });
+        showToast("Victory Taunt Saved!", "🏆");
+        if (window.renderGameSettings) window.renderGameSettings();
+    } catch (e) {
+        console.error("Taunt update failed:", e);
+        showToast("Failed to save taunt.", "❌");
+    } finally {
+        updateHeaderSyncStatus('complete');
+    }
+}
+window.set1v1VictoryTaunt = set1v1VictoryTaunt;
+
 async function handle1v1Challenge(challengeId) {
     updateHeaderSyncStatus('syncing');
     
@@ -5286,7 +5318,7 @@ function initFirebase() {
         }
     });
 
-    if (isChallenge) {
+    if (challengeId) {
         const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
         const hasPlayed = archive[getGameDate()]?.[gameConfig.activeSelection] !== undefined;
         if (!hasPlayed) {
@@ -6743,12 +6775,6 @@ window.isNameValid = isNameValid;
         initFirebase();
         startApp().catch(e => console.error("❌ startApp failed:", e));
         checkTutorial();
-           </script>
-</body>
-    </script>
-</body>
-</html>     
-</body>
     </script>
 </body>
 </html>
