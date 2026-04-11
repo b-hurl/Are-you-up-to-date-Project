@@ -1,13 +1,15 @@
 console.log("📦 GameSettings.jsx: Transpilation starting...");
 window.GameSettingsReady = false;
 
-const MenuButton = ({ onClick, isSelected, isDisabled, title, description, isSmall }) => {
+const MenuButton = ({ onClick, isSelected, isDisabled, isCompleted, title, description, isSmall }) => {
     const baseClasses = `w-full transition-all text-left border-2 ${isSmall ? 'p-4 rounded-2xl' : 'p-5 rounded-2xl'}`;
     const stateClasses = isDisabled
         ? 'bg-slate-900/50 border-slate-800 opacity-30 cursor-not-allowed grayscale'
         : isSelected
             ? 'selected border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-            : 'bg-slate-700/50 border-slate-600 hover:border-primary-500 hover:animate-[selection-pulse_2s_infinite_ease-in-out]';
+            : isCompleted
+                ? 'bg-emerald-500/10 border-emerald-500/30 hover:border-emerald-400'
+                : 'bg-slate-700/50 border-slate-600 hover:border-primary-500 hover:animate-[selection-pulse_2s_infinite_ease-in-out]';
 
     return (
         <button onClick={onClick} disabled={isDisabled} className={`${baseClasses} ${stateClasses}`}>
@@ -265,21 +267,38 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         );
     };
 
-    const renderMultiplayerCategorySetup = () => (
-        <MenuView title={`Challenge in ${config.activeSelection}`} onBack={() => setConfig(p => ({...p, activeSelection: null}))} backLabel="Back to Categories">
-            <div className="space-y-4 mb-8">
-                <p className="text-slate-400 text-sm text-center">
-                    Create a unique 1v1 link for this topic. Send it to a friend, then play to set your score!
-                </p>
-                <button 
-                    onClick={() => window.prepareAndCreateChallenge(config.activeSelection)}
-                    className="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-black text-white transition-all shadow-lg shadow-primary-500/20"
-                >
-                    Create Challenge Link
-                </button>
-            </div>
-        </MenuView>
-    );
+    const renderMultiplayerCategorySetup = () => {
+        const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
+        let archive = {};
+        try {
+            archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        } catch (e) {}
+        const savedScore = archive[gameDate]?.[config.activeSelection]?.score;
+
+        return (
+            <MenuView title={`Challenge in ${config.activeSelection}`} onBack={() => setConfig(p => ({...p, activeSelection: null}))} backLabel="Back to Categories">
+                <div className="space-y-4 mb-8">
+                    {savedScore !== undefined ? (
+                        <div className="bg-emerald-500/10 border border-emerald-500/30 p-5 rounded-2xl text-center animate-fade-in shadow-inner">
+                            <p className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-1">Your Daily Score</p>
+                            <p className="text-4xl font-black text-white">{savedScore}/5</p>
+                            <p className="text-slate-500 text-[9px] mt-2 uppercase font-bold">Ready to send challenge link</p>
+                        </div>
+                    ) : (
+                        <p className="text-slate-400 text-sm text-center">
+                            Create a unique 1v1 link for this topic. Send it to a friend, then play to set your score!
+                        </p>
+                    )}
+                    <button 
+                        onClick={() => window.prepareAndCreateChallenge(config.activeSelection)}
+                        className="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-black text-white transition-all shadow-lg shadow-primary-500/20"
+                    >
+                        {savedScore !== undefined ? "Create Challenge with This Score" : "Create Challenge Link"}
+                    </button>
+                </div>
+            </MenuView>
+        );
+    };
 
     const renderCategoryOptions = () => (
         <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
@@ -308,6 +327,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         const isMulti = config.gameMode === 'multiplayer';
                         const isSent = isMulti && activeChallenges.includes(category);
                         const savedScore = archive[gameDate]?.[category]?.score;
+                        const isCompleted = isMulti && isPlayed;
 
                         return (
                             <MenuButton
@@ -315,14 +335,13 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                 onClick={() => {
                                     if (isMulti && isSent) {
                                         window.openInviteModal(activeChallengesData[category]);
-                                    } else if (isMulti && isPlayed) {
-                                        window.prepareAndCreateChallenge(category);
                                     } else {
                                         handleCategorySelection(category);
                                     }
                                 }}
                                 isSelected={config.activeSelection === category}
                                 isDisabled={!isMulti && isPlayed}
+                                isCompleted={isCompleted}
                                 isSmall={true}
                                 title={category}
                                 description={isPlayed ? (

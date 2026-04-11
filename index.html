@@ -1275,11 +1275,6 @@
             
             if (!container || !icon || !text) return;
             
-            if (!auth || !auth.currentUser) {
-                container.classList.add('hidden', 'opacity-0');
-                return;
-            }
-
             container.classList.remove('hidden');
             
             if (status === 'syncing') {
@@ -2174,43 +2169,30 @@ function returnToMenu(target) {
 }
 
 async function prepareAndCreateChallenge(category) {
-    if (!auth.currentUser) {
-        showToast("Sign in to challenge friends!", "🔐");
-        toggleLoginModal();
-        return;
-    }
-
     updateHeaderSyncStatus('syncing');
-    showToast(`Preparing ${category} challenge...`, "⚔️");
-    
     const gameDate = getGameDate();
+    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+    const isPlayed = archive[gameDate]?.[category] !== undefined;
+
+    showToast(isPlayed ? `Using your score for ${category} challenge...` : `Preparing ${category} challenge...`, "⚔️");
+    
     const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
 
     try {
+        const savedScore = archive[gameDate]?.[category]?.score;
+
         const response = await fetch(filePath + `?v=${Date.now()}`);
         if (!response.ok) throw new Error("Category file not found");
         
         const data = await response.json();
         const questions = sanitizeQuestions(data.questions || []);
-        
         if (questions.length === 0) throw new Error("No questions available");
 
         // Setup temporary game state for the challenge generator
         gameData = { questions: questions };
         gameConfig.activeSelection = category;
         
-        // Use archived score for P1 (Person who already played)
-        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-        const savedScore = archive[gameDate]?.[category]?.score || 0;
-        
-        // Temporarily override global score for the challenge record
-        const originalScore = score;
-        score = savedScore;
-        
-        await create1v1Challenge();
-        
-        // Restore global score state
-        score = originalScore;
+        await create1v1Challenge(savedScore);
     } catch (e) {
         console.error("Challenge Prep Error:", e);
         showToast("Failed to prepare challenge.", "❌");
@@ -2220,16 +2202,24 @@ async function prepareAndCreateChallenge(category) {
 }
 window.prepareAndCreateChallenge = prepareAndCreateChallenge;
 
-async function create1v1Challenge() {
-    if (!auth.currentUser) {
-        showToast("Sign in to challenge friends!", "🔐");
-        toggleLoginModal();
-        return;
-    }
+async function create1v1Challenge(p1Score = null) {
+    const isCompleted = p1Score !== null && p1Score !== undefined;
 
     try {
         const challengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
         
+        let challengeQuestions;
+        if (isCompleted) {
+            challengeQuestions = gameData.questions;
+        } else {
+            challengeQuestions = shuffle([...gameData.questions]);
+            challengeQuestions.forEach(q => {
+                if (q.options) q.options = shuffle([...q.options]);
+            });
+        }
+        
+        gameData.questions = challengeQuestions;
+
         // Calculate TTL Expiration (Next 8:00 AM CST / 14:00 UTC)
         const now = new Date();
         const expiresAt = new Date(now);
@@ -2257,6 +2247,11 @@ async function create1v1Challenge() {
         activeChallengeId = challengeId;
         openInviteModal(challengeId);
         
+        // Update user's last challenge timestamp for rate limiting
+        db.collection('users').doc(userId).set({
+            lastChallengeCreated: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true }).catch(e => console.warn("Rate limit sync failed", e));
+
         // Track active challenges with their IDs to allow revoking
         const category = gameConfig.activeSelection;
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
