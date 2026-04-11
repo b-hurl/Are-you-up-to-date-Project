@@ -340,6 +340,7 @@ console.log("✅ GameSettings component attached to window.");
 const attemptInitialRender = () => {
     if (typeof window.renderGameSettings === 'function') {
         console.log("🔗 GameSettings: Handshake successful, triggering render.");t
+        console.log("🔗 GameSettings: Handshake successful, triggering render.");
         window.renderGameSettings();
     } else {
         console.log("🔗 GameSettings: Waiting for index.html render function...");
