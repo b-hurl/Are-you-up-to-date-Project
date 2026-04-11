@@ -21,7 +21,7 @@ const MenuButton = ({ onClick, isSelected, isDisabled, title, description, isSma
 };
 
 const MenuView = ({ title, children, footer, onBack, backLabel }) => (
-    <>
+    <React.Fragment>
         <h2 className="text-2xl font-black mb-6 text-center text-white">{title}</h2>
         {children}
         {footer && (
@@ -37,7 +37,7 @@ const MenuView = ({ title, children, footer, onBack, backLabel }) => (
                 <span>←</span> {backLabel}
             </button>
         )}
-    </>
+    </React.Fragment>
 );
 
 const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCategories = null }) => {

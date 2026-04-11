@@ -96,6 +96,7 @@
         .grand-master-shimmer { background: linear-gradient(90deg, #fbbf24 0%, #fef3c7 50%, #fbbf24 100%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite; }
         .custom-scrollbar::-webkit-scrollbar { width: 5px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #1e293b; border-radius: 10px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; border-radius: 10px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--primary-400); }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -1063,8 +1064,11 @@
                 setTimeout(renderGameSettings, 50);
                 return;
             }
-            const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-            const playedModes = session.playedModes || [];
+            let playedModes = [];
+            try {
+                const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+                playedModes = session.playedModes || [];
+            } catch (e) { console.warn("Session parse failed", e); }
 
             // Determine available categories. 
             // We now use verifiedCategories (probed filenames) as the source of truth.
@@ -1577,9 +1581,12 @@ function cleanupActiveChallenges() {
 
 async function startApp() {
     const gameDate = getGameDate();
-    console.log("Initializing app for date:", gameDate);
-    checkGlobalMessage();
-    checkMaintenanceMode();
+    console.log("🚀 Initializing app for date:", gameDate);
+    
+    // Run these but don't let them crash the whole start sequence
+    try { checkGlobalMessage(); } catch(e) {}
+    try { checkMaintenanceMode(); } catch(e) {}
+    
     probeAvailableCategories(); // Probe file existence in background
     cleanupActiveChallenges(); // Clear stale challenge statuses from previous days
 
@@ -1589,7 +1596,12 @@ async function startApp() {
     determineUserLocation(); // Trigger background location check
     startNextTimer(); // Start global countdown immediately
     
-    const saved = localStorage.getItem('trivia-session');
+    let saved = null;
+    try {
+        saved = localStorage.getItem('trivia-session');
+    } catch(e) {
+        console.error("Storage access denied", e);
+    }
     
     if (saved) {
         const session = JSON.parse(saved);
@@ -5262,6 +5274,7 @@ function closePostLoginModal() {
 
 function doLogout() {
     const modal = document.getElementById('signout-confirm-modal');
+    if (!modal) return;
     modal.classList.remove('hidden');
     setTimeout(() => {
         modal.classList.remove('opacity-0');
