@@ -2203,18 +2203,21 @@ async function prepareAndCreateChallenge(category) {
 window.prepareAndCreateChallenge = prepareAndCreateChallenge;
 
 async function create1v1Challenge(p1Score = null) {
-    // If the user isn't logged in, sign them in anonymously.
-    // This provides a valid auth token to satisfy Firestore security rules.
-    if (auth && !auth.currentUser) {
-        try {
-            const anonResult = await auth.signInAnonymously();
-            // Update global userId to the new Firebase UID
-            userId = anonResult.user.uid;
-            localStorage.setItem('trivia-userId', userId);
-        } catch (e) {
-            console.error("Anonymous authentication failed:", e);
-            showToast("Connection error. Please try again.", "❌");
-            return;
+    // Ensure the user is authenticated (anonymously if a guest) to satisfy Firestore rules
+    if (auth) {
+        if (!auth.currentUser) {
+            try {
+                const anonResult = await auth.signInAnonymously();
+                userId = anonResult.user.uid;
+                localStorage.setItem('trivia-userId', userId);
+            } catch (e) {
+                console.error("Anonymous auth failed:", e);
+                showToast("Connection error. Please try again.", "❌");
+                return;
+            }
+        } else {
+            // Sync global userId with active Firebase UID
+            userId = auth.currentUser.uid;
         }
     }
 
