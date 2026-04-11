@@ -298,6 +298,11 @@
                     </button>
                  </div>
             </div>
+            <div id="invite-start-btn-container" class="hidden mt-4 pt-4 border-t border-slate-700">
+                <button onclick="startChallengeGame()" class="w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded-2xl font-black text-white transition-all shadow-lg shadow-emerald-500/20">
+                    Start Your Trivia Now
+                </button>
+            </div>
         </div>
     </div>
 
@@ -831,6 +836,14 @@
                 <button onclick="submitScore()" id="submit-score-btn" class="bg-primary-600 hover:bg-primary-500 text-white px-4 rounded-xl font-bold text-sm whitespace-nowrap transition-all">Submit Score</button>
             </div>
             <div id="leaderboard-display" class="glass-panel rounded-xl p-4 max-h-48 overflow-y-auto scrollbar-hide"><p class="text-slate-400 text-sm text-center">Loading leaderboard...</p></div>
+        </div>
+
+        <!-- 1v1 Challenge Status Section -->
+        <div id="challenge-status-section" class="hidden text-left mb-6 border-t border-slate-700 pt-6">
+            <h3 class="text-primary-400 font-bold uppercase tracking-widest text-[10px] mb-3">1v1 Challenge Status</h3>
+            <div id="challenge-status-display" class="glass-panel rounded-xl p-4">
+                <p class="text-slate-400 text-sm text-center">Loading status...</p>
+            </div>
         </div>
         
         <div class="space-y-3">
@@ -1390,6 +1403,13 @@
             const gameDate = getGameDate();
             const gameMode = gameConfig.gameMode || 'solo';
             const filePath = `questions/${gameDate}-${gameMode}-${mode}-gauntlet.json`;
+
+            // Local Session Check
+            const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+            if (session.date === gameDate && session.playedModes && session.playedModes.includes(mode)) {
+                alert("You've already completed this Gauntlet today!");
+                return;
+            }
 
     // If they start a new mode, they lose any pending manual sync chance from a previous completion
     localStorage.removeItem('trivia-manual-sync-available');
@@ -2106,6 +2126,7 @@ function showFinalResults() {
                 submitScore();
             }
         });
+        if (is1v1) update1v1ChallengeScore();
     }
 }
 
@@ -2220,12 +2241,12 @@ async function create1v1Challenge() {
         await db.collection('challenges').doc(challengeId).set({
             date: getGameDate(),
             category: gameConfig.activeSelection,
-            questions: gameData.questions,
+            questions: challengeQuestions,
             p1: {
                 uid: userId,
                 name: localStorage.getItem('trivia-name') || "Player 1",
-                score: score,
-                completed: true,
+                score: isCompleted ? p1Score : 0,
+                completed: isCompleted,
                 taunt: ""
             },
             status: 'pending',
@@ -2277,20 +2298,75 @@ function setupChallengeListener(challengeId) {
     });
 }
 
-async function finalize1v1Challenge() {
+function startChallengeGame() {
+    closeInviteModal();
+    const date = getGameDate();
+    document.getElementById('game-settings-root').classList.add('hidden');
+    document.getElementById('question-text').classList.remove('hidden');
+    document.getElementById('game-header').classList.remove('hidden');
+    updateTheme('casual');
+    startNewSession(gameData, date, gameConfig.activeSelection, true);
+}
+
+async function update1v1ChallengeScore() {
     if (!activeChallengeId) return;
     try {
-        await db.collection('challenges').doc(activeChallengeId).update({
-            p2: {
+        const doc = await db.collection('challenges').doc(activeChallengeId).get();
+        const data = doc.data();
+        if (!data) return;
+
+        const isP1 = data.p1.uid === userId;
+        const field = isP1 ? 'p1' : 'p2';
+        const update = {
+            [field]: {
                 uid: userId,
-                name: localStorage.getItem('trivia-name') || "Player 2",
+                name: localStorage.getItem('trivia-name'),
                 score: score,
                 completed: true,
                 taunt: ""
-            },
-            status: 'completed'
-        });
+            }
+        };
+        if (!isP1) update.status = 'completed';
+        
+        await db.collection('challenges').doc(activeChallengeId).update(update);
+        fetchAndDisplay1v1Status();
     } catch (e) { console.error(e); }
+}
+
+async function fetchAndDisplay1v1Status() {
+    const display = document.getElementById('challenge-status-display');
+    if (!activeChallengeId) return;
+    
+    try {
+        const doc = await db.collection('challenges').doc(activeChallengeId).get();
+        const data = doc.data();
+        if (!data) return;
+
+        const isP1 = data.p1.uid === userId;
+        const opponent = isP1 ? data.p2 : data.p1;
+        
+        let statusHtml = '';
+        if (!opponent || !opponent.uid) {
+            statusHtml = `
+                <div class="text-center">
+                    <p class="text-white font-bold mb-2">Invite Pending</p>
+                    <button onclick="openInviteModal('${activeChallengeId}')" class="bg-primary-600 px-4 py-2 rounded-xl text-xs font-bold">Resend Link</button>
+                </div>`;
+        } else if (data.status === 'refused') {
+            statusHtml = `<p class="text-red-400 text-center font-bold">${opponent.name} declined.</p>`;
+        } else if (!opponent.completed) {
+            statusHtml = `<p class="text-primary-400 text-center font-bold">${opponent.name} is playing...</p>`;
+        } else {
+            const myScore = isP1 ? data.p1.score : data.p2.score;
+            const win = myScore > opponent.score;
+            statusHtml = `
+                <div class="flex justify-between items-center">
+                    <span class="text-white font-bold">${opponent.name}</span>
+                    <span class="font-black text-xl ${win ? 'text-red-400' : 'text-emerald-400'}">${opponent.score}/5</span>
+                </div>`;
+        }
+        display.innerHTML = statusHtml;
+    } catch (e) { display.innerHTML = '<p class="text-red-400">Error.</p>'; }
 }
 
 async function display1v1Result(existingData = null) {
@@ -3709,8 +3785,12 @@ async function handle1v1Challenge(challengeId) {
             });
 
             updateTheme('casual'); 
-            startNewSession(modeData, data.date, data.category);
+            startNewSession(modeData, data.date, data.category, true);
         } else {
+            await db.collection('challenges').doc(challengeId).update({ 
+                status: 'refused',
+                p2: { uid: userId, name: p2Name }
+            });
             removeChallengeParam();
         }
     } catch (e) {

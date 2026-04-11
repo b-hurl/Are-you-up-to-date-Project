@@ -147,17 +147,23 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
 
     const handleCategorySelection = (category) => {
         const isSolo = config.gameMode === 'solo';
+        const isMulti = config.gameMode === 'multiplayer';
+
         setConfig(prev => ({
             ...prev,
             activeSelection: category
         }));
-        onUpdate({
-            gameMode: config.gameMode,
-            [isSolo ? 'soloSubMode' : 'multiSubMode']: 'categories',
-            activeSelection: category
-        });
-    };
 
+        // Only trigger immediate game load for solo
+        if (isSolo) {
+            onUpdate({
+                gameMode: 'solo',
+                soloSubMode: 'categories',
+                activeSelection: category
+            });
+        }
+        // For multi, we stay in the menu to show the "Create Challenge" screen
+    };
 
     const renderMainMenu = () => (
         <MenuView title="Are You Up To Date?" footer="Each round consists of 5 questions.">
@@ -219,22 +225,58 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         </MenuView>
     );
 
-    const renderGauntletOptions = () => (
-        <MenuView title="Gauntlet Mode" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
-            <div className="grid grid-cols-1 gap-4 mb-8">
-                <MenuButton
-                    onClick={() => handleGauntletModeSelection('casual')}
-                    isSelected={config.gauntletMode === 'casual'}
-                    title="Casual Gauntlet"
-                    description="10 questions from entertainment, sports, etc."
-                />
+    const renderGauntletOptions = () => {
+        const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
+        let archive = {};
+        try {
+            archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        } catch (e) {}
 
-                <MenuButton
-                    onClick={() => handleGauntletModeSelection('professional')}
-                    isSelected={config.gauntletMode === 'professional'}
-                    title="Professional Gauntlet"
-                    description="10 questions from economy, politics, tech, etc."
-                />
+        const modes = [
+            { id: 'casual', title: 'Casual Gauntlet', desc: '10 questions: Entertainment, sports, etc.' },
+            { id: 'professional', title: 'Professional Gauntlet', desc: '10 questions: Economy, politics, tech, etc.' }
+        ];
+
+        return (
+            <MenuView title="Gauntlet Mode" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
+                <div className="grid grid-cols-1 gap-4 mb-8">
+                    {modes.map(m => {
+                        const isPlayed = playedModes.includes(m.id);
+                        const savedScore = archive[gameDate]?.[m.id]?.score;
+                        const isMulti = config.gameMode === 'multiplayer';
+
+                        return (
+                            <MenuButton
+                                key={m.id}
+                                onClick={() => handleGauntletModeSelection(m.id)}
+                                isSelected={config.gauntletMode === m.id}
+                                isDisabled={isPlayed}
+                                title={m.title}
+                                description={isPlayed ? (
+                                    savedScore !== undefined 
+                                        ? `Daily Score: ${savedScore}/10 ${isMulti ? '⚔️' : ''}` 
+                                        : 'Completed for Today'
+                                ) : m.desc}
+                            />
+                        );
+                    })}
+                </div>
+            </MenuView>
+        );
+    };
+
+    const renderMultiplayerCategorySetup = () => (
+        <MenuView title={`Challenge in ${config.activeSelection}`} onBack={() => setConfig(p => ({...p, activeSelection: null}))} backLabel="Back to Categories">
+            <div className="space-y-4 mb-8">
+                <p className="text-slate-400 text-sm text-center">
+                    Create a unique 1v1 link for this topic. Send it to a friend, then play to set your score!
+                </p>
+                <button 
+                    onClick={() => window.prepareAndCreateChallenge(config.activeSelection)}
+                    className="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-black text-white transition-all shadow-lg shadow-primary-500/20"
+                >
+                    Create Challenge Link
+                </button>
             </div>
         </MenuView>
     );
@@ -271,7 +313,9 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                             <MenuButton
                                 key={category}
                                 onClick={() => {
-                                    if (isMulti && isPlayed) {
+                                    if (isMulti && isSent) {
+                                        window.openInviteModal(activeChallengesData[category]);
+                                    } else if (isMulti && isPlayed) {
                                         window.prepareAndCreateChallenge(category);
                                     } else {
                                         handleCategorySelection(category);
@@ -315,7 +359,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         } else if (config.gameMode === 'multiplayer') {
             if (!config.multiSubMode) return renderMultiSubMenu();
             if (config.multiSubMode === 'gauntlet') return renderGauntletOptions();
-            if (config.multiSubMode === 'categories') return renderCategoryOptions();
+            if (config.multiSubMode === 'categories') {
+                if (config.activeSelection) return renderMultiplayerCategorySetup();
+                return renderCategoryOptions();
+            }
         }
         return (
             <div className="text-center p-4">
