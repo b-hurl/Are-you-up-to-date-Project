@@ -329,4 +329,5 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
 };
 
 // Attach to window for global access in index.html
+// Ensure GameSettings is available for render loop in index.html
 window.GameSettings = GameSettings;

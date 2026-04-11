@@ -45,13 +45,13 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.js"></script>
 
     <!-- React and Babel for in-browser JSX transformation -->
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.0/babel.min.js"></script>
-    <script type="text/babel" src="GameSettings.jsx?v=1.0.1"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" data-presets="react,env" src="GameSettings.jsx?v=1.0.1"></script>
 
     <style>
         :root {
@@ -901,11 +901,14 @@
             heartbeat: 'https://assets.mixkit.co/active_storage/sfx/219/219-preview.mp3'
         };
 
-    const QUESTION_TIME_LIMIT = 60; // Define constants at the top
-    const UNLOCK_UTC_HOUR = 14;
-    const ADMIN_EMAIL = "bfehurl@gmail.com";
+    // Ensure constants are declared only once at the very top of the script
+    if (typeof QUESTION_TIME_LIMIT === 'undefined') {
+        window.QUESTION_TIME_LIMIT = 60; 
+        window.UNLOCK_UTC_HOUR = 14;
+        window.ADMIN_EMAIL = "bfehurl@gmail.com";
+    }
 
-    const storedName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
+    let storedName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
     let isMuted = localStorage.getItem('trivia-muted') === 'true';
         let currentIdx = 0;
         let score = 0;
@@ -932,7 +935,7 @@
         let toastTimeout = null;
         // New timer variables for question timer
         let questionTimerInterval = null; // Interval ID for the timer
-        let globalTimeLeft = QUESTION_TIME_LIMIT; // Global variable to store remaining time
+        let globalTimeLeft = window.QUESTION_TIME_LIMIT; // Global variable to store remaining time
 
         // Global state for game configuration, managed by React component
         let gameConfig = {
@@ -1072,7 +1075,7 @@
             }
 
             window.gameSettingsRoot.render(
-                React.createElement(ErrorBoundary, null,
+                React.createElement(ErrorBoundary, null, 
                     React.createElement(window.GameSettings, {
                         currentConfig: gameConfig,
                         onUpdate: handleConfigUpdate,
@@ -1544,7 +1547,7 @@ function sanitizeQuestions(questions) {
 function getGameDate() {
     const now = new Date();
     // If it's before 14:00 UTC, the "Game Day" is actually yesterday
-    if (now.getUTCHours() < UNLOCK_UTC_HOUR) {
+    if (now.getUTCHours() < window.UNLOCK_UTC_HOUR) {
         now.setUTCDate(now.getUTCDate() - 1);
     }
     // Return a simple string: "2026-03-11"
@@ -2591,7 +2594,9 @@ async function checkIfSubmitted() {
     }
     
     // Not submitted yet: Ensure default form is visible (restores form if user just logged in)
-  if (typeof storedName !== 'undefined' && storedName) {
+    const storedName = localStorage.getItem('trivia-name');
+    
+    if (storedName) {
         formContainer.innerHTML = `
             <div class="flex-1 flex flex-col gap-1">
                 <div class="flex justify-between items-center px-1">
@@ -4901,7 +4906,7 @@ function initFirebase() {
             
             const adminBtn = document.getElementById('admin-access-btn');
             if (adminBtn) {
-                adminBtn.classList.toggle('hidden', user.email !== ADMIN_EMAIL);
+                adminBtn.classList.toggle('hidden', user.email !== window.ADMIN_EMAIL);
             }
 
             setupRankingsNotificationListener();
@@ -4912,7 +4917,7 @@ function initFirebase() {
             if (inviteGroup) {
                 handleInvite(inviteGroup);
             }
-
+            
             // Check for daily winner notification
             setTimeout(checkDailyWinnerNotification, 3000);
             
