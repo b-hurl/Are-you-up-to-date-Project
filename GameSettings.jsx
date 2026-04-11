@@ -32,7 +32,7 @@ const MenuButton = ({ onClick, isSelected, isDisabled, isCompleted, title, descr
             </div>
         </button>
     );
-};hv
+};
 
 const MenuView = ({ title, children, footer, onBack, backLabel }) => (
     <React.Fragment>
