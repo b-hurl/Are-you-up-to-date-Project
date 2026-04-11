@@ -2232,6 +2232,24 @@ async function create1v1Challenge() {
         return;
     }
 
+    const today = getGameDate();
+    const category = gameConfig.activeSelection;
+    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+    const p1ScoreEntry = archive[today]?.[category];
+    const isCompleted = p1ScoreEntry !== undefined;
+    const p1Score = isCompleted ? p1ScoreEntry.score : 0;
+
+    // Prompt for Invite Taunt
+    const tauntInput = prompt("Enter an Invite Taunt (shown when they join, max 60 chars):");
+    if (tauntInput === null) return; // User cancelled
+    
+    const inviteTaunt = tauntInput.trim().substring(0, 60);
+    const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
+    if (banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(inviteTaunt))) {
+        showToast("Please keep it friendly!", "🚫");
+        return;
+    }
+
     try {
         const challengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
         
@@ -2256,16 +2274,17 @@ async function create1v1Challenge() {
         }
 
         await db.collection('challenges').doc(challengeId).set({
-            date: getGameDate(),
-            category: gameConfig.activeSelection,
+            date: today,
+            category: category,
             questions: challengeQuestions,
             p1: {
                 uid: userId,
                 name: localStorage.getItem('trivia-name') || "Player 1",
-                score: isCompleted ? parseInt(p1Score) : 0,
+                score: p1Score,
                 completed: isCompleted,
-                taunt: ""
             },
+            inviteTaunt: inviteTaunt,
+            victoryTaunt: "",
             status: 'pending',
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             expiresAt: firebase.firestore.Timestamp.fromDate(expiresAt)
@@ -2275,9 +2294,7 @@ async function create1v1Challenge() {
         openInviteModal(challengeId);
         
         // Track active challenges with their IDs to allow revoking
-        const category = gameConfig.activeSelection;
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
-        const today = getGameDate();
         active[today] = active[today] || {};
         if (category) {
             active[today][category] = challengeId;
