@@ -4075,18 +4075,32 @@ function removeChallengeParam() {
 function openInviteModal(groupId) {
     currentInviteGroupId = groupId;
     const modal = document.getElementById('invite-modal');
-    
+    if (!modal) return;
+
     // Reset state
-    document.getElementById('qrcode-container').innerHTML = '';
-    document.getElementById('qrcode-container').classList.add('hidden');
-    document.getElementById('btn-copy-link-text').innerText = "Copy Link";
+    const qrContainer = document.getElementById('qrcode-container');
+    if (qrContainer) {
+        qrContainer.innerHTML = '';
+        qrContainer.classList.add('hidden');
+    }
+    const btnCopyLinkText = document.getElementById('btn-copy-link-text');
+    if (btnCopyLinkText) btnCopyLinkText.innerText = "Copy Link";
     
     // Reset UI for Host view
-    modal.querySelector('h2').innerText = "Invite Friends";
-    modal.querySelector('p').innerText = "Share the code or scan to join.";
-    document.getElementById('invite-host-details').classList.add('hidden');
-    document.getElementById('invite-join-btn-container').classList.add('hidden');
-    document.getElementById('btn-show-qr').parentElement.classList.remove('hidden');
+    const h2 = modal.querySelector('h2');
+    const p = modal.querySelector('p');
+    if (h2) h2.innerText = "Invite Friends";
+    if (p) p.innerText = "Share the code or scan to join.";
+    
+    const hostDetails = document.getElementById('invite-host-details');
+    const joinBtnContainer = document.getElementById('invite-join-btn-container');
+    const btnShowQr = document.getElementById('btn-show-qr');
+
+    if (hostDetails) hostDetails.classList.add('hidden');
+    if (joinBtnContainer) joinBtnContainer.classList.add('hidden');
+    if (btnShowQr && btnShowQr.parentElement) {
+        btnShowQr.parentElement.classList.remove('hidden');
+    }
 
     // Show revoke button if this is a 1v1 challenge (has a category)
     const revokeContainer = document.getElementById('revoke-btn-container');
