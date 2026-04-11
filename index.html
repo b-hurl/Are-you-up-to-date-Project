@@ -1057,38 +1057,6 @@
             }
         }
 
-        function renderGameSettings() {
-            if (!window.GameSettings) {
-                // Babel transpilation takes time; retry if component isn't ready yet
-                setTimeout(renderGameSettings, 50);
-                return;
-            }
-            const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-            const playedModes = session.playedModes || [];
-
-            // Determine available categories. 
-            // We now use verifiedCategories (probed filenames) as the source of truth.
-            // If null (loading), React shows all as a fallback.
-            // If an array (even empty), React strictly filters.
-            const available = verifiedCategories;
-
-            const container = document.getElementById('game-settings-root');
-            if (!window.gameSettingsRoot) {
-                window.gameSettingsRoot = ReactDOM.createRoot(container);
-            }
-
-            window.gameSettingsRoot.render(
-                React.createElement(ErrorBoundary, null, 
-                    React.createElement(window.GameSettings, {
-                        currentConfig: gameConfig,
-                        onUpdate: handleConfigUpdate,
-                        playedModes: playedModes,
-                        availableCategories: available
-                    })
-                )
-            );
-        }
-
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
             const ua = navigator.userAgent || navigator.vendor || window.opera;

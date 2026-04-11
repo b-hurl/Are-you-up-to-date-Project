@@ -249,12 +249,13 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
                         const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
                         activeChallengesData = activeAll[gameDate] || {};
+                        activeChallengesData = (gameDate && activeAll[gameDate]) ? activeAll[gameDate] : {};
                     } catch (e) {
                         console.warn("Failed to parse local storage trivia data", e);
                     }
                     
                     // Handle both legacy array format and new object mapping for isSent calculation
-                    const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData);
+                    const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData || {});
 
                     return CATEGORIES.filter(cat =>
                         // Only show category if it has questions available today
@@ -333,3 +334,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
 // Explicitly attach to window for index.html access
 window.GameSettings = GameSettings;
 console.log("✅ GameSettings component attached to window.");
+
+// Immediately trigger render in index.html if the function exists
+if (typeof window.renderGameSettings === 'function') {
+    window.renderGameSettings();
+}
