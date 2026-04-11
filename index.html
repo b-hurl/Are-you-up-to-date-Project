@@ -1057,6 +1057,39 @@
             }
         }
 
+        function renderGameSettings() {
+            const container = document.getElementById('game-settings-root');
+            if (!container) return;
+
+            if (!window.GameSettings) {
+                console.log("⏳ renderGameSettings: Waiting for GameSettings component...");
+                setTimeout(renderGameSettings, 50);
+                return;
+            }
+
+            let playedModes = [];
+            try {
+                const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+                playedModes = session.playedModes || [];
+            } catch (e) { console.warn("Failed to parse session for played modes"); }
+
+            if (!window.gameSettingsRoot) {
+                window.gameSettingsRoot = ReactDOM.createRoot(container);
+            }
+
+            window.gameSettingsRoot.render(
+                React.createElement(ErrorBoundary, null,
+                    React.createElement(window.GameSettings, {
+                        currentConfig: gameConfig,
+                        onUpdate: handleConfigUpdate,
+                        playedModes: playedModes,
+                        availableCategories: verifiedCategories
+                    })
+                )
+            );
+        }
+        window.renderGameSettings = renderGameSettings;
+
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
             const ua = navigator.userAgent || navigator.vendor || window.opera;
@@ -6392,5 +6425,5 @@ window.isNameValid = isNameValid;
         // Run Import before initialization
         importStateFromURL();
         initFirebase();
-        window.startApp().catch(e => console.error("❌ Fatal: startApp failed", e));
+        startApp().catch(e => console.error("❌ startApp failed:", e));
         checkTutorial();

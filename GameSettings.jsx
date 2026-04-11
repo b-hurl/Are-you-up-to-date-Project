@@ -248,7 +248,6 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     try {
                         archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
                         const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
-                        activeChallengesData = activeAll[gameDate] || {};
                         activeChallengesData = (gameDate && activeAll[gameDate]) ? activeAll[gameDate] : {};
                     } catch (e) {
                         console.warn("Failed to parse local storage trivia data", e);
@@ -335,7 +334,13 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
 window.GameSettings = GameSettings;
 console.log("✅ GameSettings component attached to window.");
 
-// Immediately trigger render in index.html if the function exists
-if (typeof window.renderGameSettings === 'function') {
-    window.renderGameSettings();
-}
+
+// Robust "Handshake": Keep trying to call the HTML's render function until it's ready
+const attemptInitialRender = () => {
+    if (typeof window.renderGameSettings === 'function') {
+        window.renderGameSettings();
+    } else {
+        setTimeout(attemptInitialRender, 100);
+    }
+};
+attemptInitialRender();
