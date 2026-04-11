@@ -1727,7 +1727,7 @@ function startNewSession(data, date, mode) {
                 ...q,
                 category: q.category || (mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : "Trivia"),
                 // Prefer existing correctText if options were shuffled previously
-                correctText: q.correctText || (q.options && q.options[q.a] !== undefined ? q.options[q.a] : "")
+                correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
             };
         })
     };
@@ -2135,6 +2135,7 @@ function showFinalResults() {
     if (db && activeChallengeId) update1v1ChallengeScore();
 }
 }
+
 function returnToMenu(target) {
     // Reset internal game state
     currentIdx = 0;
@@ -2264,6 +2265,7 @@ async function create1v1Challenge() {
                     if (!q.correctText && q.options[q.a] !== undefined) q.correctText = q.options[q.a];
                     q.options = shuffle([...q.options]);
                 }
+                if (q.options) q.options = shuffle([...q.options]);
             });
         }
         
@@ -2280,12 +2282,16 @@ async function create1v1Challenge() {
         await db.collection('challenges').doc(challengeId).set({
             date: today,
             category: category,
+            date: getGameDate(),
+            category: gameConfig.activeSelection,
             questions: challengeQuestions,
             p1: {
                 uid: userId,
                 name: localStorage.getItem('trivia-name') || "Player 1",
                 score: p1Score,
+                score: isCompleted ? parseInt(p1Score) : 0,
                 completed: isCompleted,
+                taunt: ""
             },
             inviteTaunt: inviteTaunt,
             victoryTaunt: "",
@@ -2298,7 +2304,9 @@ async function create1v1Challenge() {
         openInviteModal(challengeId);
         
         // Track active challenges with their IDs to allow revoking
+        const category = gameConfig.activeSelection;
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+        const today = getGameDate();
         active[today] = active[today] || {};
         if (category) {
             active[today][category] = challengeId;
@@ -3876,6 +3884,7 @@ async function handleRematch(oldChallengeId) {
                 q.options = shuffle([...q.options]);
             }
         });
+        challengeQuestions.forEach(q => { if (q.options) q.options = shuffle([...q.options]); });
 
         const newChallengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
         

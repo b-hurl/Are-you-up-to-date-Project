@@ -332,10 +332,30 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     const renderMultiplayerCategorySetup = () => {
         const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
         let archive = {};
+        let activeChallengesData = {};
         try {
             archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+            activeChallengesData = (gameDate && activeAll[gameDate]) ? activeAll[gameDate] : {};
         } catch (e) {}
+
         const savedScore = archive[gameDate]?.[config.activeSelection]?.score;
+        
+        // Check if a challenge was already sent for this specific category today
+        const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData || {});
+        const isSent = activeChallenges.includes(config.activeSelection);
+
+        // Boot the user back to the category menu if they attempt to "go again" or setup 
+        // a category that already has an active challenge.
+        useEffect(() => {
+            if (isSent) {
+                setConfig(prev => ({ ...prev, activeSelection: null }));
+                onUpdate({ activeSelection: null });
+                if (window.openInviteModal) window.openInviteModal(activeChallengesData[config.activeSelection]);
+            }
+        }, [isSent, config.activeSelection]);
+
+        if (isSent) return null;
 
         return (
             <MenuView title={`Challenge in ${config.activeSelection}`} onBack={() => setConfig(p => ({...p, activeSelection: null}))} backLabel="Back to Categories">
@@ -520,7 +540,6 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                 key={category}
                                 onClick={() => {
                                     if (isMulti && isSent) {
-                                        onUpdate({ activeSelection: category });
                                         window.openInviteModal(activeChallengesData[category]);
                                     } else {
                                         handleCategorySelection(category);
