@@ -278,6 +278,11 @@
             <h2 class="text-2xl font-black text-white mb-2">Invite Friends</h2>
             <p class="text-slate-300 text-sm mb-6">Share the code or scan to join.</p>
             
+            <div id="invite-host-details" class="hidden mb-6 p-4 bg-primary-900/20 border border-primary-500/30 rounded-2xl text-center animate-fade-in">
+                <p id="invite-host-score" class="text-[10px] text-primary-400 font-bold uppercase tracking-widest mb-1"></p>
+                <p id="invite-host-taunt" class="text-white italic font-serif text-lg"></p>
+            </div>
+
             <div class="space-y-6">
                  <div id="qrcode-container" class="bg-white p-4 rounded-xl mx-auto w-max hidden mb-4 shadow-lg"></div>
                  
@@ -1275,6 +1280,11 @@
             
             if (!container || !icon || !text) return;
             
+            if (!auth || !auth.currentUser) {
+                container.classList.add('hidden', 'opacity-0');
+                return;
+            }
+
             container.classList.remove('hidden');
             
             if (status === 'syncing') {
@@ -2169,30 +2179,43 @@ function returnToMenu(target) {
 }
 
 async function prepareAndCreateChallenge(category) {
-    updateHeaderSyncStatus('syncing');
-    const gameDate = getGameDate();
-    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-    const isPlayed = archive[gameDate]?.[category] !== undefined;
+    if (!auth.currentUser) {
+        showToast("Sign in to challenge friends!", "🔐");
+        toggleLoginModal();
+        return;
+    }
 
-    showToast(isPlayed ? `Using your score for ${category} challenge...` : `Preparing ${category} challenge...`, "⚔️");
+    updateHeaderSyncStatus('syncing');
+    showToast(`Preparing ${category} challenge...`, "⚔️");
     
+    const gameDate = getGameDate();
     const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
 
     try {
-        const savedScore = archive[gameDate]?.[category]?.score;
-
         const response = await fetch(filePath + `?v=${Date.now()}`);
         if (!response.ok) throw new Error("Category file not found");
         
         const data = await response.json();
         const questions = sanitizeQuestions(data.questions || []);
+        
         if (questions.length === 0) throw new Error("No questions available");
 
         // Setup temporary game state for the challenge generator
         gameData = { questions: questions };
         gameConfig.activeSelection = category;
         
-        await create1v1Challenge(savedScore);
+        // Use archived score for P1 (Person who already played)
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        const savedScore = archive[gameDate]?.[category]?.score || 0;
+        
+        // Temporarily override global score for the challenge record
+        const originalScore = score;
+        score = savedScore;
+        
+        await create1v1Challenge();
+        
+        // Restore global score state
+        score = originalScore;
     } catch (e) {
         console.error("Challenge Prep Error:", e);
         showToast("Failed to prepare challenge.", "❌");
@@ -2202,26 +2225,12 @@ async function prepareAndCreateChallenge(category) {
 }
 window.prepareAndCreateChallenge = prepareAndCreateChallenge;
 
-async function create1v1Challenge(p1Score = null) {
-    // Ensure the user is authenticated (anonymously if a guest) to satisfy Firestore rules
-    if (auth) {
-        if (!auth.currentUser) {
-            try {
-                const anonResult = await auth.signInAnonymously();
-                userId = anonResult.user.uid;
-                localStorage.setItem('trivia-userId', userId);
-            } catch (e) {
-                console.error("Anonymous auth failed:", e);
-                showToast("Connection error. Please try again.", "❌");
-                return;
-            }
-        } else {
-            // Sync global userId with active Firebase UID
-            userId = auth.currentUser.uid;
-        }
+async function create1v1Challenge() {
+    if (!auth.currentUser) {
+        showToast("Sign in to challenge friends!", "🔐");
+        toggleLoginModal();
+        return;
     }
-
-    const isCompleted = p1Score !== null && p1Score !== undefined;
 
     try {
         const challengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
@@ -2253,7 +2262,7 @@ async function create1v1Challenge(p1Score = null) {
             p1: {
                 uid: userId,
                 name: localStorage.getItem('trivia-name') || "Player 1",
-                score: isCompleted ? p1Score : 0,
+                score: isCompleted ? parseInt(p1Score) : 0,
                 completed: isCompleted,
                 taunt: ""
             },
@@ -2265,11 +2274,6 @@ async function create1v1Challenge(p1Score = null) {
         activeChallengeId = challengeId;
         openInviteModal(challengeId);
         
-        // Update user's last challenge timestamp for rate limiting
-        db.collection('users').doc(userId).set({
-            lastChallengeCreated: firebase.firestore.FieldValue.serverTimestamp()
-        }, { merge: true }).catch(e => console.warn("Rate limit sync failed", e));
-
         // Track active challenges with their IDs to allow revoking
         const category = gameConfig.activeSelection;
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
@@ -2280,6 +2284,12 @@ async function create1v1Challenge(p1Score = null) {
         }
         localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
         
+        // Only clear the category selection if the user has already played.
+        // If they haven't, we keep it so the trivia engine knows which topic to start.
+        if (isCompleted) {
+            gameConfig.activeSelection = null;
+        }
+
         // Force React to update the "Sent" status on the button
         renderGameSettings();
 
@@ -2289,6 +2299,28 @@ async function create1v1Challenge(p1Score = null) {
         showToast("Failed to create challenge.", "❌");
     }
 }
+
+async function fetchMyChallenges() {
+    if (!db || !userId) return [];
+    try {
+        // Fetch challenges where user is either p1 or p2
+        const p1Query = db.collection('challenges').where('p1.uid', '==', userId).get();
+        const p2Query = db.collection('challenges').where('p2.uid', '==', userId).get();
+        
+        const [p1Snap, p2Snap] = await Promise.all([p1Query, p2Query]);
+        const challenges = [];
+        
+        p1Snap.forEach(doc => challenges.push({ id: doc.id, ...doc.data(), role: 'p1' }));
+        p2Snap.forEach(doc => challenges.push({ id: doc.id, ...doc.data(), role: 'p2' }));
+        
+        // Sort by creation time (most recent first)
+        return challenges.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+    } catch (e) {
+        console.error("Error fetching my challenges:", e);
+        return [];
+    }
+}
+window.fetchMyChallenges = fetchMyChallenges;
 
 function setupChallengeListener(challengeId) {
     if (challengeListener) challengeListener();
@@ -2342,9 +2374,41 @@ async function update1v1ChallengeScore() {
         if (!isP1) update.status = 'completed';
         
         await db.collection('challenges').doc(activeChallengeId).update(update);
+
+        // If P2 just finished and won, prompt for Victory Taunt
+        if (!isP1 && score > data.p1.score) {
+            setTimeout(() => {
+                const vTaunt = prompt("You won! Enter a Victory Taunt to show your opponent:");
+                if (vTaunt) {
+                    db.collection('challenges').doc(activeChallengeId).update({ victoryTaunt: vTaunt.trim().substring(0, 60) });
+                }
+            }, 1000);
+        }
+
         fetchAndDisplay1v1Status();
     } catch (e) { console.error(e); }
 }
+
+async function set1v1VictoryTaunt(challengeId) {
+    const taunt = prompt("Enter your Victory Taunt (max 60 chars):");
+    if (taunt === null) return;
+    
+    updateHeaderSyncStatus('syncing');
+    try {
+        await db.collection('challenges').doc(challengeId).update({
+            victoryTaunt: taunt.trim().substring(0, 60)
+        });
+        showToast("Victory taunt updated!", "👑");
+        if (window.fetchMyChallenges && window.renderGameSettings) {
+            window.renderGameSettings();
+        }
+    } catch (e) {
+        showToast("Failed to update taunt", "❌");
+    } finally {
+        updateHeaderSyncStatus('complete');
+    }
+}
+window.set1v1VictoryTaunt = set1v1VictoryTaunt;
 
 async function fetchAndDisplay1v1Status() {
     const display = document.getElementById('challenge-status-display');
@@ -3679,12 +3743,25 @@ function closeLeaveGroupModal() {
     }, 300);
 }
 
-async function revokeChallenge(category) {
+async function revokeChallenge(categoryOrId) {
     const today = getGameDate();
     const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
     const todayChallenges = active[today] || {};
-    // Get ID from the mapping object
-    const challengeId = (typeof todayChallenges === 'object' && !Array.isArray(todayChallenges)) ? todayChallenges[category] : null;
+    
+    let challengeId, category;
+    // Check if input is a direct ID or a category name
+    if (categoryOrId && categoryOrId.startsWith('1v1_')) {
+        challengeId = categoryOrId;
+        category = Object.keys(todayChallenges).find(key => todayChallenges[key] === challengeId);
+    } else {
+        category = categoryOrId;
+        challengeId = (typeof todayChallenges === 'object' && !Array.isArray(todayChallenges)) ? todayChallenges[category] : null;
+    }
+
+    if (!challengeId) {
+        showToast("Challenge not found.", "❓");
+        return;
+    }
 
     if (!confirm(`Are you sure you want to revoke this challenge? It will be deleted from the system.`)) return;
 
@@ -3695,11 +3772,13 @@ async function revokeChallenge(category) {
         }
 
         // Remove from local tracking (handles legacy array or new object format)
-        if (Array.isArray(todayChallenges)) {
-            active[today] = todayChallenges.filter(c => c !== category);
-        } else {
-            delete todayChallenges[category];
-            active[today] = todayChallenges;
+        if (category) {
+            if (Array.isArray(todayChallenges)) {
+                active[today] = todayChallenges.filter(c => c !== category);
+            } else {
+                delete todayChallenges[category];
+                active[today] = todayChallenges;
+            }
         }
         localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
         
@@ -3716,6 +3795,105 @@ async function revokeChallenge(category) {
     }
 }
 window.revokeChallenge = revokeChallenge;
+
+async function handleRematch(oldChallengeId) {
+    if (!auth.currentUser) {
+        showToast("Sign in to rematch!", "🔐");
+        return;
+    }
+    updateHeaderSyncStatus('syncing');
+    
+    try {
+        const doc = await db.collection('challenges').doc(oldChallengeId).get();
+        if (!doc.exists) {
+            showToast("Original challenge not found.", "❓");
+            return;
+        }
+        const oldData = doc.data();
+        const category = oldData.category;
+        
+        // Identify the person to rematch (the one who isn't the current user)
+        const opponent = oldData.p1.uid === userId ? oldData.p2 : oldData.p1;
+        if (!opponent || !opponent.uid) {
+            showToast("Opponent information missing.", "❓");
+            return;
+        }
+
+        const today = getGameDate();
+        
+        // If the old challenge was already for today, the user must wait until the next day's questions release.
+        if (oldData.date === today) {
+            showToast("You've already played this today! Rematch again tomorrow.", "⏳");
+            return;
+        }
+
+        // Prompt for Taunt
+        const tauntInput = prompt("Enter an Invite Taunt (shown when they join, max 60 chars):");
+        if (tauntInput === null) {
+            updateHeaderSyncStatus('complete');
+            return;
+        }
+        const inviteTaunt = tauntInput.trim();
+        if (inviteTaunt.length > 60) {
+            showToast("Taunt is too long!", "⚠️");
+            updateHeaderSyncStatus('complete');
+            return;
+        }
+        
+        const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
+        if (banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(inviteTaunt))) {
+            showToast("Please keep it friendly!", "🚫");
+            updateHeaderSyncStatus('complete');
+            return;
+        }
+
+        showToast(`Setting up rematch in ${category}...`, "⚔️");
+
+        // Load today's questions for this category
+        const filePath = `questions/${today}-${category.toLowerCase()}.json`;
+        const response = await fetch(filePath + `?v=${Date.now()}`);
+        if (!response.ok) {
+            showToast(`Questions for ${category} aren't ready yet.`, "⏳");
+            return;
+        }
+        
+        const data = await response.json();
+        const questions = sanitizeQuestions(data.questions || []);
+        if (questions.length === 0) throw new Error("No questions found");
+
+        gameData = { questions };
+        gameConfig.activeSelection = category;
+        gameConfig.gameMode = 'multiplayer';
+
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        const hasPlayed = archive[today]?.[category] !== undefined;
+        const pScore = hasPlayed ? archive[today][category].score : 0;
+
+        const challengeQuestions = shuffle([...questions]);
+        challengeQuestions.forEach(q => { if (q.options) q.options = shuffle([...q.options]); });
+
+        const newChallengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
+        
+        await db.collection('challenges').doc(newChallengeId).set({
+            date: today,
+            category: category,
+            questions: challengeQuestions,
+            p1: { uid: userId, name: localStorage.getItem('trivia-name') || "Player 1", score: pScore, completed: hasPlayed },
+            p2: { uid: opponent.uid, name: opponent.name, score: 0, completed: false },
+            inviteTaunt: inviteTaunt,
+            victoryTaunt: "",
+            status: 'accepted',
+            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            expiresAt: firebase.firestore.Timestamp.fromDate(new Date(Date.now() + 86400000))
+        });
+
+        activeChallengeId = newChallengeId;
+        if (!hasPlayed) startChallengeGame();
+        else { showToast(`Rematch sent to ${opponent.name}!`, "✅"); if (window.renderGameSettings) window.renderGameSettings(); }
+    } catch (e) { console.error("Rematch error:", e); showToast("Failed to create rematch.", "❌"); }
+    finally { updateHeaderSyncStatus('complete'); }
+}
+window.handleRematch = handleRematch;
 
 async function handle1v1Challenge(challengeId) {
     updateHeaderSyncStatus('syncing');
@@ -3814,6 +3992,63 @@ async function handle1v1Challenge(challengeId) {
     }
 }
 
+async function acceptChallenge() {
+    if (!activeChallengeId) return;
+    updateHeaderSyncStatus('syncing');
+    
+    try {
+        const doc = await db.collection('challenges').doc(activeChallengeId).get();
+        const data = doc.data();
+        let p2Name = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
+
+        await db.collection('challenges').doc(activeChallengeId).update({ 
+            status: 'accepted',
+            p2: { uid: userId, name: p2Name }
+        });
+
+        closeInviteModal();
+        gameConfig.gameMode = 'multiplayer';
+        gameConfig.activeSelection = data.category;
+        
+        const modeData = { questions: sanitizeQuestions(data.questions) };
+        document.getElementById('game-settings-root').classList.add('hidden');
+        document.getElementById('question-text').classList.remove('hidden');
+        
+        // Listen for revocation while playing
+        challengeListener = db.collection('challenges').doc(activeChallengeId).onSnapshot(snapshot => {
+            if (!snapshot.exists) {
+                if (challengeListener) challengeListener();
+                challengeListener = null;
+                showToast("Challenge revoked by the host.", "🚫", 5000);
+                returnToMenu('main');
+            }
+        });
+
+        updateTheme('casual'); 
+        startNewSession(modeData, data.date, data.category, true);
+    } catch (e) {
+        console.error("Accept error:", e);
+        showToast("Error starting challenge", "❌");
+    } finally {
+        updateHeaderSyncStatus('complete');
+    }
+}
+
+async function refuseChallenge() {
+    if (!activeChallengeId) return;
+    updateHeaderSyncStatus('syncing');
+    try {
+        let p2Name = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
+        await db.collection('challenges').doc(activeChallengeId).update({ 
+            status: 'refused',
+            p2: { uid: userId, name: p2Name || "Player" }
+        });
+        closeInviteModal();
+        removeChallengeParam();
+    } catch (e) { console.error("Refuse error:", e); }
+    finally { updateHeaderSyncStatus('complete'); }
+}
+
 function removeChallengeParam() {
     const url = new URL(window.location);
     url.searchParams.delete('challenge');
@@ -3829,6 +4064,13 @@ function openInviteModal(groupId) {
     document.getElementById('qrcode-container').classList.add('hidden');
     document.getElementById('btn-copy-link-text').innerText = "Copy Link";
     
+    // Reset UI for Host view
+    modal.querySelector('h2').innerText = "Invite Friends";
+    modal.querySelector('p').innerText = "Share the code or scan to join.";
+    document.getElementById('invite-host-details').classList.add('hidden');
+    document.getElementById('invite-join-btn-container').classList.add('hidden');
+    document.getElementById('btn-show-qr').parentElement.classList.remove('hidden');
+
     // Show revoke button if this is a 1v1 challenge (has a category)
     const revokeContainer = document.getElementById('revoke-btn-container');
     if (revokeContainer) {
@@ -3853,6 +4095,8 @@ function closeInviteModal() {
 
 function generateInviteQRCode() {
     const container = document.getElementById('qrcode-container');
+    const isChallenge = currentInviteGroupId && currentInviteGroupId.startsWith('1v1_');
+
     if (!container.classList.contains('hidden')) {
         container.classList.add('hidden'); // Toggle off if clicking again
         return;
@@ -3862,7 +4106,7 @@ function generateInviteQRCode() {
     container.classList.remove('hidden');
     
     const url = new URL(window.location.origin + window.location.pathname);
-    url.searchParams.set('group', currentInviteGroupId);
+    url.searchParams.set(isChallenge ? 'challenge' : 'group', currentInviteGroupId);
     
     new QRCode(container, {
         text: url.toString(),
@@ -3876,11 +4120,21 @@ function generateInviteQRCode() {
 
 function copyInviteLinkFromModal() {
     const url = new URL(window.location.origin + window.location.pathname);
-    url.searchParams.set('group', currentInviteGroupId);
+    const isChallenge = currentInviteGroupId && currentInviteGroupId.startsWith('1v1_');
+    url.searchParams.set(isChallenge ? 'challenge' : 'group', currentInviteGroupId);
     
     navigator.clipboard.writeText(url.toString()).then(() => {
         const btnText = document.getElementById('btn-copy-link-text');
         btnText.innerText = "Copied!";
+
+        if (isChallenge) {
+            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            const hasPlayed = archive[getGameDate()]?.[gameConfig.activeSelection] !== undefined;
+            if (!hasPlayed) {
+                setTimeout(() => startChallengeGame(), 1200);
+            }
+        }
+
         setTimeout(() => btnText.innerText = "Copy Link", 2000);
     });
 }
@@ -5083,6 +5337,15 @@ function initFirebase() {
             checkMaintenanceMode(); // Re-check to lock out if maintenance is on
         }
     });
+
+    if (isChallenge) {
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        const hasPlayed = archive[getGameDate()]?.[gameConfig.activeSelection] !== undefined;
+        if (!hasPlayed) {
+            // Allow 5 seconds for the friend to scan the QR before starting trivia
+            setTimeout(() => startChallengeGame(), 5000);
+        }
+    }
 }
 
 function toggleLoginModal() {

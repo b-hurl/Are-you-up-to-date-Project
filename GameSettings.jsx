@@ -1,7 +1,7 @@
 console.log("📦 GameSettings.jsx: Transpilation starting...");
 window.GameSettingsReady = false;
 
-const MenuButton = ({ onClick, isSelected, isDisabled, isCompleted, title, description, isSmall }) => {
+const MenuButton = ({ onClick, isSelected, isDisabled, isCompleted, title, description, isSmall, badge }) => {
     const baseClasses = `w-full transition-all text-left border-2 ${isSmall ? 'p-4 rounded-2xl' : 'p-5 rounded-2xl'}`;
     const stateClasses = isDisabled
         ? 'bg-slate-900/50 border-slate-800 opacity-30 cursor-not-allowed grayscale'
@@ -12,18 +12,27 @@ const MenuButton = ({ onClick, isSelected, isDisabled, isCompleted, title, descr
                 : 'bg-slate-700/50 border-slate-600 hover:border-primary-500 hover:animate-[selection-pulse_2s_infinite_ease-in-out]';
 
     return (
-        <button onClick={onClick} disabled={isDisabled} className={`${baseClasses} ${stateClasses}`}>
-            <span className={`block font-bold capitalize leading-tight ${isSmall ? 'text-sm mb-1' : 'text-lg'}`}>
-                {title}
-            </span>
-            {description && (
-                <span className={isSmall ? 'text-[9px] text-slate-500 uppercase tracking-tighter font-black block' : 'text-sm text-slate-400'}>
-                    {description}
-                </span>
-            )}
+        <button onClick={onClick} disabled={isDisabled} className={`${baseClasses} ${stateClasses} relative`}>
+            <div className="flex justify-between items-start gap-2">
+                <div className="flex-1">
+                    <span className={`block font-bold capitalize leading-tight ${isSmall ? 'text-sm mb-1' : 'text-lg'}`}>
+                        {title}
+                    </span>
+                    {description && (
+                        <span className={isSmall ? 'text-[9px] text-slate-500 uppercase tracking-tighter font-black block' : 'text-sm text-slate-400'}>
+                            {description}
+                        </span>
+                    )}
+                </div>
+                {badge && (
+                    <span className="flex-shrink-0 bg-primary-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full animate-bounce shadow-lg shadow-primary-500/40 border border-primary-400/50">
+                        {badge}
+                    </span>
+                )}
+            </div>
         </button>
     );
-};
+};hv
 
 const MenuView = ({ title, children, footer, onBack, backLabel }) => (
     <React.Fragment>
@@ -54,6 +63,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         gauntletMode: currentConfig?.gauntletMode || null,
         activeSelection: currentConfig?.activeSelection || null
     });
+    const [challenges, setChallenges] = useState(null);
+    const [notificationCount, setNotificationCount] = useState(0);
 
     const CATEGORIES = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
 
@@ -67,6 +78,36 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             activeSelection: currentConfig?.activeSelection || null
         });
     }, [currentConfig]);
+
+    // Check for challenge notifications
+    useEffect(() => {
+        if (config.gameMode === 'multiplayer' && window.fetchMyChallenges) {
+            const checkNotifications = async () => {
+                const list = await window.fetchMyChallenges();
+                const seenStatus = JSON.parse(localStorage.getItem('trivia-seen-challenges') || '{}');
+                
+                const updates = list.filter(c => {
+                    // Only notify for status changes to 'accepted' or 'completed'
+                    const isInteresting = c.status === 'accepted' || c.status === 'completed';
+                    return isInteresting && seenStatus[c.id] !== c.status;
+                });
+                
+                setNotificationCount(updates.length);
+            };
+            checkNotifications();
+            const interval = setInterval(checkNotifications, 15000); // Poll every 15s
+            return () => clearInterval(interval);
+        } else {
+            setNotificationCount(0);
+        }
+    }, [config.gameMode]);
+
+    useEffect(() => {
+        if (config.multiSubMode === 'my-challenges' && window.fetchMyChallenges) {
+            setChallenges(null);
+            window.fetchMyChallenges().then(setChallenges);
+        }
+    }, [config.multiSubMode]);
 
     const handleGameModeSelection = (mode) => {
         setConfig({
@@ -120,6 +161,19 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                 }
             }
         }
+
+        if (subMode === 'my-challenges') {
+            if (window.fetchMyChallenges) {
+                const list = await window.fetchMyChallenges();
+                const seenStatus = JSON.parse(localStorage.getItem('trivia-seen-challenges') || '{}');
+                list.forEach(c => {
+                    seenStatus[c.id] = c.status;
+                });
+                localStorage.setItem('trivia-seen-challenges', JSON.stringify(seenStatus));
+            }
+            setNotificationCount(0);
+        }
+
         setConfig(prev => ({
             ...prev,
             multiSubMode: subMode,
@@ -202,6 +256,14 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     isSelected={config.multiSubMode === 'categories'}
                     title="Categories"
                     description="5 questions: 1v1 challenge mode."
+                />
+
+                <MenuButton
+                    onClick={() => handleMultiSubModeSelection('my-challenges')}
+                    isSelected={config.multiSubMode === 'my-challenges'}
+                    title="My Challenges"
+                    description="View active and past 1v1 matches."
+                    badge={notificationCount > 0 ? notificationCount : null}
                 />
             </div>
         </MenuView>
@@ -286,7 +348,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         </div>
                     ) : (
                         <p className="text-slate-400 text-sm text-center">
-                            Create a unique 1v1 link for this topic. Send it to a friend, then play to set your score!
+                            Challenge a friend in {config.activeSelection}! Generate your 1v1 link, then play to set the score they need to beat.
                         </p>
                     )}
                     <button 
@@ -299,6 +361,130 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             </MenuView>
         );
     };
+
+    const renderMyChallenges = () => (
+        <MenuView title="My Challenges" onBack={() => handleMultiSubModeSelection(null)} backLabel="Back to Multiplayer">
+            <div className="space-y-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
+                {challenges === null ? (
+                    <p className="text-center text-slate-500 text-xs animate-pulse py-8">Loading challenges...</p>
+                ) : challenges.length === 0 ? (
+                    <p className="text-center text-slate-500 text-xs py-8 bg-slate-900/30 rounded-2xl border border-slate-700/30">No challenges found yet.</p>
+                ) : (
+                    challenges.map(c => {
+                        const isP1 = c.role === 'p1';
+                        const opponent = isP1 ? c.p2 : c.p1;
+                        const myData = isP1 ? c.p1 : c.p2;
+                        const oppData = opponent;
+                        const isCompleted = c.status === 'completed';
+                        const isRefused = c.status === 'refused';
+                        const isWinner = isCompleted && myData.score > (oppData?.score || 0);
+                        
+                        let resultLabel = '';
+                        if (isCompleted && oppData && oppData.completed) {
+                            if (myData.score > oppData.score) resultLabel = 'WIN';
+                            else if (myData.score < oppData.score) resultLabel = 'LOSS';
+                            else resultLabel = 'TIE';
+                        }
+
+                        return (
+                            <div key={c.id} className="bg-slate-700/50 border border-slate-600 p-4 rounded-2xl animate-fade-in">
+                                <div className="flex justify-between items-start mb-2">
+                                    <div>
+                                        <span className="text-[10px] text-primary-400 font-bold uppercase tracking-widest block">
+                                            {c.category} • {c.date} {resultLabel && <span className={`ml-2 px-1.5 py-0.5 rounded ${resultLabel === 'WIN' ? 'bg-emerald-500 text-white' : resultLabel === 'LOSS' ? 'bg-red-500 text-white' : 'bg-slate-500 text-white'}`}>{resultLabel}</span>}
+                                        </span>
+                                        <span className="text-sm font-bold text-white">vs {oppData && oppData.name ? oppData.name : 'Waiting...'}</span>
+                                    </div>
+                                    <span className={`text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-tighter ${
+                                        isCompleted ? 'bg-emerald-500/20 text-emerald-400' : 
+                                        isRefused ? 'bg-red-500/20 text-red-400' : 'bg-yellow-500/20 text-yellow-400'
+                                    }`}>
+                                        {c.status}
+                                    </span>
+                                </div>
+                                <div className="flex justify-between items-center text-xs">
+                                    <span className="text-slate-400">Score: <strong className="text-white">{myData.score}/5</strong></span>
+                                    <span className="text-slate-400">Opponent: <strong className="text-white">{oppData && oppData.completed ? oppData.score + '/5' : '...'}</strong></span>
+                                </div>
+
+                                {c.inviteTaunt && (
+                                    <div className="mt-3 p-2 bg-slate-900/50 rounded-lg border border-slate-700">
+                                        <p className="text-[9px] text-slate-500 uppercase font-black mb-1">Invite Taunt</p>
+                                        <p className="text-xs text-slate-300 italic">"{c.inviteTaunt}"</p>
+                                    </div>
+                                )}
+
+                                {isCompleted && (
+                                    <div className="mt-3 p-2 bg-primary-900/20 rounded-lg border border-primary-500/20">
+                                        <p className="text-[9px] text-primary-400 uppercase font-black mb-1">Victory Message</p>
+                                        {c.victoryTaunt ? (
+                                            <p className="text-xs text-white italic">"{c.victoryTaunt}"</p>
+                                        ) : (
+                                            <p className="text-xs text-slate-500 italic">No victory taunt set.</p>
+                                        )}
+                                        {isWinner && (
+                                            <button 
+                                                onClick={() => window.set1v1VictoryTaunt(c.id)}
+                                                className="mt-2 text-[9px] text-primary-400 hover:text-white uppercase font-bold"
+                                            >
+                                                {c.victoryTaunt ? '✎ Edit Victory Taunt' : '+ Set Victory Taunt'}
+                                            </button>
+                                        )}
+                                    </div>
+                                )}
+
+                                {isP1 && (
+                                    <div className="mt-3 flex gap-2">
+                                        {(c.status === 'pending' || c.status === 'refused') && (
+                                            <button 
+                                                onClick={() => {
+                                                    onUpdate({ activeSelection: c.category });
+                                                    window.openInviteModal(c.id);
+                                                }}
+                                                className="flex-1 bg-primary-600/20 hover:bg-primary-600/40 text-primary-300 border border-primary-500/30 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
+                                            >
+                                                Send to Someone Else
+                                            </button>
+                                        )}
+                                        {(c.status === 'pending' || c.status === 'refused' || c.status === 'accepted') && (
+                                            <button 
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    window.revokeChallenge(c.id);
+                                                    // Refresh the list immediately
+                                                    window.fetchMyChallenges().then(setChallenges);
+                                                }}
+                                                className="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
+                                            >
+                                                Revoke
+                                            </button>
+                                        )}
+                                    </div>
+                                )}
+                                {isCompleted && (
+                                    <div className="mt-3">
+                                        <button 
+                                            onClick={(e) => {
+                                                e.stopPropagation();
+                                                if (window.handleRematch) {
+                                                    window.handleRematch(c.id).then(() => {
+                                                        window.fetchMyChallenges().then(setChallenges);
+                                                    });
+                                                }
+                                            }}
+                                            className="w-full bg-emerald-600/20 hover:bg-emerald-600/40 text-emerald-300 border border-emerald-500/30 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
+                                        >
+                                            Rematch
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                        );
+                    })
+                )}
+            </div>
+        </MenuView>
+    );
 
     const renderCategoryOptions = () => (
         <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
@@ -334,6 +520,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                 key={category}
                                 onClick={() => {
                                     if (isMulti && isSent) {
+                                        onUpdate({ activeSelection: category });
                                         window.openInviteModal(activeChallengesData[category]);
                                     } else {
                                         handleCategorySelection(category);
@@ -378,6 +565,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         } else if (config.gameMode === 'multiplayer') {
             if (!config.multiSubMode) return renderMultiSubMenu();
             if (config.multiSubMode === 'gauntlet') return renderGauntletOptions();
+            if (config.multiSubMode === 'my-challenges') return renderMyChallenges();
             if (config.multiSubMode === 'categories') {
                 if (config.activeSelection) return renderMultiplayerCategorySetup();
                 return renderCategoryOptions();
