@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a new study, what percentage reduction in retail food cost was observed with a vegan Mediterranean diet compared to a traditional Mediterranean diet?",
+      "options": [
+        "16.3%",
+        "10.5%",
+        "22.1%",
+        "8.7%"
+      ],
+      "a": 0,
+      "correctText": "16.3%",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sii06o/a_new_study_found_a_vegan_mediterranean_diet/"
+    },
+    {
+      "q": "A recent study suggests that in interpersonal conflicts, staying calm protects your reputation, while crying damages the reputation of your opponent alongside your own. This indicates a social tradeoff where keeping your cool helps you look good, but shedding tears is more effective if you want to make the other person look bad.",
+      "options": [
+        "Evolution and Human Behavior",
+        "Journal of Social Psychology",
+        "Nature Human Behaviour",
+        "Psychological Science"
+      ],
+      "a": 0,
+      "correctText": "Evolution and Human Behavior",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sif0k5/in_interpersonal_conflicts_staying_calm_protects/"
+    },
+    {
+      "q": "A survey of over 3,500 US political elites revealed a near-unanimous agreement among Democrats on the scientific consensus of global warming. In contrast, what percentage of Republicans affirmed anthropogenic climate change?",
+      "options": [
+        "Fewer than half",
+        "More than three-quarters",
+        "Exactly half",
+        "Almost all"
+      ],
+      "a": 0,
+      "correctText": "Fewer than half",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shzxfl/a_largescale_survey_of_over_3500_us_political/"
+    },
+    {
+      "q": "According to a 2025 review in Philosophical Transactions of the Royal Society B, what cognitive abilities might insects, such as bees, possess, challenging the idea that consciousness requires a large brain?",
+      "options": [
+        "Emotional states, attention, and cognitive bias",
+        "Complex language comprehension and abstract reasoning",
+        "Self-awareness and long-term memory recall",
+        "Tool creation and advanced social structures"
+      ],
+      "a": 0,
+      "correctText": "Emotional states, attention, and cognitive bias",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1shitwe/insects_including_bees_may_possess_forms_of/"
+    },
+    {
+      "q": "Research suggests that cognitive dissonance helps explain why supporters of Donald Trump remain loyal. What is a primary psychological mechanism described by cognitive dissonance theory when people face information that conflicts with their beliefs?",
+      "options": [
+        "Reducing mental discomfort by denying allegations or focusing on policies",
+        "Seeking out new information that increases their existing dissonance",
+        "Immediately changing their beliefs to align with new, conflicting information",
+        "Experiencing no discomfort and maintaining contradictory beliefs simultaneously"
+      ],
+      "a": 0,
+      "correctText": "Reducing mental discomfort by denying allegations or focusing on policies",
+      "category": "Science",
+      "source": "https://www.reddit.com/r/science/comments/1sih8m7/cognitive_dissonance_helps_explain_why_trump/"
+    }
+  ]
+}

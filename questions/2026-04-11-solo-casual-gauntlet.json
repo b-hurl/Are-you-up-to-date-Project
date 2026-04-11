@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-11",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "What recent action by Amazon, as reported on April 11, 2026, has led to user outcry?",
+      "options": [
+        "Ending support for older Kindle devices",
+        "Increasing the price of all Kindle e-readers",
+        "Removing popular book titles from the Kindle store",
+        "Requiring a new subscription service for all Kindle users"
+      ],
+      "a": 0,
+      "correctText": "Ending support for older Kindle devices",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1shied0/amazon_to_end_support_for_older_kindles_prompting/"
+    },
+    {
+      "q": "Which two organizations were reported on April 11, 2026, to have prevailed in a fight to protect libraries and museums nationwide?",
+      "options": [
+        "ALA and AFSCME",
+        "NLA and AAM",
+        "LC and NEH",
+        "PCA and IMLS"
+      ],
+      "a": 0,
+      "correctText": "ALA and AFSCME",
+      "category": "Books",
+      "source": "https://www.reddit.com/r/books/comments/1shr2yh/ala_and_afscme_prevail_in_fight_to_protect/"
+    },
+    {
+      "q": "An official poster was recently released for the 'Last Act' of which title?",
+      "options": [
+        "The Amazing Digital Circus",
+        "You, Me & Tuscany",
+        "Faces of Death",
+        "Beast"
+      ],
+      "a": 0,
+      "correctText": "The Amazing Digital Circus",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sho4om/official_poster_for_the_amazing_digital_circus/"
+    },
+    {
+      "q": "Which streaming service quietly scrapped its TV and movie adaptations of 'Redwall'?",
+      "options": [
+        "Netflix",
+        "Hulu",
+        "Amazon Prime Video",
+        "Disney+"
+      ],
+      "a": 0,
+      "correctText": "Netflix",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1shz7ml/redwall_tv_and_movie_adaptations_quietly_scrapped/"
+    },
+    {
+      "q": "For the first time, a Denuvo game from what year has been fully bypassed by pirates?",
+      "options": [
+        "2026",
+        "2025",
+        "2024",
+        "2023"
+      ],
+      "a": 0,
+      "correctText": "2026",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1shhzjw/for_the_first_time_a_denuvo_game_from_2026_has/"
+    },
+    {
+      "q": "What condition has been linked to low levels of a vitamin that 60% of the world is deficient in?",
+      "options": [
+        "Dementia",
+        "Diabetes",
+        "Heart disease",
+        "Osteoporosis"
+      ],
+      "a": 0,
+      "correctText": "Dementia",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1shth0u/a_new_study_found_a_connection_between_low_levels/"
+    },
+    {
+      "q": "What field of medicine is potentially being transformed by breakthrough technology according to a recent headline?",
+      "options": [
+        "Dentistry",
+        "Cardiology",
+        "Oncology",
+        "Neuroscience"
+      ],
+      "a": 0,
+      "correctText": "Dentistry",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1sih9bf/the_crown_jewel_of_dentistry_breakthrough_tech/"
+    },
+    {
+      "q": "Who directed the 1996 film 'From Dusk Till Dawn'?",
+      "options": [
+        "Robert Rodriguez",
+        "Quentin Tarantino",
+        "Gene Gallerano",
+        "George Clooney"
+      ],
+      "a": 0,
+      "correctText": "Robert Rodriguez",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1si1ltv/from_dusk_till_dawn_1996_santanico_pandemonium/"
+    },
+    {
+      "q": "Who are the co-directors and co-writers of the new monster-horror film 'THE YETI'?",
+      "options": [
+        "Gene Gallerano & William Pisciotta",
+        "Robert Rodriguez & Quentin Tarantino",
+        "Brittany Allen & Jim Cummings",
+        "William Sadler & Nicolas Cage"
+      ],
+      "a": 0,
+      "correctText": "Gene Gallerano & William Pisciotta",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sgpwn7/hi_rmovies_were_gene_gallerano_william_pisciotta/"
+    },
+    {
+      "q": "What disease makes babies too young for vaccines vulnerable in \"hotbed\" communities?",
+      "options": [
+        "Measles",
+        "Mumps",
+        "Rubella",
+        "Whooping cough"
+      ],
+      "a": 0,
+      "correctText": "Measles",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1shp6u5/babies_become_sitting_ducks_babies_too_young_for/"
+    }
+  ]
+}

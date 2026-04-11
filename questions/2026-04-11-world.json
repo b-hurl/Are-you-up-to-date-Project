@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What significant event occurred involving the Artemis II crew on April 10, 2026?",
+      "options": [
+        "They successfully splashed down in the Pacific Ocean.",
+        "They encountered an unexpected asteroid.",
+        "They conducted the first-ever spacewalk outside the Orion capsule.",
+        "They experienced a temporary loss of communication with mission control."
+      ],
+      "a": 0,
+      "correctText": "They successfully splashed down in the Pacific Ocean.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1si3oyc/artemis_ii_crew_splashes_down_safely_in_pacific/"
+    },
+    {
+      "q": "Pope Leo XIV issued a new rebuke concerning which conflict?",
+      "options": [
+        "The Russian invasion of Ukraine.",
+        "The US and Israel's attack on Iran.",
+        "A border dispute between India and Pakistan.",
+        "A civil war in a South American nation."
+      ],
+      "a": 1,
+      "correctText": "The US and Israel's attack on Iran.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1sidyx1/god_does_not_bless_any_conflict_pope_issues_new/"
+    },
+    {
+      "q": "According to US intelligence reports, which country is preparing to ship weapons to Iran?",
+      "options": [
+        "Russia",
+        "China",
+        "North Korea",
+        "Turkey"
+      ],
+      "a": 1,
+      "correctText": "China",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1si9wru/rworldnews_discussion_thread_us_and_israel_launch/"
+    },
+    {
+      "q": "What issue is Iran reportedly facing regarding the Strait of Hormuz?",
+      "options": [
+        "It has successfully laid a new minefield, blocking all traffic.",
+        "It is unable to find the mines it laid, hindering its reopening.",
+        "It is charging an exorbitant toll for passage.",
+        "It has voluntarily opened the strait to all maritime traffic."
+      ],
+      "a": 1,
+      "correctText": "It is unable to find the mines it laid, hindering its reopening.",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1si2qsv/iran_unable_to_find_mines_in_strait_of_hormuz_us/"
+    },
+    {
+      "q": "US President Donald Trump made promises of economic aid to which European nation?",
+      "options": [
+        "Poland",
+        "Hungary",
+        "Czech Republic",
+        "Slovakia"
+      ],
+      "a": 1,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.reddit.com/r/worldnews/comments/1si5j6p/us_president_donald_trump_sweetens_proorban/"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "date": "2026-04-11",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "What type of beverage did a family claim played a role in a cheerleader's fatal heart condition?",
+      "options": [
+        "Energy drink",
+        "Soda",
+        "Fruit juice",
+        "Sports drink"
+      ],
+      "a": 0,
+      "correctText": "Energy drink",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1shmg7a/family_says_popular_energy_drink_played_role_in/"
+    },
+    {
+      "q": "What type of tobacco product ban did a UC San Diego study link to lower youth vaping in California?",
+      "options": [
+        "Flavored tobacco",
+        "E-cigarettes",
+        "Cigarettes",
+        "Chewing tobacco"
+      ],
+      "a": 0,
+      "correctText": "Flavored tobacco",
+      "category": "Health",
+      "source": "https://www.reddit.com/r/Health/comments/1sigs1e/uc_san_diego_study_links_flavored_tobacco_bans_to/"
+    },
+    {
+      "q": "Which actors are starring in the 'Lord of War' sequel, which has a 2027 release date?",
+      "options": [
+        "Nicolas Cage, Bill Skarsgard",
+        "Jim Cummings, William Sadler",
+        "Ryan Gosling, Emma Stone",
+        "George Clooney, Salma Hayek"
+      ],
+      "a": 0,
+      "correctText": "Nicolas Cage, Bill Skarsgard",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1shp110/lord_of_war_sequel_starring_nicolas_cage_bill/"
+    },
+    {
+      "q": "What is a significant feature added in the Crimson Desert patch version 1.03.00?",
+      "options": [
+        "Teleportation enabled while mounted, falling, swimming, or climbing walls",
+        "Introduction of a new crafting system",
+        "A complete overhaul of the character skill trees",
+        "The ability to recruit NPC companions for combat"
+      ],
+      "a": 0,
+      "correctText": "Teleportation enabled while mounted, falling, swimming, or climbing walls",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1si7i5t/crimson_desert_patch_notes_version_10300_this/"
+    },
+    {
+      "q": "What happened to the development team for Wuchang: Fallen Feathers?",
+      "options": [
+        "The dev team was dissolved, and the director was forced out.",
+        "The dev team announced a new expansion pack.",
+        "The director announced they are moving to a new studio.",
+        "The dev team secured a new publishing deal."
+      ],
+      "a": 0,
+      "correctText": "The dev team was dissolved, and the director was forced out.",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1shyps5/wuchang_fallen_feathers_dev_team_dissolved/"
+    },
+    {
+      "q": "A hacking group has claimed to have breached Rockstar Games and is demanding a ransom by what date?",
+      "options": [
+        "April 14, 2026",
+        "April 11, 2026",
+        "April 10, 2026",
+        "April 12, 2026"
+      ],
+      "a": 0,
+      "correctText": "April 14, 2026",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sifv9h/hacking_group_claims_to_have_breached_rockstar/"
+    },
+    {
+      "q": "Epic Games is attributing the comeback of which game to its partnership with Disney?",
+      "options": [
+        "Fortnite",
+        "Unreal Tournament",
+        "Gears of War",
+        "Paragon"
+      ],
+      "a": 0,
+      "correctText": "Fortnite",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1si46ua/epic_games_pins_fortnite_comeback_on_disney/"
+    }
+  ]
+}

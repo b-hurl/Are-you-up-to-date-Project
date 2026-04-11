@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a recent poll, what percentage of Canadians support becoming a full member of the European Union?",
+      "options": [
+        "Nearly 60%",
+        "Around 30%",
+        "Just over 10%",
+        "Less than 5%"
+      ],
+      "a": 0,
+      "correctText": "Nearly 60%",
+      "category": "Canada",
+      "source": "https://www.reddit.com/r/canada/comments/1sig0lw/nearly_60_of_canadians_support_becoming_a_full/"
+    },
+    {
+      "q": "What is the primary lesson Canada can draw from the situation with Iran concerning its ally, the United States?",
+      "options": [
+        "That the US no longer shares the same assumptions about right and wrong.",
+        "That the US is increasingly aligning with Canadian foreign policy.",
+        "That the US is becoming more isolationist.",
+        "That the US prioritizes economic ties over moral considerations."
+      ],
+      "a": 0,
+      "correctText": "That the US no longer shares the same assumptions about right and wrong.",
+      "category": "Canada",
+      "source": "https://www.reddit.com/r/canada/comments/1si1rv4/canada_cant_pretend_america_is_still_the_good_guy/"
+    },
+    {
+      "q": "What has happened to rent prices in Canada recently, according to a National Rent Report?",
+      "options": [
+        "They have fallen at the fastest rate since the pandemic.",
+        "They have increased at their highest rate in a decade.",
+        "They have remained stagnant for the past year.",
+        "They have seen a slight increase in major urban centers."
+      ],
+      "a": 0,
+      "correctText": "They have fallen at the fastest rate since the pandemic.",
+      "category": "Canada",
+      "source": "https://www.reddit.com/r/canada/comments/1sib3k5/rent_prices_fall_at_fastest_rate_since_pandemic/"
+    },
+    {
+      "q": "Which company plans to open 20 car dealerships in Canada this year?",
+      "options": [
+        "BYD",
+        "Tesla",
+        "Volkswagen",
+        "Toyota"
+      ],
+      "a": 0,
+      "correctText": "BYD",
+      "category": "Canada",
+      "source": "https://www.reddit.com/r/canada/comments/1sht72b/byd_to_open_20_car_dealerships_in_canada_this_year/"
+    },
+    {
+      "q": "What is the status of the Artemis II astronauts and their mission?",
+      "options": [
+        "They have safely returned to Earth after their capsule splashed down.",
+        "They are currently en route to the Moon.",
+        "Their mission was postponed due to technical issues.",
+        "They have successfully landed on the Moon."
+      ],
+      "a": 0,
+      "correctText": "They have safely returned to Earth after their capsule splashed down.",
+      "category": "Canada",
+      "source": "https://www.reddit.com/r/canada/comments/1si3ssy/artemis_ii_astronauts_safely_back_home_on_earth/"
+    }
+  ]
+}

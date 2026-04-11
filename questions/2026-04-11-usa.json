@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to an Iranian source, what has the US agreed to release in Qatar and other banks?",
+      "options": [
+        "Frozen Iranian assets",
+        "Oil shipments",
+        "Diplomatic prisoners",
+        "Sanctions relief"
+      ],
+      "a": 0,
+      "correctText": "Frozen Iranian assets",
+      "category": "Usa",
+      "source": "https://www.reddit.com/r/news/comments/1siekkt/iranian_source_says_us_has_agreed_to_release/"
+    },
+    {
+      "q": "A US appeals court recently declared a 158-year-old ban unconstitutional. What activity was banned?",
+      "options": [
+        "Home distilling",
+        "Inter-state trade",
+        "Gambling",
+        "Public assembly"
+      ],
+      "a": 0,
+      "correctText": "Home distilling",
+      "category": "Usa",
+      "source": "https://www.reddit.com/r/news/comments/1si0zv6/us_appeals_court_declares_158yearold_home/"
+    },
+    {
+      "q": "According to CNN, what does US intelligence indicate China is preparing to ship to Iran?",
+      "options": [
+        "Weapons",
+        "Medical supplies",
+        "Humanitarian aid",
+        "Economic sanctions"
+      ],
+      "a": 0,
+      "correctText": "Weapons",
+      "category": "Usa",
+      "source": "https://www.reddit.com/r/news/comments/1sihrr9/us_intelligence_indicates_china_preparing_weapons/"
+    },
+    {
+      "q": "Which US Representative has been accused of sexual misconduct by four women, including a former staffer who says he raped her?",
+      "options": [
+        "Rep. Eric Swalwell",
+        "Rep. Kevin McCarthy",
+        "Sen. Ted Cruz",
+        "Rep. Adam Schiff"
+      ],
+      "a": 0,
+      "correctText": "Rep. Eric Swalwell",
+      "category": "Usa",
+      "source": "https://www.reddit.com/r/news/comments/1si2ky1/four_women_describe_sexual_misconduct_by_rep_eric/"
+    },
+    {
+      "q": "What type of Navy asset disappeared from flight tracking over the Persian Gulf?",
+      "options": [
+        "MQ-4C Triton",
+        "F-35 Lightning II",
+        "USS Nimitz",
+        "B-2 Spirit"
+      ],
+      "a": 0,
+      "correctText": "MQ-4C Triton",
+      "category": "Usa",
+      "source": "https://www.reddit.com/r/news/comments/1sienv5/navy_mq4c_tritons_fate_unknown_after_disappearing/"
+    }
+  ]
+}
