@@ -6392,5 +6392,5 @@ window.isNameValid = isNameValid;
         // Run Import before initialization
         importStateFromURL();
         initFirebase();
-        startApp();
+        window.startApp().catch(e => console.error("❌ Fatal: startApp failed", e));
         checkTutorial();
