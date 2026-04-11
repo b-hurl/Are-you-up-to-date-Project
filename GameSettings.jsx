@@ -1,3 +1,5 @@
+console.log("📦 GameSettings.jsx loaded and transpiling...");
+
 const MenuButton = ({ onClick, isSelected, isDisabled, title, description, isSmall }) => {
     const baseClasses = `w-full transition-all text-left border-2 ${isSmall ? 'p-4 rounded-2xl' : 'p-5 rounded-2xl'}`;
     const stateClasses = isDisabled

@@ -96,7 +96,6 @@
         .grand-master-shimmer { background: linear-gradient(90deg, #fbbf24 0%, #fef3c7 50%, #fbbf24 100%); background-size: 200% auto; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmer 3s linear infinite; }
         .custom-scrollbar::-webkit-scrollbar { width: 5px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: #1e293b; border-radius: 10px; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background: #475569; border-radius: 10px; }
         .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: var(--primary-400); }
         .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -1064,11 +1063,8 @@
                 setTimeout(renderGameSettings, 50);
                 return;
             }
-            let playedModes = [];
-            try {
-                const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-                playedModes = session.playedModes || [];
-            } catch (e) { console.warn("Session parse failed", e); }
+            const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+            const playedModes = session.playedModes || [];
 
             // Determine available categories. 
             // We now use verifiedCategories (probed filenames) as the source of truth.
@@ -1583,9 +1579,9 @@ async function startApp() {
     const gameDate = getGameDate();
     console.log("🚀 Initializing app for date:", gameDate);
     
-    // Run these but don't let them crash the whole start sequence
-    try { checkGlobalMessage(); } catch(e) {}
-    try { checkMaintenanceMode(); } catch(e) {}
+    // Prevent Firebase initialization errors from blocking the UI
+    try { await checkGlobalMessage(); } catch(e) { console.warn("Global message skipped:", e); }
+    try { await checkMaintenanceMode(); } catch(e) { console.warn("Maintenance check skipped:", e); }
     
     probeAvailableCategories(); // Probe file existence in background
     cleanupActiveChallenges(); // Clear stale challenge statuses from previous days
@@ -1596,12 +1592,7 @@ async function startApp() {
     determineUserLocation(); // Trigger background location check
     startNextTimer(); // Start global countdown immediately
     
-    let saved = null;
-    try {
-        saved = localStorage.getItem('trivia-session');
-    } catch(e) {
-        console.error("Storage access denied", e);
-    }
+    const saved = localStorage.getItem('trivia-session');
     
     if (saved) {
         const session = JSON.parse(saved);
@@ -1616,7 +1607,7 @@ async function startApp() {
             // The main menu is already rendered by renderGameSettings() and showModeSelection()
             showModeSelection();
         } else {
-            // Restore today's saved session
+            try {
             gameData = {
                 questions: sanitizeQuestions(session.shuffledQuestions)
             };
@@ -1643,6 +1634,10 @@ async function startApp() {
             document.getElementById('game-header').classList.remove('hidden');
             document.getElementById('question-text').classList.remove('hidden');
             renderQuestion();
+            } catch (e) {
+                console.error("Session restoration failed:", e);
+                showModeSelection();
+            }
         }
     } else {
         // No saved session, just show the main menu (already rendered by renderGameSettings() and showModeSelection())
@@ -5274,7 +5269,6 @@ function closePostLoginModal() {
 
 function doLogout() {
     const modal = document.getElementById('signout-confirm-modal');
-    if (!modal) return;
     modal.classList.remove('hidden');
     setTimeout(() => {
         modal.classList.remove('opacity-0');
