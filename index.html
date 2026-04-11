@@ -1577,12 +1577,12 @@ function cleanupActiveChallenges() {
 
 async function startApp() {
     const gameDate = getGameDate();
-    console.log("🚀 Initializing app for date:", gameDate);
-    
+    console.log("🚀 startApp() triggered for:", gameDate);
+
     // Prevent Firebase initialization errors from blocking the UI
-    try { await checkGlobalMessage(); } catch(e) { console.warn("Global message skipped:", e); }
-    try { await checkMaintenanceMode(); } catch(e) { console.warn("Maintenance check skipped:", e); }
-    
+    checkGlobalMessage().catch(e => console.warn("Global message skipped", e));
+    checkMaintenanceMode().catch(e => console.warn("Maintenance check skipped", e));
+
     probeAvailableCategories(); // Probe file existence in background
     cleanupActiveChallenges(); // Clear stale challenge statuses from previous days
 

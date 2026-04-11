@@ -1,4 +1,4 @@
-console.log("📦 GameSettings.jsx loaded and transpiling...");
+console.log("📦 GameSettings.jsx: Transpilation starting...");
 
 const MenuButton = ({ onClick, isSelected, isDisabled, title, description, isSmall }) => {
     const baseClasses = `w-full transition-all text-left border-2 ${isSmall ? 'p-4 rounded-2xl' : 'p-5 rounded-2xl'}`;
@@ -242,7 +242,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
                 {(() => {
-                    const gameDate = typeof window.getGameDate === 'function' ? window.getGameDate() : '';
+                    const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
                     let archive = {};
                     let activeChallengesData = {};
                     try {
@@ -330,6 +330,6 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     );
 };
 
-// Attach to window for global access in index.html
-// Ensure GameSettings is available for render loop in index.html
+// Explicitly attach to window for index.html access
 window.GameSettings = GameSettings;
+console.log("✅ GameSettings component attached to window.");
