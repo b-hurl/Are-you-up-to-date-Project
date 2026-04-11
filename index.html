@@ -51,7 +51,7 @@
     <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.0/babel.min.js"></script>
-    <script type="text/babel" src="GameSettings.jsx"></script>
+    <script type="text/babel" src="GameSettings.jsx?v=1.0.1"></script>
 
     <style>
         :root {
@@ -2591,9 +2591,7 @@ async function checkIfSubmitted() {
     }
     
     // Not submitted yet: Ensure default form is visible (restores form if user just logged in)
-    const storedName = localStorage.getItem('trivia-name');
-    
-    if (storedName) {
+  if (typeof storedName !== 'undefined' && storedName) {
         formContainer.innerHTML = `
             <div class="flex-1 flex flex-col gap-1">
                 <div class="flex justify-between items-center px-1">

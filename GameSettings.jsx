@@ -241,8 +241,16 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
                 {(() => {
                     const gameDate = typeof window.getGameDate === 'function' ? window.getGameDate() : '';
-                    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-                    const activeChallengesData = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}')[gameDate] || {};
+                    let archive = {};
+                    let activeChallengesData = {};
+                    try {
+                        archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+                        const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+                        activeChallengesData = activeAll[gameDate] || {};
+                    } catch (e) {
+                        console.warn("Failed to parse local storage trivia data", e);
+                    }
+                    
                     // Handle both legacy array format and new object mapping for isSent calculation
                     const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData);
 
