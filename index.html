@@ -278,11 +278,6 @@
             <h2 class="text-2xl font-black text-white mb-2">Invite Friends</h2>
             <p class="text-slate-300 text-sm mb-6">Share the code or scan to join.</p>
             
-            <div id="invite-host-details" class="hidden mb-6 p-4 bg-primary-900/20 border border-primary-500/30 rounded-2xl text-center animate-fade-in">
-                <p id="invite-host-score" class="text-[10px] text-primary-400 font-bold uppercase tracking-widest mb-1"></p>
-                <p id="invite-host-taunt" class="text-white italic font-serif text-lg"></p>
-            </div>
-
             <div class="space-y-6">
                  <div id="qrcode-container" class="bg-white p-4 rounded-xl mx-auto w-max hidden mb-4 shadow-lg"></div>
                  
@@ -1731,7 +1726,8 @@ function startNewSession(data, date, mode) {
             return {
                 ...q,
                 category: q.category || (mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : "Trivia"),
-                correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
+                // Prefer existing correctText if options were shuffled previously
+                correctText: q.correctText || (q.options && q.options[q.a] !== undefined ? q.options[q.a] : "")
             };
         })
     };
@@ -1994,6 +1990,7 @@ function showFinalResults() {
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
     const playedModes = session.playedModes || [];
         const isCategoryPlay = gameConfig.soloSubMode === 'categories' || gameConfig.multiSubMode === 'categories';
+        const isMultiGauntlet = gameConfig.gameMode === 'multiplayer' && gameConfig.multiSubMode === 'gauntlet';
         const isGauntlet = gameConfig.soloSubMode === 'gauntlet' || gameConfig.multiSubMode === 'gauntlet';
 
         // Update return button based on what was just played
@@ -2018,7 +2015,8 @@ function showFinalResults() {
         'results-card': { remove: ['hidden'] },
         'results-gm-badge': { toggle: isGM },
         'times-up-overlay': { add: ['hidden'] },
-        'leaderboard-section': { toggle: gameConfig.gameMode === 'multiplayer' }
+        'leaderboard-section': { toggle: gameConfig.gameMode === 'multiplayer' },
+        'leaderboard-section': { toggle: isMultiGauntlet }
     };
 
     // 2. Rank Configuration - Scale based on total questions (5 for Category, 10 for Gauntlet)
@@ -2125,6 +2123,7 @@ function showFinalResults() {
     }
 
     if (db && gameConfig.gameMode === 'multiplayer') {
+    if (db && isMultiGauntlet) {
         fetchAndDisplayLeaderboard();
         checkIfSubmitted().then(submitted => {
             if (auth.currentUser && !submitted && storedName && storedName.trim()) {
@@ -2133,8 +2132,9 @@ function showFinalResults() {
         });
         if (is1v1) update1v1ChallengeScore();
     }
+    if (db && activeChallengeId) update1v1ChallengeScore();
 }
-
+}
 function returnToMenu(target) {
     // Reset internal game state
     currentIdx = 0;
@@ -2232,24 +2232,6 @@ async function create1v1Challenge() {
         return;
     }
 
-    const today = getGameDate();
-    const category = gameConfig.activeSelection;
-    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-    const p1ScoreEntry = archive[today]?.[category];
-    const isCompleted = p1ScoreEntry !== undefined;
-    const p1Score = isCompleted ? p1ScoreEntry.score : 0;
-
-    // Prompt for Invite Taunt
-    const tauntInput = prompt("Enter an Invite Taunt (shown when they join, max 60 chars):");
-    if (tauntInput === null) return; // User cancelled
-    
-    const inviteTaunt = tauntInput.trim().substring(0, 60);
-    const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
-    if (banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(inviteTaunt))) {
-        showToast("Please keep it friendly!", "🚫");
-        return;
-    }
-
     try {
         const challengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
         
@@ -2259,7 +2241,11 @@ async function create1v1Challenge() {
         } else {
             challengeQuestions = shuffle([...gameData.questions]);
             challengeQuestions.forEach(q => {
-                if (q.options) q.options = shuffle([...q.options]);
+                if (q.options) {
+                    // Resolve the correct answer text before shuffling options to prevent index 'a' mismatch
+                    if (!q.correctText && q.options[q.a] !== undefined) q.correctText = q.options[q.a];
+                    q.options = shuffle([...q.options]);
+                }
             });
         }
         
@@ -2274,17 +2260,16 @@ async function create1v1Challenge() {
         }
 
         await db.collection('challenges').doc(challengeId).set({
-            date: today,
-            category: category,
+            date: getGameDate(),
+            category: gameConfig.activeSelection,
             questions: challengeQuestions,
             p1: {
                 uid: userId,
                 name: localStorage.getItem('trivia-name') || "Player 1",
-                score: p1Score,
+                score: isCompleted ? parseInt(p1Score) : 0,
                 completed: isCompleted,
+                taunt: ""
             },
-            inviteTaunt: inviteTaunt,
-            victoryTaunt: "",
             status: 'pending',
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             expiresAt: firebase.firestore.Timestamp.fromDate(expiresAt)
@@ -2294,7 +2279,9 @@ async function create1v1Challenge() {
         openInviteModal(challengeId);
         
         // Track active challenges with their IDs to allow revoking
+        const category = gameConfig.activeSelection;
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+        const today = getGameDate();
         active[today] = active[today] || {};
         if (category) {
             active[today][category] = challengeId;
@@ -2391,41 +2378,9 @@ async function update1v1ChallengeScore() {
         if (!isP1) update.status = 'completed';
         
         await db.collection('challenges').doc(activeChallengeId).update(update);
-
-        // If P2 just finished and won, prompt for Victory Taunt
-        if (!isP1 && score > data.p1.score) {
-            setTimeout(() => {
-                const vTaunt = prompt("You won! Enter a Victory Taunt to show your opponent:");
-                if (vTaunt) {
-                    db.collection('challenges').doc(activeChallengeId).update({ victoryTaunt: vTaunt.trim().substring(0, 60) });
-                }
-            }, 1000);
-        }
-
         fetchAndDisplay1v1Status();
     } catch (e) { console.error(e); }
 }
-
-async function set1v1VictoryTaunt(challengeId) {
-    const taunt = prompt("Enter your Victory Taunt (max 60 chars):");
-    if (taunt === null) return;
-    
-    updateHeaderSyncStatus('syncing');
-    try {
-        await db.collection('challenges').doc(challengeId).update({
-            victoryTaunt: taunt.trim().substring(0, 60)
-        });
-        showToast("Victory taunt updated!", "👑");
-        if (window.fetchMyChallenges && window.renderGameSettings) {
-            window.renderGameSettings();
-        }
-    } catch (e) {
-        showToast("Failed to update taunt", "❌");
-    } finally {
-        updateHeaderSyncStatus('complete');
-    }
-}
-window.set1v1VictoryTaunt = set1v1VictoryTaunt;
 
 async function fetchAndDisplay1v1Status() {
     const display = document.getElementById('challenge-status-display');
@@ -2585,6 +2540,9 @@ async function setTaunt() {
 }
 
 async function submitScore() {
+    const isMultiGauntlet = gameConfig.gameMode === 'multiplayer' && gameConfig.multiSubMode === 'gauntlet';
+    if (!isMultiGauntlet) return;
+
     if (!auth.currentUser) {
         toggleLoginModal();
         return;
@@ -2726,7 +2684,14 @@ async function submitScore() {
 }
 
 async function checkIfSubmitted() {
+    const isMultiGauntlet = gameConfig.gameMode === 'multiplayer' && gameConfig.multiSubMode === 'gauntlet';
     const formContainer = document.getElementById('leaderboard-submit-form');
+    
+    if (!isMultiGauntlet) {
+        if (formContainer) formContainer.classList.add('hidden');
+        return false;
+    }
+
     if (!auth.currentUser) {
         formContainer.innerHTML = `
             <div class="flex flex-col items-center gap-2 w-full p-3 bg-slate-900/50 rounded-xl border border-slate-700/50">
@@ -3845,20 +3810,20 @@ async function handleRematch(oldChallengeId) {
         }
 
         // Prompt for Taunt
-        const tauntInput = prompt("Enter an Invite Taunt (shown when they join, max 60 chars):");
+        const tauntInput = prompt("Enter a rematch taunt (optional, max 60 chars):");
         if (tauntInput === null) {
             updateHeaderSyncStatus('complete');
             return;
         }
-        const inviteTaunt = tauntInput.trim();
-        if (inviteTaunt.length > 60) {
+        const taunt = tauntInput.trim();
+        if (taunt.length > 60) {
             showToast("Taunt is too long!", "⚠️");
             updateHeaderSyncStatus('complete');
             return;
         }
         
         const banned = ["nigger", "nigga", "faggot", "dyke", "retard", "chink", "kike", "spic", "tranny", "shemale", "coon"];
-        if (banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(inviteTaunt))) {
+        if (banned.some(word => new RegExp(`\\b${word}\\b`, 'i').test(taunt))) {
             showToast("Please keep it friendly!", "🚫");
             updateHeaderSyncStatus('complete');
             return;
@@ -3887,7 +3852,13 @@ async function handleRematch(oldChallengeId) {
         const pScore = hasPlayed ? archive[today][category].score : 0;
 
         const challengeQuestions = shuffle([...questions]);
-        challengeQuestions.forEach(q => { if (q.options) q.options = shuffle([...q.options]); });
+        challengeQuestions.forEach(q => {
+            if (q.options) {
+                // Resolve correctText before shuffling options to prevent answer key mismatch
+                if (!q.correctText && q.options[q.a] !== undefined) q.correctText = q.options[q.a];
+                q.options = shuffle([...q.options]);
+            }
+        });
 
         const newChallengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
         
@@ -3895,10 +3866,8 @@ async function handleRematch(oldChallengeId) {
             date: today,
             category: category,
             questions: challengeQuestions,
-            p1: { uid: userId, name: localStorage.getItem('trivia-name') || "Player 1", score: pScore, completed: hasPlayed },
-            p2: { uid: opponent.uid, name: opponent.name, score: 0, completed: false },
-            inviteTaunt: inviteTaunt,
-            victoryTaunt: "",
+            p1: { uid: userId, name: localStorage.getItem('trivia-name') || "Player 1", score: pScore, completed: hasPlayed, taunt: taunt },
+            p2: { uid: opponent.uid, name: opponent.name, score: 0, completed: false, taunt: "" },
             status: 'accepted',
             createdAt: firebase.firestore.FieldValue.serverTimestamp(),
             expiresAt: firebase.firestore.Timestamp.fromDate(new Date(Date.now() + 86400000))
@@ -4009,63 +3978,6 @@ async function handle1v1Challenge(challengeId) {
     }
 }
 
-async function acceptChallenge() {
-    if (!activeChallengeId) return;
-    updateHeaderSyncStatus('syncing');
-    
-    try {
-        const doc = await db.collection('challenges').doc(activeChallengeId).get();
-        const data = doc.data();
-        let p2Name = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
-
-        await db.collection('challenges').doc(activeChallengeId).update({ 
-            status: 'accepted',
-            p2: { uid: userId, name: p2Name }
-        });
-
-        closeInviteModal();
-        gameConfig.gameMode = 'multiplayer';
-        gameConfig.activeSelection = data.category;
-        
-        const modeData = { questions: sanitizeQuestions(data.questions) };
-        document.getElementById('game-settings-root').classList.add('hidden');
-        document.getElementById('question-text').classList.remove('hidden');
-        
-        // Listen for revocation while playing
-        challengeListener = db.collection('challenges').doc(activeChallengeId).onSnapshot(snapshot => {
-            if (!snapshot.exists) {
-                if (challengeListener) challengeListener();
-                challengeListener = null;
-                showToast("Challenge revoked by the host.", "🚫", 5000);
-                returnToMenu('main');
-            }
-        });
-
-        updateTheme('casual'); 
-        startNewSession(modeData, data.date, data.category, true);
-    } catch (e) {
-        console.error("Accept error:", e);
-        showToast("Error starting challenge", "❌");
-    } finally {
-        updateHeaderSyncStatus('complete');
-    }
-}
-
-async function refuseChallenge() {
-    if (!activeChallengeId) return;
-    updateHeaderSyncStatus('syncing');
-    try {
-        let p2Name = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
-        await db.collection('challenges').doc(activeChallengeId).update({ 
-            status: 'refused',
-            p2: { uid: userId, name: p2Name || "Player" }
-        });
-        closeInviteModal();
-        removeChallengeParam();
-    } catch (e) { console.error("Refuse error:", e); }
-    finally { updateHeaderSyncStatus('complete'); }
-}
-
 function removeChallengeParam() {
     const url = new URL(window.location);
     url.searchParams.delete('challenge');
@@ -4075,33 +3987,12 @@ function removeChallengeParam() {
 function openInviteModal(groupId) {
     currentInviteGroupId = groupId;
     const modal = document.getElementById('invite-modal');
-    if (!modal) return;
-
+    
     // Reset state
-    const qrContainer = document.getElementById('qrcode-container');
-    if (qrContainer) {
-        qrContainer.innerHTML = '';
-        qrContainer.classList.add('hidden');
-    }
-    const btnCopyLinkText = document.getElementById('btn-copy-link-text');
-    if (btnCopyLinkText) btnCopyLinkText.innerText = "Copy Link";
+    document.getElementById('qrcode-container').innerHTML = '';
+    document.getElementById('qrcode-container').classList.add('hidden');
+    document.getElementById('btn-copy-link-text').innerText = "Copy Link";
     
-    // Reset UI for Host view
-    const h2 = modal.querySelector('h2');
-    const p = modal.querySelector('p');
-    if (h2) h2.innerText = "Invite Friends";
-    if (p) p.innerText = "Share the code or scan to join.";
-    
-    const hostDetails = document.getElementById('invite-host-details');
-    const joinBtnContainer = document.getElementById('invite-join-btn-container');
-    const btnShowQr = document.getElementById('btn-show-qr');
-
-    if (hostDetails) hostDetails.classList.add('hidden');
-    if (joinBtnContainer) joinBtnContainer.classList.add('hidden');
-    if (btnShowQr && btnShowQr.parentElement) {
-        btnShowQr.parentElement.classList.remove('hidden');
-    }
-
     // Show revoke button if this is a 1v1 challenge (has a category)
     const revokeContainer = document.getElementById('revoke-btn-container');
     if (revokeContainer) {

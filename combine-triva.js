@@ -33,7 +33,9 @@ function createDailyMixes() {
                     // Tag the category for display and add to pool
                     pool = pool.concat(questions.map(q => ({ 
                         ...q, 
-                        category: q.category || (cat.charAt(0).toUpperCase() + cat.slice(1)) 
+                        category: q.category || (cat.charAt(0).toUpperCase() + cat.slice(1)),
+                        // Capture the correct answer text before any mixing or shuffling occurs
+                        correctText: q.correctText || (q.options && q.options[q.a] !== undefined ? q.options[q.a] : "")
                     })));
                     console.log(`   ✅ Found ${questions.length} questions in ${fileName}`);
                 }
