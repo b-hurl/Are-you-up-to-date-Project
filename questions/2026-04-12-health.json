@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What breakthrough technology in dentistry is being described as potentially transforming tooth repair?",
+      "options": [
+        "A fast 3D-printing method for zirconia dental restorations",
+        "A new type of fluoride treatment",
+        "Genetically engineered enamel regeneration",
+        "Laser-guided cavity filling"
+      ],
+      "a": 0,
+      "correctText": "Researchers have developed a fast 3D-printing method for zirconia dental restorations that cuts debinding time to under 30 minutes, allowing for same-day, high-strength customized crowns.",
+      "category": "Health",
+      "source": "https://scitechdaily.com/the-crown-jewel-of-dentistry-breakthrough-tech-could-transform-tooth-repair/"
+    },
+    {
+      "q": "According to a UC San Diego study, what public health outcome is linked to flavored tobacco bans in California?",
+      "options": [
+        "Increased youth cigarette smoking",
+        "Lower youth vaping rates",
+        "No change in youth tobacco use",
+        "Increased adult vaping rates"
+      ],
+      "a": 1,
+      "correctText": "A UC San Diego study linked flavored tobacco bans to lower youth vaping in California. The study found that these policies were associated with sustained declines in youth vaping and did not find evidence that they led young people to switch to cigarettes.",
+      "category": "Health",
+      "source": "https://today.ucsd.edu/story/uc-san-diego-study-links-flavored-tobacco-bans-to-lower-youth-vaping-in-california"
+    },
+    {
+      "q": "What was the underlying cause of a teen athlete's persistent, painful headache that took over a year to cure?",
+      "options": [
+        "A rare genetic disorder",
+        "Chronic dehydration",
+        "Concussions from youth football",
+        "Severe eyestrain"
+      ],
+      "a": 2,
+      "correctText": "The teen athlete's painful, persistent headache was a result of concussions sustained while playing youth football, leading to a persistent post-traumatic headache.",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/teen-athlete-youth-football-concussion-migraines-persistent-post-traumatic-headache/"
+    },
+    {
+      "q": "A family alleges a popular energy drink contributed to what fatal health condition in a cheerleader?",
+      "options": [
+        "Severe allergic reaction",
+        "Fatal heart condition",
+        "Diabetic coma",
+        "Acute kidney failure"
+      ],
+      "a": 1,
+      "correctText": "A family alleges that a popular energy drink played a role in a cheerleader's fatal heart condition, specifically an enlarged heart.",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/family-says-popular-energy-drink-030351770.html?ncid=redditnewsus"
+    },
+    {
+      "q": "Who is described as being particularly vulnerable to measles in 'hotbed' communities?",
+      "options": [
+        "Elderly individuals with weakened immune systems",
+        "Adults who have never been vaccinated",
+        "Babies too young for vaccines",
+        "Teenagers attending large gatherings"
+      ],
+      "a": 2,
+      "correctText": "Babies too young for vaccines are considered particularly vulnerable to measles in \"hotbed\" communities.",
+      "category": "Health",
+      "source": "https://fortune.com/2026/04/10/vaccines-measles-babies-sitting-ducks/"
+    }
+  ]
+}

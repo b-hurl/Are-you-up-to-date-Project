@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-12",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to an Ipsos poll, what percentage of Canadians want the federal Liberals to win a majority in the upcoming byelections?",
+      "options": [
+        "53%",
+        "47%",
+        "60%",
+        "30%"
+      ],
+      "a": 0,
+      "correctText": "53%",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11771957/ipsos-poll-carney-liberals-byelections-majority/"
+    },
+    {
+      "q": "What was Amazon CEO Andy Jassy's total compensation in 2025?",
+      "options": [
+        "$2.1 million",
+        "$1.6 million",
+        "$365,000",
+        "$200 million"
+      ],
+      "a": 0,
+      "correctText": "$2.1 million",
+      "category": "Business",
+      "source": "https://www.businessinsider.com/how-much-amazon-ceo-andy-jassy-made-2025-pay-stock-2026-4"
+    },
+    {
+      "q": "After the failure of Iran peace talks, what action did Trump state the U.S. would take regarding the Strait of Hormuz?",
+      "options": [
+        "Blockade it",
+        "Increase naval patrols",
+        "Send humanitarian aid",
+        "Initiate joint military exercises"
+      ],
+      "a": 0,
+      "correctText": "Blockade it",
+      "category": "World",
+      "source": "https://www.cnbc.com/2026/04/12/trump-iran-war-strait-of-hormuz.html"
+    },
+    {
+      "q": "What security group has claimed responsibility for the hack on Rockstar Games, demanding a ransom by April 14th?",
+      "options": [
+        "ShinyHunters",
+        "Lapsus$",
+        "Anonymous",
+        "APT28"
+      ],
+      "a": 0,
+      "correctText": "ShinyHunters",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/cyber-security/rockstar-games-confirms-it-was-hacked-by-malicious-group-shinyhunters-takes-credit-gives-until-april-14-to-pay-ransom-or-risk-leaking-confidential-data-shinyhunters"
+    },
+    {
+      "q": "Where did the IRAN-US talks that concluded on April 11, 2026, take place?",
+      "options": [
+        "Islamabad",
+        "Tehran",
+        "Washington D.C.",
+        "Geneva"
+      ],
+      "a": 0,
+      "correctText": "Islamabad",
+      "category": "Usa",
+      "source": "https://www.reuters.com/world/asia-pacific/us-iran-talks-pause-now-disagreements-remain-2026-04-11/"
+    },
+    {
+      "q": "According to Palantir CEO Alex Karp, which two types of individuals are most likely to thrive in the age of AI?",
+      "options": [
+        "Those with vocational training and the neurodivergent",
+        "STEM graduates and entrepreneurs",
+        "Creative artists and philosophers",
+        "Data scientists and programmers"
+      ],
+      "a": 0,
+      "correctText": "Those with vocational training and the neurodivergent",
+      "category": "Technology",
+      "source": "https://fortune.com/article/palantir-ceo-alex-karp-ai-humanities-jobs-vocational-training/"
+    },
+    {
+      "q": "As of April 10, 2026, what was the worldwide gross of \"The Super Mario Galaxy Movie\"?",
+      "options": [
+        "$463 million",
+        "$310 million",
+        "$122.1 million",
+        "$257 million"
+      ],
+      "a": 0,
+      "correctText": "$463 million",
+      "category": "Business",
+      "source": "https://deadline.com/2026/04/box-office-super-mario-galaxy-movie-you-me-tuscany-1236786420/"
+    },
+    {
+      "q": "According to JD Vance, what was the primary reason for the failure of the U.S.-Iran talks on April 12, 2026?",
+      "options": [
+        "Iran’s refusal to give up its nuclear programme",
+        "Disagreements over oil production quotas",
+        "Disputes regarding regional alliances",
+        "Concerns about human rights violations"
+      ],
+      "a": 0,
+      "correctText": "Iran’s refusal to give up its nuclear programme",
+      "category": "World",
+      "source": "https://www.theguardian.com/world/2026/apr/12/jd-vance-says-no-deal-us-iran-pakistan-talks-islamabad"
+    },
+    {
+      "q": "Analysis of over 400,000 Reddit posts on GLP-1 medications revealed potential side effects not captured in clinical trials. Which of the following was NOT among the reported side effects?",
+      "options": [
+        "Irregular periods",
+        "Fatigue",
+        "Gallbladder issues",
+        "Chills"
+      ],
+      "a": 2,
+      "correctText": "Gallbladder issues were not explicitly mentioned as a side effect in the analysis of Reddit posts, though gastrointestinal issues were common.",
+      "category": "Science",
+      "source": "https://www.everydayhealth.com/weight-management/reddit-users-reporting-glp-1-side-effects/"
+    },
+    {
+      "q": "According to a recent study, summers in the midlatitudes, including much of North America and Europe, now last approximately how much longer than they did in the 1960s?",
+      "options": [
+        "10 days longer",
+        "20 days longer",
+        "30 days longer",
+        "50 days longer"
+      ],
+      "a": 2,
+      "correctText": "Summers in the midlatitudes now last roughly 30 days longer than they did in the 1960s.",
+      "category": "Science",
+      "source": "https://news.ubc.ca/2026/04/summer-is-getting-longer-and-its-happening-faster-than-we-thought/"
+    }
+  ]
+}

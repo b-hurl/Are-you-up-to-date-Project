@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What kind of author does King Charles reportedly want for the Queen's biography?",
+      "options": [
+        "Female",
+        "Royal historian",
+        "Award-winning",
+        "British"
+      ],
+      "a": 0,
+      "correctText": "Female",
+      "category": "Books",
+      "source": "https://www.geo.tv/latest/659536-king-charles-wants-female-author-for-queens-biography"
+    },
+    {
+      "q": "Which 19th-century author's novel is cited as reflecting the spacefaring vision of the Artemis II moonshot?",
+      "options": [
+        "Jules Verne",
+        "H.G. Wells",
+        "Mary Shelley",
+        "Arthur Conan Doyle"
+      ],
+      "a": 0,
+      "correctText": "Jules Verne",
+      "category": "Books",
+      "source": "https://theconversation.com/artemis-ii-moonshot-reflects-a-spacefaring-vision-present-in-jules-vernes-19th-century-novel-280252"
+    },
+    {
+      "q": "What is the age-related theme of a recent book list published by The Guardian?",
+      "options": [
+        "25 books to read before you turn 25",
+        "Books for your 20s",
+        "Top 25 books for young adults",
+        "Classics for a quarter-century"
+      ],
+      "a": 0,
+      "correctText": "25 books to read before you turn 25",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/ng-interactive/2026/apr/11/from-peepo-to-middlemarch-25-books-to-read-before-you-turn-25"
+    },
+    {
+      "q": "Who is reportedly seeking a female author to write the Queen's biography?",
+      "options": [
+        "King Charles",
+        "Queen Camilla",
+        "Prince William",
+        "Prime Minister of the UK"
+      ],
+      "a": 0,
+      "correctText": "King Charles",
+      "category": "Books",
+      "source": "https://www.geo.tv/latest/659536-king-charles-wants-female-author-for-queens-biography"
+    },
+    {
+      "q": "What modern space mission's vision is reflected in a 19th-century novel by Jules Verne?",
+      "options": [
+        "Artemis II",
+        "Starship",
+        "Orion",
+        "Gateway"
+      ],
+      "a": 0,
+      "correctText": "Artemis II",
+      "category": "Books",
+      "source": "https://theconversation.com/artemis-ii-moonshot-reflects-a-spacefaring-vision-present-in-jules-vernes-19th-century-novel-280252"
+    }
+  ]
+}

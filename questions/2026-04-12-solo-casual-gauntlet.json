@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-12",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to a Reddit headline, who directed the upcoming anti-crypto documentary 'Everyone Is Lying To You For Money'?",
+      "options": [
+        "Ben McKenzie",
+        "James Cameron",
+        "Steven Spielberg",
+        "John McTiernan"
+      ],
+      "a": 0,
+      "correctText": "Ben McKenzie",
+      "category": "Entertainment",
+      "source": "https://i.redd.it/5rp86y6t4aqg1.png"
+    },
+    {
+      "q": "The Boston Celtics tied an NBA record with how many 3-pointers in a game?",
+      "options": [
+        "29",
+        "25",
+        "30",
+        "27"
+      ],
+      "a": 0,
+      "correctText": "29",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48453131/celtics-tie-nba-record-29-3s-clinch-no-2-seed"
+    },
+    {
+      "q": "What kind of author does King Charles reportedly want for the Queen's biography?",
+      "options": [
+        "Female",
+        "Royal historian",
+        "Award-winning",
+        "British"
+      ],
+      "a": 0,
+      "correctText": "Female",
+      "category": "Books",
+      "source": "https://www.geo.tv/latest/659536-king-charles-wants-female-author-for-queens-biography"
+    },
+    {
+      "q": "Which PlayStation version of Dragon Age: Inquisition will have its servers shut down on April 28, 2026?",
+      "options": [
+        "PS4",
+        "PS3",
+        "PS Vita",
+        "PS2"
+      ],
+      "a": 1,
+      "correctText": "PS3",
+      "category": "Gaming",
+      "source": "https://kotaku.com/dragon-age-inquisition-servers-going-offline-later-this-month-2000686871"
+    },
+    {
+      "q": "What is the name of the hacker group that claimed responsibility for the data breach affecting Rockstar Games?",
+      "options": [
+        "Luminids Hackers",
+        "ShinyHunters",
+        "Anodot Crew",
+        "Rockstar Breakers"
+      ],
+      "a": 1,
+      "correctText": "ShinyHunters",
+      "category": "Gaming",
+      "source": "https://bsky.app/profile/kotaku.com/post/3mja6uc5isc2g"
+    },
+    {
+      "q": "What is the name of the new content or update for Dome Keeper mentioned in the provided context?",
+      "options": [
+        "The Crystal Miner",
+        "The Beastmaster",
+        "The Alien Hunter",
+        "The Resource Gatherer"
+      ],
+      "a": 1,
+      "correctText": "The Beastmaster",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=ZHM7AfXQERU"
+    },
+    {
+      "q": "What breakthrough technology in dentistry is being described as potentially transforming tooth repair?",
+      "options": [
+        "A fast 3D-printing method for zirconia dental restorations",
+        "A new type of fluoride treatment",
+        "Genetically engineered enamel regeneration",
+        "Laser-guided cavity filling"
+      ],
+      "a": 0,
+      "correctText": "Researchers have developed a fast 3D-printing method for zirconia dental restorations that cuts debinding time to under 30 minutes, allowing for same-day, high-strength customized crowns.",
+      "category": "Health",
+      "source": "https://scitechdaily.com/the-crown-jewel-of-dentistry-breakthrough-tech-could-transform-tooth-repair/"
+    },
+    {
+      "q": "Who is reportedly seeking a female author to write the Queen's biography?",
+      "options": [
+        "King Charles",
+        "Queen Camilla",
+        "Prince William",
+        "Prime Minister of the UK"
+      ],
+      "a": 0,
+      "correctText": "King Charles",
+      "category": "Books",
+      "source": "https://www.geo.tv/latest/659536-king-charles-wants-female-author-for-queens-biography"
+    },
+    {
+      "q": "Which 19th-century author's novel is cited as reflecting the spacefaring vision of the Artemis II moonshot?",
+      "options": [
+        "Jules Verne",
+        "H.G. Wells",
+        "Mary Shelley",
+        "Arthur Conan Doyle"
+      ],
+      "a": 0,
+      "correctText": "Jules Verne",
+      "category": "Books",
+      "source": "https://theconversation.com/artemis-ii-moonshot-reflects-a-spacefaring-vision-present-in-jules-vernes-19th-century-novel-280252"
+    },
+    {
+      "q": "According to a statement by Rockstar Games, what was the impact of the recent data breach?",
+      "options": [
+        "Significant impact on players' accounts",
+        "Limited access to non-material company information with no impact on organization or players",
+        "The theft of all game source codes",
+        "A complete shutdown of all online services"
+      ],
+      "a": 1,
+      "correctText": "Limited access to non-material company information with no impact on organization or players",
+      "category": "Gaming",
+      "source": "https://bsky.app/profile/kotaku.com/post/3mja6uc5isc2g"
+    }
+  ]
+}

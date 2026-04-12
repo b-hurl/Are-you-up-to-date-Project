@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What age did the Liberal Party propose as the minimum for Canadians to use social media accounts?",
+      "options": [
+        "16",
+        "14",
+        "18",
+        "12"
+      ],
+      "a": 0,
+      "correctText": "16",
+      "category": "Canada",
+      "source": "https://vancouver.citynews.ca/2026/04/11/liberal-party-adopts-motion-to-restrict-kids-from-social-media/"
+    },
+    {
+      "q": "According to an Ipsos poll, what percentage of Canadians want the federal Liberals to win a majority in the upcoming byelections?",
+      "options": [
+        "53%",
+        "47%",
+        "60%",
+        "30%"
+      ],
+      "a": 0,
+      "correctText": "53%",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11771957/ipsos-poll-carney-liberals-byelections-majority/"
+    },
+    {
+      "q": "How many potential floor-crossers are the Liberals reportedly courting, according to sources?",
+      "options": [
+        "As many as eight",
+        "As many as five",
+        "As many as ten",
+        "As many as three"
+      ],
+      "a": 0,
+      "correctText": "As many as eight",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-liberals-courting-as-many-as-eight-more-potential-floor-crossers/"
+    },
+    {
+      "q": "Which country has been mentioned as having passed a law similar to the proposed age restriction for social media accounts?",
+      "options": [
+        "Australia",
+        "United States",
+        "United Kingdom",
+        "France"
+      ],
+      "a": 0,
+      "correctText": "Australia",
+      "category": "Canada",
+      "source": "https://www.hilltimes.com/2026/04/11/liberal-delegates-vote-against-electoral-reform-support-setting-a-minimum-age-for-social-media-accounts/499438/"
+    },
+    {
+      "q": "What is the current lead of the Liberals over the Conservatives in federal polling, according to Abacus Data?",
+      "options": [
+        "6 points",
+        "10 points",
+        "3 points",
+        "12 points"
+      ],
+      "a": 0,
+      "correctText": "6 points",
+      "category": "Canada",
+      "source": "https://abacusdata.ca/liberals-lead-by-6-by-elections/"
+    }
+  ]
+}

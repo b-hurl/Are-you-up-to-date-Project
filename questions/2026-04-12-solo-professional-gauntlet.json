@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-12",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In April 2026, what action did a judge take regarding Arizona's regulation of prediction market operators like Kalshi?",
+      "options": [
+        "Barred Arizona from regulating them and paused prosecution of Kalshi",
+        "Upheld Arizona's right to regulate and ordered Kalshi's immediate prosecution",
+        "Mandated federal oversight for all prediction market operators in Arizona",
+        "Required Kalshi to cease all operations in Arizona permanently"
+      ],
+      "a": 0,
+      "correctText": "Barred Arizona from regulating them and paused prosecution of Kalshi",
+      "category": "Usa",
+      "source": "https://apnews.com/article/arizona-kalshi-criminal-charges-prediction-markets-gambling-bb7cef24be5bd0d444bba670d2e41ceb"
+    },
+    {
+      "q": "A study analyzing the global wildlife trade found that traded mammals are how much more likely to share pathogens with humans than non-traded mammals?",
+      "options": [
+        "50% more likely",
+        "1.5 times more likely",
+        "Twice as likely",
+        "Four times more likely"
+      ],
+      "a": 1,
+      "correctText": "Traded mammals are 1.5 times more likely to share pathogens with humans than non-traded species.",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/d41586-026-01121-7"
+    },
+    {
+      "q": "What are the key components of expanding revenue streams for a golf center, according to the Reddit post?",
+      "options": [
+        "Range, Mini-Golf, and Pitch & Putt",
+        "Driving Range, Pro Shop, and Restaurant",
+        "Lessons, Leagues, and Memberships",
+        "Cafe, Bar, and Event Rentals"
+      ],
+      "a": 0,
+      "correctText": "Range, Mini-Golf, and Pitch & Putt",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sje0wc/golf_expanding_revenue_streams_for_a_golf_center/"
+    },
+    {
+      "q": "What specific Windows 11 updates have been confirmed to cause issues with the 'Reset this PC' function on certain systems?",
+      "options": [
+        "KB5077212 and KB5079420",
+        "KB5070001 and KB5071002",
+        "KB5075000 and KB5076001",
+        "KB5060001 and KB5061001"
+      ],
+      "a": 0,
+      "correctText": "KB5077212 and KB5079420",
+      "category": "Technology",
+      "source": "https://www.neowin.net/news/microsoft-confirms-windows-11-kb5077212-kb5079420-break-pc-reset-on-25h2-and-24h2-systems/"
+    },
+    {
+      "q": "Japan has approved an additional $4 billion to accelerate research and development at which chipmaker?",
+      "options": [
+        "Rapidus",
+        "TSMC",
+        "Intel",
+        "Samsung"
+      ],
+      "a": 0,
+      "correctText": "Rapidus",
+      "category": "Business",
+      "source": "https://www.reuters.com/world/asia-pacific/japan-approves-additional-4-bln-chipmaker-rapidus-2026-04-11"
+    },
+    {
+      "q": "What action did a federal judge take regarding the $6.2 billion merger of local TV giants Nexstar and Tegna in April 2026?",
+      "options": [
+        "Extended a restraining order on the merger",
+        "Approved the merger to proceed immediately",
+        "Requested a renegotiation of the merger terms",
+        "Permanently blocked the merger"
+      ],
+      "a": 0,
+      "correctText": "Extended a restraining order on the merger",
+      "category": "Usa",
+      "source": "https://apnews.com/article/nexstar-tenga-tv-merger-settlement-fcc-lawsuit-72bdd9927bef9d7a0a014eda13d32ff1"
+    },
+    {
+      "q": "In which European country did a majority of citizens express belief that the April 12 election would be rigged or manipulated?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Romania",
+        "Bulgaria"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://tvpworld.com/92475589/hungary-almost-80-of-public-fear-april-12-election-rigging"
+    },
+    {
+      "q": "Which country recently deployed 13,000 troops and fighter jets to Saudi Arabia?",
+      "options": [
+        "Pakistan",
+        "Egypt",
+        "Turkey",
+        "Indonesia"
+      ],
+      "a": 0,
+      "correctText": "Pakistan",
+      "category": "World",
+      "source": "https://www.thehindu.com/news/international/pakistan-deploys-13000-troops-and-fighter-jets-to-saudi-araba/article70853223.ece"
+    },
+    {
+      "q": "New research suggests that regulatory T cells (Tregs), which act as immune system 'brakes,' are often altered in children with what condition?",
+      "options": [
+        "ADHD",
+        "Autism",
+        "Cerebral Palsy",
+        "Down Syndrome"
+      ],
+      "a": 1,
+      "correctText": "Regulatory T cells are altered in children with autism, potentially playing a role in neuroinflammation and behavior.",
+      "category": "Science",
+      "source": "https://health.ucdavis.edu/news/headlines/regulatory-t-cells-altered-in-children-with-autism/2026/04"
+    },
+    {
+      "q": "According to Carney, which country announced its intention to end the '70 Cents to US' defence spending model?",
+      "options": [
+        "Canada",
+        "Australia",
+        "New Zealand",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://www.outlookindia.com/international/canada-to-end-70-cents-to-us-defence-spending-model-carney"
+    }
+  ]
+}

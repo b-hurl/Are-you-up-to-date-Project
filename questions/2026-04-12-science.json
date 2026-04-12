@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Analysis of over 400,000 Reddit posts on GLP-1 medications revealed potential side effects not captured in clinical trials. Which of the following was NOT among the reported side effects?",
+      "options": [
+        "Irregular periods",
+        "Fatigue",
+        "Gallbladder issues",
+        "Chills"
+      ],
+      "a": 2,
+      "correctText": "Gallbladder issues were not explicitly mentioned as a side effect in the analysis of Reddit posts, though gastrointestinal issues were common.",
+      "category": "Science",
+      "source": "https://www.everydayhealth.com/weight-management/reddit-users-reporting-glp-1-side-effects/"
+    },
+    {
+      "q": "According to a recent study, summers in the midlatitudes, including much of North America and Europe, now last approximately how much longer than they did in the 1960s?",
+      "options": [
+        "10 days longer",
+        "20 days longer",
+        "30 days longer",
+        "50 days longer"
+      ],
+      "a": 2,
+      "correctText": "Summers in the midlatitudes now last roughly 30 days longer than they did in the 1960s.",
+      "category": "Science",
+      "source": "https://news.ubc.ca/2026/04/summer-is-getting-longer-and-its-happening-faster-than-we-thought/"
+    },
+    {
+      "q": "New research suggests that regulatory T cells (Tregs), which act as immune system 'brakes,' are often altered in children with what condition?",
+      "options": [
+        "ADHD",
+        "Autism",
+        "Cerebral Palsy",
+        "Down Syndrome"
+      ],
+      "a": 1,
+      "correctText": "Regulatory T cells are altered in children with autism, potentially playing a role in neuroinflammation and behavior.",
+      "category": "Science",
+      "source": "https://health.ucdavis.edu/news/headlines/regulatory-t-cells-altered-in-children-with-autism/2026/04"
+    },
+    {
+      "q": "A study analyzing the global wildlife trade found that traded mammals are how much more likely to share pathogens with humans than non-traded mammals?",
+      "options": [
+        "50% more likely",
+        "1.5 times more likely",
+        "Twice as likely",
+        "Four times more likely"
+      ],
+      "a": 1,
+      "correctText": "Traded mammals are 1.5 times more likely to share pathogens with humans than non-traded species.",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/d41586-026-01121-7"
+    },
+    {
+      "q": "Research using flight path data and Bayesian dynamical systems learning has helped predict how mosquitoes target humans. What two main stimuli were identified as crucial for mosquitoes approaching their targets?",
+      "options": [
+        "Heat and humidity",
+        "Carbon dioxide and body odor",
+        "Visual cues and carbon dioxide",
+        "Sound and movement"
+      ],
+      "a": 2,
+      "correctText": "Visual cues and carbon dioxide are the two main stimuli identified as crucial for mosquitoes targeting humans.",
+      "category": "Science",
+      "source": "https://www.wired.com/story/flight-path-data-shows-how-mosquitoes-target-humans/"
+    }
+  ]
+}

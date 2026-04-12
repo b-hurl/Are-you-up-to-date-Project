@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What was Amazon CEO Andy Jassy's total compensation in 2025?",
+      "options": [
+        "$2.1 million",
+        "$1.6 million",
+        "$365,000",
+        "$200 million"
+      ],
+      "a": 0,
+      "correctText": "$2.1 million",
+      "category": "Business",
+      "source": "https://www.businessinsider.com/how-much-amazon-ceo-andy-jassy-made-2025-pay-stock-2026-4"
+    },
+    {
+      "q": "Japan has approved an additional $4 billion to accelerate research and development at which chipmaker?",
+      "options": [
+        "Rapidus",
+        "TSMC",
+        "Intel",
+        "Samsung"
+      ],
+      "a": 0,
+      "correctText": "Rapidus",
+      "category": "Business",
+      "source": "https://www.reuters.com/world/asia-pacific/japan-approves-additional-4-bln-chipmaker-rapidus-2026-04-11"
+    },
+    {
+      "q": "As of April 10, 2026, what was the worldwide gross of \"The Super Mario Galaxy Movie\"?",
+      "options": [
+        "$463 million",
+        "$310 million",
+        "$122.1 million",
+        "$257 million"
+      ],
+      "a": 0,
+      "correctText": "$463 million",
+      "category": "Business",
+      "source": "https://deadline.com/2026/04/box-office-super-mario-galaxy-movie-you-me-tuscany-1236786420/"
+    },
+    {
+      "q": "What are the key components of expanding revenue streams for a golf center, according to the Reddit post?",
+      "options": [
+        "Range, Mini-Golf, and Pitch & Putt",
+        "Driving Range, Pro Shop, and Restaurant",
+        "Lessons, Leagues, and Memberships",
+        "Cafe, Bar, and Event Rentals"
+      ],
+      "a": 0,
+      "correctText": "Range, Mini-Golf, and Pitch & Putt",
+      "category": "Business",
+      "source": "https://www.reddit.com/r/business/comments/1sje0wc/golf_expanding_revenue_streams_for_a_golf_center/"
+    },
+    {
+      "q": "What is 2Point Logistics recruiting across North America and Africa?",
+      "options": [
+        "Exclusive Location Partners",
+        "Delivery Drivers",
+        "Warehouse Managers",
+        "Logistics Software Engineers"
+      ],
+      "a": 0,
+      "correctText": "Exclusive Location Partners",
+      "category": "Business",
+      "source": "https://media.zernio.com/media/1775975248025_sq1ghdaw_1775923617850.jfif"
+    }
+  ]
+}

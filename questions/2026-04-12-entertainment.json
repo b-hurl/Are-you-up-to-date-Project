@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the title of Ben McKenzie's upcoming documentary about the cryptocurrency industry?",
+      "options": [
+        "Everyone Is Lying To You For Money",
+        "The Crypto Collapse",
+        "Digital Deception",
+        "Blockchain Betrayal"
+      ],
+      "a": 0,
+      "correctText": "Everyone Is Lying To You For Money",
+      "category": "Entertainment",
+      "source": "https://i.redd.it/5rp86y6t4aqg1.png"
+    },
+    {
+      "q": "What is the name of the pet rat James Cameron saved by performing CPR on during the filming of 'The Abyss'?",
+      "options": [
+        "Beanie",
+        "Abyss",
+        "Terminator",
+        "Oxygen"
+      ],
+      "a": 0,
+      "correctText": "Beanie",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sjag1g/after_a_rat_that_was_used_to_demonstrate_the/"
+    },
+    {
+      "q": "According to a Reddit headline, who directed the upcoming anti-crypto documentary 'Everyone Is Lying To You For Money'?",
+      "options": [
+        "Ben McKenzie",
+        "James Cameron",
+        "Steven Spielberg",
+        "John McTiernan"
+      ],
+      "a": 0,
+      "correctText": "Ben McKenzie",
+      "category": "Entertainment",
+      "source": "https://i.redd.it/5rp86y6t4aqg1.png"
+    },
+    {
+      "q": "Legendary Indian playback singer Asha Bhosle passed away at what age?",
+      "options": [
+        "92",
+        "90",
+        "94",
+        "89"
+      ],
+      "a": 0,
+      "correctText": "92",
+      "category": "Entertainment",
+      "source": "https://humenglish.com/latest/legendary-indian-playback-singer-asha-bhosle-passes-away-at-92/"
+    },
+    {
+      "q": "Which 1987 action film, directed by John McTiernan, features Arnold Schwarzenegger facing an extraterrestrial hunter?",
+      "options": [
+        "Predator",
+        "The Terminator",
+        "Die Hard",
+        "Commando"
+      ],
+      "a": 0,
+      "correctText": "Predator",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1siv64z/predator_1987_is_so_much_better_than_i/"
+    }
+  ]
+}
