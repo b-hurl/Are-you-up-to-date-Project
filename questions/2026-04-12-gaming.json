@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which PlayStation version of Dragon Age: Inquisition will have its servers shut down on April 28, 2026?",
+      "options": [
+        "PS4",
+        "PS3",
+        "PS Vita",
+        "PS2"
+      ],
+      "a": 1,
+      "correctText": "PS3",
+      "category": "Gaming",
+      "source": "https://kotaku.com/dragon-age-inquisition-servers-going-offline-later-this-month-2000686871"
+    },
+    {
+      "q": "What is the name of the hacker group that claimed responsibility for the data breach affecting Rockstar Games?",
+      "options": [
+        "Luminids Hackers",
+        "ShinyHunters",
+        "Anodot Crew",
+        "Rockstar Breakers"
+      ],
+      "a": 1,
+      "correctText": "ShinyHunters",
+      "category": "Gaming",
+      "source": "https://bsky.app/profile/kotaku.com/post/3mja6uc5isc2g"
+    },
+    {
+      "q": "What type of game is Luminids, developed by Luminids Studios?",
+      "options": [
+        "Action RPG",
+        "First-Person Shooter",
+        "Calm World-Building Simulation",
+        "Real-Time Strategy"
+      ],
+      "a": 2,
+      "correctText": "Calm World-Building Simulation",
+      "category": "Gaming",
+      "source": "https://www.reddit.com/r/Games/comments/1sjcqoi/luminids_luminids_studios_calm_worldbuilding_game/"
+    },
+    {
+      "q": "What is the name of the new content or update for Dome Keeper mentioned in the provided context?",
+      "options": [
+        "The Crystal Miner",
+        "The Beastmaster",
+        "The Alien Hunter",
+        "The Resource Gatherer"
+      ],
+      "a": 1,
+      "correctText": "The Beastmaster",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=ZHM7AfXQERU"
+    },
+    {
+      "q": "According to a statement by Rockstar Games, what was the impact of the recent data breach?",
+      "options": [
+        "Significant impact on players' accounts",
+        "Limited access to non-material company information with no impact on organization or players",
+        "The theft of all game source codes",
+        "A complete shutdown of all online services"
+      ],
+      "a": 1,
+      "correctText": "Limited access to non-material company information with no impact on organization or players",
+      "category": "Gaming",
+      "source": "https://bsky.app/profile/kotaku.com/post/3mja6uc5isc2g"
+    }
+  ]
+}

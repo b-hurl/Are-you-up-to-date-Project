@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-12",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which golfer achieved the first ace of the 90th Masters tournament on the sixth hole?",
+      "options": [
+        "Shane Lowry",
+        "Stewart Cink",
+        "Corey Conners",
+        "Adam Scott"
+      ],
+      "a": 0,
+      "correctText": "Shane Lowry",
+      "category": "Sports",
+      "source": "https://www.sportsnet.ca/hockey/article/denver-rallies-past-wisconsin-to-win-frozen-four/"
+    },
+    {
+      "q": "Who set a new Australian U20 record for the 200m with a time of 19.67 seconds?",
+      "options": [
+        "Gout Gout",
+        "Usain Bolt",
+        "Erriyon Knighton",
+        "Cameron Myers"
+      ],
+      "a": 0,
+      "correctText": "Gout Gout",
+      "category": "Sports",
+      "source": "https://v.redd.it/bd0qrbc1wpug1"
+    },
+    {
+      "q": "According to a UC San Diego study, what public health outcome is linked to flavored tobacco bans in California?",
+      "options": [
+        "Increased youth cigarette smoking",
+        "Lower youth vaping rates",
+        "No change in youth tobacco use",
+        "Increased adult vaping rates"
+      ],
+      "a": 1,
+      "correctText": "A UC San Diego study linked flavored tobacco bans to lower youth vaping in California. The study found that these policies were associated with sustained declines in youth vaping and did not find evidence that they led young people to switch to cigarettes.",
+      "category": "Health",
+      "source": "https://today.ucsd.edu/story/uc-san-diego-study-links-flavored-tobacco-bans-to-lower-youth-vaping-in-california"
+    },
+    {
+      "q": "Legendary Indian playback singer Asha Bhosle passed away at what age?",
+      "options": [
+        "92",
+        "90",
+        "94",
+        "89"
+      ],
+      "a": 0,
+      "correctText": "92",
+      "category": "Entertainment",
+      "source": "https://humenglish.com/latest/legendary-indian-playback-singer-asha-bhosle-passes-away-at-92/"
+    },
+    {
+      "q": "What is the age-related theme of a recent book list published by The Guardian?",
+      "options": [
+        "25 books to read before you turn 25",
+        "Books for your 20s",
+        "Top 25 books for young adults",
+        "Classics for a quarter-century"
+      ],
+      "a": 0,
+      "correctText": "25 books to read before you turn 25",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/ng-interactive/2026/apr/11/from-peepo-to-middlemarch-25-books-to-read-before-you-turn-25"
+    },
+    {
+      "q": "What is the name of the pet rat James Cameron saved by performing CPR on during the filming of 'The Abyss'?",
+      "options": [
+        "Beanie",
+        "Abyss",
+        "Terminator",
+        "Oxygen"
+      ],
+      "a": 0,
+      "correctText": "Beanie",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1sjag1g/after_a_rat_that_was_used_to_demonstrate_the/"
+    },
+    {
+      "q": "What was the underlying cause of a teen athlete's persistent, painful headache that took over a year to cure?",
+      "options": [
+        "A rare genetic disorder",
+        "Chronic dehydration",
+        "Concussions from youth football",
+        "Severe eyestrain"
+      ],
+      "a": 2,
+      "correctText": "The teen athlete's painful, persistent headache was a result of concussions sustained while playing youth football, leading to a persistent post-traumatic headache.",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/teen-athlete-youth-football-concussion-migraines-persistent-post-traumatic-headache/"
+    },
+    {
+      "q": "What modern space mission's vision is reflected in a 19th-century novel by Jules Verne?",
+      "options": [
+        "Artemis II",
+        "Starship",
+        "Orion",
+        "Gateway"
+      ],
+      "a": 0,
+      "correctText": "Artemis II",
+      "category": "Books",
+      "source": "https://theconversation.com/artemis-ii-moonshot-reflects-a-spacefaring-vision-present-in-jules-vernes-19th-century-novel-280252"
+    },
+    {
+      "q": "Which team rallied in the third period to capture the NCAA Frozen Four title?",
+      "options": [
+        "Denver",
+        "Wisconsin",
+        "Michigan",
+        "Minnesota"
+      ],
+      "a": 0,
+      "correctText": "Denver",
+      "category": "Sports",
+      "source": "https://www.sportsnet.ca/hockey/article/denver-rallies-past-wisconsin-to-win-frozen-four/"
+    },
+    {
+      "q": "Which 1987 action film, directed by John McTiernan, features Arnold Schwarzenegger facing an extraterrestrial hunter?",
+      "options": [
+        "Predator",
+        "The Terminator",
+        "Die Hard",
+        "Commando"
+      ],
+      "a": 0,
+      "correctText": "Predator",
+      "category": "Entertainment",
+      "source": "https://www.reddit.com/r/movies/comments/1siv64z/predator_1987_is_so_much_better_than_i/"
+    }
+  ]
+}

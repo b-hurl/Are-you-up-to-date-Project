@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What security group has claimed responsibility for the hack on Rockstar Games, demanding a ransom by April 14th?",
+      "options": [
+        "ShinyHunters",
+        "Lapsus$",
+        "Anonymous",
+        "APT28"
+      ],
+      "a": 0,
+      "correctText": "ShinyHunters",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/cyber-security/rockstar-games-confirms-it-was-hacked-by-malicious-group-shinyhunters-takes-credit-gives-until-april-14-to-pay-ransom-or-risk-leaking-confidential-data-shinyhunters"
+    },
+    {
+      "q": "According to Palantir CEO Alex Karp, which two types of individuals are most likely to thrive in the age of AI?",
+      "options": [
+        "Those with vocational training and the neurodivergent",
+        "STEM graduates and entrepreneurs",
+        "Creative artists and philosophers",
+        "Data scientists and programmers"
+      ],
+      "a": 0,
+      "correctText": "Those with vocational training and the neurodivergent",
+      "category": "Technology",
+      "source": "https://fortune.com/article/palantir-ceo-alex-karp-ai-humanities-jobs-vocational-training/"
+    },
+    {
+      "q": "What specific Windows 11 updates have been confirmed to cause issues with the 'Reset this PC' function on certain systems?",
+      "options": [
+        "KB5077212 and KB5079420",
+        "KB5070001 and KB5071002",
+        "KB5075000 and KB5076001",
+        "KB5060001 and KB5061001"
+      ],
+      "a": 0,
+      "correctText": "KB5077212 and KB5079420",
+      "category": "Technology",
+      "source": "https://www.neowin.net/news/microsoft-confirms-windows-11-kb5077212-kb5079420-break-pc-reset-on-25h2-and-24h2-systems/"
+    },
+    {
+      "q": "OpenAI is backing an Illinois state bill that aims to shield AI companies from lawsuits for what type of harm?",
+      "options": [
+        "Catastrophic harm",
+        "Minor glitches",
+        "Data privacy violations",
+        "Copyright infringement"
+      ],
+      "a": 0,
+      "correctText": "Catastrophic harm",
+      "category": "Technology",
+      "source": "https://qz.com/openai-illinois-bill-ai-liability-critical-harm-041026"
+    },
+    {
+      "q": "Microsoft has begun removing which AI-related buttons from certain Windows 11 applications like Notepad?",
+      "options": [
+        "Copilot buttons",
+        "Cortana buttons",
+        "Bing AI buttons",
+        "Windows Hello buttons"
+      ],
+      "a": 0,
+      "correctText": "Copilot buttons",
+      "category": "Technology",
+      "source": "https://www.engadget.com/ai/microsoft-starts-removing-unnecessary-copilot-buttons-in-windows-11-120346728.html"
+    }
+  ]
+}

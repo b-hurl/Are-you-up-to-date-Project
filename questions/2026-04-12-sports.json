@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who set a new Australian U20 record for the 200m with a time of 19.67 seconds?",
+      "options": [
+        "Gout Gout",
+        "Usain Bolt",
+        "Erriyon Knighton",
+        "Cameron Myers"
+      ],
+      "a": 0,
+      "correctText": "Gout Gout",
+      "category": "Sports",
+      "source": "https://v.redd.it/bd0qrbc1wpug1"
+    },
+    {
+      "q": "Which golfer achieved the first ace of the 90th Masters tournament on the sixth hole?",
+      "options": [
+        "Shane Lowry",
+        "Stewart Cink",
+        "Corey Conners",
+        "Adam Scott"
+      ],
+      "a": 0,
+      "correctText": "Shane Lowry",
+      "category": "Sports",
+      "source": "https://www.sportsnet.ca/hockey/article/denver-rallies-past-wisconsin-to-win-frozen-four/"
+    },
+    {
+      "q": "Which team rallied in the third period to capture the NCAA Frozen Four title?",
+      "options": [
+        "Denver",
+        "Wisconsin",
+        "Michigan",
+        "Minnesota"
+      ],
+      "a": 0,
+      "correctText": "Denver",
+      "category": "Sports",
+      "source": "https://www.sportsnet.ca/hockey/article/denver-rallies-past-wisconsin-to-win-frozen-four/"
+    },
+    {
+      "q": "The Boston Celtics tied an NBA record with how many 3-pointers in a game?",
+      "options": [
+        "29",
+        "25",
+        "30",
+        "27"
+      ],
+      "a": 0,
+      "correctText": "29",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48453131/celtics-tie-nba-record-29-3s-clinch-no-2-seed"
+    },
+    {
+      "q": "What was the total purse for the 2026 Masters Tournament?",
+      "options": [
+        "$22.5 million",
+        "$21 million",
+        "$20 million",
+        "$25 million"
+      ],
+      "a": 0,
+      "correctText": "$22.5 million",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48457777/masters-purse-increases-225m-winner-get-45m"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In April 2026, what action did a judge take regarding Arizona's regulation of prediction market operators like Kalshi?",
+      "options": [
+        "Barred Arizona from regulating them and paused prosecution of Kalshi",
+        "Upheld Arizona's right to regulate and ordered Kalshi's immediate prosecution",
+        "Mandated federal oversight for all prediction market operators in Arizona",
+        "Required Kalshi to cease all operations in Arizona permanently"
+      ],
+      "a": 0,
+      "correctText": "Barred Arizona from regulating them and paused prosecution of Kalshi",
+      "category": "Usa",
+      "source": "https://apnews.com/article/arizona-kalshi-criminal-charges-prediction-markets-gambling-bb7cef24be5bd0d444bba670d2e41ceb"
+    },
+    {
+      "q": "Where did the IRAN-US talks that concluded on April 11, 2026, take place?",
+      "options": [
+        "Islamabad",
+        "Tehran",
+        "Washington D.C.",
+        "Geneva"
+      ],
+      "a": 0,
+      "correctText": "Islamabad",
+      "category": "Usa",
+      "source": "https://www.reuters.com/world/asia-pacific/us-iran-talks-pause-now-disagreements-remain-2026-04-11/"
+    },
+    {
+      "q": "For what purpose do Pa. county jails reportedly earn millions of dollars from the federal government?",
+      "options": [
+        "Detaining immigrants for ICE",
+        "Providing legal aid to immigrants",
+        "Housing federal inmates for other agencies",
+        "Funding local law enforcement training programs"
+      ],
+      "a": 0,
+      "correctText": "Detaining immigrants for ICE",
+      "category": "Usa",
+      "source": "https://www.spotlightpa.org/news/2026/04/pennsylvania-ice-detention-jails-counties-money-federal-government/"
+    },
+    {
+      "q": "What action did a federal judge take regarding the $6.2 billion merger of local TV giants Nexstar and Tegna in April 2026?",
+      "options": [
+        "Extended a restraining order on the merger",
+        "Approved the merger to proceed immediately",
+        "Requested a renegotiation of the merger terms",
+        "Permanently blocked the merger"
+      ],
+      "a": 0,
+      "correctText": "Extended a restraining order on the merger",
+      "category": "Usa",
+      "source": "https://apnews.com/article/nexstar-tenga-tv-merger-settlement-fcc-lawsuit-72bdd9927bef9d7a0a014eda13d32ff1"
+    },
+    {
+      "q": "How many people were reported hurt in the stabbings on the New York subway on April 11, 2026, before officers shot a knife-wielding man?",
+      "options": [
+        "3",
+        "1",
+        "5",
+        "2"
+      ],
+      "a": 0,
+      "correctText": "3",
+      "category": "Usa",
+      "source": "https://apnews.com/article/new-york-subway-station-injuries-hospital-1cd670e7e0a302e2d51f851a74247bfd"
+    }
+  ]
+}

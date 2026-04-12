@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to JD Vance, what was the primary reason for the failure of the U.S.-Iran talks on April 12, 2026?",
+      "options": [
+        "Iran’s refusal to give up its nuclear programme",
+        "Disagreements over oil production quotas",
+        "Disputes regarding regional alliances",
+        "Concerns about human rights violations"
+      ],
+      "a": 0,
+      "correctText": "Iran’s refusal to give up its nuclear programme",
+      "category": "World",
+      "source": "https://www.theguardian.com/world/2026/apr/12/jd-vance-says-no-deal-us-iran-pakistan-talks-islamabad"
+    },
+    {
+      "q": "Which country recently deployed 13,000 troops and fighter jets to Saudi Arabia?",
+      "options": [
+        "Pakistan",
+        "Egypt",
+        "Turkey",
+        "Indonesia"
+      ],
+      "a": 0,
+      "correctText": "Pakistan",
+      "category": "World",
+      "source": "https://www.thehindu.com/news/international/pakistan-deploys-13000-troops-and-fighter-jets-to-saudi-araba/article70853223.ece"
+    },
+    {
+      "q": "After the failure of Iran peace talks, what action did Trump state the U.S. would take regarding the Strait of Hormuz?",
+      "options": [
+        "Blockade it",
+        "Increase naval patrols",
+        "Send humanitarian aid",
+        "Initiate joint military exercises"
+      ],
+      "a": 0,
+      "correctText": "Blockade it",
+      "category": "World",
+      "source": "https://www.cnbc.com/2026/04/12/trump-iran-war-strait-of-hormuz.html"
+    },
+    {
+      "q": "In which European country did a majority of citizens express belief that the April 12 election would be rigged or manipulated?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Romania",
+        "Bulgaria"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://tvpworld.com/92475589/hungary-almost-80-of-public-fear-april-12-election-rigging"
+    },
+    {
+      "q": "According to Carney, which country announced its intention to end the '70 Cents to US' defence spending model?",
+      "options": [
+        "Canada",
+        "Australia",
+        "New Zealand",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://www.outlookindia.com/international/canada-to-end-70-cents-to-us-defence-spending-model-carney"
+    }
+  ]
+}
