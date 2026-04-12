@@ -197,6 +197,13 @@ async function runAutomation() {
             delete _503attempts[category];
 
             const newsPool = redditData
+                .filter(item => {
+                    const match = (item.content || "").match(/href="([^"]+)">\[link\]/);
+                    const sourceUrl = match ? match[1] : item.link;
+                    const isReddit = sourceUrl.includes('reddit.com');
+                    const isOld = /years ago|anniversary|retro/i.test(item.title);
+                    return !isReddit && !isOld;
+                })
                 .slice(0, 8)
                 .map(item => {
                     // Reddit RSS embeds the external article URL in the HTML content as "[link]"
@@ -212,30 +219,30 @@ async function runAutomation() {
             }
 
             // The "Triple-Lock" Prompt (Verify, Format, Fact-Check)
-            const prompt = `Today's Date: ${dateStr}
+            const prompt = `Role: Professional Fact-Checker and Trivia Journalist
+Today's Date: ${dateStr}
 Target Category: ${category}
 
-Task: Generate 5 trivia questions based EXCLUSIVELY on the high-quality news headlines provided in the Reddit context below.
+Instructions:
+1. LEADS: Use the following Reddit context ONLY as a list of potential news leads.
+2. VERIFICATION: For each lead, you MUST verify the facts via Google Search to ensure the event actually occurred on or around ${dateStr}.
+3. NO REDDIT SOURCES: The "source" field in your JSON must be a legitimate news outlet (e.g., CBC, Reuters, BBC, IGN, etc.). Never use a reddit.com link as the source.
+4. DISCARD OLD NEWS: If a link refers to a movie, game, or event older than 48 hours, discard it immediately. We only want "Today's News."
+5. JSON ONLY: Return nothing but the JSON object.
 
-Reddit Context:
+Reddit Context (Leads Only):
 ${newsPool}
 
-Strict Rules for Trivia Generation:
-1. DATE VERIFICATION: Only use news that occurred on or within 24 hours of ${dateStr}.
-2. URL INTEGRITY: The "source" field MUST be the direct URL from the Reddit context. Do NOT shorten it, do NOT alter it, and do NOT invent a new URL. If a URL is missing or looks like a broken placeholder (e.g., "[link]"), discard that news item.
-3. FACTUALITY: Only use objective, hard news. If a story is labeled as "Rumor," "Leak," "Opinion," or "Discussion," skip it.
-4. VARIETY: Ensure the four options provided for each question are plausible but distinct.
-
-JSON Output Format (Return ONLY the object):
+JSON Structure:
 {
   "questions": [
     {
-      "q": "Clear, concise question?",
-      "options": ["Correct Answer", "Distractor 1", "Distractor 2", "Distractor 3"],
+      "q": "Question text based on verified 2026 news?",
+      "options": ["Correct Answer", "Wrong", "Wrong", "Wrong"],
       "a": 0,
       "correctText": "Correct Answer",
       "category": "${category.charAt(0).toUpperCase() + category.slice(1)}",
-      "source": "https://actual-url-from-context.com"
+      "source": "https://verified-news-site.com/article-slug"
     }
   ]
 }`;
