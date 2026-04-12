@@ -247,7 +247,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     };
 
     const renderMainMenu = () => (
-        <MenuView title="Are You Up To Date?" footer="Each round consists of 5 questions.">
+        <MenuView title="Are You Up To Date?" footer="The Gauntlet mode contains 10 questions from various categories. Categories mode has 5 questions from a single topic.">
             <div className="grid grid-cols-1 gap-4 mb-8">
                 <MenuButton
                     onClick={() => handleGameModeSelection('solo')}
