@@ -2301,6 +2301,7 @@ async function create1v1Challenge() {
         });
 
         activeChallengeId = challengeId;
+        trackChallengeLocally(challengeId);
         openInviteModal(challengeId);
         
         // Track active challenges with their IDs to allow revoking
@@ -2329,21 +2330,51 @@ async function create1v1Challenge() {
     }
 }
 
+// Helper to track challenge IDs locally so anonymous users can see them later
+function trackChallengeLocally(challengeId) {
+    try {
+        const myChallenges = JSON.parse(localStorage.getItem('trivia-my-challenge-ids') || '[]');
+        if (!myChallenges.includes(challengeId)) {
+            myChallenges.push(challengeId);
+            localStorage.setItem('trivia-my-challenge-ids', JSON.stringify(myChallenges));
+        }
+    } catch (e) { console.error("Error tracking challenge locally", e); }
+}
+
 async function fetchMyChallenges() {
     if (!db || !userId) return [];
     try {
-        // Fetch challenges where user is either p1 or p2
-        const p1Query = db.collection('challenges').where('p1.uid', '==', userId).get();
-        const p2Query = db.collection('challenges').where('p2.uid', '==', userId).get();
-        
-        const [p1Snap, p2Snap] = await Promise.all([p1Query, p2Query]);
         const challenges = [];
+        const myIds = JSON.parse(localStorage.getItem('trivia-my-challenge-ids') || '[]');
         
-        p1Snap.forEach(doc => challenges.push({ id: doc.id, ...doc.data(), role: 'p1' }));
-        p2Snap.forEach(doc => challenges.push({ id: doc.id, ...doc.data(), role: 'p2' }));
-        
-        // Sort by creation time (most recent first)
-        return challenges.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+        // 1. Fetch specific IDs from local storage (Crucial for Guests/P2)
+        if (myIds.length > 0) {
+            const docPromises = myIds.map(id => db.collection('challenges').doc(id).get());
+            const snapshots = await Promise.all(docPromises);
+            
+            snapshots.forEach(doc => {
+                if (doc.exists) {
+                    const data = doc.data();
+                    const role = data.p1.uid === userId ? 'p1' : (data.p2 && data.p2.uid === userId ? 'p2' : null);
+                    if (role) challenges.push({ id: doc.id, ...data, role });
+                }
+            });
+        }
+
+        // 2. Fallback: If logged in, also do the collection query to sync other devices
+        if (auth && auth.currentUser) {
+            const p1Snap = await db.collection('challenges').where('p1.uid', '==', userId).get();
+            const p2Snap = await db.collection('challenges').where('p2.uid', '==', userId).get();
+            
+            p1Snap.forEach(doc => { if (!challenges.find(c => c.id === doc.id)) challenges.push({ id: doc.id, ...doc.data(), role: 'p1' }); });
+            p2Snap.forEach(doc => { if (!challenges.find(c => c.id === doc.id)) challenges.push({ id: doc.id, ...doc.data(), role: 'p2' }); });
+        }
+
+        // Sort most recent first
+        const sorted = challenges.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+        // Sync local storage with current list
+        localStorage.setItem('trivia-my-challenge-ids', JSON.stringify(sorted.map(c => c.id)));
+        return sorted;
     } catch (e) {
         console.error("Error fetching my challenges:", e);
         return [];
@@ -4000,6 +4031,8 @@ async function handle1v1Challenge(challengeId) {
             });
 
             activeChallengeId = challengeId;
+            trackChallengeLocally(challengeId);
+            
             gameConfig.gameMode = 'multiplayer';
             gameConfig.activeSelection = data.category;
             
@@ -4103,7 +4136,23 @@ function copyInviteLinkFromModal() {
     const isChallenge = currentInviteGroupId && currentInviteGroupId.startsWith('1v1_');
     url.searchParams.set(isChallenge ? 'challenge' : 'group', currentInviteGroupId);
     
-    navigator.clipboard.writeText(url.toString()).then(() => {
+    let textToCopy = url.toString();
+    
+    if (isChallenge) {
+        const today = getGameDate();
+        const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+        const todayChallenges = activeAll[today] || {};
+        // Determine category from local tracking or current config
+        const category = Object.keys(todayChallenges).find(key => todayChallenges[key] === currentInviteGroupId) || gameConfig.activeSelection || "Trivia";
+        
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        const p1ScoreEntry = archive[today]?.[category];
+        const scoreStr = p1ScoreEntry !== undefined ? ` (My Score: ${p1ScoreEntry.score}/5)` : "";
+        
+        textToCopy = `I challenge you to a 1v1 in ${category}!${scoreStr}\nPlay here: ${url.toString()}`;
+    }
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
         const btnText = document.getElementById('btn-copy-link-text');
         btnText.innerText = "Copied!";
 

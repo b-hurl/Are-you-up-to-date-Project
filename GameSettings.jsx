@@ -65,6 +65,16 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     });
     const [challenges, setChallenges] = useState(null);
     const [notificationCount, setNotificationCount] = useState(0);
+    const [isLoggedIn, setIsLoggedIn] = useState(!!(window.firebase && window.firebase.auth && window.firebase.auth().currentUser));
+    const [isGuestPreview, setIsGuestPreview] = useState(false);
+
+    useEffect(() => {
+        if (!window.firebase || !window.firebase.auth) return;
+        const unsubscribe = window.firebase.auth().onAuthStateChanged(user => {
+            setIsLoggedIn(!!user);
+        });
+        return () => unsubscribe();
+    }, []);
 
     const CATEGORIES = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
 
@@ -77,6 +87,11 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             gauntletMode: currentConfig?.gauntletMode || null,
             activeSelection: currentConfig?.activeSelection || null
         });
+
+        // Reset guest preview state if we navigate away from multiplayer mode
+        if (currentConfig?.gameMode !== 'multiplayer') {
+            setIsGuestPreview(false);
+        }
     }, [currentConfig]);
 
     // Check for challenge notifications
@@ -158,17 +173,6 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     };
 
     const handleMultiSubModeSelection = async (subMode) => {
-        if (subMode === 'gauntlet') {
-            const isLoggedIn = window.firebase && window.firebase.auth && window.firebase.auth().currentUser;
-            if (!isLoggedIn) {
-                if (window.showGauntletAuthPrompt) {
-                    await window.showGauntletAuthPrompt();
-                } else {
-                    alert("You must be logged in to play the Multiplayer Gauntlet.");
-                }
-                return; // Stay on the multiplayer menu
-            }
-        }
         if (subMode === 'categories') {
             const currentName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
             if (!currentName || currentName.trim() === "") {
@@ -262,8 +266,40 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         </MenuView>
     );
 
+    const renderMultiplayerLocked = () => (
+        <MenuView title="Multiplayer" onBack={() => handleGameModeSelection(null)} backLabel="Back to Main Menu">
+            <div className="bg-slate-900/40 border border-slate-700/50 p-8 rounded-3xl text-center mb-8 animate-fade-in shadow-inner">
+                 <div className="text-5xl mb-4">🔐</div>
+                 <h3 className="text-xl font-bold text-white mb-2">Account Required</h3>
+                 <p className="text-slate-400 text-sm mb-6 leading-relaxed">
+                     Sign in to track 1v1 records, join group leaderboards, and save your stats across devices.
+                 </p>
+                 <div className="space-y-3">
+                     <button 
+                         onClick={() => window.toggleLoginModal && window.toggleLoginModal()}
+                         className="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-black text-white shadow-lg shadow-primary-500/20 transition-all transform active:scale-95"
+                     >
+                         Sign In to Unlock
+                     </button>
+                     <button 
+                         onClick={() => setIsGuestPreview(true)}
+                         className="w-full bg-slate-800 hover:bg-slate-700 py-3 rounded-xl font-bold text-slate-400 hover:text-white transition-all text-xs uppercase tracking-widest"
+                     >
+                         Explore as Guest (Limited)
+                     </button>
+                 </div>
+             </div>
+        </MenuView>
+    );
+
     const renderMultiSubMenu = () => (
         <MenuView title="Multiplayer" onBack={() => handleGameModeSelection(null)} backLabel="Back to Main Menu">
+            {!isLoggedIn && (
+                <div className="mb-6 p-3 bg-amber-900/20 border border-amber-500/30 rounded-xl text-center animate-fade-in">
+                    <p className="text-[10px] text-amber-400 font-bold uppercase tracking-widest">Guest Preview Mode</p>
+                    <p className="text-[9px] text-slate-400">Leaderboards and creating challenges require an account.</p>
+                </div>
+            )}
             <div className="grid grid-cols-1 gap-4 mb-8">
                 <MenuButton
                     onClick={() => handleMultiSubModeSelection('gauntlet')}
@@ -337,7 +373,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                 isSelected={config.gauntletMode === m.id}
                                 isDisabled={isPlayed}
                                 title={m.title}
-                                description={isPlayed ? (
+                                description={!isLoggedIn && isMulti ? "Account required for Leaderboards" : isPlayed ? (
                                     savedScore !== undefined 
                                         ? `Daily Score: ${savedScore}/10 ${isMulti ? '⚔️' : ''}` 
                                         : 'Completed for Today'
@@ -379,143 +415,157 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         </div>
                     ) : (
                         <p className="text-slate-400 text-sm text-center">
-                            Challenge a friend in {config.activeSelection}! Generate your 1v1 link, then play to set the score they need to beat.
+                            Challenge a friend in {config.activeSelection}! {isLoggedIn ? 'Generate your 1v1 link, then play to set the score they need to beat.' : 'Sign in to create a custom invite and track your versus history.'}
                         </p>
                     )}
-                    <button 
-                        onClick={() => window.prepareAndCreateChallenge(config.activeSelection)}
-                        className="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-black text-white transition-all shadow-lg shadow-primary-500/20"
-                    >
-                        {savedScore !== undefined ? "Create Challenge with This Score" : "Create Challenge Link"}
-                    </button>
+                    {isLoggedIn ? (
+                        <button 
+                            onClick={() => window.prepareAndCreateChallenge(config.activeSelection)}
+                            className="w-full bg-primary-600 hover:bg-primary-500 py-4 rounded-2xl font-black text-white transition-all shadow-lg shadow-primary-500/20"
+                        >
+                            {savedScore !== undefined ? "Create Challenge with This Score" : "Create Challenge Link"}
+                        </button>
+                    ) : (
+                        <button 
+                            onClick={() => window.toggleLoginModal && window.toggleLoginModal()}
+                            className="w-full bg-slate-700 hover:bg-slate-600 py-4 rounded-2xl font-black text-white transition-all"
+                        >
+                            Sign In to Create Challenge
+                        </button>
+                    )}
                 </div>
             </MenuView>
         );
     };
 
-    const renderMyChallenges = () => (
-        <MenuView title="My Challenges" onBack={() => handleMultiSubModeSelection(null)} backLabel="Back to Multiplayer">
-            <div className="space-y-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
-                {challenges === null ? (
-                    <p className="text-center text-slate-500 text-xs animate-pulse py-8">Loading challenges...</p>
-                ) : challenges.length === 0 ? (
-                    <p className="text-center text-slate-500 text-xs py-8 bg-slate-900/30 rounded-2xl border border-slate-700/30">No challenges found yet.</p>
-                ) : (
-                    challenges.map(c => {
-                        const isP1 = c.role === 'p1';
-                        const opponent = isP1 ? c.p2 : c.p1;
-                        const myData = isP1 ? c.p1 : c.p2;
-                        const oppData = opponent;
-                        const isCompleted = c.status === 'completed';
-                        const isRefused = c.status === 'refused';
-                        const isWinner = isCompleted && myData.score > (oppData?.score || 0);
-                        
-                        let resultLabel = '';
-                        if (isCompleted && oppData && oppData.completed) {
-                            if (myData.score > oppData.score) resultLabel = 'WIN';
-                            else if (myData.score < oppData.score) resultLabel = 'LOSS';
-                            else resultLabel = 'TIE';
-                        }
+    const renderMyChallenges = () => {
+        const today = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
 
-                        return (
-                            <div key={c.id} className="bg-slate-700/50 border border-slate-600 p-4 rounded-2xl animate-fade-in">
-                                <div className="flex justify-between items-start mb-2">
-                                    <div>
-                                        <span className="text-[10px] text-primary-400 font-bold uppercase tracking-widest block">
-                                            {c.category} • {c.date} {resultLabel && <span className={`ml-2 px-1.5 py-0.5 rounded ${resultLabel === 'WIN' ? 'bg-emerald-500 text-white' : resultLabel === 'LOSS' ? 'bg-red-500 text-white' : 'bg-slate-500 text-white'}`}>{resultLabel}</span>}
+        return (
+            <MenuView title="My Challenges" onBack={() => handleMultiSubModeSelection(null)} backLabel="Back to Multiplayer">
+                <div className="space-y-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
+                    {challenges === null ? (
+                        <p className="text-center text-slate-500 text-xs animate-pulse py-8">Loading challenges...</p>
+                    ) : challenges.length === 0 ? (
+                        <p className="text-center text-slate-500 text-xs py-8 bg-slate-900/30 rounded-2xl border border-slate-700/30">No challenges found yet.</p>
+                    ) : (
+                        challenges.map(c => {
+                            const isP1 = c.role === 'p1';
+                            const opponent = isP1 ? c.p2 : c.p1;
+                            const myData = isP1 ? c.p1 : c.p2;
+                            const oppData = opponent;
+                            const isCompleted = c.status === 'completed';
+                            const isRefused = c.status === 'refused';
+                            const isWinner = isCompleted && myData.score > (oppData?.score || 0);
+                            const canRematch = isCompleted && c.date !== today;
+                            
+                            let resultLabel = '';
+                            if (isCompleted && oppData && oppData.completed) {
+                                if (myData.score > oppData.score) resultLabel = 'WIN';
+                                else if (myData.score < oppData.score) resultLabel = 'LOSS';
+                                else resultLabel = 'TIE';
+                            }
+
+                            return (
+                                <div key={c.id} className="bg-slate-700/50 border border-slate-600 p-4 rounded-2xl animate-fade-in">
+                                    <div className="flex justify-between items-start mb-2">
+                                        <div>
+                                            <span className="text-[10px] text-primary-400 font-bold uppercase tracking-widest block">
+                                                {c.category} • {c.date} {resultLabel && <span className={`ml-2 px-1.5 py-0.5 rounded ${resultLabel === 'WIN' ? 'bg-emerald-500 text-white' : resultLabel === 'LOSS' ? 'bg-red-500 text-white' : 'bg-slate-500 text-white'}`}>{resultLabel}</span>}
+                                            </span>
+                                            <span className="text-sm font-bold text-white">vs {oppData && oppData.name ? oppData.name : 'Waiting...'}</span>
+                                        </div>
+                                        <span className={`text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-tighter ${
+                                            isCompleted ? 'bg-emerald-500/20 text-emerald-400' : 
+                                            isRefused ? 'bg-red-500/20 text-red-400' : 'bg-yellow-500/20 text-yellow-400'
+                                        }`}>
+                                            {c.status}
                                         </span>
-                                        <span className="text-sm font-bold text-white">vs {oppData && oppData.name ? oppData.name : 'Waiting...'}</span>
                                     </div>
-                                    <span className={`text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-tighter ${
-                                        isCompleted ? 'bg-emerald-500/20 text-emerald-400' : 
-                                        isRefused ? 'bg-red-500/20 text-red-400' : 'bg-yellow-500/20 text-yellow-400'
-                                    }`}>
-                                        {c.status}
-                                    </span>
-                                </div>
-                                <div className="flex justify-between items-center text-xs">
-                                    <span className="text-slate-400">Score: <strong className="text-white">{myData.score}/5</strong></span>
-                                    <span className="text-slate-400">Opponent: <strong className="text-white">{oppData && oppData.completed ? oppData.score + '/5' : '...'}</strong></span>
-                                </div>
-
-                                {c.inviteTaunt && (
-                                    <div className="mt-3 p-2 bg-slate-900/50 rounded-lg border border-slate-700">
-                                        <p className="text-[9px] text-slate-500 uppercase font-black mb-1">Invite Taunt</p>
-                                        <p className="text-xs text-slate-300 italic">"{c.inviteTaunt}"</p>
+                                    <div className="flex justify-between items-center text-xs">
+                                        <span className="text-slate-400">Score: <strong className="text-white">{myData.score}/5</strong></span>
+                                        <span className="text-slate-400">Opponent: <strong className="text-white">{oppData && oppData.completed ? oppData.score + '/5' : '...'}</strong></span>
                                     </div>
-                                )}
 
-                                {isCompleted && (
-                                    <div className="mt-3 p-2 bg-primary-900/20 rounded-lg border border-primary-500/20">
-                                        <p className="text-[9px] text-primary-400 uppercase font-black mb-1">Victory Message</p>
-                                        {c.victoryTaunt ? (
-                                            <p className="text-xs text-white italic">"{c.victoryTaunt}"</p>
-                                        ) : (
-                                            <p className="text-xs text-slate-500 italic">No victory taunt set.</p>
-                                        )}
-                                        {isWinner && (
-                                            <button 
-                                                onClick={() => window.set1v1VictoryTaunt(c.id)}
-                                                className="mt-2 text-[9px] text-primary-400 hover:text-white uppercase font-bold"
-                                            >
-                                                {c.victoryTaunt ? '✎ Edit Victory Taunt' : '+ Set Victory Taunt'}
-                                            </button>
-                                        )}
-                                    </div>
-                                )}
+                                    {c.inviteTaunt && (
+                                        <div className="mt-3 p-2 bg-slate-900/50 rounded-lg border border-slate-700">
+                                            <p className="text-[9px] text-slate-500 uppercase font-black mb-1">Invite Taunt</p>
+                                            <p className="text-xs text-slate-300 italic">"{c.inviteTaunt}"</p>
+                                        </div>
+                                    )}
 
-                                {isP1 && (
-                                    <div className="mt-3 flex gap-2">
-                                        {(c.status === 'pending' || c.status === 'refused') && (
-                                            <button 
-                                                onClick={() => {
-                                                    onUpdate({ activeSelection: c.category });
-                                                    window.openInviteModal(c.id);
-                                                }}
-                                                className="flex-1 bg-primary-600/20 hover:bg-primary-600/40 text-primary-300 border border-primary-500/30 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
-                                            >
-                                                Send to Someone Else
-                                            </button>
-                                        )}
-                                        {(c.status === 'pending' || c.status === 'refused' || c.status === 'accepted') && (
+                                    {isCompleted && (
+                                        <div className="mt-3 p-2 bg-primary-900/20 rounded-lg border border-primary-500/20">
+                                            <p className="text-[9px] text-primary-400 uppercase font-black mb-1">Victory Message</p>
+                                            {c.victoryTaunt ? (
+                                                <p className="text-xs text-white italic">"{c.victoryTaunt}"</p>
+                                            ) : (
+                                                <p className="text-xs text-slate-500 italic">No victory taunt set.</p>
+                                            )}
+                                            {isWinner && (
+                                                <button 
+                                                    onClick={() => window.set1v1VictoryTaunt(c.id)}
+                                                    className="mt-2 text-[9px] text-primary-400 hover:text-white uppercase font-bold"
+                                                >
+                                                    {c.victoryTaunt ? '✎ Edit Victory Taunt' : '+ Set Victory Taunt'}
+                                                </button>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    {isP1 && (
+                                        <div className="mt-3 flex gap-2">
+                                            {(c.status === 'pending' || c.status === 'refused') && (
+                                                <button 
+                                                    onClick={() => {
+                                                        onUpdate({ activeSelection: c.category });
+                                                        window.openInviteModal(c.id);
+                                                    }}
+                                                    className="flex-1 bg-primary-600/20 hover:bg-primary-600/40 text-primary-300 border border-primary-500/30 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
+                                                >
+                                                    Send to Someone Else
+                                                </button>
+                                            )}
+                                            {(c.status === 'pending' || c.status === 'refused' || c.status === 'accepted') && (
+                                                <button 
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        window.revokeChallenge(c.id);
+                                                        // Refresh the list immediately
+                                                        window.fetchMyChallenges().then(setChallenges);
+                                                    }}
+                                                    className="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
+                                                >
+                                                    Revoke
+                                                </button>
+                                            )}
+                                        </div>
+                                    )}
+                                    {canRematch && (
+                                        <div className="mt-3">
                                             <button 
                                                 onClick={(e) => {
                                                     e.stopPropagation();
-                                                    window.revokeChallenge(c.id);
-                                                    // Refresh the list immediately
-                                                    window.fetchMyChallenges().then(setChallenges);
+                                                    if (window.handleRematch) {
+                                                        window.handleRematch(c.id).then(() => {
+                                                            window.fetchMyChallenges().then(setChallenges);
+                                                        });
+                                                    }
                                                 }}
-                                                className="bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-3 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
+                                                className="w-full bg-emerald-600/20 hover:bg-emerald-600/40 text-emerald-300 border border-emerald-500/30 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
                                             >
-                                                Revoke
+                                                Rematch
                                             </button>
-                                        )}
-                                    </div>
-                                )}
-                                {isCompleted && (
-                                    <div className="mt-3">
-                                        <button 
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                if (window.handleRematch) {
-                                                    window.handleRematch(c.id).then(() => {
-                                                        window.fetchMyChallenges().then(setChallenges);
-                                                    });
-                                                }
-                                            }}
-                                            className="w-full bg-emerald-600/20 hover:bg-emerald-600/40 text-emerald-300 border border-emerald-500/30 py-2 rounded-xl text-[10px] font-black uppercase transition-all"
-                                        >
-                                            Rematch
-                                        </button>
-                                    </div>
-                                )}
-                            </div>
-                        );
-                    })
-                )}
-            </div>
-        </MenuView>
-    );
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })
+                    )}
+                </div>
+            </MenuView>
+        );
+    };
 
     const renderCategoryOptions = () => (
         <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
@@ -593,6 +643,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             if (config.soloSubMode === 'gauntlet') return renderGauntletOptions();
             if (config.soloSubMode === 'categories') return renderCategoryOptions();
         } else if (config.gameMode === 'multiplayer') {
+            if (!isLoggedIn && !isGuestPreview) return renderMultiplayerLocked();
             if (!config.multiSubMode) return renderMultiSubMenu();
             if (config.multiSubMode === 'gauntlet') return renderGauntletOptions();
             if (config.multiSubMode === 'my-challenges') return renderMyChallenges();
