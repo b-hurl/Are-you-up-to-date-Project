@@ -1,0 +1,95 @@
+{
+  "questions": [
+    {
+      "q": "Which tech CEO's home was targeted in two separate incidents, including a shooting and a Molotov cocktail attack, around April 13, 2026?",
+      "options": [
+        "Sam Altman",
+        "Elon Musk",
+        "Mark Zuckerberg",
+        "Tim Cook"
+      ],
+      "a": 0,
+      "correctText": "Sam Altman's home in San Francisco was targeted by gunfire and a Molotov cocktail attack. The shooting occurred around 1:40 a.m. on Sunday, April 13, 2026, following a Molotov cocktail attack on April 10, 2026.",
+      "category": "Technology",
+      "source": "https://cybernews.com/security/sam-altmans-home-targeted-in-second-attack/"
+    },
+    {
+      "q": "What significant discount is Polestar offering to Tesla owners on its 2025 Polestar 3 models through April 2026?",
+      "options": [
+        "$21,000",
+        "$15,000",
+        "$10,000",
+        "$5,000"
+      ],
+      "a": 0,
+      "correctText": "Polestar is offering incentives of up to $21,000 on its 2025 Polestar 3 electric SUVs to current Tesla owners, with the offers valid through the end of April 2026.",
+      "category": "Technology",
+      "source": "https://insideevs.com/news/792327/polestar-21000-usd-tesla-incentive-stackable/"
+    },
+    {
+      "q": "A Microsoft executive suggested that AI agents will need to acquire what for the software they use, similar to human employees?",
+      "options": [
+        "Software licenses",
+        "Hardware upgrades",
+        "Training data",
+        "Cloud storage"
+      ],
+      "a": 0,
+      "correctText": "Microsoft executive Rajesh Jha proposed that autonomous AI agents may need to acquire software licenses, effectively functioning as individual users or 'seats' within software systems, similar to human employees.",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/microsoft-executive-suggests-ai-agents-buy-software-licenses-seats-2026-4"
+    },
+    {
+      "q": "What is the duration of Iran's nationwide internet blackout as of April 12, 2026, making it the second-longest on record?",
+      "options": [
+        "Over 1,000 hours",
+        "Over 500 hours",
+        "Over 200 hours",
+        "Over 100 hours"
+      ],
+      "a": 0,
+      "correctText": "As of April 12, 2026, Iran's nationwide internet blackout has surpassed 1,000 hours, becoming the second-longest on record.",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/iran-passes-1000-hours-offline"
+    },
+    {
+      "q": "Apple Maps is accused of removing town and village names across which country, a situation that has arisen amidst ongoing conflict?",
+      "options": [
+        "Lebanon",
+        "Syria",
+        "Iraq",
+        "Yemen"
+      ],
+      "a": 0,
+      "correctText": "Apple Maps has been accused of removing most town and village names across Lebanon, particularly in the southern region, while similar locations in Israel and Syria remain labeled. Apple has denied these claims, stating the locations were never featured.",
+      "category": "Technology",
+      "source": "https://www.wccftech.com/apple-maps-helping-israeli-incursion-into-lebanon-by-removing-place-names/"
+    },
+    {
+      "q": "What significant compensation package did Oracle's new CFO, Hilary Maxson, receive amidst recent layoffs?",
+      "options": [
+        "$26 million in stock",
+        "$10 million in stock",
+        "$5 million in stock",
+        "$1 million in stock"
+      ],
+      "a": 0,
+      "correctText": "Oracle's new CFO, Hilary Maxson, received equity awards valued at $26 million, consisting of time-based and performance-based components, as part of her compensation package. This occurred shortly after Oracle laid off approximately 30,000 employees.",
+      "category": "Technology",
+      "source": "https://finance.yahoo.com/markets/stocks/articles/oracles-cfo-got-26m-stock-184500098.html"
+    },
+    {
+      "q": "Former President Donald Trump praised Palantir Technologies for its 'great war fighting capabilities and equipment' amidst what ongoing geopolitical event?",
+      "options": [
+        "The Iran conflict",
+        "The Ukraine war",
+        "The Israel-Hamas war",
+        "The Taiwan Strait tensions"
+      ],
+      "a": 0,
+      "correctText": "Former President Donald Trump praised Palantir Technologies for its 'great war fighting capabilities and equipment,' a statement made while the company's stock was experiencing a downturn and amid the ongoing conflict involving Iran.",
+      "category": "Technology",
+      "source": "https://www.cnbc.com/2026/04/10/trump-pltr-palantir-stock-iran-conflict.html"
+    }
+  ]
+}

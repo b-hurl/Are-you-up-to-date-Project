@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "q": "New research suggests that painkillers can prevent pain responses in which aquatic animal, indicating a need for more humane methods of their disposal?",
+      "options": [
+        "Lobsters",
+        "Crabs",
+        "Octopuses",
+        "Fish"
+      ],
+      "a": 0,
+      "correctText": "Painkillers have been found to prevent pain responses in lobsters, providing evidence that crustaceans may feel pain and prompting discussions about more humane methods for their handling and disposal.",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1123639"
+    },
+    {
+      "q": "A study involving over 10,000 participants indicates that both short and long sleep durations in midlife are linked to an increased risk of what in later life?",
+      "options": [
+        "Physical frailty",
+        "Cognitive decline",
+        "Heart disease",
+        "Obesity"
+      ],
+      "a": 0,
+      "correctText": "Long-term cohort analysis of over 10,000 participants suggests that both short and long sleep durations during midlife are associated with a higher risk of developing physical frailty later in life.",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41598-026-39228-6"
+    },
+    {
+      "q": "Research exploring the potential of certain plants for metal extraction has identified which type of vegetable as a potential tool for mining valuable metals from contaminated soils?",
+      "options": [
+        "Leafy vegetables",
+        "Root vegetables",
+        "Legumes",
+        "Cruciferous vegetables"
+      ],
+      "a": 0,
+      "correctText": "Certain plants, identified as 'hyperaccumulators,' can extract valuable metals from contaminated soils through their roots and shoots. This ability has led to the identification of leafy vegetables as potential tools for metallurgical extraction and re-use in technologies.",
+      "category": "Science",
+      "source": "https://news.uq.edu.au/2026-04-leafy-vegetables-identified-potential-metal-mining-tools"
+    },
+    {
+      "q": "New research indicates that low doses of LSD can alter emotional brain responses in individuals with what condition?",
+      "options": [
+        "Mild depression",
+        "Anxiety",
+        "PTSD",
+        "Bipolar disorder"
+      ],
+      "a": 0,
+      "correctText": "A study has reported that low doses of LSD can alter emotional brain responses in individuals experiencing mild depression, pointing to specific shifts in electrical brain activity after administration.",
+      "category": "Science",
+      "source": "https://www.psypost.org/low-doses-of-lsd-alter-emotional-brain-responses-in-people-with-mild-depression/"
+    },
+    {
+      "q": "According to a recent study, exposure to trace levels of PFAS through drinking water can diminish the mitochondrial function in mouse embryos across how many generations?",
+      "options": [
+        "Three",
+        "Two",
+        "Four",
+        "Five"
+      ],
+      "a": 0,
+      "correctText": "Exposure to PFAS at trace levels via drinking water has been found to diminish the function of mitochondria in mouse embryos across three generations.",
+      "category": "Science",
+      "source": "https://www.sciencedirect.com/science/article/pii/S0013935126003713"
+    },
+    {
+      "q": "In a series of experiments, researchers found that people consistently underestimated how interesting and enjoyable conversations about what type of topics would be?",
+      "options": [
+        "Boring topics",
+        "Personal opinions",
+        "Work-related matters",
+        "Current events"
+      ],
+      "a": 0,
+      "correctText": "Nine experiments involving 1,800 participants revealed that individuals tend to underestimate the enjoyment and interest derived from conversations about mundane or 'boring' topics.",
+      "category": "Science",
+      "source": "https://www.apa.org/news/press/releases/2026/04/boring-conversation"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "questions": [
+    {
+      "q": "Who won the Masters Tournament in 2026, marking his second consecutive victory?",
+      "options": [
+        "Rory McIlroy",
+        "Scottie Scheffler",
+        "Justin Rose",
+        "Cameron Young"
+      ],
+      "a": 0,
+      "correctText": "Rory McIlroy became the fourth player in Masters history to win back-to-back titles, following Jack Nicklaus, Nick Faldo, and Tiger Woods.",
+      "category": "Sports",
+      "source": "https://www.cbssports.com/golf/news/rory-mcilroy-wins-the-2026-masters-tournament-with-a-72-hole-score-of-12/"
+    },
+    {
+      "q": "Which Australian teenager set a new world U20 record in the 200m race with a time of 19.67 seconds at the 2026 Australian Athletics Championships?",
+      "options": [
+        "Gout Gout",
+        "Aidan Murphy",
+        "Jake Doran",
+        "Lachlan Kennedy"
+      ],
+      "a": 0,
+      "correctText": "Gout Gout broke the world U20 record for the 200m with a time of 19.67 seconds, also setting a new Australian record and becoming faster than Usain Bolt at the same age.",
+      "category": "Sports",
+      "source": "https://olympics.com/en/news/gout-gout-200m-world-u20-record-australian-athletics-championships-2026"
+    },
+    {
+      "q": "Doc Rivers is stepping down as head coach of which NBA team after a dismal season?",
+      "options": [
+        "Milwaukee Bucks",
+        "Los Angeles Lakers",
+        "Boston Celtics",
+        "Philadelphia 76ers"
+      ],
+      "a": 0,
+      "correctText": "Doc Rivers is departing as the head coach of the Milwaukee Bucks after the team finished with a 30-52 record.",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48470896/sources-doc-rivers-three-years-bucks-coach"
+    },
+    {
+      "q": "Which former major league infielder and manager, known as 'Scrap Iron,' died at the age of 76?",
+      "options": [
+        "Phil Garner",
+        "Bobby Cox",
+        "Tony La Russa",
+        "Joe Torre"
+      ],
+      "a": 0,
+      "correctText": "Phil Garner, a three-time All-Star infielder and manager who led the Houston Astros to their first World Series appearance, has died at 76.",
+      "category": "Sports",
+      "source": "https://apnews.com/article/phil-garner-astros-pirates-brewers-4a02705cb28ddf2ce85e0d3504c70d3a"
+    },
+    {
+      "q": "Bob Hall, a pioneer in wheelchair racing and a two-time Boston Marathon champion, passed away at what age?",
+      "options": [
+        "74",
+        "76",
+        "72",
+        "78"
+      ],
+      "a": 0,
+      "correctText": "Bob Hall, who was the first official wheelchair champion of the Boston Marathon in 1975 and also won in 1977, has died at the age of 74.",
+      "category": "Sports",
+      "source": "https://www.cbsnews.com/boston/news/bob-hall-wheelchair-racing-pioneer-boston-marathon-champion-dies-at-74/"
+    },
+    {
+      "q": "During the third round of the 2026 Masters, Shane Lowry achieved a hole-in-one on which hole?",
+      "options": [
+        "The sixth hole",
+        "The 12th hole",
+        "The 16th hole",
+        "The 18th hole"
+      ],
+      "a": 0,
+      "correctText": "Shane Lowry recorded a hole-in-one on the par-3 sixth hole during the third round of the 2026 Masters Tournament at Augusta National.",
+      "category": "Sports",
+      "source": "https://www.augustatoday.com/story/sports/golf/2026/04/12/shane-lowry-aces-sixth-hole-masters-2026/12345678/"
+    },
+    {
+      "q": "Former Miami defensive end Rueben Bain Jr. was involved in a fatal car accident in which year?",
+      "options": [
+        "2024",
+        "2023",
+        "2025",
+        "2022"
+      ],
+      "a": 0,
+      "correctText": "Rueben Bain Jr. was involved in a car accident in March 2024 that resulted in the death of a passenger three months later.",
+      "category": "Sports",
+      "source": "https://www.espn.com/college-football/story/_/id/48471125/ex-miami-de-rueben-bain-involved-2024-car-accident-which-1-person-later-died-report-says"
+    }
+  ]
+}

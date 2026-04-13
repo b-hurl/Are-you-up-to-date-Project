@@ -1,0 +1,95 @@
+{
+  "questions": [
+    {
+      "q": "What was Jeff Bezos's yearly salary from Amazon in early April 2026, according to Fortune?",
+      "options": [
+        "$1.6 million",
+        "$80,000",
+        "$2.1 million",
+        "$100,000"
+      ],
+      "a": 1,
+      "correctText": "Amazon still paid Jeff Bezos an $80,000 yearly salary, with an additional $1.6 million allocated for travel and security expenses in early April 2026.",
+      "category": "Business",
+      "source": "https://fortune.com/2026/04/10/amazon-jeff-bezos-80k-salary-billionaires-ceo-executive-chairman/"
+    },
+    {
+      "q": "How much in stock did Oracle's new CFO receive shortly after layoffs, as reported by Yahoo Finance?",
+      "options": [
+        "$1.6 million",
+        "$80,000",
+        "$26 million",
+        "$2.1 million"
+      ],
+      "a": 2,
+      "correctText": "Oracle's new CFO received $26 million in stock following a period of layoffs, with an employee suggesting an 'algorithm' may have targeted workers with stock options for dismissal.",
+      "category": "Business",
+      "source": "https://finance.yahoo.com/markets/stocks/articles/oracles-cfo-got-26m-stock-184500098.html"
+    },
+    {
+      "q": "According to CNBC, what did Warren Buffett say about his past Apple stock sales in late March 2026?",
+      "options": [
+        "He regretted selling it all",
+        "He sold it too soon and would buy more in a different market",
+        "He believes Apple's stock is overvalued",
+        "He plans to sell all his remaining Apple stock"
+      ],
+      "a": 1,
+      "correctText": "Warren Buffett stated in late March 2026 that he sold Apple stock \"too soon\" and would be inclined to buy more of it, though not in the current market conditions.",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/03/31/warren-buffett-says-he-sold-apple-too-soon-and-would-buy-more-of-it-though-not-in-this-market-.html"
+    },
+    {
+      "q": "Which two entities are reportedly nearing a critical minerals deal to counter Chinese control, as reported by Bloomberg on April 10, 2026?",
+      "options": [
+        "China and Japan",
+        "The EU and the US",
+        "The US and Russia",
+        "The EU and China"
+      ],
+      "a": 1,
+      "correctText": "The European Union and the United States are reportedly close to finalizing a critical minerals deal aimed at combating Chinese control over these resources.",
+      "category": "Business",
+      "source": "https://www.bloomberg.com/news/articles/2026-04-10/eu-and-us-near-critical-minerals-deal-to-combat-chinese-control"
+    },
+    {
+      "q": "According to Reuters on April 13, 2026, what is the Chinese AI startup StepFun planning to do to facilitate an IPO?",
+      "options": [
+        "Merge with a larger company",
+        "Relocate its headquarters to the US",
+        "Unwind its offshore structure",
+        "Announce a new product line"
+      ],
+      "a": 2,
+      "correctText": "Chinese AI startup StepFun is reportedly planning to unwind its offshore structure to pave the way for an Initial Public Offering (IPO).",
+      "category": "Business",
+      "source": "https://www.reuters.com/world/china/chinese-ai-startup-stepfun-unwind-offshore-structure-pave-way-ipo-sources-say-2026-04-13/"
+    },
+    {
+      "q": "How much additional funding did Japan approve for chipmaker Rapidus on April 11, 2026, as reported by Reuters?",
+      "options": [
+        "$2.1 million",
+        "$80,000",
+        "$4 billion",
+        "$26 million"
+      ],
+      "a": 2,
+      "correctText": "Japan approved an additional $4 billion in funding for the chipmaker Rapidus on April 11, 2026.",
+      "category": "Business",
+      "source": "https://www.reuters.com/world/asia-pacific/japan-approves-additional-4-bln-chipmaker-rapidus-2026-04-11/"
+    },
+    {
+      "q": "What was Amazon CEO Andy Jassy's total pay in 2025, with climbing security and travel costs, as reported by Business Insider in April 2026?",
+      "options": [
+        "$80,000",
+        "$1.6 million",
+        "$4 billion",
+        "$2.1 million"
+      ],
+      "a": 3,
+      "correctText": "Amazon CEO Andy Jassy's pay rose to $2.1 million in 2025, largely due to increased costs for security and travel.",
+      "category": "Business",
+      "source": "https://www.businessinsider.com/how-much-amazon-ceo-andy-jassy-made-2025-pay-stock-2026-4"
+    }
+  ]
+}

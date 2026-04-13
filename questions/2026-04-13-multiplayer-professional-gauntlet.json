@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-13",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to reports, Prime Minister Mark Carney's Liberals are in a position to win a majority government in byelections held on April 13, 2026?",
+      "options": [
+        "Yes, byelection results on April 13, 2026, indicated the Liberals could secure a majority government.",
+        "No, the Liberals lost the byelections held on April 13, 2026.",
+        "The byelections were postponed due to unforeseen circumstances.",
+        "The results of the April 13, 2026, byelections have not yet been released."
+      ],
+      "a": 0,
+      "correctText": "Yes, byelection results on April 13, 2026, indicated the Liberals could secure a majority government.",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/pm-mark-carneys-liberals-could-win-majority-government-in-byelections-tonight"
+    },
+    {
+      "q": "According to a recent study, exposure to trace levels of PFAS through drinking water can diminish the mitochondrial function in mouse embryos across how many generations?",
+      "options": [
+        "Three",
+        "Two",
+        "Four",
+        "Five"
+      ],
+      "a": 0,
+      "correctText": "Exposure to PFAS at trace levels via drinking water has been found to diminish the function of mitochondria in mouse embryos across three generations.",
+      "category": "Science",
+      "source": "https://www.sciencedirect.com/science/article/pii/S0013935126003713"
+    },
+    {
+      "q": "What significant compensation package did Oracle's new CFO, Hilary Maxson, receive amidst recent layoffs?",
+      "options": [
+        "$26 million in stock",
+        "$10 million in stock",
+        "$5 million in stock",
+        "$1 million in stock"
+      ],
+      "a": 0,
+      "correctText": "Oracle's new CFO, Hilary Maxson, received equity awards valued at $26 million, consisting of time-based and performance-based components, as part of her compensation package. This occurred shortly after Oracle laid off approximately 30,000 employees.",
+      "category": "Technology",
+      "source": "https://finance.yahoo.com/markets/stocks/articles/oracles-cfo-got-26m-stock-184500098.html"
+    },
+    {
+      "q": "A Microsoft executive suggested that AI agents will need to acquire what for the software they use, similar to human employees?",
+      "options": [
+        "Software licenses",
+        "Hardware upgrades",
+        "Training data",
+        "Cloud storage"
+      ],
+      "a": 0,
+      "correctText": "Microsoft executive Rajesh Jha proposed that autonomous AI agents may need to acquire software licenses, effectively functioning as individual users or 'seats' within software systems, similar to human employees.",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/microsoft-executive-suggests-ai-agents-buy-software-licenses-seats-2026-4"
+    },
+    {
+      "q": "In a series of experiments, researchers found that people consistently underestimated how interesting and enjoyable conversations about what type of topics would be?",
+      "options": [
+        "Boring topics",
+        "Personal opinions",
+        "Work-related matters",
+        "Current events"
+      ],
+      "a": 0,
+      "correctText": "Nine experiments involving 1,800 participants revealed that individuals tend to underestimate the enjoyment and interest derived from conversations about mundane or 'boring' topics.",
+      "category": "Science",
+      "source": "https://www.apa.org/news/press/releases/2026/04/boring-conversation"
+    },
+    {
+      "q": "Has Prime Minister Mark Carney scheduled a meeting with Finnish President Alexander Stubb in Ottawa during the week of April 13, 2026?",
+      "options": [
+        "Yes, Prime Minister Carney is set to meet with Finnish President Alexander Stubb in Ottawa this week.",
+        "No, the meeting between Prime Minister Carney and President Stubb has been canceled.",
+        "President Stubb will be meeting with the Canadian opposition leader, not the Prime Minister.",
+        "The meeting is scheduled to take place in Helsinki, not Ottawa."
+      ],
+      "a": 0,
+      "correctText": "Yes, Prime Minister Carney is set to meet with Finnish President Alexander Stubb in Ottawa this week.",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-carney-finland-president-alexander-stubb/"
+    },
+    {
+      "q": "What is the duration of Iran's nationwide internet blackout as of April 12, 2026, making it the second-longest on record?",
+      "options": [
+        "Over 1,000 hours",
+        "Over 500 hours",
+        "Over 200 hours",
+        "Over 100 hours"
+      ],
+      "a": 0,
+      "correctText": "As of April 12, 2026, Iran's nationwide internet blackout has surpassed 1,000 hours, becoming the second-longest on record.",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/iran-passes-1000-hours-offline"
+    },
+    {
+      "q": "Which two entities are reportedly nearing a critical minerals deal to counter Chinese control, as reported by Bloomberg on April 10, 2026?",
+      "options": [
+        "China and Japan",
+        "The EU and the US",
+        "The US and Russia",
+        "The EU and China"
+      ],
+      "a": 1,
+      "correctText": "The European Union and the United States are reportedly close to finalizing a critical minerals deal aimed at combating Chinese control over these resources.",
+      "category": "Business",
+      "source": "https://www.bloomberg.com/news/articles/2026-04-10/eu-and-us-near-critical-minerals-deal-to-combat-chinese-control"
+    },
+    {
+      "q": "New research indicates that low doses of LSD can alter emotional brain responses in individuals with what condition?",
+      "options": [
+        "Mild depression",
+        "Anxiety",
+        "PTSD",
+        "Bipolar disorder"
+      ],
+      "a": 0,
+      "correctText": "A study has reported that low doses of LSD can alter emotional brain responses in individuals experiencing mild depression, pointing to specific shifts in electrical brain activity after administration.",
+      "category": "Science",
+      "source": "https://www.psypost.org/low-doses-of-lsd-alter-emotional-brain-responses-in-people-with-mild-depression/"
+    },
+    {
+      "q": "What significant discount is Polestar offering to Tesla owners on its 2025 Polestar 3 models through April 2026?",
+      "options": [
+        "$21,000",
+        "$15,000",
+        "$10,000",
+        "$5,000"
+      ],
+      "a": 0,
+      "correctText": "Polestar is offering incentives of up to $21,000 on its 2025 Polestar 3 electric SUVs to current Tesla owners, with the offers valid through the end of April 2026.",
+      "category": "Technology",
+      "source": "https://insideevs.com/news/792327/polestar-21000-usd-tesla-incentive-stackable/"
+    }
+  ]
+}

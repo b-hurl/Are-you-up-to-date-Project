@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to reports, Prime Minister Mark Carney's Liberals are in a position to win a majority government in byelections held on April 13, 2026?",
+      "options": [
+        "Yes, byelection results on April 13, 2026, indicated the Liberals could secure a majority government.",
+        "No, the Liberals lost the byelections held on April 13, 2026.",
+        "The byelections were postponed due to unforeseen circumstances.",
+        "The results of the April 13, 2026, byelections have not yet been released."
+      ],
+      "a": 0,
+      "correctText": "Yes, byelection results on April 13, 2026, indicated the Liberals could secure a majority government.",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/pm-mark-carneys-liberals-could-win-majority-government-in-byelections-tonight"
+    },
+    {
+      "q": "Is cancer still the leading cause of death in Canada, with new studies indicating a rise in multiple types as of April 2026?",
+      "options": [
+        "Yes, cancer remains the top cause of death in Canada, and recent studies show an increase in various types.",
+        "No, heart disease has surpassed cancer as the leading cause of death in Canada.",
+        "Recent studies indicate a significant decline in all types of cancer deaths in Canada.",
+        "Cancer is no longer among the top causes of death in Canada due to advancements in treatment."
+      ],
+      "a": 0,
+      "correctText": "Yes, cancer remains the top cause of death in Canada, and recent studies show an increase in various types.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/health/canadian-cancer-projections-9.7159535"
+    },
+    {
+      "q": "Has Prime Minister Mark Carney scheduled a meeting with Finnish President Alexander Stubb in Ottawa during the week of April 13, 2026?",
+      "options": [
+        "Yes, Prime Minister Carney is set to meet with Finnish President Alexander Stubb in Ottawa this week.",
+        "No, the meeting between Prime Minister Carney and President Stubb has been canceled.",
+        "President Stubb will be meeting with the Canadian opposition leader, not the Prime Minister.",
+        "The meeting is scheduled to take place in Helsinki, not Ottawa."
+      ],
+      "a": 0,
+      "correctText": "Yes, Prime Minister Carney is set to meet with Finnish President Alexander Stubb in Ottawa this week.",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-carney-finland-president-alexander-stubb/"
+    },
+    {
+      "q": "Is there a proposal being discussed at the Liberal convention to implement a $500,000 exit tax for educated Canadians, as suggested by tech executive Terry Newman?",
+      "options": [
+        "Yes, tech executive Terry Newman has pitched a $500,000 exit tax for educated Canadians at the Liberal convention.",
+        "No, the proposed exit tax is for low-income Canadians, not educated ones.",
+        "The Liberal convention rejected the proposal for an exit tax outright.",
+        "The proposed exit tax is $50,000, not $500,000."
+      ],
+      "a": 0,
+      "correctText": "Yes, tech executive Terry Newman has pitched a $500,000 exit tax for educated Canadians at the Liberal convention.",
+      "category": "Canada",
+      "source": "https://nationalpost.com/opinion/terry-newman-tech-exec-pitches-liberal-convention-on-500k-exit-tax-for-educated-canadians"
+    }
+  ]
+}
