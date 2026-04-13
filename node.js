@@ -25,6 +25,51 @@ const CONFIG = {
 };
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+// Calculate edit distance between two strings (standard algorithm)
+function levenshteinDistance(s1, s2) {
+    const track = Array(s2.length + 1).fill(null).map(() => Array(s1.length + 1).fill(null));
+    for (let i = 0; i <= s1.length; i += 1) track[0][i] = i;
+    for (let j = 0; j <= s2.length; j += 1) track[j][0] = j;
+    for (let j = 1; j <= s2.length; j += 1) {
+        for (let i = 1; i <= s1.length; i += 1) {
+            const indicator = s1[i - 1] === s2[j - 1] ? 0 : 1;
+            track[j][i] = Math.min(
+                track[j][i - 1] + 1, // deletion
+                track[j - 1][i] + 1, // insertion
+                track[j - 1][i - 1] + indicator, // substitution
+            );
+        }
+    }
+    return track[s2.length][s1.length];
+}
+
+function getLevenshteinSimilarity(s1, s2) {
+    const longer = s1.length > s2.length ? s1 : s2;
+    const shorter = s1.length > s2.length ? s2 : s1;
+    if (longer.length === 0) return 1.0;
+    return (longer.length - levenshteinDistance(longer, shorter)) / longer.length;
+}
+
+async function isUrlLive(url) {
+    if (!url || typeof url !== 'string' || !url.startsWith('http')) return false;
+    const headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
+    };
+    try {
+        // Try HEAD request first (faster, no body download)
+        await axios.head(url, { headers, timeout: 5000 });
+        return true;
+    } catch (e) {
+        try {
+            // Fallback to GET if HEAD is rejected (common on some news sites)
+            await axios.get(url, { headers, timeout: 8000, maxContentLength: 5000 });
+            return true;
+        } catch (err) {
+            return false;
+        }
+    }
+}
+
 // Initialize RSS Parser with a custom User-Agent
 const parser = new Parser();
 
@@ -49,6 +94,7 @@ async function runAutomation() {
     // Ensure the output directory exists
     if (!fs.existsSync('./questions')) fs.mkdirSync('./questions');
 
+    let successfulCategories = [];
     let queue = Object.keys(CONFIG);
     const generalRetryLimit = 3; // General retry limit for a category
     const categoryAttempts = {}; // Tracks general attempts for each category
@@ -64,8 +110,31 @@ async function runAutomation() {
 
         // Prevents redundant API calls if the file was already generated in a previous run
         if (fs.existsSync(filePath)) {
-            console.log(`\n⏭️  Category: ${category.toUpperCase()} already exists for ${dateStr}. Skipping.`);
-            continue;
+            try {
+                const existingData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                const questions = existingData.questions || [];
+                
+                // Verify count, format, AND live status for existing files
+                let allHaveSources = Array.isArray(questions) && questions.length >= 5;
+                if (allHaveSources) {
+                    for (const q of questions) {
+                        if (!(await isUrlLive(q.source))) {
+                            allHaveSources = false;
+                            break;
+                        }
+                    }
+                }
+
+                if (allHaveSources) {
+                    console.log(`\n⏭️  Category: ${category.toUpperCase()} exists and is valid. Skipping.`);
+                    successfulCategories.push(category);
+                    continue;
+                } else {
+                    console.log(`\n⚠️  Existing file for ${category} is invalid (count or missing URLs). Re-generating...`);
+                }
+            } catch (e) {
+                console.log(`\n⚠️  Existing file for ${category} is corrupt. Re-generating...`);
+            }
         }
 
         const subreddits = CONFIG[category];
@@ -219,30 +288,33 @@ async function runAutomation() {
             }
 
             // The "Triple-Lock" Prompt (Verify, Format, Fact-Check)
-            const prompt = `Role: Professional Fact-Checker and Trivia Journalist
-Today's Date: ${dateStr}
-Target Category: ${category}
+            const prompt = `CRITICAL CLOCK: ${dateStr} (Current System Time)
+TARGET CATEGORY: ${category}
 
-Instructions:
-1. LEADS: Use the following Reddit context ONLY as a list of potential news leads.
-2. VERIFICATION: For each lead, you MUST verify the facts via Google Search to ensure the event actually occurred on or around ${dateStr}.
-3. NO REDDIT SOURCES: The "source" field in your JSON must be a legitimate news outlet (e.g., CBC, Reuters, BBC, IGN, etc.). Never use a reddit.com link as the source.
-4. DISCARD OLD NEWS: If a link refers to a movie, game, or event older than 48 hours, discard it immediately. We only want "Today's News."
-5. JSON ONLY: Return nothing but the JSON object.
+ACT AS: A Breaking News Editor on a 24-hour cycle. 
 
-Reddit Context (Leads Only):
+TASK: Generate exactly 5 trivia questions based EXCLUSIVELY on news events that occurred between 24 hours ago and right now.
+
+### THE "HARD STOP" RULES:
+1. DATE ENFORCEMENT: If an event occurred on April 12th or earlier, DISCARD IT. We only want news from the last 24 hours of ${dateStr}.
+2. SOURCE VERIFICATION: You MUST use Google Search to confirm the headline is currently "Breaking" or "Live" as of ${dateStr}. 
+3. LINK PURITY: The "source" field must be the direct, non-Reddit URL (CBC, Reuters, etc.). If the lead only provides a Reddit link, use Search to find the original article.
+4. NO OPINION: Delete any leads involving editorials, "top 10" lists, or movie reviews. Only hard, factual events.
+5. EXACT COUNT: Return exactly 5 questions. No preamble.
+
+### REDDIT LEADS (Filter these for today's date only):
 ${newsPool}
 
-JSON Structure:
+### OUTPUT FORMAT (JSON ONLY):
 {
   "questions": [
     {
-      "q": "Question text based on verified 2026 news?",
+      "q": "Question text based on a ${dateStr} event?",
       "options": ["Correct Answer", "Wrong", "Wrong", "Wrong"],
       "a": 0,
       "correctText": "Correct Answer",
-      "category": "${category.charAt(0).toUpperCase() + category.slice(1)}",
-      "source": "https://verified-news-site.com/article-slug"
+      "category": "${category}",
+      "source": "https://verified-news-site.com/breaking-story-link"
     }
   ]
 }`;
@@ -263,14 +335,135 @@ JSON Structure:
             // Validate JSON before saving
             let validated = JSON.parse(responseText); 
 
-            // Manually inject category metadata to ensure frontend compatibility
-            if (validated.questions && Array.isArray(validated.questions)) {
-                validated.questions = validated.questions.map(q => ({ ...q, category: category.charAt(0).toUpperCase() + category.slice(1) }));
+            let validQuestions = [];
+            let rejectedQuestions = []; // Track questions that failed validation to avoid repeats
+            let rawPool = Array.isArray(validated.questions) ? validated.questions : [];
+
+            // Helper to check if a new question is about an event already in the list
+            const isDuplicateEvent = async (newQ, existingQs, currentCategory) => {
+                if (existingQs.length === 0) return false;
+                
+                const strictCategories = ['sports', 'politics', 'usa', 'canada'];
+                const isStrict = strictCategories.includes(currentCategory.toLowerCase());
+
+                const cleanString = (s) => s.toLowerCase().replace(/[^\w\s]/g, '').trim();
+                const cleanedNew = cleanString(newQ);
+
+                const clean = (text) => text.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/).filter(w => w.length > 3);
+                const newWords = new Set(clean(newQ));
+
+                for (const existing of existingQs) {
+                    const cleanedExisting = cleanString(existing.q);
+                    
+                    // 1. Levenshtein Check (Great for minor edits/typos)
+                    const levSimilarity = getLevenshteinSimilarity(cleanedNew, cleanedExisting);
+                    if (levSimilarity > (isStrict ? 0.75 : 0.85)) return true;
+
+                    // 2. Keyword Check (Great for rephrasing with same facts)
+                    const threshold = isStrict ? 0.45 : 0.6;
+                    const existingWords = clean(existing.q);
+                    const overlap = existingWords.filter(w => newWords.has(w)).length;
+                    if (overlap / Math.max(existingWords.length, 1) > threshold) return true;
+                }
+
+                // Semantic check: Ask Gemini if the events are the same
+                const checkPrompt = `Are these two trivia questions about the same news event?
+                Q1: "${newQ}"
+                Q2: "${existingQs[existingQs.length - 1].q}"
+                Answer ONLY 'YES' or 'NO'.`;
+                try {
+                    const res = await model.generateContent(checkPrompt);
+                    return res.response.text().toUpperCase().includes("YES");
+                } catch (e) { return false; }
+            };
+
+            // Helper to process and validate a single question
+            const validateAndRepair = async (q, existingQuestions, currentCategory) => {
+                if (!q.q || !q.options || q.a === undefined) return null;
+                
+                // Check if this event is already covered
+                if (await isDuplicateEvent(q.q, existingQuestions, currentCategory)) {
+                    console.warn(`   🚫 Duplicate event detected for: "${q.q.substring(0, 40)}..."`);
+                    rejectedQuestions.push(q.q);
+                    return null;
+                }
+                
+                let source = q.source;
+                const hasValidSource = source && typeof source === 'string' && source.trim().startsWith('http');
+                
+                if (!hasValidSource) {
+                    console.log(`🔍 Source missing/invalid for: "${q.q.substring(0, 40)}...". Recovering...`);
+                    try {
+                        const searchPrompt = `Find the primary news article source URL (not Reddit) for this event from ${dateStr}: "${q.q}". Return ONLY the raw URL.`;
+                        const searchResult = await model.generateContent(searchPrompt);
+                        source = searchResult.response.text().trim().replace(/[`\s]/g, "");
+                    } catch (e) { return null; }
+                }
+
+                // Verify if the link is actually reachable (200 OK)
+                if (await isUrlLive(source)) {
+                    q.source = source;
+                    q.category = category.charAt(0).toUpperCase() + category.slice(1);
+                    return q;
+                }
+                console.warn(`   ❌ Link dead for: "${q.q.substring(0, 40)}..." (${source})`);
+                rejectedQuestions.push(q.q); // Add to blacklist
+                return null;
+            };
+
+            // Step 1: Process initial batch from the first AI response
+            for (const q of rawPool) {
+                const validQ = await validateAndRepair(q, validQuestions, category);
+                if (validQ) {
+                    validQuestions.push(validQ);
+                    if (validQuestions.length >= 5) break;
+                }
             }
 
-            fs.writeFileSync(filePath, JSON.stringify(validated, null, 2));
-            
-            console.log(`✅ File Saved: ${filePath}`);
+            // Step 2: Replacement Loop - Request more if we are below the 5-question limit
+            let replacementRetries = 0;
+            while (validQuestions.length < 5 && replacementRetries < 2) {
+                replacementRetries++;
+                const needed = 5 - validQuestions.length;
+                console.log(`⚠️ Only ${validQuestions.length}/5 questions valid. Requesting ${needed} replacements...`);
+                
+                try {
+                    const retryPrompt = `I need ${needed} more UNIQUE trivia questions for the category "${category}" from news on ${dateStr}.
+                    
+                    CRITICAL: Do NOT repeat the following topics. They were either already accepted or had dead/invalid source links:
+                    - ALREADY ACCEPTED: ${validQuestions.map(v => v.q).join(" | ")}
+                    - REJECTED (DEAD LINKS): ${rejectedQuestions.join(" | ")}
+                    
+                    Please find entirely NEW headlines from ${dateStr} for this category. 
+                    Ensure the "source" is a direct news URL (not Reddit) and is functional.
+                    Follow the same JSON format as before.`;
+                    
+                    const retryResult = await model.generateContent(retryPrompt);
+                    const retryText = retryResult.response.text();
+                    const retryData = JSON.parse(retryText.match(/\{[\s\S]*\}/)?.[0] || "{}");
+                    const newQuestions = Array.isArray(retryData.questions) ? retryData.questions : [];
+
+                    for (const q of newQuestions) {
+                        try {
+                            const validQ = await validateAndRepair(q, validQuestions, category);
+                            if (validQ) {
+                                validQuestions.push(validQ);
+                                if (validQuestions.length >= 5) break;
+                            }
+                        } catch (e) {}
+                    }
+                } catch (e) { console.error("Replacement fetch failed", e); }
+            }
+
+            // Step 3: Finalize if we hit the limit
+            if (validQuestions.length >= 5) {
+                const finalData = { questions: validQuestions.slice(0, 5) };
+                fs.writeFileSync(filePath, JSON.stringify(finalData, null, 2));
+                successfulCategories.push(category);
+                console.log(`✅ Category ${category} finalized with 5 valid questions.`);
+            } else {
+                console.error(`❌ Category ${category} failed: Could only find ${validQuestions.length} valid questions.`);
+            }
 
         } catch (error) {
             console.error(`❌ Failed ${category} during Gemini generation: ${error.message}`);
@@ -288,6 +481,11 @@ JSON Structure:
         console.log(`😴 Waiting 15 seconds to avoid rate limits...`);
        await sleep(15000); 
     }
+
+    // Generate the Daily Manifest to optimize frontend probing
+    const manifestPath = `./questions/${dateStr}-manifest.json`;
+    fs.writeFileSync(manifestPath, JSON.stringify(successfulCategories));
+
     console.log("\n✨ Daily Trivia Update Complete!");
 }
 

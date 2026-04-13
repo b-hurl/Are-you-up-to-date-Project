@@ -456,6 +456,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                             const oppData = opponent;
                             const isCompleted = c.status === 'completed';
                             const isRefused = c.status === 'refused';
+                            const isDisputed = c.status === 'disputed';
                             const isWinner = isCompleted && myData.score > (oppData?.score || 0);
                             const canRematch = isCompleted && c.date !== today;
                             
@@ -467,18 +468,26 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                             }
 
                             return (
-                                <div key={c.id} className="bg-slate-700/50 border border-slate-600 p-4 rounded-2xl animate-fade-in">
+                                <div key={c.id} className={`p-4 rounded-2xl animate-fade-in transition-all ${
+                                    isDisputed ? 'bg-orange-950/20 border-2 border-orange-500/50 shadow-[0_0_15px_rgba(249,115,22,0.1)]' : 'bg-slate-700/50 border border-slate-600'
+                                }`}>
                                     <div className="flex justify-between items-start mb-2">
                                         <div>
                                             <span className="text-[10px] text-primary-400 font-bold uppercase tracking-widest block">
                                                 {c.category} • {c.date} {resultLabel && <span className={`ml-2 px-1.5 py-0.5 rounded ${resultLabel === 'WIN' ? 'bg-emerald-500 text-white' : resultLabel === 'LOSS' ? 'bg-red-500 text-white' : 'bg-slate-500 text-white'}`}>{resultLabel}</span>}
                                             </span>
-                                            <span className="text-sm font-bold text-white">vs {oppData && oppData.name ? oppData.name : 'Waiting...'}</span>
+                                            <span className="text-sm font-bold text-white flex items-center gap-2">
+                                                vs {oppData && oppData.name ? oppData.name : 'Waiting...'}
+                                                {isDisputed && <span className="text-orange-400 animate-bounce inline-block" title="This match is under dispute">⚖️</span>}
+                                            </span>
                                         </div>
-                                        <span className={`text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-tighter ${
+                                        <span className={`text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-tighter flex items-center gap-1 ${
                                             isCompleted ? 'bg-emerald-500/20 text-emerald-400' : 
-                                            isRefused ? 'bg-red-500/20 text-red-400' : 'bg-yellow-500/20 text-yellow-400'
+                                            isRefused ? 'bg-red-500/20 text-red-400' : 
+                                            isDisputed ? 'bg-orange-500/20 text-orange-400 animate-pulse border border-orange-500/40' :
+                                            'bg-yellow-500/20 text-yellow-400'
                                         }`}>
+                                            {isDisputed && <span>⚠️</span>}
                                             {c.status}
                                         </span>
                                     </div>
@@ -515,7 +524,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
 
                                     {isP1 && (
                                         <div className="mt-3 flex gap-2">
-                                            {(c.status === 'pending' || c.status === 'refused') && (
+                                            {(c.status === 'pending' || c.status === 'refused' || c.status === 'disputed' || (c.status === 'accepted' && !c.p2?.completed)) && (
+
                                                 <button 
                                                     onClick={() => {
                                                         onUpdate({ activeSelection: c.category });

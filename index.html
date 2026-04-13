@@ -1051,8 +1051,22 @@
                 if (!response.ok) throw new Error("Category file not found");
                 
                 const data = await response.json();
-                const questions = Array.isArray(data) ? data : (data.questions || []);
-                const modeData = { questions: sanitizeQuestions(questions) };
+            const rawQuestions = Array.isArray(data) ? data : (data.questions || []);
+            let questions = sanitizeQuestions(rawQuestions);
+            
+            // Hard coded limit: verify at least 5 questions exist, otherwise hide the category
+            if (questions.length < 5) {
+                showToast(`Category "${category}" is not available today.`, "⏳");
+                if (verifiedCategories) {
+                    verifiedCategories = verifiedCategories.filter(c => c !== category);
+                    renderGameSettings();
+                }
+                return;
+            }
+
+            // Limit to exactly 5 questions (randomly selected if there are more)
+            questions = shuffle(questions).slice(0, 5);
+            const modeData = { questions: questions };
                 
                 // Hide settings and show game
                 document.getElementById('game-settings-root').classList.add('hidden');
@@ -1536,19 +1550,49 @@
 
         async function probeAvailableCategories() {
             const gameDate = getGameDate();
-            const categories = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
-            const available = [];
-            
-            // Check for individual category files using HEAD requests (fast, no body download)
-            const checks = categories.map(async (cat) => {
+
+            // 1. Client-side Cache Optimization: Check if we already probed today
+            const cacheKey = `trivia-available-cats-${gameDate}`;
+            const cached = localStorage.getItem(cacheKey);
+            if (cached) {
                 try {
-                    const response = await fetch(`questions/${gameDate}-${cat}.json`, { method: 'HEAD' });
-                    if (response.ok) available.push(cat);
-                } catch (e) {}
-            });
+                    verifiedCategories = JSON.parse(cached);
+                    renderGameSettings();
+                    return;
+                } catch (e) { localStorage.removeItem(cacheKey); }
+            }
+
+            const categories = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
             
-            await Promise.all(checks);
-            verifiedCategories = available;
+            try {
+                // 2. Request Manifest: Try to get the pre-built list in ONE request
+                const response = await fetch(`questions/${gameDate}-manifest.json?v=${Date.now()}`);
+                if (response.ok) {
+                    verifiedCategories = await response.json();
+                } else {
+                    // 3. Fallback: If manifest isn't generated yet, do the multi-probe (Old logic)
+                    const available = [];
+                    const checks = categories.map(async (cat) => {
+                        try {
+                            const res = await fetch(`questions/${gameDate}-${cat}.json`);
+                            if (res.ok) {
+                                const data = await res.json();
+                                const questions = sanitizeQuestions(Array.isArray(data) ? data : (data.questions || []));
+                                if (questions.length >= 5) available.push(cat);
+                            }
+                        } catch (e) {}
+                    });
+                    await Promise.all(checks);
+                    verifiedCategories = available;
+                }
+
+                // Store the result to prevent any fetches on next page load today
+                localStorage.setItem(cacheKey, JSON.stringify(verifiedCategories));
+            } catch (e) {
+                console.warn("Probe failed, defaulting to empty categories", e);
+                verifiedCategories = [];
+            }
+
             renderGameSettings(); // Refresh React UI with strict filtering
         }
 
@@ -3801,9 +3845,39 @@ async function revokeChallenge(categoryOrId) {
         return;
     }
 
-    if (!confirm(`Are you sure you want to revoke this challenge? It will be deleted from the system.`)) return;
-
+    // Verify status before allowing revoke to prevent P1 from canceling a game P2 just finished
     updateHeaderSyncStatus('syncing');
+    try {
+        const doc = await db.collection('challenges').doc(challengeId).get();
+        if (doc.exists) {
+            const data = doc.data();
+            if (data.status === 'completed' || (data.p2 && data.p2.completed)) {
+                showToast("Cannot revoke: Opponent has already finished!", "🚫");
+                updateHeaderSyncStatus('complete');
+                return;
+            }
+
+            if (data.status === 'accepted' && !data.p2?.completed) {
+                if (!confirm("Your opponent has already started this game! Revoking now will mark the match as 'Disputed'. Proceed?")) {
+                    updateHeaderSyncStatus('complete');
+                    return;
+                }
+                await db.collection('challenges').doc(challengeId).update({ status: 'disputed' });
+                showToast("Challenge marked as Disputed", "⚠️");
+                updateHeaderSyncStatus('complete');
+                if (window.renderGameSettings) window.renderGameSettings();
+                return;
+            }
+        }
+    } catch (e) {
+        console.warn("Revoke check failed, proceeding with caution", e);
+    }
+
+    if (!confirm(`Are you sure you want to revoke this challenge? It will be deleted from the system.`)) {
+        updateHeaderSyncStatus('complete');
+        return;
+    }
+
     try {
         if (challengeId) {
             await db.collection('challenges').doc(challengeId).delete();
@@ -4049,6 +4123,8 @@ async function handle1v1Challenge(challengeId) {
                     
                     showToast("Challenge revoked by the host.", "🚫", 5000);
                     returnToMenu('main');
+                } else if (snapshot.data() && snapshot.data().status === 'disputed') {
+                    showToast("Host attempted to revoke. Match is now DISPUTED.", "⚠️", 5000);
                 }
             });
 
