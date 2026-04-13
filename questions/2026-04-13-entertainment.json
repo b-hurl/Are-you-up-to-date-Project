@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "What is the title of the new horror novella by John Davies, writer of \"Hobo with a Shotgun\"?",
+      "options": [
+        "Man vs. Bear",
+        "KIDS VS. ALIENS",
+        "Slumber Party Alien Abduction",
+        "V/H/S/2"
+      ],
+      "a": 0,
+      "correctText": "The new horror novella by John Davies is titled 'MAN VS. BEAR'.",
+      "category": "Entertainment",
+      "source": "https://bloody-disgusting.com/movie/3700950/hobo-shotgun-producers-developing-new-sci-fi-horror-film-kids-vs-aliens/"
+    },
+    {
+      "q": "Which Hollywood actors are among the over 1,000 names who signed an open letter opposing the Paramount-Warner deal?",
+      "options": [
+        "Joaquin Phoenix, Ben Stiller, and Kristen Stewart",
+        "Tom Hanks, Meryl Streep, and Leonardo DiCaprio",
+        "Denzel Washington, Scarlett Johansson, and Brad Pitt",
+        "Ryan Reynolds, Blake Lively, and Chris Pratt"
+      ],
+      "a": 0,
+      "correctText": "Joaquin Phoenix, Ben Stiller, and Kristen Stewart are among the Hollywood names who signed an open letter opposing the Paramount-Warner deal.",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/hollywood-open-letter-paramount-warner-bros-deal-1236720249/"
+    },
+    {
+      "q": "What is the release date for 'The Hunger Games: Sunrise on the Reaping'?",
+      "options": [
+        "November 20, 2026",
+        "October 15, 2026",
+        "December 1, 2026",
+        "November 20, 2025"
+      ],
+      "a": 0,
+      "correctText": "The Hunger Games: Sunrise on the Reaping is set to be released on November 20, 2026.",
+      "category": "Entertainment",
+      "source": "https://landmarkcinemas.com/movie/the-hunger-games-sunrise-on-the-reaping"
+    },
+    {
+      "q": "In which country will 'Agito: Psychic War' be released theatrically on April 29, 2026?",
+      "options": [
+        "Japan",
+        "United States",
+        "South Korea",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Agito: Psychic War is scheduled for a theatrical release in Japan on April 29, 2026.",
+      "category": "Entertainment",
+      "source": "https://kamenrider.fandom.com/wiki/Agito:_Psychic_War"
+    }
+  ]
+}

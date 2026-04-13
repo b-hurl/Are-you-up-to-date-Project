@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-13",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which Australian teenager set a new world U20 record in the 200m race with a time of 19.67 seconds at the 2026 Australian Athletics Championships?",
+      "options": [
+        "Gout Gout",
+        "Aidan Murphy",
+        "Jake Doran",
+        "Lachlan Kennedy"
+      ],
+      "a": 0,
+      "correctText": "Gout Gout broke the world U20 record for the 200m with a time of 19.67 seconds, also setting a new Australian record and becoming faster than Usain Bolt at the same age.",
+      "category": "Sports",
+      "source": "https://olympics.com/en/news/gout-gout-200m-world-u20-record-australian-athletics-championships-2026"
+    },
+    {
+      "q": "Xbox has announced an 'Xbox First Look' showcase. What game will be featured in this upcoming showcase?",
+      "options": [
+        "Metro 2039",
+        "System Shock Remake",
+        "Ashes of Creation",
+        "Soul General"
+      ],
+      "a": 0,
+      "correctText": "The upcoming 'Xbox First Look' showcase will feature the game 'Metro 2039'.",
+      "category": "Gaming",
+      "source": "https://www.windowscentral.com/gaming/metro-2039-confirmed-for-xbox-first-look-show-new-format-will-spotlight-games-throughout-the-year"
+    },
+    {
+      "q": "According to a Pew Research Center survey from October 2025, what is the primary format Americans still opt for when reading books?",
+      "options": [
+        "Print books",
+        "E-books",
+        "Audiobooks",
+        "Digital books"
+      ],
+      "a": 0,
+      "correctText": "Print books remain the most popular format, with roughly two-thirds of U.S. adults reporting they read a physical book in the past 12 months.",
+      "category": "Books",
+      "source": "https://www.pewresearch.org/short-reads/2026/04/09/americans-still-opt-for-print-books-over-digital-or-audio-versions-few-are-in-book-clubs/"
+    },
+    {
+      "q": "What is the release date for 'The Hunger Games: Sunrise on the Reaping'?",
+      "options": [
+        "November 20, 2026",
+        "October 15, 2026",
+        "December 1, 2026",
+        "November 20, 2025"
+      ],
+      "a": 0,
+      "correctText": "The Hunger Games: Sunrise on the Reaping is set to be released on November 20, 2026.",
+      "category": "Entertainment",
+      "source": "https://landmarkcinemas.com/movie/the-hunger-games-sunrise-on-the-reaping"
+    },
+    {
+      "q": "What percentage of books submitted to Kobo's self-publishing program in 2025 were rejected due to suspected AI generation?",
+      "options": [
+        "Nearly 45 percent",
+        "Around 30 percent",
+        "Less than 20 percent",
+        "Over 60 percent"
+      ],
+      "a": 0,
+      "correctText": "The company rejected nearly 45 percent of the books submitted to its self-publishing program in 2025, with about 80 percent of those rejections due to suspicions of AI generation.",
+      "category": "Books",
+      "source": "https://www.cbc.ca/news/business/publishing-industry-ai-shy-girl-fallout-9.7155292"
+    },
+    {
+      "q": "Allegations have surfaced regarding the misuse of Kickstarter funds for the failed MMO 'Ashes of Creation.' What are some of the alleged personal expenses funded by the Kickstarter money?",
+      "options": [
+        "Private chefs, trading cards, and luxury cigars",
+        "Marketing campaigns and server infrastructure",
+        "Artist salaries and voice actor fees",
+        "Game engine licenses and software development tools"
+      ],
+      "a": 0,
+      "correctText": "Allegations suggest that funds from the 'Ashes of Creation' Kickstarter were used for personal expenses, including private chefs, trading cards, and luxury cigars.",
+      "category": "Gaming",
+      "source": "https://kotaku.com/failed-mmo-ashes-of-creation-s-3-2-million-in-kickstarter-2000686976"
+    },
+    {
+      "q": "Hazelight Studios, known for games like 'It Takes Two' and 'A Way Out,' has announced a significant sales milestone. How many total sales have their games accrued?",
+      "options": [
+        "Over 50 million copies",
+        "Over 30 million copies",
+        "Over 13 million copies",
+        "Over 7 million copies"
+      ],
+      "a": 0,
+      "correctText": "Hazelight Studios has announced that their three games, 'A Way Out,' 'It Takes Two,' and 'Split Fiction,' have sold over 50 million copies combined.",
+      "category": "Gaming",
+      "source": "https://www.gamedeveloper.com/business/split-fiction-dev-hazelight-studios-accrues-50m-total-sales"
+    },
+    {
+      "q": "What is the title of The Guardian's recent list of books recommended to read before turning 25?",
+      "options": [
+        "25 books to read before you turn 25",
+        "The Ultimate Reading List for Young Adults",
+        "Essential Reads for Your Twenties",
+        "Books That Shape You Before 25"
+      ],
+      "a": 0,
+      "correctText": "The Guardian's list is titled \"25 books to read before you turn 25.\"",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/ng-interactive/2026/apr/11/from-peepo-to-middlemarch-25-books-to-read-before-you-turn-25"
+    },
+    {
+      "q": "Rockstar Games has confirmed a data breach occurred. What is the deadline the hacker group 'ShinyHunters' has given for a ransom payment?",
+      "options": [
+        "April 14, 2026",
+        "April 16, 2026",
+        "April 11, 2026",
+        "April 13, 2026"
+      ],
+      "a": 0,
+      "correctText": "The hacker group ShinyHunters has set a deadline of April 14, 2026, for Rockstar Games to meet their ransom demands.",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/2026/04/11/gta-6-developer-rockstar-confirms-third-party-data-breach"
+    },
+    {
+      "q": "Former Miami defensive end Rueben Bain Jr. was involved in a fatal car accident in which year?",
+      "options": [
+        "2024",
+        "2023",
+        "2025",
+        "2022"
+      ],
+      "a": 0,
+      "correctText": "Rueben Bain Jr. was involved in a car accident in March 2024 that resulted in the death of a passenger three months later.",
+      "category": "Sports",
+      "source": "https://www.espn.com/college-football/story/_/id/48471125/ex-miami-de-rueben-bain-involved-2024-car-accident-which-1-person-later-died-report-says"
+    }
+  ]
+}

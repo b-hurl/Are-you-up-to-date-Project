@@ -1,0 +1,95 @@
+{
+  "questions": [
+    {
+      "q": "What percentage of books submitted to Kobo's self-publishing program in 2025 were rejected due to suspected AI generation?",
+      "options": [
+        "Nearly 45 percent",
+        "Around 30 percent",
+        "Less than 20 percent",
+        "Over 60 percent"
+      ],
+      "a": 0,
+      "correctText": "The company rejected nearly 45 percent of the books submitted to its self-publishing program in 2025, with about 80 percent of those rejections due to suspicions of AI generation.",
+      "category": "Books",
+      "source": "https://www.cbc.ca/news/business/publishing-industry-ai-shy-girl-fallout-9.7155292"
+    },
+    {
+      "q": "According to a Pew Research Center survey from October 2025, what is the primary format Americans still opt for when reading books?",
+      "options": [
+        "Print books",
+        "E-books",
+        "Audiobooks",
+        "Digital books"
+      ],
+      "a": 0,
+      "correctText": "Print books remain the most popular format, with roughly two-thirds of U.S. adults reporting they read a physical book in the past 12 months.",
+      "category": "Books",
+      "source": "https://www.pewresearch.org/short-reads/2026/04/09/americans-still-opt-for-print-books-over-digital-or-audio-versions-few-are-in-book-clubs/"
+    },
+    {
+      "q": "What is the title of the book detailing the Roosevelt brothers' 1929 expedition to find a giant panda?",
+      "options": [
+        "The Beast in the Clouds: The Roosevelt Brothers' Deadly Quest to Find the Mythical Giant Panda",
+        "Quest for the Panda: The Roosevelt Brothers' Himalayan Adventure",
+        "Roosevelt's Boys and the Black-and-White Bear",
+        "The Panda Hunters of the Himalayas"
+      ],
+      "a": 0,
+      "correctText": "The book detailing this expedition is titled \"The Beast in the Clouds: The Roosevelt Brothers' Deadly Quest to Find the Mythical Giant Panda.\"",
+      "category": "Books",
+      "source": "https://www.clarionledger.com/story/entertainment/2025/09/16/book-tells-tale-of-roosevelt-brothers-quest-to-capture-a-giant-panda/86113080007/?gca-cat=p&amp;gnt-cfr=1"
+    },
+    {
+      "q": "Who is reportedly being considered by King Charles to write the first official biography of Queen Elizabeth II?",
+      "options": [
+        "Anna Keay",
+        "Hilary Mantel",
+        "Ben Macintyre",
+        "Tom Holland"
+      ],
+      "a": 0,
+      "correctText": "King Charles wants historian Anna Keay to write the first official biography of Queen Elizabeth II.",
+      "category": "Books",
+      "source": "https://www.thetimes.com/uk/royal-family/article/king-charles-queen-elizabeth-history-writer-anna-keay-c6vczzzjv"
+    },
+    {
+      "q": "Mom's Book Nook has donated how many books to children in Sarasota over the past year?",
+      "options": [
+        "Over 7,000",
+        "Over 5,000",
+        "Exactly 6,000",
+        "Around 3,000"
+      ],
+      "a": 0,
+      "correctText": "Mom's Book Nook has donated more than 7,000 books to children in Sarasota over the past year.",
+      "category": "Books",
+      "source": "https://eu.heraldtribune.com/story/news/local/2026/04/12/moms-book-nook-brings-joy-of-reading-to-thousands-of-sarasota-area-children/89399359007/"
+    },
+    {
+      "q": "The Artemis II moonshot is noted to reflect a vision present in which 19th-century novel?",
+      "options": [
+        "From the Earth to the Moon by Jules Verne",
+        "Twenty Thousand Leagues Under the Seas by Jules Verne",
+        "Around the World in Eighty Days by Jules Verne",
+        "The Mysterious Island by Jules Verne"
+      ],
+      "a": 0,
+      "correctText": "The Artemis II moonshot reflects a spacefaring vision present in Jules Verne's 19th-century novel \"From the Earth to the Moon.\"",
+      "category": "Books",
+      "source": "https://theconversation.com/artemis-ii-moonshot-reflects-a-spacefaring-vision-present-in-jules-vernes-19th-century-novel-280252"
+    },
+    {
+      "q": "What is the title of The Guardian's recent list of books recommended to read before turning 25?",
+      "options": [
+        "25 books to read before you turn 25",
+        "The Ultimate Reading List for Young Adults",
+        "Essential Reads for Your Twenties",
+        "Books That Shape You Before 25"
+      ],
+      "a": 0,
+      "correctText": "The Guardian's list is titled \"25 books to read before you turn 25.\"",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/ng-interactive/2026/apr/11/from-peepo-to-middlemarch-25-books-to-read-before-you-turn-25"
+    }
+  ]
+}

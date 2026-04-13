@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-13",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to CNBC, what did Warren Buffett say about his past Apple stock sales in late March 2026?",
+      "options": [
+        "He regretted selling it all",
+        "He sold it too soon and would buy more in a different market",
+        "He believes Apple's stock is overvalued",
+        "He plans to sell all his remaining Apple stock"
+      ],
+      "a": 1,
+      "correctText": "Warren Buffett stated in late March 2026 that he sold Apple stock \"too soon\" and would be inclined to buy more of it, though not in the current market conditions.",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/03/31/warren-buffett-says-he-sold-apple-too-soon-and-would-buy-more-of-it-though-not-in-this-market-.html"
+    },
+    {
+      "q": "Research exploring the potential of certain plants for metal extraction has identified which type of vegetable as a potential tool for mining valuable metals from contaminated soils?",
+      "options": [
+        "Leafy vegetables",
+        "Root vegetables",
+        "Legumes",
+        "Cruciferous vegetables"
+      ],
+      "a": 0,
+      "correctText": "Certain plants, identified as 'hyperaccumulators,' can extract valuable metals from contaminated soils through their roots and shoots. This ability has led to the identification of leafy vegetables as potential tools for metallurgical extraction and re-use in technologies.",
+      "category": "Science",
+      "source": "https://news.uq.edu.au/2026-04-leafy-vegetables-identified-potential-metal-mining-tools"
+    },
+    {
+      "q": "New research suggests that painkillers can prevent pain responses in which aquatic animal, indicating a need for more humane methods of their disposal?",
+      "options": [
+        "Lobsters",
+        "Crabs",
+        "Octopuses",
+        "Fish"
+      ],
+      "a": 0,
+      "correctText": "Painkillers have been found to prevent pain responses in lobsters, providing evidence that crustaceans may feel pain and prompting discussions about more humane methods for their handling and disposal.",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1123639"
+    },
+    {
+      "q": "Is cancer still the leading cause of death in Canada, with new studies indicating a rise in multiple types as of April 2026?",
+      "options": [
+        "Yes, cancer remains the top cause of death in Canada, and recent studies show an increase in various types.",
+        "No, heart disease has surpassed cancer as the leading cause of death in Canada.",
+        "Recent studies indicate a significant decline in all types of cancer deaths in Canada.",
+        "Cancer is no longer among the top causes of death in Canada due to advancements in treatment."
+      ],
+      "a": 0,
+      "correctText": "Yes, cancer remains the top cause of death in Canada, and recent studies show an increase in various types.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/health/canadian-cancer-projections-9.7159535"
+    },
+    {
+      "q": "Is there a proposal being discussed at the Liberal convention to implement a $500,000 exit tax for educated Canadians, as suggested by tech executive Terry Newman?",
+      "options": [
+        "Yes, tech executive Terry Newman has pitched a $500,000 exit tax for educated Canadians at the Liberal convention.",
+        "No, the proposed exit tax is for low-income Canadians, not educated ones.",
+        "The Liberal convention rejected the proposal for an exit tax outright.",
+        "The proposed exit tax is $50,000, not $500,000."
+      ],
+      "a": 0,
+      "correctText": "Yes, tech executive Terry Newman has pitched a $500,000 exit tax for educated Canadians at the Liberal convention.",
+      "category": "Canada",
+      "source": "https://nationalpost.com/opinion/terry-newman-tech-exec-pitches-liberal-convention-on-500k-exit-tax-for-educated-canadians"
+    },
+    {
+      "q": "Former President Donald Trump praised Palantir Technologies for its 'great war fighting capabilities and equipment' amidst what ongoing geopolitical event?",
+      "options": [
+        "The Iran conflict",
+        "The Ukraine war",
+        "The Israel-Hamas war",
+        "The Taiwan Strait tensions"
+      ],
+      "a": 0,
+      "correctText": "Former President Donald Trump praised Palantir Technologies for its 'great war fighting capabilities and equipment,' a statement made while the company's stock was experiencing a downturn and amid the ongoing conflict involving Iran.",
+      "category": "Technology",
+      "source": "https://www.cnbc.com/2026/04/10/trump-pltr-palantir-stock-iran-conflict.html"
+    },
+    {
+      "q": "What was Jeff Bezos's yearly salary from Amazon in early April 2026, according to Fortune?",
+      "options": [
+        "$1.6 million",
+        "$80,000",
+        "$2.1 million",
+        "$100,000"
+      ],
+      "a": 1,
+      "correctText": "Amazon still paid Jeff Bezos an $80,000 yearly salary, with an additional $1.6 million allocated for travel and security expenses in early April 2026.",
+      "category": "Business",
+      "source": "https://fortune.com/2026/04/10/amazon-jeff-bezos-80k-salary-billionaires-ceo-executive-chairman/"
+    },
+    {
+      "q": "Which tech CEO's home was targeted in two separate incidents, including a shooting and a Molotov cocktail attack, around April 13, 2026?",
+      "options": [
+        "Sam Altman",
+        "Elon Musk",
+        "Mark Zuckerberg",
+        "Tim Cook"
+      ],
+      "a": 0,
+      "correctText": "Sam Altman's home in San Francisco was targeted by gunfire and a Molotov cocktail attack. The shooting occurred around 1:40 a.m. on Sunday, April 13, 2026, following a Molotov cocktail attack on April 10, 2026.",
+      "category": "Technology",
+      "source": "https://cybernews.com/security/sam-altmans-home-targeted-in-second-attack/"
+    },
+    {
+      "q": "A study involving over 10,000 participants indicates that both short and long sleep durations in midlife are linked to an increased risk of what in later life?",
+      "options": [
+        "Physical frailty",
+        "Cognitive decline",
+        "Heart disease",
+        "Obesity"
+      ],
+      "a": 0,
+      "correctText": "Long-term cohort analysis of over 10,000 participants suggests that both short and long sleep durations during midlife are associated with a higher risk of developing physical frailty later in life.",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41598-026-39228-6"
+    },
+    {
+      "q": "How much in stock did Oracle's new CFO receive shortly after layoffs, as reported by Yahoo Finance?",
+      "options": [
+        "$1.6 million",
+        "$80,000",
+        "$26 million",
+        "$2.1 million"
+      ],
+      "a": 2,
+      "correctText": "Oracle's new CFO received $26 million in stock following a period of layoffs, with an employee suggesting an 'algorithm' may have targeted workers with stock options for dismissal.",
+      "category": "Business",
+      "source": "https://finance.yahoo.com/markets/stocks/articles/oracles-cfo-got-26m-stock-184500098.html"
+    }
+  ]
+}

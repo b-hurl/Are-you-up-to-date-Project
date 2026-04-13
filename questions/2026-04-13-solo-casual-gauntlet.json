@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-13",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Who is reportedly being considered by King Charles to write the first official biography of Queen Elizabeth II?",
+      "options": [
+        "Anna Keay",
+        "Hilary Mantel",
+        "Ben Macintyre",
+        "Tom Holland"
+      ],
+      "a": 0,
+      "correctText": "King Charles wants historian Anna Keay to write the first official biography of Queen Elizabeth II.",
+      "category": "Books",
+      "source": "https://www.thetimes.com/uk/royal-family/article/king-charles-queen-elizabeth-history-writer-anna-keay-c6vczzzjv"
+    },
+    {
+      "q": "Which former major league infielder and manager, known as 'Scrap Iron,' died at the age of 76?",
+      "options": [
+        "Phil Garner",
+        "Bobby Cox",
+        "Tony La Russa",
+        "Joe Torre"
+      ],
+      "a": 0,
+      "correctText": "Phil Garner, a three-time All-Star infielder and manager who led the Houston Astros to their first World Series appearance, has died at 76.",
+      "category": "Sports",
+      "source": "https://apnews.com/article/phil-garner-astros-pirates-brewers-4a02705cb28ddf2ce85e0d3504c70d3a"
+    },
+    {
+      "q": "In which country will 'Agito: Psychic War' be released theatrically on April 29, 2026?",
+      "options": [
+        "Japan",
+        "United States",
+        "South Korea",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Agito: Psychic War is scheduled for a theatrical release in Japan on April 29, 2026.",
+      "category": "Entertainment",
+      "source": "https://kamenrider.fandom.com/wiki/Agito:_Psychic_War"
+    },
+    {
+      "q": "What new content is coming to Dome Keeper on April 13, 2026, including a free multiplayer update and a paid DLC called 'The Lost Keepers'?",
+      "options": [
+        "The Infiltrator and The Beastmaster keepers, new assignments, and pets.",
+        "A new story mode and increased enemy difficulty.",
+        "A different set of playable characters with unique abilities.",
+        "An expanded mining system and new base defenses."
+      ],
+      "a": 0,
+      "correctText": "The DLC introduces two new keepers, The Infiltrator and The Beastmaster, along with new assignments and pets, while the free update adds multiplayer modes.",
+      "category": "Gaming",
+      "source": "https://xboxwire.com/2026/04/13/dome-keeper-free-multiplayer-update-and-lost-keepers-dlc-have-launched/"
+    },
+    {
+      "q": "Bob Hall, a pioneer in wheelchair racing and a two-time Boston Marathon champion, passed away at what age?",
+      "options": [
+        "74",
+        "76",
+        "72",
+        "78"
+      ],
+      "a": 0,
+      "correctText": "Bob Hall, who was the first official wheelchair champion of the Boston Marathon in 1975 and also won in 1977, has died at the age of 74.",
+      "category": "Sports",
+      "source": "https://www.cbsnews.com/boston/news/bob-hall-wheelchair-racing-pioneer-boston-marathon-champion-dies-at-74/"
+    },
+    {
+      "q": "An opinion piece discusses the perception of game developers. What is a common accusation made against developers that the article argues is unfounded?",
+      "options": [
+        "That they are 'lazy'",
+        "That they prioritize profit over quality",
+        "That they engage in crunch time",
+        "That they don't listen to player feedback"
+      ],
+      "a": 0,
+      "correctText": "The article argues that the accusation of developers being 'lazy' is unfounded, especially given the long hours and demanding nature of the industry.",
+      "category": "Gaming",
+      "source": "https://www.gamesindustry.biz/devs-arent-lazy-and-game-updates-arent-guaranteed-opinion"
+    },
+    {
+      "q": "What is the title of the book detailing the Roosevelt brothers' 1929 expedition to find a giant panda?",
+      "options": [
+        "The Beast in the Clouds: The Roosevelt Brothers' Deadly Quest to Find the Mythical Giant Panda",
+        "Quest for the Panda: The Roosevelt Brothers' Himalayan Adventure",
+        "Roosevelt's Boys and the Black-and-White Bear",
+        "The Panda Hunters of the Himalayas"
+      ],
+      "a": 0,
+      "correctText": "The book detailing this expedition is titled \"The Beast in the Clouds: The Roosevelt Brothers' Deadly Quest to Find the Mythical Giant Panda.\"",
+      "category": "Books",
+      "source": "https://www.clarionledger.com/story/entertainment/2025/09/16/book-tells-tale-of-roosevelt-brothers-quest-to-capture-a-giant-panda/86113080007/?gca-cat=p&amp;gnt-cfr=1"
+    },
+    {
+      "q": "What is the title of the new horror novella by John Davies, writer of \"Hobo with a Shotgun\"?",
+      "options": [
+        "Man vs. Bear",
+        "KIDS VS. ALIENS",
+        "Slumber Party Alien Abduction",
+        "V/H/S/2"
+      ],
+      "a": 0,
+      "correctText": "The new horror novella by John Davies is titled 'MAN VS. BEAR'.",
+      "category": "Entertainment",
+      "source": "https://bloody-disgusting.com/movie/3700950/hobo-shotgun-producers-developing-new-sci-fi-horror-film-kids-vs-aliens/"
+    },
+    {
+      "q": "Which Hollywood actors are among the over 1,000 names who signed an open letter opposing the Paramount-Warner deal?",
+      "options": [
+        "Joaquin Phoenix, Ben Stiller, and Kristen Stewart",
+        "Tom Hanks, Meryl Streep, and Leonardo DiCaprio",
+        "Denzel Washington, Scarlett Johansson, and Brad Pitt",
+        "Ryan Reynolds, Blake Lively, and Chris Pratt"
+      ],
+      "a": 0,
+      "correctText": "Joaquin Phoenix, Ben Stiller, and Kristen Stewart are among the Hollywood names who signed an open letter opposing the Paramount-Warner deal.",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/hollywood-open-letter-paramount-warner-bros-deal-1236720249/"
+    },
+    {
+      "q": "Mom's Book Nook has donated how many books to children in Sarasota over the past year?",
+      "options": [
+        "Over 7,000",
+        "Over 5,000",
+        "Exactly 6,000",
+        "Around 3,000"
+      ],
+      "a": 0,
+      "correctText": "Mom's Book Nook has donated more than 7,000 books to children in Sarasota over the past year.",
+      "category": "Books",
+      "source": "https://eu.heraldtribune.com/story/news/local/2026/04/12/moms-book-nook-brings-joy-of-reading-to-thousands-of-sarasota-area-children/89399359007/"
+    }
+  ]
+}

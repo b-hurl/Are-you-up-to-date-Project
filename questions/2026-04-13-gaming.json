@@ -1,0 +1,82 @@
+{
+  "questions": [
+    {
+      "q": "What new content is coming to Dome Keeper on April 13, 2026, including a free multiplayer update and a paid DLC called 'The Lost Keepers'?",
+      "options": [
+        "The Infiltrator and The Beastmaster keepers, new assignments, and pets.",
+        "A new story mode and increased enemy difficulty.",
+        "A different set of playable characters with unique abilities.",
+        "An expanded mining system and new base defenses."
+      ],
+      "a": 0,
+      "correctText": "The DLC introduces two new keepers, The Infiltrator and The Beastmaster, along with new assignments and pets, while the free update adds multiplayer modes.",
+      "category": "Gaming",
+      "source": "https://xboxwire.com/2026/04/13/dome-keeper-free-multiplayer-update-and-lost-keepers-dlc-have-launched/"
+    },
+    {
+      "q": "Rockstar Games has confirmed a data breach occurred. What is the deadline the hacker group 'ShinyHunters' has given for a ransom payment?",
+      "options": [
+        "April 14, 2026",
+        "April 16, 2026",
+        "April 11, 2026",
+        "April 13, 2026"
+      ],
+      "a": 0,
+      "correctText": "The hacker group ShinyHunters has set a deadline of April 14, 2026, for Rockstar Games to meet their ransom demands.",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/2026/04/11/gta-6-developer-rockstar-confirms-third-party-data-breach"
+    },
+    {
+      "q": "Hazelight Studios, known for games like 'It Takes Two' and 'A Way Out,' has announced a significant sales milestone. How many total sales have their games accrued?",
+      "options": [
+        "Over 50 million copies",
+        "Over 30 million copies",
+        "Over 13 million copies",
+        "Over 7 million copies"
+      ],
+      "a": 0,
+      "correctText": "Hazelight Studios has announced that their three games, 'A Way Out,' 'It Takes Two,' and 'Split Fiction,' have sold over 50 million copies combined.",
+      "category": "Gaming",
+      "source": "https://www.gamedeveloper.com/business/split-fiction-dev-hazelight-studios-accrues-50m-total-sales"
+    },
+    {
+      "q": "An opinion piece discusses the perception of game developers. What is a common accusation made against developers that the article argues is unfounded?",
+      "options": [
+        "That they are 'lazy'",
+        "That they prioritize profit over quality",
+        "That they engage in crunch time",
+        "That they don't listen to player feedback"
+      ],
+      "a": 0,
+      "correctText": "The article argues that the accusation of developers being 'lazy' is unfounded, especially given the long hours and demanding nature of the industry.",
+      "category": "Gaming",
+      "source": "https://www.gamesindustry.biz/devs-arent-lazy-and-game-updates-arent-guaranteed-opinion"
+    },
+    {
+      "q": "Xbox has announced an 'Xbox First Look' showcase. What game will be featured in this upcoming showcase?",
+      "options": [
+        "Metro 2039",
+        "System Shock Remake",
+        "Ashes of Creation",
+        "Soul General"
+      ],
+      "a": 0,
+      "correctText": "The upcoming 'Xbox First Look' showcase will feature the game 'Metro 2039'.",
+      "category": "Gaming",
+      "source": "https://www.windowscentral.com/gaming/metro-2039-confirmed-for-xbox-first-look-show-new-format-will-spotlight-games-throughout-the-year"
+    },
+    {
+      "q": "Allegations have surfaced regarding the misuse of Kickstarter funds for the failed MMO 'Ashes of Creation.' What are some of the alleged personal expenses funded by the Kickstarter money?",
+      "options": [
+        "Private chefs, trading cards, and luxury cigars",
+        "Marketing campaigns and server infrastructure",
+        "Artist salaries and voice actor fees",
+        "Game engine licenses and software development tools"
+      ],
+      "a": 0,
+      "correctText": "Allegations suggest that funds from the 'Ashes of Creation' Kickstarter were used for personal expenses, including private chefs, trading cards, and luxury cigars.",
+      "category": "Gaming",
+      "source": "https://kotaku.com/failed-mmo-ashes-of-creation-s-3-2-million-in-kickstarter-2000686976"
+    }
+  ]
+}
