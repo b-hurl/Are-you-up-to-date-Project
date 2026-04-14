@@ -87,6 +87,30 @@ async function checkOutboundIP() {
     }
 }
 
+/**
+ * Fallback search using an external API (e.g., Serper.dev) if Gemini's built-in tool fails.
+ */
+async function performFallbackSearch(query) {
+    const apiKey = process.env.FALLBACK_SEARCH_API_KEY;
+    if (!apiKey) return null;
+
+    try {
+        const res = await axios.post('https://google.serper.dev/search', 
+            { q: `${query} news article`, num: 5 }, 
+            { headers: { 'X-API-KEY': apiKey, 'Content-Type': 'application/json' }, timeout: 5000 }
+        );
+        const results = res.data.organic || [];
+        // Filter out known paywalled domains and reddit to find the best free news source
+        const bestMatch = results.find(r => 
+            !r.link.includes('reddit.com') && 
+            !['nytimes.com', 'wsj.com', 'bloomberg.com', 'ft.com', 'thetimes.co.uk'].some(p => r.link.includes(p))
+        );
+        return bestMatch ? bestMatch.link : (results[0]?.link || null);
+    } catch (e) {
+        return null;
+    }
+}
+
 async function runAutomation() {
     const date = new Date();
     const dateStr = date.toLocaleDateString('en-CA'); // Outputs "YYYY-MM-DD"
@@ -158,7 +182,7 @@ async function runAutomation() {
         console.log(`\n🚀 Category: ${category.toUpperCase()} (General Attempt ${categoryAttempts[category]}/${generalRetryLimit}, 503 Attempts: ${(_503attempts[category] || 0)})`);
 
         // Dynamic Model Selection: Use 'Pro' for retries to ensure JSON validity
-        const modelName = categoryAttempts[category] > 1 ? "gemini-2.5-flash" : "gemini-2.5-flash-lite";
+        const modelName = categoryAttempts[category] > 1 ? "gemini-3.1-pro" : "gemini-3.1-flash-lite";
         const model = genAI.getGenerativeModel({ 
             model: modelName, 
             tools: [{ googleSearch: {} }]
@@ -265,22 +289,22 @@ async function runAutomation() {
             // Reset 503 attempts for this category as Reddit fetch was successful
             delete _503attempts[category];
 
-            const newsPool = redditData
-                .filter(item => {
-                    const match = (item.content || "").match(/href="([^"]+)">\[link\]/);
-                    const sourceUrl = match ? match[1] : item.link;
-                    const isReddit = sourceUrl.includes('reddit.com');
-                    const isOld = /years ago|anniversary|retro/i.test(item.title);
-                    return !isReddit && !isOld;
-                })
-                .slice(0, 8)
-                .map(item => {
-                    // Reddit RSS embeds the external article URL in the HTML content as "[link]"
-                    const match = (item.content || "").match(/href="([^"]+)">\[link\]/);
-                    const sourceUrl = match ? match[1] : item.link;
-                    return `Headline: ${item.title} | Source: ${sourceUrl}`;
-                })
-                .join("\n");
+            let poolItems = [];
+            for (const item of redditData) {
+                const match = (item.content || "").match(/href="([^"]+)">\[link\]/);
+                const sourceUrl = match ? match[1] : item.link;
+                const isReddit = sourceUrl.includes('reddit.com');
+                const isOld = /years ago|anniversary|retro/i.test(item.title);
+                
+                if (!isReddit && !isOld) {
+                    // Check the link in the post first before adding it to the pool
+                    if (await isUrlLive(sourceUrl)) {
+                        poolItems.push(`Headline: ${item.title} | Source: ${sourceUrl}`);
+                    }
+                }
+                if (poolItems.length >= 8) break;
+            }
+            const newsPool = poolItems.join("\n");
 
             if (!newsPool) {
                 console.warn(`⚠️ No valid links found for ${category}. Skipping.`);
@@ -298,7 +322,7 @@ TASK: Generate exactly 5 trivia questions based EXCLUSIVELY on news events that 
 ### THE "HARD STOP" RULES:
 1. DATE ENFORCEMENT: If an event occurred on April 12th or earlier, DISCARD IT. We only want news from the last 24 hours of ${dateStr}.
 2. SOURCE VERIFICATION: You MUST use Google Search to confirm the headline is currently "Breaking" or "Live" as of ${dateStr}. 
-3. LINK PURITY: The "source" field must be the direct, non-Reddit URL (CBC, Reuters, etc.). If the lead only provides a Reddit link, use Search to find the original article.
+3. LINK PURITY: The "source" field must be a direct, non-Reddit URL. Start with the link in the reddit post. Prefer non-paywalled sources (e.g., CBC, Reuters, AP News, BBC). If the lead only provides a Reddit link, use Search to find a free original article.
 4. NO OPINION: Delete any leads involving editorials, "top 10" lists, or movie reviews. Only hard, factual events.
 5. EXACT COUNT: Return exactly 5 questions. No preamble.
 
@@ -391,23 +415,36 @@ ${newsPool}
                 let source = q.source;
                 const hasValidSource = source && typeof source === 'string' && source.trim().startsWith('http');
                 
-                if (!hasValidSource) {
-                    console.log(`🔍 Source missing/invalid for: "${q.q.substring(0, 40)}...". Recovering...`);
-                    try {
-                        const searchPrompt = `Find the primary news article source URL (not Reddit) for this event from ${dateStr}: "${q.q}". Return ONLY the raw URL.`;
-                        const searchResult = await model.generateContent(searchPrompt);
-                        source = searchResult.response.text().trim().replace(/[`\s]/g, "");
-                    } catch (e) { return null; }
-                }
-
-                // Verify if the link is actually reachable (200 OK)
-                if (await isUrlLive(source)) {
-                    q.source = source;
+                // Check the provided link first before trying to recover/search for a new one
+                if (hasValidSource && await isUrlLive(source)) {
                     q.category = category.charAt(0).toUpperCase() + category.slice(1);
                     return q;
                 }
-                console.warn(`   ❌ Link dead for: "${q.q.substring(0, 40)}..." (${source})`);
-                rejectedQuestions.push(q.q); // Add to blacklist
+
+                console.log(`🔍 Source missing, invalid, or dead for: "${q.q.substring(0, 40)}...". Recovering...`);
+                try {
+                    const searchPrompt = `Find a primary, non-paywalled news article source URL (not Reddit) for this event from ${dateStr}: "${q.q}". Prefer reliable free sources like AP News, Reuters, or BBC. Return ONLY the raw URL.`;
+                    const searchResult = await model.generateContent(searchPrompt);
+                    source = searchResult.response.text().trim().replace(/[`\s]/g, "");
+                    
+                    if (await isUrlLive(source)) {
+                        q.source = source;
+                        q.category = category.charAt(0).toUpperCase() + category.slice(1);
+                        return q;
+                    }
+
+                    // FALLBACK: If Gemini's tool returns a dead/paywalled link, trigger the secondary search tool
+                    console.log(`🔄 Gemini tool failed. Trying fallback search tool for: "${q.q.substring(0, 25)}..."`);
+                    const fallbackSource = await performFallbackSearch(q.q);
+                    if (fallbackSource && await isUrlLive(fallbackSource)) {
+                        q.source = fallbackSource;
+                        q.category = category.charAt(0).toUpperCase() + category.slice(1);
+                        return q;
+                    }
+                } catch (e) {}
+
+                console.warn(`   ❌ Link dead or recovery failed for: "${q.q.substring(0, 40)}..."`);
+                rejectedQuestions.push(q.q); 
                 return null;
             };
 
@@ -435,7 +472,7 @@ ${newsPool}
                     - REJECTED (DEAD LINKS): ${rejectedQuestions.join(" | ")}
                     
                     Please find entirely NEW headlines from ${dateStr} for this category. 
-                    Ensure the "source" is a direct news URL (not Reddit) and is functional.
+                    Ensure the "source" is a direct, non-paywalled news URL (not Reddit) and is functional.
                     Follow the same JSON format as before.`;
                     
                     const retryResult = await model.generateContent(retryPrompt);
