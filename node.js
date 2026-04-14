@@ -87,30 +87,6 @@ async function checkOutboundIP() {
     }
 }
 
-/**
- * Fallback search using an external API (e.g., Serper.dev) if Gemini's built-in tool fails.
- */
-async function performFallbackSearch(query) {
-    const apiKey = process.env.FALLBACK_SEARCH_API_KEY;
-    if (!apiKey) return null;
-
-    try {
-        const res = await axios.post('https://google.serper.dev/search', 
-            { q: `${query} news article`, num: 5 }, 
-            { headers: { 'X-API-KEY': apiKey, 'Content-Type': 'application/json' }, timeout: 5000 }
-        );
-        const results = res.data.organic || [];
-        // Filter out known paywalled domains and reddit to find the best free news source
-        const bestMatch = results.find(r => 
-            !r.link.includes('reddit.com') && 
-            !['nytimes.com', 'wsj.com', 'bloomberg.com', 'ft.com', 'thetimes.co.uk'].some(p => r.link.includes(p))
-        );
-        return bestMatch ? bestMatch.link : (results[0]?.link || null);
-    } catch (e) {
-        return null;
-    }
-}
-
 async function runAutomation() {
     const date = new Date();
     const dateStr = date.toLocaleDateString('en-CA'); // Outputs "YYYY-MM-DD"
@@ -182,7 +158,7 @@ async function runAutomation() {
         console.log(`\n🚀 Category: ${category.toUpperCase()} (General Attempt ${categoryAttempts[category]}/${generalRetryLimit}, 503 Attempts: ${(_503attempts[category] || 0)})`);
 
         // Dynamic Model Selection: Use 'Pro' for retries to ensure JSON validity
-        const modelName = categoryAttempts[category] > 1 ? "gemini-3.1-flash" : "gemini-3.1-flash-lite";
+       const modelName = categoryAttempts[category] > 1 ? "gemini-3.1-flash-preview" : "gemini-3.1-flash-lite-preview";
         const model = genAI.getGenerativeModel({ 
             model: modelName, 
             tools: [{ googleSearch: {} }]
@@ -429,15 +405,6 @@ ${newsPool}
                     
                     if (await isUrlLive(source)) {
                         q.source = source;
-                        q.category = category.charAt(0).toUpperCase() + category.slice(1);
-                        return q;
-                    }
-
-                    // FALLBACK: If Gemini's tool returns a dead/paywalled link, trigger the secondary search tool
-                    console.log(`🔄 Gemini tool failed. Trying fallback search tool for: "${q.q.substring(0, 25)}..."`);
-                    const fallbackSource = await performFallbackSearch(q.q);
-                    if (fallbackSource && await isUrlLive(fallbackSource)) {
-                        q.source = fallbackSource;
                         q.category = category.charAt(0).toUpperCase() + category.slice(1);
                         return q;
                     }
