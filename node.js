@@ -158,7 +158,7 @@ async function runAutomation() {
         console.log(`\n🚀 Category: ${category.toUpperCase()} (General Attempt ${categoryAttempts[category]}/${generalRetryLimit}, 503 Attempts: ${(_503attempts[category] || 0)})`);
 
         // Dynamic Model Selection: Use 'Pro' for retries to ensure JSON validity
-       const modelName = categoryAttempts[category] > 1 ? "gemini-3.1-flash-preview" : "gemini-3.1-flash-lite-preview";
+       const modelName = categoryAttempts[category] > 1 ? "gemini-3.1-flash-preview" : "gemini-3.1-pro-preview";
         const model = genAI.getGenerativeModel({ 
             model: modelName, 
             tools: [{ googleSearch: {} }]
