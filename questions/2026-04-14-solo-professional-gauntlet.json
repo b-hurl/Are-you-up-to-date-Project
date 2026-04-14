@@ -1,0 +1,71 @@
+{
+  "date": "2026-04-14",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "As of April 13, 2026, which country did Ukraine's Ministry of Foreign Affairs lift its recommendation against citizens traveling to?",
+      "options": [
+        "Poland",
+        "Hungary",
+        "Slovakia",
+        "Romania"
+      ],
+      "a": 1,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.pravda.com.ua/eng/news/2026/04/13/8029917/"
+    },
+    {
+      "q": "Which religious leader, as reported on April 13, 2026, stated he does not fear Donald Trump after an attack over an Iran peace appeal?",
+      "options": [
+        "Pope Francis",
+        "Pope Leo XIV",
+        "The Dalai Lama",
+        "Archbishop of Canterbury"
+      ],
+      "a": 1,
+      "correctText": "Pope Leo XIV",
+      "category": "World",
+      "source": "https://www.aljazeera.com/news/2026/4/13/terrible-for-foreign-policy-trump-attacks-pope-leo-after-peace-appeal"
+    },
+    {
+      "q": "On April 14, 2026, a US-sanctioned Chinese tanker reportedly passed through which critical shipping lane despite a US blockade?",
+      "options": [
+        "Suez Canal",
+        "Panama Canal",
+        "Strait of Hormuz",
+        "Malacca Strait"
+      ],
+      "a": 2,
+      "correctText": "Strait of Hormuz",
+      "category": "World",
+      "source": "https://www.reuters.com/business/energy/us-sanctioned-chinese-tanker-passes-strait-hormuz-despite-us-blockade-data-shows-2026-04-14/"
+    },
+    {
+      "q": "Who clinched a majority government in Canadian special elections, as reported on April 13, 2026?",
+      "options": [
+        "Justin Trudeau",
+        "Pierre Poilievre",
+        "Mark Carney",
+        "Jagmeet Singh"
+      ],
+      "a": 2,
+      "correctText": "Mark Carney",
+      "category": "World",
+      "source": "https://www.reuters.com/world/americas/canadas-carney-set-win-majority-government-special-elections-2026-04-13/"
+    },
+    {
+      "q": "According to Chinese President Xi Jinping, as reported on April 14, 2026, what is happening to the international order?",
+      "options": [
+        "It is strengthening global cooperation",
+        "It is crumbling into disarray",
+        "It is entering a new era of stability",
+        "It is undergoing minor adjustments"
+      ],
+      "a": 1,
+      "correctText": "It is crumbling into disarray",
+      "category": "World",
+      "source": "https://www.bloomberg.com/news/articles/2026-04-14/china-s-xi-urges-closer-spain-ties-to-counter-global-disarray"
+    }
+  ]
+}
