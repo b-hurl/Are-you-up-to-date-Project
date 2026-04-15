@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to an April 14, 2026 report, MRI scans have revealed that diets high in ultraprocessed foods are physically altering human bodies in what surprising way?",
+      "options": [
+        "Turning thighs into well-marbled steaks with intramuscular fat",
+        "Decreasing the density of the frontal lobe",
+        "Tinting fingernails a pale yellow color",
+        "Creating permanent plaque coatings on the tongue"
+      ],
+      "a": 0,
+      "correctText": "Turning thighs into well-marbled steaks with intramuscular fat",
+      "category": "Health",
+      "source": "https://edition.cnn.com/2026/04/14/health/ultraprocessed-foods-knee-osteoarthritis-wellness"
+    },
+    {
+      "q": "Why did several US states begin dropping Medicaid coverage for popular GLP-1 weight-loss drugs in mid-April 2026?",
+      "options": [
+        "An unsustainable rise in costs and public spending due to high demand",
+        "A federal mandate banning the off-label prescription of the drugs",
+        "Recent FDA warnings linking the medications to severe liver failure",
+        "A severe supply chain shortage that halted domestic manufacturing"
+      ],
+      "a": 0,
+      "correctText": "An unsustainable rise in costs and public spending due to high demand",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/us-states-drop-medicaid-coverage-110055274.html"
+    },
+    {
+      "q": "According to a joint investigation by USA TODAY published on April 14, 2026, what major tactic has Merck used to keep the price of its blockbuster cancer drug Keytruda sky high?",
+      "options": [
+        "Using a growing wall of patents to delay generic competition",
+        "Artificially limiting global production to create market scarcity",
+        "Paying kickbacks to oncologists who refuse to prescribe alternatives",
+        "Monopolizing the supply chain for a rare active ingredient"
+      ],
+      "a": 0,
+      "correctText": "Using a growing wall of patents to delay generic competition",
+      "category": "Health",
+      "source": "https://www.usatoday.com/story/money/2026/04/14/merck-keytruda-pricing-patents-dosage-drug-cost-cancer/89507794007/"
+    },
+    {
+      "q": "Despite the US flu season largely coming to an end, what alarming health trend was the CDC still tracking as of April 14, 2026?",
+      "options": [
+        "The number of child flu deaths is continuing to rise",
+        "A new strain of the flu is severely reinfecting vaccinated adults",
+        "Hospitals are reporting a massive shortage of rapid diagnostic flu tests",
+        "The virus is unexpectedly spreading through municipal water supplies"
+      ],
+      "a": 0,
+      "correctText": "The number of child flu deaths is continuing to rise",
+      "category": "Health",
+      "source": "https://www.independent.co.uk/news/health/flu-season-children-deaths-cdc-b2957603.html"
+    },
+    {
+      "q": "A prominent April 14, 2026 NPR report focused on the growing trend of consumers ordering their own blood work. What was the primary issue highlighted with this practice?",
+      "options": [
+        "Interpreting the results often raises more questions for patients than it can answer",
+        "Insurance companies are using the data to unlawfully deny coverage",
+        "State medical boards are aggressively banning direct-to-consumer lab testing",
+        "At-home samples are frequently cross-contaminated while in transit"
+      ],
+      "a": 0,
+      "correctText": "Interpreting the results often raises more questions for patients than it can answer",
+      "category": "Health",
+      "source": "https://www.npr.org/2026/04/14/nx-s1-5780066/oura-function-wearables-blood-testing-bloodwork"
+    }
+  ]
+}

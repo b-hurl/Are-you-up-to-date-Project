@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What are Minnesota authorities investigating federal ICE officers for regarding the January 2026 detention of a US citizen?",
+      "options": [
+        "Kidnapping and false imprisonment",
+        "First-degree assault and battery",
+        "Voter intimidation and fraud",
+        "Embezzlement of federal funds"
+      ],
+      "a": 0,
+      "correctText": "Kidnapping and false imprisonment",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/apr/14/ice-detention-minnesota-investigation-false-arrest"
+    },
+    {
+      "q": "For what reason did an 86-year-old French woman, who was detained by ICE in Louisiana in April 2026, originally move to the United States?",
+      "options": [
+        "To reunite with her long-lost love",
+        "To seek emergency medical treatment",
+        "To claim a multimillion-dollar inheritance",
+        "To evade tax fraud charges in Europe"
+      ],
+      "a": 0,
+      "correctText": "To reunite with her long-lost love",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/cd0rre4d9k0o"
+    },
+    {
+      "q": "In April 2026, the Justice Department asked a federal appeals court to throw out the seditious conspiracy convictions of leaders from which two groups?",
+      "options": [
+        "Proud Boys and Oath Keepers",
+        "Three Percenters and Patriot Front",
+        "Boogaloo Bois and the Proud Boys",
+        "Oath Keepers and QAnon"
+      ],
+      "a": 0,
+      "correctText": "Proud Boys and Oath Keepers",
+      "category": "Usa",
+      "source": "https://apnews.com/article/proud-boys-oath-keepers-convictions-dropped-doj-ad679108ab84083694261efc101e60ea"
+    },
+    {
+      "q": "On April 14, 2026, Omaha police fatally shot a woman outside a Walmart after she allegedly did what?",
+      "options": [
+        "Kidnapped a 3-year-old child at knifepoint",
+        "Attempted to rob the pharmacy with a handgun",
+        "Held a store manager hostage in the parking lot",
+        "Drove a stolen vehicle through the front doors"
+      ],
+      "a": 0,
+      "correctText": "Kidnapped a 3-year-old child at knifepoint",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/police-fatally-shoot-attempted-kidnapper-knife-omaha-walmart-rcna331796"
+    },
+    {
+      "q": "On April 14, 2026, shipping data revealed that a sanctioned tanker owned by which country passed through the Strait of Hormuz despite a new US blockade?",
+      "options": [
+        "China",
+        "Russia",
+        "North Korea",
+        "Venezuela"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Usa",
+      "source": "https://www.reuters.com/business/energy/us-sanctioned-chinese-tanker-passes-strait-hormuz-despite-us-blockade-data-shows-2026-04-14/"
+    }
+  ]
+}

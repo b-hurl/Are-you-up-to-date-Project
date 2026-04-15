@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 14, 2026, NFL reporter Dianna Russini resigned from The Athletic following the publication of photos showing her with which NFL head coach?",
+      "options": [
+        "Bill Belichick",
+        "Mike Vrabel",
+        "Sean McVay",
+        "Kyle Shanahan"
+      ],
+      "a": 1,
+      "correctText": "Mike Vrabel",
+      "category": "Sports",
+      "source": "https://www.newsday.com/sports/football/russini-vrabel-m21163"
+    },
+    {
+      "q": "Which golfer issued an apology on April 14, 2026, after receiving a code-of-conduct warning for breaking his driver during the final round of the Masters?",
+      "options": [
+        "Jon Rahm",
+        "Brooks Koepka",
+        "Sergio Garcia",
+        "Rory McIlroy"
+      ],
+      "a": 2,
+      "correctText": "Sergio Garcia",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48485143/sergio-garcia-apologizes-outburst-amid-final-round-masters"
+    },
+    {
+      "q": "Former Michigan football coach Sherrone Moore was sentenced to 18 months of probation in April 2026 following a confrontation related to what?",
+      "options": [
+        "An argument with a referee",
+        "A recruiting violation",
+        "A dispute with the university president",
+        "An affair with a former staff member"
+      ],
+      "a": 3,
+      "correctText": "An affair with a former staff member",
+      "category": "Sports",
+      "source": "https://apnews.com/article/sherrone-moore-michigan-football-sentencing-d9ebffb09e1dd31ad43c2f5ff212a551"
+    },
+    {
+      "q": "Which 40-year-old goaltender, holding the record for the most wins by a US-born goalie in NHL history, announced his retirement following his final game in April 2026?",
+      "options": [
+        "Jonathan Quick",
+        "Ryan Miller",
+        "Connor Hellebuyck",
+        "John Gibson"
+      ],
+      "a": 0,
+      "correctText": "Jonathan Quick",
+      "category": "Sports",
+      "source": "https://www.espn.com/nhl/story/_/id/48476313/veteran-goaltender-jonathan-quick-says-retiring-nhl"
+    },
+    {
+      "q": "On April 14, 2026, a new trial resumed in Argentina against seven health care professionals accused of negligence in the death of which soccer legend?",
+      "options": [
+        "Pelé",
+        "Diego Maradona",
+        "Johan Cruyff",
+        "Garrincha"
+      ],
+      "a": 1,
+      "correctText": "Diego Maradona",
+      "category": "Sports",
+      "source": "https://www.upi.com/Top_News/World-News/2026/04/14/latam-argentina-second-trial-Maradona-death/4431776178156/"
+    }
+  ]
+}

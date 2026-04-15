@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to earnings filings published in April 2026, how many U.S. stores does 7-Eleven plan to close this year?",
+      "options": [
+        "250",
+        "645",
+        "850",
+        "1,200"
+      ],
+      "a": 1,
+      "correctText": "645",
+      "category": "Business",
+      "source": "https://www.cbsnews.com/news/7-eleven-store-closures-fiscal-year-2026/"
+    },
+    {
+      "q": "In an escalating monopoly battle reported on April 14, 2026, which tech giant is facing demands for billions of dollars from advertisers?",
+      "options": [
+        "Meta",
+        "Amazon",
+        "Google",
+        "Apple"
+      ],
+      "a": 2,
+      "correctText": "Google",
+      "category": "Business",
+      "source": "https://www.latimes.com/business/story/2026-04-14/advertisers-demand-billions-of-dollars-from-google-in-escalating-monopoly-battle"
+    },
+    {
+      "q": "Which satellite company did Amazon agree to purchase for roughly $11.6 billion in April 2026 to bolster its low Earth orbit internet business?",
+      "options": [
+        "Globalstar",
+        "Viasat",
+        "Iridium",
+        "Eutelsat"
+      ],
+      "a": 0,
+      "correctText": "Globalstar",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/14/amazon-globalstar-satellite-leo-internet.html"
+    },
+    {
+      "q": "On Free Cone Day in April 2026, the co-founder of which ice cream brand publicly called for the company to become independent once more?",
+      "options": [
+        "Häagen-Dazs",
+        "Baskin-Robbins",
+        "Blue Bell",
+        "Ben & Jerry's"
+      ],
+      "a": 3,
+      "correctText": "Ben & Jerry's",
+      "category": "Business",
+      "source": "https://www.seattletimes.com/business/ben-jerrys-co-founder-wants-the-company-to-be-independent-once-more/"
+    },
+    {
+      "q": "In mid-April 2026, Oracle expanded its deal with which energy company just days after receiving a $400 million stock warrant?",
+      "options": [
+        "NextEra Energy",
+        "Bloom Energy",
+        "Plug Power",
+        "SunPower"
+      ],
+      "a": 1,
+      "correctText": "Bloom Energy",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/13/oracle-expands-bloom-energy-deal-days-after-400-million-stock-warrant.html"
+    }
+  ]
+}

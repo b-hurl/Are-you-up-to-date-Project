@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a study publicized on April 14, 2026, engaging in what digital habit on TikTok is linked to lower relationship trust and satisfaction?",
+      "options": [
+        "Watching 'thirst traps'",
+        "Creating 'get ready with me' videos",
+        "Participating in dance trends",
+        "Posting daily vlogs"
+      ],
+      "a": 0,
+      "correctText": "Watching 'thirst traps'",
+      "category": "Science",
+      "source": "https://www.psypost.org/new-study-links-watching-tiktok-thirst-traps-to-lower-relationship-trust-and-satisfaction/"
+    },
+    {
+      "q": "A Yale University study released on April 14, 2026, found that overall cancer incidence rates are 4-8% higher in counties with large concentrations of what?",
+      "options": [
+        "Industrial animal agriculture",
+        "Coal-fired power plants",
+        "Hydraulic fracturing sites",
+        "Plastic manufacturing facilities"
+      ],
+      "a": 0,
+      "correctText": "Industrial animal agriculture",
+      "category": "Science",
+      "source": "https://sentientmedia.org/cancer-rates-are-higher-near-factory-farms/"
+    },
+    {
+      "q": "Research published today demonstrated that a single dose of what supplement significantly reduced alcohol cravings in individuals with alcohol use disorder?",
+      "options": [
+        "Ketone esters",
+        "Melatonin",
+        "Probiotics",
+        "L-theanine"
+      ],
+      "a": 0,
+      "correctText": "Ketone esters",
+      "category": "Science",
+      "source": "https://www.psypost.org/ketone-esters-show-promise-as-a-new-treatment-for-alcohol-use-disorder/"
+    },
+    {
+      "q": "Psychologists reported on April 14, 2026, that finding deep spiritual or sacred meaning in the bedroom enhances sexual passion primarily by fostering what habit?",
+      "options": [
+        "Open communication",
+        "Strict scheduling",
+        "Meditation retreats",
+        "Financial transparency"
+      ],
+      "a": 0,
+      "correctText": "Open communication",
+      "category": "Science",
+      "source": "https://www.psypost.org/how-finding-deep-spiritual-meaning-in-the-bedroom-changes-relationship-dynamics/"
+    },
+    {
+      "q": "A highly anticipated long-term study published on April 14, 2026, definitively proved that what common drinking water additive has no negative effect on IQ or brain function?",
+      "options": [
+        "Fluoride",
+        "Chlorine",
+        "Iodine",
+        "Sodium"
+      ],
+      "a": 0,
+      "correctText": "Fluoride",
+      "category": "Science",
+      "source": "https://www.nbcnews.com/health/kids-health/fluoride-water-children-iq-brain-cognition-study-rfk-jr-rcna267328"
+    }
+  ]
+}
