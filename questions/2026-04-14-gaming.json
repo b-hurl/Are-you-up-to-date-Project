@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which publisher quietly delisted 15 classic games on Steam in April 2026, including several classic 'Star Wars' titles?",
+      "options": [
+        "Disney",
+        "Electronic Arts",
+        "Ubisoft",
+        "Warner Bros. Games"
+      ],
+      "a": 0,
+      "correctText": "Disney",
+      "category": "Gaming",
+      "source": "https://www.pcguide.com/news/disney-quietly-delists-15-more-games-on-steam-including-a-couple-of-classic-star-wars-titles/"
+    },
+    {
+      "q": "The largest shareholder of which developer behind the 'DoDonPachi' series recently offered her own funds to raise $600k in capital for console game development?",
+      "options": [
+        "Cave",
+        "Treasure",
+        "SNK",
+        "Arc System Works"
+      ],
+      "a": 0,
+      "correctText": "Cave",
+      "category": "Gaming",
+      "source": "https://automaton-media.com/en/news/largest-shareholder-of-dodonpachi-developer-cave-offers-her-own-funds-to-raise-600k-capital-for-console-game-development/"
+    },
+    {
+      "q": "Which classic RPG trilogy recently received a release date for PS5, Xbox Series, PS4, and Xbox One from publisher THQ Nordic?",
+      "options": [
+        "Gothic Classic Trilogy",
+        "Risen Classic Trilogy",
+        "Two Worlds Classic Trilogy",
+        "Fable Classic Trilogy"
+      ],
+      "a": 0,
+      "correctText": "Gothic Classic Trilogy",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/gothic-classic-trilogy-for-ps5-xbox-series-ps4-and-xbox-one-dated"
+    },
+    {
+      "q": "Bungie's Update 1.0.6 introduced the C.A.R.R.I. protocol and a new 'Mercy Kit' item for which live-service game?",
+      "options": [
+        "Marathon",
+        "Destiny 2",
+        "Halo Infinite",
+        "Matter"
+      ],
+      "a": 0,
+      "correctText": "Marathon",
+      "category": "Gaming",
+      "source": "https://www.bungie.net/7/en/News/Article/marathon_update_106"
+    },
+    {
+      "q": "Which 2.5D retro-futuristic platformer by Sad Cat Studios set in an alternate 1980s America received its official launch trailer on April 14, 2026?",
+      "options": [
+        "REPLACED",
+        "The Last Night",
+        "Katana ZERO",
+        "Cyber Shadow"
+      ],
+      "a": 0,
+      "correctText": "REPLACED",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=YheMqHoeHVc"
+    }
+  ]
+}

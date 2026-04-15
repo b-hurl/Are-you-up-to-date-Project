@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In April 2026, voters in which state fired half of their town council just a week after the council approved a new data center project?",
+      "options": [
+        "Missouri",
+        "Texas",
+        "California",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "Missouri",
+      "category": "Technology",
+      "source": "https://gizmodo.com/missouri-town-council-approves-data-center-a-week-later-voters-fire-half-of-council-2000746005"
+    },
+    {
+      "q": "Following an arson attack on OpenAI CEO Sam Altman's home in April 2026, prosecutors revealed the suspect possessed a 'kill list' targeting executives in which field?",
+      "options": [
+        "Artificial Intelligence",
+        "Cryptocurrency",
+        "Social Media",
+        "Electric Vehicles"
+      ],
+      "a": 0,
+      "correctText": "Artificial Intelligence",
+      "category": "Technology",
+      "source": "https://fortune.com/2026/04/14/man-charged-in-arson-attack-on-sam-altman-ai-ceo-kill-list-prosecutors-say/"
+    },
+    {
+      "q": "Highlighting a workplace divide over AI, a 2026 Guardian report notes that while bosses say AI boosts productivity, workers complain they are drowning in low-quality AI-generated content known by what term?",
+      "options": [
+        "Workslop",
+        "Bot-rot",
+        "AI-junk",
+        "Prompt-sludge"
+      ],
+      "a": 0,
+      "correctText": "Workslop",
+      "category": "Technology",
+      "source": "https://www.theguardian.com/technology/2026/apr/14/ai-productivity-workplace-errors"
+    },
+    {
+      "q": "In an effort to 'streamline operations', which major entertainment company began laying off 1,000 employees in April 2026 under the direction of CEO Josh D’Amaro?",
+      "options": [
+        "Disney",
+        "Warner Bros. Discovery",
+        "Paramount",
+        "Netflix"
+      ],
+      "a": 0,
+      "correctText": "Disney",
+      "category": "Technology",
+      "source": "https://variety.com/2026/biz/news/disney-layoffs-1000-employees-josh-damaro-memo-1236721266/"
+    },
+    {
+      "q": "In April 2026, Google announced that starting in June, it will begin punishing websites that employ which deceptive user experience tactic?",
+      "options": [
+        "Back button hijacking",
+        "Invisible overlay ads",
+        "Auto-playing audio",
+        "Fake CAPTCHA checks"
+      ],
+      "a": 0,
+      "correctText": "Back button hijacking",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gadgets/2026/04/websites-that-hijack-your-back-button-must-stop-by-june-15-or-face-googles-wrath/"
+    }
+  ]
+}
