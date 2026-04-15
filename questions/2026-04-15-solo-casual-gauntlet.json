@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-15",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "How long is the probation period given to former Michigan football coach Sherrone Moore following his plea agreement on April 14, 2026?",
+      "options": [
+        "18 months",
+        "12 months",
+        "6 months",
+        "24 months"
+      ],
+      "a": 0,
+      "correctText": "Sherrone Moore was sentenced to 18 months of probation and fined for two misdemeanor charges related to a confrontation with a former staffer.",
+      "category": "Sports",
+      "source": "https://apnews.com/article/sherrone-moore-michigan-football-sentencing-d9ebffb09e1dd31ad43c2f5ff212a551"
+    },
+    {
+      "q": "What is the official title of the newly announced 'Game of Thrones' movie?",
+      "options": [
+        "The Doom of Valyria",
+        "Aegon's Conquest",
+        "The Long Night",
+        "Dance of the Dragons"
+      ],
+      "a": 1,
+      "correctText": "Aegon's Conquest",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/game-of-thrones-movie-aegons-conquest-1236722027/"
+    },
+    {
+      "q": "On April 14, 2026, Disney quietly delisted 15 of its classic titles, including older Star Wars games, from which digital PC storefront?",
+      "options": [
+        "Steam",
+        "Epic Games Store",
+        "GOG",
+        "Itch.io"
+      ],
+      "a": 0,
+      "correctText": "Steam",
+      "category": "Gaming",
+      "source": "https://www.pcguide.com/news/disney-quietly-delists-15-more-games-on-steam-including-a-couple-of-classic-star-wars-titles/"
+    },
+    {
+      "q": "A new trial resumed in Argentina on April 14, 2026, against seven medical professionals accused of negligence leading to the death of which soccer legend?",
+      "options": [
+        "Diego Maradona",
+        "Pelé",
+        "Johan Cruyff",
+        "Alfredo Di Stéfano"
+      ],
+      "a": 0,
+      "correctText": "The trial centers on seven medical professionals accused of failing to provide adequate care to Diego Maradona in the weeks leading up to his death.",
+      "category": "Sports",
+      "source": "https://www.upi.com/Top_News/World-News/2026/04/14/latam-argentina-second-trial-Maradona-death/4431776178156/"
+    },
+    {
+      "q": "Boston Red Sox outfielder Jarren Duran directed an obscene gesture toward a fan during a 6-0 loss to which team on April 14, 2026?",
+      "options": [
+        "Minnesota Twins",
+        "New York Yankees",
+        "Houston Astros",
+        "Baltimore Orioles"
+      ],
+      "a": 0,
+      "correctText": "Jarren Duran made the gesture toward a fan at Target Field during a loss to the Minnesota Twins, stating the fan made a comment that crossed the line.",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48490369/jarren-duran-obscene-gesture-was-due-fan-crossing-line"
+    },
+    {
+      "q": "According to Margot Robbie, the 'Ocean's 11' prequel will center on Danny Ocean's parents pulling off a heist at which 1962 event?",
+      "options": [
+        "Monaco Grand Prix",
+        "Cannes Film Festival",
+        "The World Cup in Chile",
+        "The Kentucky Derby"
+      ],
+      "a": 0,
+      "correctText": "Monaco Grand Prix",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/margot-robbie-oceans-11-prequel-plot-danny-oceans-1236721883/"
+    },
+    {
+      "q": "What public health milestone is currently being threatened by the introduction of new, toxic synthetic alternatives into the street drug supply?",
+      "options": [
+        "A historic decline in U.S. overdose deaths",
+        "A record low in emergency room wait times",
+        "A drastic drop in youth vaping rates",
+        "A decrease in prescription opioid distributions"
+      ],
+      "a": 0,
+      "correctText": "A historic decline in U.S. overdose deaths",
+      "category": "Health",
+      "source": "https://www.npr.org/2026/04/14/nx-s1-5783750/overdose-fentanyl-medetomidine-xylazine"
+    },
+    {
+      "q": "Alex Ovechkin recorded an assist in what could be the final game of his NHL career during the Capitals' 2-1 season-finale victory against which team?",
+      "options": [
+        "Columbus Blue Jackets",
+        "Pittsburgh Penguins",
+        "New York Rangers",
+        "Philadelphia Flyers"
+      ],
+      "a": 0,
+      "correctText": "Ovechkin assisted on the go-ahead goal in the Washington Capitals' 2-1 victory against the Columbus Blue Jackets on Tuesday night.",
+      "category": "Sports",
+      "source": "https://apnews.com/article/capitals-blue-jackets-score-ovechkin-15aa861d8785e2dfa11fea2e308d719b"
+    },
+    {
+      "q": "Who was the original voice actor for Star Fox 64's Wolf O'Donnell and Bill Grey, whose passing was widely reported in the gaming community on April 15, 2026?",
+      "options": [
+        "Jock Blaney",
+        "Rick May",
+        "Mike West",
+        "Ja Green"
+      ],
+      "a": 0,
+      "correctText": "Jock Blaney",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/04/jock-blaney-the-voice-of-star-fox-64s-wolf-and-bill-grey-has-died"
+    },
+    {
+      "q": "According to a study published in the Journal of Affective Disorders, consuming two to three cups of what beverage a day is linked to a lower risk of mental health disorders?",
+      "options": [
+        "Coffee",
+        "Green tea",
+        "Matcha",
+        "Kombucha"
+      ],
+      "a": 0,
+      "correctText": "Coffee",
+      "category": "Health",
+      "source": "https://www.euronews.com/health/2026/04/15/two-to-three-cups-of-coffee-a-day-linked-to-lower-risk-of-mental-health-disorders-study-fi"
+    }
+  ]
+}

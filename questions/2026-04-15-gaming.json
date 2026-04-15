@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who was the original voice actor for Star Fox 64's Wolf O'Donnell and Bill Grey, whose passing was widely reported in the gaming community on April 15, 2026?",
+      "options": [
+        "Jock Blaney",
+        "Rick May",
+        "Mike West",
+        "Ja Green"
+      ],
+      "a": 0,
+      "correctText": "Jock Blaney",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/04/jock-blaney-the-voice-of-star-fox-64s-wolf-and-bill-grey-has-died"
+    },
+    {
+      "q": "On April 14, 2026, Disney quietly delisted 15 of its classic titles, including older Star Wars games, from which digital PC storefront?",
+      "options": [
+        "Steam",
+        "Epic Games Store",
+        "GOG",
+        "Itch.io"
+      ],
+      "a": 0,
+      "correctText": "Steam",
+      "category": "Gaming",
+      "source": "https://www.pcguide.com/news/disney-quietly-delists-15-more-games-on-steam-including-a-couple-of-classic-star-wars-titles/"
+    },
+    {
+      "q": "What is the name of the new PvP-free starter region introduced to EVE Online in April 2026 to help new players safely learn the basics of the game?",
+      "options": [
+        "Exordium",
+        "Genesis",
+        "Arnon",
+        "Manifest"
+      ],
+      "a": 0,
+      "correctText": "Exordium",
+      "category": "Gaming",
+      "source": "https://www.eveonline.com/news/view/introducing-exordium"
+    },
+    {
+      "q": "In April 2026, the largest shareholder of which legendary shoot 'em up developer offered $600k of her own funds to help the studio pivot to console game development?",
+      "options": [
+        "Cave",
+        "Treasure",
+        "Moss",
+        "Qute"
+      ],
+      "a": 0,
+      "correctText": "Cave",
+      "category": "Gaming",
+      "source": "https://automaton-media.com/en/news/largest-shareholder-of-dodonpachi-developer-cave-offers-her-own-funds-to-raise-600k-capital-for-console-game-development/"
+    },
+    {
+      "q": "On April 14, 2026, THQ Nordic announced release dates for the PlayStation and Xbox ports of which classic RPG trilogy?",
+      "options": [
+        "Gothic Classic",
+        "Risen Classic",
+        "Two Worlds Classic",
+        "Divinity Classic"
+      ],
+      "a": 0,
+      "correctText": "Gothic Classic",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/gothic-classic-trilogy-for-ps5-xbox-series-ps4-and-xbox-one-dated"
+    }
+  ]
+}

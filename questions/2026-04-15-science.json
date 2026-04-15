@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to new research from April 2026, rice will physically cease to function in traditional growing regions by 2070 when temperatures exceed what heat threshold?",
+      "options": [
+        "120°F (49°C)",
+        "104°F (40°C)",
+        "98°F (37°C)",
+        "115°F (46°C)"
+      ],
+      "a": 1,
+      "correctText": "104°F (40°C)",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s43247-025-03108-0"
+    },
+    {
+      "q": "An April 2026 study analyzing five popular AI chatbots for medical accuracy found that which chatbot generated the fewest highly problematic responses?",
+      "options": [
+        "Grok",
+        "ChatGPT",
+        "Meta AI",
+        "Gemini"
+      ],
+      "a": 3,
+      "correctText": "Gemini",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1123655"
+    },
+    {
+      "q": "A groundbreaking April 2026 study revealed that the 'coda' click vocalizations of which ocean-dwelling animal closely parallel the phonetic structure and vowels of human language?",
+      "options": [
+        "Orcas (Killer whales)",
+        "Bottlenose dolphins",
+        "Sperm whales",
+        "Humpback whales"
+      ],
+      "a": 2,
+      "correctText": "Sperm whales",
+      "category": "Science",
+      "source": "https://www.theguardian.com/environment/2026/apr/15/sperm-whales-alphabet-vocalizations-similar-humans"
+    },
+    {
+      "q": "Researchers in April 2026 created an extensive open database revealing that microbes have an almost universal potential to biodegrade plastics, identifying over how many capable microbial proteins?",
+      "options": [
+        "600,000",
+        "50,000",
+        "2,000,000",
+        "10,000"
+      ],
+      "a": 0,
+      "correctText": "600,000",
+      "category": "Science",
+      "source": "https://www.utu.fi/en/news/press-release/microbes-show-almost-universal-potential-for-biodegrading-plastics"
+    },
+    {
+      "q": "A 2026 study examining concentrated animal feeding operations found that overall cancer incidence rates were 4% to 8% higher near industrial factory farms in California, Texas, and which other US state?",
+      "options": [
+        "Nebraska",
+        "Wisconsin",
+        "Iowa",
+        "North Carolina"
+      ],
+      "a": 2,
+      "correctText": "Iowa",
+      "category": "Science",
+      "source": "https://sentientmedia.org/cancer-rates-are-higher-near-factory-farms/"
+    }
+  ]
+}

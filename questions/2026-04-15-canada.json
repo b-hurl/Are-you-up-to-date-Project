@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to projections from CBC News, Prime Minister Mark Carney secured a majority government following a byelection victory in which city?",
+      "options": [
+        "Toronto",
+        "Montreal",
+        "Vancouver",
+        "Calgary"
+      ],
+      "a": 0,
+      "correctText": "Toronto",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/livestory/byelections-terrebonne-university-rosedale-scarborough-southwest-9.7162168"
+    },
+    {
+      "q": "Prime Minister Mark Carney announced his government will temporarily suspend what federal tax starting on April 20, 2026?",
+      "options": [
+        "The federal excise tax on gas and diesel",
+        "The federal carbon tax on home heating",
+        "The federal sales tax on groceries",
+        "The capital gains tax on primary residences"
+      ],
+      "a": 0,
+      "correctText": "The federal excise tax on gas and diesel",
+      "category": "Canada",
+      "source": "https://www.cp24.com/news/canada/2026/04/14/carney-government-to-temporarily-suspend-federal-gas-tax-starting-next-week/"
+    },
+    {
+      "q": "Vancouver Mayor Ken Sim announced he is bringing forward a motion to council aiming to bring an expansion team from which professional sports league to the city?",
+      "options": [
+        "Major League Baseball (MLB)",
+        "National Basketball Association (NBA)",
+        "National Football League (NFL)",
+        "Women's National Basketball Association (WNBA)"
+      ],
+      "a": 0,
+      "correctText": "Major League Baseball (MLB)",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/sports/baseball/mlb/vancouver-mayor-motion-council-mlb-expansion-team-9.7163810"
+    },
+    {
+      "q": "While meeting with Prime Minister Mark Carney, Finland's President Alexander Stubb stated he believes Canada could eventually become a part of what international organization?",
+      "options": [
+        "The European Union (EU)",
+        "The African Union (AU)",
+        "The Association of Southeast Asian Nations (ASEAN)",
+        "The Organization of the Petroleum Exporting Countries (OPEC)"
+      ],
+      "a": 0,
+      "correctText": "The European Union (EU)",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/alexander-stubb-finland-carney-meeting-9.7164014"
+    },
+    {
+      "q": "An Ontario resident was recently charged by the RCMP after seven fake passports were found concealed inside what item at Toronto Pearson International Airport?",
+      "options": [
+        "Sandals",
+        "Hollowed-out books",
+        "Stuffed animals",
+        "Coffee bean bags"
+      ],
+      "a": 0,
+      "correctText": "Sandals",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/toronto/article/caledon-resident-arrested-after-cbsa-seizes-fraudulent-passports-at-pearson-airport/"
+    }
+  ]
+}

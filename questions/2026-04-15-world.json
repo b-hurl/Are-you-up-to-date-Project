@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "U.S. President Donald Trump recently stated he asked which global leader in a letter not to provide weapons to Iran?",
+      "options": [
+        "Vladimir Putin",
+        "Emmanuel Macron",
+        "Xi Jinping",
+        "Kim Jong Un"
+      ],
+      "a": 2,
+      "correctText": "Xi Jinping",
+      "category": "World",
+      "source": "https://www.reuters.com/world/china/trump-says-he-asked-chinas-xi-not-give-iran-weapons-2026-04-15/"
+    },
+    {
+      "q": "U.S. Treasury Secretary Scott Bessent accused China of being an 'unreliable partner' by hoarding what commodity during the Middle East war?",
+      "options": [
+        "Semiconductors",
+        "Oil",
+        "Rare earth metals",
+        "Natural gas"
+      ],
+      "a": 1,
+      "correctText": "Oil",
+      "category": "World",
+      "source": "https://www.reuters.com/world/china/us-treasurys-bessent-says-china-has-been-unreliable-partner-by-hoarding-oil-2026-04-14/"
+    },
+    {
+      "q": "An undercover investigation caught a hospital reusing syringes, which is linked to an HIV outbreak among over 300 children in which country?",
+      "options": [
+        "Afghanistan",
+        "Sudan",
+        "Pakistan",
+        "Yemen"
+      ],
+      "a": 2,
+      "correctText": "Pakistan",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/clyrd818gd2o"
+    },
+    {
+      "q": "According to U.S. Central Command, how many merchant vessels were turned back during the first 24 hours of the U.S. naval blockade on Iranian ports?",
+      "options": [
+        "Two",
+        "Six",
+        "Ten",
+        "Fifteen"
+      ],
+      "a": 1,
+      "correctText": "Six",
+      "category": "World",
+      "source": "https://www.nbcnews.com/news/military/us-military-turned-back-six-ships-first-24-hours-iranian-port-blockade-rcna331828"
+    },
+    {
+      "q": "Italian Prime Minister Giorgia Meloni announced that Italy is suspending the automatic renewal of its defence agreement with which country?",
+      "options": [
+        "Israel",
+        "Russia",
+        "Iran",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Israel",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cr71184ex91o"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which US YouTuber was jailed in South Korea in April 2026 for being a 'public nuisance' after kissing a statue representing World War Two sex slaves?",
+      "options": [
+        "Adin Ross",
+        "IShowSpeed",
+        "Johnny Somali",
+        "Logan Paul"
+      ],
+      "a": 2,
+      "correctText": "Johnny Somali",
+      "category": "Technology",
+      "source": "https://www.bbc.co.uk/news/articles/cj400lje9vxo"
+    },
+    {
+      "q": "According to prosecutors in April 2026, a man charged with an arson attack on OpenAI CEO Sam Altman's house was found carrying what item?",
+      "options": [
+        "A USB drive of stolen code",
+        "An AI CEO kill list",
+        "A fake FBI badge",
+        "A ransom note"
+      ],
+      "a": 1,
+      "correctText": "An AI CEO kill list",
+      "category": "Technology",
+      "source": "https://fortune.com/2026/04/14/man-charged-in-arson-attack-on-sam-altman-ai-ceo-kill-list-prosecutors-say/"
+    },
+    {
+      "q": "In April 2026, Google announced that starting in June, it will begin penalizing websites in search rankings for employing which deceptive user-experience tactic?",
+      "options": [
+        "Cryptojacking",
+        "Invisible text spam",
+        "Forced cookie pop-ups",
+        "Back button hijacking"
+      ],
+      "a": 3,
+      "correctText": "Back button hijacking",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gadgets/2026/04/websites-that-hijack-your-back-button-must-stop-by-june-15-or-face-googles-wrath/"
+    },
+    {
+      "q": "In April 2026, voters in Festus, Missouri fired half of their town council just a week after the council approved the construction of what type of facility?",
+      "options": [
+        "A massive data center",
+        "A lithium battery factory",
+        "An Amazon fulfillment center",
+        "A solar farm"
+      ],
+      "a": 0,
+      "correctText": "A massive data center",
+      "category": "Technology",
+      "source": "https://gizmodo.com/missouri-town-council-approves-data-center-a-week-later-voters-fire-half-of-council-2000746005"
+    },
+    {
+      "q": "In April 2026, it was reported that Microsoft is finally ending production and canceling future plans for which line of massive touchscreen displays?",
+      "options": [
+        "Surface Studio",
+        "Surface Board",
+        "Surface Hub",
+        "Surface Wall"
+      ],
+      "a": 2,
+      "correctText": "Surface Hub",
+      "category": "Technology",
+      "source": "https://www.theverge.com/tech/912114/microsoft-surface-hub-displays-discontinued"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-15",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Italian Prime Minister Giorgia Meloni announced that Italy is suspending the automatic renewal of its defence agreement with which country?",
+      "options": [
+        "Israel",
+        "Russia",
+        "Iran",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Israel",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cr71184ex91o"
+    },
+    {
+      "q": "In an escalating monopoly battle reported on April 14, 2026, what specific group is demanding billions of dollars from Google through a mass arbitration proceeding?",
+      "options": [
+        "Advertisers",
+        "News publishers",
+        "App developers",
+        "Cloud computing clients"
+      ],
+      "a": 0,
+      "correctText": "Advertisers",
+      "category": "Business",
+      "source": "https://www.latimes.com/business/story/2026-04-14/advertisers-demand-billions-of-dollars-from-google-in-escalating-monopoly-battle"
+    },
+    {
+      "q": "Famous for being rescued from a well as a toddler in 1987, \"Baby Jessica\" was arrested at age 40 on assault charges following a domestic disturbance in which state?",
+      "options": [
+        "Texas",
+        "California",
+        "Florida",
+        "Ohio"
+      ],
+      "a": 0,
+      "correctText": "Texas",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/baby-jessica-now-40-arrested-texas-assault-charge-domestic-disturbance-rcna331782"
+    },
+    {
+      "q": "A Florida doctor was recently indicted for manslaughter after mistakenly removing which organ instead of a patient's spleen?",
+      "options": [
+        "Liver",
+        "Kidney",
+        "Gallbladder",
+        "Appendix"
+      ],
+      "a": 0,
+      "correctText": "Liver",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/florida-doctor-indicted-allegedly-removing-patients-liver-instead-sple-rcna331696"
+    },
+    {
+      "q": "Prime Minister Mark Carney announced his government will temporarily suspend what federal tax starting on April 20, 2026?",
+      "options": [
+        "The federal excise tax on gas and diesel",
+        "The federal carbon tax on home heating",
+        "The federal sales tax on groceries",
+        "The capital gains tax on primary residences"
+      ],
+      "a": 0,
+      "correctText": "The federal excise tax on gas and diesel",
+      "category": "Canada",
+      "source": "https://www.cp24.com/news/canada/2026/04/14/carney-government-to-temporarily-suspend-federal-gas-tax-starting-next-week/"
+    },
+    {
+      "q": "Researchers in April 2026 created an extensive open database revealing that microbes have an almost universal potential to biodegrade plastics, identifying over how many capable microbial proteins?",
+      "options": [
+        "600,000",
+        "50,000",
+        "2,000,000",
+        "10,000"
+      ],
+      "a": 0,
+      "correctText": "600,000",
+      "category": "Science",
+      "source": "https://www.utu.fi/en/news/press-release/microbes-show-almost-universal-potential-for-biodegrading-plastics"
+    },
+    {
+      "q": "According to new research from April 2026, rice will physically cease to function in traditional growing regions by 2070 when temperatures exceed what heat threshold?",
+      "options": [
+        "120°F (49°C)",
+        "104°F (40°C)",
+        "98°F (37°C)",
+        "115°F (46°C)"
+      ],
+      "a": 1,
+      "correctText": "104°F (40°C)",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s43247-025-03108-0"
+    },
+    {
+      "q": "Vancouver Mayor Ken Sim announced he is bringing forward a motion to council aiming to bring an expansion team from which professional sports league to the city?",
+      "options": [
+        "Major League Baseball (MLB)",
+        "National Basketball Association (NBA)",
+        "National Football League (NFL)",
+        "Women's National Basketball Association (WNBA)"
+      ],
+      "a": 0,
+      "correctText": "Major League Baseball (MLB)",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/sports/baseball/mlb/vancouver-mayor-motion-council-mlb-expansion-team-9.7163810"
+    },
+    {
+      "q": "Which US YouTuber was jailed in South Korea in April 2026 for being a 'public nuisance' after kissing a statue representing World War Two sex slaves?",
+      "options": [
+        "Adin Ross",
+        "IShowSpeed",
+        "Johnny Somali",
+        "Logan Paul"
+      ],
+      "a": 2,
+      "correctText": "Johnny Somali",
+      "category": "Technology",
+      "source": "https://www.bbc.co.uk/news/articles/cj400lje9vxo"
+    },
+    {
+      "q": "An undercover investigation caught a hospital reusing syringes, which is linked to an HIV outbreak among over 300 children in which country?",
+      "options": [
+        "Afghanistan",
+        "Sudan",
+        "Pakistan",
+        "Yemen"
+      ],
+      "a": 2,
+      "correctText": "Pakistan",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/clyrd818gd2o"
+    }
+  ]
+}
