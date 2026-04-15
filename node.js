@@ -1,6 +1,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const axios = require('axios');
 const fs = require('fs');
+const zlib = require('zlib');
 const Parser = require('rss-parser');
 const dir = './questions';
 
@@ -24,6 +25,58 @@ const CONFIG = {
 
 };
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// Caches to reduce redundant network and AI operations
+const urlCache = new Map();
+const rssCache = new Map();
+const similarityCache = new Map();
+const SIMILARITY_TTL = 1000 * 60 * 60; // 1 hour TTL
+
+const RECOVERY_CACHE_FILE = './recovery-cache.json';
+const RECOVERY_TTL = 1000 * 60 * 60 * 24; // 24 hours
+
+/**
+ * Loads and prunes the recovery cache from a local JSON file.
+ */
+function loadRecoveryCache() {
+    if (fs.existsSync(RECOVERY_CACHE_FILE)) {
+        try {
+            const buffer = fs.readFileSync(RECOVERY_CACHE_FILE);
+            let rawData;
+            try {
+                // Attempt to decompress; falls back to raw string if the file isn't gzipped
+                rawData = zlib.gunzipSync(buffer).toString('utf8');
+            } catch (gzErr) {
+                rawData = buffer.toString('utf8');
+            }
+            
+            const data = JSON.parse(rawData);
+            const map = new Map();
+            const now = Date.now();
+            for (const [key, val] of Object.entries(data)) {
+                // Only load entries that haven't expired yet
+                if (val.expiry > now) map.set(key, val);
+            }
+            console.log(`📂 Loaded ${map.size} valid entries from recovery cache.`);
+            return map;
+        } catch (e) {
+            console.warn("⚠️ Could not parse recovery cache, starting fresh.");
+        }
+    }
+    return new Map();
+}
+const recoveryCache = loadRecoveryCache();
+
+function saveRecoveryCache() {
+    try {
+        const obj = Object.fromEntries(recoveryCache);
+        const compressed = zlib.gzipSync(JSON.stringify(obj));
+        fs.writeFileSync(RECOVERY_CACHE_FILE, compressed);
+        console.log(`💾 Recovery cache compressed (${compressed.length} bytes) and persisted.`);
+    } catch (e) {
+        console.error("❌ Failed to save recovery cache:", e);
+    }
+}
 
 // Calculate edit distance between two strings (standard algorithm)
 function levenshteinDistance(s1, s2) {
@@ -52,19 +105,24 @@ function getLevenshteinSimilarity(s1, s2) {
 
 async function isUrlLive(url) {
     if (!url || typeof url !== 'string' || !url.startsWith('http')) return false;
+    if (urlCache.has(url)) return urlCache.get(url);
+
     const headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36'
     };
     try {
         // Try HEAD request first (faster, no body download)
         await axios.head(url, { headers, timeout: 5000 });
+        urlCache.set(url, true);
         return true;
     } catch (e) {
         try {
             // Fallback to GET if HEAD is rejected (common on some news sites)
             await axios.get(url, { headers, timeout: 8000, maxContentLength: 5000 });
+            urlCache.set(url, true);
             return true;
         } catch (err) {
+            urlCache.set(url, false);
             return false;
         }
     }
@@ -175,28 +233,39 @@ async function runAutomation() {
             // Reset 503 attempts for this category if this is a new general attempt
             if ((_503attempts[category] || 0) === 0) delete _503attempts[category];
 
-            // Try subreddits individually to bypass "multi-sub" scrap-detection filters
+            // Check if any subreddits in this category are already in the cache
             for (const sub of subreddits) {
-                try {
-                    const rssUrl = `https://www.reddit.com/r/${sub}/.rss`;
-                    const response = await axios.get(rssUrl, {
-                        headers: {
-                            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-                            'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
-                            'Cache-Control': 'no-cache'
-                        },
-                        timeout: 10000
-                    });
-                    
-                    const feed = await parser.parseString(response.data);
-                    if (feed.items && feed.items.length > 0) {
-                        redditData = feed.items;
-                        break; 
+                if (rssCache.has(sub)) {
+                    redditData = rssCache.get(sub);
+                    if (redditData) break;
+                }
+            }
+
+            // Try subreddits individually to bypass "multi-sub" scrap-detection filters
+            if (!redditData) {
+                for (const sub of subreddits) {
+                    try {
+                        const rssUrl = `https://www.reddit.com/r/${sub}/.rss`;
+                        const response = await axios.get(rssUrl, {
+                            headers: {
+                                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
+                                'Accept': 'application/rss+xml, application/xml;q=0.9, */*;q=0.8',
+                                'Cache-Control': 'no-cache'
+                            },
+                            timeout: 10000
+                        });
+                        
+                        const feed = await parser.parseString(response.data);
+                        if (feed.items && feed.items.length > 0) {
+                            redditData = feed.items;
+                            rssCache.set(sub, redditData);
+                            break; 
+                        }
+                    } catch (e) {
+                        lastError = e; // Store the error from the last subreddit attempt
+                        console.warn(`   ⚠️ Subreddit r/${sub} failed (Error: ${e.code || e.message}).`);
+                        await sleep(45000); // Short pause between individual sub attempts
                     }
-                } catch (e) {
-                    lastError = e; // Store the error from the last subreddit attempt
-                    console.warn(`   ⚠️ Subreddit r/${sub} failed (Error: ${e.code || e.message}).`);
-                    await sleep(45000); // Short pause between individual sub attempts
                 }
             }
 
@@ -278,7 +347,7 @@ async function runAutomation() {
                         poolItems.push(`Headline: ${item.title} | Source: ${sourceUrl}`);
                     }
                 }
-                if (poolItems.length >= 8) break;
+                if (poolItems.length >= 15) break;
             }
             const newsPool = poolItems.join("\n");
 
@@ -373,7 +442,9 @@ ${newsPool}
                 Answer ONLY 'YES' or 'NO'.`;
                 try {
                     const res = await model.generateContent(checkPrompt);
-                    return res.response.text().toUpperCase().includes("YES");
+                    const isSame = res.response.text().toUpperCase().includes("YES");
+                    similarityCache.set(cacheKey, { value: isSame, expiry: Date.now() + SIMILARITY_TTL });
+                    return isSame;
                 } catch (e) { return false; }
             };
 
@@ -397,6 +468,17 @@ ${newsPool}
                     return q;
                 }
 
+                const cachedRecovery = recoveryCache.get(q.q);
+                if (cachedRecovery) {
+                    if (Date.now() < cachedRecovery.expiry) {
+                        q.source = cachedRecovery.source;
+                        q.category = category.charAt(0).toUpperCase() + category.slice(1);
+                        return q;
+                    } else {
+                        recoveryCache.delete(q.q); // Clean up expired entry
+                    }
+                }
+
                 console.log(`🔍 Source missing, invalid, or dead for: "${q.q.substring(0, 40)}...". Recovering...`);
                 try {
                     const searchPrompt = `Find a primary, non-paywalled news article source URL (not Reddit) for this event from ${dateStr}: "${q.q}". Prefer reliable free sources like AP News, Reuters, or BBC. Return ONLY the raw URL.`;
@@ -405,6 +487,7 @@ ${newsPool}
                     
                     if (await isUrlLive(source)) {
                         q.source = source;
+                        recoveryCache.set(q.q, { source, expiry: Date.now() + RECOVERY_TTL });
                         q.category = category.charAt(0).toUpperCase() + category.slice(1);
                         return q;
                     }
@@ -426,13 +509,19 @@ ${newsPool}
 
             // Step 2: Replacement Loop - Request more if we are below the 5-question limit
             let replacementRetries = 0;
-            while (validQuestions.length < 5 && replacementRetries < 2) {
+            while (validQuestions.length < 5 && replacementRetries < 3) {
+                if (replacementRetries > 0) {
+                    console.log(`😴 Waiting 15 seconds before replacement attempt ${replacementRetries + 1}...`);
+                    await sleep(15000);
+                }
+
                 replacementRetries++;
                 const needed = 5 - validQuestions.length;
-                console.log(`⚠️ Only ${validQuestions.length}/5 questions valid. Requesting ${needed} replacements...`);
+                // Oversample: Always ask for at least 5 to ensure we get enough valid ones
+                console.log(`⚠️ Only ${validQuestions.length}/5 questions valid. Requesting a fresh batch of 5 candidates to fill ${needed} slots...`);
                 
                 try {
-                    const retryPrompt = `I need ${needed} more UNIQUE trivia questions for the category "${category}" from news on ${dateStr}.
+                    const retryPrompt = `I need 5 NEW trivia candidates (to fill ${needed} missing slots) for the category "${category}" from news on ${dateStr}.
                     
                     CRITICAL: Do NOT repeat the following topics. They were either already accepted or had dead/invalid source links:
                     - ALREADY ACCEPTED: ${validQuestions.map(v => v.q).join(" | ")}
@@ -490,6 +579,7 @@ ${newsPool}
     const manifestPath = `./questions/${dateStr}-manifest.json`;
     fs.writeFileSync(manifestPath, JSON.stringify(successfulCategories));
 
+    saveRecoveryCache(); // Persist the cache for the next run
     console.log("\n✨ Daily Trivia Update Complete!");
 }
 

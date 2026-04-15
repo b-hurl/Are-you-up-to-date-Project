@@ -1554,47 +1554,55 @@
             // 1. Client-side Cache Optimization: Check if we already probed today
             const cacheKey = `trivia-available-cats-${gameDate}`;
             const cached = localStorage.getItem(cacheKey);
-            if (cached) {
+    if (cached) {
+        try {
+            verifiedCategories = JSON.parse(cached);
+            renderGameSettings();
+        } catch (e) { localStorage.removeItem(cacheKey); }
+    }
+
+    const categories = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
+    
+    try {
+        // 2. Always request Manifest to see if new categories were added during the day
+        const response = await fetch(`questions/${gameDate}-manifest.json?v=${Date.now()}`);
+        let freshCategories = [];
+        
+        if (response.ok) {
+            freshCategories = await response.json();
+        } else {
+            // 3. Fallback: If manifest isn't generated yet, do the multi-probe
+            const available = [];
+            const checks = categories.map(async (cat) => {
                 try {
-                    verifiedCategories = JSON.parse(cached);
-                    renderGameSettings();
-                    return;
-                } catch (e) { localStorage.removeItem(cacheKey); }
-            }
-
-            const categories = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
-            
-            try {
-                // 2. Request Manifest: Try to get the pre-built list in ONE request
-                const response = await fetch(`questions/${gameDate}-manifest.json?v=${Date.now()}`);
-                if (response.ok) {
-                    verifiedCategories = await response.json();
-                } else {
-                    // 3. Fallback: If manifest isn't generated yet, do the multi-probe (Old logic)
-                    const available = [];
-                    const checks = categories.map(async (cat) => {
-                        try {
-                            const res = await fetch(`questions/${gameDate}-${cat}.json`);
-                            if (res.ok) {
-                                const data = await res.json();
-                                const questions = sanitizeQuestions(Array.isArray(data) ? data : (data.questions || []));
-                                if (questions.length >= 5) available.push(cat);
-                            }
-                        } catch (e) {}
-                    });
-                    await Promise.all(checks);
-                    verifiedCategories = available;
-                }
-
-                // Store the result to prevent any fetches on next page load today
-                localStorage.setItem(cacheKey, JSON.stringify(verifiedCategories));
-            } catch (e) {
-                console.warn("Probe failed, defaulting to empty categories", e);
-                verifiedCategories = [];
-            }
-
-            renderGameSettings(); // Refresh React UI with strict filtering
+                    const res = await fetch(`questions/${gameDate}-${cat}.json`);
+                    if (res.ok) {
+                        const data = await res.json();
+                        const questions = sanitizeQuestions(Array.isArray(data) ? data : (data.questions || []));
+                        if (questions.length >= 5) available.push(cat);
+                    }
+                } catch (e) {}
+            });
+            await Promise.all(checks);
+            freshCategories = available;
         }
+
+        // If the manifest changed (new categories added), update state and re-render
+        if (JSON.stringify(freshCategories) !== JSON.stringify(verifiedCategories)) {
+            verifiedCategories = freshCategories;
+            localStorage.setItem(cacheKey, JSON.stringify(verifiedCategories));
+            renderGameSettings();
+        }
+    } catch (e) {
+        console.warn("Category update check failed", e);
+        if (!verifiedCategories) {
+            verifiedCategories = [];
+            renderGameSettings();
+        }
+    }
+}
+
+        
 
 // Helper to ensure keys always match regardless of JSON formatting typos
 // --- UTILITIES ---
