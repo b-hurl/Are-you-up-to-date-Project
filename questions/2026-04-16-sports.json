@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What type of records is Tiger Woods fighting a subpoena for, according to news breaking on April 16, 2026?",
+      "options": [
+        "Prescription drug records",
+        "Financial tax returns",
+        "Divorce settlement documents",
+        "Phone call logs"
+      ],
+      "a": 0,
+      "correctText": "Prescription drug records",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48502155/tiger-woods-fights-subpoena-prescription-drug-records"
+    },
+    {
+      "q": "MLB and the Minnesota Twins launched an investigation in mid-April 2026 over an allegation from Boston Red Sox outfielder Jarren Duran that a fan told him to do what?",
+      "options": [
+        "Kill himself",
+        "Quit baseball",
+        "Fight him in the parking lot",
+        "Go back to the minors"
+      ],
+      "a": 0,
+      "correctText": "Kill himself",
+      "category": "Sports",
+      "source": "https://apnews.com/article/red-sox-jarren-duran-twins-4e7674821eb6be6216571c9464120e57"
+    },
+    {
+      "q": "Speaking at a forum on April 15, 2026, FIFA president Gianni Infantino confirmed that which country's national team will 'for sure' participate in the World Cup despite an ongoing war?",
+      "options": [
+        "Iran",
+        "Russia",
+        "Syria",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Sports",
+      "source": "https://apnews.com/article/world-cup-iran-infantino-4854d5588b7985d2fb0a6c638f8e42b5"
+    },
+    {
+      "q": "Former Arsenal and Austria goalkeeper Alex Manninger tragically passed away at age 48 on April 16, 2026, due to what cause?",
+      "options": [
+        "A road accident",
+        "A sudden heart attack",
+        "A short battle with cancer",
+        "A skiing accident"
+      ],
+      "a": 0,
+      "correctText": "A road accident",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/football/2026/apr/16/alex-manninger-former-arsenal-goalkeeper-dies-aged-48-after-road-accident?CMP=Share_AndroidApp_Other"
+    },
+    {
+      "q": "During the Jackie Robinson Day festivities on April 15, 2026, a pre-game singer collapsed before a matchup between which two MLB teams?",
+      "options": [
+        "Tampa Bay Rays and Chicago White Sox",
+        "Los Angeles Dodgers and San Diego Padres",
+        "New York Yankees and Boston Red Sox",
+        "Atlanta Braves and New York Mets"
+      ],
+      "a": 0,
+      "correctText": "Tampa Bay Rays and Chicago White Sox",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48499023/singer-leading-robinson-celebration-collapses-rays-white-sox"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-16",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to an April 15, 2026 report, a complete visual record of which synth-pop duo went straight to the top of the UK's Independent Bookshop Top 20 chart?",
+      "options": [
+        "Pet Shop Boys",
+        "Depeche Mode",
+        "Erasure",
+        "New Order"
+      ],
+      "a": 0,
+      "correctText": "Pet Shop Boys",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/bestsellers/book-shop-boys-visual-record-of-pet-shop-boys-hits-indie-number-one"
+    },
+    {
+      "q": "According to a Senate Democrats report released in mid-April 2026, what did drugmakers do despite deals touted by Donald Trump?",
+      "options": [
+        "Raised prices on hundreds of drugs",
+        "Lowered prices for seniors",
+        "Halted production of vaccines",
+        "Capped prices at $35"
+      ],
+      "a": 0,
+      "correctText": "Raised prices on hundreds of drugs",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/drugmakers-raised-prices-hundreds-drugs-trump-deals-senate-democrats-r-rcna332036"
+    },
+    {
+      "q": "According to new footage shown at CinemaCon 2026, Jason Statham's character Adam Clay returns in 'The Beekeeper 2' to rescue which kidnapped figure?",
+      "options": [
+        "The British Prime Minister",
+        "The President of the United States",
+        "The Director of the CIA",
+        "The Secretary of Defense"
+      ],
+      "a": 1,
+      "correctText": "The President of the United States",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/the-beekeeper-2-footage-jason-statham-cinemacon-1236565700/"
+    },
+    {
+      "q": "What video game developer recently issued a takedown of a YouTube channel showcasing \"adult-oriented\" mods for characters in their hit horror franchise?",
+      "options": [
+        "Konami",
+        "Capcom",
+        "Square Enix",
+        "Bandai Namco"
+      ],
+      "a": 1,
+      "correctText": "Capcom",
+      "category": "Gaming",
+      "source": "https://kotaku.com/resident-evil-requiem-mod-nsfw-youtube-leon-grace-2000687899"
+    },
+    {
+      "q": "A mid-April 2026 study found that drinking two to three cups of coffee a day is linked to a lower risk of what condition?",
+      "options": [
+        "Mental health disorders",
+        "Type 2 diabetes",
+        "Heart disease",
+        "Liver cancer"
+      ],
+      "a": 0,
+      "correctText": "Mental health disorders",
+      "category": "Health",
+      "source": "https://www.euronews.com/health/2026/04/15/two-to-three-cups-of-coffee-a-day-linked-to-lower-risk-of-mental-health-disorders-study-fi"
+    },
+    {
+      "q": "During the Jackie Robinson Day festivities on April 15, 2026, a pre-game singer collapsed before a matchup between which two MLB teams?",
+      "options": [
+        "Tampa Bay Rays and Chicago White Sox",
+        "Los Angeles Dodgers and San Diego Padres",
+        "New York Yankees and Boston Red Sox",
+        "Atlanta Braves and New York Mets"
+      ],
+      "a": 0,
+      "correctText": "Tampa Bay Rays and Chicago White Sox",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48499023/singer-leading-robinson-celebration-collapses-rays-white-sox"
+    },
+    {
+      "q": "Researchers in San Francisco reported 'unprecedented' results in an April 2026 clinical trial, getting closer to a potential cure for what disease?",
+      "options": [
+        "HIV",
+        "Alzheimer's",
+        "Leukemia",
+        "Multiple Sclerosis"
+      ],
+      "a": 0,
+      "correctText": "HIV",
+      "category": "Health",
+      "source": "https://www.sfgate.com/bayarea/article/sf-hiv-cure-california-21244134.php"
+    },
+    {
+      "q": "According to an announcement on April 15, 2026, which major publishing house is cutting 55 roles across its UK and US operations as part of a significant restructuring?",
+      "options": [
+        "Bloomsbury",
+        "HarperCollins",
+        "Penguin Random House",
+        "Simon & Schuster"
+      ],
+      "a": 0,
+      "correctText": "Bloomsbury",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/news/bloomsbury-set-to-cut-55-roles-as-publisher-restructures"
+    },
+    {
+      "q": "Developer Hypixel Studios confirmed it is seeking legal action over an unauthorized Nintendo Switch eShop copycat of what upcoming sandbox RPG?",
+      "options": [
+        "Terraria 2",
+        "Core Keeper",
+        "Hytale",
+        "Enshrouded"
+      ],
+      "a": 2,
+      "correctText": "Hytale",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/04/hytale-dev-seeks-legal-action-against-knock-off-switch-eshop-game"
+    },
+    {
+      "q": "Henry Cavill debuted the first footage of his upcoming action-fantasy reboot at CinemaCon 2026. Which immortal warrior is he portraying?",
+      "options": [
+        "Connor MacLeod",
+        "Duncan MacLeod",
+        "The Kurgan",
+        "Juan Sánchez-Villalobos Ramírez"
+      ],
+      "a": 0,
+      "correctText": "Connor MacLeod",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/highlander-first-look-henry-cavill-reboot-chad-stahelski-1236565574/"
+    }
+  ]
+}

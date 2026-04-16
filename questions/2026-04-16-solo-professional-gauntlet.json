@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-16",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which former Virginia Lieutenant Governor died in an apparent murder-suicide alongside his wife on April 16, 2026?",
+      "options": [
+        "Justin Fairfax",
+        "Ralph Northam",
+        "Terry McAuliffe",
+        "Mark Herring"
+      ],
+      "a": 0,
+      "correctText": "Justin Fairfax, who served as Virginia's lieutenant governor from 2018 to 2022, fatally shot his wife and then himself in their Annandale home.",
+      "category": "Usa",
+      "source": "https://wjla.com/news/local/murder-suicide-man-woman-dead-annandale-home-fairfax-county-virginia-crime-gun-violence-investigation-domestic-fight-guinevere-drive-victims-fcp-police-officers"
+    },
+    {
+      "q": "A historic, 1,200-year-old record from Japan was highlighted in April 2026 as powerful evidence that climate change will continue. What does the continuous record track?",
+      "options": [
+        "Cherry blossom blooming dates",
+        "Mount Fuji's snowcap melting",
+        "The arrival of monsoon season",
+        "Annual rice harvest yields"
+      ],
+      "a": 0,
+      "correctText": "Cherry blossom blooming dates",
+      "category": "Science",
+      "source": "https://www.theguardian.com/world/2026/apr/15/cherry-blossom-1200-years-japan-climate-scientist-yasuyuki-aono"
+    },
+    {
+      "q": "A New Democratic Party (NDP) motion seeking unanimous consent to urge a nationwide ban on what specific retail practice was defeated in the House of Commons in mid-April 2026?",
+      "options": [
+        "Algorithmic pricing",
+        "Self-checkout machines",
+        "Imported produce tariffs",
+        "Credit card surcharges"
+      ],
+      "a": 0,
+      "correctText": "Algorithmic pricing",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11802437/algorithmic-pricing-ban-ndp-motion/"
+    },
+    {
+      "q": "A comprehensive review of 17 clinical trials published in April 2026 concluded that the effect of 'gamechanger' anti-amyloid Alzheimer’s drugs on cognitive decline is what?",
+      "options": [
+        "Trivial or not meaningful",
+        "Highly effective in early stages",
+        "Capable of reversing memory loss",
+        "Dependent on the patient's diet"
+      ],
+      "a": 0,
+      "correctText": "Trivial or not meaningful",
+      "category": "Science",
+      "source": "https://www.theguardian.com/society/2026/apr/16/effect-gamechanger-alzheimers-drugs-trivial-review-concludes"
+    },
+    {
+      "q": "In April 2026, the Canada Revenue Agency was revealed to have paid out another bogus income tax refund, this time to a B.C. businesswoman. How much was the refund?",
+      "options": [
+        "$5 million",
+        "$1 million",
+        "$10 million",
+        "$500,000"
+      ],
+      "a": 0,
+      "correctText": "$5 million",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/cra-bogus-refund-9.7165058"
+    },
+    {
+      "q": "On April 16, 2026, Ukrainian drones successfully struck a major Rosneft oil refinery located in which city in Russia's Krasnodar Krai?",
+      "options": [
+        "Tuapse",
+        "Sochi",
+        "Novorossiysk",
+        "Krasnodar"
+      ],
+      "a": 0,
+      "correctText": "Tuapse",
+      "category": "World",
+      "source": "https://kyivindependent.com/ukraine-hits-major-russian-oil-refinery-in-krasnodar-krai-media-officials-report/"
+    },
+    {
+      "q": "On April 16, 2026, China issued a safety alert advising its citizens to avoid which U.S. airport, citing \"malicious questioning\" of Chinese scholars by border officers?",
+      "options": [
+        "John F. Kennedy International Airport",
+        "Los Angeles International Airport",
+        "Seattle-Tacoma International Airport",
+        "San Francisco International Airport"
+      ],
+      "a": 2,
+      "correctText": "Seattle-Tacoma International Airport",
+      "category": "World",
+      "source": "https://www.reuters.com/world/china/china-issues-us-safety-alert-citizens-citing-malicious-questioning-by-us-border-2026-04-16/"
+    },
+    {
+      "q": "During a massive overnight Russian attack on April 15, 2026, Ukrainian air defenses reportedly intercepted over 300 drones and all ballistic missiles within what timeframe?",
+      "options": [
+        "Over a 12-hour span",
+        "Under an hour",
+        "Within five minutes",
+        "Across three days"
+      ],
+      "a": 1,
+      "correctText": "Under an hour",
+      "category": "World",
+      "source": "https://united24media.com/latest-news/ukrainian-air-defense-intercepts-all-russian-missiles-in-under-an-hour-17953"
+    },
+    {
+      "q": "On April 15, 2026, a Manhattan federal jury ruled that which ticketing giant and its parent company operated as an illegal monopoly over big concert venues?",
+      "options": [
+        "Ticketmaster and Live Nation",
+        "StubHub and eBay",
+        "SeatGeek and Eventbrite",
+        "Vivid Seats and AXS"
+      ],
+      "a": 0,
+      "correctText": "A jury found that Live Nation and its subsidiary Ticketmaster had a harmful monopoly over major venues, overcharging buyers by $1.72 per ticket.",
+      "category": "Usa",
+      "source": "https://apnews.com/article/live-nation-ticketmaster-antitrust-trial-f0ffdd20dd4f64e8b4bb9d97134b826f"
+    },
+    {
+      "q": "A federal jury in Miami ordered Carnival Cruise Line to pay $300,000 to an injured passenger after finding the company negligently overserved her 14 shots of what type of alcohol?",
+      "options": [
+        "Tequila",
+        "Rum",
+        "Vodka",
+        "Whiskey"
+      ],
+      "a": 0,
+      "correctText": "Diana Sanders was awarded $300,000 after falling and suffering injuries when she was served at least 14 shots of tequila aboard the Carnival Radiance.",
+      "category": "Usa",
+      "source": "https://apnews.com/article/cruise-alcohol-lawsuit-carnival-f55c49ed09af5511aa24cf1fb3f2f230"
+    }
+  ]
+}

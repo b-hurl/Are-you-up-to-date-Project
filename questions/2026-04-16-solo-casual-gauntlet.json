@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-16",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "A report published on April 15, 2026, about AI-written books flooding the market, noted the 2025 class-action settlement known as 'Bartz v.' which artificial intelligence company?",
+      "options": [
+        "Anthropic",
+        "OpenAI",
+        "Microsoft",
+        "Midjourney"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Books",
+      "source": "https://theconversation.com/thousands-of-ai-written-edited-or-polished-books-are-being-sold-an-eerie-echo-of-orwells-novel-writing-machines-276008"
+    },
+    {
+      "q": "Former Intrepid Studios CEO Steven Sharif recently shared internal emails detailing a refusal to pay employee severance as part of an ongoing legal battle over the collapse of what Kickstarter MMO?",
+      "options": [
+        "Camelot Unchained",
+        "Pantheon: Rise of the Fallen",
+        "Chronicles of Elyria",
+        "Ashes of Creation"
+      ],
+      "a": 3,
+      "correctText": "Ashes of Creation",
+      "category": "Gaming",
+      "source": "https://kotaku.com/ashes-of-creation-intrepid-studios-lawsuit-mmo-2000687889"
+    },
+    {
+      "q": "Which multiplayer pirate survival game announced it sold 500,000 copies just 48 hours after launching into Early Access in April 2026?",
+      "options": [
+        "Windrose",
+        "Sea of Conquest",
+        "Skull and Bones",
+        "Blackwake"
+      ],
+      "a": 0,
+      "correctText": "Windrose",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3041230/view/725783900692938778?l=english"
+    },
+    {
+      "q": "Aaron Taylor-Johnson stars in the newly-teased horror movie 'Werwulf', which is directed by which filmmaker known for 'The Witch' and 'The Northman'?",
+      "options": [
+        "Ari Aster",
+        "Jordan Peele",
+        "Guillermo del Toro",
+        "Robert Eggers"
+      ],
+      "a": 3,
+      "correctText": "Robert Eggers",
+      "category": "Entertainment",
+      "source": "https://www.indiewire.com/news/breaking-news/werwulf-first-footage-cinemacon-1235189286/"
+    },
+    {
+      "q": "What is the title of Steven Spielberg's upcoming UFO movie, which debuted its first trailer during Universal's presentation at CinemaCon 2026?",
+      "options": [
+        "Contact Point",
+        "The Gathering",
+        "Disclosure Day",
+        "Arrival: Origins"
+      ],
+      "a": 2,
+      "correctText": "Disclosure Day",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/steven-spielberg-hollywood-original-movies-disclosure-day-cinemacon-1236722625/"
+    },
+    {
+      "q": "In April 2026, the FDA announced it will convene a panel to weigh easing limits on what unapproved therapies promoted by RFK Jr.?",
+      "options": [
+        "Peptide injections",
+        "Ozone therapy",
+        "Raw milk",
+        "Colloidal silver"
+      ],
+      "a": 0,
+      "correctText": "Peptide injections",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/fda-peptides-weighs-loosen-restrictions-longevity-rfk-jr-rcna332011"
+    },
+    {
+      "q": "What type of records is Tiger Woods fighting a subpoena for, according to news breaking on April 16, 2026?",
+      "options": [
+        "Prescription drug records",
+        "Financial tax returns",
+        "Divorce settlement documents",
+        "Phone call logs"
+      ],
+      "a": 0,
+      "correctText": "Prescription drug records",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48502155/tiger-woods-fights-subpoena-prescription-drug-records"
+    },
+    {
+      "q": "MLB and the Minnesota Twins launched an investigation in mid-April 2026 over an allegation from Boston Red Sox outfielder Jarren Duran that a fan told him to do what?",
+      "options": [
+        "Kill himself",
+        "Quit baseball",
+        "Fight him in the parking lot",
+        "Go back to the minors"
+      ],
+      "a": 0,
+      "correctText": "Kill himself",
+      "category": "Sports",
+      "source": "https://apnews.com/article/red-sox-jarren-duran-twins-4e7674821eb6be6216571c9464120e57"
+    },
+    {
+      "q": "On April 15, 2026, Spotify expanded its features by launching the ability to purchase physical books in the US and UK. Which platform is powering this new feature?",
+      "options": [
+        "Bookshop.org",
+        "Amazon",
+        "Barnes & Noble",
+        "Waterstones"
+      ],
+      "a": 0,
+      "correctText": "Bookshop.org",
+      "category": "Books",
+      "source": "https://techcrunch.com/2026/04/15/spotify-launches-the-ability-to-purchase-physical-books-in-the-us-and-uk/"
+    },
+    {
+      "q": "Speaking at a forum on April 15, 2026, FIFA president Gianni Infantino confirmed that which country's national team will 'for sure' participate in the World Cup despite an ongoing war?",
+      "options": [
+        "Iran",
+        "Russia",
+        "Syria",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Sports",
+      "source": "https://apnews.com/article/world-cup-iran-infantino-4854d5588b7985d2fb0a6c638f8e42b5"
+    }
+  ]
+}

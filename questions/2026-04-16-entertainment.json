@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the official title of the upcoming sequel to Mel Brooks' 1987 sci-fi parody 'Spaceballs,' as revealed at CinemaCon 2026?",
+      "options": [
+        "Spaceballs 2: The Search for More Money",
+        "Spaceballs: The New One",
+        "Spaceballs: The Next Generation",
+        "Spaceballs: May the Schwartz Be With You"
+      ],
+      "a": 1,
+      "correctText": "Spaceballs: The New One",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/spaceballs-2-sets-title-cinemacon-1236861444/"
+    },
+    {
+      "q": "What is the title of Steven Spielberg's upcoming UFO movie, which debuted its first trailer during Universal's presentation at CinemaCon 2026?",
+      "options": [
+        "Contact Point",
+        "The Gathering",
+        "Disclosure Day",
+        "Arrival: Origins"
+      ],
+      "a": 2,
+      "correctText": "Disclosure Day",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/steven-spielberg-hollywood-original-movies-disclosure-day-cinemacon-1236722625/"
+    },
+    {
+      "q": "Henry Cavill debuted the first footage of his upcoming action-fantasy reboot at CinemaCon 2026. Which immortal warrior is he portraying?",
+      "options": [
+        "Connor MacLeod",
+        "Duncan MacLeod",
+        "The Kurgan",
+        "Juan Sánchez-Villalobos Ramírez"
+      ],
+      "a": 0,
+      "correctText": "Connor MacLeod",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/highlander-first-look-henry-cavill-reboot-chad-stahelski-1236565574/"
+    },
+    {
+      "q": "Aaron Taylor-Johnson stars in the newly-teased horror movie 'Werwulf', which is directed by which filmmaker known for 'The Witch' and 'The Northman'?",
+      "options": [
+        "Ari Aster",
+        "Jordan Peele",
+        "Guillermo del Toro",
+        "Robert Eggers"
+      ],
+      "a": 3,
+      "correctText": "Robert Eggers",
+      "category": "Entertainment",
+      "source": "https://www.indiewire.com/news/breaking-news/werwulf-first-footage-cinemacon-1235189286/"
+    },
+    {
+      "q": "According to new footage shown at CinemaCon 2026, Jason Statham's character Adam Clay returns in 'The Beekeeper 2' to rescue which kidnapped figure?",
+      "options": [
+        "The British Prime Minister",
+        "The President of the United States",
+        "The Director of the CIA",
+        "The Secretary of Defense"
+      ],
+      "a": 1,
+      "correctText": "The President of the United States",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/the-beekeeper-2-footage-jason-statham-cinemacon-1236565700/"
+    }
+  ]
+}

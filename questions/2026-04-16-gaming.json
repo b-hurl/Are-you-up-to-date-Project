@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What video game developer recently issued a takedown of a YouTube channel showcasing \"adult-oriented\" mods for characters in their hit horror franchise?",
+      "options": [
+        "Konami",
+        "Capcom",
+        "Square Enix",
+        "Bandai Namco"
+      ],
+      "a": 1,
+      "correctText": "Capcom",
+      "category": "Gaming",
+      "source": "https://kotaku.com/resident-evil-requiem-mod-nsfw-youtube-leon-grace-2000687899"
+    },
+    {
+      "q": "Developer Hypixel Studios confirmed it is seeking legal action over an unauthorized Nintendo Switch eShop copycat of what upcoming sandbox RPG?",
+      "options": [
+        "Terraria 2",
+        "Core Keeper",
+        "Hytale",
+        "Enshrouded"
+      ],
+      "a": 2,
+      "correctText": "Hytale",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/04/hytale-dev-seeks-legal-action-against-knock-off-switch-eshop-game"
+    },
+    {
+      "q": "Which multiplayer pirate survival game announced it sold 500,000 copies just 48 hours after launching into Early Access in April 2026?",
+      "options": [
+        "Windrose",
+        "Sea of Conquest",
+        "Skull and Bones",
+        "Blackwake"
+      ],
+      "a": 0,
+      "correctText": "Windrose",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3041230/view/725783900692938778?l=english"
+    },
+    {
+      "q": "According to a recent podcast interview with Xbox's Matt Booty, the World of Warcraft and Diablo teams at Blizzard are currently assisting Playground Games with cinematics for what upcoming RPG reboot?",
+      "options": [
+        "Perfect Dark",
+        "The Elder Scrolls VI",
+        "Avowed",
+        "Fable"
+      ],
+      "a": 3,
+      "correctText": "Fable",
+      "category": "Gaming",
+      "source": "https://www.windowscentral.com/gaming/xbox/microsofts-xbox-games-lead-matt-booty-says-its-studios-are-in-a-culture-of-cultures-and-work-together-more-than-you-think"
+    },
+    {
+      "q": "Former Intrepid Studios CEO Steven Sharif recently shared internal emails detailing a refusal to pay employee severance as part of an ongoing legal battle over the collapse of what Kickstarter MMO?",
+      "options": [
+        "Camelot Unchained",
+        "Pantheon: Rise of the Fallen",
+        "Chronicles of Elyria",
+        "Ashes of Creation"
+      ],
+      "a": 3,
+      "correctText": "Ashes of Creation",
+      "category": "Gaming",
+      "source": "https://kotaku.com/ashes-of-creation-intrepid-studios-lawsuit-mmo-2000687889"
+    }
+  ]
+}
