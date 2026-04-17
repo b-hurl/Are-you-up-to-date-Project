@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A report published on April 15, 2026, about AI-written books flooding the market, noted the 2025 class-action settlement known as 'Bartz v.' which artificial intelligence company?",
+      "options": [
+        "Anthropic",
+        "OpenAI",
+        "Microsoft",
+        "Midjourney"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Books",
+      "source": "https://theconversation.com/thousands-of-ai-written-edited-or-polished-books-are-being-sold-an-eerie-echo-of-orwells-novel-writing-machines-276008"
+    },
+    {
+      "q": "On April 15, 2026, Spotify expanded its features by launching the ability to purchase physical books in the US and UK. Which platform is powering this new feature?",
+      "options": [
+        "Bookshop.org",
+        "Amazon",
+        "Barnes & Noble",
+        "Waterstones"
+      ],
+      "a": 0,
+      "correctText": "Bookshop.org",
+      "category": "Books",
+      "source": "https://techcrunch.com/2026/04/15/spotify-launches-the-ability-to-purchase-physical-books-in-the-us-and-uk/"
+    },
+    {
+      "q": "According to an announcement on April 15, 2026, which major publishing house is cutting 55 roles across its UK and US operations as part of a significant restructuring?",
+      "options": [
+        "Bloomsbury",
+        "HarperCollins",
+        "Penguin Random House",
+        "Simon & Schuster"
+      ],
+      "a": 0,
+      "correctText": "Bloomsbury",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/news/bloomsbury-set-to-cut-55-roles-as-publisher-restructures"
+    },
+    {
+      "q": "As reported on April 16, 2026, which writing school and literary business underwent a senior management buyout from its parent agency?",
+      "options": [
+        "Curtis Brown Creative",
+        "Faber Academy",
+        "Writers' Workshop",
+        "Arvon Foundation"
+      ],
+      "a": 0,
+      "correctText": "Curtis Brown Creative",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/news/curtis-brown-creative-undergoes-senior-management-buyout"
+    },
+    {
+      "q": "According to an April 15, 2026 report, a complete visual record of which synth-pop duo went straight to the top of the UK's Independent Bookshop Top 20 chart?",
+      "options": [
+        "Pet Shop Boys",
+        "Depeche Mode",
+        "Erasure",
+        "New Order"
+      ],
+      "a": 0,
+      "correctText": "Pet Shop Boys",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/bestsellers/book-shop-boys-visual-record-of-pet-shop-boys-hits-indie-number-one"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which former Virginia Lieutenant Governor died in an apparent murder-suicide alongside his wife on April 16, 2026?",
+      "options": [
+        "Justin Fairfax",
+        "Ralph Northam",
+        "Terry McAuliffe",
+        "Mark Herring"
+      ],
+      "a": 0,
+      "correctText": "Justin Fairfax, who served as Virginia's lieutenant governor from 2018 to 2022, fatally shot his wife and then himself in their Annandale home.",
+      "category": "Usa",
+      "source": "https://wjla.com/news/local/murder-suicide-man-woman-dead-annandale-home-fairfax-county-virginia-crime-gun-violence-investigation-domestic-fight-guinevere-drive-victims-fcp-police-officers"
+    },
+    {
+      "q": "On April 15, 2026, a Manhattan federal jury ruled that which ticketing giant and its parent company operated as an illegal monopoly over big concert venues?",
+      "options": [
+        "Ticketmaster and Live Nation",
+        "StubHub and eBay",
+        "SeatGeek and Eventbrite",
+        "Vivid Seats and AXS"
+      ],
+      "a": 0,
+      "correctText": "A jury found that Live Nation and its subsidiary Ticketmaster had a harmful monopoly over major venues, overcharging buyers by $1.72 per ticket.",
+      "category": "Usa",
+      "source": "https://apnews.com/article/live-nation-ticketmaster-antitrust-trial-f0ffdd20dd4f64e8b4bb9d97134b826f"
+    },
+    {
+      "q": "Which conservative attorney was officially disbarred by the California Supreme Court on April 15, 2026, for his role in trying to overturn the 2020 election?",
+      "options": [
+        "John Eastman",
+        "Rudy Giuliani",
+        "Sidney Powell",
+        "Lin Wood"
+      ],
+      "a": 0,
+      "correctText": "The California Supreme Court ordered John Eastman's name stricken from the state roll of attorneys due to his efforts to help Donald Trump block the 2020 election certification.",
+      "category": "Usa",
+      "source": "https://apnews.com/article/john-eastman-trump-2020-election-loss-disbarred-abf3b3ab8f83a692992615c59db73c92"
+    },
+    {
+      "q": "Drivers filed a federal class action lawsuit against San Jose on April 15, 2026, over the city's use of nearly 500 automated license plate reader cameras operated by what tech company?",
+      "options": [
+        "Flock Safety",
+        "Vigilant Solutions",
+        "Axon",
+        "Motorola Solutions"
+      ],
+      "a": 0,
+      "correctText": "The lawsuit alleges that the city's widespread deployment of Flock Safety cameras violates the Fourth Amendment by conducting warrantless tracking of vehicle movements.",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/tech/tech-news/san-jose-drivers-sue-city-police-flock-cameras-rcna331750"
+    },
+    {
+      "q": "A federal jury in Miami ordered Carnival Cruise Line to pay $300,000 to an injured passenger after finding the company negligently overserved her 14 shots of what type of alcohol?",
+      "options": [
+        "Tequila",
+        "Rum",
+        "Vodka",
+        "Whiskey"
+      ],
+      "a": 0,
+      "correctText": "Diana Sanders was awarded $300,000 after falling and suffering injuries when she was served at least 14 shots of tequila aboard the Carnival Radiance.",
+      "category": "Usa",
+      "source": "https://apnews.com/article/cruise-alcohol-lawsuit-carnival-f55c49ed09af5511aa24cf1fb3f2f230"
+    }
+  ]
+}

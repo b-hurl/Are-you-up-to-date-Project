@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which country recently transferred approximately $1 billion in frozen Russian assets to Ukraine?",
+      "options": [
+        "United Kingdom",
+        "United States",
+        "Germany",
+        "France"
+      ],
+      "a": 0,
+      "correctText": "United Kingdom",
+      "category": "World",
+      "source": "https://kyivindependent.com/uk-transfers-1-billion-dollars-frozen-russian-assets-ukraine/"
+    },
+    {
+      "q": "Japan's foreign affairs minister recently criticized the White House for using unauthorized gameplay footage from which video game company in an Iran war campaign video?",
+      "options": [
+        "Nintendo",
+        "Sony",
+        "Sega",
+        "Capcom"
+      ],
+      "a": 0,
+      "correctText": "Nintendo",
+      "category": "World",
+      "source": "https://automaton-media.com/en/news/japans-foreign-affairs-minister-criticizes-white-house-over-unauthorized-use-of-nintendo-gameplay-footage-in-iran-war-campaign-video-on-x/"
+    },
+    {
+      "q": "A device recently discovered near Bali and the Lombok Strait has been identified as an undersea monitoring system belonging to which country?",
+      "options": [
+        "China",
+        "North Korea",
+        "Russia",
+        "United States"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "World",
+      "source": "https://www.abc.net.au/news/2026-04-17/chinese-undersea-monitoring-system-lombok-strait/106569388"
+    },
+    {
+      "q": "Which country recently issued a bomb threat targeting four UK locations, including London, Suffolk, and Leicester?",
+      "options": [
+        "Russia",
+        "Iran",
+        "China",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Russia",
+      "category": "World",
+      "source": "https://www.lbc.co.uk/article/russia-threatens-strike-britain-5HjdXpc_2/"
+    },
+    {
+      "q": "Celebrations erupted in South Korea after what type of escaped animal was safely captured and returned to a zoo following a nine-day search?",
+      "options": [
+        "Wolf",
+        "Tiger",
+        "Bear",
+        "Leopard"
+      ],
+      "a": 0,
+      "correctText": "Wolf",
+      "category": "World",
+      "source": "https://www.cnn.com/2026/04/17/asia/south-koreans-escaped-wolf-intl-scli?utm_medium=social&amp;utm_campaign=missions&amp;utm_source=reddit"
+    }
+  ]
+}

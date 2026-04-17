@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the official title of the newly announced 'Game of Thrones' movie?",
+      "options": [
+        "The Doom of Valyria",
+        "Aegon's Conquest",
+        "The Long Night",
+        "Dance of the Dragons"
+      ],
+      "a": 1,
+      "correctText": "Aegon's Conquest",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/game-of-thrones-movie-aegons-conquest-1236722027/"
+    },
+    {
+      "q": "Which two actors were recently reported to have signed an open letter joining the fight to block the Paramount-Warner Bros. merger?",
+      "options": [
+        "Zendaya and Tom Holland",
+        "Timothée Chalamet and Anya Taylor-Joy",
+        "Florence Pugh and Pedro Pascal",
+        "Margot Robbie and Ryan Gosling"
+      ],
+      "a": 2,
+      "correctText": "Florence Pugh and Pedro Pascal",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/florence-pugh-pedro-pascal-paramount-warner-bros-merger-open-letter-1236721627/"
+    },
+    {
+      "q": "Marvel recently laid off what percentage of its staff amid companywide Disney cuts?",
+      "options": [
+        "5%",
+        "12%",
+        "15%",
+        "8%"
+      ],
+      "a": 3,
+      "correctText": "8%",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/marvel-llayoffs-disney-1236860699/"
+    },
+    {
+      "q": "According to Margot Robbie, the 'Ocean's 11' prequel will center on Danny Ocean's parents pulling off a heist at which 1962 event?",
+      "options": [
+        "Monaco Grand Prix",
+        "Cannes Film Festival",
+        "The World Cup in Chile",
+        "The Kentucky Derby"
+      ],
+      "a": 0,
+      "correctText": "Monaco Grand Prix",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/margot-robbie-oceans-11-prequel-plot-danny-oceans-1236721883/"
+    },
+    {
+      "q": "Sony Pictures Boss Tom Rothman recently urged theater owners to stop doing what before movies start?",
+      "options": [
+        "Allowing late seating",
+        "Selling merchandise in the lobby",
+        "Showing 30 minutes of trailers and commercials",
+        "Increasing ticket prices for blockbusters"
+      ],
+      "a": 2,
+      "correctText": "Showing 30 minutes of trailers and commercials",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/sony-pictures-boss-cinemacon-urges-fewer-ads-trailers-1236720830/"
+    }
+  ]
+}

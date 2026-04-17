@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-15",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which golfer issued a public apology on April 14, 2026, for breaking his driver against a cooler during the final round of the Masters?",
+      "options": [
+        "Sergio Garcia",
+        "Rory McIlroy",
+        "Jon Rahm",
+        "Brooks Koepka"
+      ],
+      "a": 0,
+      "correctText": "Sergio Garcia received a code-of-conduct warning and later apologized for slamming his driver into the turf and snapping it against a cooler.",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48485143/sergio-garcia-apologizes-outburst-amid-final-round-masters"
+    },
+    {
+      "q": "Sony Pictures Boss Tom Rothman recently urged theater owners to stop doing what before movies start?",
+      "options": [
+        "Allowing late seating",
+        "Selling merchandise in the lobby",
+        "Showing 30 minutes of trailers and commercials",
+        "Increasing ticket prices for blockbusters"
+      ],
+      "a": 2,
+      "correctText": "Showing 30 minutes of trailers and commercials",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/sony-pictures-boss-cinemacon-urges-fewer-ads-trailers-1236720830/"
+    },
+    {
+      "q": "In April 2026, the largest shareholder of which legendary shoot 'em up developer offered $600k of her own funds to help the studio pivot to console game development?",
+      "options": [
+        "Cave",
+        "Treasure",
+        "Moss",
+        "Qute"
+      ],
+      "a": 0,
+      "correctText": "Cave",
+      "category": "Gaming",
+      "source": "https://automaton-media.com/en/news/largest-shareholder-of-dodonpachi-developer-cave-offers-her-own-funds-to-raise-600k-capital-for-console-game-development/"
+    },
+    {
+      "q": "In response to pressure from Robert F. Kennedy Jr. and MAHA figures, the FDA announced it will hold a meeting this summer to consider easing restrictions on what unapproved therapies?",
+      "options": [
+        "Peptide injections",
+        "Colloidal silver solutions",
+        "Hyperbaric ozone chambers",
+        "Raw unpasteurized dairy enzymes"
+      ],
+      "a": 0,
+      "correctText": "Peptide injections",
+      "category": "Health",
+      "source": "https://apnews.com/article/peptides-fda-kennedy-injection-bpc157-37bf2f94f0e8a57da76e67a03b58ff0f"
+    },
+    {
+      "q": "Marvel recently laid off what percentage of its staff amid companywide Disney cuts?",
+      "options": [
+        "5%",
+        "12%",
+        "15%",
+        "8%"
+      ],
+      "a": 3,
+      "correctText": "8%",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/marvel-llayoffs-disney-1236860699/"
+    },
+    {
+      "q": "An analysis of MRI scans published in the journal Radiology revealed that diets high in ultraprocessed foods are contributing to what unusual phenomenon in human thighs?",
+      "options": [
+        "Fat marbling that resembles high-end steaks",
+        "Rapid muscle deterioration into cartilage",
+        "Severe localized hair loss",
+        "Bone lengthening in the femur"
+      ],
+      "a": 0,
+      "correctText": "Fat marbling that resembles high-end steaks",
+      "category": "Health",
+      "source": "https://edition.cnn.com/2026/04/14/health/ultraprocessed-foods-knee-osteoarthritis-wellness"
+    },
+    {
+      "q": "What is the name of the new PvP-free starter region introduced to EVE Online in April 2026 to help new players safely learn the basics of the game?",
+      "options": [
+        "Exordium",
+        "Genesis",
+        "Arnon",
+        "Manifest"
+      ],
+      "a": 0,
+      "correctText": "Exordium",
+      "category": "Gaming",
+      "source": "https://www.eveonline.com/news/view/introducing-exordium"
+    },
+    {
+      "q": "On April 14, 2026, THQ Nordic announced release dates for the PlayStation and Xbox ports of which classic RPG trilogy?",
+      "options": [
+        "Gothic Classic",
+        "Risen Classic",
+        "Two Worlds Classic",
+        "Divinity Classic"
+      ],
+      "a": 0,
+      "correctText": "Gothic Classic",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/gothic-classic-trilogy-for-ps5-xbox-series-ps4-and-xbox-one-dated"
+    },
+    {
+      "q": "An AI analysis of over 400,000 social media posts suggests that clinical trials for GLP-1 weight-loss drugs may have missed which common side effects?",
+      "options": [
+        "Menstrual irregularities and temperature-related issues like chills",
+        "Temporary hearing loss and tinnitus",
+        "Reversal of natural hair pigment",
+        "Severe night blindness"
+      ],
+      "a": 0,
+      "correctText": "Menstrual irregularities and temperature-related issues like chills",
+      "category": "Health",
+      "source": "https://www.ctvnews.ca/health/article/thousands-are-sharing-side-effects-of-weight-loss-drugs-doctors-may-miss-study-suggests/"
+    },
+    {
+      "q": "Which two actors were recently reported to have signed an open letter joining the fight to block the Paramount-Warner Bros. merger?",
+      "options": [
+        "Zendaya and Tom Holland",
+        "Timothée Chalamet and Anya Taylor-Joy",
+        "Florence Pugh and Pedro Pascal",
+        "Margot Robbie and Ryan Gosling"
+      ],
+      "a": 2,
+      "correctText": "Florence Pugh and Pedro Pascal",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/florence-pugh-pedro-pascal-paramount-warner-bros-merger-open-letter-1236721627/"
+    }
+  ]
+}

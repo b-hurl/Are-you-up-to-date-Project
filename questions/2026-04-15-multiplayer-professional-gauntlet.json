@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-15",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In a mid-April 2026 memo, Disney CEO Josh D’Amaro announced that the company is currently laying off approximately how many employees to 'streamline' operations?",
+      "options": [
+        "1,000",
+        "2,500",
+        "5,000",
+        "10,000"
+      ],
+      "a": 0,
+      "correctText": "1,000",
+      "category": "Business",
+      "source": "https://variety.com/2026/biz/news/disney-layoffs-1000-employees-josh-damaro-memo-1236721266/"
+    },
+    {
+      "q": "In April 2026, Google announced that starting in June, it will begin penalizing websites in search rankings for employing which deceptive user-experience tactic?",
+      "options": [
+        "Cryptojacking",
+        "Invisible text spam",
+        "Forced cookie pop-ups",
+        "Back button hijacking"
+      ],
+      "a": 3,
+      "correctText": "Back button hijacking",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gadgets/2026/04/websites-that-hijack-your-back-button-must-stop-by-june-15-or-face-googles-wrath/"
+    },
+    {
+      "q": "In April 2026, the Justice Department moved to toss seditious conspiracy convictions for members of the Proud Boys and what other group?",
+      "options": [
+        "Oath Keepers",
+        "Boogaloo Boys",
+        "Three Percenters",
+        "Patriot Front"
+      ],
+      "a": 0,
+      "correctText": "Oath Keepers",
+      "category": "Usa",
+      "source": "https://apnews.com/article/proud-boys-oath-keepers-convictions-dropped-doj-ad679108ab84083694261efc101e60ea"
+    },
+    {
+      "q": "U.S. Treasury Secretary Scott Bessent accused China of being an 'unreliable partner' by hoarding what commodity during the Middle East war?",
+      "options": [
+        "Semiconductors",
+        "Oil",
+        "Rare earth metals",
+        "Natural gas"
+      ],
+      "a": 1,
+      "correctText": "Oil",
+      "category": "World",
+      "source": "https://www.reuters.com/world/china/us-treasurys-bessent-says-china-has-been-unreliable-partner-by-hoarding-oil-2026-04-14/"
+    },
+    {
+      "q": "Fueled by renewed momentum in the AI trade, Nvidia's stock recently recorded its longest winning streak since 2023. How many consecutive days did it rise as of April 14, 2026?",
+      "options": [
+        "10 days",
+        "5 days",
+        "14 days",
+        "20 days"
+      ],
+      "a": 0,
+      "correctText": "10 days",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/14/nvidia-stock-nvda-ai-streak.html"
+    },
+    {
+      "q": "According to prosecutors in April 2026, a man charged with an arson attack on OpenAI CEO Sam Altman's house was found carrying what item?",
+      "options": [
+        "A USB drive of stolen code",
+        "An AI CEO kill list",
+        "A fake FBI badge",
+        "A ransom note"
+      ],
+      "a": 1,
+      "correctText": "An AI CEO kill list",
+      "category": "Technology",
+      "source": "https://fortune.com/2026/04/14/man-charged-in-arson-attack-on-sam-altman-ai-ceo-kill-list-prosecutors-say/"
+    },
+    {
+      "q": "An Oklahoma high school principal was hailed as a hero for tackling a gunman after being shot in which body part?",
+      "options": [
+        "Leg",
+        "Arm",
+        "Shoulder",
+        "Foot"
+      ],
+      "a": 0,
+      "correctText": "Leg",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/oklahoma-high-school-principal-saved-kids-lives-tackling-gunman-shot-rcna331866"
+    },
+    {
+      "q": "An April 2026 study analyzing five popular AI chatbots for medical accuracy found that which chatbot generated the fewest highly problematic responses?",
+      "options": [
+        "Grok",
+        "ChatGPT",
+        "Meta AI",
+        "Gemini"
+      ],
+      "a": 3,
+      "correctText": "Gemini",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1123655"
+    },
+    {
+      "q": "A 2026 study examining concentrated animal feeding operations found that overall cancer incidence rates were 4% to 8% higher near industrial factory farms in California, Texas, and which other US state?",
+      "options": [
+        "Nebraska",
+        "Wisconsin",
+        "Iowa",
+        "North Carolina"
+      ],
+      "a": 2,
+      "correctText": "Iowa",
+      "category": "Science",
+      "source": "https://sentientmedia.org/cancer-rates-are-higher-near-factory-farms/"
+    },
+    {
+      "q": "U.S. President Donald Trump recently stated he asked which global leader in a letter not to provide weapons to Iran?",
+      "options": [
+        "Vladimir Putin",
+        "Emmanuel Macron",
+        "Xi Jinping",
+        "Kim Jong Un"
+      ],
+      "a": 2,
+      "correctText": "Xi Jinping",
+      "category": "World",
+      "source": "https://www.reuters.com/world/china/trump-says-he-asked-chinas-xi-not-give-iran-weapons-2026-04-15/"
+    }
+  ]
+}

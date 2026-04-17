@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which shoe retailer saw its stock surge after announcing an unexpected pivot to becoming an 'AI compute infrastructure' company?",
+      "options": [
+        "Allbirds",
+        "TOMS",
+        "Crocs",
+        "Vans"
+      ],
+      "a": 0,
+      "correctText": "Allbirds",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/15/allbirds-bird-stock-shoes-ai.html"
+    },
+    {
+      "q": "A federal jury found which entertainment giant liable for operating an illegal monopoly over the US concert ticketing market?",
+      "options": [
+        "Live Nation",
+        "AEG Presents",
+        "Eventbrite",
+        "StubHub"
+      ],
+      "a": 0,
+      "correctText": "Live Nation",
+      "category": "Business",
+      "source": "https://www.nbcnews.com/business/consumer/livenation-illegally-monopolized-ticketing-market-jury-antitrust-trial-rcna273714"
+    },
+    {
+      "q": "Snapchat's parent company, Snap, announced it is laying off what percentage of its global workforce, citing 'AI efficiencies'?",
+      "options": [
+        "16%",
+        "5%",
+        "25%",
+        "10%"
+      ],
+      "a": 0,
+      "correctText": "16%",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/15/snap-stock-layoffs-16-percent-workforce.html"
+    },
+    {
+      "q": "The LIV Golf league is reportedly on the verge of winding down operations due to losing funding from the Public Investment Fund of which country?",
+      "options": [
+        "Saudi Arabia",
+        "Qatar",
+        "United Arab Emirates",
+        "Kuwait"
+      ],
+      "a": 0,
+      "correctText": "Saudi Arabia",
+      "category": "Business",
+      "source": "https://sports.yahoo.com/golf/article/report-liv-golf-on-verge-of-losing-funding-from-saudi-investment-fund-putting-the-tours-future-in-doubt-171409417.html"
+    },
+    {
+      "q": "PlayStation 5 sales recently saw a massive spike in the US as consumers rushed to buy the console before a price hike caused by a crisis involving what component?",
+      "options": [
+        "RAM",
+        "Optical Drives",
+        "Lithium batteries",
+        "Cooling fans"
+      ],
+      "a": 0,
+      "correctText": "RAM",
+      "category": "Business",
+      "source": "https://www.eurogamer.net/ps5-sales-spike-people-rush-to-beat-ai-driven-price-hikes"
+    }
+  ]
+}

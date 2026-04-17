@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A comprehensive review of 17 clinical trials published in April 2026 concluded that the effect of 'gamechanger' anti-amyloid Alzheimer’s drugs on cognitive decline is what?",
+      "options": [
+        "Trivial or not meaningful",
+        "Highly effective in early stages",
+        "Capable of reversing memory loss",
+        "Dependent on the patient's diet"
+      ],
+      "a": 0,
+      "correctText": "Trivial or not meaningful",
+      "category": "Science",
+      "source": "https://www.theguardian.com/society/2026/apr/16/effect-gamechanger-alzheimers-drugs-trivial-review-concludes"
+    },
+    {
+      "q": "An April 2026 study by NYU Langone researchers analyzing e-bike and scooter crashes found that what proportion of injured patients suffered a traumatic brain injury?",
+      "options": [
+        "One-third",
+        "Less than 5 percent",
+        "Three-quarters",
+        "One-tenth"
+      ],
+      "a": 0,
+      "correctText": "One-third",
+      "category": "Science",
+      "source": "https://nyulangone.org/news/e-bike-and-scooter-crashes-are-leading-more-brain-injuries"
+    },
+    {
+      "q": "Researchers studying the vocalizations of sperm whales reported in April 2026 that the marine mammals' communication system closely parallels what?",
+      "options": [
+        "Human language and phonetics",
+        "Dolphin echolocation clicks",
+        "Bird songs and melodies",
+        "Infrasonic elephant rumbles"
+      ],
+      "a": 0,
+      "correctText": "Human language and phonetics",
+      "category": "Science",
+      "source": "https://www.theguardian.com/environment/2026/apr/15/sperm-whales-alphabet-vocalizations-similar-humans"
+    },
+    {
+      "q": "A historic, 1,200-year-old record from Japan was highlighted in April 2026 as powerful evidence that climate change will continue. What does the continuous record track?",
+      "options": [
+        "Cherry blossom blooming dates",
+        "Mount Fuji's snowcap melting",
+        "The arrival of monsoon season",
+        "Annual rice harvest yields"
+      ],
+      "a": 0,
+      "correctText": "Cherry blossom blooming dates",
+      "category": "Science",
+      "source": "https://www.theguardian.com/world/2026/apr/15/cherry-blossom-1200-years-japan-climate-scientist-yasuyuki-aono"
+    },
+    {
+      "q": "According to a 2026 University of Turku study, even brief exposure to commercial mosquito repellent insecticides significantly impairs a bumblebee's ability to do what?",
+      "options": [
+        "Navigate back to its nest",
+        "Produce sufficient royal jelly",
+        "Defend the hive against wasps",
+        "Perform the waggle dance"
+      ],
+      "a": 0,
+      "correctText": "Navigate back to its nest",
+      "category": "Science",
+      "source": "https://www.utu.fi/en/news/press-release/insecticide-in-insect-repellents-impairs-bumblebees-ability-to-navigate"
+    }
+  ]
+}

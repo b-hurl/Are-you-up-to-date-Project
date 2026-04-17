@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A Florida doctor was recently indicted for manslaughter after mistakenly removing which organ instead of a patient's spleen?",
+      "options": [
+        "Liver",
+        "Kidney",
+        "Gallbladder",
+        "Appendix"
+      ],
+      "a": 0,
+      "correctText": "Liver",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/florida-doctor-indicted-allegedly-removing-patients-liver-instead-sple-rcna331696"
+    },
+    {
+      "q": "In April 2026, the Justice Department moved to toss seditious conspiracy convictions for members of the Proud Boys and what other group?",
+      "options": [
+        "Oath Keepers",
+        "Boogaloo Boys",
+        "Three Percenters",
+        "Patriot Front"
+      ],
+      "a": 0,
+      "correctText": "Oath Keepers",
+      "category": "Usa",
+      "source": "https://apnews.com/article/proud-boys-oath-keepers-convictions-dropped-doj-ad679108ab84083694261efc101e60ea"
+    },
+    {
+      "q": "An Oklahoma high school principal was hailed as a hero for tackling a gunman after being shot in which body part?",
+      "options": [
+        "Leg",
+        "Arm",
+        "Shoulder",
+        "Foot"
+      ],
+      "a": 0,
+      "correctText": "Leg",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/oklahoma-high-school-principal-saved-kids-lives-tackling-gunman-shot-rcna331866"
+    },
+    {
+      "q": "A woman was fatally shot by police after allegedly attempting to kidnap a 3-year-old child at a Walmart in which city?",
+      "options": [
+        "Omaha, Nebraska",
+        "Kansas City, Missouri",
+        "Des Moines, Iowa",
+        "Tulsa, Oklahoma"
+      ],
+      "a": 0,
+      "correctText": "Omaha, Nebraska",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/police-fatally-shoot-attempted-kidnapper-knife-omaha-walmart-rcna331796"
+    },
+    {
+      "q": "Famous for being rescued from a well as a toddler in 1987, \"Baby Jessica\" was arrested at age 40 on assault charges following a domestic disturbance in which state?",
+      "options": [
+        "Texas",
+        "California",
+        "Florida",
+        "Ohio"
+      ],
+      "a": 0,
+      "correctText": "Texas",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/baby-jessica-now-40-arrested-texas-assault-charge-domestic-disturbance-rcna331782"
+    }
+  ]
+}

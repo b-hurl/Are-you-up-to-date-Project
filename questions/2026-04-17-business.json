@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What percentage of Tesla Cybertrucks sold in the US during Q4 2025 did SpaceX purchase, according to newly released registration data?",
+      "options": [
+        "5%",
+        "12%",
+        "18%",
+        "25%"
+      ],
+      "a": 2,
+      "correctText": "18%",
+      "category": "Business",
+      "source": "https://eletric-vehicles.com/tesla/spacex-bought-18-of-tesla-cybertrucks-sold-in-us-during-q4-2025-data-shows/"
+    },
+    {
+      "q": "During a surprise appearance at CinemaCon, Paramount CEO David Ellison committed to maintaining a minimum theatrical release window of how many days?",
+      "options": [
+        "30 days",
+        "45 days",
+        "60 days",
+        "90 days"
+      ],
+      "a": 1,
+      "correctText": "45 days",
+      "category": "Business",
+      "source": "https://deadline.com/2026/04/paramount-ceo-david-ellison-surprise-cinemacon-appearance-1236863093/"
+    },
+    {
+      "q": "Following a high-stakes antitrust trial, a jury found that which major live entertainment company illegally monopolized the primary ticketing market?",
+      "options": [
+        "AEG Presents",
+        "SeatGeek",
+        "Vivid Seats",
+        "Live Nation"
+      ],
+      "a": 3,
+      "correctText": "Live Nation",
+      "category": "Business",
+      "source": "https://www.nbcnews.com/business/consumer/livenation-illegally-monopolized-ticketing-market-jury-antitrust-trial-rcna273714"
+    },
+    {
+      "q": "According to recent reports, the controversial LIV Golf tour is on the verge of losing its financial backing from which entity?",
+      "options": [
+        "Saudi Arabia's Public Investment Fund",
+        "The United Arab Emirates Sovereign Fund",
+        "Qatar Investment Authority",
+        "SoftBank Vision Fund"
+      ],
+      "a": 0,
+      "correctText": "Saudi Arabia's Public Investment Fund",
+      "category": "Business",
+      "source": "https://sports.yahoo.com/golf/article/report-liv-golf-on-verge-of-losing-funding-from-saudi-investment-fund-putting-the-tours-future-in-doubt-171409417.html"
+    },
+    {
+      "q": "Gas operators recently urged the European Commission to subsidize what specific initiative to ensure energy security?",
+      "options": [
+        "Offshore wind farms",
+        "Liquefied natural gas terminals",
+        "Strategic gas storage",
+        "Nuclear power plant renovations"
+      ],
+      "a": 2,
+      "correctText": "Strategic gas storage",
+      "category": "Business",
+      "source": "https://montelnews.com/news/a61fba39-d2c8-4209-be92-75f46c99abc4/gas-operators-urge-ec-to-subsidise-strategic-gas-storage"
+    }
+  ]
+}

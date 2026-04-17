@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which nation recently abandoned its plans to host the 2035 Rugby World Cup amid funding cutbacks?",
+      "options": [
+        "Australia",
+        "Qatar",
+        "Saudi Arabia",
+        "Japan"
+      ],
+      "a": 2,
+      "correctText": "Saudi Arabia",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/sport/2026/apr/17/saudi-arabia-abandons-plans-to-host-2035-rugby-world-cup-amid-funding-cutback?CMP=Share_AndroidApp_Other"
+    },
+    {
+      "q": "Which former Arsenal goalkeeper tragically died at age 48 following a road accident?",
+      "options": [
+        "Jens Lehmann",
+        "Alex Manninger",
+        "David Seaman",
+        "Wojciech Szczęsny"
+      ],
+      "a": 1,
+      "correctText": "Alex Manninger",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/football/2026/apr/16/alex-manninger-former-arsenal-goalkeeper-dies-aged-48-after-road-accident?CMP=Share_AndroidApp_Other"
+    },
+    {
+      "q": "Who recently won his 6th Art Ross Trophy as the NHL's leading scorer, tying Gordie Howe and Mario Lemieux for the second-most all-time?",
+      "options": [
+        "Sidney Crosby",
+        "Nathan MacKinnon",
+        "Nikita Kucherov",
+        "Connor McDavid"
+      ],
+      "a": 3,
+      "correctText": "Connor McDavid",
+      "category": "Sports",
+      "source": "https://www.dailyfaceoff.com/news/edmonton-oilers-connor-mcdavid-wins-sixth-art-ross-trophy-second-most-all-time-nhl-gretzky"
+    },
+    {
+      "q": "Which golfer shot a 63 to take a one-shot lead at the RBC Heritage tournament?",
+      "options": [
+        "Ludvig Aberg",
+        "Scottie Scheffler",
+        "Rory McIlroy",
+        "Xander Schauffele"
+      ],
+      "a": 0,
+      "correctText": "Ludvig Aberg",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48507549/ludvig-aberg-shoots-63-one-shot-lead-rbc-heritage"
+    },
+    {
+      "q": "Which tennis star pulled out of the Madrid Open because of an injury?",
+      "options": [
+        "Carlos Alcaraz",
+        "Jannik Sinner",
+        "Rafael Nadal",
+        "Novak Djokovic"
+      ],
+      "a": 3,
+      "correctText": "Novak Djokovic",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48511022/novak-djokovic-pulls-madrid-open-injury"
+    }
+  ]
+}

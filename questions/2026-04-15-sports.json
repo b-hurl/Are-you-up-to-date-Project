@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "How long is the probation period given to former Michigan football coach Sherrone Moore following his plea agreement on April 14, 2026?",
+      "options": [
+        "18 months",
+        "12 months",
+        "6 months",
+        "24 months"
+      ],
+      "a": 0,
+      "correctText": "Sherrone Moore was sentenced to 18 months of probation and fined for two misdemeanor charges related to a confrontation with a former staffer.",
+      "category": "Sports",
+      "source": "https://apnews.com/article/sherrone-moore-michigan-football-sentencing-d9ebffb09e1dd31ad43c2f5ff212a551"
+    },
+    {
+      "q": "Which golfer issued a public apology on April 14, 2026, for breaking his driver against a cooler during the final round of the Masters?",
+      "options": [
+        "Sergio Garcia",
+        "Rory McIlroy",
+        "Jon Rahm",
+        "Brooks Koepka"
+      ],
+      "a": 0,
+      "correctText": "Sergio Garcia received a code-of-conduct warning and later apologized for slamming his driver into the turf and snapping it against a cooler.",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48485143/sergio-garcia-apologizes-outburst-amid-final-round-masters"
+    },
+    {
+      "q": "A new trial resumed in Argentina on April 14, 2026, against seven medical professionals accused of negligence leading to the death of which soccer legend?",
+      "options": [
+        "Diego Maradona",
+        "Pelé",
+        "Johan Cruyff",
+        "Alfredo Di Stéfano"
+      ],
+      "a": 0,
+      "correctText": "The trial centers on seven medical professionals accused of failing to provide adequate care to Diego Maradona in the weeks leading up to his death.",
+      "category": "Sports",
+      "source": "https://www.upi.com/Top_News/World-News/2026/04/14/latam-argentina-second-trial-Maradona-death/4431776178156/"
+    },
+    {
+      "q": "Boston Red Sox outfielder Jarren Duran directed an obscene gesture toward a fan during a 6-0 loss to which team on April 14, 2026?",
+      "options": [
+        "Minnesota Twins",
+        "New York Yankees",
+        "Houston Astros",
+        "Baltimore Orioles"
+      ],
+      "a": 0,
+      "correctText": "Jarren Duran made the gesture toward a fan at Target Field during a loss to the Minnesota Twins, stating the fan made a comment that crossed the line.",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48490369/jarren-duran-obscene-gesture-was-due-fan-crossing-line"
+    },
+    {
+      "q": "Alex Ovechkin recorded an assist in what could be the final game of his NHL career during the Capitals' 2-1 season-finale victory against which team?",
+      "options": [
+        "Columbus Blue Jackets",
+        "Pittsburgh Penguins",
+        "New York Rangers",
+        "Philadelphia Flyers"
+      ],
+      "a": 0,
+      "correctText": "Ovechkin assisted on the go-ahead goal in the Washington Capitals' 2-1 victory against the Columbus Blue Jackets on Tuesday night.",
+      "category": "Sports",
+      "source": "https://apnews.com/article/capitals-blue-jackets-score-ovechkin-15aa861d8785e2dfa11fea2e308d719b"
+    }
+  ]
+}

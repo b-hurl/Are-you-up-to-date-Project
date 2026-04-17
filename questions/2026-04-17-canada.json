@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "An Ontario truck driver recently pleaded guilty to causing a fatal pileup near Montreal while playing what type of game on his cellphone?",
+      "options": [
+        "An online board game (Ludo)",
+        "A first-person shooter",
+        "A virtual casino game",
+        "A racing simulator"
+      ],
+      "a": 0,
+      "correctText": "An online board game (Ludo)",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/montreal/article/truck-driver-pleads-guilty-after-causing-pileup-near-montreal-that-killed-mother-son/"
+    },
+    {
+      "q": "According to recent announcements, Prime Minister Mark Carney is hosting a global summit in Toronto this fall aiming to secure how much in investments?",
+      "options": [
+        "$1 trillion",
+        "$500 billion",
+        "$2 trillion",
+        "$100 billion"
+      ],
+      "a": 0,
+      "correctText": "$1 trillion",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11805634/carney-trillion-investment-global-summit-toronto/"
+    },
+    {
+      "q": "Drivers who fueled up at an Edmonton gas station recently found their cars undrivable after mechanics discovered their gas tanks contained what mixture?",
+      "options": [
+        "50% water and 50% fuel",
+        "Contaminated diesel in regular pumps",
+        "High levels of sediment and rust",
+        "100% pure ethanol"
+      ],
+      "a": 0,
+      "correctText": "50% water and 50% fuel",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/edmonton/article/50-water-50-fuel-found-in-tanks-of-vehicles-that-filled-up-at-edmonton-gas-station/"
+    },
+    {
+      "q": "The Ontario government faced scrutiny after purchasing a used private jet for Premier Doug Ford's use. How much did the aircraft cost?",
+      "options": [
+        "$28.9 million",
+        "$15.5 million",
+        "$42.3 million",
+        "$5.2 million"
+      ],
+      "a": 0,
+      "correctText": "$28.9 million",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/article-ontario-buys-used-private-jet-for-premier-doug-ford-use/"
+    },
+    {
+      "q": "On April 17, 2026, the Canadian Charter of Rights and Freedoms turned 44 years old. What specific provision did Justice Minister Sean Fraser state he wants to establish guardrails around?",
+      "options": [
+        "The notwithstanding clause (Section 33)",
+        "The reasonable limits clause (Section 1)",
+        "The mobility rights clause (Section 6)",
+        "The equality rights clause (Section 15)"
+      ],
+      "a": 0,
+      "correctText": "The notwithstanding clause (Section 33)",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/charter-rights-freedoms-turns-44-9.7166036"
+    }
+  ]
+}

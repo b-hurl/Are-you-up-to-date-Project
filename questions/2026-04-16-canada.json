@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In April 2026, the Canada Revenue Agency was revealed to have paid out another bogus income tax refund, this time to a B.C. businesswoman. How much was the refund?",
+      "options": [
+        "$5 million",
+        "$1 million",
+        "$10 million",
+        "$500,000"
+      ],
+      "a": 0,
+      "correctText": "$5 million",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/cra-bogus-refund-9.7165058"
+    },
+    {
+      "q": "A New Democratic Party (NDP) motion seeking unanimous consent to urge a nationwide ban on what specific retail practice was defeated in the House of Commons in mid-April 2026?",
+      "options": [
+        "Algorithmic pricing",
+        "Self-checkout machines",
+        "Imported produce tariffs",
+        "Credit card surcharges"
+      ],
+      "a": 0,
+      "correctText": "Algorithmic pricing",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11802437/algorithmic-pricing-ban-ndp-motion/"
+    },
+    {
+      "q": "In April 2026, a Canadian military police officer filed a lawsuit against Ottawa and an American manufacturer after being wounded by the accidental discharge of what newly issued handgun?",
+      "options": [
+        "SIG Sauer C-22",
+        "Glock 19",
+        "Beretta M9",
+        "Colt M1911"
+      ],
+      "a": 0,
+      "correctText": "SIG Sauer C-22",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/pistol-soldier-canada-wounded-p320-9.7165101"
+    },
+    {
+      "q": "According to April 2026 Ministry of Education data, what percentage of Ontario high school students regularly attended class to meet the attendance standard during the most recent school year?",
+      "options": [
+        "40 per cent",
+        "60 per cent",
+        "75 per cent",
+        "25 per cent"
+      ],
+      "a": 0,
+      "correctText": "40 per cent",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/toronto/ontario-high-school-attendance-9.7164970"
+    },
+    {
+      "q": "A newly released April 2026 report from the Canadian Federation of Independent Business (CFIB) warned that Canada is currently experiencing an 'entrepreneurial drought' because:",
+      "options": [
+        "The economy is losing businesses faster than it can create new ones",
+        "Venture capital funding has dropped to zero",
+        "All corporate tax rates were doubled",
+        "Foreign investment was banned"
+      ],
+      "a": 0,
+      "correctText": "The economy is losing businesses faster than it can create new ones",
+      "category": "Canada",
+      "source": "https://www.bnnbloomberg.ca/business/2026/04/15/canada-is-losing-businesses-faster-than-it-can-create-new-ones-cfib-says/"
+    }
+  ]
+}

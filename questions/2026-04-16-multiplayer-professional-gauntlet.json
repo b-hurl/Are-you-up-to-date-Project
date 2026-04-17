@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-16",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to April 2026 Ministry of Education data, what percentage of Ontario high school students regularly attended class to meet the attendance standard during the most recent school year?",
+      "options": [
+        "40 per cent",
+        "60 per cent",
+        "75 per cent",
+        "25 per cent"
+      ],
+      "a": 0,
+      "correctText": "40 per cent",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/toronto/ontario-high-school-attendance-9.7164970"
+    },
+    {
+      "q": "A newly released April 2026 report from the Canadian Federation of Independent Business (CFIB) warned that Canada is currently experiencing an 'entrepreneurial drought' because:",
+      "options": [
+        "The economy is losing businesses faster than it can create new ones",
+        "Venture capital funding has dropped to zero",
+        "All corporate tax rates were doubled",
+        "Foreign investment was banned"
+      ],
+      "a": 0,
+      "correctText": "The economy is losing businesses faster than it can create new ones",
+      "category": "Canada",
+      "source": "https://www.bnnbloomberg.ca/business/2026/04/15/canada-is-losing-businesses-faster-than-it-can-create-new-ones-cfib-says/"
+    },
+    {
+      "q": "In April 2026, a Canadian military police officer filed a lawsuit against Ottawa and an American manufacturer after being wounded by the accidental discharge of what newly issued handgun?",
+      "options": [
+        "SIG Sauer C-22",
+        "Glock 19",
+        "Beretta M9",
+        "Colt M1911"
+      ],
+      "a": 0,
+      "correctText": "SIG Sauer C-22",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/pistol-soldier-canada-wounded-p320-9.7165101"
+    },
+    {
+      "q": "PlayStation 5 sales recently saw a massive spike in the US as consumers rushed to buy the console before a price hike caused by a crisis involving what component?",
+      "options": [
+        "RAM",
+        "Optical Drives",
+        "Lithium batteries",
+        "Cooling fans"
+      ],
+      "a": 0,
+      "correctText": "RAM",
+      "category": "Business",
+      "source": "https://www.eurogamer.net/ps5-sales-spike-people-rush-to-beat-ai-driven-price-hikes"
+    },
+    {
+      "q": "Which shoe retailer saw its stock surge after announcing an unexpected pivot to becoming an 'AI compute infrastructure' company?",
+      "options": [
+        "Allbirds",
+        "TOMS",
+        "Crocs",
+        "Vans"
+      ],
+      "a": 0,
+      "correctText": "Allbirds",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/15/allbirds-bird-stock-shoes-ai.html"
+    },
+    {
+      "q": "Which conservative attorney was officially disbarred by the California Supreme Court on April 15, 2026, for his role in trying to overturn the 2020 election?",
+      "options": [
+        "John Eastman",
+        "Rudy Giuliani",
+        "Sidney Powell",
+        "Lin Wood"
+      ],
+      "a": 0,
+      "correctText": "The California Supreme Court ordered John Eastman's name stricken from the state roll of attorneys due to his efforts to help Donald Trump block the 2020 election certification.",
+      "category": "Usa",
+      "source": "https://apnews.com/article/john-eastman-trump-2020-election-loss-disbarred-abf3b3ab8f83a692992615c59db73c92"
+    },
+    {
+      "q": "An April 2026 study by NYU Langone researchers analyzing e-bike and scooter crashes found that what proportion of injured patients suffered a traumatic brain injury?",
+      "options": [
+        "One-third",
+        "Less than 5 percent",
+        "Three-quarters",
+        "One-tenth"
+      ],
+      "a": 0,
+      "correctText": "One-third",
+      "category": "Science",
+      "source": "https://nyulangone.org/news/e-bike-and-scooter-crashes-are-leading-more-brain-injuries"
+    },
+    {
+      "q": "A federal jury found which entertainment giant liable for operating an illegal monopoly over the US concert ticketing market?",
+      "options": [
+        "Live Nation",
+        "AEG Presents",
+        "Eventbrite",
+        "StubHub"
+      ],
+      "a": 0,
+      "correctText": "Live Nation",
+      "category": "Business",
+      "source": "https://www.nbcnews.com/business/consumer/livenation-illegally-monopolized-ticketing-market-jury-antitrust-trial-rcna273714"
+    },
+    {
+      "q": "Researchers studying the vocalizations of sperm whales reported in April 2026 that the marine mammals' communication system closely parallels what?",
+      "options": [
+        "Human language and phonetics",
+        "Dolphin echolocation clicks",
+        "Bird songs and melodies",
+        "Infrasonic elephant rumbles"
+      ],
+      "a": 0,
+      "correctText": "Human language and phonetics",
+      "category": "Science",
+      "source": "https://www.theguardian.com/environment/2026/apr/15/sperm-whales-alphabet-vocalizations-similar-humans"
+    },
+    {
+      "q": "Drivers filed a federal class action lawsuit against San Jose on April 15, 2026, over the city's use of nearly 500 automated license plate reader cameras operated by what tech company?",
+      "options": [
+        "Flock Safety",
+        "Vigilant Solutions",
+        "Axon",
+        "Motorola Solutions"
+      ],
+      "a": 0,
+      "correctText": "The lawsuit alleges that the city's widespread deployment of Flock Safety cameras violates the Fourth Amendment by conducting warrantless tracking of vehicle movements.",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/tech/tech-news/san-jose-drivers-sue-city-police-flock-cameras-rcna331750"
+    }
+  ]
+}
