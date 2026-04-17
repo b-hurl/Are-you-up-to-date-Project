@@ -4778,8 +4778,11 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
             updateHeaderSyncStatus('syncing');
             const syncKey = `trivia-sync-init-${session.date}-${session.activeMode}`;
             const isInitialSyncDone = localStorage.getItem(syncKey) === 'true';
+                const mode = session.activeMode || 'casual';
+                const today = session.date;
 
             try {
+                    const updateData = {};
                     const userRef = db.collection('users').doc(auth.currentUser.uid);
 
                     if (isInitialSyncDone && (currentIdx > 0 || isFinished)) {
@@ -6168,6 +6171,7 @@ async function openStats() {
             gauntlet_casual: { totalGames: 0, totalScore: 0, perfectGames: 0 },
             gauntlet_pro: { totalGames: 0, totalScore: 0, perfectGames: 0 },
             categories: { totalGames: 0, totalScore: 0, perfectGames: 0 },
+            byCategory: {},
             overall: { totalGames: 0, totalScore: 0, perfectGames: 0 }
         };
 
@@ -6192,6 +6196,12 @@ async function openStats() {
                 stats.categories.totalGames++;
                 stats.categories.totalScore += s;
                 if (s === 5) { stats.categories.perfectGames++; stats.overall.perfectGames++; }
+                
+                if (!stats.byCategory[mode]) {
+                    stats.byCategory[mode] = { totalGames: 0, totalScore: 0 };
+                }
+                stats.byCategory[mode].totalGames++;
+                stats.byCategory[mode].totalScore += s;
             }
         });
 
@@ -6206,12 +6216,66 @@ async function openStats() {
             totalGames: category.totalGames
         });
 
+        const topTopics = Object.entries(stats.byCategory)
+            .map(([name, d]) => ({
+                name,
+                avg: (d.totalScore / d.totalGames).toFixed(1),
+                games: d.totalGames
+            }))
+            .sort((a, b) => b.avg - a.avg || b.games - a.games)
+            .slice(0, 5);
+
+        const topicsBreakdownHTML = topTopics.length > 0 ? `
+            <div class="border-t border-slate-700/50 pt-6">
+                <h3 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Best Performing Topics</h3>
+                <div class="space-y-2">
+                    ${topTopics.map(t => `
+                        <div class="flex justify-between items-center bg-slate-900/40 p-3 rounded-xl border border-slate-700/50">
+                            <span class="text-xs font-bold text-white capitalize">${t.name}</span>
+                            <div class="flex items-center gap-3">
+                                <span class="text-[9px] text-slate-500 font-bold uppercase">${t.games} Games</span>
+                                <span class="text-sm font-black text-primary-400">${t.avg} <span class="text-[10px] text-slate-600">/ 5</span></span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        ` : '';
+
+        const bottomTopics = Object.entries(stats.byCategory)
+            .map(([name, d]) => ({
+                name,
+                avg: (d.totalScore / d.totalGames).toFixed(1),
+                games: d.totalGames
+            }))
+            .sort((a, b) => a.avg - b.avg || a.games - b.games)
+            .slice(0, 5);
+
+        const weakestTopicsHTML = bottomTopics.length > 0 ? `
+            <div class="border-t border-slate-700/50 pt-6">
+                <h3 class="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-4">Weakest Topics</h3>
+                <div class="space-y-2">
+                    ${bottomTopics.map(t => `
+                        <div class="flex justify-between items-center bg-slate-900/40 p-3 rounded-xl border border-slate-700/50">
+                            <span class="text-xs font-bold text-white capitalize">${t.name}</span>
+                            <div class="flex items-center gap-3">
+                                <span class="text-[9px] text-slate-500 font-bold uppercase">${t.games} Games</span>
+                                <span class="text-sm font-black text-red-400">${t.avg} <span class="text-[10px] text-slate-600">/ 5</span></span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        ` : '';
+
         content.innerHTML = `
             <div class="space-y-6 max-h-[60vh] overflow-y-auto pr-1 custom-scrollbar">
                 ${renderStatsSection('Global Performance', '🌟', calculateMetrics(stats.overall), true, 'Avg')}
                 ${renderStatsSection('Casual Gauntlet', '🎮', calculateMetrics(stats.gauntlet_casual), false, 10)}
                 ${renderStatsSection('Pro Gauntlet', '💼', calculateMetrics(stats.gauntlet_pro), false, 10)}
                 ${renderStatsSection('Topic Categories', '📁', calculateMetrics(stats.categories), false, 5)}
+                ${topicsBreakdownHTML}
+                ${weakestTopicsHTML}
             </div>
         `;
 

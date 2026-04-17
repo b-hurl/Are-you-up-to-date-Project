@@ -584,9 +584,10 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     const renderCategoryOptions = () => {
         const openHistory = () => window.openHistory && window.openHistory();
 
-        <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"} footer={
+        return (
+            <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"} footer={
             <button onClick={openHistory} className="text-[9px] text-slate-500 hover:text-primary-400 transition-colors uppercase font-bold tracking-widest mt-2 underline decoration-dotted">View Category History</button>
-        }>
+            }>
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
                 {(() => {
                     const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
@@ -652,7 +653,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     });
                 })()}
             </div>
-        </MenuView>
+            </MenuView>
+        );
     }
 
     const renderActiveView = () => {
