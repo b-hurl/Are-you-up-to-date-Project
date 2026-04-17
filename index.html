@@ -1126,30 +1126,28 @@
                 const remoteModes = remoteUserProgress.playedModes || [];
                 remoteModes.forEach(m => playedModesSet.add(m.toLowerCase()));
             }
-            
-            }
 
-            if (!window.gameSettingsRoot) {
-                console.log("🏗️ renderGameSettings: Creating React root...");
-                window.gameSettingsRoot = ReactDOM.createRoot(container);
-            }
+                if (!window.gameSettingsRoot) {
+                    console.log("🏗️ renderGameSettings: Creating React root...");
+                    window.gameSettingsRoot = ReactDOM.createRoot(container);
+                }
 
-            console.log("🚀 renderGameSettings: Mounting component...");
-            window.gameSettingsRoot.render(
-                React.createElement(ErrorBoundary, null,
-                    React.createElement(window.GameSettings, {
-                        currentConfig: gameConfig,
-                        onUpdate: handleConfigUpdate,
+                console.log("🚀 renderGameSettings: Mounting component...");
+                window.gameSettingsRoot.render(
+                    React.createElement(ErrorBoundary, null,
+                        React.createElement(window.GameSettings, {
+                            currentConfig: gameConfig,
+                            onUpdate: handleConfigUpdate,
                             playedModes: Array.from(playedModesSet),
-                        availableCategories: verifiedCategories
-                    })
-                )
-            );
-            console.log("✅ renderGameSettings: Render cycle complete.");
-        
-        window.renderGameSettings = renderGameSettings;
-        // Explicitly attach to window so the external JSX can find it
-        window.renderGameSettings = renderGameSettings;
+                            availableCategories: verifiedCategories
+                        })
+                    )
+                );
+                console.log("✅ renderGameSettings: Render cycle complete.");
+            }
+
+            // Explicitly attach to window so the external JSX can find it
+            window.renderGameSettings = renderGameSettings;
     
         // --- CROSS-BROWSER STATE SYNC ---
         function isInAppBrowser() {
