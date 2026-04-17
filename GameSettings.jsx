@@ -76,7 +76,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         return () => unsubscribe();
     }, []);
 
-    const CATEGORIES = ["technology", "science", "sports", "gaming", "entertainment", "books", "health", "business", "world", "canada", "usa"];
+    const CATEGORIES = ["books", "business", "canada", "entertainment", "gaming", "health", "science", "sports", "technology", "usa", "world"];
 
     // Reset sub-modes if gameMode changes
     useEffect(() => {
@@ -347,6 +347,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     );
 
     const renderGauntletOptions = () => {
+        const openHistory = () => window.openHistory && window.openHistory();
+
         const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
         let archive = {};
         try {
@@ -359,7 +361,9 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         ];
 
         return (
-            <MenuView title="Gauntlet Mode" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
+            <MenuView title="Gauntlet Mode" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"} footer={
+                <button onClick={openHistory} className="text-[9px] text-slate-500 hover:text-primary-400 transition-colors uppercase font-bold tracking-widest mt-2 underline decoration-dotted">View Gauntlet History</button>
+            }>
                 <div className="grid grid-cols-1 gap-4 mb-8">
                     {modes.map(m => {
                         const isPlayed = playedModes.includes(m.id);
@@ -577,8 +581,12 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         );
     };
 
-    const renderCategoryOptions = () => (
-        <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"}>
+    const renderCategoryOptions = () => {
+        const openHistory = () => window.openHistory && window.openHistory();
+
+        <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"} footer={
+            <button onClick={openHistory} className="text-[9px] text-slate-500 hover:text-primary-400 transition-colors uppercase font-bold tracking-widest mt-2 underline decoration-dotted">View Category History</button>
+        }>
             <div className="grid grid-cols-2 gap-3 mb-8 max-h-80 overflow-y-auto p-1 custom-scrollbar">
                 {(() => {
                     const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
@@ -600,10 +608,11 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         // or if the data hasn't loaded (or failed to load) yet (null)
                         availableCategories === null || availableCategories.includes(cat)
                     ).map(category => {
-                        const isPlayed = playedModes.includes(category);
+                        const categoryLower = category.toLowerCase();
+                        const isPlayed = playedModes.some(m => m.toLowerCase() === categoryLower);
                         const isMulti = config.gameMode === 'multiplayer';
-                        const isSent = isMulti && activeChallenges.includes(category);
-                        const savedScore = archive[gameDate]?.[category]?.score;
+                        const isSent = isMulti && activeChallenges.some(m => m.toLowerCase() === categoryLower);
+                        const savedScore = archive[gameDate]?.[categoryLower]?.score;
                         const isCompleted = isMulti && isPlayed;
 
                         return (
@@ -644,7 +653,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                 })()}
             </div>
         </MenuView>
-    );
+    }
 
     const renderActiveView = () => {
         if (!config.gameMode) return renderMainMenu();

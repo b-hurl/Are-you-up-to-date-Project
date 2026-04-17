@@ -588,8 +588,8 @@
 
             <div class="flex justify-center gap-2 mb-4">
                 <button onclick="filterHistory('all')" id="hist-filter-all" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-primary-600 text-white shadow-lg shadow-primary-500/20">All</button>
-                <button onclick="filterHistory('casual')" id="hist-filter-casual" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Casual</button>
-                <button onclick="filterHistory('professional')" id="hist-filter-professional" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Professional</button>
+                <button onclick="filterHistory('gauntlets')" id="hist-filter-gauntlets" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Gauntlets</button>
+                <button onclick="filterHistory('categories')" id="hist-filter-categories" class="px-3 py-1 rounded-full text-xs font-bold transition-all bg-slate-700 text-slate-400 hover:text-white border border-slate-600">Topics</button>
             </div>
             
             <div id="history-content" class="flex-1 overflow-y-auto pr-2 scrollbar-hide space-y-6">
@@ -1102,10 +1102,32 @@
             }
 
             let playedModes = [];
+            const playedModesSet = new Set();
+            const today = getGameDate();
             try {
                 const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
                 playedModes = session.playedModes || [];
+                
+                // 1. From Session
+                if (session.date === today && session.playedModes) {
+                    session.playedModes.forEach(m => playedModesSet.add(m.toLowerCase()));
+                }
             } catch (e) { }
+
+            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            
+            // 2. From Archive
+            if (archive[today]) {
+                Object.keys(archive[today]).forEach(m => playedModesSet.add(m.toLowerCase()));
+            }
+            
+            // 3. From Remote Progress
+            if (remoteUserProgress && remoteUserProgress.lastPlayedDate === today) {
+                const remoteModes = remoteUserProgress.playedModes || [];
+                remoteModes.forEach(m => playedModesSet.add(m.toLowerCase()));
+            }
+            
+            }
 
             if (!window.gameSettingsRoot) {
                 console.log("🏗️ renderGameSettings: Creating React root...");
@@ -1118,13 +1140,13 @@
                     React.createElement(window.GameSettings, {
                         currentConfig: gameConfig,
                         onUpdate: handleConfigUpdate,
-                        playedModes: playedModes,
+                            playedModes: Array.from(playedModesSet),
                         availableCategories: verifiedCategories
                     })
                 )
             );
             console.log("✅ renderGameSettings: Render cycle complete.");
-        }
+        
         window.renderGameSettings = renderGameSettings;
         // Explicitly attach to window so the external JSX can find it
         window.renderGameSettings = renderGameSettings;
@@ -4758,26 +4780,47 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
             const isInitialSyncDone = localStorage.getItem(syncKey) === 'true';
 
             try {
-                if (isInitialSyncDone && (currentIdx > 0 || isFinished)) {
-                    await db.collection('users').doc(auth.currentUser.uid).set({
-                        'currentSession.currentIdx': session.currentIdx,
-                        'currentSession.score': session.score,
-                        'currentSession.currentStreak': session.currentStreak,
-                        'currentSession.isFinished': session.isFinished,
-                        'currentSession.userChoices': session.userChoices,
-                        'currentSession.timeLeft': session.timeLeft,
-                        'currentSession.selectedIdx': session.selectedIdx,
-                        'currentSession.playedModes': session.playedModes,
-                        'currentSession.date': session.date,
-                        'lastUpdated': firebase.firestore.FieldValue.serverTimestamp()
-                    }, { merge: true });
-                } else {
-                    await db.collection('users').doc(auth.currentUser.uid).set({
-                        currentSession: session,
-                        lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
-                    }, { merge: true });
+                    const userRef = db.collection('users').doc(auth.currentUser.uid);
+
+                    if (isInitialSyncDone && (currentIdx > 0 || isFinished)) {
+                        updateData['currentSession.currentIdx'] = session.currentIdx;
+                        updateData['currentSession.score'] = session.score;
+                        updateData['currentSession.currentStreak'] = session.currentStreak;
+                        updateData['currentSession.isFinished'] = session.isFinished;
+                        updateData['currentSession.userChoices'] = session.userChoices;
+                        updateData['currentSession.timeLeft'] = session.timeLeft;
+                        updateData['currentSession.selectedIdx'] = session.selectedIdx;
+                        updateData['currentSession.playedModes'] = session.playedModes;
+                        updateData['currentSession.date'] = session.date;
+                        updateData['lastUpdated'] = firebase.firestore.FieldValue.serverTimestamp();
+                    } else {
+                        updateData['currentSession'] = session;
+                        updateData['lastUpdated'] = firebase.firestore.FieldValue.serverTimestamp();
+                        localStorage.setItem(syncKey, 'true');
+                    }
+
+                    if (isFinished) {
+                        const fullArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+                        const modeArchive = fullArchive[today] ? fullArchive[today][mode] : null;
+                        
+                        updateData['playedModes'] = firebase.firestore.FieldValue.arrayUnion(mode);
+                        updateData['lastPlayedDate'] = today;
+                        updateData['currentStreak'] = session.currentStreak;
+
+                        // NEW: Save to history subcollection instead of root document map
+                        if (modeArchive) {
+                            const gameId = `${today}_${mode}`;
+                            await userRef.collection('history').doc(gameId).set({
+                                ...modeArchive,
+                                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                            });
+                        }
+                    }
+
+                    await userRef.set(updateData, { merge: true });
+
                     localStorage.setItem(syncKey, 'true');
-                }
+                
                 console.log("☁️ Session progress successfully synced to Cloud.");
                 updateHeaderSyncStatus('complete');
             } catch (e) {
@@ -4786,11 +4829,6 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
                 updateHeaderSyncStatus('failed');
             }
         })();
-    }
-
-    if (isFinished) {
-        archiveSession(session);
-        localStorage.setItem('trivia-manual-sync-available', 'true');
     }
 }
 
@@ -6065,7 +6103,7 @@ function openLoginFromPrompt() {
     }, 300);
 }
 
-function renderStatsSection(title, icon, metrics, isFirst = false) {
+function renderStatsSection(title, icon, metrics, isFirst = false, maxScore = 5) {
     const borderClass = isFirst ? '' : 'border-t border-slate-700/50 pt-4';
     if (metrics.totalGames === 0) {
         return `
@@ -6089,7 +6127,7 @@ function renderStatsSection(title, icon, metrics, isFirst = false) {
                 </div>
                 <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-700/50 text-center col-span-2">
                     <div class="text-[10px] text-slate-400 uppercase font-bold mb-1">Average Score</div>
-                    <div class="text-3xl font-black text-primary-400">${metrics.avgScore} <span class="text-sm text-slate-500">/ 5</span></div>
+                    <div class="text-3xl font-black text-primary-400">${metrics.avgScore} <span class="text-sm text-slate-500">/ ${maxScore}</span></div>
                 </div>
             </div>
         </div>
@@ -6127,24 +6165,33 @@ async function openStats() {
         const snapshot = await db.collection('scores').where('userId', '==', userId).get();
         
         const stats = {
-            casual: { totalGames: 0, totalScore: 0, perfectGames: 0 },
-            professional: { totalGames: 0, totalScore: 0, perfectGames: 0 },
+            gauntlet_casual: { totalGames: 0, totalScore: 0, perfectGames: 0 },
+            gauntlet_pro: { totalGames: 0, totalScore: 0, perfectGames: 0 },
+            categories: { totalGames: 0, totalScore: 0, perfectGames: 0 },
             overall: { totalGames: 0, totalScore: 0, perfectGames: 0 }
         };
 
         snapshot.forEach(doc => {
             const data = doc.data();
-            const s = data.score || 0;
-            const mode = data.mode || 'casual'; // Default old games to casual
-
+            const s = parseInt(data.score) || 0;
+            const mode = (data.mode || 'casual').toLowerCase();
+            
             stats.overall.totalGames++;
             stats.overall.totalScore += s;
-            if (s === 5) stats.overall.perfectGames++;
 
-            if (stats[mode]) {
-                stats[mode].totalGames++;
-                stats[mode].totalScore += s;
-                if (s === 5) stats[mode].perfectGames++;
+            if (mode === 'casual') {
+                stats.gauntlet_casual.totalGames++;
+                stats.gauntlet_casual.totalScore += s;
+                if (s === 10) { stats.gauntlet_casual.perfectGames++; stats.overall.perfectGames++; }
+            } else if (mode === 'professional') {
+                stats.gauntlet_pro.totalGames++;
+                stats.gauntlet_pro.totalScore += s;
+                if (s === 10) { stats.gauntlet_pro.perfectGames++; stats.overall.perfectGames++; }
+            } else {
+                // Topic categories
+                stats.categories.totalGames++;
+                stats.categories.totalScore += s;
+                if (s === 5) { stats.categories.perfectGames++; stats.overall.perfectGames++; }
             }
         });
 
@@ -6160,10 +6207,11 @@ async function openStats() {
         });
 
         content.innerHTML = `
-            <div class="space-y-6">
-                ${renderStatsSection('Overall', '🌟', calculateMetrics(stats.overall), true)}
-                ${renderStatsSection('Casual', '🎮', calculateMetrics(stats.casual))}
-                ${renderStatsSection('Professional', '💼', calculateMetrics(stats.professional))}
+            <div class="space-y-6 max-h-[60vh] overflow-y-auto pr-1 custom-scrollbar">
+                ${renderStatsSection('Global Performance', '🌟', calculateMetrics(stats.overall), true, 'Avg')}
+                ${renderStatsSection('Casual Gauntlet', '🎮', calculateMetrics(stats.gauntlet_casual), false, 10)}
+                ${renderStatsSection('Pro Gauntlet', '💼', calculateMetrics(stats.gauntlet_pro), false, 10)}
+                ${renderStatsSection('Topic Categories', '📁', calculateMetrics(stats.categories), false, 5)}
             </div>
         `;
 
@@ -6208,7 +6256,7 @@ window.isNameValid = isNameValid;
             currentHistoryFilter = mode;
             
             // Update UI Buttons
-            const buttons = ['all', 'casual', 'professional'];
+            const buttons = ['all', 'gauntlets', 'categories'];
             buttons.forEach(btnMode => {
                 const btn = document.getElementById(`hist-filter-${btnMode}`);
                 if (mode === btnMode) {
@@ -6303,7 +6351,15 @@ window.isNameValid = isNameValid;
                 Object.keys(modesToProcess).forEach(modeKey => {
                     const userRecord = modesToProcess[modeKey];
                     // Apply filter
-                    if (currentHistoryFilter !== 'all' && modeKey !== currentHistoryFilter) return;
+                    
+                    // Enhanced filtering logic
+                    if (currentHistoryFilter === 'gauntlets') {
+                        if (!isGauntlet) return;
+                    } else if (currentHistoryFilter === 'categories') {
+                        if (isGauntlet) return;
+                    } else if (currentHistoryFilter !== 'all' && modeKey !== currentHistoryFilter) {
+                        return;
+                    }
 
                     gamesRendered++;
 
@@ -6314,9 +6370,10 @@ window.isNameValid = isNameValid;
                     const dayContainer = document.createElement('div');
                     dayContainer.className = 'p-4 bg-slate-900/50 rounded-2xl border border-slate-700/50 mb-4';
 
-                    const modeBadge = (modeKey === 'professional') 
-                        ? '<span class="text-[10px] bg-emerald-900/50 text-emerald-400 px-2 py-0.5 rounded border border-emerald-500/30 ml-2">PRO</span>'
-                        : '<span class="text-[10px] bg-primary-900/50 text-primary-400 px-2 py-0.5 rounded border border-primary-500/30 ml-2">CASUAL</span>';
+                    const isGauntlet = modeKey === 'casual' || modeKey === 'professional';
+                    const modeBadge = isGauntlet 
+                        ? `<span class="text-[10px] bg-amber-900/50 text-amber-400 px-2 py-0.5 rounded border border-amber-500/30 ml-2">GAUNTLET: ${modeKey.toUpperCase()}</span>`
+                        : `<span class="text-[10px] bg-indigo-900/50 text-indigo-400 px-2 py-0.5 rounded border border-indigo-500/30 ml-2">TOPIC: ${modeKey.toUpperCase()}</span>`;
 
                     let questionsHTML = '';
                     let visibleQuestions = 0;
@@ -6892,6 +6949,63 @@ window.isNameValid = isNameValid;
             try {
                 await db.collection('config').doc('maintenance').set({ enabled: enabled, updatedAt: firebase.firestore.FieldValue.serverTimestamp() });
                 alert(`Maintenance Mode is now ${enabled ? 'ON' : 'OFF'}.`);
+            } catch(e) { 
+                alert("Error updating maintenance mode.");
+                toggle.checked = !enabled;
+            }
+        }
+
+        window.addEventListener('appinstalled', () => {
+            hideInstallButtons();
+            deferredPrompt = null;
+        });
+    
+        // Run Import before initialization
+        importStateFromURL();
+        initFirebase();
+        startApp().catch(e => console.error("❌ startApp failed:", e));
+        checkTutorial();
+    </script>
+</body>
+</html>         alert(`Maintenance Mode is now ${enabled ? 'ON' : 'OFF'}.`);
+            } catch(e) { 
+                alert("Error updating maintenance mode.");
+                toggle.checked = !enabled;
+            }
+        }
+
+        window.addEventListener('appinstalled', () => {
+            hideInstallButtons();
+            deferredPrompt = null;
+        });
+    
+        // Run Import before initialization
+        importStateFromURL();
+        initFirebase();
+        startApp().catch(e => console.error("❌ startApp failed:", e));
+        checkTutorial();
+    </script>
+</body>
+</html>         alert(`Maintenance Mode is now ${enabled ? 'ON' : 'OFF'}.`);
+            } catch(e) { 
+                alert("Error updating maintenance mode.");
+                toggle.checked = !enabled;
+            }
+        }
+
+        window.addEventListener('appinstalled', () => {
+            hideInstallButtons();
+            deferredPrompt = null;
+        });
+    
+        // Run Import before initialization
+        importStateFromURL();
+        initFirebase();
+        startApp().catch(e => console.error("❌ startApp failed:", e));
+        checkTutorial();
+    </script>
+</body>
+</html>         alert(`Maintenance Mode is now ${enabled ? 'ON' : 'OFF'}.`);
             } catch(e) { 
                 alert("Error updating maintenance mode.");
                 toggle.checked = !enabled;
