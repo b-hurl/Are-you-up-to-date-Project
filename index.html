@@ -7005,23 +7005,7 @@ window.isNameValid = isNameValid;
         checkTutorial();
     </script>
 </body>
-</html>         alert(`Maintenance Mode is now ${enabled ? 'ON' : 'OFF'}.`);
-            } catch(e) { 
-                alert("Error updating maintenance mode.");
-                toggle.checked = !enabled;
-            }
-        }
-
-        window.addEventListener('appinstalled', () => {
-            hideInstallButtons();
-            deferredPrompt = null;
-        });
-    
-        // Run Import before initialization
-        importStateFromURL();
-        initFirebase();
-        startApp().catch(e => console.error("❌ startApp failed:", e));
-        checkTutorial();
+</html>         
     </script>
 </body>
 </html>
