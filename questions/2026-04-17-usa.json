@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who announced their resignation as the Acting Director of U.S. Immigration and Customs Enforcement (ICE) in mid-April 2026?",
+      "options": [
+        "Todd Lyons",
+        "Markwayne Mullin",
+        "Stephen Miller",
+        "Tom Homan"
+      ],
+      "a": 0,
+      "correctText": "Todd Lyons",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/video/acting-ice-director-todd-lyons-resigns-261541957586"
+    },
+    {
+      "q": "Which singer was arrested in April 2026 in connection with the murder of a 14-year-old girl whose remains were found in his Tesla?",
+      "options": [
+        "D4vd",
+        "Lil Nas X",
+        "The Kid LAROI",
+        "PinkPantheress"
+      ],
+      "a": 0,
+      "correctText": "D4vd",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/singer-d4vd-arrest-celeste-rivas-found-trunk-tesla-rcna245170"
+    },
+    {
+      "q": "An ICE agent was charged with felony assault in Minnesota in April 2026 for allegedly doing what to motorists during a road rage incident?",
+      "options": [
+        "Pointing his service weapon at them",
+        "Ramming their car with his unmarked SUV",
+        "Pepper-spraying them through the window",
+        "Firing a warning shot into the air"
+      ],
+      "a": 0,
+      "correctText": "Pointing his service weapon at them",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/16/ice-agent-assault-charge-minnesota-minneapolis.html"
+    },
+    {
+      "q": "Which former Lieutenant Governor of Virginia was found dead along with his wife in an apparent murder-suicide in April 2026?",
+      "options": [
+        "Justin Fairfax",
+        "Ralph Northam",
+        "Terry McAuliffe",
+        "Mark Herring"
+      ],
+      "a": 0,
+      "correctText": "Justin Fairfax",
+      "category": "Usa",
+      "source": "https://www.nbcwashington.com/news/local/justin-fairfax-wife-murder-suicide-virginia-annandale-virginia-killing/4091608/"
+    },
+    {
+      "q": "In April 2026, a man was arrested after walking into the headquarters of which major health insurer in Hartford, Connecticut, while carrying a backpack containing an AR-style pistol?",
+      "options": [
+        "Aetna",
+        "Cigna",
+        "UnitedHealthcare",
+        "Humana"
+      ],
+      "a": 0,
+      "correctText": "Aetna",
+      "category": "Usa",
+      "source": "https://apnews.com/article/aetna-gun-arrest-hartford-connecticut-497fab2d1cd6165ce98a11d28108f038"
+    }
+  ]
+}

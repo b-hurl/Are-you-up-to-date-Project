@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to reports released on April 17, 2026, which tech companies successfully lobbied the EU to keep datacentre emissions secret?",
+      "options": [
+        "US tech firms including Microsoft",
+        "European telecommunications providers",
+        "Chinese battery manufacturers",
+        "South Korean semiconductor fabs"
+      ],
+      "a": 0,
+      "correctText": "US tech firms including Microsoft",
+      "category": "Technology",
+      "source": "https://www.theguardian.com/technology/2026/apr/17/microsoft-us-tech-firms-lobbied-eu-secrecy-rules-datacentre-emissions"
+    },
+    {
+      "q": "In an April 2026 $12.5 million settlement with the state of Nevada, which popular gaming platform agreed to ban adults from messaging children?",
+      "options": [
+        "Roblox",
+        "Fortnite",
+        "Minecraft",
+        "Rec Room"
+      ],
+      "a": 0,
+      "correctText": "Roblox",
+      "category": "Technology",
+      "source": "https://www.dexerto.com/roblox/roblox-hit-with-12-5-million-settlement-that-bans-adults-from-messaging-children-3352955/"
+    },
+    {
+      "q": "Data revealed in mid-April 2026 showed that which company purchased 18% of all Tesla Cybertrucks sold in the US during the fourth quarter of 2025?",
+      "options": [
+        "SpaceX",
+        "The Boring Company",
+        "Rivian",
+        "X (formerly Twitter)"
+      ],
+      "a": 0,
+      "correctText": "SpaceX",
+      "category": "Technology",
+      "source": "https://eletric-vehicles.com/tesla/spacex-bought-18-of-tesla-cybertrucks-sold-in-us-during-q4-2025-data-shows/"
+    },
+    {
+      "q": "A Moroccan engineer made headlines in April 2026 by open-sourcing the design for what type of device, making it 95% cheaper than $250,000 commercial offerings?",
+      "options": [
+        "A DIY radar system with a 20 kilometer range",
+        "A localized 6G cellular tower",
+        "An autonomous agricultural drone",
+        "A home quantum computing node"
+      ],
+      "a": 0,
+      "correctText": "A DIY radar system with a 20 kilometer range",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/maker-stem/open-source-radar-system-is-95-percent-cheaper-than-usd250-000-commercial-offerings-has-20-kilometer-range-moroccan-engineer-designs-aeris-10-radar-shares-it-on-github"
+    },
+    {
+      "q": "In April 2026, Google entered into talks to run custom TPUs inside classified Pentagon environments, but pushed for language prohibiting what specific applications?",
+      "options": [
+        "Mass surveillance and autonomous weapons",
+        "Drone swarms and cyberwarfare",
+        "Deepfake propaganda and psychological operations",
+        "Predictive policing and border control"
+      ],
+      "a": 0,
+      "correctText": "Mass surveillance and autonomous weapons",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-and-pentagon-in-talks-to-run-tpus-inside-classified-environments"
+    }
+  ]
+}

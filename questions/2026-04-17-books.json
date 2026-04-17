@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 16, 2026, over 100 writers walked out of which historic French publishing house in protest of its conservative billionaire owner, Vincent Bolloré?",
+      "options": [
+        "Grasset",
+        "Gallimard",
+        "Flammarion",
+        "Hachette"
+      ],
+      "a": 0,
+      "correctText": "Grasset",
+      "category": "Books",
+      "source": "https://www.theguardian.com/world/2026/apr/16/writers-quit-french-publisher-protest-against-billionaire-owner-vincent-bollore"
+    },
+    {
+      "q": "A controversial April 2026 investigation questioned the true authorship of Woody Brown's bestselling debut novel 'Upward Bound,' as the minimally speaking author uses what highly disputed communication method?",
+      "options": [
+        "Rapid prompting",
+        "Eye-tracking software",
+        "Morse code blinking",
+        "Telepathic dictation"
+      ],
+      "a": 0,
+      "correctText": "Rapid prompting",
+      "category": "Books",
+      "source": "https://www.theatlantic.com/books/2026/04/who-really-wrote-autistic-author-woody-brown-novel/686814/"
+    },
+    {
+      "q": "Unveiled for the first time in April 2026 to mark the book's centenary, newly discovered preliminary pencil sketches of Winnie-the-Pooh were drawn by which original illustrator?",
+      "options": [
+        "E.H. Shepard",
+        "Beatrix Potter",
+        "Quentin Blake",
+        "John Tenniel"
+      ],
+      "a": 0,
+      "correctText": "E.H. Shepard",
+      "category": "Books",
+      "source": "https://www.theguardian.com/artanddesign/2026/apr/16/winnie-the-pooh-book-preliminary-sketches-e-h-shepard"
+    },
+    {
+      "q": "An April 2026 report highlighting the mass sale of AI-generated books compared the trend to George Orwell's '1984' and specifically noted thousands of Amazon titles had been 'polished' by which AI writing tool?",
+      "options": [
+        "Sudowrite",
+        "Grammarly",
+        "ChatGPT",
+        "Jasper"
+      ],
+      "a": 0,
+      "correctText": "Sudowrite",
+      "category": "Books",
+      "source": "https://theconversation.com/thousands-of-ai-written-edited-or-polished-books-are-being-sold-an-eerie-echo-of-orwells-novel-writing-machines-276008"
+    },
+    {
+      "q": "On April 16, 2026, the American Library Association announced that Robert Inman won the W.Y. Boyd Literary Novel Award for military fiction for which novel?",
+      "options": [
+        "Villages",
+        "The Things We Never Say",
+        "Upward Bound",
+        "Yellow September"
+      ],
+      "a": 0,
+      "correctText": "Villages",
+      "category": "Books",
+      "source": "https://www.ala.org/news"
+    }
+  ]
+}

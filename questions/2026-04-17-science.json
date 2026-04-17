@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a study reported on April 17, 2026, how does women's criteria for romantic partners shift when they gain more economic power?",
+      "options": [
+        "Their desire for wealthy partners drops",
+        "They exclusively seek older partners",
+        "They prefer partners with lower education levels",
+        "Their desire for wealthy partners increases significantly"
+      ],
+      "a": 0,
+      "correctText": "Their desire for wealthy partners drops",
+      "category": "Science",
+      "source": "https://www.psypost.org/womens-desire-for-wealthy-partners-drops-when-they-have-more-economic-power/"
+    },
+    {
+      "q": "A palliative care study highlighted on April 16, 2026, revealed that terminally ill patients commonly experience what type of dreams as they approach death?",
+      "options": [
+        "Emotional dreams reuniting with lost loved ones",
+        "Nightmares about medical procedures",
+        "Dreams entirely in black and white",
+        "Lucid dreams about childhood hobbies"
+      ],
+      "a": 0,
+      "correctText": "Emotional dreams reuniting with lost loved ones",
+      "category": "Science",
+      "source": "https://veritas.enc.edu/technology/as-we-approach-death-our-dreams-become-more-emotional-and-symbolic/"
+    },
+    {
+      "q": "An atmospheric study published on April 17, 2026, discovered that stable pollutants from engine oil and cosmetics make up to 4.3% of organic aerosol mass in the air. What are these omnipresent compounds?",
+      "options": [
+        "Silicones",
+        "Fluorocarbons",
+        "Sulfates",
+        "Microplastics"
+      ],
+      "a": 0,
+      "correctText": "Silicones",
+      "category": "Science",
+      "source": "https://acp.copernicus.org/articles/26/5005/2026/"
+    },
+    {
+      "q": "Based on research reported on April 16, 2026, how did children with ADHD perceive their own performance on brain-teasing activities compared to their neurotypical peers?",
+      "options": [
+        "They reported applying less effort",
+        "They reported applying maximum effort",
+        "They rated the tasks as significantly harder",
+        "They rated the tasks as significantly easier"
+      ],
+      "a": 0,
+      "correctText": "They reported applying less effort",
+      "category": "Science",
+      "source": "https://www.psypost.org/children-with-adhd-report-applying-less-effort-on-cognitive-tasks-compared-to-their-peers/"
+    },
+    {
+      "q": "Researchers warned in a study trending on April 17, 2026, that which historic city may need a massive €30 billion 'super levee' to survive sea level rise by 2300?",
+      "options": [
+        "Venice",
+        "Amsterdam",
+        "New Orleans",
+        "Miami"
+      ],
+      "a": 0,
+      "correctText": "Venice",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41598-026-39108-z"
+    }
+  ]
+}

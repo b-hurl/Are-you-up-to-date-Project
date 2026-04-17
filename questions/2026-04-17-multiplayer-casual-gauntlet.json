@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-17",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Unveiled for the first time in April 2026 to mark the book's centenary, newly discovered preliminary pencil sketches of Winnie-the-Pooh were drawn by which original illustrator?",
+      "options": [
+        "E.H. Shepard",
+        "Beatrix Potter",
+        "Quentin Blake",
+        "John Tenniel"
+      ],
+      "a": 0,
+      "correctText": "E.H. Shepard",
+      "category": "Books",
+      "source": "https://www.theguardian.com/artanddesign/2026/apr/16/winnie-the-pooh-book-preliminary-sketches-e-h-shepard"
+    },
+    {
+      "q": "Which two actresses were newly announced as the leads for Disney’s upcoming animated feature 'Hexed'?",
+      "options": [
+        "Hailee Steinfeld and Rashida Jones",
+        "Anya Taylor-Joy and Maya Rudolph",
+        "Zendaya and Florence Pugh",
+        "Auli'i Cravalho and Kristen Bell"
+      ],
+      "a": 0,
+      "correctText": "Hailee Steinfeld and Rashida Jones",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/hexed-first-look-disney-cinemacon-1236862614/"
+    },
+    {
+      "q": "In April 2026, President Trump was expected to sign an executive order urging increased research into which psychedelic substance?",
+      "options": [
+        "Ibogaine",
+        "Psilocybin",
+        "MDMA",
+        "Ketamine"
+      ],
+      "a": 0,
+      "correctText": "Ibogaine",
+      "category": "Health",
+      "source": "https://www.cnn.com/2026/04/16/health/ibogaine-psychedelic-trump-executive-order"
+    },
+    {
+      "q": "An April 2026 report highlighting the mass sale of AI-generated books compared the trend to George Orwell's '1984' and specifically noted thousands of Amazon titles had been 'polished' by which AI writing tool?",
+      "options": [
+        "Sudowrite",
+        "Grammarly",
+        "ChatGPT",
+        "Jasper"
+      ],
+      "a": 0,
+      "correctText": "Sudowrite",
+      "category": "Books",
+      "source": "https://theconversation.com/thousands-of-ai-written-edited-or-polished-books-are-being-sold-an-eerie-echo-of-orwells-novel-writing-machines-276008"
+    },
+    {
+      "q": "On April 16, 2026, over 100 writers walked out of which historic French publishing house in protest of its conservative billionaire owner, Vincent Bolloré?",
+      "options": [
+        "Grasset",
+        "Gallimard",
+        "Flammarion",
+        "Hachette"
+      ],
+      "a": 0,
+      "correctText": "Grasset",
+      "category": "Books",
+      "source": "https://www.theguardian.com/world/2026/apr/16/writers-quit-french-publisher-protest-against-billionaire-owner-vincent-bollore"
+    },
+    {
+      "q": "Which cabinet official was heavily grilled by Congress on April 16, 2026, regarding his stance on vaccines and proposed cuts to the federal health budget?",
+      "options": [
+        "Robert F. Kennedy Jr.",
+        "Xavier Becerra",
+        "Vivek Murthy",
+        "Jay Bhattacharya"
+      ],
+      "a": 0,
+      "correctText": "Robert F. Kennedy Jr.",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/congress-grills-rfk-jr-about-vaccines-and-cuts-to-health-budget/"
+    },
+    {
+      "q": "According to producer Emma Thomas, what was confirmed about Christopher Nolan's upcoming film 'The Odyssey'?",
+      "options": [
+        "It will have a runtime under 3 hours",
+        "It will be filmed entirely in black and white",
+        "It will have a PG rating",
+        "It will use zero CGI"
+      ],
+      "a": 0,
+      "correctText": "It will have a runtime under 3 hours",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/spielberg-nolan-minions-oscars-cinemacon-1236862546/"
+    },
+    {
+      "q": "Which major streaming service co-founder announced their official exit from the company in mid-April 2026?",
+      "options": [
+        "Reed Hastings (Netflix)",
+        "Jeff Bezos (Amazon)",
+        "Jason Kilar (Hulu)",
+        "Bob Iger (Disney)"
+      ],
+      "a": 0,
+      "correctText": "Reed Hastings (Netflix)",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/reed-hastings-exits-netflix-1236863466/"
+    },
+    {
+      "q": "Who recently won his 6th Art Ross Trophy as the NHL's leading scorer, tying Gordie Howe and Mario Lemieux for the second-most all-time?",
+      "options": [
+        "Sidney Crosby",
+        "Nathan MacKinnon",
+        "Nikita Kucherov",
+        "Connor McDavid"
+      ],
+      "a": 3,
+      "correctText": "Connor McDavid",
+      "category": "Sports",
+      "source": "https://www.dailyfaceoff.com/news/edmonton-oilers-connor-mcdavid-wins-sixth-art-ross-trophy-second-most-all-time-nhl-gretzky"
+    },
+    {
+      "q": "Which nation recently abandoned its plans to host the 2035 Rugby World Cup amid funding cutbacks?",
+      "options": [
+        "Australia",
+        "Qatar",
+        "Saudi Arabia",
+        "Japan"
+      ],
+      "a": 2,
+      "correctText": "Saudi Arabia",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/sport/2026/apr/17/saudi-arabia-abandons-plans-to-host-2035-rugby-world-cup-amid-funding-cutback?CMP=Share_AndroidApp_Other"
+    }
+  ]
+}

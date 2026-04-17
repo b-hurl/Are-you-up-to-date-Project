@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-17",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which upcoming animated movie recently suffered a massive hacker leak of the entire film months before its premiere?",
+      "options": [
+        "Legend of Aang: The Last Airbender",
+        "SpongeBob SquarePants: Deep Sea",
+        "Teenage Mutant Ninja Turtles: Future Shock",
+        "Transformers: New Genesis"
+      ],
+      "a": 0,
+      "correctText": "Legend of Aang: The Last Airbender",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/digital/behind-the-hacker-leak-legend-aang-the-last-airbender-1236566054/"
+    },
+    {
+      "q": "A mid-April 2026 report released by Senate Democrats revealed that drugmakers raised prices on hundreds of medications despite past drug pricing deals brokered by which president?",
+      "options": [
+        "Donald Trump",
+        "Joe Biden",
+        "Barack Obama",
+        "George W. Bush"
+      ],
+      "a": 0,
+      "correctText": "Donald Trump",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/drugmakers-raised-prices-hundreds-drugs-trump-deals-senate-democrats-r-rcna332036"
+    },
+    {
+      "q": "What major addition was announced for the upcoming theatrical re-release of 'Avengers: Endgame' ahead of 'Doomsday'?",
+      "options": [
+        "Brand new footage",
+        "An alternate ending",
+        "A complete 3D conversion",
+        "Interactive audience participation"
+      ],
+      "a": 0,
+      "correctText": "Brand new footage",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/avengers-endgame-theatrical-re-release-new-footage-1236724224/"
+    },
+    {
+      "q": "Which tennis star pulled out of the Madrid Open because of an injury?",
+      "options": [
+        "Carlos Alcaraz",
+        "Jannik Sinner",
+        "Rafael Nadal",
+        "Novak Djokovic"
+      ],
+      "a": 3,
+      "correctText": "Novak Djokovic",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48511022/novak-djokovic-pulls-madrid-open-injury"
+    },
+    {
+      "q": "Which golfer shot a 63 to take a one-shot lead at the RBC Heritage tournament?",
+      "options": [
+        "Ludvig Aberg",
+        "Scottie Scheffler",
+        "Rory McIlroy",
+        "Xander Schauffele"
+      ],
+      "a": 0,
+      "correctText": "Ludvig Aberg",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48507549/ludvig-aberg-shoots-63-one-shot-lead-rbc-heritage"
+    },
+    {
+      "q": "Which former Arsenal goalkeeper tragically died at age 48 following a road accident?",
+      "options": [
+        "Jens Lehmann",
+        "Alex Manninger",
+        "David Seaman",
+        "Wojciech Szczęsny"
+      ],
+      "a": 1,
+      "correctText": "Alex Manninger",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/football/2026/apr/16/alex-manninger-former-arsenal-goalkeeper-dies-aged-48-after-road-accident?CMP=Share_AndroidApp_Other"
+    },
+    {
+      "q": "According to the CDC in April 2026, which life-threatening virus that causes severe vomiting and diarrhea is currently surging at high levels in the U.S.?",
+      "options": [
+        "Rotavirus",
+        "Norovirus",
+        "Astrovirus",
+        "Adenovirus"
+      ],
+      "a": 0,
+      "correctText": "Rotavirus",
+      "category": "Health",
+      "source": "https://www.nbclosangeles.com/news/national-international/rotavirus-at-high-levels-in-the-us/3876587/"
+    },
+    {
+      "q": "A controversial April 2026 investigation questioned the true authorship of Woody Brown's bestselling debut novel 'Upward Bound,' as the minimally speaking author uses what highly disputed communication method?",
+      "options": [
+        "Rapid prompting",
+        "Eye-tracking software",
+        "Morse code blinking",
+        "Telepathic dictation"
+      ],
+      "a": 0,
+      "correctText": "Rapid prompting",
+      "category": "Books",
+      "source": "https://www.theatlantic.com/books/2026/04/who-really-wrote-autistic-author-woody-brown-novel/686814/"
+    },
+    {
+      "q": "Who did President Trump nominate to be the new director of the Centers for Disease Control and Prevention on April 16, 2026?",
+      "options": [
+        "Erica Schwartz",
+        "Jay Bhattacharya",
+        "Susan Monarez",
+        "Robert F. Kennedy Jr."
+      ],
+      "a": 0,
+      "correctText": "Erica Schwartz",
+      "category": "Health",
+      "source": "https://www.cnbc.com/2026/04/16/trump-nominates-erica-schwartz-as-cdc-director.html"
+    },
+    {
+      "q": "On April 16, 2026, the American Library Association announced that Robert Inman won the W.Y. Boyd Literary Novel Award for military fiction for which novel?",
+      "options": [
+        "Villages",
+        "The Things We Never Say",
+        "Upward Bound",
+        "Yellow September"
+      ],
+      "a": 0,
+      "correctText": "Villages",
+      "category": "Books",
+      "source": "https://www.ala.org/news"
+    }
+  ]
+}

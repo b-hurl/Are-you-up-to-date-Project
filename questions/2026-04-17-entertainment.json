@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What major addition was announced for the upcoming theatrical re-release of 'Avengers: Endgame' ahead of 'Doomsday'?",
+      "options": [
+        "Brand new footage",
+        "An alternate ending",
+        "A complete 3D conversion",
+        "Interactive audience participation"
+      ],
+      "a": 0,
+      "correctText": "Brand new footage",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/avengers-endgame-theatrical-re-release-new-footage-1236724224/"
+    },
+    {
+      "q": "According to producer Emma Thomas, what was confirmed about Christopher Nolan's upcoming film 'The Odyssey'?",
+      "options": [
+        "It will have a runtime under 3 hours",
+        "It will be filmed entirely in black and white",
+        "It will have a PG rating",
+        "It will use zero CGI"
+      ],
+      "a": 0,
+      "correctText": "It will have a runtime under 3 hours",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/spielberg-nolan-minions-oscars-cinemacon-1236862546/"
+    },
+    {
+      "q": "Which two actresses were newly announced as the leads for Disney’s upcoming animated feature 'Hexed'?",
+      "options": [
+        "Hailee Steinfeld and Rashida Jones",
+        "Anya Taylor-Joy and Maya Rudolph",
+        "Zendaya and Florence Pugh",
+        "Auli'i Cravalho and Kristen Bell"
+      ],
+      "a": 0,
+      "correctText": "Hailee Steinfeld and Rashida Jones",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/hexed-first-look-disney-cinemacon-1236862614/"
+    },
+    {
+      "q": "Which upcoming animated movie recently suffered a massive hacker leak of the entire film months before its premiere?",
+      "options": [
+        "Legend of Aang: The Last Airbender",
+        "SpongeBob SquarePants: Deep Sea",
+        "Teenage Mutant Ninja Turtles: Future Shock",
+        "Transformers: New Genesis"
+      ],
+      "a": 0,
+      "correctText": "Legend of Aang: The Last Airbender",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/digital/behind-the-hacker-leak-legend-aang-the-last-airbender-1236566054/"
+    },
+    {
+      "q": "Which major streaming service co-founder announced their official exit from the company in mid-April 2026?",
+      "options": [
+        "Reed Hastings (Netflix)",
+        "Jeff Bezos (Amazon)",
+        "Jason Kilar (Hulu)",
+        "Bob Iger (Disney)"
+      ],
+      "a": 0,
+      "correctText": "Reed Hastings (Netflix)",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/reed-hastings-exits-netflix-1236863466/"
+    }
+  ]
+}

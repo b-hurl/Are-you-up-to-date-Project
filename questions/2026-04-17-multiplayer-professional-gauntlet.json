@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-17",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Researchers warned in a study trending on April 17, 2026, that which historic city may need a massive €30 billion 'super levee' to survive sea level rise by 2300?",
+      "options": [
+        "Venice",
+        "Amsterdam",
+        "New Orleans",
+        "Miami"
+      ],
+      "a": 0,
+      "correctText": "Venice",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41598-026-39108-z"
+    },
+    {
+      "q": "A device recently discovered near Bali and the Lombok Strait has been identified as an undersea monitoring system belonging to which country?",
+      "options": [
+        "China",
+        "North Korea",
+        "Russia",
+        "United States"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "World",
+      "source": "https://www.abc.net.au/news/2026-04-17/chinese-undersea-monitoring-system-lombok-strait/106569388"
+    },
+    {
+      "q": "Gas operators recently urged the European Commission to subsidize what specific initiative to ensure energy security?",
+      "options": [
+        "Offshore wind farms",
+        "Liquefied natural gas terminals",
+        "Strategic gas storage",
+        "Nuclear power plant renovations"
+      ],
+      "a": 2,
+      "correctText": "Strategic gas storage",
+      "category": "Business",
+      "source": "https://montelnews.com/news/a61fba39-d2c8-4209-be92-75f46c99abc4/gas-operators-urge-ec-to-subsidise-strategic-gas-storage"
+    },
+    {
+      "q": "Japan's foreign affairs minister recently criticized the White House for using unauthorized gameplay footage from which video game company in an Iran war campaign video?",
+      "options": [
+        "Nintendo",
+        "Sony",
+        "Sega",
+        "Capcom"
+      ],
+      "a": 0,
+      "correctText": "Nintendo",
+      "category": "World",
+      "source": "https://automaton-media.com/en/news/japans-foreign-affairs-minister-criticizes-white-house-over-unauthorized-use-of-nintendo-gameplay-footage-in-iran-war-campaign-video-on-x/"
+    },
+    {
+      "q": "Which country recently issued a bomb threat targeting four UK locations, including London, Suffolk, and Leicester?",
+      "options": [
+        "Russia",
+        "Iran",
+        "China",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Russia",
+      "category": "World",
+      "source": "https://www.lbc.co.uk/article/russia-threatens-strike-britain-5HjdXpc_2/"
+    },
+    {
+      "q": "The Ontario government faced scrutiny after purchasing a used private jet for Premier Doug Ford's use. How much did the aircraft cost?",
+      "options": [
+        "$28.9 million",
+        "$15.5 million",
+        "$42.3 million",
+        "$5.2 million"
+      ],
+      "a": 0,
+      "correctText": "$28.9 million",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/article-ontario-buys-used-private-jet-for-premier-doug-ford-use/"
+    },
+    {
+      "q": "A palliative care study highlighted on April 16, 2026, revealed that terminally ill patients commonly experience what type of dreams as they approach death?",
+      "options": [
+        "Emotional dreams reuniting with lost loved ones",
+        "Nightmares about medical procedures",
+        "Dreams entirely in black and white",
+        "Lucid dreams about childhood hobbies"
+      ],
+      "a": 0,
+      "correctText": "Emotional dreams reuniting with lost loved ones",
+      "category": "Science",
+      "source": "https://veritas.enc.edu/technology/as-we-approach-death-our-dreams-become-more-emotional-and-symbolic/"
+    },
+    {
+      "q": "Data revealed in mid-April 2026 showed that which company purchased 18% of all Tesla Cybertrucks sold in the US during the fourth quarter of 2025?",
+      "options": [
+        "SpaceX",
+        "The Boring Company",
+        "Rivian",
+        "X (formerly Twitter)"
+      ],
+      "a": 0,
+      "correctText": "SpaceX",
+      "category": "Technology",
+      "source": "https://eletric-vehicles.com/tesla/spacex-bought-18-of-tesla-cybertrucks-sold-in-us-during-q4-2025-data-shows/"
+    },
+    {
+      "q": "In April 2026, a man was arrested after walking into the headquarters of which major health insurer in Hartford, Connecticut, while carrying a backpack containing an AR-style pistol?",
+      "options": [
+        "Aetna",
+        "Cigna",
+        "UnitedHealthcare",
+        "Humana"
+      ],
+      "a": 0,
+      "correctText": "Aetna",
+      "category": "Usa",
+      "source": "https://apnews.com/article/aetna-gun-arrest-hartford-connecticut-497fab2d1cd6165ce98a11d28108f038"
+    },
+    {
+      "q": "Drivers who fueled up at an Edmonton gas station recently found their cars undrivable after mechanics discovered their gas tanks contained what mixture?",
+      "options": [
+        "50% water and 50% fuel",
+        "Contaminated diesel in regular pumps",
+        "High levels of sediment and rust",
+        "100% pure ethanol"
+      ],
+      "a": 0,
+      "correctText": "50% water and 50% fuel",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/edmonton/article/50-water-50-fuel-found-in-tanks-of-vehicles-that-filled-up-at-edmonton-gas-station/"
+    }
+  ]
+}
