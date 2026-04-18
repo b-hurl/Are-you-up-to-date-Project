@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a recent 18-year longitudinal study, what generally happens to a person's tendency to procrastinate as they move through young adulthood?",
+      "options": [
+        "It tends to decline",
+        "It increases significantly",
+        "It completely disappears",
+        "It remains entirely unchanged"
+      ],
+      "a": 0,
+      "correctText": "It tends to decline",
+      "category": "Science",
+      "source": "https://www.psypost.org/longitudinal-study-finds-procrastination-declines-with-age-but-still-shapes-major-life-outcomes-over-nearly-two-decades/"
+    },
+    {
+      "q": "Using a microscopic model of human nerves and muscles, scientists recently discovered that the physical symptoms of Alzheimer's disease can begin in what area?",
+      "options": [
+        "Outside the brain in peripheral nerves",
+        "In the spinal cord fluid only",
+        "Within the cardiac muscle",
+        "Exclusively in the liver"
+      ],
+      "a": 0,
+      "correctText": "Outside the brain in peripheral nerves",
+      "category": "Science",
+      "source": "https://www.psypost.org/scientists-find-evidence-some-alzheimers-symptoms-may-begin-outside-the-brain/"
+    },
+    {
+      "q": "A new PNAS study investigating romantic partner preferences found that a woman's traditional desire for a wealthier partner diminishes under what specific circumstance?",
+      "options": [
+        "When women gain more economic power",
+        "When societal birth rates decline",
+        "When they move to a rural environment",
+        "When men display higher emotional intelligence"
+      ],
+      "a": 0,
+      "correctText": "When women gain more economic power",
+      "category": "Science",
+      "source": "https://www.psypost.org/womens-desire-for-wealthy-partners-drops-when-they-have-more-economic-power/"
+    },
+    {
+      "q": "In a recent test using the Atacama Cosmology Telescope to observe how galaxy clusters move toward one another, what did researchers conclude about gravity on cosmic scales?",
+      "options": [
+        "It behaves as expected, strengthening the case for dark matter",
+        "It behaves unpredictably, disproving the existence of dark matter",
+        "It accelerates over distance, suggesting a new fundamental force",
+        "It reverses its effect across hundreds of millions of light-years"
+      ],
+      "a": 0,
+      "correctText": "It behaves as expected, strengthening the case for dark matter",
+      "category": "Science",
+      "source": "https://dornsife.usc.edu/news/stories/cosmic-measurements-of-gravity-support-dark-matter/"
+    },
+    {
+      "q": "Researchers recently developed a new analytical method and discovered that small fish living downstream of urban wastewater treatment plants are actively accumulating what substances?",
+      "options": [
+        "Antidepressants, opioids, and other drugs of abuse",
+        "High levels of microplastics from clothing",
+        "Agricultural pesticides and fertilizers exclusively",
+        "Heavy metals from industrial runoff"
+      ],
+      "a": 0,
+      "correctText": "Antidepressants, opioids, and other drugs of abuse",
+      "category": "Science",
+      "source": "https://uwaterloo.ca/news/media/opioids-and-other-drugs-accumulating-freshwater-fish"
+    }
+  ]
+}

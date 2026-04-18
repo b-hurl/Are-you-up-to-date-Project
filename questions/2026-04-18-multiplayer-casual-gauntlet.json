@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-18",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which 2026 sci-fi film had its exclusive theatrical window extended on April 17, delaying its streaming release so it could return to IMAX theaters?",
+      "options": [
+        "Project Hail Mary",
+        "The Fall Guy",
+        "Mickey 17",
+        "Spaceman"
+      ],
+      "a": 0,
+      "correctText": "Project Hail Mary",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/project-hail-mary-streaming-movie-theater-run-extended-1236724483/"
+    },
+    {
+      "q": "According to a recent CDC warning, which highly contagious, life-threatening virus that causes severe vomiting and diarrhea in young children is currently circulating at unusually high levels in the U.S.?",
+      "options": [
+        "Rotavirus",
+        "Norovirus",
+        "Respiratory Syncytial Virus (RSV)",
+        "Adenovirus"
+      ],
+      "a": 0,
+      "correctText": "Rotavirus",
+      "category": "Health",
+      "source": "https://www.nbclosangeles.com/news/national-international/rotavirus-at-high-levels-in-the-us/3876587/"
+    },
+    {
+      "q": "Developer Alyx Jones reported feeling 'shut down and silenced' after the BAFTA Games Awards pulled the trailer for her autobiographical narrative game at the last minute. What is the game's title?",
+      "options": [
+        "The Quiet Things",
+        "Before I Forget",
+        "Venba",
+        "Sea of Solitude"
+      ],
+      "a": 0,
+      "correctText": "The Quiet Things",
+      "category": "Gaming",
+      "source": "https://kotaku.com/bafta-game-awards-quiet-things-trailer-silver-script-2000688583"
+    },
+    {
+      "q": "According to reports confirmed on April 17, 2026, how much will a round-trip train ticket to MetLife Stadium cost for the 2026 FIFA World Cup?",
+      "options": [
+        "$150",
+        "$80",
+        "$50",
+        "$200"
+      ],
+      "a": 0,
+      "correctText": "NJ Transit has confirmed that round-trip rail tickets to MetLife Stadium for the World Cup will be priced at $150, with an alternative bus service costing $80.",
+      "category": "Sports",
+      "source": "https://www.nytimes.com/athletic/7205423/2026/04/17/world-cup-news-met-life-train-tickets/"
+    },
+    {
+      "q": "Which tennis star withdrew from the Madrid Open on April 17, 2026, needing more time to recover from a shoulder injury?",
+      "options": [
+        "Novak Djokovic",
+        "Rafael Nadal",
+        "Carlos Alcaraz",
+        "Jannik Sinner"
+      ],
+      "a": 0,
+      "correctText": "Novak Djokovic pulled out of the Madrid Open as he continues to recover from a right shoulder injury.",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48511022/novak-djokovic-pulls-madrid-open-injury"
+    },
+    {
+      "q": "Which actor, known for his work on 'Stranger Things', was cast on April 17, 2026 to play Major Trautman in the upcoming prequel 'John Rambo'?",
+      "options": [
+        "David Harbour",
+        "Pedro Pascal",
+        "Karl Urban",
+        "Jon Bernthal"
+      ],
+      "a": 0,
+      "correctText": "David Harbour",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/david-harbour-joins-noah-centineo-john-rambo-1236567891/"
+    },
+    {
+      "q": "Which country abandoned its aspirations to host the 2035 Rugby World Cup amid funding cutbacks, as reported on April 17, 2026?",
+      "options": [
+        "Saudi Arabia",
+        "Qatar",
+        "United Arab Emirates",
+        "South Africa"
+      ],
+      "a": 0,
+      "correctText": "Saudi Arabia has abandoned its plans to host the 2035 Rugby World Cup amid a financial shift from its Public Investment Fund.",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/sport/2026/apr/17/saudi-arabia-abandons-plans-to-host-2035-rugby-world-cup-amid-funding-cutback"
+    },
+    {
+      "q": "Mega Crit's 'Major Update #1' for Slay the Spire 2 resulted in a massive wave of Steam review-bombing primarily originating from users in which country?",
+      "options": [
+        "China",
+        "Russia",
+        "Brazil",
+        "South Korea"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Gaming",
+      "source": "https://kotaku.com/slay-spire-2-steam-review-bomb-china-update-2000688520"
+    },
+    {
+      "q": "In a social media post involving a tiny director's chair on April 17, 2026, Kathryn Newton confirmed she is returning as Cassie Lang for which upcoming superhero film?",
+      "options": [
+        "Avengers: Doomsday",
+        "Young Avengers",
+        "Ant-Man 4",
+        "Captain America: Brave New World"
+      ],
+      "a": 0,
+      "correctText": "Avengers: Doomsday",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/kathryn-newton-avengers-doomsday-cast-cassie-lang-1236724545/"
+    },
+    {
+      "q": "Which real-time turn-based RPG took home the coveted Best Game Of The Year title at the 2026 BAFTA Games Awards?",
+      "options": [
+        "Clair Obscur: Expedition 33",
+        "Baldur's Gate 3",
+        "South of Midnight",
+        "Ghost of Yōtei"
+      ],
+      "a": 0,
+      "correctText": "Clair Obscur: Expedition 33",
+      "category": "Gaming",
+      "source": "https://deadline.com/2026/04/bafta-games-awards-winners-2026-1236864582/"
+    }
+  ]
+}

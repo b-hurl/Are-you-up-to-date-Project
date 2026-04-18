@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-18",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A federal judge temporarily blocked a $6.2 billion TV station merger between Nexstar Media Group and which rival company over antitrust concerns?",
+      "options": [
+        "Tegna",
+        "Sinclair",
+        "Gray Television",
+        "Hearst Television"
+      ],
+      "a": 0,
+      "correctText": "Tegna",
+      "category": "Usa",
+      "source": "https://apnews.com/article/nextstar-tegna-merger-lawsuit-antitrust-ec9f2def13e1b31b0e2c0437b635a932"
+    },
+    {
+      "q": "According to an investigation published in mid-April 2026, US tech firms successfully lobbied the EU to maintain secrecy regarding the environmental emissions of what facilities?",
+      "options": [
+        "Datacentres",
+        "Semiconductor foundries",
+        "Electric vehicle manufacturing plants",
+        "Satellite ground stations"
+      ],
+      "a": 0,
+      "correctText": "Datacentres",
+      "category": "World",
+      "source": "https://www.theguardian.com/technology/2026/apr/17/microsoft-us-tech-firms-lobbied-eu-secrecy-rules-datacentre-emissions"
+    },
+    {
+      "q": "The federal government announced that eligible Canadians will receive a one-time top-up payment on June 5, 2026, aimed at helping with the cost of what?",
+      "options": [
+        "Groceries",
+        "Housing",
+        "Prescription medications",
+        "Home heating"
+      ],
+      "a": 0,
+      "correctText": "The federal government is implementing a one-time Canada Groceries and Essentials Benefit to help offset persistent grocery price increases.",
+      "category": "Canada",
+      "source": "https://www.bnnbloomberg.ca/business/economics/2026/04/17/canadians-to-get-one-time-groceries-benefit-payment-this-summer/"
+    },
+    {
+      "q": "Struggling to compete with platforms like TikTok and Shein, which home shopping network pioneer recently filed for Chapter 11 bankruptcy protection?",
+      "options": [
+        "QVC",
+        "HSN",
+        "ShopHQ",
+        "JTV"
+      ],
+      "a": 0,
+      "correctText": "QVC",
+      "category": "Usa",
+      "source": "https://apnews.com/article/qvc-bankruptcy-tiktok-shein-13650e6d52cd6007201d0132c2b95c9c"
+    },
+    {
+      "q": "In a recent test using the Atacama Cosmology Telescope to observe how galaxy clusters move toward one another, what did researchers conclude about gravity on cosmic scales?",
+      "options": [
+        "It behaves as expected, strengthening the case for dark matter",
+        "It behaves unpredictably, disproving the existence of dark matter",
+        "It accelerates over distance, suggesting a new fundamental force",
+        "It reverses its effect across hundreds of millions of light-years"
+      ],
+      "a": 0,
+      "correctText": "It behaves as expected, strengthening the case for dark matter",
+      "category": "Science",
+      "source": "https://dornsife.usc.edu/news/stories/cosmic-measurements-of-gravity-support-dark-matter/"
+    },
+    {
+      "q": "Recent federal inspections revealed that nursing homes in which state have been inappropriately discharging patients to homeless shelters?",
+      "options": [
+        "Ohio",
+        "Florida",
+        "Texas",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "Ohio",
+      "category": "Usa",
+      "source": "https://apnews.com/article/ohio-nursing-home-patients-homeless-shelters-9c000eeddc9c9411f44fd605fafc6771"
+    },
+    {
+      "q": "The Ontario government recently faced criticism after purchasing a used $28.9-million private jet, a Bombardier Challenger 650, for which premier?",
+      "options": [
+        "Doug Ford",
+        "François Legault",
+        "Danielle Smith",
+        "Wab Kinew"
+      ],
+      "a": 0,
+      "correctText": "Doug Ford's government purchased the $28.9-million used private jet to provide him with more flexible and secure travel.",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/article-ontario-buys-used-private-jet-for-premier-doug-ford-use/"
+    },
+    {
+      "q": "Which province's immigration minister, Malaya Marcelino, was recently rebuffed by Ottawa in her push for higher provincial nominee allocations?",
+      "options": [
+        "Manitoba",
+        "Saskatchewan",
+        "Alberta",
+        "New Brunswick"
+      ],
+      "a": 0,
+      "correctText": "Manitoba's Immigration Minister Malaya Marcelino traveled to Ottawa to request an increase in immigration numbers, but the request was denied by Mark Carney's government.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/manitoba/immigration-marcelino-ottawa-carney-9.7167203"
+    },
+    {
+      "q": "According to a recent 18-year longitudinal study, what generally happens to a person's tendency to procrastinate as they move through young adulthood?",
+      "options": [
+        "It tends to decline",
+        "It increases significantly",
+        "It completely disappears",
+        "It remains entirely unchanged"
+      ],
+      "a": 0,
+      "correctText": "It tends to decline",
+      "category": "Science",
+      "source": "https://www.psypost.org/longitudinal-study-finds-procrastination-declines-with-age-but-still-shapes-major-life-outcomes-over-nearly-two-decades/"
+    },
+    {
+      "q": "A new PNAS study investigating romantic partner preferences found that a woman's traditional desire for a wealthier partner diminishes under what specific circumstance?",
+      "options": [
+        "When women gain more economic power",
+        "When societal birth rates decline",
+        "When they move to a rural environment",
+        "When men display higher emotional intelligence"
+      ],
+      "a": 0,
+      "correctText": "When women gain more economic power",
+      "category": "Science",
+      "source": "https://www.psypost.org/womens-desire-for-wealthy-partners-drops-when-they-have-more-economic-power/"
+    }
+  ]
+}
