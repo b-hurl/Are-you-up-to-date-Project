@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-19",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Protesters attempting to storm a beagle breeding and research facility were met with rubber bullets and pepper spray in which U.S. state?",
+      "options": [
+        "Wisconsin",
+        "California",
+        "New York",
+        "Virginia"
+      ],
+      "a": 0,
+      "correctText": "Wisconsin",
+      "category": "Usa",
+      "source": "https://apnews.com/article/animal-rights-beagles-protest-tear-gas-wisconsin-e65e2b473a19f7eda559394340403cba"
+    },
+    {
+      "q": "Surging demand pushed delivery dates into May for Apple's newest entry-level laptop, the MacBook Neo. What is its starting price?",
+      "options": [
+        "$599",
+        "$499",
+        "$699",
+        "$799"
+      ],
+      "a": 0,
+      "correctText": "$599",
+      "category": "Business",
+      "source": "https://www.macrumors.com/2026/04/16/macbook-neo-demand-surging/"
+    },
+    {
+      "q": "Citing crippling international student enrolment caps, which Vancouver-based institution recently laid off 240 of its staff and faculty members?",
+      "options": [
+        "University Canada West",
+        "Simon Fraser University",
+        "Capilano University",
+        "British Columbia Institute of Technology"
+      ],
+      "a": 0,
+      "correctText": "University Canada West",
+      "category": "Canada",
+      "source": "https://vancouversun.com/news/university-canada-west-lays-off-240-staff-citing-international-student-enrolment-caps"
+    },
+    {
+      "q": "New Brunswick has enlisted engineers from which provincial utility to help get the Point Lepreau nuclear plant operating reliably?",
+      "options": [
+        "Ontario Power Generation",
+        "Hydro-Québec",
+        "BC Hydro",
+        "SaskPower"
+      ],
+      "a": 0,
+      "correctText": "Ontario Power Generation",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/nb-looks-to-ontario-power-generation-to-get-point-lepreau-nuclear-plant-operating-reliably/"
+    },
+    {
+      "q": "Which three countries recently pledged to boost humanitarian aid to Cuba, calling for an end to ongoing U.S. economic blockades and military threats?",
+      "options": [
+        "Spain, Brazil, and Mexico",
+        "China, Russia, and Iran",
+        "Canada, France, and Colombia",
+        "Venezuela, Bolivia, and Nicaragua"
+      ],
+      "a": 0,
+      "correctText": "Spain, Brazil, and Mexico",
+      "category": "World",
+      "source": "https://www.aljazeera.com/amp/news/2026/4/18/mexico-spain-and-brazil-call-for-cubas-sovereignty-to-be-protected"
+    },
+    {
+      "q": "Two U.S. Army soldiers were seriously injured during a training mission when they were attacked by a bear in what state?",
+      "options": [
+        "Alaska",
+        "Montana",
+        "Wyoming",
+        "Washington"
+      ],
+      "a": 0,
+      "correctText": "Alaska",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/2-soldiers-alaska-injured-bear-attack-training-mission/story?id=132174677"
+    },
+    {
+      "q": "The experimental drug elraglusib recently made headlines for doubling the one-year survival rate of patients with which condition?",
+      "options": [
+        "Advanced pancreatic cancer",
+        "Early-stage Alzheimer's disease",
+        "Severe cystic fibrosis",
+        "Treatment-resistant leukemia"
+      ],
+      "a": 0,
+      "correctText": "Advanced pancreatic cancer",
+      "category": "Technology",
+      "source": "https://www.livescience.com/health/medicine-drugs/experimental-drug-doubles-one-year-survival-in-pancreatic-cancer"
+    },
+    {
+      "q": "Netflix's Q1 2026 net income jumped 83% largely thanks to a $2.8 billion deal-termination fee from which major studio?",
+      "options": [
+        "Warner Bros. Discovery",
+        "Disney",
+        "Paramount Global",
+        "Universal Pictures"
+      ],
+      "a": 0,
+      "correctText": "Warner Bros. Discovery",
+      "category": "Business",
+      "source": "https://variety.com/2026/tv/news/netflix-earnings-q1-2026-1236723851/"
+    },
+    {
+      "q": "According to reports from mid-April 2026, Meta is preparing to cut 8,000 jobs. This represents roughly what percentage of its global workforce?",
+      "options": [
+        "10%",
+        "5%",
+        "15%",
+        "20%"
+      ],
+      "a": 0,
+      "correctText": "10%",
+      "category": "Business",
+      "source": "https://nypost.com/2026/04/17/business/meta-to-cut-8000-jobs-in-major-bloodbath-next-month-report/"
+    },
+    {
+      "q": "A new analysis reveals that published research in the social sciences has shown a persistent and growing political tilt in which direction over the last six decades?",
+      "options": [
+        "To the political left",
+        "To the political right",
+        "Towards strict centrism",
+        "Towards libertarianism"
+      ],
+      "a": 0,
+      "correctText": "To the political left",
+      "category": "Science",
+      "source": "https://www.psypost.org/new-research-finds-a-persistent-and-growing-leftward-tilt-in-the-social-sciences/"
+    }
+  ]
+}

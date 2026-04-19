@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which 'Game of Thrones' star was recently announced as joining the cast of 'The Batman Part II'?",
+      "options": [
+        "Charles Dance",
+        "Peter Dinklage",
+        "Sean Bean",
+        "Nikolaj Coster-Waldau"
+      ],
+      "a": 0,
+      "correctText": "Charles Dance",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/the-batman-part-ii-charles-dance-1236864541/"
+    },
+    {
+      "q": "Actor Bob Odenkirk recently discussed building his new shape-shifting action movie 'Normal' alongside which director?",
+      "options": [
+        "Ben Wheatley",
+        "Derek Kolstad",
+        "Ilya Naishuller",
+        "David Leitch"
+      ],
+      "a": 0,
+      "correctText": "Ben Wheatley",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/creative-content/movies/normal-bob-odenkirk-ben-wheatley-interview-making-of/"
+    },
+    {
+      "q": "French film star Nadia Farès tragically passed away at age 57 after being found unconscious where in Paris?",
+      "options": [
+        "A swimming pool",
+        "A hotel room",
+        "A movie set",
+        "A subway station"
+      ],
+      "a": 0,
+      "correctText": "A swimming pool",
+      "category": "Entertainment",
+      "source": "https://www.aol.com/news/french-film-star-nadia-far-095613071.html"
+    },
+    {
+      "q": "Matt Bomer recently revealed he recorded an unreleased tie-in EP for the movie 'Magic Mike XXL' with which legendary songwriter?",
+      "options": [
+        "Diane Warren",
+        "Linda Perry",
+        "Max Martin",
+        "Jack Antonoff"
+      ],
+      "a": 0,
+      "correctText": "Diane Warren",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/matt-bomer-diane-warren-magic-mike-xxl-songs-unreleased-1236865181/"
+    },
+    {
+      "q": "Four-time César-winning French actress Nathalie Baye passed away at 77 after suffering from what illness?",
+      "options": [
+        "Dementia",
+        "Cancer",
+        "Heart disease",
+        "Stroke"
+      ],
+      "a": 0,
+      "correctText": "Dementia",
+      "category": "Entertainment",
+      "source": "https://www.franceinfo.fr/culture/cinema/nathalie-baye-etoile-discrete-du-cinema-francais-est-morte-a-l-age-de-77-ans_7326363.html"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a Polygon feature released during the weekend of April 19, 2026, the secrecy surrounding Capcom's 'Pragmata' was so intense that the actor voicing Hugh developed an irrational fear of talking about what? [1.16]",
+      "options": [
+        "The moon",
+        "Androids",
+        "Little girls",
+        "Space stations"
+      ],
+      "a": 0,
+      "correctText": "The moon",
+      "category": "Gaming",
+      "source": "https://www.polygon.com/pragmata-hugh-actor-david-menkin-interview-profile/"
+    },
+    {
+      "q": "According to an April 2026 Skillsearch survey that sparked viral discussion across the games industry this weekend, what percentage of professionals have considered leaving the sector due to redundancies?",
+      "options": [
+        "44%",
+        "22%",
+        "64%",
+        "76%"
+      ],
+      "a": 0,
+      "correctText": "44%",
+      "category": "Gaming",
+      "source": "https://www.gamesindustry.biz/44-of-games-industry-professionals-have-considered-leaving-the-industry-as-a-result-of-redundancies"
+    },
+    {
+      "q": "A highly anticipated release trailer dropped on April 18, 2026, for 'Create Aeronautics', a major mod that adds functional, physics-based airships and vehicles to what popular game?",
+      "options": [
+        "Minecraft",
+        "Terraria",
+        "Roblox",
+        "Valheim"
+      ],
+      "a": 0,
+      "correctText": "Minecraft",
+      "category": "Gaming",
+      "source": "https://www.pcgamer.com/games/survival-crafting/this-hugely-impressive-minecraft-mod-lets-you-build-all-manner-of-functioning-vehicles-including-planes-combine-harvesters-and-even-airships/"
+    },
+    {
+      "q": "Which upcoming indie game received its official announcement trailer on April 18, 2026, featured heavily by the Indie Games Hub?",
+      "options": [
+        "Abyss of Kings",
+        "Sintopia",
+        "The Ember Guardian",
+        "Project Ants"
+      ],
+      "a": 0,
+      "correctText": "Abyss of Kings",
+      "category": "Gaming",
+      "source": "https://youtu.be/Nm6nzbt8SR8?si=2f-08zDSFxaZyj4h"
+    },
+    {
+      "q": "Following the 2026 BAFTA Game Awards, developer Alyx Jones stated she felt 'shut down and silenced' after the trailer for which of her autobiographical games was abruptly pulled from the showcase due to its subject matter?",
+      "options": [
+        "The Quiet Things",
+        "Before I Forget",
+        "That Dragon, Cancer",
+        "Celeste"
+      ],
+      "a": 0,
+      "correctText": "The Quiet Things",
+      "category": "Gaming",
+      "source": "https://kotaku.com/bafta-game-awards-quiet-things-trailer-silver-script-2000688583"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to early trial results released in April 2026, nearly all responding patients given a personalized mRNA vaccine for which type of cancer are still alive six years later?",
+      "options": [
+        "Lung cancer",
+        "Breast cancer",
+        "Pancreatic cancer",
+        "Melanoma"
+      ],
+      "a": 2,
+      "correctText": "Pancreatic cancer",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/cancer/pancreatic-cancer-mrna-vaccine-shows-lasting-results-early-trial-rcna331969"
+    },
+    {
+      "q": "A severe pregnancy and delivery complication recently featured in breaking news involves maternal heart failure and a sudden feeling of impending doom. What is the medical term for this condition?",
+      "options": [
+        "Preeclampsia",
+        "Peripartum cardiomyopathy",
+        "Gestational diabetes",
+        "Placenta previa"
+      ],
+      "a": 1,
+      "correctText": "Peripartum cardiomyopathy",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/peripartum-cardiomyopathy-pregnancy-delivery-complication-heart/"
+    },
+    {
+      "q": "A recent Scientific American piece exploring the neurological basis of chronic pain asserts that the condition is constructed not just in the body, but essentially where else?",
+      "options": [
+        "The immune system",
+        "The spinal cord",
+        "The peripheral nervous system",
+        "The brain"
+      ],
+      "a": 3,
+      "correctText": "The brain",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/how-your-body-and-brain-construct-chronic-pain/"
+    },
+    {
+      "q": "Which virus, known for causing severe vomiting and diarrhea particularly in babies and young children, is currently seeing unusually high levels in the U.S. according to the CDC?",
+      "options": [
+        "Rotavirus",
+        "Norovirus",
+        "Adenovirus",
+        "Respiratory syncytial virus (RSV)"
+      ],
+      "a": 0,
+      "correctText": "Rotavirus",
+      "category": "Health",
+      "source": "https://www.nbclosangeles.com/news/national-international/rotavirus-at-high-levels-in-the-us/3876587/"
+    },
+    {
+      "q": "In mid-April 2026, Congress grilled Health and Human Services Secretary Robert F. Kennedy Jr. primarily regarding his stance on which two issues?",
+      "options": [
+        "Opioid regulations and mental health funding",
+        "Medicare expansion and hospital transparency",
+        "Abortion access and FDA approval processes",
+        "Vaccines and health budget cuts"
+      ],
+      "a": 3,
+      "correctText": "Vaccines and health budget cuts",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/congress-grills-rfk-jr-about-vaccines-and-cuts-to-health-budget/"
+    }
+  ]
+}
