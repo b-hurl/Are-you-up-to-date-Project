@@ -361,18 +361,18 @@ async function runAutomation() {
 TARGET CATEGORY: ${category}
 
 ACT AS: A Breaking News Editor on a 24-hour cycle. 
-
-TASK: Generate exactly 5 trivia questions based EXCLUSIVELY on news events that occurred between 24 hours ago and right now.
+TASK: Generate exactly 8 trivia question candidates based EXCLUSIVELY on news events that occurred between 24 hours ago and right now.
 
 ### THE "HARD STOP" RULES:
 1. DATE ENFORCEMENT: If an event occurred on April 12th or earlier, DISCARD IT. We only want news from the last 24 hours of ${dateStr}.
 2. SOURCE VERIFICATION: You MUST use Google Search to confirm the headline is currently "Breaking" or "Live" as of ${dateStr}. 
 3. LINK PURITY: The "source" field must be a direct, non-Reddit URL. Start with the link in the reddit post. Prefer non-paywalled sources (e.g., CBC, Reuters, AP News, BBC). If the lead only provides a Reddit link, use Search to find a free original article.
 4. NO OPINION: Delete any leads involving editorials, "top 10" lists, or movie reviews. Only hard, factual events.
-5. EXACT COUNT: Return exactly 5 questions. No preamble.
+5. EXACT COUNT: Return exactly 8 candidates.
 
 ### REDDIT LEADS (Filter these for today's date only):
 ${newsPool}
+NOTE: Only use the above leads if they are from ${dateStr}. If you need more, use Google Search.
 
 ### OUTPUT FORMAT (JSON ONLY):
 {
@@ -434,18 +434,7 @@ ${newsPool}
                     const overlap = existingWords.filter(w => newWords.has(w)).length;
                     if (overlap / Math.max(existingWords.length, 1) > threshold) return true;
                 }
-
-                // Semantic check: Ask Gemini if the events are the same
-                const checkPrompt = `Are these two trivia questions about the same news event?
-                Q1: "${newQ}"
-                Q2: "${existingQs[existingQs.length - 1].q}"
-                Answer ONLY 'YES' or 'NO'.`;
-                try {
-                    const res = await model.generateContent(checkPrompt);
-                    const isSame = res.response.text().toUpperCase().includes("YES");
-                    similarityCache.set(cacheKey, { value: isSame, expiry: Date.now() + SIMILARITY_TTL });
-                    return isSame;
-                } catch (e) { return false; }
+                return false;
             };
 
             // Helper to process and validate a single question
