@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-19",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which Kansas City Royals manager was ejected in the very first inning of a game against the Yankees on April 19, 2026, after arguing with umpires?",
+      "options": [
+        "Matt Quatraro",
+        "Aaron Boone",
+        "Bruce Bochy",
+        "Torey Lovullo"
+      ],
+      "a": 0,
+      "correctText": "Matt Quatraro",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48523266/royals-manager-matt-quatraro-ejected-arguing"
+    },
+    {
+      "q": "Which virus, known for causing severe vomiting and diarrhea particularly in babies and young children, is currently seeing unusually high levels in the U.S. according to the CDC?",
+      "options": [
+        "Rotavirus",
+        "Norovirus",
+        "Adenovirus",
+        "Respiratory syncytial virus (RSV)"
+      ],
+      "a": 0,
+      "correctText": "Rotavirus",
+      "category": "Health",
+      "source": "https://www.nbclosangeles.com/news/national-international/rotavirus-at-high-levels-in-the-us/3876587/"
+    },
+    {
+      "q": "Actor Bob Odenkirk recently discussed building his new shape-shifting action movie 'Normal' alongside which director?",
+      "options": [
+        "Ben Wheatley",
+        "Derek Kolstad",
+        "Ilya Naishuller",
+        "David Leitch"
+      ],
+      "a": 0,
+      "correctText": "Ben Wheatley",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/creative-content/movies/normal-bob-odenkirk-ben-wheatley-interview-making-of/"
+    },
+    {
+      "q": "A severe pregnancy and delivery complication recently featured in breaking news involves maternal heart failure and a sudden feeling of impending doom. What is the medical term for this condition?",
+      "options": [
+        "Preeclampsia",
+        "Peripartum cardiomyopathy",
+        "Gestational diabetes",
+        "Placenta previa"
+      ],
+      "a": 1,
+      "correctText": "Peripartum cardiomyopathy",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/peripartum-cardiomyopathy-pregnancy-delivery-complication-heart/"
+    },
+    {
+      "q": "According to an April 2026 Skillsearch survey that sparked viral discussion across the games industry this weekend, what percentage of professionals have considered leaving the sector due to redundancies?",
+      "options": [
+        "44%",
+        "22%",
+        "64%",
+        "76%"
+      ],
+      "a": 0,
+      "correctText": "44%",
+      "category": "Gaming",
+      "source": "https://www.gamesindustry.biz/44-of-games-industry-professionals-have-considered-leaving-the-industry-as-a-result-of-redundancies"
+    },
+    {
+      "q": "Four-time César-winning French actress Nathalie Baye passed away at 77 after suffering from what illness?",
+      "options": [
+        "Dementia",
+        "Cancer",
+        "Heart disease",
+        "Stroke"
+      ],
+      "a": 0,
+      "correctText": "Dementia",
+      "category": "Entertainment",
+      "source": "https://www.franceinfo.fr/culture/cinema/nathalie-baye-etoile-discrete-du-cinema-francais-est-morte-a-l-age-de-77-ans_7326363.html"
+    },
+    {
+      "q": "French film star Nadia Farès tragically passed away at age 57 after being found unconscious where in Paris?",
+      "options": [
+        "A swimming pool",
+        "A hotel room",
+        "A movie set",
+        "A subway station"
+      ],
+      "a": 0,
+      "correctText": "A swimming pool",
+      "category": "Entertainment",
+      "source": "https://www.aol.com/news/french-film-star-nadia-far-095613071.html"
+    },
+    {
+      "q": "Which upcoming indie game received its official announcement trailer on April 18, 2026, featured heavily by the Indie Games Hub?",
+      "options": [
+        "Abyss of Kings",
+        "Sintopia",
+        "The Ember Guardian",
+        "Project Ants"
+      ],
+      "a": 0,
+      "correctText": "Abyss of Kings",
+      "category": "Gaming",
+      "source": "https://youtu.be/Nm6nzbt8SR8?si=2f-08zDSFxaZyj4h"
+    },
+    {
+      "q": "According to a Polygon feature released during the weekend of April 19, 2026, the secrecy surrounding Capcom's 'Pragmata' was so intense that the actor voicing Hugh developed an irrational fear of talking about what? [1.16]",
+      "options": [
+        "The moon",
+        "Androids",
+        "Little girls",
+        "Space stations"
+      ],
+      "a": 0,
+      "correctText": "The moon",
+      "category": "Gaming",
+      "source": "https://www.polygon.com/pragmata-hugh-actor-david-menkin-interview-profile/"
+    },
+    {
+      "q": "In April 2026, teams from which country swept the men's and women's victories at the Patrouille des Glaciers, a historic Swiss army ski touring race?",
+      "options": [
+        "France",
+        "Switzerland",
+        "Italy",
+        "Austria"
+      ],
+      "a": 0,
+      "correctText": "France",
+      "category": "Sports",
+      "source": "https://www.swissinfo.ch/eng/various/french-victories-at-the-historic-patrouille-des-glaciers/91277626"
+    }
+  ]
+}

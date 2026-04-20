@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Mega Crit's 'Major Update #1' for Slay the Spire 2 resulted in a massive wave of Steam review-bombing primarily originating from users in which country?",
+      "options": [
+        "China",
+        "Russia",
+        "Brazil",
+        "South Korea"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Gaming",
+      "source": "https://kotaku.com/slay-spire-2-steam-review-bomb-china-update-2000688520"
+    },
+    {
+      "q": "Developer Alyx Jones reported feeling 'shut down and silenced' after the BAFTA Games Awards pulled the trailer for her autobiographical narrative game at the last minute. What is the game's title?",
+      "options": [
+        "The Quiet Things",
+        "Before I Forget",
+        "Venba",
+        "Sea of Solitude"
+      ],
+      "a": 0,
+      "correctText": "The Quiet Things",
+      "category": "Gaming",
+      "source": "https://kotaku.com/bafta-game-awards-quiet-things-trailer-silver-script-2000688583"
+    },
+    {
+      "q": "Which real-time turn-based RPG took home the coveted Best Game Of The Year title at the 2026 BAFTA Games Awards?",
+      "options": [
+        "Clair Obscur: Expedition 33",
+        "Baldur's Gate 3",
+        "South of Midnight",
+        "Ghost of Yōtei"
+      ],
+      "a": 0,
+      "correctText": "Clair Obscur: Expedition 33",
+      "category": "Gaming",
+      "source": "https://deadline.com/2026/04/bafta-games-awards-winners-2026-1236864582/"
+    },
+    {
+      "q": "Which Chicago-based game studio, known for its work co-developing the PC version of 'The Last of Us Part 2 Remastered', announced mass layoffs affecting up to 90 employees?",
+      "options": [
+        "Iron Galaxy",
+        "Certain Affinity",
+        "High Moon Studios",
+        "Virtuos"
+      ],
+      "a": 0,
+      "correctText": "Iron Galaxy",
+      "category": "Gaming",
+      "source": "https://kotaku.com/iron-galaxy-layoffs-tony-hawk-last-us-part-2-remaster-2000688573"
+    },
+    {
+      "q": "Recent backend datamining of Xbox Game Pass revealed a rumored new subscription tier that focuses exclusively on first-party games. What is its codename?",
+      "options": [
+        "TRITON",
+        "DUET",
+        "KEYSTONE",
+        "EDINBURGH"
+      ],
+      "a": 0,
+      "correctText": "TRITON",
+      "category": "Gaming",
+      "source": "https://www.windowscentral.com/gaming/xbox/microsoft-code-hints-at-game-pass-triton-and-duet-tier"
+    }
+  ]
+}

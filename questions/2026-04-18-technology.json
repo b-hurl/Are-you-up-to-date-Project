@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to an April 18, 2026 report, Meta is planning to lay off approximately what percentage of its global workforce in May?",
+      "options": [
+        "10%",
+        "5%",
+        "15%",
+        "20%"
+      ],
+      "a": 0,
+      "correctText": "10%",
+      "category": "Technology",
+      "source": "https://www.nbcbayarea.com/news/local/meta-layoff-thousands-of-employees-in-may/4070910/"
+    },
+    {
+      "q": "In mid-April 2026, OpenAI lost three top executives—including Sora video app head Bill Peebles—as part of a shift away from what the company internally termed as what?",
+      "options": [
+        "Side quests",
+        "Moonshots",
+        "Beta branches",
+        "Experimental labs"
+      ],
+      "a": 0,
+      "correctText": "Side quests",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/openai-executive-departures-shake-up-leadership-team-2026-4"
+    },
+    {
+      "q": "On April 17, 2026, the FAA rescinded a 3,000-foot no-fly restriction that had previously threatened civil and criminal penalties for flying drones near the mobile assets of which government agency?",
+      "options": [
+        "ICE (Immigration and Customs Enforcement)",
+        "USPS (United States Postal Service)",
+        "ATF (Bureau of Alcohol, Tobacco, Firearms)",
+        "DEA (Drug Enforcement Administration)"
+      ],
+      "a": 0,
+      "correctText": "ICE (Immigration and Customs Enforcement)",
+      "category": "Technology",
+      "source": "https://www.404media.co/faa-scraps-civil-and-criminal-penalties-for-flying-drones-near-ice-vehicles/"
+    },
+    {
+      "q": "An April 2026 update confirmed that Amazon's newest Fire Sticks will block users from sideloading outside apps, a change driven by the transition to which proprietary operating system?",
+      "options": [
+        "Vega OS",
+        "Luna OS",
+        "Aura OS",
+        "Orion OS"
+      ],
+      "a": 0,
+      "correctText": "Vega OS",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gadgets/2026/04/amazon-wont-release-fire-sticks-that-support-sideloading-anymore/"
+    },
+    {
+      "q": "An April 17, 2026 WIRED investigation detailed how which famously vengeful team owner uses an extensive surveillance operation at Madison Square Garden to track protesters, lawyers, and critics?",
+      "options": [
+        "James Dolan",
+        "Steve Ballmer",
+        "Mark Cuban",
+        "Joe Tsai"
+      ],
+      "a": 0,
+      "correctText": "James Dolan",
+      "category": "Technology",
+      "source": "https://www.wired.com/story/madison-square-garden-jim-dolan-surveillance-machine/"
+    }
+  ]
+}

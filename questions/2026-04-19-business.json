@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to reports from mid-April 2026, Meta is preparing to cut 8,000 jobs. This represents roughly what percentage of its global workforce?",
+      "options": [
+        "10%",
+        "5%",
+        "15%",
+        "20%"
+      ],
+      "a": 0,
+      "correctText": "10%",
+      "category": "Business",
+      "source": "https://nypost.com/2026/04/17/business/meta-to-cut-8000-jobs-in-major-bloodbath-next-month-report/"
+    },
+    {
+      "q": "Which parent company of popular home shopping TV networks recently filed for Chapter 11 bankruptcy in April 2026 to restructure billions in debt?",
+      "options": [
+        "QVC Group",
+        "HSN Media",
+        "Comcast Retail",
+        "Paramount Shopping"
+      ],
+      "a": 0,
+      "correctText": "QVC Group",
+      "category": "Business",
+      "source": "https://deadline.com/2026/04/qvc-group-home-shopping-tv-chapter-11-bankruptcy-1236864715/"
+    },
+    {
+      "q": "Netflix's Q1 2026 net income jumped 83% largely thanks to a $2.8 billion deal-termination fee from which major studio?",
+      "options": [
+        "Warner Bros. Discovery",
+        "Disney",
+        "Paramount Global",
+        "Universal Pictures"
+      ],
+      "a": 0,
+      "correctText": "Warner Bros. Discovery",
+      "category": "Business",
+      "source": "https://variety.com/2026/tv/news/netflix-earnings-q1-2026-1236723851/"
+    },
+    {
+      "q": "Following intense social media backlash and a petition from employees, the CEO of which coffee chain issued a formal apology and restored Pride flags in its stores?",
+      "options": [
+        "Philz Coffee",
+        "Peet's Coffee",
+        "Blue Bottle Coffee",
+        "Dutch Bros Coffee"
+      ],
+      "a": 0,
+      "correctText": "Philz Coffee",
+      "category": "Business",
+      "source": "https://www.advocate.com/news/philz-coffee-restores-pride-flags?1"
+    },
+    {
+      "q": "Surging demand pushed delivery dates into May for Apple's newest entry-level laptop, the MacBook Neo. What is its starting price?",
+      "options": [
+        "$599",
+        "$499",
+        "$699",
+        "$799"
+      ],
+      "a": 0,
+      "correctText": "$599",
+      "category": "Business",
+      "source": "https://www.macrumors.com/2026/04/16/macbook-neo-demand-surging/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which experienced driver tragically lost his life after a seven-car crash halted the Nurburgring Langstrecken-Serie (NLS) race on April 18, 2026?",
+      "options": [
+        "Juha Miettinen",
+        "Lucas Auer",
+        "David Jahn",
+        "Wolf Silvester"
+      ],
+      "a": 0,
+      "correctText": "Juha Miettinen",
+      "category": "Sports",
+      "source": "https://www.the-race.com/gt/driver-dies-after-crash-that-stopped-verstappens-nurburgring-race/"
+    },
+    {
+      "q": "During a 2026 spring football game, emergency crews had to rescue a skydiver who accidentally landed on top of the stadium's scoreboard at which university?",
+      "options": [
+        "Virginia Tech",
+        "Penn State",
+        "University of Texas",
+        "University of Michigan"
+      ],
+      "a": 0,
+      "correctText": "Virginia Tech",
+      "category": "Sports",
+      "source": "https://www.wdbj7.com/2026/04/18/man-rescued-after-parachute-accident-scoreboard-virginia-tech-spring-game/"
+    },
+    {
+      "q": "In April 2026, teams from which country swept the men's and women's victories at the Patrouille des Glaciers, a historic Swiss army ski touring race?",
+      "options": [
+        "France",
+        "Switzerland",
+        "Italy",
+        "Austria"
+      ],
+      "a": 0,
+      "correctText": "France",
+      "category": "Sports",
+      "source": "https://www.swissinfo.ch/eng/various/french-victories-at-the-historic-patrouille-des-glaciers/91277626"
+    },
+    {
+      "q": "Which national women's football team, colloquially known as the \"Lionesses\", celebrated reaching their 500th official match in April 2026?",
+      "options": [
+        "England",
+        "United States",
+        "Germany",
+        "Sweden"
+      ],
+      "a": 0,
+      "correctText": "England",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/articles/ce844m5yzgvo"
+    },
+    {
+      "q": "Which Kansas City Royals manager was ejected in the very first inning of a game against the Yankees on April 19, 2026, after arguing with umpires?",
+      "options": [
+        "Matt Quatraro",
+        "Aaron Boone",
+        "Bruce Bochy",
+        "Torey Lovullo"
+      ],
+      "a": 0,
+      "correctText": "Matt Quatraro",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48523266/royals-manager-matt-quatraro-ejected-arguing"
+    }
+  ]
+}

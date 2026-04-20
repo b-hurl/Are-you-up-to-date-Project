@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-19",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Nearly 200 Regina residents rallied against a lack of consultation regarding a proposed 300MW AI data centre planned by which major company?",
+      "options": [
+        "Bell Canada",
+        "Rogers Communications",
+        "Telus",
+        "Amazon Web Services"
+      ],
+      "a": 0,
+      "correctText": "Bell Canada",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/saskatchewan/ai-data-centre-protest-regina-9.7169295"
+    },
+    {
+      "q": "Alberta Premier Danielle Smith defended an upcoming government motion that would establish a new commission to take another look at redrawing what?",
+      "options": [
+        "Provincial riding boundaries",
+        "Healthcare administrative zones",
+        "Corporate tax brackets",
+        "Public school districts"
+      ],
+      "a": 0,
+      "correctText": "Provincial riding boundaries",
+      "category": "Canada",
+      "source": "https://calgary.citynews.ca/2026/04/18/danielle-smith-defends-upcoming-government-motion-to-reassess-riding-boundaries/"
+    },
+    {
+      "q": "According to a newly published study, when autistic users disclose their diagnosis to AI chatbots, the systems frequently advise them to avoid what? [1.1]",
+      "options": [
+        "Social events and romance",
+        "Dietary changes and exercise",
+        "Financial investments and banking",
+        "Reading and watching movies"
+      ],
+      "a": 0,
+      "correctText": "Social events and romance",
+      "category": "Science",
+      "source": "https://www.psypost.org/disclosing-autism-to-ai-chatbots-prompts-overly-cautious-stereotypical-advice/"
+    },
+    {
+      "q": "A new study tracking terminally ill patients revealed that as we approach death, our dreams commonly become more emotional, symbolic, and often feature reunions with whom?",
+      "options": [
+        "Deceased loved ones",
+        "Childhood teachers",
+        "Historical figures",
+        "Fictional characters"
+      ],
+      "a": 0,
+      "correctText": "Deceased loved ones",
+      "category": "Science",
+      "source": "https://veritas.enc.edu/technology/as-we-approach-death-our-dreams-become-more-emotional-and-symbolic/"
+    },
+    {
+      "q": "In April 2026, a gas station clerk in which U.S. state saved a teenager from an alleged kidnapper after she mouthed the word 'help'?",
+      "options": [
+        "Michigan",
+        "Ohio",
+        "Florida",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "Michigan",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/apr/19/michigan-gas-station-clerk-saves-teen"
+    },
+    {
+      "q": "Which parent company of popular home shopping TV networks recently filed for Chapter 11 bankruptcy in April 2026 to restructure billions in debt?",
+      "options": [
+        "QVC Group",
+        "HSN Media",
+        "Comcast Retail",
+        "Paramount Shopping"
+      ],
+      "a": 0,
+      "correctText": "QVC Group",
+      "category": "Business",
+      "source": "https://deadline.com/2026/04/qvc-group-home-shopping-tv-chapter-11-bankruptcy-1236864715/"
+    },
+    {
+      "q": "A recent Japanese study drawing parallels between the current geopolitical environment and the 1930s found that international economic and political shocks can drive elites to align with what?",
+      "options": [
+        "Authoritarian power",
+        "Global democratization",
+        "Total isolationism",
+        "Rapid demilitarization"
+      ],
+      "a": 0,
+      "correctText": "Authoritarian power",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1124372"
+    },
+    {
+      "q": "The Dutch cabinet recently activated the first phase of its national oil crisis plan due to commercial vessels being attacked and instability in which major maritime chokepoint?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Strait of Malacca",
+        "Panama Canal"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "World",
+      "source": "https://nltimes.nl/2026/04/18/dutch-cabinet-activates-first-phase-national-oil-crisis-plan"
+    },
+    {
+      "q": "A Los Angeles judge ruled in April 2026 that actor Alec Baldwin must face a civil trial over alleged negligence regarding what incident?",
+      "options": [
+        "The 'Rust' movie set shooting",
+        "A fatal car crash in Malibu",
+        "An assault on a paparazzi photographer",
+        "A boating collision in New York"
+      ],
+      "a": 0,
+      "correctText": "The 'Rust' movie set shooting",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/alec-baldwin-rust-shooting-civil-trial-can-proceed-judge-rules-rcna332390"
+    },
+    {
+      "q": "Due to a continued rise in infection rates, Russia's Health Minister recently urged that what proportion of the country's population be tested for HIV annually?",
+      "options": [
+        "One-third",
+        "One-quarter",
+        "One-half",
+        "Ten percent"
+      ],
+      "a": 0,
+      "correctText": "One-third",
+      "category": "World",
+      "source": "https://www.themoscowtimes.com/2026/04/18/russia-urges-hiv-testing-for-one-third-of-population-as-cases-rise-a92536"
+    }
+  ]
+}

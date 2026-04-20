@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A large-scale study of U.S. youth tracking over 11,000 children found that starting the use of what substance during teenage years is linked to measurably slower cognitive development and impaired memory?",
+      "options": [
+        "Cannabis",
+        "Nicotine",
+        "Alcohol",
+        "Caffeine"
+      ],
+      "a": 0,
+      "correctText": "Cannabis",
+      "category": "Science",
+      "source": "https://today.ucsd.edu/story/largest-us-study-finds-teen-cannabis-use-linked-to-slower-cognitive-development"
+    },
+    {
+      "q": "According to newly published research, patients who view their depression or anxiety as a result of what specific cause tend to use antidepressants for much longer periods?",
+      "options": [
+        "A chemical imbalance",
+        "Traumatic life events",
+        "Chronic stress",
+        "Poor sleep hygiene"
+      ],
+      "a": 0,
+      "correctText": "A chemical imbalance",
+      "category": "Science",
+      "source": "https://www.psypost.org/how-believing-in-a-chemical-imbalance-keeps-patients-on-antidepressants-longer/"
+    },
+    {
+      "q": "An analysis of 6.14 million health records found an increased risk of autism in children whose mothers were prescribed medications that inhibit the synthesis of what substance during pregnancy?",
+      "options": [
+        "Cholesterol",
+        "Serotonin",
+        "Dopamine",
+        "Folic acid"
+      ],
+      "a": 0,
+      "correctText": "Cholesterol",
+      "category": "Science",
+      "source": "https://www.unmc.edu/newsroom/2026/04/20/study-suggests-link-between-prenatal-exposure-to-certain-medications-and-increased-autism-risk-2/"
+    },
+    {
+      "q": "A new study on political bias and conspiracy thinking found that almost 80% of highly conspiratorial Republicans endorsed a theory blaming Democratic operatives for a 2024 assassination attempt against whom?",
+      "options": [
+        "Donald Trump",
+        "Joe Biden",
+        "Mike Pence",
+        "Ron DeSantis"
+      ],
+      "a": 0,
+      "correctText": "Donald Trump",
+      "category": "Science",
+      "source": "https://www.psypost.org/new-study-reveals-how-political-bias-conditions-the-impact-of-conspiracy-thinking/"
+    },
+    {
+      "q": "A recent study of 16,000 patients revealed a 100% increase in drug poisoning hospitalization risk when gabapentinoids are taken alongside what other class of medications?",
+      "options": [
+        "Benzodiazepines",
+        "SSRIs",
+        "Beta-blockers",
+        "Statins"
+      ],
+      "a": 0,
+      "correctText": "Benzodiazepines",
+      "category": "Science",
+      "source": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1005035"
+    }
+  ]
+}

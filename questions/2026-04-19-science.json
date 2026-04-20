@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a newly published study, when autistic users disclose their diagnosis to AI chatbots, the systems frequently advise them to avoid what? [1.1]",
+      "options": [
+        "Social events and romance",
+        "Dietary changes and exercise",
+        "Financial investments and banking",
+        "Reading and watching movies"
+      ],
+      "a": 0,
+      "correctText": "Social events and romance",
+      "category": "Science",
+      "source": "https://www.psypost.org/disclosing-autism-to-ai-chatbots-prompts-overly-cautious-stereotypical-advice/"
+    },
+    {
+      "q": "A new analysis reveals that published research in the social sciences has shown a persistent and growing political tilt in which direction over the last six decades?",
+      "options": [
+        "To the political left",
+        "To the political right",
+        "Towards strict centrism",
+        "Towards libertarianism"
+      ],
+      "a": 0,
+      "correctText": "To the political left",
+      "category": "Science",
+      "source": "https://www.psypost.org/new-research-finds-a-persistent-and-growing-leftward-tilt-in-the-social-sciences/"
+    },
+    {
+      "q": "A recent Japanese study drawing parallels between the current geopolitical environment and the 1930s found that international economic and political shocks can drive elites to align with what?",
+      "options": [
+        "Authoritarian power",
+        "Global democratization",
+        "Total isolationism",
+        "Rapid demilitarization"
+      ],
+      "a": 0,
+      "correctText": "Authoritarian power",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1124372"
+    },
+    {
+      "q": "Researchers recently demonstrated with a microscopic model of human nerves and muscles that symptoms of Alzheimer's disease may actually begin where?",
+      "options": [
+        "Outside the brain",
+        "In the frontal lobe only",
+        "In the digestive tract",
+        "In the cardiovascular system"
+      ],
+      "a": 0,
+      "correctText": "Outside the brain",
+      "category": "Science",
+      "source": "https://www.psypost.org/scientists-find-evidence-some-alzheimers-symptoms-may-begin-outside-the-brain/"
+    },
+    {
+      "q": "A new study tracking terminally ill patients revealed that as we approach death, our dreams commonly become more emotional, symbolic, and often feature reunions with whom?",
+      "options": [
+        "Deceased loved ones",
+        "Childhood teachers",
+        "Historical figures",
+        "Fictional characters"
+      ],
+      "a": 0,
+      "correctText": "Deceased loved ones",
+      "category": "Science",
+      "source": "https://veritas.enc.edu/technology/as-we-approach-death-our-dreams-become-more-emotional-and-symbolic/"
+    }
+  ]
+}

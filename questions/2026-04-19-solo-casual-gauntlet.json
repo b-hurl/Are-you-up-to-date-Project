@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-19",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which 'Game of Thrones' star was recently announced as joining the cast of 'The Batman Part II'?",
+      "options": [
+        "Charles Dance",
+        "Peter Dinklage",
+        "Sean Bean",
+        "Nikolaj Coster-Waldau"
+      ],
+      "a": 0,
+      "correctText": "Charles Dance",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/the-batman-part-ii-charles-dance-1236864541/"
+    },
+    {
+      "q": "Which experienced driver tragically lost his life after a seven-car crash halted the Nurburgring Langstrecken-Serie (NLS) race on April 18, 2026?",
+      "options": [
+        "Juha Miettinen",
+        "Lucas Auer",
+        "David Jahn",
+        "Wolf Silvester"
+      ],
+      "a": 0,
+      "correctText": "Juha Miettinen",
+      "category": "Sports",
+      "source": "https://www.the-race.com/gt/driver-dies-after-crash-that-stopped-verstappens-nurburgring-race/"
+    },
+    {
+      "q": "Which national women's football team, colloquially known as the \"Lionesses\", celebrated reaching their 500th official match in April 2026?",
+      "options": [
+        "England",
+        "United States",
+        "Germany",
+        "Sweden"
+      ],
+      "a": 0,
+      "correctText": "England",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/articles/ce844m5yzgvo"
+    },
+    {
+      "q": "Matt Bomer recently revealed he recorded an unreleased tie-in EP for the movie 'Magic Mike XXL' with which legendary songwriter?",
+      "options": [
+        "Diane Warren",
+        "Linda Perry",
+        "Max Martin",
+        "Jack Antonoff"
+      ],
+      "a": 0,
+      "correctText": "Diane Warren",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/matt-bomer-diane-warren-magic-mike-xxl-songs-unreleased-1236865181/"
+    },
+    {
+      "q": "According to early trial results released in April 2026, nearly all responding patients given a personalized mRNA vaccine for which type of cancer are still alive six years later?",
+      "options": [
+        "Lung cancer",
+        "Breast cancer",
+        "Pancreatic cancer",
+        "Melanoma"
+      ],
+      "a": 2,
+      "correctText": "Pancreatic cancer",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/cancer/pancreatic-cancer-mrna-vaccine-shows-lasting-results-early-trial-rcna331969"
+    },
+    {
+      "q": "Following the 2026 BAFTA Game Awards, developer Alyx Jones stated she felt 'shut down and silenced' after the trailer for which of her autobiographical games was abruptly pulled from the showcase due to its subject matter?",
+      "options": [
+        "The Quiet Things",
+        "Before I Forget",
+        "That Dragon, Cancer",
+        "Celeste"
+      ],
+      "a": 0,
+      "correctText": "The Quiet Things",
+      "category": "Gaming",
+      "source": "https://kotaku.com/bafta-game-awards-quiet-things-trailer-silver-script-2000688583"
+    },
+    {
+      "q": "In mid-April 2026, Congress grilled Health and Human Services Secretary Robert F. Kennedy Jr. primarily regarding his stance on which two issues?",
+      "options": [
+        "Opioid regulations and mental health funding",
+        "Medicare expansion and hospital transparency",
+        "Abortion access and FDA approval processes",
+        "Vaccines and health budget cuts"
+      ],
+      "a": 3,
+      "correctText": "Vaccines and health budget cuts",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/congress-grills-rfk-jr-about-vaccines-and-cuts-to-health-budget/"
+    },
+    {
+      "q": "A highly anticipated release trailer dropped on April 18, 2026, for 'Create Aeronautics', a major mod that adds functional, physics-based airships and vehicles to what popular game?",
+      "options": [
+        "Minecraft",
+        "Terraria",
+        "Roblox",
+        "Valheim"
+      ],
+      "a": 0,
+      "correctText": "Minecraft",
+      "category": "Gaming",
+      "source": "https://www.pcgamer.com/games/survival-crafting/this-hugely-impressive-minecraft-mod-lets-you-build-all-manner-of-functioning-vehicles-including-planes-combine-harvesters-and-even-airships/"
+    },
+    {
+      "q": "A recent Scientific American piece exploring the neurological basis of chronic pain asserts that the condition is constructed not just in the body, but essentially where else?",
+      "options": [
+        "The immune system",
+        "The spinal cord",
+        "The peripheral nervous system",
+        "The brain"
+      ],
+      "a": 3,
+      "correctText": "The brain",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/how-your-body-and-brain-construct-chronic-pain/"
+    },
+    {
+      "q": "During a 2026 spring football game, emergency crews had to rescue a skydiver who accidentally landed on top of the stadium's scoreboard at which university?",
+      "options": [
+        "Virginia Tech",
+        "Penn State",
+        "University of Texas",
+        "University of Michigan"
+      ],
+      "a": 0,
+      "correctText": "Virginia Tech",
+      "category": "Sports",
+      "source": "https://www.wdbj7.com/2026/04/18/man-rescued-after-parachute-accident-scoreboard-virginia-tech-spring-game/"
+    }
+  ]
+}

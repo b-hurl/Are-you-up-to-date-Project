@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Major League Baseball team reportedly reached an agreement on April 17, 2026, to be sold for a record-breaking $3.9 billion?",
+      "options": [
+        "San Diego Padres",
+        "New York Mets",
+        "Los Angeles Angels",
+        "Chicago White Sox"
+      ],
+      "a": 0,
+      "correctText": "The San Diego Padres have been sold to a group led by private equity billionaire Jose E. Feliciano and his wife Kwanza Jones for an MLB-record $3.9 billion.",
+      "category": "Sports",
+      "source": "https://www.outkick.com/sports/san-diego-padres-sold-record-3-9-billion"
+    },
+    {
+      "q": "According to reports confirmed on April 17, 2026, how much will a round-trip train ticket to MetLife Stadium cost for the 2026 FIFA World Cup?",
+      "options": [
+        "$150",
+        "$80",
+        "$50",
+        "$200"
+      ],
+      "a": 0,
+      "correctText": "NJ Transit has confirmed that round-trip rail tickets to MetLife Stadium for the World Cup will be priced at $150, with an alternative bus service costing $80.",
+      "category": "Sports",
+      "source": "https://www.nytimes.com/athletic/7205423/2026/04/17/world-cup-news-met-life-train-tickets/"
+    },
+    {
+      "q": "Which country abandoned its aspirations to host the 2035 Rugby World Cup amid funding cutbacks, as reported on April 17, 2026?",
+      "options": [
+        "Saudi Arabia",
+        "Qatar",
+        "United Arab Emirates",
+        "South Africa"
+      ],
+      "a": 0,
+      "correctText": "Saudi Arabia has abandoned its plans to host the 2035 Rugby World Cup amid a financial shift from its Public Investment Fund.",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/sport/2026/apr/17/saudi-arabia-abandons-plans-to-host-2035-rugby-world-cup-amid-funding-cutback"
+    },
+    {
+      "q": "Which former Los Angeles Angels outfielder, who was the franchise's career hits leader and a key player in their 2002 World Series victory, passed away at age 53 on April 17, 2026?",
+      "options": [
+        "Garret Anderson",
+        "Tim Salmon",
+        "Darin Erstad",
+        "Chone Figgins"
+      ],
+      "a": 0,
+      "correctText": "Garret Anderson, the longtime Angels outfielder and career hits leader for the franchise, passed away at the age of 53.",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48513802/long-angels-outfielder-garret-anderson-dies-53"
+    },
+    {
+      "q": "Which tennis star withdrew from the Madrid Open on April 17, 2026, needing more time to recover from a shoulder injury?",
+      "options": [
+        "Novak Djokovic",
+        "Rafael Nadal",
+        "Carlos Alcaraz",
+        "Jannik Sinner"
+      ],
+      "a": 0,
+      "correctText": "Novak Djokovic pulled out of the Madrid Open as he continues to recover from a right shoulder injury.",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48511022/novak-djokovic-pulls-madrid-open-injury"
+    }
+  ]
+}

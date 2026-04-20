@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-18",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Researchers recently developed a new analytical method and discovered that small fish living downstream of urban wastewater treatment plants are actively accumulating what substances?",
+      "options": [
+        "Antidepressants, opioids, and other drugs of abuse",
+        "High levels of microplastics from clothing",
+        "Agricultural pesticides and fertilizers exclusively",
+        "Heavy metals from industrial runoff"
+      ],
+      "a": 0,
+      "correctText": "Antidepressants, opioids, and other drugs of abuse",
+      "category": "Science",
+      "source": "https://uwaterloo.ca/news/media/opioids-and-other-drugs-accumulating-freshwater-fish"
+    },
+    {
+      "q": "In mid-April 2026, the International Monetary Fund (IMF) reported that which nation currently holds the strongest fiscal position among the G7 countries?",
+      "options": [
+        "Canada",
+        "United States",
+        "Germany",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://financialpost.com/news/economy/imf-sees-canadas-finances-strongest-in-g7"
+    },
+    {
+      "q": "Reversing a prior decision, Iran announced on April 18, 2026, that it would reimpose restrictions on which critical waterway, accusing the US of violating a deal to reopen it?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Bab el-Mandeb Strait",
+        "Gulf of Aden"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "World",
+      "source": "https://apnews.com/article/us-iran-war-israel-hormuz-18-april-2026-ab475cb979825b956a10d60103026b37"
+    },
+    {
+      "q": "An April 17, 2026 WIRED investigation detailed how which famously vengeful team owner uses an extensive surveillance operation at Madison Square Garden to track protesters, lawyers, and critics?",
+      "options": [
+        "James Dolan",
+        "Steve Ballmer",
+        "Mark Cuban",
+        "Joe Tsai"
+      ],
+      "a": 0,
+      "correctText": "James Dolan",
+      "category": "Technology",
+      "source": "https://www.wired.com/story/madison-square-garden-jim-dolan-surveillance-machine/"
+    },
+    {
+      "q": "On April 17, 2026, the FAA rescinded a 3,000-foot no-fly restriction that had previously threatened civil and criminal penalties for flying drones near the mobile assets of which government agency?",
+      "options": [
+        "ICE (Immigration and Customs Enforcement)",
+        "USPS (United States Postal Service)",
+        "ATF (Bureau of Alcohol, Tobacco, Firearms)",
+        "DEA (Drug Enforcement Administration)"
+      ],
+      "a": 0,
+      "correctText": "ICE (Immigration and Customs Enforcement)",
+      "category": "Technology",
+      "source": "https://www.404media.co/faa-scraps-civil-and-criminal-penalties-for-flying-drones-near-ice-vehicles/"
+    },
+    {
+      "q": "The Justice Department recently removed the lead prosecutor from an ongoing investigation into which prominent Trump critic and former CIA director?",
+      "options": [
+        "John Brennan",
+        "James Comey",
+        "Andrew McCabe",
+        "Michael Hayden"
+      ],
+      "a": 0,
+      "correctText": "John Brennan",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/04/17/politics/prosecutor-running-john-brennan-investigation-removed"
+    },
+    {
+      "q": "In April 2026, the Africa CDC reported an outbreak of a mysterious, unidentified illness that has killed at least 5 people in which landlocked country?",
+      "options": [
+        "Burundi",
+        "Democratic Republic of the Congo",
+        "Nigeria",
+        "Madagascar"
+      ],
+      "a": 0,
+      "correctText": "Burundi",
+      "category": "World",
+      "source": "https://www.cidrap.umn.edu/misc-emerging-topics/least-5-dead-burundi-mystery-illness-africa-cdc"
+    },
+    {
+      "q": "On April 18, 2026, a massive fire was triggered by a drone strike at an oil refinery located in which region of Russia?",
+      "options": [
+        "Samara Oblast",
+        "Moscow Oblast",
+        "Kamchatka Krai",
+        "Siberian Federal District"
+      ],
+      "a": 0,
+      "correctText": "Samara Oblast",
+      "category": "World",
+      "source": "https://www.pravda.com.ua/eng/news/2026/04/18/8030671/"
+    },
+    {
+      "q": "According to an April 18, 2026 report, Meta is planning to lay off approximately what percentage of its global workforce in May?",
+      "options": [
+        "10%",
+        "5%",
+        "15%",
+        "20%"
+      ],
+      "a": 0,
+      "correctText": "10%",
+      "category": "Technology",
+      "source": "https://www.nbcbayarea.com/news/local/meta-layoff-thousands-of-employees-in-may/4070910/"
+    },
+    {
+      "q": "An April 2026 update confirmed that Amazon's newest Fire Sticks will block users from sideloading outside apps, a change driven by the transition to which proprietary operating system?",
+      "options": [
+        "Vega OS",
+        "Luna OS",
+        "Aura OS",
+        "Orion OS"
+      ],
+      "a": 0,
+      "correctText": "Vega OS",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gadgets/2026/04/amazon-wont-release-fire-sticks-that-support-sideloading-anymore/"
+    }
+  ]
+}

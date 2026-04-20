@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to an investigation published in mid-April 2026, US tech firms successfully lobbied the EU to maintain secrecy regarding the environmental emissions of what facilities?",
+      "options": [
+        "Datacentres",
+        "Semiconductor foundries",
+        "Electric vehicle manufacturing plants",
+        "Satellite ground stations"
+      ],
+      "a": 0,
+      "correctText": "Datacentres",
+      "category": "World",
+      "source": "https://www.theguardian.com/technology/2026/apr/17/microsoft-us-tech-firms-lobbied-eu-secrecy-rules-datacentre-emissions"
+    },
+    {
+      "q": "Reversing a prior decision, Iran announced on April 18, 2026, that it would reimpose restrictions on which critical waterway, accusing the US of violating a deal to reopen it?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Bab el-Mandeb Strait",
+        "Gulf of Aden"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "World",
+      "source": "https://apnews.com/article/us-iran-war-israel-hormuz-18-april-2026-ab475cb979825b956a10d60103026b37"
+    },
+    {
+      "q": "On April 18, 2026, a massive fire was triggered by a drone strike at an oil refinery located in which region of Russia?",
+      "options": [
+        "Samara Oblast",
+        "Moscow Oblast",
+        "Kamchatka Krai",
+        "Siberian Federal District"
+      ],
+      "a": 0,
+      "correctText": "Samara Oblast",
+      "category": "World",
+      "source": "https://www.pravda.com.ua/eng/news/2026/04/18/8030671/"
+    },
+    {
+      "q": "In April 2026, the Africa CDC reported an outbreak of a mysterious, unidentified illness that has killed at least 5 people in which landlocked country?",
+      "options": [
+        "Burundi",
+        "Democratic Republic of the Congo",
+        "Nigeria",
+        "Madagascar"
+      ],
+      "a": 0,
+      "correctText": "Burundi",
+      "category": "World",
+      "source": "https://www.cidrap.umn.edu/misc-emerging-topics/least-5-dead-burundi-mystery-illness-africa-cdc"
+    },
+    {
+      "q": "In mid-April 2026, the International Monetary Fund (IMF) reported that which nation currently holds the strongest fiscal position among the G7 countries?",
+      "options": [
+        "Canada",
+        "United States",
+        "Germany",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://financialpost.com/news/economy/imf-sees-canadas-finances-strongest-in-g7"
+    }
+  ]
+}

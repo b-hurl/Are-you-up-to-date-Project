@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In April 2026, a gas station clerk in which U.S. state saved a teenager from an alleged kidnapper after she mouthed the word 'help'?",
+      "options": [
+        "Michigan",
+        "Ohio",
+        "Florida",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "Michigan",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/apr/19/michigan-gas-station-clerk-saves-teen"
+    },
+    {
+      "q": "Protesters attempting to storm a beagle breeding and research facility were met with rubber bullets and pepper spray in which U.S. state?",
+      "options": [
+        "Wisconsin",
+        "California",
+        "New York",
+        "Virginia"
+      ],
+      "a": 0,
+      "correctText": "Wisconsin",
+      "category": "Usa",
+      "source": "https://apnews.com/article/animal-rights-beagles-protest-tear-gas-wisconsin-e65e2b473a19f7eda559394340403cba"
+    },
+    {
+      "q": "Two U.S. Army soldiers were seriously injured during a training mission when they were attacked by a bear in what state?",
+      "options": [
+        "Alaska",
+        "Montana",
+        "Wyoming",
+        "Washington"
+      ],
+      "a": 0,
+      "correctText": "Alaska",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/2-soldiers-alaska-injured-bear-attack-training-mission/story?id=132174677"
+    },
+    {
+      "q": "A Los Angeles judge ruled in April 2026 that actor Alec Baldwin must face a civil trial over alleged negligence regarding what incident?",
+      "options": [
+        "The 'Rust' movie set shooting",
+        "A fatal car crash in Malibu",
+        "An assault on a paparazzi photographer",
+        "A boating collision in New York"
+      ],
+      "a": 0,
+      "correctText": "The 'Rust' movie set shooting",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/alec-baldwin-rust-shooting-civil-trial-can-proceed-judge-rules-rcna332390"
+    },
+    {
+      "q": "In mid-April 2026, a severe weather system bringing powerful winds and reported tornadoes caused heavy damage but no deaths in which U.S. region?",
+      "options": [
+        "The Midwest",
+        "The Pacific Northwest",
+        "New England",
+        "The Gulf Coast"
+      ],
+      "a": 0,
+      "correctText": "The Midwest",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/weather/tornadoes/powerful-winds-tornadoes-rip-midwest-rcna340796"
+    }
+  ]
+}

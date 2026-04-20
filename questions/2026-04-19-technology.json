@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What provoked Nvidia CEO Jensen Huang to nearly lose his composure during a recent podcast interview?",
+      "options": [
+        "Being pressed on whether the U.S. should sell AI chips to China",
+        "A question regarding his signature leather jacket",
+        "Claims that Nvidia's new GPUs are overheating",
+        "Being asked about his retirement plans"
+      ],
+      "a": 0,
+      "correctText": "Being pressed on whether the U.S. should sell AI chips to China",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/nvidia-ceo-jensen-huang-nearly-lost-his-composure-when-pressed-on-selling-chips-to-china-youre-not-talking-to-someone-who-woke-up-a-loser"
+    },
+    {
+      "q": "How was the location of the Dutch frigate HNLMS Evertsen inadvertently exposed for 24 hours?",
+      "options": [
+        "A Bluetooth tracker hidden inside a postcard",
+        "A sailor's public fitness tracker data",
+        "A stealth drone tailing the ship from port",
+        "Unsecured Wi-Fi networks onboard"
+      ],
+      "a": 0,
+      "correctText": "A Bluetooth tracker hidden inside a postcard",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/cyber-security/bluetooth-tracker-hidden-in-a-postcard-and-mailed-to-a-warship-exposed-its-location-a-eur5-gadget-put-a-eur500-million-dutch-ship-at-risk-for-24-hours"
+    },
+    {
+      "q": "During the 2026 Beijing half-marathon, what unique group of competitors raced alongside human runners?",
+      "options": [
+        "Dozens of humanoid robots",
+        "Genetically modified racing dogs",
+        "Autonomous self-driving scooters",
+        "Drone-assisted inline skaters"
+      ],
+      "a": 0,
+      "correctText": "Dozens of humanoid robots",
+      "category": "Technology",
+      "source": "https://www.theguardian.com/sport/2026/apr/19/humanoid-robots-race-beijing-half-marathon"
+    },
+    {
+      "q": "The experimental drug elraglusib recently made headlines for doubling the one-year survival rate of patients with which condition?",
+      "options": [
+        "Advanced pancreatic cancer",
+        "Early-stage Alzheimer's disease",
+        "Severe cystic fibrosis",
+        "Treatment-resistant leukemia"
+      ],
+      "a": 0,
+      "correctText": "Advanced pancreatic cancer",
+      "category": "Technology",
+      "source": "https://www.livescience.com/health/medicine-drugs/experimental-drug-doubles-one-year-survival-in-pancreatic-cancer"
+    },
+    {
+      "q": "Why did the US International Trade Commission recently decide not to reinstate an import ban on Apple Watches?",
+      "options": [
+        "Apple's reworked blood-oxygen monitoring technology did not infringe on Masimo's patents",
+        "Apple paid a multi-billion dollar settlement to the US government",
+        "The watches were reclassified as essential medical devices",
+        "Apple moved all of its smartwatch manufacturing back to the United States"
+      ],
+      "a": 0,
+      "correctText": "Apple's reworked blood-oxygen monitoring technology did not infringe on Masimo's patents",
+      "category": "Technology",
+      "source": "https://www.engadget.com/wearables/apple-avoids-a-second-import-ban-for-its-redesigned-smartwatches-in-latest-court-ruling-175600668.html"
+    }
+  ]
+}

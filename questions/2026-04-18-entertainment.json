@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 17, 2026, it was announced that Marielle Heller would be directing a live-action remake of which 1992 animated film for Amazon MGM?",
+      "options": [
+        "FernGully: The Last Rainforest",
+        "Once Upon a Forest",
+        "The Secret of NIMH",
+        "Thumbelina"
+      ],
+      "a": 0,
+      "correctText": "FernGully: The Last Rainforest",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/ferngully-live-action-film-amazon-mgm-marielle-heller-directs-1236864500/"
+    },
+    {
+      "q": "Which actor, known for his work on 'Stranger Things', was cast on April 17, 2026 to play Major Trautman in the upcoming prequel 'John Rambo'?",
+      "options": [
+        "David Harbour",
+        "Pedro Pascal",
+        "Karl Urban",
+        "Jon Bernthal"
+      ],
+      "a": 0,
+      "correctText": "David Harbour",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/david-harbour-joins-noah-centineo-john-rambo-1236567891/"
+    },
+    {
+      "q": "Which 2026 sci-fi film had its exclusive theatrical window extended on April 17, delaying its streaming release so it could return to IMAX theaters?",
+      "options": [
+        "Project Hail Mary",
+        "The Fall Guy",
+        "Mickey 17",
+        "Spaceman"
+      ],
+      "a": 0,
+      "correctText": "Project Hail Mary",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/project-hail-mary-streaming-movie-theater-run-extended-1236724483/"
+    },
+    {
+      "q": "In a social media post involving a tiny director's chair on April 17, 2026, Kathryn Newton confirmed she is returning as Cassie Lang for which upcoming superhero film?",
+      "options": [
+        "Avengers: Doomsday",
+        "Young Avengers",
+        "Ant-Man 4",
+        "Captain America: Brave New World"
+      ],
+      "a": 0,
+      "correctText": "Avengers: Doomsday",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/kathryn-newton-avengers-doomsday-cast-cassie-lang-1236724545/"
+    },
+    {
+      "q": "Four-time César-winning actress Nathalie Baye, who played Leonardo DiCaprio's mother in 'Catch Me If You Can', passed away on April 17, 2026. What country was she from?",
+      "options": [
+        "France",
+        "Italy",
+        "Belgium",
+        "Switzerland"
+      ],
+      "a": 0,
+      "correctText": "France",
+      "category": "Entertainment",
+      "source": "https://www.franceinfo.fr/culture/cinema/nathalie-baye-etoile-discrete-du-cinema-francais-est-morte-a-l-age-de-77-ans_7326363.html"
+    }
+  ]
+}
