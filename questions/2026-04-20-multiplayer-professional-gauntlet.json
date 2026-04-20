@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-20",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In a direct address to the nation, Prime Minister Mark Carney declared that Canada's close economic ties with which country have now become a \"weakness\" that must be corrected?",
+      "options": [
+        "United States",
+        "China",
+        "United Kingdom",
+        "Russia"
+      ],
+      "a": 0,
+      "correctText": "United States",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/exclusive-pm-carney-declares-us-ties-now-a-weakness-in-address-to-canadians/"
+    },
+    {
+      "q": "After being declared 'technically ready' by the European Commission in April 2026, an official age-verification app was bypassed by hackers in under two minutes—despite the developers already flagging the code as unfit for real-world use on which code-hosting platform?",
+      "options": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "SourceForge"
+      ],
+      "a": 0,
+      "correctText": "GitHub",
+      "category": "Technology",
+      "source": "https://www.sofx.com/eu-declared-age-app-ready-while-github-flagged-it-unfit-then-hackers-bypassed-it-in-2-minutes/"
+    },
+    {
+      "q": "Which Canadian astronaut was praised for speaking French during the Artemis II mission, helping heal tensions following a recent national language row?",
+      "options": [
+        "Jeremy Hansen",
+        "Chris Hadfield",
+        "David Saint-Jacques",
+        "Jenni Gibbons"
+      ],
+      "a": 0,
+      "correctText": "Jeremy Hansen",
+      "category": "Canada",
+      "source": "https://www.theguardian.com/world/2026/apr/19/artemis-astronaut-jeremy-hansen-french-canada"
+    },
+    {
+      "q": "A recent study of 16,000 patients revealed a 100% increase in drug poisoning hospitalization risk when gabapentinoids are taken alongside what other class of medications?",
+      "options": [
+        "Benzodiazepines",
+        "SSRIs",
+        "Beta-blockers",
+        "Statins"
+      ],
+      "a": 0,
+      "correctText": "Benzodiazepines",
+      "category": "Science",
+      "source": "https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1005035"
+    },
+    {
+      "q": "Fueled by a major surge in the entry-level 3D printing market, which company officially overtook Creality to become the world's top-selling budget 3D printer brand in 2026?",
+      "options": [
+        "Elegoo",
+        "Prusa Research",
+        "Anycubic",
+        "Bambu Lab"
+      ],
+      "a": 3,
+      "correctText": "Bambu Lab",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/3d-printing/bambu-lab-overtakes-creality-as-the-worlds-top-selling-budget-3d-printer-brand"
+    },
+    {
+      "q": "According to statements from President Donald Trump on April 19, 2026, the U.S. Navy struck and seized an Iranian-flagged cargo ship in the Gulf of Oman. What was the name of the vessel?",
+      "options": [
+        "TOUSKA",
+        "SAHAND",
+        "MAKRAN",
+        "KHARG"
+      ],
+      "a": 0,
+      "correctText": "TOUSKA",
+      "category": "World",
+      "source": "https://www.cnbc.com/2026/04/19/trump-navy-iran-ship-gulf-of-oman.html"
+    },
+    {
+      "q": "During its third launch in April 2026, Blue Origin's New Glenn rocket unfortunately placed which company's \"BlueBird 7\" cellular broadband satellite into an unusable, lower-than-planned orbit?",
+      "options": [
+        "SpaceX",
+        "Viasat",
+        "AST SpaceMobile",
+        "Planet Labs"
+      ],
+      "a": 2,
+      "correctText": "AST SpaceMobile",
+      "category": "Technology",
+      "source": "https://techcrunch.com/2026/04/19/blue-origins-new-glenn-put-a-customer-satellite-in-the-wrong-orbit-during-its-third-launch/"
+    },
+    {
+      "q": "An analysis of 6.14 million health records found an increased risk of autism in children whose mothers were prescribed medications that inhibit the synthesis of what substance during pregnancy?",
+      "options": [
+        "Cholesterol",
+        "Serotonin",
+        "Dopamine",
+        "Folic acid"
+      ],
+      "a": 0,
+      "correctText": "Cholesterol",
+      "category": "Science",
+      "source": "https://www.unmc.edu/newsroom/2026/04/20/study-suggests-link-between-prenatal-exposure-to-certain-medications-and-increased-autism-risk-2/"
+    },
+    {
+      "q": "Parents in which province recently sounded the alarm that high rates of bullying are forcing them to keep their children out of school, leading to severe absenteeism?",
+      "options": [
+        "Prince Edward Island",
+        "Nova Scotia",
+        "Manitoba",
+        "Saskatchewan"
+      ],
+      "a": 0,
+      "correctText": "Prince Edward Island",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/pei-parents-say-bullying-is-keeping-children-out-of-school-as-absenteeism-remains-high/"
+    },
+    {
+      "q": "On April 19, 2026, U.S. Customs and Border Protection launched the 'CAPE' portal to begin processing what specific transactions for American businesses?",
+      "options": [
+        "Immigration visa fees",
+        "Corporate tax credits",
+        "Export subsidies",
+        "Tariff refunds"
+      ],
+      "a": 3,
+      "correctText": "Tariff refunds",
+      "category": "Technology",
+      "source": "https://www.npr.org/2026/04/19/nx-s1-5786635/tariff-refunds-customs-ace-portal"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "During its third launch in April 2026, Blue Origin's New Glenn rocket unfortunately placed which company's \"BlueBird 7\" cellular broadband satellite into an unusable, lower-than-planned orbit?",
+      "options": [
+        "SpaceX",
+        "Viasat",
+        "AST SpaceMobile",
+        "Planet Labs"
+      ],
+      "a": 2,
+      "correctText": "AST SpaceMobile",
+      "category": "Technology",
+      "source": "https://techcrunch.com/2026/04/19/blue-origins-new-glenn-put-a-customer-satellite-in-the-wrong-orbit-during-its-third-launch/"
+    },
+    {
+      "q": "In April 2026, which country's defense ministry announced it had sent machines into the battlefield, expanding frontline logistics with a plan to deploy 25,000 ground robots by mid-2026 to replace human soldiers?",
+      "options": [
+        "Russia",
+        "Ukraine",
+        "Israel",
+        "Taiwan"
+      ],
+      "a": 1,
+      "correctText": "Ukraine",
+      "category": "Technology",
+      "source": "https://edition.cnn.com/2026/04/20/europe/robots-ukraine-battlefield-drones-intl-cmd"
+    },
+    {
+      "q": "On April 19, 2026, U.S. Customs and Border Protection launched the 'CAPE' portal to begin processing what specific transactions for American businesses?",
+      "options": [
+        "Immigration visa fees",
+        "Corporate tax credits",
+        "Export subsidies",
+        "Tariff refunds"
+      ],
+      "a": 3,
+      "correctText": "Tariff refunds",
+      "category": "Technology",
+      "source": "https://www.npr.org/2026/04/19/nx-s1-5786635/tariff-refunds-customs-ace-portal"
+    },
+    {
+      "q": "Fueled by a major surge in the entry-level 3D printing market, which company officially overtook Creality to become the world's top-selling budget 3D printer brand in 2026?",
+      "options": [
+        "Elegoo",
+        "Prusa Research",
+        "Anycubic",
+        "Bambu Lab"
+      ],
+      "a": 3,
+      "correctText": "Bambu Lab",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/3d-printing/bambu-lab-overtakes-creality-as-the-worlds-top-selling-budget-3d-printer-brand"
+    },
+    {
+      "q": "After being declared 'technically ready' by the European Commission in April 2026, an official age-verification app was bypassed by hackers in under two minutes—despite the developers already flagging the code as unfit for real-world use on which code-hosting platform?",
+      "options": [
+        "GitHub",
+        "GitLab",
+        "Bitbucket",
+        "SourceForge"
+      ],
+      "a": 0,
+      "correctText": "GitHub",
+      "category": "Technology",
+      "source": "https://www.sofx.com/eu-declared-age-app-ready-while-github-flagged-it-unfit-then-hackers-bypassed-it-in-2-minutes/"
+    }
+  ]
+}

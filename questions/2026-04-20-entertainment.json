@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Actor Patrick Muldoon sadly passed away at age 57 on April 19, 2026. Aside from his prominent roles on 'Days of Our Lives' and 'Melrose Place', he is well known for playing Zander Barcalow in which 1997 sci-fi action film?",
+      "options": [
+        "Starship Troopers",
+        "The Fifth Element",
+        "Total Recall",
+        "Independence Day"
+      ],
+      "a": 0,
+      "correctText": "Starship Troopers",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/patrick-muldoon-dead-days-of-our-lives-melrose-place-1236865474/"
+    },
+    {
+      "q": "In April 2026, Johnny Knoxville announced that filming has officially wrapped on the upcoming fifth and final main installment of his stunt reality franchise. What is the official title of the movie?",
+      "options": [
+        "Jackass: Best and Last",
+        "Jackass 5",
+        "Jackass Forever and Ever",
+        "Jackass: The Final Stunt"
+      ],
+      "a": 0,
+      "correctText": "Jackass: Best and Last",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/johnny-knoxville-monstrous-explosion-simi-valley-jackass-1236865419/"
+    },
+    {
+      "q": "A24 announced the full cast for Alex Garland's live-action 'Elden Ring' movie on April 20, 2026. Which 'Parks and Recreation' and 'The Last of Us' star was officially confirmed to be joining the project?",
+      "options": [
+        "Nick Offerman",
+        "Chris Pratt",
+        "Adam Scott",
+        "Aziz Ansari"
+      ],
+      "a": 0,
+      "correctText": "Nick Offerman",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/elden-ring-movie-cast-1236569064/"
+    },
+    {
+      "q": "Director James Gunn recently added actor Andre Royo to the cast of the Superman sequel 'Man of Tomorrow'. Royo is best known for playing Reginald 'Bubbles' Cousins on which critically acclaimed HBO series?",
+      "options": [
+        "The Wire",
+        "The Sopranos",
+        "Boardwalk Empire",
+        "True Detective"
+      ],
+      "a": 0,
+      "correctText": "The Wire",
+      "category": "Entertainment",
+      "source": "https://www.ign.com/articles/the-wire-actor-andre-royo-joins-superman-sequel-man-of-tomorrow-cast"
+    },
+    {
+      "q": "Director Chandler Levack notably released her indie film 'Mile End Kicks' on the exact same day as her Netflix comedy 'Roommates', which she made in collaboration with which famous comedian's production company?",
+      "options": [
+        "Adam Sandler",
+        "Ben Stiller",
+        "Will Ferrell",
+        "Kevin Hart"
+      ],
+      "a": 0,
+      "correctText": "Adam Sandler",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/mile-end-kicks-roommates-director-adam-sandler-1236723950/"
+    }
+  ]
+}

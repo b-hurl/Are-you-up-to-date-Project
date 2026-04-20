@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which car rental company recently dropped an almost $10,000 claim against a B.C. couple over alleged diesel damage after evidence showed they pumped regular gasoline?",
+      "options": [
+        "Enterprise",
+        "Hertz",
+        "Avis",
+        "Budget"
+      ],
+      "a": 0,
+      "correctText": "Enterprise",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/gopublic/enterprise-damage-claim-go-public-9.7167152"
+    },
+    {
+      "q": "Which Canadian astronaut was praised for speaking French during the Artemis II mission, helping heal tensions following a recent national language row?",
+      "options": [
+        "Jeremy Hansen",
+        "Chris Hadfield",
+        "David Saint-Jacques",
+        "Jenni Gibbons"
+      ],
+      "a": 0,
+      "correctText": "Jeremy Hansen",
+      "category": "Canada",
+      "source": "https://www.theguardian.com/world/2026/apr/19/artemis-astronaut-jeremy-hansen-french-canada"
+    },
+    {
+      "q": "Which former federal environment minister recently blasted the heads of Canadian oil companies, accusing them of \"taking us for fools\" over rising emissions?",
+      "options": [
+        "Catherine McKenna",
+        "Steven Guilbeault",
+        "Jonathan Wilkinson",
+        "John Baird"
+      ],
+      "a": 0,
+      "correctText": "Catherine McKenna",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/former-minister-catherine-mckenna-blasts-the-heads-of-canadian-oil-companies/"
+    },
+    {
+      "q": "In a direct address to the nation, Prime Minister Mark Carney declared that Canada's close economic ties with which country have now become a \"weakness\" that must be corrected?",
+      "options": [
+        "United States",
+        "China",
+        "United Kingdom",
+        "Russia"
+      ],
+      "a": 0,
+      "correctText": "United States",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/exclusive-pm-carney-declares-us-ties-now-a-weakness-in-address-to-canadians/"
+    },
+    {
+      "q": "Parents in which province recently sounded the alarm that high rates of bullying are forcing them to keep their children out of school, leading to severe absenteeism?",
+      "options": [
+        "Prince Edward Island",
+        "Nova Scotia",
+        "Manitoba",
+        "Saskatchewan"
+      ],
+      "a": 0,
+      "correctText": "Prince Edward Island",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/pei-parents-say-bullying-is-keeping-children-out-of-school-as-absenteeism-remains-high/"
+    }
+  ]
+}
