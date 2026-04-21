@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 20, 2026, regulatory filings revealed that General Motors lured their new product chief with a pay package totaling up to $40 million. What is his name? [1.6]",
+      "options": [
+        "Sterling Anderson",
+        "Johny Srouji",
+        "Brad Jacobs",
+        "John Ternus"
+      ],
+      "a": 0,
+      "correctText": "Sterling Anderson",
+      "category": "Business",
+      "source": "https://www.reuters.com/legal/transactional/gm-lured-new-product-chief-with-pay-package-totaling-40-million-2026-04-20/"
+    },
+    {
+      "q": "On April 20, 2026, Apple announced who will succeed Tim Cook as the company's next CEO starting September 1?",
+      "options": [
+        "John Ternus",
+        "Craig Federighi",
+        "Johny Srouji",
+        "Greg Joswiak"
+      ],
+      "a": 0,
+      "correctText": "John Ternus",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/20/apple-names-john-ternus-ceo-replacing-tim-cook-who-becomes-chairman.html"
+    },
+    {
+      "q": "In a major leadership transition announced on April 20, 2026, what new role will Apple's Tim Cook assume after stepping down as CEO?",
+      "options": [
+        "Executive Chairman",
+        "Lead Independent Director",
+        "Chief Innovation Officer",
+        "Head of Hardware Technologies"
+      ],
+      "a": 0,
+      "correctText": "Executive Chairman",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/20/apple-names-john-ternus-ceo-replacing-tim-cook-who-becomes-chairman.html"
+    },
+    {
+      "q": "On April 20, 2026, Eli Lilly agreed to acquire which cancer drug maker in a deal worth up to $7 billion?",
+      "options": [
+        "Kelonia Therapeutics",
+        "Seagen",
+        "ImmunoGen",
+        "Mirati Therapeutics"
+      ],
+      "a": 0,
+      "correctText": "Kelonia Therapeutics",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/20/eli-lilly-to-acquire-cancer-drug-maker-kelonia.html"
+    },
+    {
+      "q": "Releasing its first-quarter 2026 results on April 21, 2026, UnitedHealth Group raised its full-year earnings outlook to greater than what amount per share?",
+      "options": [
+        "$17.35",
+        "$15.00",
+        "$19.50",
+        "$21.10"
+      ],
+      "a": 0,
+      "correctText": "$17.35",
+      "category": "Business",
+      "source": "https://www.unitedhealthgroup.com/newsroom/2026/2026-04-21-uhg-reports-first-quarter-results.html"
+    }
+  ]
+}

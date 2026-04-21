@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-21",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Amid Disney layoffs confirmed on April 20, 2026, Andy Park announced his exit after 16 years as the Director of Visual Development for which studio?",
+      "options": [
+        "Marvel Studios",
+        "Pixar Animation Studios",
+        "Lucasfilm",
+        "Walt Disney Animation"
+      ],
+      "a": 0,
+      "correctText": "Marvel Studios",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/marvels-director-visual-development-andy-park-layoffs-1236726446/"
+    },
+    {
+      "q": "On April 21, 2026, which Japanese animation studio announced the establishment of a new in-house games publishing brand focusing on new IPs?",
+      "options": [
+        "Toei Company",
+        "Studio Ghibli",
+        "Kyoto Animation",
+        "MAPPA"
+      ],
+      "a": 0,
+      "correctText": "Toei Company",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/toei-company-establishes-toei-games"
+    },
+    {
+      "q": "Searchlight Pictures released the official trailer on April 20, 2026, for the third installment of which cult comedy franchise from the Broken Lizard comedy troupe?",
+      "options": [
+        "Super Troopers",
+        "Beerfest",
+        "Club Dread",
+        "Police Academy"
+      ],
+      "a": 0,
+      "correctText": "Super Troopers",
+      "category": "Entertainment",
+      "source": "https://www.heyuguys.com/super-troopers-3-trailer/"
+    },
+    {
+      "q": "The April 2026 'Infinite Darkness' expansion pack for 'SUPER ROBOT WARS Y' adds playable units from multiple mecha anime, including which iconic series?",
+      "options": [
+        "Space Runaway Ideon",
+        "Neon Genesis Evangelion",
+        "Tengen Toppa Gurren Lagann",
+        "Mobile Suit Gundam Wing"
+      ],
+      "a": 0,
+      "correctText": "Space Runaway Ideon",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/super-robot-wars-y-dlc-expansion-pack-infinite-darkness-launches-april-22"
+    },
+    {
+      "q": "On April 20, 2026, pharmaceutical giant Eli Lilly agreed to a deal worth up to $7 billion to acquire which clinical-stage biotechnology company focused on in vivo CAR-T therapy?",
+      "options": [
+        "Kelonia Therapeutics",
+        "Seagen",
+        "Moderna",
+        "BioNTech"
+      ],
+      "a": 0,
+      "correctText": "Kelonia Therapeutics",
+      "category": "Health",
+      "source": "https://www.cnbc.com/2026/04/20/eli-lilly-to-acquire-cancer-drug-maker-kelonia.html"
+    },
+    {
+      "q": "On April 21, 2026, which video streaming platform announced it was opening up an AI deepfake detection tool to all of Hollywood to flag potentially infringing content?",
+      "options": [
+        "YouTube",
+        "Vimeo",
+        "TikTok",
+        "Netflix"
+      ],
+      "a": 0,
+      "correctText": "YouTube",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/digital/youtube-ai-deepfake-detection-tool-1236569593/"
+    },
+    {
+      "q": "In April 2026, which defending two-time French Open tennis champion put his tournament participation in doubt due to a right wrist injury?",
+      "options": [
+        "Carlos Alcaraz",
+        "Novak Djokovic",
+        "Rafael Nadal",
+        "Jannik Sinner"
+      ],
+      "a": 0,
+      "correctText": "Carlos Alcaraz",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48543717/carlos-alcaraz-waits-wrist-tests-french-open-awaits"
+    },
+    {
+      "q": "A study highlighted on April 20, 2026, found that popular AI chatbots are giving users potentially dangerous medical advice, frequently offering non-scientific alternatives to what common cancer treatment?",
+      "options": [
+        "Chemotherapy",
+        "Radiation therapy",
+        "Immunotherapy",
+        "Bone marrow transplants"
+      ],
+      "a": 0,
+      "correctText": "Chemotherapy",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/chatbots-offer-problematic-cancer-vaccines-5g-advice-study-rcna332068"
+    },
+    {
+      "q": "According to April 20, 2026 news reports, President Trump is pushing to fast-track research into which psychedelic drug for mental health treatments?",
+      "options": [
+        "Ibogaine",
+        "Psilocybin",
+        "LSD",
+        "MDMA"
+      ],
+      "a": 0,
+      "correctText": "Ibogaine",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/trump-ibogaine-psychedelic-psilocybin-research-brain-rcna340970"
+    },
+    {
+      "q": "Which Los Angeles Dodgers closer was placed on the injured list and slated for elbow surgery in April 2026?",
+      "options": [
+        "Edwin Diaz",
+        "Evan Phillips",
+        "Brusdar Graterol",
+        "Craig Kimbrel"
+      ],
+      "a": 0,
+      "correctText": "Edwin Diaz",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48544759/los-angeles-dodgers-put-closer-edwin-diaz-injured-list"
+    }
+  ]
+}

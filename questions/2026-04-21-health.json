@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to April 20, 2026 news reports, President Trump is pushing to fast-track research into which psychedelic drug for mental health treatments?",
+      "options": [
+        "Ibogaine",
+        "Psilocybin",
+        "LSD",
+        "MDMA"
+      ],
+      "a": 0,
+      "correctText": "Ibogaine",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/trump-ibogaine-psychedelic-psilocybin-research-brain-rcna340970"
+    },
+    {
+      "q": "On April 20, 2026, scientists revealed a new plant-based serum derived from Centella asiatica that is proven in clinical tests to significantly boost hair density and regrow hair in how many weeks?",
+      "options": [
+        "8 weeks",
+        "2 weeks",
+        "24 weeks",
+        "12 weeks"
+      ],
+      "a": 0,
+      "correctText": "8 weeks",
+      "category": "Health",
+      "source": "https://www.earth.com/news/scientists-invent-plant-based-serum-shown-in-lab-tests-to-regrow-hair-in-weeks/"
+    },
+    {
+      "q": "In late April 2026, experts noted that San Francisco is experiencing high levels of multiple viruses, including a gastrointestinal illness whose rise is partly blamed on recent changes to HHS vaccination recommendations. Which virus is it?",
+      "options": [
+        "Rotavirus",
+        "Measles",
+        "Polio",
+        "Hepatitis B"
+      ],
+      "a": 0,
+      "correctText": "Rotavirus",
+      "category": "Health",
+      "source": "https://www.sfgate.com/bayarea/article/multiple-viruses-san-francisco-22216292.php"
+    },
+    {
+      "q": "A study highlighted on April 20, 2026, found that popular AI chatbots are giving users potentially dangerous medical advice, frequently offering non-scientific alternatives to what common cancer treatment?",
+      "options": [
+        "Chemotherapy",
+        "Radiation therapy",
+        "Immunotherapy",
+        "Bone marrow transplants"
+      ],
+      "a": 0,
+      "correctText": "Chemotherapy",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/chatbots-offer-problematic-cancer-vaccines-5g-advice-study-rcna332068"
+    },
+    {
+      "q": "On April 20, 2026, pharmaceutical giant Eli Lilly agreed to a deal worth up to $7 billion to acquire which clinical-stage biotechnology company focused on in vivo CAR-T therapy?",
+      "options": [
+        "Kelonia Therapeutics",
+        "Seagen",
+        "Moderna",
+        "BioNTech"
+      ],
+      "a": 0,
+      "correctText": "Kelonia Therapeutics",
+      "category": "Health",
+      "source": "https://www.cnbc.com/2026/04/20/eli-lilly-to-acquire-cancer-drug-maker-kelonia.html"
+    }
+  ]
+}

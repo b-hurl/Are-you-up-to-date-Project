@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-21",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to a campaign launched on April 21, 2026, proposed new library charges will heavily penalize book lovers in which English county?",
+      "options": [
+        "Essex",
+        "Cornwall",
+        "Yorkshire",
+        "Kent"
+      ],
+      "a": 0,
+      "correctText": "Essex",
+      "category": "Books",
+      "source": "https://www.bbc.com/news/articles/cvg0991xegyo"
+    },
+    {
+      "q": "Who defeated world No. 1 Scottie Scheffler on the first playoff hole to win the 2026 RBC Heritage at Harbour Town?",
+      "options": [
+        "Matt Fitzpatrick",
+        "Rory McIlroy",
+        "Xander Schauffele",
+        "Collin Morikawa"
+      ],
+      "a": 0,
+      "correctText": "Matt Fitzpatrick",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/golf/articles/c208jrj07r7o"
+    },
+    {
+      "q": "Which sci-fi action-adventure game by Capcom surpassed one million units sold worldwide just two days after its April 2026 launch?",
+      "options": [
+        "PRAGMATA",
+        "Exoprimal 2",
+        "Deep Down",
+        "Remember Me 2"
+      ],
+      "a": 0,
+      "correctText": "PRAGMATA",
+      "category": "Gaming",
+      "source": "https://www.capcom.co.jp/ir/english/news/html/e260420.html"
+    },
+    {
+      "q": "On April 20, 2026, scientists revealed a new plant-based serum derived from Centella asiatica that is proven in clinical tests to significantly boost hair density and regrow hair in how many weeks?",
+      "options": [
+        "8 weeks",
+        "2 weeks",
+        "24 weeks",
+        "12 weeks"
+      ],
+      "a": 0,
+      "correctText": "8 weeks",
+      "category": "Health",
+      "source": "https://www.earth.com/news/scientists-invent-plant-based-serum-shown-in-lab-tests-to-regrow-hair-in-weeks/"
+    },
+    {
+      "q": "An exiled Uyghur scholar's international book tour ended abruptly in April 2026 after he was detained at an airport in which country, allegedly on orders from Beijing?",
+      "options": [
+        "Malaysia",
+        "Indonesia",
+        "Thailand",
+        "Singapore"
+      ],
+      "a": 0,
+      "correctText": "Malaysia",
+      "category": "Books",
+      "source": "https://ground.news/article/uyghur-scholars-book-tour-ends-with-malaysian-airport-detention-he-says-beijing-ordered"
+    },
+    {
+      "q": "In April 2026, a collection of 17 rare books stolen decades ago from a Long Island estate resurfaced in Manhattan. The collection prominently included letters written by which poet?",
+      "options": [
+        "John Keats",
+        "Walt Whitman",
+        "Edgar Allan Poe",
+        "Lord Byron"
+      ],
+      "a": 0,
+      "correctText": "John Keats",
+      "category": "Books",
+      "source": "https://gothamist.com/news/plot-twist-rare-books-worth-3-million-stolen-decades-ago-resurface-in-manhattan"
+    },
+    {
+      "q": "Which former Georgia Bulldogs wide receiver and top 2026 NFL Draft prospect was arrested on misdemeanor charges just days before the draft?",
+      "options": [
+        "Zachariah Branch",
+        "Luther Burden III",
+        "Tetairoa McMillan",
+        "Emeka Egbuka"
+      ],
+      "a": 0,
+      "correctText": "Zachariah Branch",
+      "category": "Sports",
+      "source": "https://www.espn.com/nfl/story/_/id/48532665/nfl-draft-prospect-zachariah-branch-arrested-georgia"
+    },
+    {
+      "q": "On April 20, 2026, the American Library Association announced that book bans had reached record highs. Which 2006 novel about sex trafficking in India topped their list of most challenged books?",
+      "options": [
+        "Sold",
+        "Gender Queer",
+        "The Perks of Being a Wallflower",
+        "A Clockwork Orange"
+      ],
+      "a": 0,
+      "correctText": "Sold",
+      "category": "Books",
+      "source": "https://apnews.com/article/bans-challenged-books-american-library-association-5403280786cf95111d4c9eb4b587c4be"
+    },
+    {
+      "q": "Nintendo announced that the single-player spin-off game 'Splatoon Raiders' will launch for the Switch 2 in July 2026, featuring which in-game band?",
+      "options": [
+        "Deep Cut",
+        "Squid Sisters",
+        "Off the Hook",
+        "Chirpy Chips"
+      ],
+      "a": 0,
+      "correctText": "Deep Cut",
+      "category": "Gaming",
+      "source": "https://www.videogameschronicle.com/news/single-player-spin-off-splatoon-raiders-comes-to-nintendo-switch-2-this-summer/"
+    },
+    {
+      "q": "Published on April 21, 2026, the highly anticipated novel 'Last Night in Brooklyn', which follows a 26-year-old moving back to Fort Greene, was written by which author?",
+      "options": [
+        "Xochitl Gonzalez",
+        "Zadie Smith",
+        "Rainbow Rowell",
+        "Colson Whitehead"
+      ],
+      "a": 0,
+      "correctText": "Xochitl Gonzalez",
+      "category": "Books",
+      "source": "https://lithub.com/lit-hub-daily-april-21-2026/"
+    }
+  ]
+}

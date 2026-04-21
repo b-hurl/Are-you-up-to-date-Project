@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 21, 2026, which Japanese animation studio announced the establishment of a new in-house games publishing brand focusing on new IPs?",
+      "options": [
+        "Toei Company",
+        "Studio Ghibli",
+        "Kyoto Animation",
+        "MAPPA"
+      ],
+      "a": 0,
+      "correctText": "Toei Company",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/toei-company-establishes-toei-games"
+    },
+    {
+      "q": "Which sci-fi action-adventure game by Capcom surpassed one million units sold worldwide just two days after its April 2026 launch?",
+      "options": [
+        "PRAGMATA",
+        "Exoprimal 2",
+        "Deep Down",
+        "Remember Me 2"
+      ],
+      "a": 0,
+      "correctText": "PRAGMATA",
+      "category": "Gaming",
+      "source": "https://www.capcom.co.jp/ir/english/news/html/e260420.html"
+    },
+    {
+      "q": "Nintendo announced that the single-player spin-off game 'Splatoon Raiders' will launch for the Switch 2 in July 2026, featuring which in-game band?",
+      "options": [
+        "Deep Cut",
+        "Squid Sisters",
+        "Off the Hook",
+        "Chirpy Chips"
+      ],
+      "a": 0,
+      "correctText": "Deep Cut",
+      "category": "Gaming",
+      "source": "https://www.videogameschronicle.com/news/single-player-spin-off-splatoon-raiders-comes-to-nintendo-switch-2-this-summer/"
+    },
+    {
+      "q": "In April 2026, union workers took legal action against the studio Build A Rocket Boy over allegations that management installed what type of software on their devices?",
+      "options": [
+        "Employee surveillance software",
+        "Cryptocurrency miners",
+        "Ransomware",
+        "Generative AI art tools"
+      ],
+      "a": 0,
+      "correctText": "Employee surveillance software",
+      "category": "Gaming",
+      "source": "https://www.gamedeveloper.com/business/union-workers-take-legal-action-against-build-a-rocket-boy-over-alleged-privacy-violations"
+    },
+    {
+      "q": "The April 2026 'Infinite Darkness' expansion pack for 'SUPER ROBOT WARS Y' adds playable units from multiple mecha anime, including which iconic series?",
+      "options": [
+        "Space Runaway Ideon",
+        "Neon Genesis Evangelion",
+        "Tengen Toppa Gurren Lagann",
+        "Mobile Suit Gundam Wing"
+      ],
+      "a": 0,
+      "correctText": "Space Runaway Ideon",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/super-robot-wars-y-dlc-expansion-pack-infinite-darkness-launches-april-22"
+    }
+  ]
+}

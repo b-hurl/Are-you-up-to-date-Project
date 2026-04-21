@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "An April 20, 2026 study by the University of Nebraska Medical Center found that prenatal exposure to medications that inhibit the synthesis of which substance increases the risk of autism spectrum disorder?",
+      "options": [
+        "Cholesterol",
+        "Serotonin",
+        "Dopamine",
+        "Melatonin"
+      ],
+      "a": 0,
+      "correctText": "Cholesterol",
+      "category": "Science",
+      "source": "https://www.unmc.edu/newsroom/2026/04/20/study-suggests-link-between-prenatal-exposure-to-certain-medications-and-increased-autism-risk-2/"
+    },
+    {
+      "q": "On April 21, 2026, scientists analyzing data from NASA's Curiosity Mars rover revealed the discovery of an organic, DNA-precursor molecule containing which element, marking a first for the red planet?",
+      "options": [
+        "Nitrogen",
+        "Phosphorus",
+        "Boron",
+        "Fluorine"
+      ],
+      "a": 0,
+      "correctText": "Nitrogen",
+      "category": "Science",
+      "source": "https://news.ufl.edu/2026/04/mars-rover-/"
+    },
+    {
+      "q": "According to an April 20, 2026 study in the Journal of Sex and Marital Therapy, men who identify as 'incels' experience severe body dissatisfaction partly because they internalize the physical standards of what group?",
+      "options": [
+        "Pornographic actors",
+        "Action movie stars",
+        "Professional athletes",
+        "Fitness influencers"
+      ],
+      "a": 0,
+      "correctText": "Pornographic actors",
+      "category": "Science",
+      "source": "https://www.psypost.org/study-links-internalized-pornographic-standards-to-body-image-issues-among-incel-men/"
+    },
+    {
+      "q": "Published on April 20, 2026, the largest U.S. study tracking over 11,000 children concluded that teen cannabis use is distinctly linked to what developmental issue?",
+      "options": [
+        "Slower cognitive development",
+        "Stunted physical growth",
+        "Premature puberty",
+        "Reduced auditory processing"
+      ],
+      "a": 0,
+      "correctText": "Slower cognitive development",
+      "category": "Science",
+      "source": "https://today.ucsd.edu/story/largest-us-study-finds-teen-cannabis-use-linked-to-slower-cognitive-development"
+    },
+    {
+      "q": "An April 21, 2026 prospective cohort study by Mass General Brigham revealed that excessive napping in older adults is associated with higher mortality rates, with the highest risk tied to naps taken during what time of day?",
+      "options": [
+        "Morning",
+        "Late afternoon",
+        "Evening",
+        "Nighttime"
+      ],
+      "a": 0,
+      "correctText": "Morning",
+      "category": "Science",
+      "source": "https://www.massgeneralbrigham.org/en/about/newsroom/press-releases/high-mortality-rates-in-older-adults-napping-excessively"
+    }
+  ]
+}

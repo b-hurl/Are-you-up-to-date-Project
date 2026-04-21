@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In April 2026, a collection of 17 rare books stolen decades ago from a Long Island estate resurfaced in Manhattan. The collection prominently included letters written by which poet?",
+      "options": [
+        "John Keats",
+        "Walt Whitman",
+        "Edgar Allan Poe",
+        "Lord Byron"
+      ],
+      "a": 0,
+      "correctText": "John Keats",
+      "category": "Books",
+      "source": "https://gothamist.com/news/plot-twist-rare-books-worth-3-million-stolen-decades-ago-resurface-in-manhattan"
+    },
+    {
+      "q": "According to a campaign launched on April 21, 2026, proposed new library charges will heavily penalize book lovers in which English county?",
+      "options": [
+        "Essex",
+        "Cornwall",
+        "Yorkshire",
+        "Kent"
+      ],
+      "a": 0,
+      "correctText": "Essex",
+      "category": "Books",
+      "source": "https://www.bbc.com/news/articles/cvg0991xegyo"
+    },
+    {
+      "q": "On April 20, 2026, the American Library Association announced that book bans had reached record highs. Which 2006 novel about sex trafficking in India topped their list of most challenged books?",
+      "options": [
+        "Sold",
+        "Gender Queer",
+        "The Perks of Being a Wallflower",
+        "A Clockwork Orange"
+      ],
+      "a": 0,
+      "correctText": "Sold",
+      "category": "Books",
+      "source": "https://apnews.com/article/bans-challenged-books-american-library-association-5403280786cf95111d4c9eb4b587c4be"
+    },
+    {
+      "q": "An exiled Uyghur scholar's international book tour ended abruptly in April 2026 after he was detained at an airport in which country, allegedly on orders from Beijing?",
+      "options": [
+        "Malaysia",
+        "Indonesia",
+        "Thailand",
+        "Singapore"
+      ],
+      "a": 0,
+      "correctText": "Malaysia",
+      "category": "Books",
+      "source": "https://ground.news/article/uyghur-scholars-book-tour-ends-with-malaysian-airport-detention-he-says-beijing-ordered"
+    },
+    {
+      "q": "Published on April 21, 2026, the highly anticipated novel 'Last Night in Brooklyn', which follows a 26-year-old moving back to Fort Greene, was written by which author?",
+      "options": [
+        "Xochitl Gonzalez",
+        "Zadie Smith",
+        "Rainbow Rowell",
+        "Colson Whitehead"
+      ],
+      "a": 0,
+      "correctText": "Xochitl Gonzalez",
+      "category": "Books",
+      "source": "https://lithub.com/lit-hub-daily-april-21-2026/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 21, 2026, which video streaming platform announced it was opening up an AI deepfake detection tool to all of Hollywood to flag potentially infringing content?",
+      "options": [
+        "YouTube",
+        "Vimeo",
+        "TikTok",
+        "Netflix"
+      ],
+      "a": 0,
+      "correctText": "YouTube",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/digital/youtube-ai-deepfake-detection-tool-1236569593/"
+    },
+    {
+      "q": "Over the weekend of April 20, 2026, author Meg Cabot confirmed that Chris Pine and Robert Schwartzman will return for the third installment of what film franchise?",
+      "options": [
+        "The Princess Diaries",
+        "Legally Blonde",
+        "Miss Congeniality",
+        "Pitch Perfect"
+      ],
+      "a": 0,
+      "correctText": "The Princess Diaries",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/04/20/princess-diaries-author-shares-chris-pine-robert-schwartzman-are-in-the-third-film/"
+    },
+    {
+      "q": "Amid Disney layoffs confirmed on April 20, 2026, Andy Park announced his exit after 16 years as the Director of Visual Development for which studio?",
+      "options": [
+        "Marvel Studios",
+        "Pixar Animation Studios",
+        "Lucasfilm",
+        "Walt Disney Animation"
+      ],
+      "a": 0,
+      "correctText": "Marvel Studios",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/marvels-director-visual-development-andy-park-layoffs-1236726446/"
+    },
+    {
+      "q": "According to a casting announcement on April 20, 2026, Chris O'Dowd is joining comedian Bill Burr in \"Bender,\" a coming-of-age comedy set in what country?",
+      "options": [
+        "Ireland",
+        "Scotland",
+        "United States",
+        "Australia"
+      ],
+      "a": 0,
+      "correctText": "Ireland",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/chris-odowd-joins-bender-comedy-bill-burr-1236865369/"
+    },
+    {
+      "q": "Searchlight Pictures released the official trailer on April 20, 2026, for the third installment of which cult comedy franchise from the Broken Lizard comedy troupe?",
+      "options": [
+        "Super Troopers",
+        "Beerfest",
+        "Club Dread",
+        "Police Academy"
+      ],
+      "a": 0,
+      "correctText": "Super Troopers",
+      "category": "Entertainment",
+      "source": "https://www.heyuguys.com/super-troopers-3-trailer/"
+    }
+  ]
+}
