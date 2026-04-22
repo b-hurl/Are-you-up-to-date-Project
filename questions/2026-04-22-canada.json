@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to sources, what is the Trump administration demanding from Canada before beginning formal trade talks for a revised CUSMA?",
+      "options": [
+        "An \"entry fee\" of prior concessions",
+        "A $5 billion cash deposit",
+        "Immediate privatization of dairy quotas",
+        "The resignation of the trade minister"
+      ],
+      "a": 0,
+      "correctText": "An \"entry fee\" of prior concessions",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/washington-demanding-entry-fee-from-ottawa-before-trade-talks-sources-9.7172340"
+    },
+    {
+      "q": "Following their newly secured majority, the federal Liberals are moving to change standing orders to take control of what?",
+      "options": [
+        "House of Commons committees",
+        "The Senate of Canada",
+        "The Supreme Court appointment process",
+        "Provincial trade tribunals"
+      ],
+      "a": 0,
+      "correctText": "House of Commons committees",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/liberal-majority-committees-9.7172759"
+    },
+    {
+      "q": "The Ontario government recently purchased, and then planned to sell, a $28.9 million private jet that reportedly could only use what percentage of the province's recognized airports?",
+      "options": [
+        "10%",
+        "25%",
+        "50%",
+        "75%"
+      ],
+      "a": 0,
+      "correctText": "10%",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/toronto/doug-ford-jet-airport-runways-9.7172500"
+    },
+    {
+      "q": "Following the Ontario private jet controversy, a CBC News inquiry found that the majority of Canada's provincial premiers rely primarily on what for official business travel?",
+      "options": [
+        "Commercial flights",
+        "Personal vehicles",
+        "Government-owned helicopters",
+        "Private chartered jets"
+      ],
+      "a": 0,
+      "correctText": "Commercial flights",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/premiers-private-flights-commercial-9.7171284"
+    },
+    {
+      "q": "Which Canadian territory announced it will follow Alberta's lead in ditching twice-a-year clock changes to adopt permanent daylight time?",
+      "options": [
+        "Northwest Territories",
+        "Yukon",
+        "Nunavut",
+        "Labrador"
+      ],
+      "a": 0,
+      "correctText": "Northwest Territories",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11810606/nwt-adopting-daylight-time-permanent/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In a unique awards push announced on April 22, 2026, 'Project Hail Mary' puppeteer James Ortiz is being campaigned for a nomination in which Oscar category?",
+      "options": [
+        "Best Visual Effects",
+        "Best Animated Feature",
+        "Best Supporting Actor",
+        "Best Actor"
+      ],
+      "a": 2,
+      "correctText": "Best Supporting Actor",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/awards/project-hail-mary-james-ortiz-oscars-sag-eligible-puppeteer-1236726540/"
+    },
+    {
+      "q": "Which director, known for 'Creed II', was officially announced to be helming the upcoming sequel 'I Am Legend 2'?",
+      "options": [
+        "Francis Lawrence",
+        "Steven Caple Jr.",
+        "Ryan Coogler",
+        "Michael B. Jordan"
+      ],
+      "a": 1,
+      "correctText": "Steven Caple Jr.",
+      "category": "Entertainment",
+      "source": "https://www.empireonline.com/movies/news/i-am-legend-2-director-steven-caple-jr/"
+    },
+    {
+      "q": "It was revealed that 'Obsession' filmmaker Curry Barker has been tapped to direct a reimagining of which classic horror franchise for A24?",
+      "options": [
+        "A Nightmare on Elm Street",
+        "Friday the 13th",
+        "Halloween",
+        "The Texas Chainsaw Massacre"
+      ],
+      "a": 3,
+      "correctText": "The Texas Chainsaw Massacre",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/texas-chainsaw-massacre-curry-barker-director-obsession-1236727385/"
+    },
+    {
+      "q": "To help flag potentially infringing fan-generated content, YouTube expanded access to which tool for the Hollywood industry in April 2026?",
+      "options": [
+        "An AI deepfake detection tool",
+        "An automated script analyzer",
+        "A virtual casting database",
+        "A copyright watermarking system"
+      ],
+      "a": 0,
+      "correctText": "An AI deepfake detection tool",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/digital/youtube-ai-deepfake-detection-tool-1236569593/"
+    },
+    {
+      "q": "Denise Richards paid a heartfelt public tribute in April 2026 following the sudden death of which actor, her former 'Starship Troopers' co-star?",
+      "options": [
+        "Casper Van Dien",
+        "Patrick Muldoon",
+        "Neil Patrick Harris",
+        "Jake Busey"
+      ],
+      "a": 1,
+      "correctText": "Patrick Muldoon",
+      "category": "Entertainment",
+      "source": "https://www.rollingstone.com/tv-movies/tv-movie-news/denise-richards-patrick-muldoon-death-tribute-1235551654/"
+    }
+  ]
+}
