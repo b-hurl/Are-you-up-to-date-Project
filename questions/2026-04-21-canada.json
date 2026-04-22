@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which prominent Alberta independence group is facing an injunction from Elections Alberta to force the disclosure of its finances and donors?",
+      "options": [
+        "Alberta Prosperity Project",
+        "Take Back Alberta",
+        "Free Alberta Strategy",
+        "Wildrose Independence Party"
+      ],
+      "a": 0,
+      "correctText": "Alberta Prosperity Project",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/alberta/article-elections-alberta-seeks-injunction-for-prominent-separatist-group-to/"
+    },
+    {
+      "q": "Ontario Premier Doug Ford recently defended the purchase of a new private jet by pointing out that Quebec bought three jets. According to the Quebec government, what are those jets actually used for?",
+      "options": [
+        "Medical transport",
+        "Fighting forest fires",
+        "Executive travel for the Premier",
+        "Northern police operations"
+      ],
+      "a": 0,
+      "correctText": "Medical transport",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/montreal/quebec-private-jets-9.7170866"
+    },
+    {
+      "q": "Ayanle Hassan Ali, who was found not criminally responsible for a 2016 Toronto army recruiting centre knife attack, was recently granted a travel pass to which two countries?",
+      "options": [
+        "Saudi Arabia and Somalia",
+        "Saudi Arabia and Yemen",
+        "Somalia and Kenya",
+        "Egypt and Sudan"
+      ],
+      "a": 0,
+      "correctText": "Saudi Arabia and Somalia",
+      "category": "Canada",
+      "source": "https://nationalpost.com/news/canada/ayanle-hassan-ali-not-criminally-responsible"
+    },
+    {
+      "q": "Researchers have flagged a network of YouTube accounts with 40 million views that is promoting what controversial political outcome to Albertans?",
+      "options": [
+        "U.S. annexation of Alberta",
+        "Establishing an absolute monarchy",
+        "Leaving Canada to join the European Union",
+        "Merging Alberta with Saskatchewan"
+      ],
+      "a": 0,
+      "correctText": "U.S. annexation of Alberta",
+      "category": "Canada",
+      "source": "https://www.thestar.com/news/investigations/a-network-of-youtube-accounts-is-promoting-us-annexation-to-albertans-researchers-say-it-has-40m-views/article_b26d9311-f3f1-4304-a443-360f51f6a558.html"
+    },
+    {
+      "q": "Canada Post reported its worst financial year on record, blaming strike action and competition for a massive pre-tax loss of how much in 2025?",
+      "options": [
+        "$1.57 billion",
+        "$500 million",
+        "$841 million",
+        "$2.3 billion"
+      ],
+      "a": 0,
+      "correctText": "$1.57 billion",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/canada-post-financial-loss-2025-9.7170872"
+    }
+  ]
+}

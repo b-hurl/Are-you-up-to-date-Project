@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which university's student was recently arrested by the FBI for taking unauthorized photographs of US military planes?",
+      "options": [
+        "Glasgow University",
+        "Oxford University",
+        "Edinburgh University",
+        "University of Manchester"
+      ],
+      "a": 0,
+      "correctText": "Glasgow University",
+      "category": "World",
+      "source": "https://thetab.com/2026/04/20/fbi-arrests-glasgow-university-student-over-u-s-military-photos"
+    },
+    {
+      "q": "Hungarian Prime Minister-elect Peter Magyar recently stated that his government would honor an ICC warrant and arrest which world leader if he visits?",
+      "options": [
+        "Benjamin Netanyahu",
+        "Vladimir Putin",
+        "Kim Jong Un",
+        "Bashar al-Assad"
+      ],
+      "a": 0,
+      "correctText": "Benjamin Netanyahu",
+      "category": "World",
+      "source": "https://www.politico.eu/article/peter-magyar-hungary-would-arrest-benjamin-netanyahu-israel/"
+    },
+    {
+      "q": "Taiwan's President Ching-te was forced to cancel a visit to which African country after flight route permissions were withdrawn amid Chinese pressure?",
+      "options": [
+        "Eswatini",
+        "South Africa",
+        "Nigeria",
+        "Kenya"
+      ],
+      "a": 0,
+      "correctText": "Eswatini",
+      "category": "World",
+      "source": "https://www.wral.com/news/ap/76618-taiwan-president-postpones-eswatini-visit-and-says-china-pressured-african-countries/"
+    },
+    {
+      "q": "In April 2026, the European Union launched the final procedure to approve a support package loan to Ukraine worth how much?",
+      "options": [
+        "€90 billion",
+        "€50 billion",
+        "€100 billion",
+        "€20 billion"
+      ],
+      "a": 0,
+      "correctText": "€90 billion",
+      "category": "World",
+      "source": "https://www.reuters.com/business/eu-expects-positive-decisions-90-billion-euro-loan-ukraine-wednesday-2026-04-21/"
+    },
+    {
+      "q": "In a major shift of its postwar pacifist policy, which country lifted its ban on lethal weapons exports in April 2026?",
+      "options": [
+        "Japan",
+        "Germany",
+        "South Korea",
+        "Sweden"
+      ],
+      "a": 0,
+      "correctText": "Japan",
+      "category": "World",
+      "source": "https://www.aljazeera.com/news/2026/4/21/japan-lifts-ban-on-lethal-weapons-exports-in-major-shift-of-pacifist-policy"
+    }
+  ]
+}

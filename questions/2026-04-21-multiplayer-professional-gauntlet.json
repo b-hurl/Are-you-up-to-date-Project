@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-21",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Taiwan's President Ching-te was forced to cancel a visit to which African country after flight route permissions were withdrawn amid Chinese pressure?",
+      "options": [
+        "Eswatini",
+        "South Africa",
+        "Nigeria",
+        "Kenya"
+      ],
+      "a": 0,
+      "correctText": "Eswatini",
+      "category": "World",
+      "source": "https://www.wral.com/news/ap/76618-taiwan-president-postpones-eswatini-visit-and-says-china-pressured-african-countries/"
+    },
+    {
+      "q": "On April 20, 2026, Eli Lilly agreed to acquire which cancer drug maker in a deal worth up to $7 billion?",
+      "options": [
+        "Kelonia Therapeutics",
+        "Seagen",
+        "ImmunoGen",
+        "Mirati Therapeutics"
+      ],
+      "a": 0,
+      "correctText": "Kelonia Therapeutics",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/20/eli-lilly-to-acquire-cancer-drug-maker-kelonia.html"
+    },
+    {
+      "q": "In April 2026, the European Union launched the final procedure to approve a support package loan to Ukraine worth how much?",
+      "options": [
+        "€90 billion",
+        "€50 billion",
+        "€100 billion",
+        "€20 billion"
+      ],
+      "a": 0,
+      "correctText": "€90 billion",
+      "category": "World",
+      "source": "https://www.reuters.com/business/eu-expects-positive-decisions-90-billion-euro-loan-ukraine-wednesday-2026-04-21/"
+    },
+    {
+      "q": "Ayanle Hassan Ali, who was found not criminally responsible for a 2016 Toronto army recruiting centre knife attack, was recently granted a travel pass to which two countries?",
+      "options": [
+        "Saudi Arabia and Somalia",
+        "Saudi Arabia and Yemen",
+        "Somalia and Kenya",
+        "Egypt and Sudan"
+      ],
+      "a": 0,
+      "correctText": "Saudi Arabia and Somalia",
+      "category": "Canada",
+      "source": "https://nationalpost.com/news/canada/ayanle-hassan-ali-not-criminally-responsible"
+    },
+    {
+      "q": "Releasing its first-quarter 2026 results on April 21, 2026, UnitedHealth Group raised its full-year earnings outlook to greater than what amount per share?",
+      "options": [
+        "$17.35",
+        "$15.00",
+        "$19.50",
+        "$21.10"
+      ],
+      "a": 0,
+      "correctText": "$17.35",
+      "category": "Business",
+      "source": "https://www.unitedhealthgroup.com/newsroom/2026/2026-04-21-uhg-reports-first-quarter-results.html"
+    },
+    {
+      "q": "Which prominent Alberta independence group is facing an injunction from Elections Alberta to force the disclosure of its finances and donors?",
+      "options": [
+        "Alberta Prosperity Project",
+        "Take Back Alberta",
+        "Free Alberta Strategy",
+        "Wildrose Independence Party"
+      ],
+      "a": 0,
+      "correctText": "Alberta Prosperity Project",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/alberta/article-elections-alberta-seeks-injunction-for-prominent-separatist-group-to/"
+    },
+    {
+      "q": "The cloud platform Vercel suffered a major security breach in April 2026 after an employee did what?",
+      "options": [
+        "Granted an AI tool unrestricted access to Google Workspace",
+        "Used a weak password for the company's main database",
+        "Fell for an AI-generated deepfake phishing call",
+        "Accidentally committed an admin key to a public GitHub repo"
+      ],
+      "a": 0,
+      "correctText": "Granted an AI tool unrestricted access to Google Workspace",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/cyber-security/vercel-breached-after-employee-grants-ai-tool-unrestricted-access-to-google-workspace"
+    },
+    {
+      "q": "An April 21, 2026 prospective cohort study by Mass General Brigham revealed that excessive napping in older adults is associated with higher mortality rates, with the highest risk tied to naps taken during what time of day?",
+      "options": [
+        "Morning",
+        "Late afternoon",
+        "Evening",
+        "Nighttime"
+      ],
+      "a": 0,
+      "correctText": "Morning",
+      "category": "Science",
+      "source": "https://www.massgeneralbrigham.org/en/about/newsroom/press-releases/high-mortality-rates-in-older-adults-napping-excessively"
+    },
+    {
+      "q": "Researchers have flagged a network of YouTube accounts with 40 million views that is promoting what controversial political outcome to Albertans?",
+      "options": [
+        "U.S. annexation of Alberta",
+        "Establishing an absolute monarchy",
+        "Leaving Canada to join the European Union",
+        "Merging Alberta with Saskatchewan"
+      ],
+      "a": 0,
+      "correctText": "U.S. annexation of Alberta",
+      "category": "Canada",
+      "source": "https://www.thestar.com/news/investigations/a-network-of-youtube-accounts-is-promoting-us-annexation-to-albertans-researchers-say-it-has-40m-views/article_b26d9311-f3f1-4304-a443-360f51f6a558.html"
+    },
+    {
+      "q": "Canada Post reported its worst financial year on record, blaming strike action and competition for a massive pre-tax loss of how much in 2025?",
+      "options": [
+        "$1.57 billion",
+        "$500 million",
+        "$841 million",
+        "$2.3 billion"
+      ],
+      "a": 0,
+      "correctText": "$1.57 billion",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/canada-post-financial-loss-2025-9.7170872"
+    }
+  ]
+}

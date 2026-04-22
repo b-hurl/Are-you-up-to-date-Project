@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Los Angeles Dodgers closer was placed on the injured list and slated for elbow surgery in April 2026?",
+      "options": [
+        "Edwin Diaz",
+        "Evan Phillips",
+        "Brusdar Graterol",
+        "Craig Kimbrel"
+      ],
+      "a": 0,
+      "correctText": "Edwin Diaz",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48544759/los-angeles-dodgers-put-closer-edwin-diaz-injured-list"
+    },
+    {
+      "q": "Who scored the game-winning goal in double overtime to lift the Carolina Hurricanes past the Ottawa Senators 3-2 in Game 2 of their 2026 NHL playoffs series?",
+      "options": [
+        "Jordan Martinook",
+        "Sebastian Aho",
+        "Seth Jarvis",
+        "Andrei Svechnikov"
+      ],
+      "a": 0,
+      "correctText": "Jordan Martinook",
+      "category": "Sports",
+      "source": "https://apnews.com/article/senators-hurricanes-score-c6575088618422ac5959814630af2f5a"
+    },
+    {
+      "q": "In April 2026, which defending two-time French Open tennis champion put his tournament participation in doubt due to a right wrist injury?",
+      "options": [
+        "Carlos Alcaraz",
+        "Novak Djokovic",
+        "Rafael Nadal",
+        "Jannik Sinner"
+      ],
+      "a": 0,
+      "correctText": "Carlos Alcaraz",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48543717/carlos-alcaraz-waits-wrist-tests-french-open-awaits"
+    },
+    {
+      "q": "Who defeated world No. 1 Scottie Scheffler on the first playoff hole to win the 2026 RBC Heritage at Harbour Town?",
+      "options": [
+        "Matt Fitzpatrick",
+        "Rory McIlroy",
+        "Xander Schauffele",
+        "Collin Morikawa"
+      ],
+      "a": 0,
+      "correctText": "Matt Fitzpatrick",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/golf/articles/c208jrj07r7o"
+    },
+    {
+      "q": "Which former Georgia Bulldogs wide receiver and top 2026 NFL Draft prospect was arrested on misdemeanor charges just days before the draft?",
+      "options": [
+        "Zachariah Branch",
+        "Luther Burden III",
+        "Tetairoa McMillan",
+        "Emeka Egbuka"
+      ],
+      "a": 0,
+      "correctText": "Zachariah Branch",
+      "category": "Sports",
+      "source": "https://www.espn.com/nfl/story/_/id/48532665/nfl-draft-prospect-zachariah-branch-arrested-georgia"
+    }
+  ]
+}
