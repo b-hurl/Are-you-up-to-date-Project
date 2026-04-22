@@ -380,7 +380,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                 description={!isLoggedIn && isMulti ? "Account required for Leaderboards" : isPlayed ? (
                                     savedScore !== undefined 
                                         ? `Daily Score: ${savedScore}/10 ${isMulti ? '⚔️' : ''}` 
-                                        : 'Completed for Today'
+                                        : 'Attempted for Today'
                                 ) : m.desc}
                             />
                         );
@@ -614,7 +614,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         const isMulti = config.gameMode === 'multiplayer';
                         const isSent = isMulti && activeChallenges.some(m => m.toLowerCase() === categoryLower);
                         const savedScore = archive[gameDate]?.[categoryLower]?.score;
-                        const isCompleted = isMulti && isPlayed;
+                        const isCompleted = isMulti && savedScore !== undefined;
 
                         return (
                             <MenuButton
@@ -646,7 +646,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                             </span>
                                         </span>
                                     ) : 
-                                    (savedScore !== undefined ? `Score: ${savedScore}/5 ${isMulti ? '⚔️' : ''}` : 'Completed')
+                                    (savedScore !== undefined ? `Score: ${savedScore}/5 ${isMulti ? '⚔️' : ''}` : 'Attempted')
                                 ) : '5 Daily Questions'}
                             />
                         );

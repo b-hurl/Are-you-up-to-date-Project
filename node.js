@@ -215,8 +215,8 @@ async function runAutomation() {
 
         console.log(`\n🚀 Category: ${category.toUpperCase()} (General Attempt ${categoryAttempts[category]}/${generalRetryLimit}, 503 Attempts: ${(_503attempts[category] || 0)})`);
 
-        // Dynamic Model Selection: Use 'Pro' for retries to ensure JSON validity
-       const modelName = categoryAttempts[category] > 1 ? "gemini-3.1-flash-preview" : "gemini-3.1-pro-preview";
+        // Use Flash for primary runs (much cheaper). Fallback to Pro only on final attempt.
+        const modelName = categoryAttempts[category] < 3 ? "gemini-3.1-flash-preview" : "gemini-3.1-pro-preview";
         const model = genAI.getGenerativeModel({ 
             model: modelName, 
             tools: [{ googleSearch: {} }]
@@ -359,16 +359,15 @@ async function runAutomation() {
             // The "Triple-Lock" Prompt (Verify, Format, Fact-Check)
             const prompt = `CRITICAL CLOCK: ${dateStr} (Current System Time)
 TARGET CATEGORY: ${category}
-
-ACT AS: A Breaking News Editor on a 24-hour cycle. 
-TASK: Generate exactly 8 trivia question candidates based EXCLUSIVELY on news events that occurred between 24 hours ago and right now.
+ACT AS: Breaking News Editor. 
+TASK: Generate exactly 6 trivia questions from news in the last 24h of ${dateStr}.
 
 ### THE "HARD STOP" RULES:
-1. DATE ENFORCEMENT: If an event occurred on April 12th or earlier, DISCARD IT. We only want news from the last 24 hours of ${dateStr}.
-2. SOURCE VERIFICATION: You MUST use Google Search to confirm the headline is currently "Breaking" or "Live" as of ${dateStr}. 
-3. LINK PURITY: The "source" field must be a direct, non-Reddit URL. Start with the link in the reddit post. Prefer non-paywalled sources (e.g., CBC, Reuters, AP News, BBC). If the lead only provides a Reddit link, use Search to find a free original article.
-4. NO OPINION: Delete any leads involving editorials, "top 10" lists, or movie reviews. Only hard, factual events.
-5. EXACT COUNT: Return exactly 8 candidates.
+1. DATE: Only news from ${dateStr}. Discard anything older.
+2. VERIFY: Use Search to confirm headline is current and "Live".
+3. LINKS: Direct news URL (not Reddit). Prefer Reuters, AP, BBC, CBC.
+4. FACTS ONLY: No opinions, top-10 lists, or reviews.
+5. COUNT: Exactly 6 candidates.
 
 ### REDDIT LEADS (Filter these for today's date only):
 ${newsPool}
@@ -468,19 +467,8 @@ NOTE: Only use the above leads if they are from ${dateStr}. If you need more, us
                     }
                 }
 
-                console.log(`🔍 Source missing, invalid, or dead for: "${q.q.substring(0, 40)}...". Recovering...`);
-                try {
-                    const searchPrompt = `Find a primary, non-paywalled news article source URL (not Reddit) for this event from ${dateStr}: "${q.q}". Prefer reliable free sources like AP News, Reuters, or BBC. Return ONLY the raw URL.`;
-                    const searchResult = await model.generateContent(searchPrompt);
-                    source = searchResult.response.text().trim().replace(/[`\s]/g, "");
-                    
-                    if (await isUrlLive(source)) {
-                        q.source = source;
-                        recoveryCache.set(q.q, { source, expiry: Date.now() + RECOVERY_TTL });
-                        q.category = category.charAt(0).toUpperCase() + category.slice(1);
-                        return q;
-                    }
-                } catch (e) {}
+                // Removed AI-based source recovery to save costs. 
+                // If the link is dead, we let the replacement loop fetch a fresh question instead.
 
                 console.warn(`   ❌ Link dead or recovery failed for: "${q.q.substring(0, 40)}..."`);
                 rejectedQuestions.push(q.q); 

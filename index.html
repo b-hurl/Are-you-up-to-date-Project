@@ -4808,6 +4808,11 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
                         updateData['lastPlayedDate'] = today;
                         updateData['currentStreak'] = session.currentStreak;
 
+                        // Mirror today's score to the root doc for immediate UI sync across devices
+                        if (modeArchive) {
+                            updateData[`archive.${today}.${mode}`] = modeArchive;
+                        }
+
                         // NEW: Save to history subcollection instead of root document map
                         if (modeArchive) {
                             const gameId = `${today}_${mode}`;
@@ -7030,12 +7035,3 @@ window.isNameValid = isNameValid;
     </script>
 </body>
 </html>        
-    </script>
-</body>
-</html>         
-    </script>
-</body>
-</html>         
-    </script>
-</body>
-</html>
