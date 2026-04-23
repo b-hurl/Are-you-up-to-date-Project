@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who scored the late game-winning goal for the Utah Mammoth to beat the Vegas Golden Knights 3-2 in Game 2 of their 2026 NHL playoff series?",
+      "options": [
+        "Logan Cooley",
+        "Dylan Guenther",
+        "Mark Stone",
+        "Jack Eichel"
+      ],
+      "a": 0,
+      "correctText": "Logan Cooley",
+      "category": "Sports",
+      "source": "https://apnews.com/article/mammoth-golden-knights-score-ec3a92e26393ac757707b9d332913078"
+    },
+    {
+      "q": "Following a 2-2 draw with Hull City on April 21, 2026, which former Premier League champion was relegated to League One?",
+      "options": [
+        "Leicester City",
+        "Southampton",
+        "Leeds United",
+        "West Bromwich Albion"
+      ],
+      "a": 0,
+      "correctText": "Leicester City",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/live/cvg0zz7xm63t"
+    },
+    {
+      "q": "In April 2026, which 45-year-old tennis star announced she was considering playing at the French Open despite suffering her 10th straight singles loss at the Madrid Open?",
+      "options": [
+        "Venus Williams",
+        "Serena Williams",
+        "Victoria Azarenka",
+        "Svetlana Kuznetsova"
+      ],
+      "a": 0,
+      "correctText": "Venus Williams",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48554782/venus-williams-eyes-french-open-loss-madrid"
+    },
+    {
+      "q": "Who stepped down as the vice-chair of West Ham United in April 2026 after serving for 16 years?",
+      "options": [
+        "Baroness Karren Brady",
+        "David Sullivan",
+        "Daniel Kretinsky",
+        "Karen Dunnell"
+      ],
+      "a": 0,
+      "correctText": "Baroness Karren Brady",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/articles/cly7ejx9nx5o"
+    },
+    {
+      "q": "Which Los Angeles Dodgers closer was scheduled for elbow surgery in April 2026 to remove loose bodies, sidelining him for about three months?",
+      "options": [
+        "Edwin Diaz",
+        "Evan Phillips",
+        "Brusdar Graterol",
+        "Blake Treinen"
+      ],
+      "a": 0,
+      "correctText": "Edwin Diaz",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48544759/los-angeles-dodgers-put-closer-edwin-diaz-injured-list"
+    }
+  ]
+}

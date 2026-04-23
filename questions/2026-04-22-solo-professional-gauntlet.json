@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-22",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Following their newly secured majority, the federal Liberals are moving to change standing orders to take control of what?",
+      "options": [
+        "House of Commons committees",
+        "The Senate of Canada",
+        "The Supreme Court appointment process",
+        "Provincial trade tribunals"
+      ],
+      "a": 0,
+      "correctText": "House of Commons committees",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/liberal-majority-committees-9.7172759"
+    },
+    {
+      "q": "Which US tech company faced backlash in April 2026 from UK lawmakers who called its recently published 22-point manifesto the \"ramblings of a supervillain\"?",
+      "options": [
+        "Palantir",
+        "OpenAI",
+        "Meta",
+        "Clearview AI"
+      ],
+      "a": 0,
+      "correctText": "Palantir",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/technology/2026/apr/21/palantir-manifesto-uk-contract-fears-mps"
+    },
+    {
+      "q": "Following the Ontario private jet controversy, a CBC News inquiry found that the majority of Canada's provincial premiers rely primarily on what for official business travel?",
+      "options": [
+        "Commercial flights",
+        "Personal vehicles",
+        "Government-owned helicopters",
+        "Private chartered jets"
+      ],
+      "a": 0,
+      "correctText": "Commercial flights",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/premiers-private-flights-commercial-9.7171284"
+    },
+    {
+      "q": "The Ontario government recently purchased, and then planned to sell, a $28.9 million private jet that reportedly could only use what percentage of the province's recognized airports?",
+      "options": [
+        "10%",
+        "25%",
+        "50%",
+        "75%"
+      ],
+      "a": 0,
+      "correctText": "10%",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/toronto/doug-ford-jet-airport-runways-9.7172500"
+    },
+    {
+      "q": "A US appeals court ruled in April 2026 that which state can require public schools to display the Ten Commandments in classrooms?",
+      "options": [
+        "Texas",
+        "Florida",
+        "Oklahoma",
+        "Louisiana"
+      ],
+      "a": 0,
+      "correctText": "Texas",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/apr/21/texas-public-schools-ten-commandments"
+    },
+    {
+      "q": "Voters in which state approved a mid-decade congressional redistricting plan in April 2026 that is projected to give Democrats a significant midterm election boost?",
+      "options": [
+        "Virginia",
+        "North Carolina",
+        "Pennsylvania",
+        "Michigan"
+      ],
+      "a": 0,
+      "correctText": "Virginia",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/politics/2026-election/virginia-voters-approve-democrats-redistricting-plan-giving-party-midt-rcna340895"
+    },
+    {
+      "q": "Which Canadian territory announced it will follow Alberta's lead in ditching twice-a-year clock changes to adopt permanent daylight time?",
+      "options": [
+        "Northwest Territories",
+        "Yukon",
+        "Nunavut",
+        "Labrador"
+      ],
+      "a": 0,
+      "correctText": "Northwest Territories",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11810606/nwt-adopting-daylight-time-permanent/"
+    },
+    {
+      "q": "According to sources, what is the Trump administration demanding from Canada before beginning formal trade talks for a revised CUSMA?",
+      "options": [
+        "An \"entry fee\" of prior concessions",
+        "A $5 billion cash deposit",
+        "Immediate privatization of dairy quotas",
+        "The resignation of the trade minister"
+      ],
+      "a": 0,
+      "correctText": "An \"entry fee\" of prior concessions",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/washington-demanding-entry-fee-from-ottawa-before-trade-talks-sources-9.7172340"
+    },
+    {
+      "q": "In April 2026, a federal investigation was launched following the deaths and disappearances of at least 10 US professionals in which field?",
+      "options": [
+        "Scientists tied to sensitive research",
+        "Federal judges handling cartel cases",
+        "Investigative journalists",
+        "Wall Street whistleblowers"
+      ],
+      "a": 0,
+      "correctText": "Scientists tied to sensitive research",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/04/21/us/deaths-disappearances-scientists-investigation"
+    },
+    {
+      "q": "Defense Secretary Pete Hegseth announced in April 2026 that US military members will no longer be required to receive which annual vaccination?",
+      "options": [
+        "Flu shot",
+        "COVID-19 booster",
+        "Anthrax vaccine",
+        "Typhoid shot"
+      ],
+      "a": 0,
+      "correctText": "Flu shot",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/apr/21/military-flu-shot-requirement-pete-hegseth"
+    }
+  ]
+}
