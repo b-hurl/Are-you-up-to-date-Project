@@ -633,6 +633,9 @@
                 <canvas id="adminStatsChart"></canvas>
             </div>
             <div class="w-full h-40 mb-4 bg-slate-800/30 rounded-xl border border-slate-700/30 p-2 relative">
+                <canvas id="adminPerformanceChart"></canvas>
+            </div>
+            <div class="w-full h-40 mb-4 bg-slate-800/30 rounded-xl border border-slate-700/30 p-2 relative">
                 <canvas id="adminDAUChart"></canvas>
             </div>
             <div class="w-full h-40 mb-4 bg-slate-800/30 rounded-xl border border-slate-700/30 p-2 relative">
@@ -1599,7 +1602,8 @@
                     if (res.ok) {
                         const data = await res.json();
                         const questions = sanitizeQuestions(Array.isArray(data) ? data : (data.questions || []));
-                        if (questions.length >= 5) available.push(cat);
+                        const count = Math.min(questions.length, 5);
+                        if (count >= 3) available.push({ name: cat, count: count });
                     }
                 } catch (e) {}
             });
@@ -2738,6 +2742,7 @@ async function submitScore() {
     const scoreData = {
         name: name,
         score: score,
+        maxQuestions: gameData.questions.length,
         mode: lastMode,
         isGrandMaster: isGM,
         streak: streak,
@@ -6610,6 +6615,7 @@ window.isNameValid = isNameValid;
             
             loadFeedback('down');
             renderAdminChart();
+            renderPerformanceChart();
             renderDAUChart();
             renderRegionChart();
             checkMaintenanceMode(); // Update toggle state
@@ -6779,6 +6785,80 @@ window.isNameValid = isNameValid;
                         y: { display: false, beginAtZero: true }
                     },
                     interaction: { mode: 'index', intersect: false }
+                }
+            });
+        }
+
+        let adminPerformanceChartInstance = null;
+        async function renderPerformanceChart() {
+            const ctx = document.getElementById('adminPerformanceChart');
+            if (!ctx) return;
+
+            const days = 7;
+            const labels = [];
+            const dateKeys = [];
+            const todayGameDate = getGameDate();
+            const parts = todayGameDate.split('-').map(Number);
+            const baseDate = new Date(Date.UTC(parts[0], parts[1]-1, parts[2]));
+
+            for (let i = days - 1; i >= 0; i--) {
+                const d = new Date(baseDate);
+                d.setUTCDate(d.getUTCDate() - i);
+                const dateStr = `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, '0')}-${String(d.getUTCDate()).padStart(2, '0')}`;
+                dateKeys.push(dateStr);
+                labels.push(`${String(d.getUTCMonth() + 1).padStart(2, '0')}/${String(d.getUTCDate()).padStart(2, '0')}`);
+            }
+
+            const accuracyData = new Array(days).fill(0);
+
+            try {
+                const snapshot = await db.collection('scores')
+                    .where('date', 'in', dateKeys)
+                    .get();
+
+                const dailyStats = {};
+                dateKeys.forEach(k => dailyStats[k] = { score: 0, possible: 0 });
+
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    if (dailyStats[data.date]) {
+                        dailyStats[data.date].score += (data.score || 0);
+                        dailyStats[data.date].possible += (data.maxQuestions || (data.mode === 'casual' || data.mode === 'professional' ? 10 : 5));
+                    }
+                });
+
+                dateKeys.forEach((k, idx) => {
+                    const day = dailyStats[k];
+                    accuracyData[idx] = day.possible > 0 ? ((day.score / day.possible) * 100).toFixed(1) : 0;
+                });
+            } catch (e) { console.log("Performance Chart error", e); }
+
+            if (adminPerformanceChartInstance) adminPerformanceChartInstance.destroy();
+            adminPerformanceChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Global Accuracy %',
+                        data: accuracyData,
+                        borderColor: '#818cf8',
+                        backgroundColor: 'rgba(129, 140, 248, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 4,
+                        pointBackgroundColor: '#6366f1'
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        title: { display: true, text: 'Global Accuracy Trend', color: '#94a3b8', font: {size: 12} }
+                    },
+                    scales: { 
+                        x: { grid: { display: false }, ticks: { color: '#64748b', font: {size: 10} } }, 
+                        y: { min: 0, max: 100, grid: { color: '#334155' }, ticks: { color: '#64748b', font: {size: 10}, callback: v => v + '%' } } 
+                    }
                 }
             });
         }

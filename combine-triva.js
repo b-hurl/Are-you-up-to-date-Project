@@ -14,6 +14,9 @@ const GAUNTLET_GROUPS = {
 function createDailyMixes() {
     const date = new Date();
     const dateStr = date.toLocaleDateString('en-CA'); 
+    const manifestPath = path.join(dir, `${dateStr}-manifest.json`);
+    
+    let manifest = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, 'utf8')) : [];
     
     const questionsDir = path.join(process.cwd(), 'questions');
     console.log(`🔍 Looking for files in: ${questionsDir}`);
@@ -68,7 +71,15 @@ function createDailyMixes() {
                     if (fs.existsSync(outPath)) {
                         console.log(`🔄 Overwriting existing file: ${dateStr}-${mix.name}.json`);
                     }
+                    
                     fs.writeFileSync(outPath, JSON.stringify(output, null, 2));
+                    
+                    // Add to manifest for frontend labeling
+                    const manifestIndex = manifest.findIndex(m => m.name === mix.name);
+                    const entry = { name: mix.name, count: mix.questions.length };
+                    if (manifestIndex > -1) manifest[manifestIndex] = entry;
+                    else manifest.push(entry);
+
                     console.log(`✨ SUCCESS: Saved ${mix.questions.length} questions to ${dateStr}-${mix.name}.json`);
                 }
             });
@@ -76,6 +87,9 @@ function createDailyMixes() {
             console.error(` ⛔ FAILURE: No questions found for ${groupName} pool.`);
         }
     }
+
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+    console.log(`📜 Manifest updated with Gauntlet counts.`);
 }
 
 createDailyMixes();

@@ -354,6 +354,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
         try {
             archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
         } catch (e) {}
+        
+        const availableArray = Array.isArray(availableCategories) ? availableCategories : [];
 
         const modes = [
             { id: 'casual', title: 'Casual Gauntlet', desc: '10 questions: Entertainment, sports, etc.' },
@@ -369,6 +371,18 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         const isPlayed = playedModes.includes(m.id);
                         const savedScore = archive[gameDate]?.[m.id]?.score;
                         const isMulti = config.gameMode === 'multiplayer';
+                        
+                        // Determine file name to look up in manifest
+                        const fileName = `${config.gameMode === 'multiplayer' ? 'multiplayer' : 'solo'}-${m.id}-gauntlet`;
+                        const catInfo = availableArray.find(item => 
+                            (typeof item === 'string' ? item : item.name) === fileName
+                        );
+                        
+                        const qCount = (catInfo && typeof catInfo === 'object') ? catInfo.count : 10;
+                        let lengthLabel = `${qCount} Questions`;
+                        if (qCount >= 10) lengthLabel = 'Long (10 Questions)';
+                        else if (qCount >= 7) lengthLabel = 'Medium (Gauntlet)';
+                        else if (qCount >= 1) lengthLabel = 'Short (Gauntlet)';
 
                         return (
                             <MenuButton
@@ -379,9 +393,9 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                 title={m.title}
                                 description={!isLoggedIn && isMulti ? "Account required for Leaderboards" : isPlayed ? (
                                     savedScore !== undefined 
-                                        ? `Daily Score: ${savedScore}/10 ${isMulti ? '⚔️' : ''}` 
-                                        : 'Attempted for Today'
-                                ) : m.desc}
+                                        ? `Daily Score: ${savedScore}/${qCount} ${isMulti ? '⚔️' : ''}` 
+                                        : 'Attempted'
+                                ) : lengthLabel}
                             />
                         );
                     })}
@@ -604,17 +618,32 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                     // Handle both legacy array format and new object mapping for isSent calculation
                     const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData || {});
 
-                    return CATEGORIES.filter(cat =>
-                        // Only show category if it has questions available today
-                        // or if the data hasn't loaded (or failed to load) yet (null)
-                        availableCategories === null || availableCategories.includes(cat)
-                    ).map(category => {
+                    // Handle availableCategories as either array of strings (legacy) or array of objects with counts
+                    const availableArray = Array.isArray(availableCategories) ? availableCategories : [];
+
+                    return CATEGORIES.filter(cat => {
+                        if (availableCategories === null) return true;
+                        return availableArray.some(item => 
+                            (typeof item === 'string' ? item : item.name) === cat
+                        );
+                    }).map(category => {
                         const categoryLower = category.toLowerCase();
                         const isPlayed = playedModes.some(m => m.toLowerCase() === categoryLower);
                         const isMulti = config.gameMode === 'multiplayer';
                         const isSent = isMulti && activeChallenges.some(m => m.toLowerCase() === categoryLower);
                         const savedScore = archive[gameDate]?.[categoryLower]?.score;
                         const isCompleted = isMulti && savedScore !== undefined;
+
+                        // Find the count for this category to determine length label
+                        const catInfo = availableArray.find(item => 
+                            (typeof item === 'string' ? item : item.name) === categoryLower
+                        );
+                        const qCount = (catInfo && typeof catInfo === 'object') ? catInfo.count : 5;
+                        
+                        let lengthLabel = '5 Daily Questions';
+                        if (qCount === 5) lengthLabel = 'Long (5 Questions)';
+                        else if (qCount === 4) lengthLabel = 'Medium (4 Questions)';
+                        else if (qCount === 3) lengthLabel = 'Short (3 Questions)';
 
                         return (
                             <MenuButton
@@ -646,8 +675,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                             </span>
                                         </span>
                                     ) : 
-                                    (savedScore !== undefined ? `Score: ${savedScore}/5 ${isMulti ? '⚔️' : ''}` : 'Attempted')
-                                ) : '5 Daily Questions'}
+                                    (savedScore !== undefined ? `Score: ${savedScore}/${qCount} ${isMulti ? '⚔️' : ''}` : 'Attempted')
+                                ) : lengthLabel}
                             />
                         );
                     });

@@ -360,7 +360,7 @@ async function runAutomation() {
             const prompt = `CRITICAL CLOCK: ${dateStr} (Current System Time)
 TARGET CATEGORY: ${category}
 ACT AS: Breaking News Editor. 
-TASK: Generate exactly 6 trivia questions from news in the last 24h of ${dateStr}.
+TASK: Generate exactly 8 trivia questions from news in the last 24h of ${dateStr}.
 
 ### THE "HARD STOP" RULES:
 1. DATE: Only news from ${dateStr}. Discard anything older.
@@ -484,18 +484,18 @@ NOTE: Only use the above leads if they are from ${dateStr}. If you need more, us
                 }
             }
 
-            // Step 2: Replacement Loop - Request more if we are below the 5-question limit
+            // Step 2: Replacement Loop - Request more if we are below the 3-question minimum to save costs
             let replacementRetries = 0;
-            while (validQuestions.length < 5 && replacementRetries < 3) {
+            while (validQuestions.length < 3 && replacementRetries < 3) {
                 if (replacementRetries > 0) {
                     console.log(`😴 Waiting 15 seconds before replacement attempt ${replacementRetries + 1}...`);
                     await sleep(15000);
                 }
 
                 replacementRetries++;
-                const needed = 5 - validQuestions.length;
+                const needed = 3 - validQuestions.length;
                 // Oversample: Always ask for at least 5 to ensure we get enough valid ones
-                console.log(`⚠️ Only ${validQuestions.length}/5 questions valid. Requesting a fresh batch of 5 candidates to fill ${needed} slots...`);
+                console.log(`⚠️ Only ${validQuestions.length}/3 questions valid. Requesting a fresh batch of 5 candidates to fill ${needed} slots...`);
                 
                 try {
                     const retryPrompt = `I need 5 NEW trivia candidates (to fill ${needed} missing slots) for the category "${category}" from news on ${dateStr}.
@@ -526,11 +526,11 @@ NOTE: Only use the above leads if they are from ${dateStr}. If you need more, us
             }
 
             // Step 3: Finalize if we hit the limit
-            if (validQuestions.length >= 5) {
+            if (validQuestions.length >= 3) {
                 const finalData = { questions: validQuestions.slice(0, 5) };
                 fs.writeFileSync(filePath, JSON.stringify(finalData, null, 2));
-                successfulCategories.push(category);
-                console.log(`✅ Category ${category} finalized with 5 valid questions.`);
+                successfulCategories.push({ name: category, count: finalData.questions.length });
+                console.log(`✅ Category ${category} finalized with ${validQuestions.length} valid questions.`);
             } else {
                 console.error(`❌ Category ${category} failed: Could only find ${validQuestions.length} valid questions.`);
             }
