@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-23",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Researchers have identified that establishing a regular habit of viewing what at a young age is linked to higher rates of mental health struggles?",
+      "options": [
+        "Adult content",
+        "Violent video games",
+        "Social media",
+        "Horror movies"
+      ],
+      "a": 0,
+      "correctText": "Adult content",
+      "category": "Science",
+      "source": "https://www.psypost.org/the-gap-between-seeing-and-seeking-adult-content-predicts-mental-health-risks/"
+    },
+    {
+      "q": "Longtime Democratic Representative David Scott, who recently passed away at 80, represented which state for over two decades?",
+      "options": [
+        "Georgia",
+        "Florida",
+        "South Carolina",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "Georgia",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/politics/congress/georgia-rep-david-scott-dies-80-rcna341463"
+    },
+    {
+      "q": "Which prediction market suspended three congressional candidates for insider trading on their own elections?",
+      "options": [
+        "Kalshi",
+        "Polymarket",
+        "PredictIt",
+        "Bovada"
+      ],
+      "a": 0,
+      "correctText": "Kalshi",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/22/kalshi-insider-trading-congress.html"
+    },
+    {
+      "q": "In April 2026, the City of Oshkosh, Wisconsin, rescinded its contract renewal for what type of technology after a company representative made false statements?",
+      "options": [
+        "Flock license plate cameras",
+        "ShotSpotter audio sensors",
+        "Axon body cameras",
+        "Clearview AI facial recognition"
+      ],
+      "a": 0,
+      "correctText": "Flock license plate cameras",
+      "category": "Technology",
+      "source": "https://www.wbay.com/2026/04/23/oshkosh-council-rescinds-flock-camera-contract-after-false-statements/"
+    },
+    {
+      "q": "According to reports on April 23, 2026, Canadian airlines faced a major jet fuel shortage and flight cancellations due to the blockage of which critical waterway?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Panama Canal",
+        "Strait of Malacca"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/flight-cancellations-strait-of-hormuz-9.7173742"
+    },
+    {
+      "q": "Acting Attorney General Todd Blanche signed an order reclassifying what substance to Schedule III in a historic shift? [1.6]",
+      "options": [
+        "Medical marijuana",
+        "Psilocybin",
+        "LSD",
+        "MDMA"
+      ],
+      "a": 0,
+      "correctText": "Medical marijuana",
+      "category": "Usa",
+      "source": "https://apnews.com/article/medical-marijuana-rescheduling-justice-department-trump-cannabis-1d6722d3aae122b1a91f8e4b6c690268"
+    },
+    {
+      "q": "In a recent drone strike on an occupied Donetsk command post, Ukraine reported killing 12 officers belonging to which Russian security service?",
+      "options": [
+        "FSB",
+        "SVR",
+        "GRU",
+        "FSO"
+      ],
+      "a": 0,
+      "correctText": "FSB",
+      "category": "World",
+      "source": "https://www.telegraph.co.uk/world-news/2026/04/23/ukraine-kills-12-russian-fsb-officers-in-drone-strike/"
+    },
+    {
+      "q": "A chemical leak involving nitric acid left two dead and dozens hospitalized at a silver recovery plant in which U.S. state?",
+      "options": [
+        "West Virginia",
+        "Ohio",
+        "Pennsylvania",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "West Virginia",
+      "category": "Usa",
+      "source": "https://apnews.com/article/west-virginia-chemical-leak-aa346adfcb6fecaad91f189b676c06bb"
+    },
+    {
+      "q": "According to new research, what type of bioengineered product has been shown to reduce the levels of microbes linked to worse outcomes in oral cancers?",
+      "options": [
+        "Chewing gum",
+        "Mouthwash",
+        "Toothpaste",
+        "Dental floss"
+      ],
+      "a": 0,
+      "correctText": "Chewing gum",
+      "category": "Science",
+      "source": "https://penntoday.upenn.edu/news/penn-dental-medicine-fighting-oral-cancer-bioengineered-chewing-gum"
+    },
+    {
+      "q": "Which European country's competition watchdog launched a formal antitrust investigation into Booking.com on April 23, 2026, over alleged hotel ranking manipulation?",
+      "options": [
+        "Italy",
+        "France",
+        "Spain",
+        "Germany"
+      ],
+      "a": 0,
+      "correctText": "Italy",
+      "category": "Business",
+      "source": "https://www.financership.com/italy-antitrust-probe-booking-com-hotel-ranking/"
+    }
+  ]
+}

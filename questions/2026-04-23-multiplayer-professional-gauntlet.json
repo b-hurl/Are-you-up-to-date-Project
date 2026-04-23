@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-23",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which country recently lifted its veto, allowing the formal approval of a loan for Ukraine and the 20th sanction package against Russia?",
+      "options": [
+        "Hungary",
+        "Slovakia",
+        "Austria",
+        "Turkey"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.reuters.com/world/europe/eu-formally-approves-ukraine-loan-20th-sanctions-package-against-russia-2026-04-23/"
+    },
+    {
+      "q": "A recent environmental study found that 98% of all recent environmental claims from the world's largest meat and dairy companies can be categorized as what?",
+      "options": [
+        "Greenwashing",
+        "Net-zero",
+        "Carbon-negative",
+        "Sustainable"
+      ],
+      "a": 0,
+      "correctText": "Greenwashing",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1124525"
+    },
+    {
+      "q": "An April 23, 2026, news report examined the trend of right-wing American influencers paying unprecedented attention to Canada's domestic politics, referring to this group as what?",
+      "options": [
+        "The MAGAsphere",
+        "The Alt-Right Alliance",
+        "The America First Coalition",
+        "The Patriot Network"
+      ],
+      "a": 0,
+      "correctText": "The MAGAsphere",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/americans-paying-attention-canada-magasphere-9.7172316"
+    },
+    {
+      "q": "Shares of which major British sportswear retailer declined on April 23, 2026, following the unexpected resignation of its chairman, Andy Higginson?",
+      "options": [
+        "JD Sports",
+        "Sports Direct",
+        "Frasers Group",
+        "Decathlon"
+      ],
+      "a": 0,
+      "correctText": "JD Sports",
+      "category": "Business",
+      "source": "https://www.agcc.co.uk/news-article/thursday-april-23-2026-todays-business-headlines"
+    },
+    {
+      "q": "Which AI company reportedly surged to a $1 trillion valuation on secondary markets in late April 2026, overtaking OpenAI?",
+      "options": [
+        "Anthropic",
+        "Mistral",
+        "Cohere",
+        "xAI"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/anthropic-trillion-dollar-valuation-on-secondary-markets-2026"
+    },
+    {
+      "q": "On April 23, 2026, a CBC report highlighted that fresh vegetables cost 7.8% more than last year, naming which vegetable as the 'worst offender' for climbing costs?",
+      "options": [
+        "Cucumber",
+        "Lettuce",
+        "Tomato",
+        "Cauliflower"
+      ],
+      "a": 0,
+      "correctText": "Cucumber",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/vegetable-prices-canada-9.7173027"
+    },
+    {
+      "q": "The popular 'MAGA' influencer and AI model Emily Hart was unmasked in April 2026 as being operated by whom?",
+      "options": [
+        "An Indian man",
+        "A Russian troll farm",
+        "A Chinese state media group",
+        "An American teenager"
+      ],
+      "a": 0,
+      "correctText": "An Indian man",
+      "category": "Technology",
+      "source": "https://www.yahoo.com/news/articles/ai-model-maga-influencer-emily-091027504.html"
+    },
+    {
+      "q": "President Donald Trump ordered a 'shoot-to-kill' action on Iranian vessels choking which strategic maritime chokepoint?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Bab el-Mandeb Strait",
+        "Panama Canal"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "World",
+      "source": "https://economictimes.indiatimes.com/news/international/world-news/trump-orders-shoot-to-kill-action-on-small-boats-in-strait-of-hormuz-amid-tensions/articleshow/130469291.cms"
+    },
+    {
+      "q": "Using which type of in-home appliance for one month spurred a small but significant improvement in brain function in adults age 40 and older?",
+      "options": [
+        "HEPA air purifier",
+        "Water filter",
+        "Humidifier",
+        "Dehumidifier"
+      ],
+      "a": 0,
+      "correctText": "HEPA air purifier",
+      "category": "Science",
+      "source": "https://theconversation.com/hepa-air-purifiers-may-boost-brain-power-in-adults-over-40-new-research-280885"
+    },
+    {
+      "q": "On April 23, 2026, Netflix's board of directors authorized an additional share repurchase program worth how much?",
+      "options": [
+        "$25 billion",
+        "$15 billion",
+        "$10 billion",
+        "$5 billion"
+      ],
+      "a": 0,
+      "correctText": "$25 billion",
+      "category": "Business",
+      "source": "https://www.reuters.com/business/media-telecom/netflix-announces-25-billion-share-buyback-2026-04-23/"
+    }
+  ]
+}

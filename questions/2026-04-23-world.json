@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which country recently lifted its veto, allowing the formal approval of a loan for Ukraine and the 20th sanction package against Russia?",
+      "options": [
+        "Hungary",
+        "Slovakia",
+        "Austria",
+        "Turkey"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.reuters.com/world/europe/eu-formally-approves-ukraine-loan-20th-sanctions-package-against-russia-2026-04-23/"
+    },
+    {
+      "q": "In a recent drone strike on an occupied Donetsk command post, Ukraine reported killing 12 officers belonging to which Russian security service?",
+      "options": [
+        "FSB",
+        "SVR",
+        "GRU",
+        "FSO"
+      ],
+      "a": 0,
+      "correctText": "FSB",
+      "category": "World",
+      "source": "https://www.telegraph.co.uk/world-news/2026/04/23/ukraine-kills-12-russian-fsb-officers-in-drone-strike/"
+    },
+    {
+      "q": "Pharmacies warned that the cost of which common painkiller jumped up to 30% in England due to the ongoing Iran war?",
+      "options": [
+        "Paracetamol",
+        "Ibuprofen",
+        "Aspirin",
+        "Naproxen"
+      ],
+      "a": 0,
+      "correctText": "Paracetamol",
+      "category": "World",
+      "source": "https://www.theguardian.com/business/2026/apr/23/iran-war-driving-up-medicine-prices-pharmacists-warn"
+    },
+    {
+      "q": "President Donald Trump ordered a 'shoot-to-kill' action on Iranian vessels choking which strategic maritime chokepoint?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Bab el-Mandeb Strait",
+        "Panama Canal"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "World",
+      "source": "https://economictimes.indiatimes.com/news/international/world-news/trump-orders-shoot-to-kill-action-on-small-boats-in-strait-of-hormuz-amid-tensions/articleshow/130469291.cms"
+    },
+    {
+      "q": "The UK government announced that the medical data of half a million volunteers from which health information database was listed for sale on a Chinese website?",
+      "options": [
+        "Biobank",
+        "NHS Digital",
+        "Health Data Research UK",
+        "CPRD"
+      ],
+      "a": 0,
+      "correctText": "Biobank",
+      "category": "World",
+      "source": "https://news.sky.com/story/medical-data-of-half-a-million-britons-listed-for-sale-on-chinese-website-government-says-13535387"
+    }
+  ]
+}

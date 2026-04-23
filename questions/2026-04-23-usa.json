@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Acting Attorney General Todd Blanche signed an order reclassifying what substance to Schedule III in a historic shift? [1.6]",
+      "options": [
+        "Medical marijuana",
+        "Psilocybin",
+        "LSD",
+        "MDMA"
+      ],
+      "a": 0,
+      "correctText": "Medical marijuana",
+      "category": "Usa",
+      "source": "https://apnews.com/article/medical-marijuana-rescheduling-justice-department-trump-cannabis-1d6722d3aae122b1a91f8e4b6c690268"
+    },
+    {
+      "q": "Which prediction market suspended three congressional candidates for insider trading on their own elections?",
+      "options": [
+        "Kalshi",
+        "Polymarket",
+        "PredictIt",
+        "Bovada"
+      ],
+      "a": 0,
+      "correctText": "Kalshi",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/22/kalshi-insider-trading-congress.html"
+    },
+    {
+      "q": "A chemical leak involving nitric acid left two dead and dozens hospitalized at a silver recovery plant in which U.S. state?",
+      "options": [
+        "West Virginia",
+        "Ohio",
+        "Pennsylvania",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "West Virginia",
+      "category": "Usa",
+      "source": "https://apnews.com/article/west-virginia-chemical-leak-aa346adfcb6fecaad91f189b676c06bb"
+    },
+    {
+      "q": "Which technology giant was revealed to be tracking employee keystrokes and mouse movements on apps like Google and LinkedIn to train AI models?",
+      "options": [
+        "Meta",
+        "Google",
+        "Microsoft",
+        "Amazon"
+      ],
+      "a": 0,
+      "correctText": "Meta",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/22/meta-tracks-employee-usage-on-google-linkedin-ai-training-project.html"
+    },
+    {
+      "q": "Longtime Democratic Representative David Scott, who recently passed away at 80, represented which state for over two decades?",
+      "options": [
+        "Georgia",
+        "Florida",
+        "South Carolina",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "Georgia",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/politics/congress/georgia-rep-david-scott-dies-80-rcna341463"
+    }
+  ]
+}

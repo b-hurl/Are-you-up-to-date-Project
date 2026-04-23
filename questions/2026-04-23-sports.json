@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What New England Patriots coach announced on April 23, 2026, that he is seeking counseling and will miss Day 3 of the NFL Draft?",
+      "options": [
+        "Mike Vrabel",
+        "Bill Belichick",
+        "Jerod Mayo",
+        "Brian Flores"
+      ],
+      "a": 0,
+      "correctText": "Mike Vrabel",
+      "category": "Sports",
+      "source": "https://www.espn.com/nfl/story/_/id/48566969/mike-vrabel-seek-counseling-not-patriots-day-3-nfl-draft"
+    },
+    {
+      "q": "Which college football head coach agreed to a new 7-year, $87.5M contract with the University of Alabama in April 2026?",
+      "options": [
+        "Kalen DeBoer",
+        "Nick Saban",
+        "Kirby Smart",
+        "Lane Kiffin"
+      ],
+      "a": 0,
+      "correctText": "Kalen DeBoer",
+      "category": "Sports",
+      "source": "https://www.espn.com/college-football/story/_/id/48563560/alabama-kalen-deboer-agree-new-7-year-875m-contract"
+    },
+    {
+      "q": "Chelsea FC sacked which head coach in late April 2026 after just three months in charge?",
+      "options": [
+        "Liam Rosenior",
+        "Mauricio Pochettino",
+        "Thomas Tuchel",
+        "Frank Lampard"
+      ],
+      "a": 0,
+      "correctText": "Liam Rosenior",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/articles/c9d4w8032vno?app-referrer=push-notification"
+    },
+    {
+      "q": "Which Utah Mammoth player scored a late goal to beat the Vegas Golden Knights 3-2 and even their first-round playoff series in April 2026?",
+      "options": [
+        "Logan Cooley",
+        "Clayton Keller",
+        "Dylan Guenther",
+        "Jack Eichel"
+      ],
+      "a": 0,
+      "correctText": "Logan Cooley",
+      "category": "Sports",
+      "source": "https://apnews.com/article/mammoth-golden-knights-score-ec3a92e26393ac757707b9d332913078"
+    },
+    {
+      "q": "A decade after winning the Premier League title, which football club was officially relegated to League One following a 2-2 draw with Hull City in April 2026?",
+      "options": [
+        "Leicester City",
+        "Southampton",
+        "Leeds United",
+        "Sheffield Wednesday"
+      ],
+      "a": 0,
+      "correctText": "Leicester City",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/live/cvg0zz7xm63t"
+    }
+  ]
+}

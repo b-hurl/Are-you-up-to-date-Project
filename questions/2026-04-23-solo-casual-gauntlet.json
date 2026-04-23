@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-23",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Warner Bros. Discovery shareholders held a special meeting on April 23, 2026, to vote on a proposed $110 billion mega-merger with which media company?",
+      "options": [
+        "Paramount Skydance",
+        "Universal Pictures",
+        "The Walt Disney Company",
+        "Sony Pictures"
+      ],
+      "a": 0,
+      "correctText": "Paramount Skydance",
+      "category": "Entertainment",
+      "source": "https://edition.cnn.com/2026/04/22/media/wbd-paramount-shareholders-vote-merger-warner-ellison"
+    },
+    {
+      "q": "A decade after winning the Premier League title, which football club was officially relegated to League One following a 2-2 draw with Hull City in April 2026?",
+      "options": [
+        "Leicester City",
+        "Southampton",
+        "Leeds United",
+        "Sheffield Wednesday"
+      ],
+      "a": 0,
+      "correctText": "Leicester City",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/live/cvg0zz7xm63t"
+    },
+    {
+      "q": "Who was announced on April 23, 2026, as the Jury President for the 83rd Venice International Film Festival?",
+      "options": [
+        "Maggie Gyllenhaal",
+        "Cate Blanchett",
+        "Julianne Moore",
+        "Isabelle Huppert"
+      ],
+      "a": 0,
+      "correctText": "Maggie Gyllenhaal",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/venice-film-2026-jury-president-1236869224/"
+    },
+    {
+      "q": "It was officially confirmed that Michael B. Jordan and Austin Butler will star as Tubbs and Crockett in the period-piece reboot 'Miami Vice '85'. Which director is helming the project?",
+      "options": [
+        "Joseph Kosinski",
+        "Michael Mann",
+        "Denis Villeneuve",
+        "Christopher Nolan"
+      ],
+      "a": 0,
+      "correctText": "Joseph Kosinski",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/michael-b-jordan-austin-butler-joseph-kosinski-miami-vice-85-1236572114/"
+    },
+    {
+      "q": "Which Utah Mammoth player scored a late goal to beat the Vegas Golden Knights 3-2 and even their first-round playoff series in April 2026?",
+      "options": [
+        "Logan Cooley",
+        "Clayton Keller",
+        "Dylan Guenther",
+        "Jack Eichel"
+      ],
+      "a": 0,
+      "correctText": "Logan Cooley",
+      "category": "Sports",
+      "source": "https://apnews.com/article/mammoth-golden-knights-score-ec3a92e26393ac757707b9d332913078"
+    },
+    {
+      "q": "A ProPublica investigation published on April 23, 2026, revealed that fewer than half of the 140,000 opioid victims who filed claims will receive compensation from which pharmaceutical company's $7.4 billion settlement?",
+      "options": [
+        "Purdue Pharma",
+        "Johnson & Johnson",
+        "Endo International",
+        "Mallinckrodt"
+      ],
+      "a": 0,
+      "correctText": "Purdue Pharma",
+      "category": "Health",
+      "source": "https://www.propublica.org/article/purdue-settlement-leaves-opioid-victims-behind"
+    },
+    {
+      "q": "According to a scientific statement released by the American Heart Association on April 23, 2026, physical activity may be safer than previously thought for children diagnosed with what specific heart muscle disorder?",
+      "options": [
+        "Cardiomyopathy",
+        "Endocarditis",
+        "Atherosclerosis",
+        "Rheumatic heart disease"
+      ],
+      "a": 0,
+      "correctText": "Cardiomyopathy",
+      "category": "Health",
+      "source": "https://newsroom.heart.org/news/benefits-of-physical-activity-may-outweigh-risks-for-children-with-some-heart-conditions"
+    },
+    {
+      "q": "What New England Patriots coach announced on April 23, 2026, that he is seeking counseling and will miss Day 3 of the NFL Draft?",
+      "options": [
+        "Mike Vrabel",
+        "Bill Belichick",
+        "Jerod Mayo",
+        "Brian Flores"
+      ],
+      "a": 0,
+      "correctText": "Mike Vrabel",
+      "category": "Sports",
+      "source": "https://www.espn.com/nfl/story/_/id/48566969/mike-vrabel-seek-counseling-not-patriots-day-3-nfl-draft"
+    },
+    {
+      "q": "On April 23, 2026, Netflix authorized a massive new stock buyback program to help boost its share price. How much was authorized for this repurchase?",
+      "options": [
+        "$25 Billion",
+        "$10 Billion",
+        "$50 Billion",
+        "$5 Billion"
+      ],
+      "a": 0,
+      "correctText": "$25 Billion",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/netflix-25-billion-share-repurchase-stock-price-1236728558/"
+    },
+    {
+      "q": "On April 23, 2026, it was reported that U.S. health officials halted the publication of a CDC study analyzing the effectiveness of which vaccine in preventing adult emergency room visits and hospitalizations?",
+      "options": [
+        "COVID-19 vaccine",
+        "Influenza vaccine",
+        "RSV vaccine",
+        "Pneumococcal vaccine"
+      ],
+      "a": 0,
+      "correctText": "COVID-19 vaccine",
+      "category": "Health",
+      "source": "https://www.click2houston.com/news/politics/2026/04/23/us-health-officials-nix-publication-of-a-study-on-covid-vaccine-effectiveness/"
+    }
+  ]
+}

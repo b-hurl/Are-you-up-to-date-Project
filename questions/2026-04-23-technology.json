@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which AI company reportedly surged to a $1 trillion valuation on secondary markets in late April 2026, overtaking OpenAI?",
+      "options": [
+        "Anthropic",
+        "Mistral",
+        "Cohere",
+        "xAI"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/anthropic-trillion-dollar-valuation-on-secondary-markets-2026"
+    },
+    {
+      "q": "In April 2026, the City of Oshkosh, Wisconsin, rescinded its contract renewal for what type of technology after a company representative made false statements?",
+      "options": [
+        "Flock license plate cameras",
+        "ShotSpotter audio sensors",
+        "Axon body cameras",
+        "Clearview AI facial recognition"
+      ],
+      "a": 0,
+      "correctText": "Flock license plate cameras",
+      "category": "Technology",
+      "source": "https://www.wbay.com/2026/04/23/oshkosh-council-rescinds-flock-camera-contract-after-false-statements/"
+    },
+    {
+      "q": "Which video game company was sued by players in April 2026 demanding they receive any US government tariff refunds the company collects?",
+      "options": [
+        "Nintendo",
+        "Sony",
+        "Microsoft",
+        "Valve"
+      ],
+      "a": 0,
+      "correctText": "Nintendo",
+      "category": "Technology",
+      "source": "https://www.videogameschronicle.com/news/nintendo-sued-by-players-who-say-they-should-get-any-tariff-refunds-received-by-the-us-government/"
+    },
+    {
+      "q": "The popular 'MAGA' influencer and AI model Emily Hart was unmasked in April 2026 as being operated by whom?",
+      "options": [
+        "An Indian man",
+        "A Russian troll farm",
+        "A Chinese state media group",
+        "An American teenager"
+      ],
+      "a": 0,
+      "correctText": "An Indian man",
+      "category": "Technology",
+      "source": "https://www.yahoo.com/news/articles/ai-model-maga-influencer-emily-091027504.html"
+    },
+    {
+      "q": "Which tech company published a 22-point 'mini manifesto' in April 2026 stating Silicon Valley owes a 'moral debt' to the U.S. and calling some cultures 'harmful and middling'?",
+      "options": [
+        "Palantir",
+        "Anduril",
+        "Clearview AI",
+        "SpaceX"
+      ],
+      "a": 0,
+      "correctText": "Palantir",
+      "category": "Technology",
+      "source": "https://fortune.com/2026/04/22/palantir-alex-karp-mini-manifesto-national-security-defense-tech-ai/"
+    }
+  ]
+}
