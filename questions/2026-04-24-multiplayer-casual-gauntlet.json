@@ -1,0 +1,110 @@
+{
+  "date": "2026-04-24",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "A24's new film 'THE MOMENT', starring Charli xcx, was announced in late April 2026 to begin streaming exclusively on which platform?",
+      "options": [
+        "HBO Max",
+        "Netflix",
+        "Hulu",
+        "Paramount+"
+      ],
+      "a": 0,
+      "correctText": "HBO Max",
+      "category": "Entertainment",
+      "source": "https://press.wbd.com/us/media-release/a24s-moment-begins-streaming-exclusively-hbo-max-may-29"
+    },
+    {
+      "q": "A 2026 article in The Conversation examined why reading scores in the U.S. aren't rising despite the adoption of new textbooks. According to the publication, what state saw minimal reading proficiency increases in 2024, with 74% of sixth graders reading proficiently?",
+      "options": [
+        "Iowa",
+        "Tennessee",
+        "California",
+        "Florida"
+      ],
+      "a": 0,
+      "correctText": "Iowa",
+      "category": "Books",
+      "source": "https://theconversation.com/new-reading-textbooks-same-problem-why-childrens-reading-scores-in-the-us-arent-rising-280125"
+    },
+    {
+      "q": "According to Famitsu data from late April 2026, which Nintendo Switch 2 life simulation game topped the Japanese physical charts with over 565,000 copies sold in its launch week?",
+      "options": [
+        "Animal Crossing: New Horizons",
+        "Story of Seasons: A Wonderful Life",
+        "Tomodachi Life: Living the Dream",
+        "Disney Magical World 3"
+      ],
+      "a": 2,
+      "correctText": "Tomodachi Life: Living the Dream",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/04/japanese-charts-tomodachi-lifes-huge-start-crushes-the-competition"
+    },
+    {
+      "q": "In April 2026, Publishers Weekly profiled illustrator Gemma Correll regarding her newly released graphic memoir. What is the title of the book?",
+      "options": [
+        "Gemma Correll Welcomes You to Anxietyland",
+        "Graphic Rage: Comics on Gender",
+        "The Burning of Moses Seattle",
+        "Love Letter to a Garden"
+      ],
+      "a": 0,
+      "correctText": "Gemma Correll Welcomes You to Anxietyland",
+      "category": "Books",
+      "source": "https://www.publishersweekly.com/pw/by-topic/authors/profiles/article/99518-gemma-correll-welcomes-you-to-anxietyland.html"
+    },
+    {
+      "q": "Warner Bros. Discovery shareholders overwhelmingly approved a $111 billion megadeal in late April 2026 to acquire which rival media company?",
+      "options": [
+        "Paramount",
+        "Sony Pictures",
+        "Lionsgate",
+        "AMC Networks"
+      ],
+      "a": 0,
+      "correctText": "Paramount",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/warner-bros-discovery-paramount-shareholder-approval-zaslav-pay-package-1236727798/"
+    },
+    {
+      "q": "Former Dodgers star Yasiel Puig recently joined a semi-pro baseball team in Canada while facing up to how many years in prison?",
+      "options": [
+        "5 years",
+        "10 years",
+        "25 years",
+        "15 years"
+      ],
+      "a": 3,
+      "correctText": "15 years",
+      "category": "Sports",
+      "source": "https://www.foxnews.com/outkick-sports/former-dodgers-star-yasiel-puig-joins-semi-pro-baseball-team-facing-15-years-prison"
+    },
+    {
+      "q": "Italy's sports minister Andrea Abodi firmly ruled out replacing which country at the 2026 World Cup, stating 'qualification is done on the pitch'?",
+      "options": [
+        "Russia",
+        "North Korea",
+        "Iran",
+        "Syria"
+      ],
+      "a": 2,
+      "correctText": "Iran",
+      "category": "Sports",
+      "source": "https://www.independent.co.uk/sport/football/italy-iran-world-cup-2026-donald-trump-b2963716.html"
+    },
+    {
+      "q": "The Pathfinder Community Library announced 'The Mother In-Law' as their Book of the Week on April 24, 2026, highlighting the thriller about a suspicious death. Who is the author of this novel?",
+      "options": [
+        "Sally Hepworth",
+        "Alice Feeney",
+        "Colleen Hoover",
+        "Mary Kubica"
+      ],
+      "a": 0,
+      "correctText": "Sally Hepworth",
+      "category": "Books",
+      "source": "https://www.bigrapidsnews.com/news/article/pathfinder-community-library-book-buzz-for-april-24-2026.php"
+    }
+  ]
+}

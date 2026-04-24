@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A study published on April 24, 2026, revealed that many introductory textbooks in what subject continue to misrepresent famous experiments and repeat long-standing myths?",
+      "options": [
+        "Psychology",
+        "Sociology",
+        "Biology",
+        "Economics"
+      ],
+      "a": 0,
+      "correctText": "Psychology",
+      "category": "Science",
+      "source": "https://www.psypost.org/psychology-textbooks-still-misrepresent-famous-experiments-and-controversial-debates/"
+    },
+    {
+      "q": "According to an April 24, 2026, study of children in a Swedish region, exposure to very high levels of what chemicals in the womb is linked to a 40% higher asthma risk?",
+      "options": [
+        "PFAS",
+        "Phthalates",
+        "BPA",
+        "Lead"
+      ],
+      "a": 0,
+      "correctText": "PFAS",
+      "category": "Science",
+      "source": "https://www.lunduniversity.lu.se/article/link-observed-between-very-high-pfas-exposure-and-asthma-children"
+    },
+    {
+      "q": "The randomized controlled PERTH Trial, discussed in an April 24, 2026, report, showed that a low-plastic diet can significantly reduce urinary levels of plastic-associated bisphenols and what other chemicals?",
+      "options": [
+        "Phthalates",
+        "Sulfates",
+        "Nitrates",
+        "Fluorides"
+      ],
+      "a": 0,
+      "correctText": "Phthalates",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41591-026-04324-7"
+    },
+    {
+      "q": "A study highlighted on April 24, 2026, challenged earlier beliefs by revealing that over 20 times more of what type of atmospheric particle is actually emitted by land sources rather than the ocean?",
+      "options": [
+        "Microplastics",
+        "Volcanic ash",
+        "Desert dust",
+        "Pollen"
+      ],
+      "a": 0,
+      "correctText": "Microplastics",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/news/top/science/"
+    },
+    {
+      "q": "Reported on April 24, 2026, scientists analyzing trapped air in ancient Antarctic ice have uncovered a surprising new chapter in Earth's climate story stretching back how many years?",
+      "options": [
+        "3 million years",
+        "10,000 years",
+        "50 million years",
+        "1 billion years"
+      ],
+      "a": 0,
+      "correctText": "3 million years",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/news/top/science/"
+    }
+  ]
+}

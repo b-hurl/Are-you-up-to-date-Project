@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 24, 2026, a Jewish student sued which Canadian university for $1.3 million over allegations of a 'poisoned' learning environment?",
+      "options": [
+        "Toronto Metropolitan University",
+        "McGill University",
+        "University of Toronto",
+        "York University"
+      ],
+      "a": 0,
+      "correctText": "Toronto Metropolitan University",
+      "category": "Canada",
+      "source": "https://nationalpost.com/news/schools-need-to-wake-up-jewish-student-sues-tmu-for-1-3m-over-alleged-poisoned-learning-environment"
+    },
+    {
+      "q": "Which Canadian aerospace company's jet was selected by NATO in April 2026 to serve as its new AWACS platform, shifting away from Boeing?",
+      "options": [
+        "Bombardier",
+        "Airbus Canada",
+        "Viking Air",
+        "De Havilland Canada"
+      ],
+      "a": 0,
+      "correctText": "Bombardier",
+      "category": "Canada",
+      "source": "https://www.defensenews.com/global/europe/2026/04/24/nato-eyes-swedish-canadian-jet-for-awacs-role-in-shift-away-from-boeing/"
+    },
+    {
+      "q": "The federal government approved Enbridge's $4-billion 'Sunrise' natural gas pipeline expansion project on April 24, 2026. In which province is this project located?",
+      "options": [
+        "British Columbia",
+        "Alberta",
+        "Saskatchewan",
+        "Nova Scotia"
+      ],
+      "a": 0,
+      "correctText": "British Columbia",
+      "category": "Canada",
+      "source": "https://www.bnnbloomberg.ca/business/2026/04/24/government-approves-enbridges-sunrise-natural-gas-pipeline-expansion-project/"
+    },
+    {
+      "q": "Following the death of a Cree baby whose mother was 'begging for help' while waiting for a doctor's call, the Chief Coroner launched an investigation into the remote hospital in which Ontario community in April 2026?",
+      "options": [
+        "Fort Albany",
+        "Moose Factory",
+        "Attawapiskat",
+        "Kashechewan"
+      ],
+      "a": 0,
+      "correctText": "Fort Albany",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/sudbury/attawapiskat-weeneebayko-hospital-health-child-death-remote-9.7174880"
+    },
+    {
+      "q": "As of late April 2026, Canada is reportedly leaving many migrants stuck in limbo by abruptly cancelling thousands of claims for what specific legal status?",
+      "options": [
+        "Asylum",
+        "Permanent Residency",
+        "Student Visas",
+        "Express Entry"
+      ],
+      "a": 0,
+      "correctText": "Asylum",
+      "category": "Canada",
+      "source": "https://www.thestar.com/news/canada/canada-is-cancelling-thousands-of-asylum-claims-its-leaving-this-man-and-many-other-migrants-stuck-in-limbo-here/article_dee8bcfc-88a6-4529-825d-b029df0f8b3f.html"
+    }
+  ]
+}

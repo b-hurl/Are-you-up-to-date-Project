@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 24, 2026, NATO clarified that the US cannot suspend which country from the alliance, following a reported Pentagon email?",
+      "options": [
+        "Spain",
+        "France",
+        "Germany",
+        "Turkey"
+      ],
+      "a": 0,
+      "correctText": "Spain",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cz78x703lrvo"
+    },
+    {
+      "q": "On April 24, 2026, a 75-year-old millionaire US big game hunter was reported to have been trampled to death in Central Africa by what animal?",
+      "options": [
+        "Elephants",
+        "Rhinoceroses",
+        "Hippopotamuses",
+        "Cape buffalo"
+      ],
+      "a": 0,
+      "correctText": "Elephants",
+      "category": "World",
+      "source": "https://www.dailymail.com/news/article-15761595/Millionaire-US-big-game-hunter-75-trampled-death-five-elephants-hunting-antelope-central-Africa.html"
+    },
+    {
+      "q": "Which British territory's sovereignty was affirmed by No 10 on April 24, 2026, following reports of a US 'review'?",
+      "options": [
+        "Falkland Islands",
+        "Gibraltar",
+        "Bermuda",
+        "Cayman Islands"
+      ],
+      "a": 0,
+      "correctText": "Falkland Islands",
+      "category": "World",
+      "source": "https://www.bbc.co.uk/news/articles/cde51y0zgjyo"
+    },
+    {
+      "q": "On April 24, 2026, Polish PM Donald Tusk stated that an informal EU summit in Cyprus was the 'first with no Russians in the room', an apparent jab at which absent leader?",
+      "options": [
+        "Viktor Orbán",
+        "Robert Fico",
+        "Aleksandar Vučić",
+        "Recep Tayyip Erdoğan"
+      ],
+      "a": 0,
+      "correctText": "Viktor Orbán",
+      "category": "World",
+      "source": "https://www.pravda.com.ua/eng/news/2026/04/24/8031666/"
+    },
+    {
+      "q": "In April 2026, Donald Trump claimed he speaks for the UK more than which member of the British royal family?",
+      "options": [
+        "Prince Harry",
+        "King Charles III",
+        "Prince William",
+        "Prince Andrew"
+      ],
+      "a": 0,
+      "correctText": "Prince Harry",
+      "category": "World",
+      "source": "https://www.bbc.co.uk/news/articles/cx268zxgx1no"
+    }
+  ]
+}

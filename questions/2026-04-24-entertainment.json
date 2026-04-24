@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 24, 2026, a man was arrested in Singapore for allegedly leaking an unreleased film from which blockbuster franchise? [1.9]",
+      "options": [
+        "Avatar",
+        "Marvel Cinematic Universe",
+        "Star Wars",
+        "Jurassic World"
+      ],
+      "a": 0,
+      "correctText": "Avatar",
+      "category": "Entertainment",
+      "source": "https://www.straitstimes.com/singapore/man-arrested-after-allegedly-accessing-content-server-leaking-unreleased-film-online"
+    },
+    {
+      "q": "Which animated movie sequel was reported in April 2026 to have snagged $21.9 million in tax credits to film in California?",
+      "options": [
+        "The Simpsons Movie 2",
+        "Shrek 5",
+        "Minions 3",
+        "Toy Story 5"
+      ],
+      "a": 0,
+      "correctText": "The Simpsons Movie 2",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/business-news/simpsons-movie-sequel-nabs-21-9-million-to-film-in-california-1236572654/"
+    },
+    {
+      "q": "Warner Bros. Discovery shareholders overwhelmingly approved a $111 billion megadeal in late April 2026 to acquire which rival media company?",
+      "options": [
+        "Paramount",
+        "Sony Pictures",
+        "Lionsgate",
+        "AMC Networks"
+      ],
+      "a": 0,
+      "correctText": "Paramount",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/warner-bros-discovery-paramount-shareholder-approval-zaslav-pay-package-1236727798/"
+    },
+    {
+      "q": "In an SEC filing revealed in late April 2026, Netflix authorized a massive stock buyback worth how much to boost its share price?",
+      "options": [
+        "$25 Billion",
+        "$10 Billion",
+        "$50 Billion",
+        "$5 Billion"
+      ],
+      "a": 0,
+      "correctText": "$25 Billion",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/netflix-25-billion-share-repurchase-stock-price-1236728558/"
+    },
+    {
+      "q": "A24's new film 'THE MOMENT', starring Charli xcx, was announced in late April 2026 to begin streaming exclusively on which platform?",
+      "options": [
+        "HBO Max",
+        "Netflix",
+        "Hulu",
+        "Paramount+"
+      ],
+      "a": 0,
+      "correctText": "HBO Max",
+      "category": "Entertainment",
+      "source": "https://press.wbd.com/us/media-release/a24s-moment-begins-streaming-exclusively-hbo-max-may-29"
+    }
+  ]
+}
