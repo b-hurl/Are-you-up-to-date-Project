@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-24",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "On April 24, 2026, a 75-year-old millionaire US big game hunter was reported to have been trampled to death in Central Africa by what animal?",
+      "options": [
+        "Elephants",
+        "Rhinoceroses",
+        "Hippopotamuses",
+        "Cape buffalo"
+      ],
+      "a": 0,
+      "correctText": "Elephants",
+      "category": "World",
+      "source": "https://www.dailymail.com/news/article-15761595/Millionaire-US-big-game-hunter-75-trampled-death-five-elephants-hunting-antelope-central-Africa.html"
+    },
+    {
+      "q": "Procter & Gamble reported a six percent increase in diluted net earnings per share on April 24, 2026, driven by a gain from the dissolution of which joint venture business?",
+      "options": [
+        "Glad",
+        "Clorox",
+        "Bounty",
+        "Swiffer"
+      ],
+      "a": 0,
+      "correctText": "Glad",
+      "category": "Business",
+      "source": "https://www.pg.com/"
+    },
+    {
+      "q": "In an internal memo reported on April 24, 2026, Xbox leadership admitted that players are frustrated and that their presence on which platform 'isn't strong enough'?",
+      "options": [
+        "PC",
+        "Mobile",
+        "Virtual Reality",
+        "Cloud Streaming"
+      ],
+      "a": 0,
+      "correctText": "PC",
+      "category": "Business",
+      "source": "https://www.pcgamer.com/gaming-industry/our-presence-on-pc-isnt-strong-enough-xbox-bosses-admit/"
+    },
+    {
+      "q": "A proposed class action lawsuit filed in April 2026 accuses JetBlue Airways of utilizing what controversial method to set its ticket prices?",
+      "options": [
+        "Customers' personal data",
+        "Weather forecasting algorithms",
+        "Political affiliation metrics",
+        "Frequent flyer tier downgrades"
+      ],
+      "a": 0,
+      "correctText": "Customers' personal data",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/business/2026/apr/23/jetblue-lawsuit-personal-data-ticket-prices"
+    },
+    {
+      "q": "The federal government approved Enbridge's $4-billion 'Sunrise' natural gas pipeline expansion project on April 24, 2026. In which province is this project located?",
+      "options": [
+        "British Columbia",
+        "Alberta",
+        "Saskatchewan",
+        "Nova Scotia"
+      ],
+      "a": 0,
+      "correctText": "British Columbia",
+      "category": "Canada",
+      "source": "https://www.bnnbloomberg.ca/business/2026/04/24/government-approves-enbridges-sunrise-natural-gas-pipeline-expansion-project/"
+    },
+    {
+      "q": "Reported on April 24, 2026, scientists analyzing trapped air in ancient Antarctic ice have uncovered a surprising new chapter in Earth's climate story stretching back how many years?",
+      "options": [
+        "3 million years",
+        "10,000 years",
+        "50 million years",
+        "1 billion years"
+      ],
+      "a": 0,
+      "correctText": "3 million years",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/news/top/science/"
+    },
+    {
+      "q": "According to an April 2026 Florida Fish and Wildlife report, how many sloths died at a warehouse connected to the upcoming Sloth World Orlando attraction?",
+      "options": [
+        "31",
+        "12",
+        "45",
+        "8"
+      ],
+      "a": 0,
+      "correctText": "31",
+      "category": "Usa",
+      "source": "https://www.fox35orlando.com/news/31-sloths-died-sloth-world-orlando-owned-warehouse-fwc-reports"
+    },
+    {
+      "q": "The randomized controlled PERTH Trial, discussed in an April 24, 2026, report, showed that a low-plastic diet can significantly reduce urinary levels of plastic-associated bisphenols and what other chemicals?",
+      "options": [
+        "Phthalates",
+        "Sulfates",
+        "Nitrates",
+        "Fluorides"
+      ],
+      "a": 0,
+      "correctText": "Phthalates",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41591-026-04324-7"
+    },
+    {
+      "q": "Which European country reached a deal with STACKIT on April 24, 2026, to decrease its reliance on U.S. tech companies?",
+      "options": [
+        "Netherlands",
+        "Germany",
+        "France",
+        "Spain"
+      ],
+      "a": 0,
+      "correctText": "Netherlands",
+      "category": "Technology",
+      "source": "https://nltimes.nl/2026/04/24/netherlands-reaches-deal-european-cloud-company-decrease-us-tech-reliance"
+    },
+    {
+      "q": "Which luxury automaker admitted on April 24, 2026, that its Middle East deliveries are at a 'complete standstill' due to regional geopolitical disruptions affecting shipping routes?",
+      "options": [
+        "Lamborghini",
+        "Ferrari",
+        "Bentley",
+        "Maserati"
+      ],
+      "a": 0,
+      "correctText": "Lamborghini",
+      "category": "Business",
+      "source": "https://www.financership.com/lamborghini-middle-east-sales-standstill-ceo/"
+    }
+  ]
+}

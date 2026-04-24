@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "The finalists for the 2026 Hugo Awards were announced in the last 24 hours. Which of the following works was nominated for Best Novel?",
+      "options": [
+        "A Drop of Corruption",
+        "The Memory Museum",
+        "Lost Lambs",
+        "The Midnight Train"
+      ],
+      "a": 0,
+      "correctText": "A Drop of Corruption",
+      "category": "Books",
+      "source": "https://reactormag.com/2026-hugo-awards-finalists/"
+    },
+    {
+      "q": "A 2026 article in The Conversation examined why reading scores in the U.S. aren't rising despite the adoption of new textbooks. According to the publication, what state saw minimal reading proficiency increases in 2024, with 74% of sixth graders reading proficiently?",
+      "options": [
+        "Iowa",
+        "Tennessee",
+        "California",
+        "Florida"
+      ],
+      "a": 0,
+      "correctText": "Iowa",
+      "category": "Books",
+      "source": "https://theconversation.com/new-reading-textbooks-same-problem-why-childrens-reading-scores-in-the-us-arent-rising-280125"
+    },
+    {
+      "q": "In April 2026, Publishers Weekly profiled illustrator Gemma Correll regarding her newly released graphic memoir. What is the title of the book?",
+      "options": [
+        "Gemma Correll Welcomes You to Anxietyland",
+        "Graphic Rage: Comics on Gender",
+        "The Burning of Moses Seattle",
+        "Love Letter to a Garden"
+      ],
+      "a": 0,
+      "correctText": "Gemma Correll Welcomes You to Anxietyland",
+      "category": "Books",
+      "source": "https://www.publishersweekly.com/pw/by-topic/authors/profiles/article/99518-gemma-correll-welcomes-you-to-anxietyland.html"
+    },
+    {
+      "q": "The Pathfinder Community Library announced 'The Mother In-Law' as their Book of the Week on April 24, 2026, highlighting the thriller about a suspicious death. Who is the author of this novel?",
+      "options": [
+        "Sally Hepworth",
+        "Alice Feeney",
+        "Colleen Hoover",
+        "Mary Kubica"
+      ],
+      "a": 0,
+      "correctText": "Sally Hepworth",
+      "category": "Books",
+      "source": "https://www.bigrapidsnews.com/news/article/pathfinder-community-library-book-buzz-for-april-24-2026.php"
+    }
+  ]
+}

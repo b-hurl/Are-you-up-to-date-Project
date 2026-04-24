@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "On April 24, 2026, HoYoverse announced that which of their action RPGs is coming to Steam in Q2 2026?",
+      "options": [
+        "Genshin Impact",
+        "Zenless Zone Zero",
+        "Honkai: Star Rail",
+        "Tears of Themis"
+      ],
+      "a": 1,
+      "correctText": "Zenless Zone Zero",
+      "category": "Gaming",
+      "source": "https://techraptor.net/gaming/news/zenless-zone-zero-version-28-lands-in-may-steam-release-coming-soon"
+    },
+    {
+      "q": "To mark its first anniversary on April 24, 2026, developer Sandfall Interactive announced that which hit RPG had reached eight million copies sold?",
+      "options": [
+        "Persona 5 Royal",
+        "Metaphor: ReFantazio",
+        "Clair Obscur: Expedition 33",
+        "Dragon's Dogma 2"
+      ],
+      "a": 2,
+      "correctText": "Clair Obscur: Expedition 33",
+      "category": "Gaming",
+      "source": "https://techraptor.net/gaming/news/clair-obscur-expedition-33-sales-hit-8m-on-first-anniversary"
+    },
+    {
+      "q": "Announced on April 24, 2026, Toei Games' first three published titles include HINO, DEBUG NEPHEMEE, and what other game?",
+      "options": [
+        "TENGU",
+        "KILLA",
+        "YOKAI",
+        "REAPER"
+      ],
+      "a": 1,
+      "correctText": "KILLA",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/toei-games-announces-first-three-published-titles-killa-hino-and-debug-nephemee"
+    },
+    {
+      "q": "According to Famitsu data from late April 2026, which Nintendo Switch 2 life simulation game topped the Japanese physical charts with over 565,000 copies sold in its launch week?",
+      "options": [
+        "Animal Crossing: New Horizons",
+        "Story of Seasons: A Wonderful Life",
+        "Tomodachi Life: Living the Dream",
+        "Disney Magical World 3"
+      ],
+      "a": 2,
+      "correctText": "Tomodachi Life: Living the Dream",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/04/japanese-charts-tomodachi-lifes-huge-start-crushes-the-competition"
+    }
+  ]
+}

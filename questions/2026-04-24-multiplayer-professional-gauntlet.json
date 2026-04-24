@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-24",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Following the death of a Cree baby whose mother was 'begging for help' while waiting for a doctor's call, the Chief Coroner launched an investigation into the remote hospital in which Ontario community in April 2026?",
+      "options": [
+        "Fort Albany",
+        "Moose Factory",
+        "Attawapiskat",
+        "Kashechewan"
+      ],
+      "a": 0,
+      "correctText": "Fort Albany",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/sudbury/attawapiskat-weeneebayko-hospital-health-child-death-remote-9.7174880"
+    },
+    {
+      "q": "On April 24, 2026, NATO clarified that the US cannot suspend which country from the alliance, following a reported Pentagon email?",
+      "options": [
+        "Spain",
+        "France",
+        "Germany",
+        "Turkey"
+      ],
+      "a": 0,
+      "correctText": "Spain",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cz78x703lrvo"
+    },
+    {
+      "q": "Which British territory's sovereignty was affirmed by No 10 on April 24, 2026, following reports of a US 'review'?",
+      "options": [
+        "Falkland Islands",
+        "Gibraltar",
+        "Bermuda",
+        "Cayman Islands"
+      ],
+      "a": 0,
+      "correctText": "Falkland Islands",
+      "category": "World",
+      "source": "https://www.bbc.co.uk/news/articles/cde51y0zgjyo"
+    },
+    {
+      "q": "On April 24, 2026, Polish PM Donald Tusk stated that an informal EU summit in Cyprus was the 'first with no Russians in the room', an apparent jab at which absent leader?",
+      "options": [
+        "Viktor Orbán",
+        "Robert Fico",
+        "Aleksandar Vučić",
+        "Recep Tayyip Erdoğan"
+      ],
+      "a": 0,
+      "correctText": "Viktor Orbán",
+      "category": "World",
+      "source": "https://www.pravda.com.ua/eng/news/2026/04/24/8031666/"
+    },
+    {
+      "q": "In April 2026, Donald Trump claimed he speaks for the UK more than which member of the British royal family?",
+      "options": [
+        "Prince Harry",
+        "King Charles III",
+        "Prince William",
+        "Prince Andrew"
+      ],
+      "a": 0,
+      "correctText": "Prince Harry",
+      "category": "World",
+      "source": "https://www.bbc.co.uk/news/articles/cx268zxgx1no"
+    },
+    {
+      "q": "According to reports circulating on April 24, 2026, Microsoft is offering its first-ever voluntary buyout program to U.S. employees whose combined age and years of service equal at least what number?",
+      "options": [
+        "70",
+        "65",
+        "75",
+        "80"
+      ],
+      "a": 0,
+      "correctText": "70",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/23/microsoft-plans-first-voluntary-retirement-program-for-us-employees.html"
+    },
+    {
+      "q": "Which Canadian aerospace company's jet was selected by NATO in April 2026 to serve as its new AWACS platform, shifting away from Boeing?",
+      "options": [
+        "Bombardier",
+        "Airbus Canada",
+        "Viking Air",
+        "De Havilland Canada"
+      ],
+      "a": 0,
+      "correctText": "Bombardier",
+      "category": "Canada",
+      "source": "https://www.defensenews.com/global/europe/2026/04/24/nato-eyes-swedish-canadian-jet-for-awacs-role-in-shift-away-from-boeing/"
+    },
+    {
+      "q": "According to an April 24, 2026, study of children in a Swedish region, exposure to very high levels of what chemicals in the womb is linked to a 40% higher asthma risk?",
+      "options": [
+        "PFAS",
+        "Phthalates",
+        "BPA",
+        "Lead"
+      ],
+      "a": 0,
+      "correctText": "PFAS",
+      "category": "Science",
+      "source": "https://www.lunduniversity.lu.se/article/link-observed-between-very-high-pfas-exposure-and-asthma-children"
+    },
+    {
+      "q": "A study published on April 24, 2026, revealed that many introductory textbooks in what subject continue to misrepresent famous experiments and repeat long-standing myths?",
+      "options": [
+        "Psychology",
+        "Sociology",
+        "Biology",
+        "Economics"
+      ],
+      "a": 0,
+      "correctText": "Psychology",
+      "category": "Science",
+      "source": "https://www.psypost.org/psychology-textbooks-still-misrepresent-famous-experiments-and-controversial-debates/"
+    },
+    {
+      "q": "A study highlighted on April 24, 2026, challenged earlier beliefs by revealing that over 20 times more of what type of atmospheric particle is actually emitted by land sources rather than the ocean?",
+      "options": [
+        "Microplastics",
+        "Volcanic ash",
+        "Desert dust",
+        "Pollen"
+      ],
+      "a": 0,
+      "correctText": "Microplastics",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/news/top/science/"
+    }
+  ]
+}

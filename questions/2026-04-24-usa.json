@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In an April 2026 lawsuit, a former social media manager for MrBeast's production company alleged she was wrongfully fired following what life event?",
+      "options": [
+        "Returning from maternity leave",
+        "Reporting safety violations",
+        "Starting a competitor channel",
+        "Requesting a promotion"
+      ],
+      "a": 0,
+      "correctText": "Returning from maternity leave",
+      "category": "Usa",
+      "source": "https://apnews.com/article/mrbeast-sexual-harassment-pregnant-maternity-leave-lorrayne-mavromatis-1328b020711e2bef10f0a3f8a1fa1987"
+    },
+    {
+      "q": "According to an April 2026 Florida Fish and Wildlife report, how many sloths died at a warehouse connected to the upcoming Sloth World Orlando attraction?",
+      "options": [
+        "31",
+        "12",
+        "45",
+        "8"
+      ],
+      "a": 0,
+      "correctText": "31",
+      "category": "Usa",
+      "source": "https://www.fox35orlando.com/news/31-sloths-died-sloth-world-orlando-owned-warehouse-fwc-reports"
+    },
+    {
+      "q": "The U.S. Justice Department arrested special forces soldier Gannon Ken Van Dyke for allegedly making $400,000 on a prediction market by betting on the capture of which foreign leader?",
+      "options": [
+        "Nicolas Maduro",
+        "Vladimir Putin",
+        "Bashar al-Assad",
+        "Kim Jong Un"
+      ],
+      "a": 0,
+      "correctText": "Nicolas Maduro",
+      "category": "Usa",
+      "source": "https://apnews.com/article/solider-justice-department-polymarmet-74047663d9ae104127948896fdfb59d9"
+    },
+    {
+      "q": "In a historic policy shift in April 2026, the Trump administration signed an order reclassifying state-licensed medical marijuana to which less strictly regulated drug category?",
+      "options": [
+        "Schedule III",
+        "Schedule II",
+        "Schedule IV",
+        "Schedule V"
+      ],
+      "a": 0,
+      "correctText": "Schedule III",
+      "category": "Usa",
+      "source": "https://apnews.com/article/medical-marijuana-rescheduling-justice-department-trump-cannabis-1d6722d3aae122b1a91f8e4b6c690268"
+    },
+    {
+      "q": "A proposed class action lawsuit filed in April 2026 accuses JetBlue Airways of utilizing what controversial method to set its ticket prices?",
+      "options": [
+        "Customers' personal data",
+        "Weather forecasting algorithms",
+        "Political affiliation metrics",
+        "Frequent flyer tier downgrades"
+      ],
+      "a": 0,
+      "correctText": "Customers' personal data",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/business/2026/apr/23/jetblue-lawsuit-personal-data-ticket-prices"
+    }
+  ]
+}

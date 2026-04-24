@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-24",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Announced on April 24, 2026, Toei Games' first three published titles include HINO, DEBUG NEPHEMEE, and what other game?",
+      "options": [
+        "TENGU",
+        "KILLA",
+        "YOKAI",
+        "REAPER"
+      ],
+      "a": 1,
+      "correctText": "KILLA",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/toei-games-announces-first-three-published-titles-killa-hino-and-debug-nephemee"
+    },
+    {
+      "q": "On April 24, 2026, HoYoverse announced that which of their action RPGs is coming to Steam in Q2 2026?",
+      "options": [
+        "Genshin Impact",
+        "Zenless Zone Zero",
+        "Honkai: Star Rail",
+        "Tears of Themis"
+      ],
+      "a": 1,
+      "correctText": "Zenless Zone Zero",
+      "category": "Gaming",
+      "source": "https://techraptor.net/gaming/news/zenless-zone-zero-version-28-lands-in-may-steam-release-coming-soon"
+    },
+    {
+      "q": "The finalists for the 2026 Hugo Awards were announced in the last 24 hours. Which of the following works was nominated for Best Novel?",
+      "options": [
+        "A Drop of Corruption",
+        "The Memory Museum",
+        "Lost Lambs",
+        "The Midnight Train"
+      ],
+      "a": 0,
+      "correctText": "A Drop of Corruption",
+      "category": "Books",
+      "source": "https://reactormag.com/2026-hugo-awards-finalists/"
+    },
+    {
+      "q": "To mark its first anniversary on April 24, 2026, developer Sandfall Interactive announced that which hit RPG had reached eight million copies sold?",
+      "options": [
+        "Persona 5 Royal",
+        "Metaphor: ReFantazio",
+        "Clair Obscur: Expedition 33",
+        "Dragon's Dogma 2"
+      ],
+      "a": 2,
+      "correctText": "Clair Obscur: Expedition 33",
+      "category": "Gaming",
+      "source": "https://techraptor.net/gaming/news/clair-obscur-expedition-33-sales-hit-8m-on-first-anniversary"
+    },
+    {
+      "q": "Which NFL head coach announced he is seeking counseling and missing Day 3 of the 2026 NFL draft following the resurfacing of controversial photos?",
+      "options": [
+        "Mike Vrabel",
+        "Sean McVay",
+        "Kyle Shanahan",
+        "Jerod Mayo"
+      ],
+      "a": 0,
+      "correctText": "Mike Vrabel",
+      "category": "Sports",
+      "source": "https://www.espn.com/nfl/story/_/id/48566969/mike-vrabel-seek-counseling-not-patriots-day-3-nfl-draft"
+    },
+    {
+      "q": "In an SEC filing revealed in late April 2026, Netflix authorized a massive stock buyback worth how much to boost its share price?",
+      "options": [
+        "$25 Billion",
+        "$10 Billion",
+        "$50 Billion",
+        "$5 Billion"
+      ],
+      "a": 0,
+      "correctText": "$25 Billion",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/netflix-25-billion-share-repurchase-stock-price-1236728558/"
+    },
+    {
+      "q": "Which animated movie sequel was reported in April 2026 to have snagged $21.9 million in tax credits to film in California?",
+      "options": [
+        "The Simpsons Movie 2",
+        "Shrek 5",
+        "Minions 3",
+        "Toy Story 5"
+      ],
+      "a": 0,
+      "correctText": "The Simpsons Movie 2",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/business-news/simpsons-movie-sequel-nabs-21-9-million-to-film-in-california-1236572654/"
+    },
+    {
+      "q": "What organization's upcoming event in the U.S. prompted over 120 groups to issue a travel warning about a 'serious risk' due to immigration enforcement?",
+      "options": [
+        "World Baseball Classic",
+        "FIFA World Cup",
+        "Summer Olympics",
+        "Pan American Games"
+      ],
+      "a": 1,
+      "correctText": "FIFA World Cup",
+      "category": "Sports",
+      "source": "https://www.newsweek.com/travel-warning-us-issued-fifa-world-cup-immigration-11869330"
+    },
+    {
+      "q": "Who shot a 65 to take the opening-round lead at the 2026 Chevron Championship?",
+      "options": [
+        "Lydia Ko",
+        "Nelly Korda",
+        "Celine Boutier",
+        "Minjee Lee"
+      ],
+      "a": 1,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48575192/nelly-korda-starts-65-lead-chevron-championship"
+    },
+    {
+      "q": "On April 24, 2026, a man was arrested in Singapore for allegedly leaking an unreleased film from which blockbuster franchise? [1.9]",
+      "options": [
+        "Avatar",
+        "Marvel Cinematic Universe",
+        "Star Wars",
+        "Jurassic World"
+      ],
+      "a": 0,
+      "correctText": "Avatar",
+      "category": "Entertainment",
+      "source": "https://www.straitstimes.com/singapore/man-arrested-after-allegedly-accessing-content-server-leaking-unreleased-film-online"
+    }
+  ]
+}

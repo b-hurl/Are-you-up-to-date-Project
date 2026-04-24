@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "Which European country reached a deal with STACKIT on April 24, 2026, to decrease its reliance on U.S. tech companies?",
+      "options": [
+        "Netherlands",
+        "Germany",
+        "France",
+        "Spain"
+      ],
+      "a": 0,
+      "correctText": "Netherlands",
+      "category": "Technology",
+      "source": "https://nltimes.nl/2026/04/24/netherlands-reaches-deal-european-cloud-company-decrease-us-tech-reliance"
+    },
+    {
+      "q": "Which tech giant broke ground on a $1 billion AI-optimized data center in Tulsa, Oklahoma, on April 24, 2026?",
+      "options": [
+        "Meta",
+        "Google",
+        "Microsoft",
+        "Amazon"
+      ],
+      "a": 0,
+      "correctText": "Meta",
+      "category": "Technology",
+      "source": "https://constructionowners.com/news/meta-starts-1b-tulsa-ai-data-center-expanding-u-s-infrastructure"
+    },
+    {
+      "q": "According to an April 24, 2026 announcement, Chinese AI startup DeepSeek released its new V4 model designed specifically to run on hardware from which domestic company?",
+      "options": [
+        "Huawei",
+        "Xiaomi",
+        "Tencent",
+        "Baidu"
+      ],
+      "a": 0,
+      "correctText": "Huawei",
+      "category": "Technology",
+      "source": "https://moderndiplomacy.eu/2026/04/24/deepseek-launches-v4-ai-model-on-huawei-chips"
+    }
+  ]
+}
