@@ -2357,8 +2357,6 @@ async function create1v1Challenge() {
         await db.collection('challenges').doc(challengeId).set({
             date: today,
             category: category,
-            date: getGameDate(),
-            category: gameConfig.activeSelection,
             questions: challengeQuestions,
             p1: {
                 uid: userId,
@@ -2376,19 +2374,18 @@ async function create1v1Challenge() {
         });
 
         activeChallengeId = challengeId;
-        trackChallengeLocally(challengeId);
-        openInviteModal(challengeId);
-        
+
         // Track active challenges with their IDs to allow revoking
-        const category = gameConfig.activeSelection;
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
-        const today = getGameDate();
         active[today] = active[today] || {};
         if (category) {
             active[today][category] = challengeId;
         }
         localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
-        
+
+        trackChallengeLocally(challengeId);
+        openInviteModal(challengeId);
+
         // Only clear the category selection if the user has already played.
         // If they haven't, we keep it so the trivia engine knows which topic to start.
         if (isCompleted) {
@@ -6444,7 +6441,7 @@ window.isNameValid = isNameValid;
                 const dateString = `${pastDate.getUTCFullYear()}-${String(pastDate.getUTCMonth() + 1).padStart(2, '0')}-${String(pastDate.getUTCDate()).padStart(2, '0')}`;
 
                 try {
-                    const response = await fetch(`${dateString}.json?v=hist`);
+                    const response = await fetch(`questions/${dateString}.json?v=hist`);
                     if (!response.ok) continue; 
                     let data = await response.json();
                     let questions = Array.isArray(data) ? data : (data.questions || []);
