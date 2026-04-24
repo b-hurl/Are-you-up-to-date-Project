@@ -923,6 +923,7 @@
         var remoteUserProgress = null;
         var freshGameData = null;
         var verifiedCategories = null;
+        var isMuted = localStorage.getItem('trivia-muted') === 'true';
         var gameConfig = {
             gameMode: null,
             soloSubMode: null,
@@ -1054,8 +1055,8 @@
             const rawQuestions = Array.isArray(data) ? data : (data.questions || []);
             let questions = sanitizeQuestions(rawQuestions);
             
-            // Hard coded limit: verify at least 5 questions exist, otherwise hide the category
-            if (questions.length < 5) {
+            // verify at least 3 questions exist (matching the generator minimum), otherwise hide the category
+            if (questions.length < 3) {
                 showToast(`Category "${category}" is not available today.`, "⏳");
                 if (verifiedCategories) {
                     verifiedCategories = verifiedCategories.filter(c => c !== category);
@@ -3349,7 +3350,7 @@ function setupRankingsNotificationListener() {
         .where('groupIds', 'array-contains-any', groupIds.slice(0, 10)) // Firestore limit is 10 for array-contains-any
         .onSnapshot(snapshot => {
             const modal = document.getElementById('daily-leaderboard-modal');
-            const isModalOpen = !modal.classList.contains('hidden');
+            const isModalOpen = modal && !modal.classList.contains('hidden');
             
             const totalScores = snapshot.size;
             const lastSeenCount = parseInt(localStorage.getItem(`seen-scores-${today}`) || '0');
@@ -5272,7 +5273,8 @@ async function checkRemoteProgress(user) {
 
             // If the app is already showing results or the home screen timer, 
             // don't let cloud sync force a UI jump unless it's a "Finished" state.
-            const isResults = !document.getElementById('results-card').classList.contains('hidden');
+            const resultsCard = document.getElementById('results-card');
+            const isResults = resultsCard && !resultsCard.classList.contains('hidden');
 
             // CLOUD SYNC: Restore session if remote is newer/valid
             if (data.currentSession && data.currentSession.date === today) {
