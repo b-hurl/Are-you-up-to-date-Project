@@ -349,7 +349,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     );
 
     const renderGauntletOptions = () => {
-        const openHistory = () => window.openHistory && window.openHistory();
+        const openHistory = () => window.openHistory && window.openHistory('gauntlets');
 
         const gameDate = (typeof getGameDate === 'function') ? getGameDate() : (window.getGameDate ? window.getGameDate() : '');
         let archive = {};
@@ -599,7 +599,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
     };
 
     const renderCategoryOptions = () => {
-        const openHistory = () => window.openHistory && window.openHistory();
+        const openHistory = () => window.openHistory && window.openHistory('categories');
 
         return (
             <MenuView title="Select a Category" onBack={() => config.gameMode === 'solo' ? handleSoloSubModeSelection(null) : handleMultiSubModeSelection(null)} backLabel={config.gameMode === 'solo' ? "Back to Solo Play" : "Back to Multiplayer"} footer={

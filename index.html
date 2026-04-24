@@ -2254,7 +2254,7 @@ function returnToMenu(target) {
     showModeSelection();
 }
 
-async function prepareAndCreateChallenge(category) {
+async function prepareAndCreateChallenge(category, pastDate = null) {
     if (!auth.currentUser) {
         showToast("Sign in to challenge friends!", "🔐");
         toggleLoginModal();
@@ -2264,8 +2264,8 @@ async function prepareAndCreateChallenge(category) {
     updateHeaderSyncStatus('syncing');
     showToast(`Preparing ${category} challenge...`, "⚔️");
     
-    const gameDate = getGameDate();
-    const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
+    const gameDate = pastDate || getGameDate();
+    const filePath = pastDate ? `questions/${gameDate}-${category.toLowerCase()}.json` : `questions/${gameDate}-${category.toLowerCase()}.json`;
 
     try {
         const response = await fetch(filePath + `?v=${Date.now()}`);
@@ -2280,7 +2280,7 @@ async function prepareAndCreateChallenge(category) {
         gameData = { questions: questions };
         gameConfig.activeSelection = category;
         
-        // Use archived score for P1 (Person who already played)
+        // Use archived score for P1 (Supports both today and past dates)
         const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
         const savedScore = archive[gameDate]?.[category]?.score || 0;
         
@@ -2288,7 +2288,7 @@ async function prepareAndCreateChallenge(category) {
         const originalScore = score;
         score = savedScore;
         
-        await create1v1Challenge();
+        await create1v1Challenge(pastDate);
         
         // Restore global score state
         score = originalScore;
@@ -2301,17 +2301,17 @@ async function prepareAndCreateChallenge(category) {
 }
 window.prepareAndCreateChallenge = prepareAndCreateChallenge;
 
-async function create1v1Challenge() {
+async function create1v1Challenge(pastDate = null) {
     if (!auth.currentUser) {
         showToast("Sign in to challenge friends!", "🔐");
         toggleLoginModal();
         return;
     }
 
-    const today = getGameDate();
+    const challengeDate = pastDate || getGameDate();
     const category = gameConfig.activeSelection;
     const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-        const p1ScoreEntry = archive[today]?.[category ? category.toLowerCase() : ""];
+    const p1ScoreEntry = archive[challengeDate]?.[category ? category.toLowerCase() : ""];
     const isCompleted = p1ScoreEntry !== undefined;
     const p1Score = isCompleted ? p1ScoreEntry.score : 0;
 
@@ -2355,7 +2355,7 @@ async function create1v1Challenge() {
         }
 
         await db.collection('challenges').doc(challengeId).set({
-            date: today,
+            date: challengeDate,
             category: category,
             questions: challengeQuestions,
             p1: {
@@ -2376,9 +2376,9 @@ async function create1v1Challenge() {
 
         // Track active challenges with their IDs to allow revoking
         const active = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
-        active[today] = active[today] || {};
+        active[challengeDate] = active[challengeDate] || {};
         if (category) {
-            active[today][category] = challengeId;
+            active[challengeDate][category] = challengeId;
         }
         localStorage.setItem('trivia-active-challenges', JSON.stringify(active));
 
@@ -6436,8 +6436,14 @@ window.isNameValid = isNameValid;
                 <p class="text-center text-slate-500 text-xs">Loading past games...</p>
             `;
 
+            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
             const historyDays = 7;
             const pastGames = [];
+
+            // History Question Cache to reduce redundant network requests
+            const cacheKey = 'trivia-history-questions-cache';
+            const historyCache = JSON.parse(localStorage.getItem(cacheKey) || '{}');
+            let cacheModified = false;
             
             const gameDateStr = getGameDate();
             const parts = gameDateStr.split('-').map(Number);
@@ -6448,16 +6454,54 @@ window.isNameValid = isNameValid;
                 pastDate.setUTCDate(pastDate.getUTCDate() - i);
                 
                 const dateString = `${pastDate.getUTCFullYear()}-${String(pastDate.getUTCMonth() + 1).padStart(2, '0')}-${String(pastDate.getUTCDate()).padStart(2, '0')}`;
+                
+                if (!archive[dateString]) continue;
 
-                try {
-                    const response = await fetch(`questions/${dateString}.json?v=hist`);
-                    if (!response.ok) continue; 
-                    let data = await response.json();
-                    let questions = Array.isArray(data) ? data : (data.questions || []);
-                    pastGames.push({ date: dateString, questions: sanitizeQuestions(questions) });
-                } catch (error) {
-                    console.log(`No history found for ${dateString}`);
+                // Use Cache if available
+                if (historyCache[dateString]) {
+                    pastGames.push({ date: dateString, questions: historyCache[dateString] });
+                    continue;
                 }
+                
+                const dayQuestions = [];
+                const modes = Object.keys(archive[dateString]);
+                
+                for (const mode of modes) {
+                    const m = mode.toLowerCase();
+                    // Try all possible file naming conventions for this mode
+                    const paths = [
+                        `questions/${dateString}-solo-${m}-gauntlet.json`,
+                        `questions/${dateString}-multiplayer-${m}-gauntlet.json`,
+                        `questions/${dateString}-${m}.json`
+                    ];
+                    
+                    for (const p of paths) {
+                        try {
+                            const res = await fetch(p + `?v=hist`);
+                            if (res.ok) {
+                                const d = await res.json();
+                                const qs = Array.isArray(d) ? d : (d.questions || []);
+                                dayQuestions.push(...qs);
+                                break; // Stop after finding the first valid file for this mode
+                            }
+                        } catch(e) {}
+                    }
+                }
+
+                if (dayQuestions.length > 0) {
+                    const sanitized = sanitizeQuestions(dayQuestions);
+                    pastGames.push({ date: dateString, questions: sanitized });
+                    historyCache[dateString] = sanitized;
+                    cacheModified = true;
+                }
+            }
+
+            // Save Cache and prune older than 10 days to prevent bloat
+            if (cacheModified) {
+                const keys = Object.keys(historyCache).sort().reverse();
+                const prunedCache = {};
+                keys.slice(0, 10).forEach(k => prunedCache[k] = historyCache[k]);
+                localStorage.setItem(cacheKey, JSON.stringify(prunedCache));
             }
 
             cachedHistoryGames = pastGames; // Store for filtering
@@ -6585,11 +6629,19 @@ window.isNameValid = isNameValid;
                     });
 
                     if (visibleQuestions > 0) {
+                        const canChallenge = !isGauntlet && userRecord.score !== undefined;
+                        const challengeBtn = canChallenge 
+                            ? `<button onclick="window.prepareAndCreateChallenge('${modeKey}', '${game.date}')" class="w-full mt-4 bg-primary-600/20 hover:bg-primary-600/40 text-primary-300 border border-primary-500/30 py-2.5 rounded-xl text-[10px] font-black uppercase transition-all flex items-center justify-center gap-2">
+                                 <span>⚔️</span> Challenge Friend with this Score (${userRecord.score}/5)
+                               </button>`
+                            : '';
+
                         dayContainer.innerHTML = `
                             <h3 class="text-lg font-bold text-white mb-3 border-b border-slate-700 pb-2 flex items-center">
                                 ${formattedDate} ${modeBadge}
                             </h3>
                             <div class="space-y-1">${questionsHTML}</div>
+                            ${challengeBtn}
                         `;
                         content.appendChild(dayContainer);
                     }
