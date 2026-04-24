@@ -635,7 +635,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         const isMulti = config.gameMode === 'multiplayer';
                         const isSent = isMulti && activeChallenges.some(m => m.toLowerCase() === categoryLower);
                         const savedScore = archive[gameDate]?.[categoryLower]?.score;
-                        const isCompleted = isMulti && savedScore !== undefined;
+                        const isCompleted = savedScore !== undefined || isPlayed;
 
                         // Find the count for this category to determine length label
                         const catInfo = availableArray.find(item => 

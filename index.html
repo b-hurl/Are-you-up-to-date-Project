@@ -2043,7 +2043,7 @@ function confirmAnswer() {
             isProcessing = false;
             renderQuestion();
         } else {
-            saveSession(true);
+            saveSession(true, gameConfig.activeSelection);
             isProcessing = false; 
             showFinalResults();
         }
