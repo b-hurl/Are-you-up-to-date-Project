@@ -2361,7 +2361,6 @@ async function create1v1Challenge() {
             p1: {
                 uid: userId,
                 name: localStorage.getItem('trivia-name') || "Player 1",
-                score: p1Score,
                 score: isCompleted ? parseInt(p1Score) : 0,
                 completed: isCompleted,
                 taunt: ""
