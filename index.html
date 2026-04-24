@@ -1802,7 +1802,7 @@ function startNewSession(data, date, mode) {
                 ...q,
                 category: q.category || (mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : "Trivia"),
                 // Prefer existing correctText if options were shuffled previously
-                correctText: (q.options && q.options[q.a]) ? q.options[q.a] : ""
+                correctText: q.correctText || (q.options && q.options[q.a] !== undefined ? q.options[q.a] : "")
             };
         })
     };
@@ -2340,7 +2340,6 @@ async function create1v1Challenge(pastDate = null) {
                     if (!q.correctText && q.options[q.a] !== undefined) q.correctText = q.options[q.a];
                     q.options = shuffle([...q.options]);
                 }
-                if (q.options) q.options = shuffle([...q.options]);
             });
         }
         
@@ -6577,7 +6576,7 @@ window.isNameValid = isNameValid;
 
                     game.questions.forEach((q, idx) => {
                         const qKey = normalizeQKey(q.q);
-                        const correctAnswer = q.options[q.a];
+                        const correctAnswer = q.correctText || q.options[q.a];
                         const source = q.source ? `<a href="${q.source}" target="_blank" class="text-[10px] text-slate-300 hover:text-primary-400 underline decoration-dotted mr-3">Source ↗</a>` : '';
                         
                         const qEncoded = encodeURIComponent(q.q).replace(/'/g, "%27");
