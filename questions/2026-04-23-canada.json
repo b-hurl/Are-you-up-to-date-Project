@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 23, 2026, Fintrac issued a bulletin warning that criminal networks are using young international students from which country for extortion schemes?",
+      "options": [
+        "India",
+        "China",
+        "Brazil",
+        "Russia"
+      ],
+      "a": 0,
+      "correctText": "India",
+      "category": "Canada",
+      "source": "https://www.cp24.com/news/canada/2026/04/23/criminal-networks-using-young-people-from-india-for-extortion-schemes-fintrac-warns/"
+    },
+    {
+      "q": "According to reports on April 23, 2026, Canadian airlines faced a major jet fuel shortage and flight cancellations due to the blockage of which critical waterway?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Panama Canal",
+        "Strait of Malacca"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/flight-cancellations-strait-of-hormuz-9.7173742"
+    },
+    {
+      "q": "On April 23, 2026, a CBC report highlighted that fresh vegetables cost 7.8% more than last year, naming which vegetable as the 'worst offender' for climbing costs?",
+      "options": [
+        "Cucumber",
+        "Lettuce",
+        "Tomato",
+        "Cauliflower"
+      ],
+      "a": 0,
+      "correctText": "Cucumber",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/vegetable-prices-canada-9.7173027"
+    },
+    {
+      "q": "An April 23, 2026, news report examined the trend of right-wing American influencers paying unprecedented attention to Canada's domestic politics, referring to this group as what?",
+      "options": [
+        "The MAGAsphere",
+        "The Alt-Right Alliance",
+        "The America First Coalition",
+        "The Patriot Network"
+      ],
+      "a": 0,
+      "correctText": "The MAGAsphere",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/americans-paying-attention-canada-magasphere-9.7172316"
+    },
+    {
+      "q": "On April 23, 2026, a Nova Scotia family spoke out after hospital staff sent their 19-year-old son by taxi to what location following multiple suicide attempts?",
+      "options": [
+        "A homeless shelter",
+        "A police station",
+        "A bus terminal",
+        "An addiction center"
+      ],
+      "a": 0,
+      "correctText": "A homeless shelter",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/nova-scotia/hospital-suicide-attempt-homeless-shelter-9.7171567"
+    }
+  ]
+}

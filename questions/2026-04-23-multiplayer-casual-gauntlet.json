@@ -1,0 +1,58 @@
+{
+  "date": "2026-04-23",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to an April 23, 2026 UN report, what is the primary cause behind the estimated 840,000 work-related deaths globally each year?",
+      "options": [
+        "Stress",
+        "Physical exhaustion",
+        "Chemical exposure",
+        "Sleep deprivation"
+      ],
+      "a": 0,
+      "correctText": "Stress",
+      "category": "Health",
+      "source": "https://www.euronews.com/health/2026/04/23/work-is-killing-840000-people-a-year-and-stress-is-mainly-the-cause-un-report-finds"
+    },
+    {
+      "q": "Which college football head coach agreed to a new 7-year, $87.5M contract with the University of Alabama in April 2026?",
+      "options": [
+        "Kalen DeBoer",
+        "Nick Saban",
+        "Kirby Smart",
+        "Lane Kiffin"
+      ],
+      "a": 0,
+      "correctText": "Kalen DeBoer",
+      "category": "Sports",
+      "source": "https://www.espn.com/college-football/story/_/id/48563560/alabama-kalen-deboer-agree-new-7-year-875m-contract"
+    },
+    {
+      "q": "Announced on April 23, 2026, a new French biopic will focus on which late celebrity chef who was an inspiration for Pixar's animated hit 'Ratatouille'?",
+      "options": [
+        "Bernard Loiseau",
+        "Paul Bocuse",
+        "Alain Ducasse",
+        "Joël Robuchon"
+      ],
+      "a": 0,
+      "correctText": "Bernard Loiseau",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/late-celebrity-french-chef-bernard-loiseau-biopic-1236869162/"
+    },
+    {
+      "q": "Chelsea FC sacked which head coach in late April 2026 after just three months in charge?",
+      "options": [
+        "Liam Rosenior",
+        "Mauricio Pochettino",
+        "Thomas Tuchel",
+        "Frank Lampard"
+      ],
+      "a": 0,
+      "correctText": "Liam Rosenior",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/articles/c9d4w8032vno?app-referrer=push-notification"
+    }
+  ]
+}

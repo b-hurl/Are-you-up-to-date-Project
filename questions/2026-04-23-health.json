@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to an April 23, 2026 UN report, what is the primary cause behind the estimated 840,000 work-related deaths globally each year?",
+      "options": [
+        "Stress",
+        "Physical exhaustion",
+        "Chemical exposure",
+        "Sleep deprivation"
+      ],
+      "a": 0,
+      "correctText": "Stress",
+      "category": "Health",
+      "source": "https://www.euronews.com/health/2026/04/23/work-is-killing-840000-people-a-year-and-stress-is-mainly-the-cause-un-report-finds"
+    },
+    {
+      "q": "A ProPublica investigation published on April 23, 2026, revealed that fewer than half of the 140,000 opioid victims who filed claims will receive compensation from which pharmaceutical company's $7.4 billion settlement?",
+      "options": [
+        "Purdue Pharma",
+        "Johnson & Johnson",
+        "Endo International",
+        "Mallinckrodt"
+      ],
+      "a": 0,
+      "correctText": "Purdue Pharma",
+      "category": "Health",
+      "source": "https://www.propublica.org/article/purdue-settlement-leaves-opioid-victims-behind"
+    },
+    {
+      "q": "According to a scientific statement released by the American Heart Association on April 23, 2026, physical activity may be safer than previously thought for children diagnosed with what specific heart muscle disorder?",
+      "options": [
+        "Cardiomyopathy",
+        "Endocarditis",
+        "Atherosclerosis",
+        "Rheumatic heart disease"
+      ],
+      "a": 0,
+      "correctText": "Cardiomyopathy",
+      "category": "Health",
+      "source": "https://newsroom.heart.org/news/benefits-of-physical-activity-may-outweigh-risks-for-children-with-some-heart-conditions"
+    },
+    {
+      "q": "On April 23, 2026, it was reported that U.S. health officials halted the publication of a CDC study analyzing the effectiveness of which vaccine in preventing adult emergency room visits and hospitalizations?",
+      "options": [
+        "COVID-19 vaccine",
+        "Influenza vaccine",
+        "RSV vaccine",
+        "Pneumococcal vaccine"
+      ],
+      "a": 0,
+      "correctText": "COVID-19 vaccine",
+      "category": "Health",
+      "source": "https://www.click2houston.com/news/politics/2026/04/23/us-health-officials-nix-publication-of-a-study-on-covid-vaccine-effectiveness/"
+    }
+  ]
+}

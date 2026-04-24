@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to new research, what type of bioengineered product has been shown to reduce the levels of microbes linked to worse outcomes in oral cancers?",
+      "options": [
+        "Chewing gum",
+        "Mouthwash",
+        "Toothpaste",
+        "Dental floss"
+      ],
+      "a": 0,
+      "correctText": "Chewing gum",
+      "category": "Science",
+      "source": "https://penntoday.upenn.edu/news/penn-dental-medicine-fighting-oral-cancer-bioengineered-chewing-gum"
+    },
+    {
+      "q": "A recent environmental study found that 98% of all recent environmental claims from the world's largest meat and dairy companies can be categorized as what?",
+      "options": [
+        "Greenwashing",
+        "Net-zero",
+        "Carbon-negative",
+        "Sustainable"
+      ],
+      "a": 0,
+      "correctText": "Greenwashing",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1124525"
+    },
+    {
+      "q": "Researchers have identified that establishing a regular habit of viewing what at a young age is linked to higher rates of mental health struggles?",
+      "options": [
+        "Adult content",
+        "Violent video games",
+        "Social media",
+        "Horror movies"
+      ],
+      "a": 0,
+      "correctText": "Adult content",
+      "category": "Science",
+      "source": "https://www.psypost.org/the-gap-between-seeing-and-seeking-adult-content-predicts-mental-health-risks/"
+    },
+    {
+      "q": "Using which type of in-home appliance for one month spurred a small but significant improvement in brain function in adults age 40 and older?",
+      "options": [
+        "HEPA air purifier",
+        "Water filter",
+        "Humidifier",
+        "Dehumidifier"
+      ],
+      "a": 0,
+      "correctText": "HEPA air purifier",
+      "category": "Science",
+      "source": "https://theconversation.com/hepa-air-purifiers-may-boost-brain-power-in-adults-over-40-new-research-280885"
+    },
+    {
+      "q": "A new study analyzing data through 2024 showed that suicide deaths in U.S. teens and young adults fell after the mid-2022 launch of what service?",
+      "options": [
+        "The 988 Lifeline",
+        "The Crisis Text Line",
+        "The Trevor Project",
+        "The Teen Suicide Hotline"
+      ],
+      "a": 0,
+      "correctText": "The 988 Lifeline",
+      "category": "Science",
+      "source": "https://www.sciencenews.org/article/suicide-lifeline-988-teens-young-adults"
+    }
+  ]
+}
