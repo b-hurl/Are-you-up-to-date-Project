@@ -927,7 +927,7 @@
     if (typeof QUESTION_TIME_LIMIT === 'undefined') {
         window.QUESTION_TIME_LIMIT = 60; 
         window.UNLOCK_UTC_HOUR = 14;
-        window.ADMIN_EMAIL = "bfehurl@gmail.com";
+        window.ADMIN_EMAIL = ADMIN_EMAIL_USER;
     }
 
     let storedName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
@@ -1691,6 +1691,7 @@ async function startApp() {
     // Prevent Firebase initialization errors from blocking the UI
     checkGlobalMessage().catch(e => console.warn("Global message skipped", e));
     checkMaintenanceMode().catch(e => console.warn("Maintenance check skipped", e));
+    cleanupArchive();
 
     probeAvailableCategories(); // Probe file existence in background
     cleanupActiveChallenges(); // Clear stale challenge statuses from previous days
@@ -4559,11 +4560,15 @@ async function submitFeedback(encodedQ, type, btn) {
     votedQuestions[qText] = type;
     localStorage.setItem('trivia-voted-questions', JSON.stringify(votedQuestions));
     
-    // Sync feedback map to Cloud if logged in
+    // Efficiency: Save to 'votes' subcollection instead of root document map
     if (auth && auth.currentUser) {
-        db.collection('users').doc(auth.currentUser.uid).set({
-            votedQuestions: votedQuestions
-        }, { merge: true }).catch(e => {});
+        const userRef = db.collection('users').doc(auth.currentUser.uid);
+        const safeDocId = btoa(qText).replace(/\//g, '_').substring(0, 500); // Ensure ID is Firestore-safe
+        userRef.collection('votes').doc(safeDocId).set({
+            question: qText,
+            vote: type,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        }, { merge: true }).catch(e => console.warn("Vote subcollection sync failed", e));
     }
 
     // Update UI to say thanks
@@ -4752,7 +4757,7 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
     // If the saved session is from a different day, reset playedModes
     const playedModes = currentSession.date === getGameDate() ? (currentSession.playedModes || []) : [];
 
-    if (newMode && !playedModes.includes(newMode)) {
+    if (isFinished && newMode && !playedModes.includes(newMode)) {
         playedModes.push(newMode);
     }
     
@@ -4788,6 +4793,12 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
                     const updateData = {};
                     const userRef = db.collection('users').doc(auth.currentUser.uid);
 
+                    // Efficiency: Reset the 'today' cache if the day has changed
+                    if (remoteUserProgress && remoteUserProgress.lastPlayedDate !== today) {
+                        updateData['todayArchive'] = {};
+                        updateData['playedModes'] = [];
+                    }
+
                     if (isInitialSyncDone && (currentIdx > 0 || isFinished)) {
                         updateData['currentSession.currentIdx'] = session.currentIdx;
                         updateData['currentSession.score'] = session.score;
@@ -4813,9 +4824,10 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
                         updateData['lastPlayedDate'] = today;
                         updateData['currentStreak'] = session.currentStreak;
 
-                        // Mirror today's score to the root doc for immediate UI sync across devices
+                        // Mirror today's score to the root doc for zero-latency UI sync.
+                        // We avoid writing to 'archive' to prevent document bloat.
                         if (modeArchive) {
-                            updateData[`archive.${today}.${mode}`] = modeArchive;
+                            updateData[`todayArchive.${mode}`] = modeArchive;
                         }
 
                         // NEW: Save to history subcollection instead of root document map
@@ -4843,8 +4855,42 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
     }
 }
 
+function cleanupArchive() {
+    try {
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        let modified = false;
+
+        for (const date in archive) {
+            const dayEntry = archive[date];
+            if (!dayEntry || typeof dayEntry !== 'object') continue;
+
+            for (const mode in dayEntry) {
+                const data = dayEntry[mode];
+                // A session is a "ghost" if score is 0 and no choices were actually made
+                const hasChoices = data.choices && data.choices.some(c => c !== null);
+                
+                if (data.score === 0 && !hasChoices) {
+                    delete dayEntry[mode];
+                    modified = true;
+                }
+            }
+            
+            if (Object.keys(dayEntry).length === 0) {
+                delete archive[date];
+                modified = true;
+            }
+        }
+
+        if (modified) localStorage.setItem('trivia-archive', JSON.stringify(archive));
+    } catch (e) { console.warn("Archive cleanup failed", e); }
+}
+
 function archiveSession(session) {
     if (!session || !session.date || !session.shuffledQuestions) return;
+    // Robustness: Only archive sessions that were actually completed. 
+    // Abandoned sessions shouldn't block future attempts or clutter history.
+    if (!session.isFinished) return;
+
     try {
         const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
         
@@ -5083,7 +5129,8 @@ async function checkRemoteProgress(user) {
     if (!freshGameData) return;
     
     try {
-        const doc = await db.collection('users').doc(user.uid).get();
+        const userRef = db.collection('users').doc(user.uid);
+        const doc = await userRef.get();
         if (doc.exists) {
             const data = doc.data();
             remoteUserProgress = data; 
@@ -5108,31 +5155,59 @@ async function checkRemoteProgress(user) {
                 localStorage.setItem('trivia-opt-out-province', data.locationOptOutProvince);
             }
 
-            // Pull and merge voted questions from Cloud
-            if (data.votedQuestions) {
-                const localVotes = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
-                localStorage.setItem('trivia-voted-questions', JSON.stringify({ ...localVotes, ...data.votedQuestions }));
+            // Efficiency: Fetch votes from subcollection instead of root document map
+            if (!sessionStorage.getItem('trivia-votes-synced')) {
+                userRef.collection('votes')
+                    .orderBy('timestamp', 'desc')
+                    .limit(100)
+                    .get()
+                    .then(voteSnap => {
+                        const localVotes = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
+                        let modified = false;
+                        voteSnap.forEach(doc => {
+                            const voteData = doc.data();
+                            if (voteData.question && voteData.vote) {
+                                localVotes[normalizeQKey(voteData.question)] = voteData.vote;
+                                modified = true;
+                            }
+                        });
+                        if (modified) localStorage.setItem('trivia-voted-questions', JSON.stringify(localVotes));
+                        sessionStorage.setItem('trivia-votes-synced', 'true');
+                    }).catch(e => console.warn("Votes sync failed", e));
             }
 
             const localArchive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
             
-            // FIX: Deep Merge and Normalize Cloud Archive to prevent UI crashes
-            if (data.archive) {
-                const mergedArchive = { ...localArchive };
-                for (const date in data.archive) {
-                    const cloudEntry = data.archive[date];
-                    if (!mergedArchive[date]) mergedArchive[date] = {};
+            // Efficiency: Instead of one massive 'archive' map (which can exceed Firestore's 1MB limit),
+            // we use 'todayArchive' for current progress and a subcollection for history.
+            if (data.todayArchive && data.lastPlayedDate === today) {
+                localArchive[today] = { ...(localArchive[today] || {}), ...data.todayArchive };
+                localStorage.setItem('trivia-archive', JSON.stringify(localArchive));
+            }
 
-                    // If this date entry is in the old flat format, convert it to mode-based
-                    if (cloudEntry.answers || cloudEntry.choices) {
-                        const legacyMode = cloudEntry.mode || 'casual';
-                        mergedArchive[date][legacyMode] = cloudEntry;
-                    } else {
-                        // Deep merge the modes for this date
-                        mergedArchive[date] = { ...mergedArchive[date], ...cloudEntry };
-                    }
-                }
-                localStorage.setItem('trivia-archive', JSON.stringify(mergedArchive));
+            // Asynchronously fetch history from the subcollection to keep local state fresh
+            // without bloating the main user document.
+            if (!sessionStorage.getItem('trivia-history-synced')) {
+                userRef.collection('history')
+                    .orderBy('timestamp', 'desc')
+                    .limit(30)
+                    .get()
+                    .then(historySnap => {
+                        const arch = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+                        let modified = false;
+                        historySnap.forEach(doc => {
+                            const parts = doc.id.split('_');
+                            if (parts.length >= 2) {
+                                const hDate = parts[0];
+                                const hMode = parts.slice(1).join('_');
+                                if (!arch[hDate]) arch[hDate] = {};
+                                arch[hDate][hMode] = doc.data();
+                                modified = true;
+                            }
+                        });
+                        if (modified) localStorage.setItem('trivia-archive', JSON.stringify(arch));
+                        sessionStorage.setItem('trivia-history-synced', 'true');
+                    }).catch(e => console.warn("History sync failed", e));
             }
 
             const localGroups = getMyGroups();
@@ -5177,7 +5252,6 @@ async function checkRemoteProgress(user) {
             if (data.lastPlayedDate === today) {
                 // Determine played modes
                 let modes = data.playedModes || [];
-                if (modes.length === 0 && data.lastMode) modes = [data.lastMode];
                 
                 // Update global state
                 remoteUserProgress.playedModes = modes;
@@ -5304,15 +5378,17 @@ async function forceCloudSync() {
         const isProvinceOptedOut = localStorage.getItem('trivia-opt-out-province') === 'true';
         const localVotes = JSON.parse(localStorage.getItem('trivia-voted-questions') || '{}');
         const localGroups = getMyGroups();
+        const today = getGameDate();
 
         // 2. Upload to Firestore (Merge with existing cloud data)
         await db.collection('users').doc(auth.currentUser.uid).set({
-            archive: localArchive,
+            todayArchive: localArchive[today] || {},
+            archive: firebase.firestore.FieldValue.delete(), // Clean up the legacy bloat field
             currentStreak: localStreak,
             bestStreak: localBest,
             locationOptOutCity: isCityOptedOut,
             locationOptOutProvince: isProvinceOptedOut,
-            votedQuestions: localVotes,
+            votedQuestions: firebase.firestore.FieldValue.delete(), // Clean up legacy bloat field
             lastPlayedDate: lastDate,
             groups: localGroups,
             lastManualBackup: firebase.firestore.FieldValue.serverTimestamp()
@@ -5351,7 +5427,7 @@ function initFirebase() {
     // --- IMPORTANT ---
     // PASTE YOUR FIREBASE CONFIGURATION OBJECT HERE
     const firebaseConfig = {
-        apiKey: "AIzaSyAy8v_7mtvsLatU1VZLcH4XCuyWuFWte68",
+        apiKey: FIREBASE_SERVICE_ACCOUNT_JSON,
         authDomain: "are-you-up-to-date.firebaseapp.com",
         projectId: "are-you-up-to-date",
         storageBucket: "are-you-up-to-date.firebasestorage.app",
