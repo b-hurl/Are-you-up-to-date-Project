@@ -2311,7 +2311,7 @@ async function create1v1Challenge() {
     const today = getGameDate();
     const category = gameConfig.activeSelection;
     const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-    const p1ScoreEntry = archive[today]?.[category];
+        const p1ScoreEntry = archive[today]?.[category ? category.toLowerCase() : ""];
     const isCompleted = p1ScoreEntry !== undefined;
     const p1Score = isCompleted ? p1ScoreEntry.score : 0;
 
@@ -4193,6 +4193,16 @@ function openInviteModal(groupId) {
     if (revokeContainer) {
         revokeContainer.classList.toggle('hidden', !activeChallengeId);
     }
+
+        // Show start button ONLY if user hasn't played this category yet today
+        const startBtnContainer = document.getElementById('invite-start-btn-container');
+        if (startBtnContainer) {
+            const today = getGameDate();
+            const category = gameConfig.activeSelection;
+            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            const hasPlayed = category && archive[today]?.[category.toLowerCase()] !== undefined;
+            startBtnContainer.classList.toggle('hidden', !activeChallengeId || hasPlayed);
+        }
 
     modal.classList.remove('hidden');
     setTimeout(() => {
