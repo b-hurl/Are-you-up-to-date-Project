@@ -3,16 +3,18 @@ window.GameSettingsReady = false;
 
 const MenuButton = ({ onClick, isSelected, isDisabled, isCompleted, title, description, isSmall, badge }) => {
     const baseClasses = `w-full transition-all text-left border-2 ${isSmall ? 'p-4 rounded-2xl' : 'p-5 rounded-2xl'}`;
-    const stateClasses = isDisabled
-        ? 'bg-slate-900/50 border-slate-800 opacity-30 cursor-not-allowed grayscale'
-        : isSelected
-            ? 'selected border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20'
-            : isCompleted
-                ? 'bg-emerald-500/10 border-emerald-500/30 hover:border-emerald-400'
-                : 'bg-slate-700/50 border-slate-600 hover:border-primary-500 hover:animate-[selection-pulse_2s_infinite_ease-in-out]';
+    
+    let stateClasses = 'bg-slate-700/50 border-slate-600 hover:border-primary-500 hover:animate-[selection-pulse_2s_infinite_ease-in-out]';
+    if (isSelected) {
+        stateClasses = 'selected border-primary-400 bg-primary-600/40 shadow-lg shadow-primary-500/20';
+    } else if (isCompleted) {
+        stateClasses = 'bg-emerald-500/10 border-emerald-500/30 hover:border-emerald-400';
+    }
+
+    const disabledVisualClasses = isDisabled ? 'opacity-30 cursor-not-allowed grayscale' : '';
 
     return (
-        <button onClick={onClick} disabled={isDisabled} className={`${baseClasses} ${stateClasses} relative`}>
+        <button onClick={onClick} disabled={isDisabled} className={`${baseClasses} ${stateClasses} ${disabledVisualClasses} relative`}>
             <div className="flex justify-between items-start gap-2">
                 <div className="flex-1">
                     <span className={`block font-bold capitalize leading-tight ${isSmall ? 'text-sm mb-1' : 'text-lg'}`}>
@@ -390,6 +392,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                 onClick={() => handleGauntletModeSelection(m.id)}
                                 isSelected={config.gauntletMode === m.id}
                                 isDisabled={isPlayed}
+                                isCompleted={isPlayed}
                                 title={m.title}
                                 description={!isLoggedIn && isMulti ? "Account required for Leaderboards" : isPlayed ? (
                                     savedScore !== undefined 
