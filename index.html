@@ -911,24 +911,36 @@
         // Global constants initialized in this block
         
         // --- 1. GLOBAL STATE INITIALIZATION ---
-        // We declare these at the very top to avoid "Cannot access before initialization" errors
-        // when GameSettings.jsx performs its handshake.
-        window.QUESTION_TIME_LIMIT = 60; 
-        window.UNLOCK_UTC_HOUR = 14;
-        window.ADMIN_EMAIL = "bfehurl@gmail.com"; // Defined the missing ADMIN_EMAIL_USER
+        // Using 'var' or window properties at the very top ensures these are 
+        // available immediately to GameSettings.jsx, avoiding "initialization" errors.
+        var QUESTION_TIME_LIMIT = 60; 
+        var UNLOCK_UTC_HOUR = 14;
+        var ADMIN_EMAIL = "bfehurl@gmail.com"; 
 
+        var currentIdx = 0;
+        var score = 0;
+        var currentStreak = 0;
+        var remoteUserProgress = null;
+        var freshGameData = null;
+        var verifiedCategories = null;
+        var gameConfig = {
+            gameMode: null,
+            soloSubMode: null,
+            multiSubMode: null, 
+            gauntletMode: null,
+            activeSelection: null
+        };
 
-    // Ensure constants are declared only once at the very top of the script
-    if (typeof QUESTION_TIME_LIMIT === 'undefined') {
-        window.QUESTION_TIME_LIMIT = 60; 
-        window.UNLOCK_UTC_HOUR = 14;
-        window.ADMIN_EMAIL = ADMIN_EMAIL_USER;
-    }
+        // Audio and Listeners
+        var challengeListener = null;
+        var timerInterval = null;
+        var rankingsListener = null;
+        var locationPromise = null;
+        var toastTimeout = null;
+        var questionTimerInterval = null; 
+        var globalTimeLeft = QUESTION_TIME_LIMIT;
 
-
-        let currentIdx = 0;
-        let score = 0;
-        let currentStreak = 0;
+        // Logic variables
         let gameData = null;
         let selectedIdx = null;
         let isCurrentSelectionCorrect = false;
@@ -936,15 +948,12 @@
         let auth = null;
         let userId = null;
         let currentGroupIndex = 0;
-        let freshGameData = null;
         let cachedHistoryGames = [];
         let currentHistoryFilter = 'all';
         let currentInviteGroupId = null;
-        let remoteUserProgress = null;
         let leaderboardMode = 'casual';
         let activeChallengeId = null;
-
-        // --- AUDIO CONFIG ---
+        
         const SOUNDS = {
             correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
             wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
@@ -954,25 +963,6 @@
             lock: 'https://assets.mixkit.co/active_storage/sfx/2859/2859-preview.mp3',
             tick: 'https://assets.mixkit.co/active_storage/sfx/650/650-preview.mp3',
             heartbeat: 'https://assets.mixkit.co/active_storage/sfx/219/219-preview.mp3'
-        };
-
-        let challengeListener = null;
-        let verifiedCategories = null;
-        let timerInterval = null;
-        let rankingsListener = null;
-        let locationPromise = null;
-        let toastTimeout = null;
-        // New timer variables for question timer
-        let questionTimerInterval = null; // Interval ID for the timer
-        let globalTimeLeft = window.QUESTION_TIME_LIMIT; // Global variable to store remaining time
-
-        // Global state for game configuration, managed by React component
-        let gameConfig = {
-            gameMode: null, // 'solo' or 'multiplayer'
-            soloSubMode: null, // 'gauntlet' or 'categories'
-            multiSubMode: null, 
-            gauntletMode: null, // 'casual' or 'professional'
-            activeSelection: null // Specific category for 'categories' or 'casual'/'professional' for gauntlet
         };
 
                 // Moved to top of script to prevent "not defined" errors during init
@@ -5434,7 +5424,7 @@ function initFirebase() {
     // --- IMPORTANT ---
     // PASTE YOUR FIREBASE CONFIGURATION OBJECT HERE
     const firebaseConfig = {
-        apiKey: FIREBASE_SERVICE_ACCOUNT_JSON,
+        apiKey: "AIzaSyAy8v_7mtvsLatU1VZLcH4XCuyWuFWte68",
         authDomain: "are-you-up-to-date.firebaseapp.com",
         projectId: "are-you-up-to-date",
         storageBucket: "are-you-up-to-date.firebasestorage.app",
