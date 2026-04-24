@@ -909,19 +909,14 @@
     <script>
         // Global utility functions and constants for GameSettings.jsx
         // Global constants initialized in this block
+        
+        // --- 1. GLOBAL STATE INITIALIZATION ---
+        // We declare these at the very top to avoid "Cannot access before initialization" errors
+        // when GameSettings.jsx performs its handshake.
+        window.QUESTION_TIME_LIMIT = 60; 
+        window.UNLOCK_UTC_HOUR = 14;
+        window.ADMIN_EMAIL = "bfehurl@gmail.com"; // Defined the missing ADMIN_EMAIL_USER
 
-        // --- CONFIG & AUDIO ---
-        const SOUNDS = {
-            // ... existing sounds ...
-            correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
-            wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
-            finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',
-            perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
-            streak: 'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3',
-            lock: 'https://assets.mixkit.co/active_storage/sfx/2859/2859-preview.mp3',
-            tick: 'https://assets.mixkit.co/active_storage/sfx/650/650-preview.mp3',
-            heartbeat: 'https://assets.mixkit.co/active_storage/sfx/219/219-preview.mp3'
-        };
 
     // Ensure constants are declared only once at the very top of the script
     if (typeof QUESTION_TIME_LIMIT === 'undefined') {
@@ -930,8 +925,7 @@
         window.ADMIN_EMAIL = ADMIN_EMAIL_USER;
     }
 
-    let storedName = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
-    let isMuted = localStorage.getItem('trivia-muted') === 'true';
+
         let currentIdx = 0;
         let score = 0;
         let currentStreak = 0;
@@ -949,6 +943,19 @@
         let remoteUserProgress = null;
         let leaderboardMode = 'casual';
         let activeChallengeId = null;
+
+        // --- AUDIO CONFIG ---
+        const SOUNDS = {
+            correct: 'https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3',
+            wrong: 'https://assets.mixkit.co/active_storage/sfx/2003/2003-preview.mp3',
+            finish: 'https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3',
+            perfect: 'https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3',
+            streak: 'https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3',
+            lock: 'https://assets.mixkit.co/active_storage/sfx/2859/2859-preview.mp3',
+            tick: 'https://assets.mixkit.co/active_storage/sfx/650/650-preview.mp3',
+            heartbeat: 'https://assets.mixkit.co/active_storage/sfx/219/219-preview.mp3'
+        };
+
         let challengeListener = null;
         let verifiedCategories = null;
         let timerInterval = null;
