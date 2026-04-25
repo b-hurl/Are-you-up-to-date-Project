@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 24, 2026, Nvidia's stock closed at a record high, pushing its market capitalization past what major milestone?",
+      "options": [
+        "$5 trillion",
+        "$3 trillion",
+        "$4 trillion",
+        "$6 trillion"
+      ],
+      "a": 0,
+      "correctText": "$5 trillion",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/24/nvidia-stock-closes-at-record-pushing-market-cap-past-5-trillion.html"
+    },
+    {
+      "q": "Which major tech company saw its stock soar 23.6% on April 24, 2026, marking its best single-day performance since 1987 following a blowout profit report?",
+      "options": [
+        "Intel",
+        "AMD",
+        "Nvidia",
+        "Qualcomm"
+      ],
+      "a": 0,
+      "correctText": "Intel",
+      "category": "Business",
+      "source": "https://www.newstimes.com/business/article/how-major-us-stock-indexes-fared-friday-4-24-2026"
+    },
+    {
+      "q": "Which UK-based retailer announced the closure of all its U.S. showrooms on April 24, 2026, after initially entering the American market in 2020?",
+      "options": [
+        "Wren Kitchens",
+        "IKEA",
+        "Howdens",
+        "Magnet"
+      ],
+      "a": 0,
+      "correctText": "Wren Kitchens",
+      "category": "Business",
+      "source": "https://www.newstimes.com/business/article/how-major-us-stock-indexes-fared-friday-4-24-2026"
+    },
+    {
+      "q": "Lori Chavez-DeRemer resigned in late April 2026 as the head of which U.S. government department amid an investigation into her travel and spending practices?",
+      "options": [
+        "Department of Labor",
+        "Department of Commerce",
+        "Department of the Treasury",
+        "Department of Energy"
+      ],
+      "a": 0,
+      "correctText": "Department of Labor",
+      "category": "Business",
+      "source": "https://ogletree.com/insights-resources/beltway-buzz-april-24-2026/"
+    },
+    {
+      "q": "A late April 2026 report highlighted growing concerns of an AI-driven labor crisis following a combined 20,000 job cuts at which two tech giants?",
+      "options": [
+        "Meta and Microsoft",
+        "Google and Amazon",
+        "Apple and IBM",
+        "Tesla and Oracle"
+      ],
+      "a": 0,
+      "correctText": "Meta and Microsoft",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html"
+    }
+  ]
+}

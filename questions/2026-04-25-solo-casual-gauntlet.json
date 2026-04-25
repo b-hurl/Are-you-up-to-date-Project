@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-25",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which \"lost\" Octavia E. Butler novel, which the author had previously blocked from reprinting, was announced in late April 2026 to be returning to shelves in a new edition after more than 40 years?",
+      "options": [
+        "Survivor",
+        "Patternmaster",
+        "Clay's Ark",
+        "Mind of My Mind"
+      ],
+      "a": 0,
+      "correctText": "Survivor",
+      "category": "Books",
+      "source": "https://www.latimes.com/entertainment-arts/books/story/2026-04-23/octavia-butler-survivor-new-edition-reprint"
+    },
+    {
+      "q": "Universal Pictures recently shifted its release calendar, bumping 'Miami Vice '85' to 2028 and moving which horror-adventure sequel up to October 2027?",
+      "options": [
+        "The Mummy 4",
+        "The Wolfman Returns",
+        "Dracula Untold 2",
+        "Van Helsing: Resurrection"
+      ],
+      "a": 0,
+      "correctText": "The Mummy 4",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/the-mummy-4-miami-vice-85-shift-release-dates-1236730004/"
+    },
+    {
+      "q": "What upcoming western-thriller directed by Park Chan-wook recently announced a cast including Matthew McConaughey, Austin Butler, and Pedro Pascal?",
+      "options": [
+        "The Brigands of Rattlecreek",
+        "Blood Meridian",
+        "The Revenant's Return",
+        "Dust and Bone"
+      ],
+      "a": 0,
+      "correctText": "The Brigands of Rattlecreek",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/park-chan-wook-matthew-mcconaughey-austin-butler-pedro-pascal-1236871018/"
+    },
+    {
+      "q": "Which golfer shot a 65 to open up a commanding 7-shot lead at the 2026 Chevron Championship?",
+      "options": [
+        "Nelly Korda",
+        "Lilia Vu",
+        "Celine Boutier",
+        "Minjee Lee"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48583820/nelly-korda-shoots-65-opens-7-shot-lead-chevron-championship"
+    },
+    {
+      "q": "In the announcement trailer for the indie action game Guns 'n Goblins, released on April 25, 2026, what object is shot by the player to 'Call the horde'?",
+      "options": [
+        "A golden bell",
+        "A cursed skull",
+        "A flaming torch",
+        "A mystical gong"
+      ],
+      "a": 0,
+      "correctText": "A golden bell",
+      "category": "Gaming",
+      "source": "https://games.mxdwn.com/news/guns-n-goblins-delivers-an-explosive-announcement-trailer/"
+    },
+    {
+      "q": "In April 2026, the Writers Guild of America (WGA) ratified a new four-year contract that included significant cuts to what specific member benefit?",
+      "options": [
+        "Health Plan",
+        "Pension Plan",
+        "Residuals for Streaming",
+        "Paid Parental Leave"
+      ],
+      "a": 0,
+      "correctText": "Health Plan",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/wga-ratifies-amptp-contract-health-cuts-1236727987/"
+    },
+    {
+      "q": "Announced in late April 2026, which of the following novels by Robert Jackson Bennett earned a spot as a finalist for the 2026 Hugo Award for Best Novel?",
+      "options": [
+        "A Drop of Corruption",
+        "The Tainted Cup",
+        "Death of the Author",
+        "The Everlasting"
+      ],
+      "a": 0,
+      "correctText": "A Drop of Corruption",
+      "category": "Books",
+      "source": "https://reactormag.com/2026-hugo-awards-finalists/"
+    },
+    {
+      "q": "A man in Singapore was recently arrested for allegedly accessing a content server and leaking which unreleased film online?",
+      "options": [
+        "An Avatar film",
+        "A Star Wars film",
+        "A Marvel Studios film",
+        "A Lord of the Rings film"
+      ],
+      "a": 0,
+      "correctText": "An Avatar film",
+      "category": "Entertainment",
+      "source": "https://www.straitstimes.com/singapore/man-arrested-after-allegedly-accessing-content-server-leaking-unreleased-film-online"
+    },
+    {
+      "q": "Releasing in late April 2026, 'Anxietyland' is a graphic memoir chronicling the lifelong experience with anxiety and depression of which popular cartoonist?",
+      "options": [
+        "Gemma Correll",
+        "Allie Brosh",
+        "Roz Chast",
+        "Samantha Irby"
+      ],
+      "a": 0,
+      "correctText": "Gemma Correll",
+      "category": "Books",
+      "source": "https://www.publishersweekly.com/pw/by-topic/authors/profiles/article/99518-gemma-correll-welcomes-you-to-anxietyland.html"
+    },
+    {
+      "q": "What nationwide DEA initiative took place on Saturday, April 25, 2026, to provide a safe means of disposing of unwanted or expired prescription medications?",
+      "options": [
+        "National Prescription Drug Take Back Day",
+        "Safe Pill Disposal Initiative",
+        "Operation Medicine Cabinet",
+        "National Pharmacy Clean-Out Day"
+      ],
+      "a": 0,
+      "correctText": "National Prescription Drug Take Back Day",
+      "category": "Health",
+      "source": "https://www.deadiversion.usdoj.gov/drug_disposal/takeback/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a study featured in the news on April 25, 2026, what ongoing problem do many introductory psychology textbooks have?",
+      "options": [
+        "They misrepresent scientific findings and repeat long-standing myths",
+        "They are too advanced for college freshmen",
+        "They focus exclusively on modern neurobiology",
+        "They ignore classical experiments completely"
+      ],
+      "a": 0,
+      "correctText": "They misrepresent scientific findings and repeat long-standing myths",
+      "category": "Science",
+      "source": "https://www.psypost.org/psychology-textbooks-still-misrepresent-famous-experiments-and-controversial-debates/"
+    },
+    {
+      "q": "A study widely reported on April 25, 2026, revealed that feeling which specific emotion makes people more likely to rapidly share misinformation online?",
+      "options": [
+        "Moral anger",
+        "Deep sadness",
+        "Extreme joy",
+        "General apathy"
+      ],
+      "a": 0,
+      "correctText": "Moral anger",
+      "category": "Science",
+      "source": "https://www.psypost.org/feeling-angry-makes-people-more-likely-to-share-news-from-low-credibility-sources/"
+    },
+    {
+      "q": "A disturbing environmental study from April 2026 found that what percentage of Marine Protected Areas are polluted by sewage?",
+      "options": [
+        "73%",
+        "45%",
+        "22%",
+        "91%"
+      ],
+      "a": 0,
+      "correctText": "73%",
+      "category": "Science",
+      "source": "https://www.azocleantech.com/article.aspx?ArticleID=2132"
+    },
+    {
+      "q": "A 2026 Norwegian study using machine learning to analyze anti-Muslim hate speech online found that most hateful posts come from:",
+      "options": [
+        "A small group of users who don't remain active for long",
+        "Automated foreign bots that post continuously",
+        "A widespread number of casual social media users",
+        "Verified accounts with large follower bases"
+      ],
+      "a": 0,
+      "correctText": "A small group of users who don't remain active for long",
+      "category": "Science",
+      "source": "https://www.oslomet.no/en/research/featured-research/machine-learning-trends-online-hate"
+    },
+    {
+      "q": "Based on April 2026 research from Lund University, children exposed to very high PFAS levels in the womb showed a 40% increased risk of which condition?",
+      "options": [
+        "Asthma",
+        "Diabetes",
+        "Childhood leukemia",
+        "Autism spectrum disorder"
+      ],
+      "a": 0,
+      "correctText": "Asthma",
+      "category": "Science",
+      "source": "https://www.lunduniversity.lu.se/article/link-observed-between-very-high-pfas-exposure-and-asthma-children"
+    }
+  ]
+}

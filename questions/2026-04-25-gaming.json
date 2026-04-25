@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to the Slay the Spire 2 beta patch notes v0.104.0 published on April 25, 2026, which boss fight received adjustments after player feedback regarding its high difficulty?",
+      "options": [
+        "The Doormaker",
+        "The Time Eater",
+        "The Corrupt Heart",
+        "The Awakened One"
+      ],
+      "a": 0,
+      "correctText": "The Doormaker",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/slay-the-spire-2-patch-notes-address-base-game-difficulty-and-the-doormaker"
+    },
+    {
+      "q": "In the announcement trailer for the indie action game Guns 'n Goblins, released on April 25, 2026, what object is shot by the player to 'Call the horde'?",
+      "options": [
+        "A golden bell",
+        "A cursed skull",
+        "A flaming torch",
+        "A mystical gong"
+      ],
+      "a": 0,
+      "correctText": "A golden bell",
+      "category": "Gaming",
+      "source": "https://games.mxdwn.com/news/guns-n-goblins-delivers-an-explosive-announcement-trailer/"
+    },
+    {
+      "q": "Which major indie gaming showcase took place on April 25, 2026, featuring over 200 titles including SHIKA-Q and .45 PARABELLUM BLOODHOUND?",
+      "options": [
+        "INDIE Live Expo",
+        "Wholesome Direct",
+        "Future Games Show",
+        "PC Gaming Show"
+      ],
+      "a": 0,
+      "correctText": "INDIE Live Expo",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/indie-live-expo-april-25-2026-to-feature-over-200-games"
+    }
+  ]
+}

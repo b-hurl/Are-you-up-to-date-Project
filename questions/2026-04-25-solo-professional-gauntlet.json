@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-25",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A disturbing environmental study from April 2026 found that what percentage of Marine Protected Areas are polluted by sewage?",
+      "options": [
+        "73%",
+        "45%",
+        "22%",
+        "91%"
+      ],
+      "a": 0,
+      "correctText": "73%",
+      "category": "Science",
+      "source": "https://www.azocleantech.com/article.aspx?ArticleID=2132"
+    },
+    {
+      "q": "Based on April 2026 research from Lund University, children exposed to very high PFAS levels in the womb showed a 40% increased risk of which condition?",
+      "options": [
+        "Asthma",
+        "Diabetes",
+        "Childhood leukemia",
+        "Autism spectrum disorder"
+      ],
+      "a": 0,
+      "correctText": "Asthma",
+      "category": "Science",
+      "source": "https://www.lunduniversity.lu.se/article/link-observed-between-very-high-pfas-exposure-and-asthma-children"
+    },
+    {
+      "q": "A study widely reported on April 25, 2026, revealed that feeling which specific emotion makes people more likely to rapidly share misinformation online?",
+      "options": [
+        "Moral anger",
+        "Deep sadness",
+        "Extreme joy",
+        "General apathy"
+      ],
+      "a": 0,
+      "correctText": "Moral anger",
+      "category": "Science",
+      "source": "https://www.psypost.org/feeling-angry-makes-people-more-likely-to-share-news-from-low-credibility-sources/"
+    },
+    {
+      "q": "A U.S. appeals court ruled that President Donald Trump's executive order suspending what process at the southern border is illegal?",
+      "options": [
+        "Asylum access",
+        "Green card renewals",
+        "Work visas",
+        "Tourist entry"
+      ],
+      "a": 0,
+      "correctText": "Asylum access",
+      "category": "Usa",
+      "source": "https://apnews.com/article/trump-asylum-appeals-court-ed8f8f193579b757d7f384cd7f9e9e60"
+    },
+    {
+      "q": "According to Energy and Natural Resources Minister Tim Hodgson, what sector will Canada use as its 'strongest card' for leverage in CUSMA trade renegotiations?",
+      "options": [
+        "The energy and natural resources sector",
+        "The aerospace manufacturing sector",
+        "The agricultural and farming sector",
+        "The tech and artificial intelligence sector"
+      ],
+      "a": 0,
+      "correctText": "The energy and natural resources sector",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11815839/canada-energy-sector-leverage-cusma/"
+    },
+    {
+      "q": "The Trump administration recently offered immediate tariff relief to Canadian aluminum and steel companies under what strict condition?",
+      "options": [
+        "They commit to moving production to the U.S.",
+        "They only use raw materials mined in the U.S.",
+        "They cut ties with Chinese suppliers",
+        "They pay a 10% premium tax upfront"
+      ],
+      "a": 0,
+      "correctText": "They commit to moving production to the U.S.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/american-offer-canadian-aluminum-steel-companies-tariff-relief-9.7176321"
+    },
+    {
+      "q": "OpenAI CEO Sam Altman issued a public apology for failing to alert police about the online behavior of a mass shooter in which Canadian community?",
+      "options": [
+        "Banff, Alberta",
+        "Tumbler Ridge, British Columbia",
+        "Squamish, British Columbia",
+        "Moose Jaw, Saskatchewan"
+      ],
+      "a": 1,
+      "correctText": "Tumbler Ridge, British Columbia",
+      "category": "Usa",
+      "source": "https://apnews.com/article/openai-altman-tumbler-ridge-killings-apology-dec2adaad3946583519370eede6a99e2"
+    },
+    {
+      "q": "The European Union approved a massive $106 billion loan package for Ukraine in April 2026 after which country finally lifted its veto?",
+      "options": [
+        "Hungary",
+        "Slovakia",
+        "Poland",
+        "Austria"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://globalnews.ca/news/11813676/ukraine-loan-package-eu-hungary/"
+    },
+    {
+      "q": "In an effort to lower barriers for consumers, the CRTC ordered Canadian telecoms to allow customers to do what without needing a service representative?",
+      "options": [
+        "Cancel or change their plans online",
+        "Receive free unlimited data on weekends",
+        "Keep their phone hardware for free after one year",
+        "Skip late payment fees for the first month"
+      ],
+      "a": 0,
+      "correctText": "Cancel or change their plans online",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-crtc-orders-telecoms-to-allow-customers-to-cancel-change-plans-without/"
+    },
+    {
+      "q": "A Winnipeg woman was tragically killed just one day after a court appearance where she sought what type of protection against her alleged killer?",
+      "options": [
+        "A peace bond",
+        "An eviction notice",
+        "A neighborhood watch request",
+        "A federal witness protection order"
+      ],
+      "a": 0,
+      "correctText": "A peace bond",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/winnipeg/article/winnipeg-woman-killed-days-after-seeking-court-ordered-protection-against-alleged-killer/"
+    }
+  ]
+}

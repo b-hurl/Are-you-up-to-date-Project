@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-25",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "While stalking a rare antelope, a 75-year-old millionaire trophy hunter was recently trampled to death by a herd of elephants in which African country?",
+      "options": [
+        "Gabon",
+        "Botswana",
+        "Kenya",
+        "South Africa"
+      ],
+      "a": 0,
+      "correctText": "Gabon",
+      "category": "World",
+      "source": "https://www.9news.com.au/world/hunter-killed-by-elephants-gabon-africa-usa-news/1c3587a0-464a-4a35-89a3-2a01b1be134a"
+    },
+    {
+      "q": "On April 24, 2026, Nvidia's stock closed at a record high, pushing its market capitalization past what major milestone?",
+      "options": [
+        "$5 trillion",
+        "$3 trillion",
+        "$4 trillion",
+        "$6 trillion"
+      ],
+      "a": 0,
+      "correctText": "$5 trillion",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/24/nvidia-stock-closes-at-record-pushing-market-cap-past-5-trillion.html"
+    },
+    {
+      "q": "Which major tech company saw its stock soar 23.6% on April 24, 2026, marking its best single-day performance since 1987 following a blowout profit report?",
+      "options": [
+        "Intel",
+        "AMD",
+        "Nvidia",
+        "Qualcomm"
+      ],
+      "a": 0,
+      "correctText": "Intel",
+      "category": "Business",
+      "source": "https://www.newstimes.com/business/article/how-major-us-stock-indexes-fared-friday-4-24-2026"
+    },
+    {
+      "q": "Lori Chavez-DeRemer resigned in late April 2026 as the head of which U.S. government department amid an investigation into her travel and spending practices?",
+      "options": [
+        "Department of Labor",
+        "Department of Commerce",
+        "Department of the Treasury",
+        "Department of Energy"
+      ],
+      "a": 0,
+      "correctText": "Department of Labor",
+      "category": "Business",
+      "source": "https://ogletree.com/insights-resources/beltway-buzz-april-24-2026/"
+    },
+    {
+      "q": "A late April 2026 report highlighted growing concerns of an AI-driven labor crisis following a combined 20,000 job cuts at which two tech giants?",
+      "options": [
+        "Meta and Microsoft",
+        "Google and Amazon",
+        "Apple and IBM",
+        "Tesla and Oracle"
+      ],
+      "a": 0,
+      "correctText": "Meta and Microsoft",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/24/20k-job-cuts-at-meta-microsoft-raise-concern-of-ai-labor-crisis-.html"
+    },
+    {
+      "q": "A 2026 Norwegian study using machine learning to analyze anti-Muslim hate speech online found that most hateful posts come from:",
+      "options": [
+        "A small group of users who don't remain active for long",
+        "Automated foreign bots that post continuously",
+        "A widespread number of casual social media users",
+        "Verified accounts with large follower bases"
+      ],
+      "a": 0,
+      "correctText": "A small group of users who don't remain active for long",
+      "category": "Science",
+      "source": "https://www.oslomet.no/en/research/featured-research/machine-learning-trends-online-hate"
+    },
+    {
+      "q": "Israeli Prime Minister Benjamin Netanyahu recently confirmed he successfully underwent treatment for an early-stage tumor of what type of cancer?",
+      "options": [
+        "Colon cancer",
+        "Skin cancer",
+        "Lung cancer",
+        "Prostate cancer"
+      ],
+      "a": 3,
+      "correctText": "Prostate cancer",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/ckgw72lrvn3o"
+    },
+    {
+      "q": "In a bid to push production into the United States, the Trump administration offered immediate tariff relief to aluminum and steel companies from which country if they relocate?",
+      "options": [
+        "Canada",
+        "China",
+        "Germany",
+        "Japan"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/american-offer-canadian-aluminum-steel-companies-tariff-relief-9.7176321"
+    },
+    {
+      "q": "According to a study featured in the news on April 25, 2026, what ongoing problem do many introductory psychology textbooks have?",
+      "options": [
+        "They misrepresent scientific findings and repeat long-standing myths",
+        "They are too advanced for college freshmen",
+        "They focus exclusively on modern neurobiology",
+        "They ignore classical experiments completely"
+      ],
+      "a": 0,
+      "correctText": "They misrepresent scientific findings and repeat long-standing myths",
+      "category": "Science",
+      "source": "https://www.psypost.org/psychology-textbooks-still-misrepresent-famous-experiments-and-controversial-debates/"
+    },
+    {
+      "q": "Which UK-based retailer announced the closure of all its U.S. showrooms on April 24, 2026, after initially entering the American market in 2020?",
+      "options": [
+        "Wren Kitchens",
+        "IKEA",
+        "Howdens",
+        "Magnet"
+      ],
+      "a": 0,
+      "correctText": "Wren Kitchens",
+      "category": "Business",
+      "source": "https://www.newstimes.com/business/article/how-major-us-stock-indexes-fared-friday-4-24-2026"
+    }
+  ]
+}
