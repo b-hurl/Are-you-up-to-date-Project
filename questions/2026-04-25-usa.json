@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "OpenAI CEO Sam Altman issued a public apology for failing to alert police about the online behavior of a mass shooter in which Canadian community?",
+      "options": [
+        "Banff, Alberta",
+        "Tumbler Ridge, British Columbia",
+        "Squamish, British Columbia",
+        "Moose Jaw, Saskatchewan"
+      ],
+      "a": 1,
+      "correctText": "Tumbler Ridge, British Columbia",
+      "category": "Usa",
+      "source": "https://apnews.com/article/openai-altman-tumbler-ridge-killings-apology-dec2adaad3946583519370eede6a99e2"
+    },
+    {
+      "q": "Israeli Prime Minister Benjamin Netanyahu recently confirmed he successfully underwent treatment for an early-stage tumor of what type of cancer?",
+      "options": [
+        "Colon cancer",
+        "Skin cancer",
+        "Lung cancer",
+        "Prostate cancer"
+      ],
+      "a": 3,
+      "correctText": "Prostate cancer",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/ckgw72lrvn3o"
+    },
+    {
+      "q": "A massive and destructive EF4 tornado caused severe damage to homes and Vance Air Force Base in which Oklahoma city?",
+      "options": [
+        "Norman",
+        "Moore",
+        "Enid",
+        "Tulsa"
+      ],
+      "a": 2,
+      "correctText": "Enid",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/tornado-rips-northwest-oklahoma-amid-line-severe-storms/story?id=132336029"
+    },
+    {
+      "q": "The U.S. Justice Department dropped its investigation into the Federal Reserve and which of its Chairmen?",
+      "options": [
+        "Janet Yellen",
+        "Jerome Powell",
+        "Ben Bernanke",
+        "Alan Greenspan"
+      ],
+      "a": 1,
+      "correctText": "Jerome Powell",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/business/economy/justice-dept-drops-probe-federal-reserve-powell-rcna341876"
+    },
+    {
+      "q": "A U.S. appeals court ruled that President Donald Trump's executive order suspending what process at the southern border is illegal?",
+      "options": [
+        "Asylum access",
+        "Green card renewals",
+        "Work visas",
+        "Tourist entry"
+      ],
+      "a": 0,
+      "correctText": "Asylum access",
+      "category": "Usa",
+      "source": "https://apnews.com/article/trump-asylum-appeals-court-ed8f8f193579b757d7f384cd7f9e9e60"
+    }
+  ]
+}

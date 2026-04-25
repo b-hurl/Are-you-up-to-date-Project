@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "While stalking a rare antelope, a 75-year-old millionaire trophy hunter was recently trampled to death by a herd of elephants in which African country?",
+      "options": [
+        "Gabon",
+        "Botswana",
+        "Kenya",
+        "South Africa"
+      ],
+      "a": 0,
+      "correctText": "Gabon",
+      "category": "World",
+      "source": "https://www.9news.com.au/world/hunter-killed-by-elephants-gabon-africa-usa-news/1c3587a0-464a-4a35-89a3-2a01b1be134a"
+    },
+    {
+      "q": "The European Union approved a massive $106 billion loan package for Ukraine in April 2026 after which country finally lifted its veto?",
+      "options": [
+        "Hungary",
+        "Slovakia",
+        "Poland",
+        "Austria"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://globalnews.ca/news/11813676/ukraine-loan-package-eu-hungary/"
+    },
+    {
+      "q": "According to the head of the International Energy Agency in April 2026, the fossil fuel industry has been changed forever by an oil crisis triggered by a war involving which nation?",
+      "options": [
+        "Iran",
+        "Saudi Arabia",
+        "Russia",
+        "Venezuela"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://www.theguardian.com/environment/2026/apr/24/global-oil-crisis-changed-fossil-fuel-industry-for-ever-iea-chief-fatih-birol"
+    },
+    {
+      "q": "In a bid to push production into the United States, the Trump administration offered immediate tariff relief to aluminum and steel companies from which country if they relocate?",
+      "options": [
+        "Canada",
+        "China",
+        "Germany",
+        "Japan"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/american-offer-canadian-aluminum-steel-companies-tariff-relief-9.7176321"
+    },
+    {
+      "q": "What item was used in a massive 20,000-piece installation near the US Congress to represent abducted Ukrainian children?",
+      "options": [
+        "Teddy bears",
+        "School desks",
+        "Pairs of shoes",
+        "Backpacks"
+      ],
+      "a": 0,
+      "correctText": "Teddy bears",
+      "category": "World",
+      "source": "https://united24media.com/latest-news/20000-teddy-bears-installed-near-us-congress-to-demand-return-of-abducted-ukrainian-children-18203"
+    }
+  ]
+}

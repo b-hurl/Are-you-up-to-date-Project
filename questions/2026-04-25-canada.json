@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which provincial premier stated that U.S. liquor won't return to store shelves until Donald Trump drops tariffs and releases the Epstein files?",
+      "options": [
+        "Wab Kinew",
+        "Danielle Smith",
+        "Doug Ford",
+        "David Eby"
+      ],
+      "a": 0,
+      "correctText": "Wab Kinew",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/trump-must-drop-tariffs-release-epstein-files-before-us-booze-returns-to-manitoba-shelves-kinew/"
+    },
+    {
+      "q": "A Winnipeg woman was tragically killed just one day after a court appearance where she sought what type of protection against her alleged killer?",
+      "options": [
+        "A peace bond",
+        "An eviction notice",
+        "A neighborhood watch request",
+        "A federal witness protection order"
+      ],
+      "a": 0,
+      "correctText": "A peace bond",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/winnipeg/article/winnipeg-woman-killed-days-after-seeking-court-ordered-protection-against-alleged-killer/"
+    },
+    {
+      "q": "In an effort to lower barriers for consumers, the CRTC ordered Canadian telecoms to allow customers to do what without needing a service representative?",
+      "options": [
+        "Cancel or change their plans online",
+        "Receive free unlimited data on weekends",
+        "Keep their phone hardware for free after one year",
+        "Skip late payment fees for the first month"
+      ],
+      "a": 0,
+      "correctText": "Cancel or change their plans online",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-crtc-orders-telecoms-to-allow-customers-to-cancel-change-plans-without/"
+    },
+    {
+      "q": "The Trump administration recently offered immediate tariff relief to Canadian aluminum and steel companies under what strict condition?",
+      "options": [
+        "They commit to moving production to the U.S.",
+        "They only use raw materials mined in the U.S.",
+        "They cut ties with Chinese suppliers",
+        "They pay a 10% premium tax upfront"
+      ],
+      "a": 0,
+      "correctText": "They commit to moving production to the U.S.",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/american-offer-canadian-aluminum-steel-companies-tariff-relief-9.7176321"
+    },
+    {
+      "q": "According to Energy and Natural Resources Minister Tim Hodgson, what sector will Canada use as its 'strongest card' for leverage in CUSMA trade renegotiations?",
+      "options": [
+        "The energy and natural resources sector",
+        "The aerospace manufacturing sector",
+        "The agricultural and farming sector",
+        "The tech and artificial intelligence sector"
+      ],
+      "a": 0,
+      "correctText": "The energy and natural resources sector",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11815839/canada-energy-sector-leverage-cusma/"
+    }
+  ]
+}

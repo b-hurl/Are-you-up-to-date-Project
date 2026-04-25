@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What upcoming western-thriller directed by Park Chan-wook recently announced a cast including Matthew McConaughey, Austin Butler, and Pedro Pascal?",
+      "options": [
+        "The Brigands of Rattlecreek",
+        "Blood Meridian",
+        "The Revenant's Return",
+        "Dust and Bone"
+      ],
+      "a": 0,
+      "correctText": "The Brigands of Rattlecreek",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/park-chan-wook-matthew-mcconaughey-austin-butler-pedro-pascal-1236871018/"
+    },
+    {
+      "q": "Which actor is attached to produce and potentially star in the feature film adaptation of the video game 'Battlefield' directed by Christopher McQuarrie?",
+      "options": [
+        "Michael B. Jordan",
+        "John David Washington",
+        "Anthony Mackie",
+        "Daniel Kaluuya"
+      ],
+      "a": 0,
+      "correctText": "Michael B. Jordan",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/battlefield-movie-michael-b-jordan-chris-mcquarrie-1236574195/"
+    },
+    {
+      "q": "Universal Pictures recently shifted its release calendar, bumping 'Miami Vice '85' to 2028 and moving which horror-adventure sequel up to October 2027?",
+      "options": [
+        "The Mummy 4",
+        "The Wolfman Returns",
+        "Dracula Untold 2",
+        "Van Helsing: Resurrection"
+      ],
+      "a": 0,
+      "correctText": "The Mummy 4",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/the-mummy-4-miami-vice-85-shift-release-dates-1236730004/"
+    },
+    {
+      "q": "A man in Singapore was recently arrested for allegedly accessing a content server and leaking which unreleased film online?",
+      "options": [
+        "An Avatar film",
+        "A Star Wars film",
+        "A Marvel Studios film",
+        "A Lord of the Rings film"
+      ],
+      "a": 0,
+      "correctText": "An Avatar film",
+      "category": "Entertainment",
+      "source": "https://www.straitstimes.com/singapore/man-arrested-after-allegedly-accessing-content-server-leaking-unreleased-film-online"
+    },
+    {
+      "q": "In April 2026, the Writers Guild of America (WGA) ratified a new four-year contract that included significant cuts to what specific member benefit?",
+      "options": [
+        "Health Plan",
+        "Pension Plan",
+        "Residuals for Streaming",
+        "Paid Parental Leave"
+      ],
+      "a": 0,
+      "correctText": "Health Plan",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/wga-ratifies-amptp-contract-health-cuts-1236727987/"
+    }
+  ]
+}

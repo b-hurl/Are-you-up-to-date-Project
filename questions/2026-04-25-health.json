@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 25, 2026, former top CDC official Demetre Daskalakis publicly criticized the 'fake Oval Office math' of which Trump administration cabinet member?",
+      "options": [
+        "Robert F. Kennedy Jr.",
+        "Pete Hegseth",
+        "Vivek Ramaswamy",
+        "Elon Musk"
+      ],
+      "a": 0,
+      "correctText": "Robert F. Kennedy Jr.",
+      "category": "Health",
+      "source": "https://www.advocate.com/politics/national/rfk-embarrasing-math-daskalakis"
+    },
+    {
+      "q": "What nationwide DEA initiative took place on Saturday, April 25, 2026, to provide a safe means of disposing of unwanted or expired prescription medications?",
+      "options": [
+        "National Prescription Drug Take Back Day",
+        "Safe Pill Disposal Initiative",
+        "Operation Medicine Cabinet",
+        "National Pharmacy Clean-Out Day"
+      ],
+      "a": 0,
+      "correctText": "National Prescription Drug Take Back Day",
+      "category": "Health",
+      "source": "https://www.deadiversion.usdoj.gov/drug_disposal/takeback/"
+    },
+    {
+      "q": "What is the name of the new province-wide digital health information system that officially launched across Newfoundland and Labrador on April 25, 2026?",
+      "options": [
+        "CorCare",
+        "MyHealthNL",
+        "CareLink",
+        "ProvHealth"
+      ],
+      "a": 0,
+      "correctText": "CorCare",
+      "category": "Health",
+      "source": "https://nlhealthservices.ca/news/new-health-information-system-launches-province-wide-saturday-april-25/"
+    },
+    {
+      "q": "On April 25, 2026, Jamaica and the Pan American Health Organization officially launched the 24th regional observance of which public health week?",
+      "options": [
+        "Caribbean Vaccination Week",
+        "Dengue Awareness Week",
+        "Zika Prevention Week",
+        "Caribbean Malaria Eradication Week"
+      ],
+      "a": 0,
+      "correctText": "Caribbean Vaccination Week",
+      "category": "Health",
+      "source": "https://www.paho.org/en/news/24-4-2026-jamaica-observes-vaccination-week-americas"
+    },
+    {
+      "q": "Recognized internationally on April 25, 2026, which global UN observance aims to keep a spotlight on the effort to end a deadly mosquito-borne disease?",
+      "options": [
+        "World Malaria Day",
+        "World Dengue Day",
+        "World Zika Day",
+        "World Yellow Fever Day"
+      ],
+      "a": 0,
+      "correctText": "World Malaria Day",
+      "category": "Health",
+      "source": "https://www.who.int/campaigns/world-malaria-day"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-25",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Announced by his publisher in late April 2026, what is the title of Haruki Murakami's new book, his first full-length novel to feature a sole female protagonist?",
+      "options": [
+        "The Tale of Kaho",
+        "The City and Its Uncertain Walls",
+        "Abandoning a Cat",
+        "The Anteater of Musashi-sakai"
+      ],
+      "a": 0,
+      "correctText": "The Tale of Kaho",
+      "category": "Books",
+      "source": "https://apnews.com/article/haruki-murakami-japan-novel-release-kaho-04accdae3413d874b284a128ec3e4616"
+    },
+    {
+      "q": "Which actor is attached to produce and potentially star in the feature film adaptation of the video game 'Battlefield' directed by Christopher McQuarrie?",
+      "options": [
+        "Michael B. Jordan",
+        "John David Washington",
+        "Anthony Mackie",
+        "Daniel Kaluuya"
+      ],
+      "a": 0,
+      "correctText": "Michael B. Jordan",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/battlefield-movie-michael-b-jordan-chris-mcquarrie-1236574195/"
+    },
+    {
+      "q": "Which team did the Los Angeles Lakers defeat in overtime to take a 3-0 series lead after LeBron James hit a tying 3-pointer late in regulation?",
+      "options": [
+        "Houston Rockets",
+        "Phoenix Suns",
+        "Denver Nuggets",
+        "Golden State Warriors"
+      ],
+      "a": 0,
+      "correctText": "Houston Rockets",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3b9a7538bd14d6c4b7d8f1313e26a99f"
+    },
+    {
+      "q": "Who scored the overtime winning goal for the Montreal Canadiens in their 3-2 victory over the Tampa Bay Lightning to take a 2-1 series lead in the NHL playoffs?",
+      "options": [
+        "Lane Hutson",
+        "Kirby Dach",
+        "Cole Caufield",
+        "Nick Suzuki"
+      ],
+      "a": 0,
+      "correctText": "Lane Hutson",
+      "category": "Sports",
+      "source": "https://apnews.com/article/lightning-canadiens-score-nhl-stanley-cup-eff7f580e17fcdc3d7b986204adc3dc5"
+    },
+    {
+      "q": "According to the Slay the Spire 2 beta patch notes v0.104.0 published on April 25, 2026, which boss fight received adjustments after player feedback regarding its high difficulty?",
+      "options": [
+        "The Doormaker",
+        "The Time Eater",
+        "The Corrupt Heart",
+        "The Awakened One"
+      ],
+      "a": 0,
+      "correctText": "The Doormaker",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/slay-the-spire-2-patch-notes-address-base-game-difficulty-and-the-doormaker"
+    },
+    {
+      "q": "On April 25, 2026, Jamaica and the Pan American Health Organization officially launched the 24th regional observance of which public health week?",
+      "options": [
+        "Caribbean Vaccination Week",
+        "Dengue Awareness Week",
+        "Zika Prevention Week",
+        "Caribbean Malaria Eradication Week"
+      ],
+      "a": 0,
+      "correctText": "Caribbean Vaccination Week",
+      "category": "Health",
+      "source": "https://www.paho.org/en/news/24-4-2026-jamaica-observes-vaccination-week-americas"
+    },
+    {
+      "q": "In the 2026 NFL Draft, running back Jeremiyah Love was selected third overall by which team?",
+      "options": [
+        "Arizona Cardinals",
+        "New York Giants",
+        "Carolina Panthers",
+        "New England Patriots"
+      ],
+      "a": 0,
+      "correctText": "Arizona Cardinals",
+      "category": "Sports",
+      "source": "https://apnews.com/article/arizona-cardinals-jeremiyah-love-36e73d76da61ca201c72e9f3108617c1"
+    },
+    {
+      "q": "Which city was announced as the host for the 2026 UFL United Bowl championship game?",
+      "options": [
+        "Washington, D.C.",
+        "Arlington",
+        "St. Louis",
+        "Birmingham"
+      ],
+      "a": 0,
+      "correctText": "Washington, D.C.",
+      "category": "Sports",
+      "source": "https://www.theufl.com/news/ufl-announces-washington-dc-as-host-of-2026-united-bowl"
+    },
+    {
+      "q": "Which major indie gaming showcase took place on April 25, 2026, featuring over 200 titles including SHIKA-Q and .45 PARABELLUM BLOODHOUND?",
+      "options": [
+        "INDIE Live Expo",
+        "Wholesome Direct",
+        "Future Games Show",
+        "PC Gaming Show"
+      ],
+      "a": 0,
+      "correctText": "INDIE Live Expo",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/indie-live-expo-april-25-2026-to-feature-over-200-games"
+    },
+    {
+      "q": "Highlighted in an April 2026 CrimeReads piece about cult literature, author Harrison Hill wrote a new book detailing Sarah Green's escape from which abusive American cult?",
+      "options": [
+        "ACMTC (Aggressive Christianity Missions Training Corps)",
+        "Heaven's Gate",
+        "The Children of God",
+        "Branch Davidians"
+      ],
+      "a": 0,
+      "correctText": "ACMTC (Aggressive Christianity Missions Training Corps)",
+      "category": "Books",
+      "source": "https://crimereads.com/the-struggle-to-tell-the-story-of-an-american-cult-and-the-woman-who-escaped/"
+    }
+  ]
+}

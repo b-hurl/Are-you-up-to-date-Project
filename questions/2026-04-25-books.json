@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Announced by his publisher in late April 2026, what is the title of Haruki Murakami's new book, his first full-length novel to feature a sole female protagonist?",
+      "options": [
+        "The Tale of Kaho",
+        "The City and Its Uncertain Walls",
+        "Abandoning a Cat",
+        "The Anteater of Musashi-sakai"
+      ],
+      "a": 0,
+      "correctText": "The Tale of Kaho",
+      "category": "Books",
+      "source": "https://apnews.com/article/haruki-murakami-japan-novel-release-kaho-04accdae3413d874b284a128ec3e4616"
+    },
+    {
+      "q": "Which \"lost\" Octavia E. Butler novel, which the author had previously blocked from reprinting, was announced in late April 2026 to be returning to shelves in a new edition after more than 40 years?",
+      "options": [
+        "Survivor",
+        "Patternmaster",
+        "Clay's Ark",
+        "Mind of My Mind"
+      ],
+      "a": 0,
+      "correctText": "Survivor",
+      "category": "Books",
+      "source": "https://www.latimes.com/entertainment-arts/books/story/2026-04-23/octavia-butler-survivor-new-edition-reprint"
+    },
+    {
+      "q": "Announced in late April 2026, which of the following novels by Robert Jackson Bennett earned a spot as a finalist for the 2026 Hugo Award for Best Novel?",
+      "options": [
+        "A Drop of Corruption",
+        "The Tainted Cup",
+        "Death of the Author",
+        "The Everlasting"
+      ],
+      "a": 0,
+      "correctText": "A Drop of Corruption",
+      "category": "Books",
+      "source": "https://reactormag.com/2026-hugo-awards-finalists/"
+    },
+    {
+      "q": "Releasing in late April 2026, 'Anxietyland' is a graphic memoir chronicling the lifelong experience with anxiety and depression of which popular cartoonist?",
+      "options": [
+        "Gemma Correll",
+        "Allie Brosh",
+        "Roz Chast",
+        "Samantha Irby"
+      ],
+      "a": 0,
+      "correctText": "Gemma Correll",
+      "category": "Books",
+      "source": "https://www.publishersweekly.com/pw/by-topic/authors/profiles/article/99518-gemma-correll-welcomes-you-to-anxietyland.html"
+    },
+    {
+      "q": "Highlighted in an April 2026 CrimeReads piece about cult literature, author Harrison Hill wrote a new book detailing Sarah Green's escape from which abusive American cult?",
+      "options": [
+        "ACMTC (Aggressive Christianity Missions Training Corps)",
+        "Heaven's Gate",
+        "The Children of God",
+        "Branch Davidians"
+      ],
+      "a": 0,
+      "correctText": "ACMTC (Aggressive Christianity Missions Training Corps)",
+      "category": "Books",
+      "source": "https://crimereads.com/the-struggle-to-tell-the-story-of-an-american-cult-and-the-woman-who-escaped/"
+    }
+  ]
+}

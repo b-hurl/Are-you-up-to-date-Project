@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which team did the Los Angeles Lakers defeat in overtime to take a 3-0 series lead after LeBron James hit a tying 3-pointer late in regulation?",
+      "options": [
+        "Houston Rockets",
+        "Phoenix Suns",
+        "Denver Nuggets",
+        "Golden State Warriors"
+      ],
+      "a": 0,
+      "correctText": "Houston Rockets",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3b9a7538bd14d6c4b7d8f1313e26a99f"
+    },
+    {
+      "q": "In the 2026 NFL Draft, running back Jeremiyah Love was selected third overall by which team?",
+      "options": [
+        "Arizona Cardinals",
+        "New York Giants",
+        "Carolina Panthers",
+        "New England Patriots"
+      ],
+      "a": 0,
+      "correctText": "Arizona Cardinals",
+      "category": "Sports",
+      "source": "https://apnews.com/article/arizona-cardinals-jeremiyah-love-36e73d76da61ca201c72e9f3108617c1"
+    },
+    {
+      "q": "Who scored the overtime winning goal for the Montreal Canadiens in their 3-2 victory over the Tampa Bay Lightning to take a 2-1 series lead in the NHL playoffs?",
+      "options": [
+        "Lane Hutson",
+        "Kirby Dach",
+        "Cole Caufield",
+        "Nick Suzuki"
+      ],
+      "a": 0,
+      "correctText": "Lane Hutson",
+      "category": "Sports",
+      "source": "https://apnews.com/article/lightning-canadiens-score-nhl-stanley-cup-eff7f580e17fcdc3d7b986204adc3dc5"
+    },
+    {
+      "q": "Which golfer shot a 65 to open up a commanding 7-shot lead at the 2026 Chevron Championship?",
+      "options": [
+        "Nelly Korda",
+        "Lilia Vu",
+        "Celine Boutier",
+        "Minjee Lee"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48583820/nelly-korda-shoots-65-opens-7-shot-lead-chevron-championship"
+    },
+    {
+      "q": "Which city was announced as the host for the 2026 UFL United Bowl championship game?",
+      "options": [
+        "Washington, D.C.",
+        "Arlington",
+        "St. Louis",
+        "Birmingham"
+      ],
+      "a": 0,
+      "correctText": "Washington, D.C.",
+      "category": "Sports",
+      "source": "https://www.theufl.com/news/ufl-announces-washington-dc-as-host-of-2026-united-bowl"
+    }
+  ]
+}
