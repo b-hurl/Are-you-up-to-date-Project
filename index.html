@@ -1046,6 +1046,15 @@
             const gameDate = getGameDate();
             const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
 
+            // PREVENT RE-PLAY: Direct access check
+            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            if (archive[gameDate]?.[category.toLowerCase()] || archive[gameDate]?.[category]) {
+                showToast("You've already played this today!", "🚫");
+                showModeSelection();
+                updateHeaderSyncStatus('complete');
+                return;
+            }
+
             updateHeaderSyncStatus('syncing');
             try {
                 const response = await fetch(filePath + `?v=${Date.now()}`);
@@ -2475,6 +2484,16 @@ function setupChallengeListener(challengeId) {
 }
 
 function startChallengeGame() {
+    // FINAL DEFENSE: Prevent re-play if they somehow trigger this after finishing
+    const today = getGameDate();
+    const category = gameConfig.activeSelection;
+    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+    if (category && (archive[today]?.[category.toLowerCase()] || archive[today]?.[category])) {
+        showToast("You've already played this today!", "🚫");
+        closeInviteModal();
+        return;
+    }
+
     closeInviteModal();
     const date = getGameDate();
     document.getElementById('game-settings-root').classList.add('hidden');
