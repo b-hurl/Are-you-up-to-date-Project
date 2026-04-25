@@ -931,6 +931,7 @@
             gauntletMode: null,
             activeSelection: null
         };
+        var authReadyPromise;
 
         // Audio and Listeners
         var challengeListener = null;
@@ -5583,7 +5584,7 @@ function initFirebase() {
     userId = getOrSetUserId();
 
     // Global promise to ensure Firebase Auth is initialized
-    let authReadyPromise = new Promise(resolve => {
+    authReadyPromise = new Promise(resolve => {
         // This listener will fire once on initialization and then on subsequent state changes
         auth.onAuthStateChanged(user => resolve(user));
     });
