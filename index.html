@@ -1043,12 +1043,27 @@
         }
 
         async function loadCategoryTrivia(category) {
+    await authReadyPromise; // Ensure auth state is resolved before proceeding
+
             const gameDate = getGameDate();
             const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
 
-            // PREVENT RE-PLAY: Direct access check
-            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-            if (archive[gameDate]?.[category.toLowerCase()] || archive[gameDate]?.[category]) {
+            // PREVENT RE-PLAY: Check Firebase (Truth) first, then Local Archive
+            let hasPlayed = false;
+            if (auth && auth.currentUser) {
+                try {
+                    const docId = `${gameDate}_${auth.currentUser.uid}_${category.toLowerCase()}`;
+                    const doc = await db.collection('scores').doc(docId).get();
+                    if (doc.exists) hasPlayed = true;
+                } catch(e) {}
+            }
+            
+            if (!hasPlayed) {
+                const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+                if (archive[gameDate]?.[category.toLowerCase()] || archive[gameDate]?.[category]) hasPlayed = true;
+            }
+
+            if (hasPlayed) {
                 showToast("You've already played this today!", "🚫");
                 showModeSelection();
                 updateHeaderSyncStatus('complete');
@@ -2311,6 +2326,7 @@ async function prepareAndCreateChallenge(category) {
 window.prepareAndCreateChallenge = prepareAndCreateChallenge;
 
 async function create1v1Challenge() {
+    await authReadyPromise;
     if (!auth.currentUser) {
         showToast("Sign in to challenge friends!", "🔐");
         toggleLoginModal();
@@ -2319,9 +2335,8 @@ async function create1v1Challenge() {
 
     const today = getGameDate();
     const category = gameConfig.activeSelection;
-    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-    const p1ScoreEntry = archive[today]?.[category ? category.toLowerCase() : ""] || archive[today]?.[category];
-    const isCompleted = p1ScoreEntry !== undefined;
+    const p1ScoreEntry = getScoreFromArchive(today, category);
+    const isCompleted = p1ScoreEntry !== null;
     const p1Score = isCompleted ? p1ScoreEntry.score : 0;
 
     // Prompt for Invite Taunt
@@ -2483,12 +2498,28 @@ function setupChallengeListener(challengeId) {
     });
 }
 
-function startChallengeGame() {
-    // FINAL DEFENSE: Prevent re-play if they somehow trigger this after finishing
+async function startChallengeGame() {
+    await authReadyPromise; // Ensure auth state is resolved before proceeding
+
+    // FINAL DEFENSE: Check Firebase (Truth) first, then Local Archive
     const today = getGameDate();
     const category = gameConfig.activeSelection;
-    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-    if (category && (archive[today]?.[category.toLowerCase()] || archive[today]?.[category])) {
+
+    let hasPlayed = false;
+    if (category && auth && auth.currentUser) {
+        try {
+            const docId = `${today}_${auth.currentUser.uid}_${category.toLowerCase()}`;
+            const doc = await db.collection('scores').doc(docId).get();
+            if (doc.exists) hasPlayed = true;
+        } catch(e) {}
+    }
+
+    if (!hasPlayed && category) {
+        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+        if (archive[today]?.[category.toLowerCase()] || archive[today]?.[category]) hasPlayed = true;
+    }
+
+    if (hasPlayed) {
         showToast("You've already played this today!", "🚫");
         closeInviteModal();
         return;
@@ -4094,6 +4125,8 @@ window.set1v1VictoryTaunt = set1v1VictoryTaunt;
 async function handle1v1Challenge(challengeId) {
     updateHeaderSyncStatus('syncing');
     
+    await authReadyPromise; // Ensure auth state is resolved before proceeding
+
     // Clear any existing listeners
     if (challengeListener) {
         challengeListener();
@@ -4136,11 +4169,22 @@ async function handle1v1Challenge(challengeId) {
         // 4. Otherwise, handle the recipient (P2) joining
         let p2Name = localStorage.getItem('trivia-name') || sessionStorage.getItem('trivia-name');
 
-        // Check if Recipient has already played this category today independently
-        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-        const pastPerformance = archive[data.date]?.[data.category.toLowerCase()] || archive[data.date]?.[data.category];
+        // Check if Recipient has already played this category today independently (Firebase First)
+        let pastPerformance = null;
+        if (auth && auth.currentUser) {
+            try {
+                const docId = `${data.date}_${auth.currentUser.uid}_${data.category.toLowerCase()}`;
+                const doc = await db.collection('scores').doc(docId).get();
+                if (doc.exists) pastPerformance = doc.data();
+            } catch(e) {}
+        }
         
-        if (pastPerformance) {
+        if (!pastPerformance) {
+            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+            pastPerformance = archive[data.date]?.[data.category.toLowerCase()] || archive[data.date]?.[data.category];
+        }
+        
+        if (pastPerformance && pastPerformance.score !== undefined) {
             showToast("You've already played this today! Syncing score...", "🔄");
             await db.collection('challenges').doc(challengeId).update({ 
                 status: 'completed',
@@ -4220,7 +4264,7 @@ function removeChallengeParam() {
     window.history.replaceState({}, '', url);
 }
 
-function openInviteModal(groupId) {
+async function openInviteModal(groupId) {
     currentInviteGroupId = groupId;
     const modal = document.getElementById('invite-modal');
     
@@ -4249,8 +4293,22 @@ function openInviteModal(groupId) {
             const category = gameConfig.activeSelection || 
                              Object.keys(todayChallenges).find(key => todayChallenges[key] === groupId);
             
-            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-            const hasPlayed = category && (archive[today]?.[category.toLowerCase()] !== undefined || archive[today]?.[category] !== undefined);
+
+            let hasPlayed = false;
+            // Firebase Check (Truth)
+            if (category && auth && auth.currentUser) {
+                try {
+                    const docId = `${today}_${auth.currentUser.uid}_${category.toLowerCase()}`;
+                    const doc = await db.collection('scores').doc(docId).get();
+                    if (doc.exists) hasPlayed = true;
+                } catch(e) {}
+            }
+
+            // Local Check (Fallback)
+            if (!hasPlayed && category) {
+                const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+                hasPlayed = (archive[today]?.[category.toLowerCase()] !== undefined || archive[today]?.[category] !== undefined);
+            }
 
             // Only show for 1v1 challenges (IDs starting with 1v1_) if not already played
             const isChallenge = groupId && typeof groupId === 'string' && groupId.startsWith('1v1_');
@@ -5505,6 +5563,12 @@ function initFirebase() {
     auth = firebase.auth();
     userId = getOrSetUserId();
 
+    // Global promise to ensure Firebase Auth is initialized
+    window.authReadyPromise = new Promise(resolve => {
+        // This listener will fire once on initialization and then on subsequent state changes
+        auth.onAuthStateChanged(user => resolve(user));
+    });
+
     // Check for redirect result (useful for in-app browsers)
     auth.getRedirectResult().then((result) => {
         if (result.user) {
@@ -5540,6 +5604,7 @@ function initFirebase() {
     }
 
     // Auth Listener
+    // This listener is already defined, so we don't need to redefine it.
     auth.onAuthStateChanged((user) => {
         const userBtnElement = document.getElementById('user-btn');
         const userIconDisplay = document.getElementById('user-icon-display');

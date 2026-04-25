@@ -417,7 +417,11 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
             activeChallengesData = (gameDate && activeAll[gameDate]) ? activeAll[gameDate] : {};
         } catch (e) {}
 
-        const savedScore = archive[gameDate]?.[config.activeSelection]?.score;
+        // Robust lookup for the score to handle casing differences
+        const dayData = archive[gameDate] || {};
+        const categoryLower = config.activeSelection?.toLowerCase();
+        const scoreKey = Object.keys(dayData).find(k => k.toLowerCase() === categoryLower);
+        const savedScore = scoreKey ? dayData[scoreKey].score : undefined;
         
         // Check if a challenge was already sent for this specific category today
         const activeChallenges = Array.isArray(activeChallengesData) ? activeChallengesData : Object.keys(activeChallengesData || {});
@@ -634,7 +638,9 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                         const isPlayed = playedModes.some(m => m.toLowerCase() === categoryLower);
                         const isMulti = config.gameMode === 'multiplayer';
                         const isSent = isMulti && activeChallenges.some(m => m.toLowerCase() === categoryLower);
-                        const savedScore = archive[gameDate]?.[categoryLower]?.score;
+                        
+                        const scoreKey = Object.keys(archive[gameDate] || {}).find(k => k.toLowerCase() === categoryLower);
+                        const savedScore = scoreKey ? archive[gameDate][scoreKey].score : undefined;
                         const isCompleted = savedScore !== undefined || isPlayed;
 
                         // Find the count for this category to determine length label
