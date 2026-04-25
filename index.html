@@ -2278,7 +2278,25 @@ function returnToMenu(target) {
     showModeSelection();
 }
 
+/**
+ * Robust archive lookup to handle case-sensitivity across different game modes.
+ */
+function getScoreFromArchive(date, category) {
+    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+    const dayData = archive[date];
+    if (!dayData || !category) return null;
+    
+    // 1. Direct match (covers most cases)
+    if (dayData[category]) return dayData[category];
+    
+    // 2. Case-insensitive search
+    const lowerCat = category.toLowerCase();
+    const foundKey = Object.keys(dayData).find(k => k.toLowerCase() === lowerCat);
+    return foundKey ? dayData[foundKey] : null;
+}
+
 async function prepareAndCreateChallenge(category) {
+    await authReadyPromise;
     if (!auth.currentUser) {
         showToast("Sign in to challenge friends!", "🔐");
         toggleLoginModal();
@@ -2335,8 +2353,9 @@ async function create1v1Challenge() {
 
     const today = getGameDate();
     const category = gameConfig.activeSelection;
-    const p1ScoreEntry = getScoreFromArchive(today, category);
-    const isCompleted = p1ScoreEntry !== null;
+    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
+    const p1ScoreEntry = archive[today]?.[category ? category.toLowerCase() : ""] || archive[today]?.[category];
+    const isCompleted = p1ScoreEntry !== undefined;
     const p1Score = isCompleted ? p1ScoreEntry.score : 0;
 
     // Prompt for Invite Taunt
@@ -5564,7 +5583,7 @@ function initFirebase() {
     userId = getOrSetUserId();
 
     // Global promise to ensure Firebase Auth is initialized
-    window.authReadyPromise = new Promise(resolve => {
+    let authReadyPromise = new Promise(resolve => {
         // This listener will fire once on initialization and then on subsequent state changes
         auth.onAuthStateChanged(user => resolve(user));
     });
