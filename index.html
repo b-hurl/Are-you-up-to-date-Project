@@ -4233,16 +4233,28 @@ function openInviteModal(groupId) {
     const revokeContainer = document.getElementById('revoke-btn-container');
     if (revokeContainer) {
         revokeContainer.classList.toggle('hidden', !activeChallengeId);
+            // Ensure the revoke button within the modal targets the specific ID passed to the modal
+            const revokeBtn = revokeContainer.querySelector('button');
+            if (revokeBtn) revokeBtn.onclick = () => window.revokeChallenge(groupId);
     }
 
         // Show start button ONLY if user hasn't played this category yet today
         const startBtnContainer = document.getElementById('invite-start-btn-container');
         if (startBtnContainer) {
             const today = getGameDate();
-            const category = gameConfig.activeSelection;
+            const activeAll = JSON.parse(localStorage.getItem('trivia-active-challenges') || '{}');
+            const todayChallenges = activeAll[today] || {};
+            
+            // Derived lookup: Find the category associated with this ID if activeSelection is null
+            const category = gameConfig.activeSelection || 
+                             Object.keys(todayChallenges).find(key => todayChallenges[key] === groupId);
+            
             const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
             const hasPlayed = category && (archive[today]?.[category.toLowerCase()] !== undefined || archive[today]?.[category] !== undefined);
-            startBtnContainer.classList.toggle('hidden', !activeChallengeId || hasPlayed);
+
+            // Only show for 1v1 challenges (IDs starting with 1v1_) if not already played
+            const isChallenge = groupId && typeof groupId === 'string' && groupId.startsWith('1v1_');
+            startBtnContainer.classList.toggle('hidden', !isChallenge || hasPlayed);
         }
 
     modal.classList.remove('hidden');
