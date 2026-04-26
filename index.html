@@ -1728,49 +1728,48 @@ async function startApp() {
     const saved = localStorage.getItem('trivia-session');
     
     if (saved) {
-        const session = JSON.parse(saved);
-        
-        if (session.date !== gameDate) {
-            console.log("Old session detected. Archiving and clearing for new day...");
-            archiveSession(session);
-            localStorage.removeItem('trivia-manual-sync-available');
-            localStorage.removeItem('trivia-session');
-            window.userChoices = [];
-            updateTheme('casual');
-            // The main menu is already rendered by renderGameSettings() and showModeSelection()
-            showModeSelection();
-        } else {
-            try {
-            gameData = {
-                questions: sanitizeQuestions(session.shuffledQuestions)
-            };
-
-            currentIdx = session.currentIdx;
-            score = session.score;
-            currentStreak = session.currentStreak || 0;
-            globalTimeLeft = session.timeLeft || QUESTION_TIME_LIMIT; // Restore remaining time
-            window.userChoices = session.userChoices || [];
-            selectedIdx = session.selectedIdx ?? null;
+        try {
+            const session = JSON.parse(saved);
             
-            const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
-            updateTheme(lastMode);
-
-            if (session.isFinished) {
-                    // Stay on the menu rather than jumping to results automatically
-                    showModeSelection();
-                return;
-            }
-            
-            // Resume game UI
-            document.getElementById('game-settings-root').classList.add('hidden'); // Hide React menu
-            document.getElementById('score-display').innerText = `Score: ${score}`;
-            document.getElementById('game-header').classList.remove('hidden');
-            document.getElementById('question-text').classList.remove('hidden');
-            renderQuestion();
-            } catch (e) {
-                console.error("Session restoration failed:", e);
+            if (session.date !== gameDate) {
+                console.log("Old session detected. Archiving and clearing for new day...");
+                archiveSession(session);
+                localStorage.removeItem('trivia-manual-sync-available');
+                localStorage.removeItem('trivia-session');
+                window.userChoices = [];
+                updateTheme('casual');
                 showModeSelection();
+            } else {
+                gameData = {
+                    questions: sanitizeQuestions(session.shuffledQuestions)
+                };
+
+                currentIdx = session.currentIdx;
+                score = session.score;
+                currentStreak = session.currentStreak || 0;
+                globalTimeLeft = session.timeLeft || QUESTION_TIME_LIMIT; 
+                window.userChoices = session.userChoices || [];
+                selectedIdx = session.selectedIdx ?? null;
+                
+                const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
+                updateTheme(lastMode);
+
+                if (session.isFinished) {
+                    showModeSelection();
+                    return;
+                }
+                
+                // Resume game UI
+                document.getElementById('game-settings-root').classList.add('hidden'); 
+                document.getElementById('score-display').innerText = `Score: ${score}`;
+                document.getElementById('game-header').classList.remove('hidden');
+                document.getElementById('question-text').classList.remove('hidden');
+                renderQuestion();
             }
+        } catch (e) {
+            console.error("Session restoration failed due to corruption:", e);
+            localStorage.removeItem('trivia-session');
+            showModeSelection();
         }
     } else {
         // No saved session, just show the main menu (already rendered by renderGameSettings() and showModeSelection())
@@ -1991,7 +1990,17 @@ function confirmAnswer() {
     // starts fresh and the UI doesn't show the old time during transition.
     globalTimeLeft = QUESTION_TIME_LIMIT;
     const progressBar = document.getElementById('question-progress-bar');
-    if (progressBar) progressBar.parentElement.classList.remove('shake-infinite', 'heartbeat-pulse');
+    const timerDisplay = document.getElementById('question-timer');
+    if (progressBar) {
+        progressBar.parentElement.classList.remove('shake-infinite', 'heartbeat-pulse');
+        progressBar.classList.remove('bg-red-500');
+        progressBar.classList.add('bg-primary-400');
+        progressBar.style.width = '100%';
+    }
+    if (timerDisplay) {
+        timerDisplay.innerText = QUESTION_TIME_LIMIT;
+        timerDisplay.classList.remove('text-red-500');
+    }
     
     // Initialize the choices array if it doesn't exist
     if (!window.userChoices) window.userChoices = [];
@@ -2286,13 +2295,12 @@ function getScoreFromArchive(date, category) {
     const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
     const dayData = archive[date];
     if (!dayData || !category) return null;
+
+    // Normalize keys: lower-case and strip mode-specific prefixes/suffixes
+    const normalize = (s) => s.toLowerCase().replace(/^(solo-|multiplayer-)/, '').replace(/-gauntlet$/, '').trim();
+    const target = normalize(category);
     
-    // 1. Direct match (covers most cases)
-    if (dayData[category]) return dayData[category];
-    
-    // 2. Case-insensitive search
-    const lowerCat = category.toLowerCase();
-    const foundKey = Object.keys(dayData).find(k => k.toLowerCase() === lowerCat);
+    const foundKey = Object.keys(dayData).find(k => normalize(k) === target);
     return foundKey ? dayData[foundKey] : null;
 }
 
@@ -2311,21 +2319,30 @@ async function prepareAndCreateChallenge(category) {
     const filePath = `questions/${gameDate}-${category.toLowerCase()}.json`;
 
     try {
-        const response = await fetch(filePath + `?v=${Date.now()}`);
-        if (!response.ok) throw new Error("Category file not found");
+        // TRUTH: If P1 already played, we MUST use the exact questions they answered
+        const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
+        let questions = [];
+        if (session.date === gameDate && session.activeMode === category.toLowerCase() && session.shuffledQuestions) {
+            questions = session.shuffledQuestions;
+        }
         
-        const data = await response.json();
-        const questions = sanitizeQuestions(data.questions || []);
-        
-        if (questions.length === 0) throw new Error("No questions available");
+        // Fallback: If session was lost but archive exists, load and slice to match archived total
+        if (questions.length === 0) {
+            const response = await fetch(filePath + `?v=${Date.now()}`);
+            if (!response.ok) throw new Error("Category file not found");
+            const data = await response.json();
+            const archived = getScoreFromArchive(gameDate, category);
+            questions = sanitizeQuestions(data.questions || []);
+            questions = shuffle(questions).slice(0, archived ? archived.total : 5);
+        }
 
         // Setup temporary game state for the challenge generator
         gameData = { questions: questions };
         gameConfig.activeSelection = category;
         
         // Use archived score for P1 (Person who already played)
-        const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-        const savedScore = archive[gameDate]?.[category]?.score || 0;
+        const archived = getScoreFromArchive(gameDate, category);
+        const savedScore = archived ? archived.score : 0;
         
         // Temporarily override global score for the challenge record
         const originalScore = score;
@@ -2354,9 +2371,8 @@ async function create1v1Challenge() {
 
     const today = getGameDate();
     const category = gameConfig.activeSelection;
-    const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-    const p1ScoreEntry = archive[today]?.[category ? category.toLowerCase() : ""] || archive[today]?.[category];
-    const isCompleted = p1ScoreEntry !== undefined;
+    const p1ScoreEntry = getScoreFromArchive(today, category);
+    const isCompleted = p1ScoreEntry !== null;
     const p1Score = isCompleted ? p1ScoreEntry.score : 0;
 
     // Prompt for Invite Taunt
@@ -2379,12 +2395,10 @@ async function create1v1Challenge() {
         } else {
             challengeQuestions = shuffle([...gameData.questions]);
             challengeQuestions.forEach(q => {
-                if (q.options) {
-                    // Resolve the correct answer text before shuffling options to prevent index 'a' mismatch
-                    if (!q.correctText && q.options[q.a] !== undefined) q.correctText = q.options[q.a];
-                    q.options = shuffle([...q.options]);
+                // Ensure correctText is resolved based on original index 'a' before saving to Firestore
+                if (!q.correctText && q.options && q.options[q.a] !== undefined) {
+                    q.correctText = q.options[q.a];
                 }
-                if (q.options) q.options = shuffle([...q.options]);
             });
         }
         
@@ -2469,9 +2483,30 @@ async function fetchMyChallenges() {
             
             snapshots.forEach(doc => {
                 if (doc.exists) {
-                    const data = doc.data();
+                    let data = doc.data();
                     const role = data.p1.uid === userId ? 'p1' : (data.p2 && data.p2.uid === userId ? 'p2' : null);
-                    if (role) challenges.push({ id: doc.id, ...data, role });
+                    if (role) {
+                        // REPAIR: Check if score is missing in Firestore but exists in local archive (case-insensitive)
+                        const myData = role === 'p1' ? data.p1 : data.p2;
+                        const opponent = role === 'p1' ? data.p2 : data.p1;
+                        if (!myData.completed) {
+                            const archived = getScoreFromArchive(data.date, data.category);
+                            if (archived) {
+                                myData.score = archived.score;
+                                myData.completed = true;
+                                const update = {
+                                    [role]: { ...myData, score: archived.score, completed: true }
+                                };
+                                // Ensure status is marked completed if both players are now done
+                                if (data.status !== 'completed' && (role === 'p2' || (opponent && opponent.completed))) {
+                                    update.status = 'completed';
+                                    data.status = 'completed';
+                                }
+                                db.collection('challenges').doc(doc.id).update(update).catch(e => console.warn("Challenge score sync failed", e));
+                            }
+                        }
+                        challenges.push({ id: doc.id, ...data, role });
+                    }
                 }
             });
         }
@@ -2481,8 +2516,34 @@ async function fetchMyChallenges() {
             const p1Snap = await db.collection('challenges').where('p1.uid', '==', userId).get();
             const p2Snap = await db.collection('challenges').where('p2.uid', '==', userId).get();
             
-            p1Snap.forEach(doc => { if (!challenges.find(c => c.id === doc.id)) challenges.push({ id: doc.id, ...doc.data(), role: 'p1' }); });
-            p2Snap.forEach(doc => { if (!challenges.find(c => c.id === doc.id)) challenges.push({ id: doc.id, ...doc.data(), role: 'p2' }); });
+            const processSnap = (snap, role) => {
+                snap.forEach(doc => {
+                    if (!challenges.find(c => c.id === doc.id)) {
+                        let data = doc.data();
+                        const myData = role === 'p1' ? data.p1 : data.p2;
+                        const opponent = role === 'p1' ? data.p2 : data.p1;
+                        if (!myData.completed) {
+                            const archived = getScoreFromArchive(data.date, data.category);
+                            if (archived) {
+                                myData.score = archived.score;
+                                myData.completed = true;
+                                const update = {
+                                    [role]: { ...myData, score: archived.score, completed: true }
+                                };
+                                // Ensure status is marked completed if both players are now done
+                                if (data.status !== 'completed' && (role === 'p2' || (opponent && opponent.completed))) {
+                                    update.status = 'completed';
+                                    data.status = 'completed';
+                                }
+                                db.collection('challenges').doc(doc.id).update(update).catch(e => console.warn("Challenge score sync failed", e));
+                            }
+                        }
+                        challenges.push({ id: doc.id, ...data, role });
+                    }
+                });
+            };
+            processSnap(p1Snap, 'p1');
+            processSnap(p2Snap, 'p2');
         }
 
         // Sort most recent first
@@ -2562,17 +2623,27 @@ async function update1v1ChallengeScore() {
         if (!data) return;
 
         const isP1 = data.p1.uid === userId;
-        const field = isP1 ? 'p1' : 'p2';
+        const role = isP1 ? 'p1' : 'p2';
+        const opponent = isP1 ? data.p2 : data.p1;
+        
+        let finalScore = score;
+        // Repair: If the current session score is 0, attempt to retrieve the actual score from the archive
+        if (finalScore === 0) {
+            const archived = getScoreFromArchive(data.date, data.category);
+            if (archived) finalScore = archived.score;
+        }
+
         const update = {
-            [field]: {
+            [role]: {
                 uid: userId,
                 name: localStorage.getItem('trivia-name'),
-                score: score,
+                score: finalScore,
                 completed: true,
                 taunt: ""
             }
         };
-        if (!isP1) update.status = 'completed';
+        // Mark match as completed if user is P2, or if P1 is finishing and P2 is already done
+        if (!isP1 || (opponent && opponent.completed)) update.status = 'completed';
         
         await db.collection('challenges').doc(activeChallengeId).update(update);
         fetchAndDisplay1v1Status();
@@ -2585,10 +2656,35 @@ async function fetchAndDisplay1v1Status() {
     
     try {
         const doc = await db.collection('challenges').doc(activeChallengeId).get();
-        const data = doc.data();
+        let data = doc.data();
         if (!data) return;
 
+        // Ensure the section is visible if we have an active challenge
+        document.getElementById('challenge-status-section').classList.remove('hidden');
+
         const isP1 = data.p1.uid === userId;
+        const role = isP1 ? 'p1' : (data.p2 && data.p2.uid === userId ? 'p2' : null);
+
+        // REPAIR: If the current user's record in Firestore is incomplete but exists locally
+        if (role) {
+            const myData = data[role];
+            if (!myData.completed) {
+                const archived = getScoreFromArchive(data.date, data.category);
+                if (archived) {
+                    myData.score = archived.score;
+                    myData.completed = true;
+                    data[role] = myData; // Update local reference for immediate UI refresh
+                    // Ensure status is marked completed if both players are now done
+                    if (role === 'p2' || (data.p2 && data.p2.completed)) data.status = 'completed';
+                    
+                    db.collection('challenges').doc(activeChallengeId).update({
+                        [role]: { ...myData, score: archived.score, completed: true },
+                        status: data.status
+                    }).catch(e => console.warn("1v1 Status repair failed", e));
+                }
+            }
+        }
+
         const opponent = isP1 ? data.p2 : data.p1;
         
         let statusHtml = '';
@@ -2608,8 +2704,14 @@ async function fetchAndDisplay1v1Status() {
             statusHtml = `
                 <div class="flex justify-between items-center">
                     <span class="text-white font-bold">${opponent.name}</span>
-                    <span class="font-black text-xl ${win ? 'text-red-400' : 'text-emerald-400'}">${opponent.score}/5</span>
+                    <span class="font-black text-xl ${win ? 'text-red-400' : 'text-emerald-400'}">${opponent.score}/${data.questions ? data.questions.length : 5}</span>
                 </div>`;
+
+            // Auto-trigger the outcome modal once the match is finalized
+            if (data.status === 'completed' && !sessionStorage.getItem(`result-shown-${activeChallengeId}`)) {
+                sessionStorage.setItem(`result-shown-${activeChallengeId}`, 'true');
+                display1v1Result(data);
+            }
         }
         display.innerHTML = statusHtml;
     } catch (e) { display.innerHTML = '<p class="text-red-400">Error.</p>'; }
@@ -2790,9 +2892,10 @@ async function submitScore() {
     
     // Get the mode for the game just played
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-    const playedModes = session.playedModes || [];
+    const playedModes = (session.playedModes || []).map(m => m.toLowerCase());
     const isGM = playedModes.includes('casual') && playedModes.includes('professional');
-    const lastMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
+    const rawMode = session.activeMode || (playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual');
+    const lastMode = rawMode.toLowerCase();
 
     // Get ALL group IDs the user belongs to
     const groups = getMyGroups();
@@ -2900,8 +3003,9 @@ async function checkIfSubmitted() {
     }
 
     const session = JSON.parse(localStorage.getItem('trivia-session') || '{}');
-    const playedModes = session.playedModes || [];
-    const currentMode = session.activeMode || ((session.playedModes && session.playedModes.length > 0) ? session.playedModes[session.playedModes.length - 1] : 'casual');
+    const playedModes = (session.playedModes || []).map(m => m.toLowerCase());
+    const rawMode = session.activeMode || (playedModes.length > 0 ? playedModes[playedModes.length - 1] : 'casual');
+    const currentMode = rawMode.toLowerCase();
 
     const docId = `${getGameDate()}_${userId}_${currentMode}`;
     const doc = await db.collection('scores').doc(docId).get();
@@ -3082,7 +3186,7 @@ async function fetchAndDisplayLeaderboard() {
 
             snapshot.forEach(doc => {
                 const d = doc.data();
-                if ((d.mode || 'casual') !== leaderboardMode) return;
+                if ((d.mode || 'casual').toLowerCase() !== leaderboardMode.toLowerCase()) return;
 
                 if (!userTotals[d.userId]) {
                     userTotals[d.userId] = { id: d.userId, name: d.name, totalScore: 0, games: 0 };
@@ -3094,6 +3198,22 @@ async function fetchAndDisplayLeaderboard() {
                 if (d.taunt) userTotals[d.userId].taunt = d.taunt;
                 if (d.streak) userTotals[d.userId].streak = Math.max(userTotals[d.userId].streak || 0, d.streak);
             });
+
+            // REPAIR STEP: If current user's score is in local archive but missing from cloud leaderboard
+            if (auth && auth.currentUser && !userTotals[userId]) {
+                const archived = getScoreFromArchive(todayDate, leaderboardMode);
+                if (archived) {
+                    userTotals[userId] = {
+                        id: userId,
+                        name: localStorage.getItem('trivia-name') || "You",
+                        totalScore: archived.score,
+                        games: 1,
+                        streak: parseInt(localStorage.getItem('trivia-streak')) || 0,
+                        taunt: ""
+                    };
+                    submitScore();
+                }
+            }
 
             // Convert to array and sort
             sortedUsers = Object.values(userTotals).sort((a, b) => b.totalScore - a.totalScore);
@@ -3519,6 +3639,23 @@ async function updateDailyLeaderboardModal() {
             userTotals[d.userId].score = Math.max(userTotals[d.userId].score, d.score || 0);
                 if (d.isGrandMaster) userTotals[d.userId].isGrandMaster = true;
         });
+
+        // REPAIR STEP: If current user's score is in local archive but missing from cloud leaderboard
+        if (auth && auth.currentUser && !userTotals[userId]) {
+            const archived = getScoreFromArchive(todayDate, leaderboardMode);
+            if (archived) {
+                userTotals[userId] = {
+                    id: userId,
+                    name: localStorage.getItem('trivia-name') || "You",
+                    score: archived.score,
+                    streak: parseInt(localStorage.getItem('trivia-streak')) || 0,
+                    taunt: "",
+                    location: JSON.parse(localStorage.getItem('trivia-location') || '{}'),
+                    isGrandMaster: (localStorage.getItem('trivia-session') && JSON.parse(localStorage.getItem('trivia-session')).playedModes.includes('casual') && JSON.parse(localStorage.getItem('trivia-session')).playedModes.includes('professional'))
+                };
+                submitScore();
+            }
+        }
 
         const sortedUsers = Object.values(userTotals).sort((a, b) => b.score - a.score);
 
@@ -4024,8 +4161,8 @@ async function handleRematch(oldChallengeId) {
         
         // Identify the person to rematch (the one who isn't the current user)
         const opponent = oldData.p1.uid === userId ? oldData.p2 : oldData.p1;
-        if (!opponent || !opponent.uid) {
-            showToast("Opponent information missing.", "❓");
+        if (!opponent || !opponent.uid || opponent.uid === userId) {
+            showToast(opponent?.uid === userId ? "You cannot rematch yourself!" : "Opponent information missing.", "❓");
             return;
         }
 
@@ -4082,12 +4219,10 @@ async function handleRematch(oldChallengeId) {
         const challengeQuestions = shuffle([...questions]);
         challengeQuestions.forEach(q => {
             if (q.options) {
-                // Resolve correctText before shuffling options to prevent answer key mismatch
+                // Resolve correctText before any shuffling of options
                 if (!q.correctText && q.options[q.a] !== undefined) q.correctText = q.options[q.a];
-                q.options = shuffle([...q.options]);
             }
         });
-        challengeQuestions.forEach(q => { if (q.options) q.options = shuffle([...q.options]); });
 
         const newChallengeId = '1v1_' + Math.random().toString(36).substring(2, 15);
         
@@ -4159,6 +4294,7 @@ async function handle1v1Challenge(challengeId) {
         if (!doc.exists) {
             showToast("Challenge not found.", "❓");
             removeChallengeParam();
+            returnToMenu('main');
             return;
         }
 
@@ -4169,6 +4305,7 @@ async function handle1v1Challenge(challengeId) {
         if (data.expiresAt && now.seconds > data.expiresAt.seconds) {
             showToast("This challenge has expired! ⏰", "❌", 5000);
             removeChallengeParam();
+            returnToMenu('main');
             return;
         }
 
@@ -4200,8 +4337,7 @@ async function handle1v1Challenge(challengeId) {
         }
         
         if (!pastPerformance) {
-            const archive = JSON.parse(localStorage.getItem('trivia-archive') || '{}');
-            pastPerformance = archive[data.date]?.[data.category.toLowerCase()] || archive[data.date]?.[data.category];
+            pastPerformance = getScoreFromArchive(data.date, data.category);
         }
         
         if (pastPerformance && pastPerformance.score !== undefined) {
@@ -4269,6 +4405,7 @@ async function handle1v1Challenge(challengeId) {
                 p2: { uid: userId, name: p2Name }
             });
             removeChallengeParam();
+            returnToMenu('main');
         }
     } catch (e) {
         console.error("Challenge join error:", e);
@@ -4892,12 +5029,13 @@ function saveSession(isFinished = false, newMode = null, syncToCloud = true) {
     // If the saved session is from a different day, reset playedModes
     const playedModes = currentSession.date === getGameDate() ? (currentSession.playedModes || []) : [];
 
-    if (isFinished && newMode && !playedModes.includes(newMode)) {
-        playedModes.push(newMode);
+    const normalizedMode = newMode ? newMode.toLowerCase() : null;
+    if (isFinished && normalizedMode && !playedModes.some(m => m.toLowerCase() === normalizedMode)) {
+        playedModes.push(normalizedMode);
     }
     
-    let activeMode = currentSession.activeMode || 'casual';
-    if (newMode) activeMode = newMode;
+    let activeMode = (currentSession.activeMode || 'casual').toLowerCase();
+    if (normalizedMode) activeMode = normalizedMode;
 
     const session = {
         date: getGameDate(),
@@ -5044,7 +5182,7 @@ function archiveSession(session) {
             choicesList.push(ans);
         });
 
-        const lastMode = session.activeMode || 'casual';
+        const lastMode = (session.activeMode || 'casual').toLowerCase();
 
         // Ensure the date record exists as an object
         if (!archive[session.date] || typeof archive[session.date] !== 'object') {
@@ -5072,6 +5210,7 @@ function archiveSession(session) {
             answers: answersMap,
             choices: choicesList,
             score: session.score,
+            total: questions.length,
             mode: lastMode
         };
         

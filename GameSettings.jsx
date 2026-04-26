@@ -484,6 +484,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                             const isDisputed = c.status === 'disputed';
                             const isWinner = isCompleted && myData.score > (oppData?.score || 0);
                             const canRematch = isCompleted && c.date !== today;
+                            const total = c.questions ? c.questions.length : 5;
                             
                             let resultLabel = '';
                             if (isCompleted && oppData && oppData.completed) {
@@ -517,8 +518,8 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center text-xs">
-                                        <span className="text-slate-400">Score: <strong className="text-white">{myData.score}/5</strong></span>
-                                        <span className="text-slate-400">Opponent: <strong className="text-white">{oppData && oppData.completed ? oppData.score + '/5' : '...'}</strong></span>
+                                        <span className="text-slate-400">Score: <strong className="text-white">{myData.score}/{total}</strong></span>
+                                        <span className="text-slate-400">Opponent: <strong className="text-white">{oppData && oppData.completed ? oppData.score + '/' + total : '...'}</strong></span>
                                     </div>
 
                                     {c.inviteTaunt && (
@@ -665,7 +666,7 @@ const GameSettings = ({ currentConfig, onUpdate, playedModes = [], availableCate
                                     }
                                 }}
                                 isSelected={config.activeSelection === category}
-                                isDisabled={!isMulti && isPlayed}
+                                isDisabled={!isMulti && isCompleted}
                                 isCompleted={isCompleted}
                                 isSmall={true}
                                 title={category}
