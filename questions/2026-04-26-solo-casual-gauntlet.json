@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-26",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In a library book review published on April 25, 2026, Zoë Schlanger's 'The Light Eaters' is highlighted for arguing that there should be a paradigm shift in our ethical understanding of the consciousness of what?",
+      "options": [
+        "Plants",
+        "Insects",
+        "Artificial Intelligence",
+        "Fungi"
+      ],
+      "a": 0,
+      "correctText": "Plants",
+      "category": "Books",
+      "source": "https://www.wcls.org/book-buzz-the-light-eaters/"
+    },
+    {
+      "q": "Late April 2026 'bat feast' videos at an African cave are offering scientists new clues into the spread of which deadly pathogen?",
+      "options": [
+        "Ebola virus",
+        "Zika virus",
+        "Nipah virus",
+        "Marburg virus"
+      ],
+      "a": 3,
+      "correctText": "Marburg virus",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/bat-feast-animal-videos-at-african-cave-offer-clues-to-how-deadly-viruses-spread/"
+    },
+    {
+      "q": "Which martial arts star was announced on April 25, 2026, to be both starring in and directing the upcoming 'John Wick' spinoff film 'Caine'?",
+      "options": [
+        "Donnie Yen",
+        "Jackie Chan",
+        "Iko Uwais",
+        "Hiroyuki Sanada"
+      ],
+      "a": 0,
+      "correctText": "Donnie Yen",
+      "category": "Entertainment",
+      "source": "https://spoiler.bolavip.com/en/movies/john-wick-spin-off-caine-officially-begins-filming-with-donnie-yen-directing-and-starring"
+    },
+    {
+      "q": "Which top tennis player withdrew from the 2026 Madrid Open after falling ill during a match?",
+      "options": [
+        "Iga Swiatek",
+        "Aryna Sabalenka",
+        "Coco Gauff",
+        "Elena Rybakina"
+      ],
+      "a": 0,
+      "correctText": "Iga Swiatek",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48591168/swiatek-withdraws-madrid-open-falling-ill-match"
+    },
+    {
+      "q": "In an AP report published on April 25, 2026, which 2006 novel by Patricia McCormick was named the most challenged book at U.S. libraries for 2025 by the ALA?",
+      "options": [
+        "Sold",
+        "Speak",
+        "Cut",
+        "Crank"
+      ],
+      "a": 0,
+      "correctText": "Sold",
+      "category": "Books",
+      "source": "https://www.columbian.com/news/2026/apr/25/book-bans-remain-at-record-highs/"
+    },
+    {
+      "q": "An Associated Press report from April 25, 2026, regarding the ALA's most challenged books list noted that which graphic memoir by Maia Kobabe continued to be heavily targeted?",
+      "options": [
+        "Gender Queer",
+        "Fun Home",
+        "Persepolis",
+        "Blankets"
+      ],
+      "a": 0,
+      "correctText": "Gender Queer",
+      "category": "Books",
+      "source": "https://www.columbian.com/news/2026/apr/25/book-bans-remain-at-record-highs/"
+    },
+    {
+      "q": "On April 25, 2026, which region became the first to authorize Moderna’s combo mRNA flu-COVID vaccine (mCOMBRIAX)?",
+      "options": [
+        "Europe",
+        "United States",
+        "Canada",
+        "Australia"
+      ],
+      "a": 0,
+      "correctText": "Europe",
+      "category": "Health",
+      "source": "https://arstechnica.com/health/2026/04/europe-not-us-first-to-authorize-modernas-combo-mrna-flu-covid-vaccine/"
+    },
+    {
+      "q": "Revealed during the Wishlisted Showcase in April 2026, what is the official PC release date for 'Memoirium', the dream-themed retro soulslike game?",
+      "options": [
+        "August 13, 2026",
+        "July 9, 2026",
+        "October 31, 2026",
+        "December 25, 2026"
+      ],
+      "a": 0,
+      "correctText": "August 13, 2026",
+      "category": "Gaming",
+      "source": "https://gamersegames.com.br/2026/04/25/memoirium-soulslike-retro-com-tematica-onirica-chega-ao-pc-em-agosto/"
+    },
+    {
+      "q": "Which player scored a dramatic equalizer 13 minutes into injury time to clinch York City's return to the English Football League in a 1-1 draw against Rochdale?",
+      "options": [
+        "Josh Stones",
+        "Emmanuel Dieseruvwe",
+        "Dipo Akinyemi",
+        "Will Finnie"
+      ],
+      "a": 0,
+      "correctText": "Josh Stones",
+      "category": "Sports",
+      "source": "https://apnews.com/article/york-rochdale-minor-league-soccer-promotion-d074e5c0711d5e297844482d67791e08"
+    },
+    {
+      "q": "Announced in late April 2026, 'Drunken Goddess Reflux' is a new Russian roulette drinking survival game developed by WHO YOU and which other studio?",
+      "options": [
+        "Alliance Arts",
+        "KAYAC",
+        "WSS playground",
+        "Nippon Ichi Software"
+      ],
+      "a": 0,
+      "correctText": "Alliance Arts",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/alliance-arts-and-who-you-announce-yandere-demon-russian-roulette-game-drunken-goddess-reflux-for-pc"
+    }
+  ]
+}

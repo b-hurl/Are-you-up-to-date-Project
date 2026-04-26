@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In an AP report published on April 25, 2026, which 2006 novel by Patricia McCormick was named the most challenged book at U.S. libraries for 2025 by the ALA?",
+      "options": [
+        "Sold",
+        "Speak",
+        "Cut",
+        "Crank"
+      ],
+      "a": 0,
+      "correctText": "Sold",
+      "category": "Books",
+      "source": "https://www.columbian.com/news/2026/apr/25/book-bans-remain-at-record-highs/"
+    },
+    {
+      "q": "An Associated Press report from April 25, 2026, regarding the ALA's most challenged books list noted that which graphic memoir by Maia Kobabe continued to be heavily targeted?",
+      "options": [
+        "Gender Queer",
+        "Fun Home",
+        "Persepolis",
+        "Blankets"
+      ],
+      "a": 0,
+      "correctText": "Gender Queer",
+      "category": "Books",
+      "source": "https://www.columbian.com/news/2026/apr/25/book-bans-remain-at-record-highs/"
+    },
+    {
+      "q": "The American Library Association's list of most challenged books, covered in news reports on April 25, 2026, saw which John Green boarding school narrative tied for eighth place?",
+      "options": [
+        "Looking for Alaska",
+        "Paper Towns",
+        "The Fault in Our Stars",
+        "An Abundance of Katherines"
+      ],
+      "a": 0,
+      "correctText": "Looking for Alaska",
+      "category": "Books",
+      "source": "https://www.columbian.com/news/2026/apr/25/book-bans-remain-at-record-highs/"
+    },
+    {
+      "q": "In a library book review published on April 25, 2026, Zoë Schlanger's 'The Light Eaters' is highlighted for arguing that there should be a paradigm shift in our ethical understanding of the consciousness of what?",
+      "options": [
+        "Plants",
+        "Insects",
+        "Artificial Intelligence",
+        "Fungi"
+      ],
+      "a": 0,
+      "correctText": "Plants",
+      "category": "Books",
+      "source": "https://www.wcls.org/book-buzz-the-light-eaters/"
+    },
+    {
+      "q": "Topping the New York Times Hardcover Fiction Bestsellers list for April 26, 2026, was 'Rites of the Starling', the second book in the Shield of Sparrows series by which author?",
+      "options": [
+        "Devney Perry",
+        "Sarah J. Maas",
+        "Rebecca Yarros",
+        "Laura Thalassa"
+      ],
+      "a": 0,
+      "correctText": "Devney Perry",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/04/26/hardcover-fiction/"
+    }
+  ]
+}

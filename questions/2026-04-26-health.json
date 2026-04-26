@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 25, 2026, which region became the first to authorize Moderna’s combo mRNA flu-COVID vaccine (mCOMBRIAX)?",
+      "options": [
+        "Europe",
+        "United States",
+        "Canada",
+        "Australia"
+      ],
+      "a": 0,
+      "correctText": "Europe",
+      "category": "Health",
+      "source": "https://arstechnica.com/health/2026/04/europe-not-us-first-to-authorize-modernas-combo-mrna-flu-covid-vaccine/"
+    },
+    {
+      "q": "In a medical milestone reported on April 25, 2026, scientists achieved sustained HIV remission in a patient from which Canadian city?",
+      "options": [
+        "Montreal",
+        "Toronto",
+        "Vancouver",
+        "Calgary"
+      ],
+      "a": 1,
+      "correctText": "Toronto",
+      "category": "Health",
+      "source": "http://thestar.com/news/gta/in-a-canadian-first-a-toronto-mans-hiv-is-in-sustained-remission-heres-how-scientists-achieved-it/article_02bae3d0-d0b7-4765-bbd6-3e06be9c97df.html"
+    },
+    {
+      "q": "Late April 2026 'bat feast' videos at an African cave are offering scientists new clues into the spread of which deadly pathogen?",
+      "options": [
+        "Ebola virus",
+        "Zika virus",
+        "Nipah virus",
+        "Marburg virus"
+      ],
+      "a": 3,
+      "correctText": "Marburg virus",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/bat-feast-animal-videos-at-african-cave-offer-clues-to-how-deadly-viruses-spread/"
+    },
+    {
+      "q": "According to an April 2026 environmental health report, 1 in 5 Americans are exposed to what tasteless, odorless toxin linked to multiple cancers in their tap water?",
+      "options": [
+        "Lead",
+        "Nitrates",
+        "Arsenic",
+        "Mercury"
+      ],
+      "a": 1,
+      "correctText": "Nitrates",
+      "category": "Health",
+      "source": "https://www.independent.co.uk/news/world/americas/tap-water-nitrates-cancer-america-b2963596.html"
+    },
+    {
+      "q": "In late April 2026, researchers published findings on a THC-free cannabis compound that shows promise in replacing what class of highly addictive drugs?",
+      "options": [
+        "Opioids",
+        "Benzodiazepines",
+        "Barbiturates",
+        "Stimulants"
+      ],
+      "a": 0,
+      "correctText": "Opioids",
+      "category": "Health",
+      "source": "https://scitechdaily.com/researchers-have-discovered-a-thc-free-cannabis-compound-that-may-replace-opioids/"
+    }
+  ]
+}

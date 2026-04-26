@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-26",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to research published on April 26, 2026, Americans who leave their Christian faith tend to hold more progressive political views than lifelong nonbelievers due to feeling threatened by which group?",
+      "options": [
+        "Conservative Christians",
+        "Secular organizations",
+        "Foreign political actors",
+        "Mainstream media outlets"
+      ],
+      "a": 0,
+      "correctText": "Conservative Christians",
+      "category": "Science",
+      "source": "https://www.psypost.org/former-christians-express-more-progressive-political-views-than-lifelong-nonbeli/"
+    },
+    {
+      "q": "According to an April 2026 meta-analysis, vegans have a 23% lower risk and vegetarians a 13% lower risk of developing what disease compared to meat-eaters?",
+      "options": [
+        "Cancer",
+        "Type 2 Diabetes",
+        "Cardiovascular disease",
+        "Alzheimer's disease"
+      ],
+      "a": 0,
+      "correctText": "Cancer",
+      "category": "Science",
+      "source": "https://link.springer.com/article/10.1007/s10654-026-01380-8"
+    },
+    {
+      "q": "Which Canadian province announced a ban on social media and AI chatbots for youth, marking a first in Canada?",
+      "options": [
+        "Manitoba",
+        "Ontario",
+        "Quebec",
+        "British Columbia"
+      ],
+      "a": 0,
+      "correctText": "Manitoba",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/canada/manitoba/manitoba-social-media-age-restrictions-9.7177470"
+    },
+    {
+      "q": "On April 26, 2026, which semiconductor company became the first South Korean firm to receive the IEEE Corporate Innovation Award for driving AI expansion through High Bandwidth Memory (HBM)?",
+      "options": [
+        "SK hynix",
+        "Samsung Electronics",
+        "TSMC",
+        "Micron Technology"
+      ],
+      "a": 0,
+      "correctText": "SK hynix",
+      "category": "Technology",
+      "source": "https://www.taiwannews.com.tw/en/news/5153205"
+    },
+    {
+      "q": "In a first-in-Canada move announced on April 26, 2026, which province's government is banning youth access to social media and AI chatbots?",
+      "options": [
+        "Manitoba",
+        "Ontario",
+        "British Columbia",
+        "Quebec"
+      ],
+      "a": 0,
+      "correctText": "Manitoba",
+      "category": "Technology",
+      "source": "https://www.cbc.ca/news/canada/manitoba/manitoba-social-media-age-restrictions-9.7177470"
+    },
+    {
+      "q": "The IDF recently launched an investigation into a video showing its soldiers destroying solar panels in a Christian village located in which country?",
+      "options": [
+        "Lebanon",
+        "Syria",
+        "Egypt",
+        "Jordan"
+      ],
+      "a": 0,
+      "correctText": "Lebanon",
+      "category": "World",
+      "source": "https://www.jpost.com/middle-east/article-894118"
+    },
+    {
+      "q": "Going into effect on April 26, 2026, the U.S. Postal Service implemented a time-limited 8% price increase affecting which category of its services?",
+      "options": [
+        "Competitive products like Priority Mail",
+        "First-Class Stamps",
+        "International Airmail",
+        "P.O. Box Rentals"
+      ],
+      "a": 0,
+      "correctText": "Competitive products like Priority Mail",
+      "category": "Business",
+      "source": "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.htm"
+    },
+    {
+      "q": "Margaux Mirkin, who was assaulted and strangled during an April 2026 home invasion in the Hollywood Hills, is the heiress to which company's fortune?",
+      "options": [
+        "Budget Rent a Car",
+        "Enterprise Rent-A-Car",
+        "Hertz",
+        "Avis"
+      ],
+      "a": 0,
+      "correctText": "Budget Rent a Car",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/budget-rent-car-heiress-assaulted-strangled-rcna342052"
+    },
+    {
+      "q": "Which factor was credited in an April 2026 report with helping to reverse the trend in teen vaping, lowering it to 5.9% by 2024?",
+      "options": [
+        "Anti-vaping advertisements and lung injury news coverage",
+        "A total federal ban on all e-cigarette devices",
+        "Increased taxation on flavored nicotine liquids",
+        "Mandatory nicotine testing in public high schools"
+      ],
+      "a": 0,
+      "correctText": "Anti-vaping advertisements and lung injury news coverage",
+      "category": "Science",
+      "source": "https://today.ucsd.edu/story/anti-vaping-advertisements-and-lung-injury-news-coverage-helped-reverse-trend-in-teen-vaping"
+    },
+    {
+      "q": "In April 2026, the Alberta Energy Regulator ordered which oil and gas company to suspend its operations over unresolved environmental concerns and unpaid taxes?",
+      "options": [
+        "Suncor Energy",
+        "MAGA Energy",
+        "Cenovus Energy",
+        "Imperial Oil"
+      ],
+      "a": 1,
+      "correctText": "MAGA Energy",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/edmonton/alberta-energy-regulator-maga-9.7176266"
+    }
+  ]
+}

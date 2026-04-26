@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to late April 2026 news, the director of which popular MMO stated he would 'love to hear pitches' for a single-player spin-off of the game?",
+      "options": [
+        "Final Fantasy XIV",
+        "World of Warcraft",
+        "Guild Wars 2",
+        "Elder Scrolls Online"
+      ],
+      "a": 0,
+      "correctText": "Final Fantasy XIV",
+      "category": "Gaming",
+      "source": "https://www.mirror.co.uk/gaming/ffxiv-director-would-love-hear-37070651"
+    },
+    {
+      "q": "Announced in late April 2026, 'Drunken Goddess Reflux' is a new Russian roulette drinking survival game developed by WHO YOU and which other studio?",
+      "options": [
+        "Alliance Arts",
+        "KAYAC",
+        "WSS playground",
+        "Nippon Ichi Software"
+      ],
+      "a": 0,
+      "correctText": "Alliance Arts",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/alliance-arts-and-who-you-announce-yandere-demon-russian-roulette-game-drunken-goddess-reflux-for-pc"
+    },
+    {
+      "q": "Revealed during the Wishlisted Showcase in April 2026, what is the official PC release date for 'Memoirium', the dream-themed retro soulslike game?",
+      "options": [
+        "August 13, 2026",
+        "July 9, 2026",
+        "October 31, 2026",
+        "December 25, 2026"
+      ],
+      "a": 0,
+      "correctText": "August 13, 2026",
+      "category": "Gaming",
+      "source": "https://gamersegames.com.br/2026/04/25/memoirium-soulslike-retro-com-tematica-onirica-chega-ao-pc-em-agosto/"
+    }
+  ]
+}

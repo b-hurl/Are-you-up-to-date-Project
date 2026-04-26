@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Canadian province announced a ban on social media and AI chatbots for youth, marking a first in Canada?",
+      "options": [
+        "Manitoba",
+        "Ontario",
+        "Quebec",
+        "British Columbia"
+      ],
+      "a": 0,
+      "correctText": "Manitoba",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/canada/manitoba/manitoba-social-media-age-restrictions-9.7177470"
+    },
+    {
+      "q": "Following a landslide election defeat, Viktor Orbán announced he is stepping down from his parliamentary seat in which country?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Slovakia",
+        "Romania"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cd9v1wll8qqo"
+    },
+    {
+      "q": "According to a recent NBC News report, which country caused more extensive damage to U.S. military bases than the Pentagon had publicly acknowledged?",
+      "options": [
+        "Iran",
+        "North Korea",
+        "Russia",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://www.nbcnews.com/world/iran/iran-caused-extensive-damage-us-military-bases-publicly-known-rcna331853"
+    },
+    {
+      "q": "The government of which country stated that two U.S. federal agents recently killed in a car crash were not authorized to participate in local operations?",
+      "options": [
+        "Mexico",
+        "Colombia",
+        "Brazil",
+        "Venezuela"
+      ],
+      "a": 0,
+      "correctText": "Mexico",
+      "category": "World",
+      "source": "https://apnews.com/article/mexico-cia-agents-crash-authorized-us-d3c3cb0e82103e45751baa9df8f5cd90"
+    },
+    {
+      "q": "The IDF recently launched an investigation into a video showing its soldiers destroying solar panels in a Christian village located in which country?",
+      "options": [
+        "Lebanon",
+        "Syria",
+        "Egypt",
+        "Jordan"
+      ],
+      "a": 0,
+      "correctText": "Lebanon",
+      "category": "World",
+      "source": "https://www.jpost.com/middle-east/article-894118"
+    }
+  ]
+}

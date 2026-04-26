@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-26",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "On April 26, 2026, the parent company of British Airways, IAG, warned that ticket prices could rise due to the closure of which strategic waterway driving up oil costs?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Panama Canal",
+        "Strait of Malacca"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing-april-26-2026/3233150"
+    },
+    {
+      "q": "According to business briefings on April 26, 2026, which nation officially warned against a new package of U.S. House of Representatives export control bills?",
+      "options": [
+        "China",
+        "Russia",
+        "Iran",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing-april-26-2026/3233150"
+    },
+    {
+      "q": "In a first-of-its-kind move in Canada, which province announced a ban on youth using social media and AI chatbots on April 26, 2026?",
+      "options": [
+        "Ontario",
+        "Quebec",
+        "Manitoba",
+        "British Columbia"
+      ],
+      "a": 2,
+      "correctText": "Manitoba",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/manitoba/manitoba-social-media-age-restrictions-9.7177470"
+    },
+    {
+      "q": "In April 2026, scientists achieved a Canadian medical first when a man from which city reached sustained HIV remission?",
+      "options": [
+        "Toronto",
+        "Montreal",
+        "Vancouver",
+        "Calgary"
+      ],
+      "a": 0,
+      "correctText": "Toronto",
+      "category": "Canada",
+      "source": "https://www.thestar.com/news/gta/in-a-canadian-first-a-toronto-mans-hiv-is-in-sustained-remission-heres-how-scientists-achieved-it/article_02bae3d0-d0b7-4765-bbd6-3e06be9c97df.html"
+    },
+    {
+      "q": "Dozens of rallies took place across Ontario in late April 2026 to protest Premier Doug Ford's recent changes to OSAP and which other legislation?",
+      "options": [
+        "Greenbelt expansion",
+        "Freedom of Information laws",
+        "Healthcare privatization",
+        "Minimum wage laws"
+      ],
+      "a": 1,
+      "correctText": "Freedom of Information laws",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/toronto/doug-ford-protest-rallies-ontario-9.7177390"
+    },
+    {
+      "q": "Highlighting technology and business partnerships on April 26, 2026, a new AI-powered matchmaking app was launched ahead of which major Tokyo startup event?",
+      "options": [
+        "SusHi Tech Tokyo",
+        "Web Summit Japan",
+        "Slush Tokyo",
+        "Tech in Asia Tokyo"
+      ],
+      "a": 0,
+      "correctText": "SusHi Tech Tokyo",
+      "category": "Business",
+      "source": "https://japannews.yomiuri.co.jp/business/startups/20260426-182390/"
+    },
+    {
+      "q": "In a retaliatory statement on April 26, 2026, Russian official Dmitry Medvedev proposed imposing tariffs on EU-bound exports specifically to counter the Prime Minister of which country?",
+      "options": [
+        "Estonia",
+        "Latvia",
+        "Lithuania",
+        "Finland"
+      ],
+      "a": 0,
+      "correctText": "Estonia",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing-april-26-2026/3233150"
+    },
+    {
+      "q": "In April 2026, middle school students in Mississippi prevented their school bus from crashing after their driver lost consciousness due to what medical emergency?",
+      "options": [
+        "An asthma attack",
+        "A heart attack",
+        "A seizure",
+        "A stroke"
+      ],
+      "a": 0,
+      "correctText": "An asthma attack",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/mississippi-middle-school-students-stop-bus-crashing-rcna342091"
+    },
+    {
+      "q": "Following a landslide election defeat, Viktor Orbán announced he is stepping down from his parliamentary seat in which country?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Slovakia",
+        "Romania"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cd9v1wll8qqo"
+    },
+    {
+      "q": "The government of which country stated that two U.S. federal agents recently killed in a car crash were not authorized to participate in local operations?",
+      "options": [
+        "Mexico",
+        "Colombia",
+        "Brazil",
+        "Venezuela"
+      ],
+      "a": 0,
+      "correctText": "Mexico",
+      "category": "World",
+      "source": "https://apnews.com/article/mexico-cia-agents-crash-authorized-us-d3c3cb0e82103e45751baa9df8f5cd90"
+    }
+  ]
+}
