@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-26",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to late April 2026 news, the director of which popular MMO stated he would 'love to hear pitches' for a single-player spin-off of the game?",
+      "options": [
+        "Final Fantasy XIV",
+        "World of Warcraft",
+        "Guild Wars 2",
+        "Elder Scrolls Online"
+      ],
+      "a": 0,
+      "correctText": "Final Fantasy XIV",
+      "category": "Gaming",
+      "source": "https://www.mirror.co.uk/gaming/ffxiv-director-would-love-hear-37070651"
+    },
+    {
+      "q": "On April 25, 2026, the first teaser trailer for Season 4 of 'Star Trek: Strange New Worlds' was unveiled by cast members at which event?",
+      "options": [
+        "CCXP Mexico",
+        "San Diego Comic-Con",
+        "Star Trek: Mission Chicago",
+        "New York Comic Con"
+      ],
+      "a": 0,
+      "correctText": "CCXP Mexico",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/04/25/star-trek-strange-new-worlds-season-4-teaser-trailer-debuts-watch-now/"
+    },
+    {
+      "q": "The American Library Association's list of most challenged books, covered in news reports on April 25, 2026, saw which John Green boarding school narrative tied for eighth place?",
+      "options": [
+        "Looking for Alaska",
+        "Paper Towns",
+        "The Fault in Our Stars",
+        "An Abundance of Katherines"
+      ],
+      "a": 0,
+      "correctText": "Looking for Alaska",
+      "category": "Books",
+      "source": "https://www.columbian.com/news/2026/apr/25/book-bans-remain-at-record-highs/"
+    },
+    {
+      "q": "In late April 2026, researchers published findings on a THC-free cannabis compound that shows promise in replacing what class of highly addictive drugs?",
+      "options": [
+        "Opioids",
+        "Benzodiazepines",
+        "Barbiturates",
+        "Stimulants"
+      ],
+      "a": 0,
+      "correctText": "Opioids",
+      "category": "Health",
+      "source": "https://scitechdaily.com/researchers-have-discovered-a-thc-free-cannabis-compound-that-may-replace-opioids/"
+    },
+    {
+      "q": "Which Los Angeles Lakers player scored 29 points, including a tying 3-pointer with 13 seconds left in regulation, to help secure a 112-108 overtime win and a 3-0 series lead over the Houston Rockets?",
+      "options": [
+        "LeBron James",
+        "Marcus Smart",
+        "Rui Hachimura",
+        "Austin Reaves"
+      ],
+      "a": 0,
+      "correctText": "LeBron James",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3b9a7538bd14d6c4b7d8f1313e26a99f"
+    },
+    {
+      "q": "According to an April 2026 environmental health report, 1 in 5 Americans are exposed to what tasteless, odorless toxin linked to multiple cancers in their tap water?",
+      "options": [
+        "Lead",
+        "Nitrates",
+        "Arsenic",
+        "Mercury"
+      ],
+      "a": 1,
+      "correctText": "Nitrates",
+      "category": "Health",
+      "source": "https://www.independent.co.uk/news/world/americas/tap-water-nitrates-cancer-america-b2963596.html"
+    },
+    {
+      "q": "During a 35th-anniversary retrospective published in April 2026, screenwriter Ted Tally revealed that which Oscar-winning actor originally bought the rights to 'The Silence of the Lambs' with plans to direct and star as Hannibal Lecter?",
+      "options": [
+        "Gene Hackman",
+        "Robert De Niro",
+        "Jack Nicholson",
+        "Sean Connery"
+      ],
+      "a": 0,
+      "correctText": "Gene Hackman",
+      "category": "Entertainment",
+      "source": "https://www.goldderby.com/film/2026/the-silence-of-the-lambs-ted-tally-gene-hackman-secrets/"
+    },
+    {
+      "q": "Who took a 5-shot lead into the final round of the 2026 Chevron Championship after shooting a third-round 70?",
+      "options": [
+        "Nelly Korda",
+        "Patty Tavatanakit",
+        "Mao Saigo",
+        "Jeeno Thitikul"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48594889/nelly-korda-takes-5-shot-lead-final-round-chevron-championship"
+    },
+    {
+      "q": "On April 25, 2026, a nude statue of the late Monty Python star Terry Jones was unveiled in Colwyn Bay. Which of his famous characters does the monument depict?",
+      "options": [
+        "The Nude Organist",
+        "Mr. Creosote",
+        "Brian's Mother",
+        "Sir Bedevere"
+      ],
+      "a": 0,
+      "correctText": "The Nude Organist",
+      "category": "Entertainment",
+      "source": "https://www.bbc.com/news/articles/cpvxe049zwpo"
+    },
+    {
+      "q": "In an April 2026 interview, 'Backrooms' director Kane Parsons revealed that the film's production crew built an actual physical set measuring how large?",
+      "options": [
+        "30,000 square feet",
+        "15,000 square feet",
+        "50,000 square feet",
+        "100,000 square feet"
+      ],
+      "a": 0,
+      "correctText": "30,000 square feet",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/backrooms-kane-parsons-youtube-a24-horror-movie-ccxp-1236577326/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who was identified as the suspect in the April 2026 shooting incident that led to the evacuation of the White House Correspondents' Dinner?",
+      "options": [
+        "Cole Tomas Allen",
+        "Okello Chatrie",
+        "James Warren",
+        "Jesse Van Rootselaar"
+      ],
+      "a": 0,
+      "correctText": "Cole Tomas Allen",
+      "category": "Usa",
+      "source": "https://apnews.com/article/white-house-correspondents-dinner-trump-first-amendment-a0a2446832e8596e66c6fccb8426c8aa"
+    },
+    {
+      "q": "In April 2026, middle school students in Mississippi prevented their school bus from crashing after their driver lost consciousness due to what medical emergency?",
+      "options": [
+        "An asthma attack",
+        "A heart attack",
+        "A seizure",
+        "A stroke"
+      ],
+      "a": 0,
+      "correctText": "An asthma attack",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/mississippi-middle-school-students-stop-bus-crashing-rcna342091"
+    },
+    {
+      "q": "The Supreme Court began hearing a case in April 2026 involving Okello Chatrie, whose location was tracked using a geofence warrant after he robbed a bank in which state?",
+      "options": [
+        "Virginia",
+        "Maryland",
+        "Georgia",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "Virginia",
+      "category": "Usa",
+      "source": "https://apnews.com/article/supreme-court-geofence-warrants-unreasonable-searches-constitution-a61c200a806cba89ded43685279eccae"
+    },
+    {
+      "q": "Margaux Mirkin, who was assaulted and strangled during an April 2026 home invasion in the Hollywood Hills, is the heiress to which company's fortune?",
+      "options": [
+        "Budget Rent a Car",
+        "Enterprise Rent-A-Car",
+        "Hertz",
+        "Avis"
+      ],
+      "a": 0,
+      "correctText": "Budget Rent a Car",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/budget-rent-car-heiress-assaulted-strangled-rcna342052"
+    },
+    {
+      "q": "In April 2026, lawmakers in which state renewed a push to pass legislation ending the practice of counties taking Social Security money owed to foster children?",
+      "options": [
+        "Pennsylvania",
+        "Ohio",
+        "New York",
+        "Michigan"
+      ],
+      "a": 0,
+      "correctText": "Pennsylvania",
+      "category": "Usa",
+      "source": "https://www.spotlightpa.org/news/2026/04/foster-care-social-security-legislation-resolve-philly-capitol/"
+    }
+  ]
+}

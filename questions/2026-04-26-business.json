@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 26, 2026, the parent company of British Airways, IAG, warned that ticket prices could rise due to the closure of which strategic waterway driving up oil costs?",
+      "options": [
+        "Strait of Hormuz",
+        "Suez Canal",
+        "Panama Canal",
+        "Strait of Malacca"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing-april-26-2026/3233150"
+    },
+    {
+      "q": "According to business briefings on April 26, 2026, which nation officially warned against a new package of U.S. House of Representatives export control bills?",
+      "options": [
+        "China",
+        "Russia",
+        "Iran",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing-april-26-2026/3233150"
+    },
+    {
+      "q": "In a retaliatory statement on April 26, 2026, Russian official Dmitry Medvedev proposed imposing tariffs on EU-bound exports specifically to counter the Prime Minister of which country?",
+      "options": [
+        "Estonia",
+        "Latvia",
+        "Lithuania",
+        "Finland"
+      ],
+      "a": 0,
+      "correctText": "Estonia",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing-april-26-2026/3233150"
+    },
+    {
+      "q": "Highlighting technology and business partnerships on April 26, 2026, a new AI-powered matchmaking app was launched ahead of which major Tokyo startup event?",
+      "options": [
+        "SusHi Tech Tokyo",
+        "Web Summit Japan",
+        "Slush Tokyo",
+        "Tech in Asia Tokyo"
+      ],
+      "a": 0,
+      "correctText": "SusHi Tech Tokyo",
+      "category": "Business",
+      "source": "https://japannews.yomiuri.co.jp/business/startups/20260426-182390/"
+    },
+    {
+      "q": "Going into effect on April 26, 2026, the U.S. Postal Service implemented a time-limited 8% price increase affecting which category of its services?",
+      "options": [
+        "Competitive products like Priority Mail",
+        "First-Class Stamps",
+        "International Airmail",
+        "P.O. Box Rentals"
+      ],
+      "a": 0,
+      "correctText": "Competitive products like Priority Mail",
+      "category": "Business",
+      "source": "https://about.usps.com/newsroom/national-releases/2026/0325-usps-announces-transportation-related-time-limited-price-change.htm"
+    }
+  ]
+}

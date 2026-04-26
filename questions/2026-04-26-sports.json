@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who scored the go-ahead goal in the third period for the Carolina Hurricanes to complete a 4-game sweep of the Ottawa Senators in the first round of the 2026 NHL playoffs?",
+      "options": [
+        "Logan Stankoven",
+        "Sebastian Aho",
+        "Seth Jarvis",
+        "Taylor Hall"
+      ],
+      "a": 0,
+      "correctText": "Logan Stankoven",
+      "category": "Sports",
+      "source": "https://apnews.com/article/hurricanes-senators-score-stankoven-14df9c1ee56caf39ff651e669a3a4661"
+    },
+    {
+      "q": "Which player scored a dramatic equalizer 13 minutes into injury time to clinch York City's return to the English Football League in a 1-1 draw against Rochdale?",
+      "options": [
+        "Josh Stones",
+        "Emmanuel Dieseruvwe",
+        "Dipo Akinyemi",
+        "Will Finnie"
+      ],
+      "a": 0,
+      "correctText": "Josh Stones",
+      "category": "Sports",
+      "source": "https://apnews.com/article/york-rochdale-minor-league-soccer-promotion-d074e5c0711d5e297844482d67791e08"
+    },
+    {
+      "q": "Which Los Angeles Lakers player scored 29 points, including a tying 3-pointer with 13 seconds left in regulation, to help secure a 112-108 overtime win and a 3-0 series lead over the Houston Rockets?",
+      "options": [
+        "LeBron James",
+        "Marcus Smart",
+        "Rui Hachimura",
+        "Austin Reaves"
+      ],
+      "a": 0,
+      "correctText": "LeBron James",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3b9a7538bd14d6c4b7d8f1313e26a99f"
+    },
+    {
+      "q": "Who took a 5-shot lead into the final round of the 2026 Chevron Championship after shooting a third-round 70?",
+      "options": [
+        "Nelly Korda",
+        "Patty Tavatanakit",
+        "Mao Saigo",
+        "Jeeno Thitikul"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48594889/nelly-korda-takes-5-shot-lead-final-round-chevron-championship"
+    },
+    {
+      "q": "Which top tennis player withdrew from the 2026 Madrid Open after falling ill during a match?",
+      "options": [
+        "Iga Swiatek",
+        "Aryna Sabalenka",
+        "Coco Gauff",
+        "Elena Rybakina"
+      ],
+      "a": 0,
+      "correctText": "Iga Swiatek",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48591168/swiatek-withdraws-madrid-open-falling-ill-match"
+    }
+  ]
+}

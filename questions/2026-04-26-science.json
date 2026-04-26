@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to research published on April 26, 2026, Americans who leave their Christian faith tend to hold more progressive political views than lifelong nonbelievers due to feeling threatened by which group?",
+      "options": [
+        "Conservative Christians",
+        "Secular organizations",
+        "Foreign political actors",
+        "Mainstream media outlets"
+      ],
+      "a": 0,
+      "correctText": "Conservative Christians",
+      "category": "Science",
+      "source": "https://www.psypost.org/former-christians-express-more-progressive-political-views-than-lifelong-nonbeli/"
+    },
+    {
+      "q": "What counterproductive effect did the criminalization of UK climate protesters have, according to a Nature Climate Change study published on April 25, 2026?",
+      "options": [
+        "It increased activists' determination to take disruptive direct action",
+        "It completely halted all nonviolent climate demonstrations",
+        "It caused activists to abandon environmentalism entirely",
+        "It shifted all protest efforts to corporate lobbying"
+      ],
+      "a": 0,
+      "correctText": "It increased activists' determination to take disruptive direct action",
+      "category": "Science",
+      "source": "https://www.theguardian.com/environment/2026/apr/25/criminalisation-of-climate-protesters-in-uk-is-counterproductive-research-finds"
+    },
+    {
+      "q": "An April 2026 clinical trial found that repeated weekly doses of psilocybin showed promise in safely treating which mental health condition?",
+      "options": [
+        "Obsessive-compulsive disorder",
+        "Schizophrenia",
+        "Bipolar disorder",
+        "Attention-deficit/hyperactivity disorder"
+      ],
+      "a": 0,
+      "correctText": "Obsessive-compulsive disorder",
+      "category": "Science",
+      "source": "https://www.psypost.org/repeated-doses-of-psilocybin-show-promise-for-treating-obsessive-compulsive-disorder/"
+    },
+    {
+      "q": "According to an April 2026 meta-analysis, vegans have a 23% lower risk and vegetarians a 13% lower risk of developing what disease compared to meat-eaters?",
+      "options": [
+        "Cancer",
+        "Type 2 Diabetes",
+        "Cardiovascular disease",
+        "Alzheimer's disease"
+      ],
+      "a": 0,
+      "correctText": "Cancer",
+      "category": "Science",
+      "source": "https://link.springer.com/article/10.1007/s10654-026-01380-8"
+    },
+    {
+      "q": "Which factor was credited in an April 2026 report with helping to reverse the trend in teen vaping, lowering it to 5.9% by 2024?",
+      "options": [
+        "Anti-vaping advertisements and lung injury news coverage",
+        "A total federal ban on all e-cigarette devices",
+        "Increased taxation on flavored nicotine liquids",
+        "Mandatory nicotine testing in public high schools"
+      ],
+      "a": 0,
+      "correctText": "Anti-vaping advertisements and lung injury news coverage",
+      "category": "Science",
+      "source": "https://today.ucsd.edu/story/anti-vaping-advertisements-and-lung-injury-news-coverage-helped-reverse-trend-in-teen-vaping"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In an April 2026 interview, 'Backrooms' director Kane Parsons revealed that the film's production crew built an actual physical set measuring how large?",
+      "options": [
+        "30,000 square feet",
+        "15,000 square feet",
+        "50,000 square feet",
+        "100,000 square feet"
+      ],
+      "a": 0,
+      "correctText": "30,000 square feet",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/backrooms-kane-parsons-youtube-a24-horror-movie-ccxp-1236577326/"
+    },
+    {
+      "q": "Which martial arts star was announced on April 25, 2026, to be both starring in and directing the upcoming 'John Wick' spinoff film 'Caine'?",
+      "options": [
+        "Donnie Yen",
+        "Jackie Chan",
+        "Iko Uwais",
+        "Hiroyuki Sanada"
+      ],
+      "a": 0,
+      "correctText": "Donnie Yen",
+      "category": "Entertainment",
+      "source": "https://spoiler.bolavip.com/en/movies/john-wick-spin-off-caine-officially-begins-filming-with-donnie-yen-directing-and-starring"
+    },
+    {
+      "q": "On April 25, 2026, a nude statue of the late Monty Python star Terry Jones was unveiled in Colwyn Bay. Which of his famous characters does the monument depict?",
+      "options": [
+        "The Nude Organist",
+        "Mr. Creosote",
+        "Brian's Mother",
+        "Sir Bedevere"
+      ],
+      "a": 0,
+      "correctText": "The Nude Organist",
+      "category": "Entertainment",
+      "source": "https://www.bbc.com/news/articles/cpvxe049zwpo"
+    },
+    {
+      "q": "During a 35th-anniversary retrospective published in April 2026, screenwriter Ted Tally revealed that which Oscar-winning actor originally bought the rights to 'The Silence of the Lambs' with plans to direct and star as Hannibal Lecter?",
+      "options": [
+        "Gene Hackman",
+        "Robert De Niro",
+        "Jack Nicholson",
+        "Sean Connery"
+      ],
+      "a": 0,
+      "correctText": "Gene Hackman",
+      "category": "Entertainment",
+      "source": "https://www.goldderby.com/film/2026/the-silence-of-the-lambs-ted-tally-gene-hackman-secrets/"
+    },
+    {
+      "q": "On April 25, 2026, the first teaser trailer for Season 4 of 'Star Trek: Strange New Worlds' was unveiled by cast members at which event?",
+      "options": [
+        "CCXP Mexico",
+        "San Diego Comic-Con",
+        "Star Trek: Mission Chicago",
+        "New York Comic Con"
+      ],
+      "a": 0,
+      "correctText": "CCXP Mexico",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/04/25/star-trek-strange-new-worlds-season-4-teaser-trailer-debuts-watch-now/"
+    }
+  ]
+}
