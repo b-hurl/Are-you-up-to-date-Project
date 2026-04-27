@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-27",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Prime Minister Mark Carney and BC Premier David Eby issued statements marking the one-year anniversary of the 'senseless' violence at which festival?",
+      "options": [
+        "Lapu Lapu Day festival",
+        "Vaisakhi parade",
+        "Lunar New Year festival",
+        "Caribana"
+      ],
+      "a": 0,
+      "correctText": "Lapu Lapu Day festival",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/article-carney-eby-lapu-lapu-day-festival-attack/"
+    },
+    {
+      "q": "A Taiwan court sentenced a former TSMC engineer to 10 years in prison on April 27, 2026, for leaking 2 nm trade secrets to which Japanese equipment supplier?",
+      "options": [
+        "Tokyo Electron",
+        "Advantest",
+        "Hitachi High-Tech",
+        "Nikon"
+      ],
+      "a": 0,
+      "correctText": "Tokyo Electron",
+      "category": "Technology",
+      "source": "https://www.aljazeera.com/economy/2026/04/27/taiwan-court-hands-down-jail-terms-in-tsmc-trade-secrets-case"
+    },
+    {
+      "q": "Two 18-year-old teens were arrested in Ocala, Florida, after filming a social media stunt involving driving what type of vehicle through a Target store?",
+      "options": [
+        "A riding lawnmower",
+        "A golf cart",
+        "A forklift",
+        "A dirt bike"
+      ],
+      "a": 0,
+      "correctText": "A riding lawnmower",
+      "category": "Usa",
+      "source": "https://www.fox35orlando.com/news/2-florida-teens-arrested-after-riding-lawnmower-through-target-officials"
+    },
+    {
+      "q": "Former President Donald Trump was evacuated uninjured from an annual dinner for which organization after an armed suspect breached a security checkpoint?",
+      "options": [
+        "White House Correspondents' Association",
+        "Gridiron Club",
+        "National Press Club",
+        "American Society of News Editors"
+      ],
+      "a": 0,
+      "correctText": "White House Correspondents' Association",
+      "category": "Usa",
+      "source": "https://apnews.com/article/white-house-correspondents-dinner-trump-first-amendment-a0a2446832e8596e66c6fccb8426c8aa"
+    },
+    {
+      "q": "On April 27, 2026, which pharmaceutical company announced a definitive agreement to acquire the US-based firm Organon in an $11.75 billion all-cash deal?",
+      "options": [
+        "Sun Pharma",
+        "Dr. Reddy's",
+        "Cipla",
+        "Lupin"
+      ],
+      "a": 0,
+      "correctText": "Sun Pharma",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/27/indian-drugmaker-sun-pharma-to-buy-us-firm-organon-in-11point75-billion-deal.html"
+    },
+    {
+      "q": "Reporting box office actuals on Monday, April 27, 2026, what biopic scored a record U.S. opening of $97 million and $217 million globally?",
+      "options": [
+        "Michael",
+        "King of Pop",
+        "Thriller",
+        "Smooth Criminal"
+      ],
+      "a": 0,
+      "correctText": "Michael",
+      "category": "Business",
+      "source": "https://www.hollywoodreporter.com/music/music-news/michael-jackson-record-box-office-biopic-opening-1236577460/"
+    },
+    {
+      "q": "Which hamlet in Nunavut was selected to be the site of the main campus for Canada's first Inuit-led university?",
+      "options": [
+        "Arviat",
+        "Iqaluit",
+        "Rankin Inlet",
+        "Baker Lake"
+      ],
+      "a": 0,
+      "correctText": "Arviat",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/north/arviat-inuit-nunangat-university-9.7177278"
+    },
+    {
+      "q": "According to research announced on April 27, 2026, the University of Nebraska–Lincoln developed a highly effective vaccine against H5N1 bird flu specifically designed to protect what animals following a 2024 interspecies outbreak?",
+      "options": [
+        "Dairy cattle",
+        "Domestic pigs",
+        "Free-range chickens",
+        "Farmed salmon"
+      ],
+      "a": 0,
+      "correctText": "Dairy cattle",
+      "category": "Science",
+      "source": "https://news.unl.edu/newsrooms/today/article/researchers-develop-promising-new-vaccine-against-bird-flu/"
+    },
+    {
+      "q": "In an April 27, 2026 interview, which Russian Deputy Prime Minister stated it would take several months for the global oil market to recover even if the Strait of Hormuz blockade is lifted?",
+      "options": [
+        "Alexander Novak",
+        "Sergei Lavrov",
+        "Mikhail Mishustin",
+        "Andrei Belousov"
+      ],
+      "a": 0,
+      "correctText": "Alexander Novak",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-april-27-2026/3201452"
+    },
+    {
+      "q": "Which major international technology event, focused on 'Sustainable High City Technology' and connecting global startups, officially kicked off at Tokyo Big Sight on April 27, 2026?",
+      "options": [
+        "SusHi Tech Tokyo 2026",
+        "EcoTech Japan 2026",
+        "Green Innovate Tokyo",
+        "Smart City Expo Japan"
+      ],
+      "a": 0,
+      "correctText": "SusHi Tech Tokyo 2026",
+      "category": "Technology",
+      "source": "https://japannews.yomiuri.co.jp/business/tech/20260426-182390/"
+    }
+  ]
+}

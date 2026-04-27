@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Los Angeles Kings captain and two-time Stanley Cup champion played the final game of his 20-year NHL career in an April 2026 playoff loss to the Avalanche?",
+      "options": [
+        "Anze Kopitar",
+        "Drew Doughty",
+        "Jonathan Quick",
+        "Dustin Brown"
+      ],
+      "a": 0,
+      "correctText": "Anze Kopitar",
+      "category": "Sports",
+      "source": "https://www.latimes.com/sports/hockey/kings/story/2026-04-26/anze-kopitar-nhl-career-kings-avalanche-game-4-playoffs"
+    },
+    {
+      "q": "Which American tennis star overcame a stomach bug and vomiting on the court to defeat Sorana Cirstea at the 2026 Madrid Open?",
+      "options": [
+        "Coco Gauff",
+        "Jessica Pegula",
+        "Danielle Collins",
+        "Madison Keys"
+      ],
+      "a": 0,
+      "correctText": "Coco Gauff",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48600300/coco-gauff-vomits-court-advancing-madrid-open"
+    },
+    {
+      "q": "Which MLB team fired manager Alex Cora and five other coaches after a disappointing 10-17 start to the 2026 season?",
+      "options": [
+        "Boston Red Sox",
+        "Chicago White Sox",
+        "Houston Astros",
+        "New York Mets"
+      ],
+      "a": 0,
+      "correctText": "Boston Red Sox",
+      "category": "Sports",
+      "source": "https://sports.yahoo.com/mlb/article/red-sox-fire-manager-alex-cora-5-other-coaches-after-10-17-start-230224838.html"
+    },
+    {
+      "q": "Who won the 2026 Chevron Championship by five shots to claim her third career major and reclaim the world No. 1 ranking?",
+      "options": [
+        "Nelly Korda",
+        "Lilia Vu",
+        "Ruoning Yin",
+        "Patty Tavatanakit"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48603311/nelly-korda-wins-chevron-championship-reclaim-world-no-1"
+    },
+    {
+      "q": "Italian refereeing boss Gianluca Rocchi suspended himself in April 2026 amid a sporting fraud investigation regarding alleged favorable referee selections for which Serie A club?",
+      "options": [
+        "Inter Milan",
+        "Juventus",
+        "AC Milan",
+        "AS Roma"
+      ],
+      "a": 0,
+      "correctText": "Inter Milan",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/football/articles/cql7ld1nxqro"
+    }
+  ]
+}

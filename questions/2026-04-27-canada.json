@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What new type of facility, the first of its kind in North America, opened in Delta, BC in April 2026? [1.9]",
+      "options": [
+        "Battery-grade lithium refinery",
+        "Hydrogen fuel cell factory",
+        "Uranium enrichment plant",
+        "Cobalt processing center"
+      ],
+      "a": 0,
+      "correctText": "Battery-grade lithium refinery",
+      "category": "Canada",
+      "source": "https://oilprice.com/Energy/Energy-General/Canada-Just-Opened-North-Americas-First-Battery-Grade-Lithium-Refinery.html"
+    },
+    {
+      "q": "Which Canadian province announced a first-in-Canada proposed law to ban youth from using social media and AI chatbots?",
+      "options": [
+        "Manitoba",
+        "Ontario",
+        "Quebec",
+        "Alberta"
+      ],
+      "a": 0,
+      "correctText": "Manitoba",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/manitoba/manitoba-social-media-age-restrictions-9.7177470"
+    },
+    {
+      "q": "Which hamlet in Nunavut was selected to be the site of the main campus for Canada's first Inuit-led university?",
+      "options": [
+        "Arviat",
+        "Iqaluit",
+        "Rankin Inlet",
+        "Baker Lake"
+      ],
+      "a": 0,
+      "correctText": "Arviat",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/north/arviat-inuit-nunangat-university-9.7177278"
+    },
+    {
+      "q": "Ahead of the spring economic update, what dollar amount did Conservative Leader Pierre Poilievre demand Prime Minister Mark Carney cap the federal deficit at?",
+      "options": [
+        "$31 billion",
+        "$25 billion",
+        "$40 billion",
+        "$50 billion"
+      ],
+      "a": 0,
+      "correctText": "$31 billion",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/poilievre-carney-budget-update-us-trade-war-donald-trump-tariffs-9.7177934"
+    },
+    {
+      "q": "Prime Minister Mark Carney and BC Premier David Eby issued statements marking the one-year anniversary of the 'senseless' violence at which festival?",
+      "options": [
+        "Lapu Lapu Day festival",
+        "Vaisakhi parade",
+        "Lunar New Year festival",
+        "Caribana"
+      ],
+      "a": 0,
+      "correctText": "Lapu Lapu Day festival",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/article-carney-eby-lapu-lapu-day-festival-attack/"
+    }
+  ]
+}

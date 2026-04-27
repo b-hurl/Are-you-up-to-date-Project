@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a study published on April 27, 2026, researchers at the University of Nebraska-Lincoln developed a new bird flu (H5N1) vaccine that showed strong efficacy in mice and which other animal?",
+      "options": [
+        "Cattle",
+        "Pigs",
+        "Chickens",
+        "Horses"
+      ],
+      "a": 0,
+      "correctText": "Cattle",
+      "category": "Health",
+      "source": "https://news.unl.edu/"
+    },
+    {
+      "q": "A long-term study highlighted by BMJ Medicine on April 27, 2026, revealed that engaging in what specific exercise habit can significantly lower the risk of death?",
+      "options": [
+        "A variety of different physical activities",
+        "Lifting weights for exactly 30 minutes daily",
+        "Only participating in high-intensity interval training",
+        "Running at least 5 miles every morning"
+      ],
+      "a": 0,
+      "correctText": "A variety of different physical activities",
+      "category": "Health",
+      "source": "https://www.sciencedaily.com/"
+    },
+    {
+      "q": "On April 27, 2026, Ascletis Pharma announced it had completed U.S. Phase II study enrollment for ASC30, an oral small molecule GLP-1R agonist aimed at treating what condition?",
+      "options": [
+        "Type 2 diabetes",
+        "Rheumatoid arthritis",
+        "Chronic kidney disease",
+        "Hypertension"
+      ],
+      "a": 0,
+      "correctText": "Type 2 diabetes",
+      "category": "Health",
+      "source": "https://www.prnewswire.com/"
+    },
+    {
+      "q": "According to a Federal Register notice published on April 27, 2026, the FDA scheduled a May 28 advisory committee meeting to discuss the 2026-2027 formula for which vaccine?",
+      "options": [
+        "COVID-19",
+        "Influenza",
+        "RSV",
+        "Mpox"
+      ],
+      "a": 0,
+      "correctText": "COVID-19",
+      "category": "Health",
+      "source": "https://www.federalregister.gov/"
+    },
+    {
+      "q": "On April 27, 2026, Intellia Therapeutics scheduled the release of its highly anticipated Phase 3 clinical trial data for lonvoguran ziclumeran, a CRISPR gene editing candidate treating what disease?",
+      "options": [
+        "Hereditary angioedema",
+        "Cystic fibrosis",
+        "Sickle cell anemia",
+        "Huntington's disease"
+      ],
+      "a": 0,
+      "correctText": "Hereditary angioedema",
+      "category": "Health",
+      "source": "https://intelliatx.com/"
+    }
+  ]
+}

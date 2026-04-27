@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "A Taiwan court sentenced a former TSMC engineer to 10 years in prison on April 27, 2026, for leaking 2 nm trade secrets to which Japanese equipment supplier?",
+      "options": [
+        "Tokyo Electron",
+        "Advantest",
+        "Hitachi High-Tech",
+        "Nikon"
+      ],
+      "a": 0,
+      "correctText": "Tokyo Electron",
+      "category": "Technology",
+      "source": "https://www.aljazeera.com/economy/2026/04/27/taiwan-court-hands-down-jail-terms-in-tsmc-trade-secrets-case"
+    },
+    {
+      "q": "On April 27, 2026, Ricoh Company announced a follow-on investment through its RICOH Innovation Fund in which U.S. startup known for privacy-first workplace occupancy sensors?",
+      "options": [
+        "Butlr",
+        "VergeSense",
+        "Density",
+        "Basking.io"
+      ],
+      "a": 0,
+      "correctText": "Butlr",
+      "category": "Technology",
+      "source": "https://www.ricoh.com/info/2026/0427_1"
+    },
+    {
+      "q": "Which major international technology event, focused on 'Sustainable High City Technology' and connecting global startups, officially kicked off at Tokyo Big Sight on April 27, 2026?",
+      "options": [
+        "SusHi Tech Tokyo 2026",
+        "EcoTech Japan 2026",
+        "Green Innovate Tokyo",
+        "Smart City Expo Japan"
+      ],
+      "a": 0,
+      "correctText": "SusHi Tech Tokyo 2026",
+      "category": "Technology",
+      "source": "https://japannews.yomiuri.co.jp/business/tech/20260426-182390/"
+    },
+    {
+      "q": "Which broadband industry organization launched its Tech Summit 2026 in Westminster, Colorado on April 27, 2026, replacing its former Winter Conference?",
+      "options": [
+        "CableLabs",
+        "NCTA",
+        "SCTE",
+        "Wi-Fi Alliance"
+      ],
+      "a": 0,
+      "correctText": "CableLabs",
+      "category": "Technology",
+      "source": "https://www.cablelabs.com/event/tech-summit"
+    }
+  ]
+}

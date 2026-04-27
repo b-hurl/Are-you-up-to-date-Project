@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "Facepunch Studios released a launch trailer on April 26, 2026, for which Source 2 spiritual successor to Garry's Mod?",
+      "options": [
+        "s&box",
+        "Rust 2",
+        "Garry's Sandbox",
+        "Source 2 Mod"
+      ],
+      "a": 0,
+      "correctText": "s&box",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/app/590830/sbox/"
+    },
+    {
+      "q": "What acclaimed horror game received an official sequel teaser trailer titled 'False Sense Of Security' on April 26, 2026?",
+      "options": [
+        "Alien: Isolation",
+        "Amnesia: The Bunker",
+        "Outlast Trials",
+        "Dead Space"
+      ],
+      "a": 0,
+      "correctText": "Alien: Isolation",
+      "category": "Gaming",
+      "source": "https://www.ign.com/videos/alien-isolation-official-sequel-teaser-trailer"
+    },
+    {
+      "q": "What is the title of the open-world bullet hell action roguelike that received its official announcement trailer on April 26, 2026?",
+      "options": [
+        "PUNK",
+        "CYBER",
+        "VOID",
+        "RUST"
+      ],
+      "a": 0,
+      "correctText": "PUNK",
+      "category": "Gaming",
+      "source": "https://www.ign.com/videos/punk-official-announcement-trailer"
+    },
+    {
+      "q": "In an interview detailed on April 26, 2026, FFXIV director Naoki Yoshida expressed interest in hearing pitches for what kind of spin-off?",
+      "options": [
+        "A single-player game",
+        "A mobile gacha game",
+        "A 2D fighting game",
+        "A battle royale"
+      ],
+      "a": 0,
+      "correctText": "A single-player game",
+      "category": "Gaming",
+      "source": "https://www.mirror.co.uk/gaming/ffxiv-director-would-love-hear-37070651"
+    }
+  ]
+}

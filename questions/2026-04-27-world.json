@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "Who was identified as the suspect in the April 2026 shooting incident at the White House Correspondents' Dinner, having referred to himself as a 'Friendly Federal Assassin' in writings to his family?",
+      "options": [
+        "Cole Tomas Allen",
+        "John David Smith",
+        "Robert William Ray",
+        "Michael James Ryan"
+      ],
+      "a": 0,
+      "correctText": "Cole Tomas Allen",
+      "category": "World",
+      "source": "https://www.observertoday.com/news/top-stories/2026/04/shooting-suspect-railed-against-trump/"
+    },
+    {
+      "q": "On April 27, 2026, King Charles III and Queen Camilla arrived in the United States for a high-security state visit marking which milestone?",
+      "options": [
+        "250th anniversary of American independence",
+        "100th anniversary of the US-UK special relationship",
+        "50th anniversary of his first US visit",
+        "400th anniversary of the Mayflower voyage"
+      ],
+      "a": 0,
+      "correctText": "250th anniversary of American independence",
+      "category": "World",
+      "source": "https://www.timesunion.com/news/article/king-charles-iii-heads-to-washington-on-a-delicate-19424683.php"
+    },
+    {
+      "q": "Ahead of a planned 2026 summit between Xi Jinping and Donald Trump, China expanded its economic pressure tools by enacting laws to punish foreign firms doing what?",
+      "options": [
+        "Shifting supply chains away from China",
+        "Investing in Taiwanese semiconductor plants",
+        "Refusing to share AI source code",
+        "Exporting rare earth metals to the US"
+      ],
+      "a": 0,
+      "correctText": "Shifting supply chains away from China",
+      "category": "World",
+      "source": "https://economictimes.indiatimes.com/news/international/global-trends/china-expands-economic-pressure-tools-in-us-rivalry-ahead-of-trump-xi-summit/articleshow/130542375.cms"
+    },
+    {
+      "q": "In an April 27, 2026 interview, which Russian Deputy Prime Minister stated it would take several months for the global oil market to recover even if the Strait of Hormuz blockade is lifted?",
+      "options": [
+        "Alexander Novak",
+        "Sergei Lavrov",
+        "Mikhail Mishustin",
+        "Andrei Belousov"
+      ],
+      "a": 0,
+      "correctText": "Alexander Novak",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-april-27-2026/3201452"
+    }
+  ]
+}

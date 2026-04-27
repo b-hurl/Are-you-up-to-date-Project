@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 27, 2026, which pharmaceutical company announced a definitive agreement to acquire the US-based firm Organon in an $11.75 billion all-cash deal?",
+      "options": [
+        "Sun Pharma",
+        "Dr. Reddy's",
+        "Cipla",
+        "Lupin"
+      ],
+      "a": 0,
+      "correctText": "Sun Pharma",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/27/indian-drugmaker-sun-pharma-to-buy-us-firm-organon-in-11point75-billion-deal.html"
+    },
+    {
+      "q": "Reporting box office actuals on Monday, April 27, 2026, what biopic scored a record U.S. opening of $97 million and $217 million globally?",
+      "options": [
+        "Michael",
+        "King of Pop",
+        "Thriller",
+        "Smooth Criminal"
+      ],
+      "a": 0,
+      "correctText": "Michael",
+      "category": "Business",
+      "source": "https://www.hollywoodreporter.com/music/music-news/michael-jackson-record-box-office-biopic-opening-1236577460/"
+    },
+    {
+      "q": "On April 27, 2026, which advertising technology company announced it had become the first demand-side platform partner for the vertical short drama platform DramaBox?",
+      "options": [
+        "The Trade Desk",
+        "Roku",
+        "Criteo",
+        "AppLovin"
+      ],
+      "a": 0,
+      "correctText": "The Trade Desk",
+      "category": "Business",
+      "source": "https://stocktitan.net/news/TTD/the-trade-desk-powers-open-internet-growth-with-dramabox-short-drama"
+    },
+    {
+      "q": "According to business reports published on April 27, 2026, Foreign Institutional Investors (FIIs) pulled what massive amount from the Indian market during an 18-month selling spree?",
+      "options": [
+        "$45 billion",
+        "$20 billion",
+        "$60 billion",
+        "$10 billion"
+      ],
+      "a": 0,
+      "correctText": "$45 billion",
+      "category": "Business",
+      "source": "https://theindianeye.com/2026/04/27/fiis-pull-out-45-billion-from-indian-market-in-18-month-selling-spree/"
+    },
+    {
+      "q": "On April 27, 2026, INFRONEER Holdings released a Q&A briefing regarding their recent acquisition of shares in which corporation?",
+      "options": [
+        "Swing Corporation",
+        "Hitachi Zosen",
+        "Ebara Corporation",
+        "Kurita Water Industries"
+      ],
+      "a": 0,
+      "correctText": "Swing Corporation",
+      "category": "Business",
+      "source": "https://www.infroneer.com/en/news/20260427.html"
+    }
+  ]
+}

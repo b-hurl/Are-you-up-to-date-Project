@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to research announced on April 27, 2026, the University of Nebraska–Lincoln developed a highly effective vaccine against H5N1 bird flu specifically designed to protect what animals following a 2024 interspecies outbreak?",
+      "options": [
+        "Dairy cattle",
+        "Domestic pigs",
+        "Free-range chickens",
+        "Farmed salmon"
+      ],
+      "a": 0,
+      "correctText": "Dairy cattle",
+      "category": "Science",
+      "source": "https://news.unl.edu/newsrooms/today/article/researchers-develop-promising-new-vaccine-against-bird-flu/"
+    },
+    {
+      "q": "A BMJ Group study featured on April 27, 2026, tracking over 100,000 individuals for three decades, found that which specific change to an exercise routine significantly lowers the risk of death?",
+      "options": [
+        "Mixing up physical activities",
+        "Lifting heavier weights daily",
+        "Fasting before all workouts",
+        "Exercising strictly in the morning"
+      ],
+      "a": 0,
+      "correctText": "Mixing up physical activities",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/"
+    },
+    {
+      "q": "On April 27, 2026, the Institute of Science and Technology Austria (ISTA) published a study in Nature Communications showing that after birth, the brain's hippocampal neural network transitions from what state?",
+      "options": [
+        "Dense and random to sparser and refined",
+        "Completely blank to fully structured",
+        "Disconnected to uniformly structured",
+        "Sparser and refined to dense and random"
+      ],
+      "a": 0,
+      "correctText": "Dense and random to sparser and refined",
+      "category": "Science",
+      "source": "https://ista.ac.at/en/news/do-memories-form-on-a-blank-slate/"
+    },
+    {
+      "q": "On April 27, 2026, Intellia Therapeutics reported topline data from its Phase 3 HAELO clinical trial. This milestone marks the world's first Phase 3 readout for what type of candidate?",
+      "options": [
+        "An in vivo CRISPR gene editing candidate",
+        "An mRNA-based cancer vaccine",
+        "A stem cell-derived organoid therapy",
+        "A personalized nanoparticle antibiotic"
+      ],
+      "a": 0,
+      "correctText": "An in vivo CRISPR gene editing candidate",
+      "category": "Science",
+      "source": "https://www.biospace.com/"
+    }
+  ]
+}

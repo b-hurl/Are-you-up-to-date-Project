@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "At the CCXPMX26 convention in Mexico City in late April 2026, fans were treated to the world premiere of the trailer for which upcoming Prime Video series starring Nicolas Cage?",
+      "options": [
+        "Spider-Noir",
+        "Ghost Rider: Vengeance",
+        "The National Treasure Series",
+        "Vampire's Kiss: The Return"
+      ],
+      "a": 0,
+      "correctText": "Spider-Noir",
+      "category": "Entertainment",
+      "source": "https://spicypulp.com/nicolas-cage-embraces-the-shadows-for-prime-videos-spider-noir/"
+    },
+    {
+      "q": "On April 27, 2026, which Grammy-nominated pop star brought their 'It's Not That Deep Tour' to the Nationwide Arena in Columbus, Ohio?",
+      "options": [
+        "Demi Lovato",
+        "Ariana Grande",
+        "Selena Gomez",
+        "Miley Cyrus"
+      ],
+      "a": 0,
+      "correctText": "Demi Lovato",
+      "category": "Entertainment",
+      "source": "https://sunny95.com/events/demi-lovato-at-nationwide-arena/"
+    },
+    {
+      "q": "Listed among the recommended short films for Panic Fest 2026 on April 27, the atmospheric thriller 'Hell's Half-Acre: Sojourn' was directed by whom?",
+      "options": [
+        "Nicholas Nicastro",
+        "Ari Aster",
+        "Jordan Peele",
+        "Mike Flanagan"
+      ],
+      "a": 0,
+      "correctText": "Nicholas Nicastro",
+      "category": "Entertainment",
+      "source": "https://horrorfuel.com/our-frightening-four-a-quartet-of-recommended-panic-fest-short-films/"
+    },
+    {
+      "q": "Which popular American singer, rapper, and flutist celebrated her 38th birthday on April 27, 2026?",
+      "options": [
+        "Lizzo",
+        "Cardi B",
+        "Megan Thee Stallion",
+        "Doja Cat"
+      ],
+      "a": 0,
+      "correctText": "Lizzo",
+      "category": "Entertainment",
+      "source": "https://www.boredpanda.com/celebrity-birthdays-today-april-27-2026/"
+    }
+  ]
+}

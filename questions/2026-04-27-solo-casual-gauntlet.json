@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-27",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Who won the 2026 Chevron Championship by five shots to claim her third career major and reclaim the world No. 1 ranking?",
+      "options": [
+        "Nelly Korda",
+        "Lilia Vu",
+        "Ruoning Yin",
+        "Patty Tavatanakit"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48603311/nelly-korda-wins-chevron-championship-reclaim-world-no-1"
+    },
+    {
+      "q": "On April 27, 2026, best-selling author Marie Bostwick spoke in Needham about her new historical fiction novel titled 'The Book Club for...' what?",
+      "options": [
+        "Troublesome Women",
+        "Suburbia",
+        "Feminist Awakening",
+        "The 1960s Housewives"
+      ],
+      "a": 0,
+      "correctText": "Troublesome Women",
+      "category": "Books",
+      "source": "https://needhamobserver.com/event/the-book-club-for-troublesome-women-best-selling-author-marie-bostwick-to-speak-at-the-needham-public-library-on-april-27-2026/"
+    },
+    {
+      "q": "On April 27, 2026, Intellia Therapeutics scheduled the release of its highly anticipated Phase 3 clinical trial data for lonvoguran ziclumeran, a CRISPR gene editing candidate treating what disease?",
+      "options": [
+        "Hereditary angioedema",
+        "Cystic fibrosis",
+        "Sickle cell anemia",
+        "Huntington's disease"
+      ],
+      "a": 0,
+      "correctText": "Hereditary angioedema",
+      "category": "Health",
+      "source": "https://intelliatx.com/"
+    },
+    {
+      "q": "On April 27, 2026, it was reported that Vueling Airlines marked Sant Jordi by giving passengers on a flight from Barcelona to Paris a rose and copies of what famous book?",
+      "options": [
+        "The Alchemist",
+        "The Little Prince",
+        "Don Quixote",
+        "One Hundred Years of Solitude"
+      ],
+      "a": 0,
+      "correctText": "The Alchemist",
+      "category": "Books",
+      "source": "https://publishingperspectives.com/2026/04/around-the-book-world-monday-april-27-2026/"
+    },
+    {
+      "q": "According to a study published on April 27, 2026, researchers at the University of Nebraska-Lincoln developed a new bird flu (H5N1) vaccine that showed strong efficacy in mice and which other animal?",
+      "options": [
+        "Cattle",
+        "Pigs",
+        "Chickens",
+        "Horses"
+      ],
+      "a": 0,
+      "correctText": "Cattle",
+      "category": "Health",
+      "source": "https://news.unl.edu/"
+    },
+    {
+      "q": "In book news from April 27, 2026, Wilmette native J.D. Amato discussed his debut middle-grade graphic novel which features a decades-long game of capture the flag. What is the title?",
+      "options": [
+        "The Endless Game",
+        "The Lakeside Legend",
+        "Capture the Flag",
+        "Wilmette Wonders"
+      ],
+      "a": 0,
+      "correctText": "The Endless Game",
+      "category": "Books",
+      "source": "https://www.therecordnorthshore.org/2026/04/27/wilmette-native-infuses-north-shore-spirit-into-debut-graphic-novel-the-endless-game/"
+    },
+    {
+      "q": "In an interview detailed on April 26, 2026, FFXIV director Naoki Yoshida expressed interest in hearing pitches for what kind of spin-off?",
+      "options": [
+        "A single-player game",
+        "A mobile gacha game",
+        "A 2D fighting game",
+        "A battle royale"
+      ],
+      "a": 0,
+      "correctText": "A single-player game",
+      "category": "Gaming",
+      "source": "https://www.mirror.co.uk/gaming/ffxiv-director-would-love-hear-37070651"
+    },
+    {
+      "q": "On April 27, 2026, which Grammy-nominated pop star brought their 'It's Not That Deep Tour' to the Nationwide Arena in Columbus, Ohio?",
+      "options": [
+        "Demi Lovato",
+        "Ariana Grande",
+        "Selena Gomez",
+        "Miley Cyrus"
+      ],
+      "a": 0,
+      "correctText": "Demi Lovato",
+      "category": "Entertainment",
+      "source": "https://sunny95.com/events/demi-lovato-at-nationwide-arena/"
+    },
+    {
+      "q": "According to a French national reading barometer covered on April 27, 2026, the use of which book format in France has doubled since 2023?",
+      "options": [
+        "Audiobooks",
+        "E-books",
+        "Graphic novels",
+        "Hardcover books"
+      ],
+      "a": 0,
+      "correctText": "Audiobooks",
+      "category": "Books",
+      "source": "https://publishingperspectives.com/2026/04/around-the-book-world-monday-april-27-2026/"
+    },
+    {
+      "q": "Listed among the recommended short films for Panic Fest 2026 on April 27, the atmospheric thriller 'Hell's Half-Acre: Sojourn' was directed by whom?",
+      "options": [
+        "Nicholas Nicastro",
+        "Ari Aster",
+        "Jordan Peele",
+        "Mike Flanagan"
+      ],
+      "a": 0,
+      "correctText": "Nicholas Nicastro",
+      "category": "Entertainment",
+      "source": "https://horrorfuel.com/our-frightening-four-a-quartet-of-recommended-panic-fest-short-films/"
+    }
+  ]
+}

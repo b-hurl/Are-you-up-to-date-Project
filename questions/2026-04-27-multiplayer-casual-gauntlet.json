@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-27",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "What acclaimed horror game received an official sequel teaser trailer titled 'False Sense Of Security' on April 26, 2026?",
+      "options": [
+        "Alien: Isolation",
+        "Amnesia: The Bunker",
+        "Outlast Trials",
+        "Dead Space"
+      ],
+      "a": 0,
+      "correctText": "Alien: Isolation",
+      "category": "Gaming",
+      "source": "https://www.ign.com/videos/alien-isolation-official-sequel-teaser-trailer"
+    },
+    {
+      "q": "Facepunch Studios released a launch trailer on April 26, 2026, for which Source 2 spiritual successor to Garry's Mod?",
+      "options": [
+        "s&box",
+        "Rust 2",
+        "Garry's Sandbox",
+        "Source 2 Mod"
+      ],
+      "a": 0,
+      "correctText": "s&box",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/app/590830/sbox/"
+    },
+    {
+      "q": "Which American tennis star overcame a stomach bug and vomiting on the court to defeat Sorana Cirstea at the 2026 Madrid Open?",
+      "options": [
+        "Coco Gauff",
+        "Jessica Pegula",
+        "Danielle Collins",
+        "Madison Keys"
+      ],
+      "a": 0,
+      "correctText": "Coco Gauff",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48600300/coco-gauff-vomits-court-advancing-madrid-open"
+    },
+    {
+      "q": "Which Los Angeles Kings captain and two-time Stanley Cup champion played the final game of his 20-year NHL career in an April 2026 playoff loss to the Avalanche?",
+      "options": [
+        "Anze Kopitar",
+        "Drew Doughty",
+        "Jonathan Quick",
+        "Dustin Brown"
+      ],
+      "a": 0,
+      "correctText": "Anze Kopitar",
+      "category": "Sports",
+      "source": "https://www.latimes.com/sports/hockey/kings/story/2026-04-26/anze-kopitar-nhl-career-kings-avalanche-game-4-playoffs"
+    },
+    {
+      "q": "Which MLB team fired manager Alex Cora and five other coaches after a disappointing 10-17 start to the 2026 season?",
+      "options": [
+        "Boston Red Sox",
+        "Chicago White Sox",
+        "Houston Astros",
+        "New York Mets"
+      ],
+      "a": 0,
+      "correctText": "Boston Red Sox",
+      "category": "Sports",
+      "source": "https://sports.yahoo.com/mlb/article/red-sox-fire-manager-alex-cora-5-other-coaches-after-10-17-start-230224838.html"
+    },
+    {
+      "q": "A long-term study highlighted by BMJ Medicine on April 27, 2026, revealed that engaging in what specific exercise habit can significantly lower the risk of death?",
+      "options": [
+        "A variety of different physical activities",
+        "Lifting weights for exactly 30 minutes daily",
+        "Only participating in high-intensity interval training",
+        "Running at least 5 miles every morning"
+      ],
+      "a": 0,
+      "correctText": "A variety of different physical activities",
+      "category": "Health",
+      "source": "https://www.sciencedaily.com/"
+    },
+    {
+      "q": "According to a Federal Register notice published on April 27, 2026, the FDA scheduled a May 28 advisory committee meeting to discuss the 2026-2027 formula for which vaccine?",
+      "options": [
+        "COVID-19",
+        "Influenza",
+        "RSV",
+        "Mpox"
+      ],
+      "a": 0,
+      "correctText": "COVID-19",
+      "category": "Health",
+      "source": "https://www.federalregister.gov/"
+    },
+    {
+      "q": "What is the title of the open-world bullet hell action roguelike that received its official announcement trailer on April 26, 2026?",
+      "options": [
+        "PUNK",
+        "CYBER",
+        "VOID",
+        "RUST"
+      ],
+      "a": 0,
+      "correctText": "PUNK",
+      "category": "Gaming",
+      "source": "https://www.ign.com/videos/punk-official-announcement-trailer"
+    },
+    {
+      "q": "At the CCXPMX26 convention in Mexico City in late April 2026, fans were treated to the world premiere of the trailer for which upcoming Prime Video series starring Nicolas Cage?",
+      "options": [
+        "Spider-Noir",
+        "Ghost Rider: Vengeance",
+        "The National Treasure Series",
+        "Vampire's Kiss: The Return"
+      ],
+      "a": 0,
+      "correctText": "Spider-Noir",
+      "category": "Entertainment",
+      "source": "https://spicypulp.com/nicolas-cage-embraces-the-shadows-for-prime-videos-spider-noir/"
+    },
+    {
+      "q": "On April 27, 2026, Ascletis Pharma announced it had completed U.S. Phase II study enrollment for ASC30, an oral small molecule GLP-1R agonist aimed at treating what condition?",
+      "options": [
+        "Type 2 diabetes",
+        "Rheumatoid arthritis",
+        "Chronic kidney disease",
+        "Hypertension"
+      ],
+      "a": 0,
+      "correctText": "Type 2 diabetes",
+      "category": "Health",
+      "source": "https://www.prnewswire.com/"
+    }
+  ]
+}

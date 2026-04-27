@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to a French national reading barometer covered on April 27, 2026, the use of which book format in France has doubled since 2023?",
+      "options": [
+        "Audiobooks",
+        "E-books",
+        "Graphic novels",
+        "Hardcover books"
+      ],
+      "a": 0,
+      "correctText": "Audiobooks",
+      "category": "Books",
+      "source": "https://publishingperspectives.com/2026/04/around-the-book-world-monday-april-27-2026/"
+    },
+    {
+      "q": "On April 27, 2026, it was reported that Vueling Airlines marked Sant Jordi by giving passengers on a flight from Barcelona to Paris a rose and copies of what famous book?",
+      "options": [
+        "The Alchemist",
+        "The Little Prince",
+        "Don Quixote",
+        "One Hundred Years of Solitude"
+      ],
+      "a": 0,
+      "correctText": "The Alchemist",
+      "category": "Books",
+      "source": "https://publishingperspectives.com/2026/04/around-the-book-world-monday-april-27-2026/"
+    },
+    {
+      "q": "In book news from April 27, 2026, Wilmette native J.D. Amato discussed his debut middle-grade graphic novel which features a decades-long game of capture the flag. What is the title?",
+      "options": [
+        "The Endless Game",
+        "The Lakeside Legend",
+        "Capture the Flag",
+        "Wilmette Wonders"
+      ],
+      "a": 0,
+      "correctText": "The Endless Game",
+      "category": "Books",
+      "source": "https://www.therecordnorthshore.org/2026/04/27/wilmette-native-infuses-north-shore-spirit-into-debut-graphic-novel-the-endless-game/"
+    },
+    {
+      "q": "On April 27, 2026, best-selling author Marie Bostwick spoke in Needham about her new historical fiction novel titled 'The Book Club for...' what?",
+      "options": [
+        "Troublesome Women",
+        "Suburbia",
+        "Feminist Awakening",
+        "The 1960s Housewives"
+      ],
+      "a": 0,
+      "correctText": "Troublesome Women",
+      "category": "Books",
+      "source": "https://needhamobserver.com/event/the-book-club-for-troublesome-women-best-selling-author-marie-bostwick-to-speak-at-the-needham-public-library-on-april-27-2026/"
+    }
+  ]
+}
