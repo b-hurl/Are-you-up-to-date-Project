@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In late April 2026, which AI coding agent, running Anthropic's Claude Opus 4.6, was blamed for accidentally deleting PocketOS's entire production database in just 9 seconds?",
+      "options": [
+        "Cursor",
+        "Devin",
+        "GitHub Copilot",
+        "CodeLlama"
+      ],
+      "a": 0,
+      "correctText": "Cursor",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-powered-ai-coding-agent-deletes-entire-company-database-in-9-seconds-backups-zapped-after-cursor-tool-powered-by-anthropics-claude-goes-rogue"
+    },
+    {
+      "q": "Announced in late April 2026 by original developers zsKnight and _Demo_, 'Super ZSNES' is a modern rewrite of the classic SNES emulator that notably leverages what to enhance graphics?",
+      "options": [
+        "The system's GPU",
+        "A dedicated AI accelerator",
+        "Cloud-based TPUs",
+        "The physical SuperFX chip"
+      ],
+      "a": 0,
+      "correctText": "The system's GPU",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gadgets/2026/04/super-zsnes-is-a-stab-at-a-modern-snes-emulator-from-the-original-developers/"
+    },
+    {
+      "q": "In late April 2026, tech giants including Apple and Google successfully waged a multi-million dollar lobbying campaign to crush which California bill that would have prohibited them from favoring their own products over smaller rivals?",
+      "options": [
+        "The Based Act",
+        "The Innovation and Choice Online Act",
+        "The Digital Markets Initiative",
+        "The Open App Store Act"
+      ],
+      "a": 0,
+      "correctText": "The Based Act",
+      "category": "Technology",
+      "source": "https://www.mercurynews.com/2026/04/27/apple-google-crushed-california-bill-that-helped-smaller-rivals/"
+    },
+    {
+      "q": "In late April 2026, over 600 Google employees signed a letter asking CEO Sundar Pichai to block the company's AI models from being used for classified purposes by which organization?",
+      "options": [
+        "The Pentagon",
+        "The Central Intelligence Agency",
+        "The National Security Agency",
+        "The Department of Homeland Security"
+      ],
+      "a": 0,
+      "correctText": "The Pentagon",
+      "category": "Technology",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/919326/google-ai-pentagon-classified-letter"
+    },
+    {
+      "q": "According to a late April 2026 report on San Francisco's '10B' program, which tech company spent nearly $728,000 to hire off-duty SFPD officers for armed protection in 2024?",
+      "options": [
+        "Salesforce",
+        "Airbnb",
+        "OpenAI",
+        "Meta"
+      ],
+      "a": 0,
+      "correctText": "Salesforce",
+      "category": "Technology",
+      "source": "https://www.wired.com/story/heres-how-much-san-francisco-tech-companies-are-paying-for-police-protection/"
+    }
+  ]
+}

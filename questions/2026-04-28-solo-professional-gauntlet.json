@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-28",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In April 2026, a former local leader of Viktor Orbán’s Fidesz party, Feríz Rádi, was arrested at the Budapest airport in connection with what type of crime?",
+      "options": [
+        "Budget fraud",
+        "Espionage",
+        "Drug trafficking",
+        "Human smuggling"
+      ],
+      "a": 0,
+      "correctText": "Budget fraud",
+      "category": "World",
+      "source": "https://tvpworld.com/92933472/hungary-ex-fidesz-leader-rdi-feriz-arrested-at-budapest-airport"
+    },
+    {
+      "q": "A 2026 brain scan study of children showed that understanding language and what other complex cognitive function have distinct, non-overlapping origins in the brain?",
+      "options": [
+        "Sensing how other people feel",
+        "Recognizing familiar faces",
+        "Solving basic math equations",
+        "Processing spatial navigation"
+      ],
+      "a": 0,
+      "correctText": "Sensing how other people feel",
+      "category": "Science",
+      "source": "https://news.osu.edu/we-may-be-born-with-2-complex-cognitive-functions-already-established/"
+    },
+    {
+      "q": "Reported around April 28, 2026, which Canadian telecommunications company announced it was offering voluntary buyout packages to 50 percent of its workforce?",
+      "options": [
+        "Bell Canada",
+        "Telus",
+        "Shaw Communications",
+        "Rogers Communications"
+      ],
+      "a": 3,
+      "correctText": "Rogers Communications",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-rogers-communications-buyouts-april-27/"
+    },
+    {
+      "q": "In April 2026, scientists captured the most detailed structural images to date of which protein's DNA repair process, offering clues to inhibit BRCA mutations?",
+      "options": [
+        "RAD52",
+        "CRISPR-Cas9",
+        "p53",
+        "Hemoglobin"
+      ],
+      "a": 0,
+      "correctText": "RAD52",
+      "category": "Science",
+      "source": "https://news.osu.edu/best-snapshots-yet-of-dna-repair-protein-relevant-to-brca-mutations/"
+    },
+    {
+      "q": "India's Sun Pharma announced it is acquiring which U.S. healthcare firm in an $11.75 billion all-cash deal?",
+      "options": [
+        "Organon",
+        "Catalent",
+        "Perrigo",
+        "Viatris"
+      ],
+      "a": 0,
+      "correctText": "Organon",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/27/indian-drugmaker-sun-pharma-to-buy-us-firm-organon-in-11point75-billion-deal.html"
+    },
+    {
+      "q": "Which pizza chain saw its stock fall after reporting a disappointing 0.9% U.S. same-store sales increase for Q1 2026? [1.7]",
+      "options": [
+        "Domino's Pizza",
+        "Pizza Hut",
+        "Papa John's",
+        "Little Caesars"
+      ],
+      "a": 0,
+      "correctText": "Domino's Pizza",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/27/dominos-pizza-dpz-earnings-stock-falls-on-weak-sales.html"
+    },
+    {
+      "q": "In late April 2026, tech giants including Apple and Google successfully waged a multi-million dollar lobbying campaign to crush which California bill that would have prohibited them from favoring their own products over smaller rivals?",
+      "options": [
+        "The Based Act",
+        "The Innovation and Choice Online Act",
+        "The Digital Markets Initiative",
+        "The Open App Store Act"
+      ],
+      "a": 0,
+      "correctText": "The Based Act",
+      "category": "Technology",
+      "source": "https://www.mercurynews.com/2026/04/27/apple-google-crushed-california-bill-that-helped-smaller-rivals/"
+    },
+    {
+      "q": "What is the title of the Michael Jackson biopic that shattered box office records with a $97 million U.S. opening weekend?",
+      "options": [
+        "Michael",
+        "King of Pop",
+        "Thriller",
+        "Billie Jean"
+      ],
+      "a": 0,
+      "correctText": "Michael",
+      "category": "Business",
+      "source": "https://www.hollywoodreporter.com/music/music-news/michael-jackson-record-box-office-biopic-opening-1236577460/"
+    },
+    {
+      "q": "According to late April 2026 news, Ontario Premier Doug Ford was found to be regularly working from home in January despite mandating what group to return to the office full-time?",
+      "options": [
+        "Public school teachers",
+        "Civil servants",
+        "Healthcare workers",
+        "Transit operators"
+      ],
+      "a": 1,
+      "correctText": "Civil servants",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11816493/doug-ford-remote-work/"
+    },
+    {
+      "q": "According to a late April 2026 report on San Francisco's '10B' program, which tech company spent nearly $728,000 to hire off-duty SFPD officers for armed protection in 2024?",
+      "options": [
+        "Salesforce",
+        "Airbnb",
+        "OpenAI",
+        "Meta"
+      ],
+      "a": 0,
+      "correctText": "Salesforce",
+      "category": "Technology",
+      "source": "https://www.wired.com/story/heres-how-much-san-francisco-tech-companies-are-paying-for-police-protection/"
+    }
+  ]
+}

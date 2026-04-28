@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which pizza chain saw its stock fall after reporting a disappointing 0.9% U.S. same-store sales increase for Q1 2026? [1.7]",
+      "options": [
+        "Domino's Pizza",
+        "Pizza Hut",
+        "Papa John's",
+        "Little Caesars"
+      ],
+      "a": 0,
+      "correctText": "Domino's Pizza",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/27/dominos-pizza-dpz-earnings-stock-falls-on-weak-sales.html"
+    },
+    {
+      "q": "Starting June 1, 2026, GitHub Copilot is shifting its premium request unit (PRU) system to what new pricing model?",
+      "options": [
+        "Usage-based AI credits",
+        "Fixed annual subscriptions",
+        "Unlimited flat-rate tiers",
+        "Per-device licensing"
+      ],
+      "a": 0,
+      "correctText": "Usage-based AI credits",
+      "category": "Business",
+      "source": "https://www.zdnet.com/article/github-copilot-shifts-to-usage-based-pricing/"
+    },
+    {
+      "q": "According to a recent FCC filing, what percentage of the merged Paramount-Warner Bros. Discovery will be owned by Middle Eastern sovereign wealth funds?",
+      "options": [
+        "38.5%",
+        "25.0%",
+        "49.5%",
+        "15.1%"
+      ],
+      "a": 0,
+      "correctText": "38.5%",
+      "category": "Business",
+      "source": "https://variety.com/2026/film/news/paramount-warner-bros-foreign-ownership-middle-eastern-funds-1236731732/"
+    },
+    {
+      "q": "What is the title of the Michael Jackson biopic that shattered box office records with a $97 million U.S. opening weekend?",
+      "options": [
+        "Michael",
+        "King of Pop",
+        "Thriller",
+        "Billie Jean"
+      ],
+      "a": 0,
+      "correctText": "Michael",
+      "category": "Business",
+      "source": "https://www.hollywoodreporter.com/music/music-news/michael-jackson-record-box-office-biopic-opening-1236577460/"
+    },
+    {
+      "q": "India's Sun Pharma announced it is acquiring which U.S. healthcare firm in an $11.75 billion all-cash deal?",
+      "options": [
+        "Organon",
+        "Catalent",
+        "Perrigo",
+        "Viatris"
+      ],
+      "a": 0,
+      "correctText": "Organon",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/04/27/indian-drugmaker-sun-pharma-to-buy-us-firm-organon-in-11point75-billion-deal.html"
+    }
+  ]
+}

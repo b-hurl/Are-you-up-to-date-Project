@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-28",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Reported on April 28, 2026, Sony tapped 'L.A. Confidential' writer Brian Helgeland to script a film adaptation of which Quentin Tarantino comic crossover?",
+      "options": [
+        "Django/Zorro",
+        "Kill Bill: The Whole Bloody Affair",
+        "The Adventures of Cliff Booth",
+        "Basterds & Brothers"
+      ],
+      "a": 0,
+      "correctText": "Django/Zorro",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/django-zorro-movie-revived-sony-quentin-tarantino-1236731586/"
+    },
+    {
+      "q": "On April 28, 2026, NTT DATA announced the launch of a new brain health monitoring service that generates a cognitive health score by using AI to analyze what type of data?",
+      "options": [
+        "Driving data",
+        "Sleep patterns",
+        "Walking gait",
+        "Speech patterns"
+      ],
+      "a": 0,
+      "correctText": "Driving data",
+      "category": "Health",
+      "source": "https://www.nttdata.com/global/en/media/press-release/2026/april/ntt-data-launches-monitoring-service-for-brain-health"
+    },
+    {
+      "q": "Which 40-year-old track legend announced she is eyeing a comeback in 2027 with hopes of competing at the 2028 Los Angeles Olympics?",
+      "options": [
+        "Allyson Felix",
+        "Shelly-Ann Fraser-Pryce",
+        "Sanya Richards-Ross",
+        "Carmelita Jeter"
+      ],
+      "a": 0,
+      "correctText": "Allyson Felix",
+      "category": "Sports",
+      "source": "https://www.espn.com/olympics/trackandfield/story/_/id/48611243/track-legend-allyson-felix-40-eying-comeback-2027"
+    },
+    {
+      "q": "Which tennis star avoided an upset bid by Naomi Osaka at the 2026 Madrid Open and revealed she was sticking to a chicken and rice diet to avoid a local stomach virus?",
+      "options": [
+        "Iga Swiatek",
+        "Aryna Sabalenka",
+        "Coco Gauff",
+        "Elena Rybakina"
+      ],
+      "a": 1,
+      "correctText": "Aryna Sabalenka",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48610140/sabalenka-avoids-madrid-open-virus-scare-osaka-upset-bid"
+    },
+    {
+      "q": "As detailed in an FCC funding request reported on April 28, 2026, what percentage of the newly merged Paramount and Warner Bros. Discovery will be foreign-owned?",
+      "options": [
+        "49.5%",
+        "35.0%",
+        "51.0%",
+        "25.5%"
+      ],
+      "a": 0,
+      "correctText": "49.5%",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/paramount-fcc-request-wbd-merger-middle-east-1236873732/"
+    },
+    {
+      "q": "Announced in late April 2026, Emma Stone and Chris Pine are teaming up for a May 2027 romantic comedy titled what?",
+      "options": [
+        "The Catch",
+        "The Drama",
+        "Bugonia",
+        "Carousel"
+      ],
+      "a": 0,
+      "correctText": "The Catch",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/the-catch-release-date-emma-stone-chris-pine-1236873877/"
+    },
+    {
+      "q": "Paleontologist Steve Brusatte released a sweeping new evolutionary history book on April 28, 2026, titled 'The Story of...' what?",
+      "options": [
+        "Birds",
+        "Mammals",
+        "Reptiles",
+        "Amphibians"
+      ],
+      "a": 0,
+      "correctText": "Birds",
+      "category": "Books",
+      "source": "https://aliteraryescape.com/april-2026-book-releases/"
+    },
+    {
+      "q": "According to a study from the Feinberg School of Medicine covered on April 28, 2026, artificial intelligence models scored higher than physicians in generating what type of comprehensive medical documents?",
+      "options": [
+        "Oncologic pathology reports",
+        "Radiology imaging summaries",
+        "Psychiatric evaluations",
+        "Surgical operation notes"
+      ],
+      "a": 0,
+      "correctText": "Oncologic pathology reports",
+      "category": "Health",
+      "source": "https://dailynorthwestern.com/2026/04/28/campus/feinberg-researchers-find-ai-more-capable-than-physicians-at-generating-comprehensive-oncology-reports/"
+    },
+    {
+      "q": "Reviewed in late April 2026, Andrew Martin's new novel about millennials navigating the pandemic lockdown is titled what?",
+      "options": [
+        "Down Time",
+        "Early Work",
+        "Cool for America",
+        "The Boy Vet"
+      ],
+      "a": 0,
+      "correctText": "Down Time",
+      "category": "Books",
+      "source": "https://newrepublic.com/article/208934/andrew-martin-down-time-millennials-pandemic-review"
+    },
+    {
+      "q": "Which upcoming 2026 comedy film dropped its official trailer in late April, billing itself as the fifth and final main installment of a beloved stunt franchise?",
+      "options": [
+        "Jackass: Best and Last",
+        "Jackass Forever 2",
+        "Bad Grandpa Returns",
+        "The Prank Panel: The Movie"
+      ],
+      "a": 0,
+      "correctText": "Jackass: Best and Last",
+      "category": "Entertainment",
+      "source": "https://youtu.be/sNwzFhGwA94?si=LhEfZCWpQYzFI6Yz"
+    }
+  ]
+}

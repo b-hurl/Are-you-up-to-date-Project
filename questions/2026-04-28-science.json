@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to an April 2026 study, what mundane source of inaudible infrasound may be causing the 'spooky' or haunted feelings people experience in old houses?",
+      "options": [
+        "Old boilers and pipes",
+        "Faulty electrical wiring",
+        "Drafty window frames",
+        "Creaking floorboards"
+      ],
+      "a": 0,
+      "correctText": "Old boilers and pipes",
+      "category": "Science",
+      "source": "https://www.theguardian.com/science/2026/apr/27/spooky-feelings-in-old-houses-may-be-caused-by-boiler-sounds-study-suggests"
+    },
+    {
+      "q": "An April 2026 study published in EMBO Reports revealed that obesity leaves a lasting 'memory' that can persist for 5 to 10 years post-weight loss in which type of immune cells?",
+      "options": [
+        "Helper T cells",
+        "Red blood cells",
+        "Platelets",
+        "Natural killer cells"
+      ],
+      "a": 0,
+      "correctText": "Helper T cells",
+      "category": "Science",
+      "source": "https://www.birmingham.ac.uk/news/2026/obesity-leaves-a-lasting-memory-in-immune-cells"
+    },
+    {
+      "q": "A 2026 brain scan study of children showed that understanding language and what other complex cognitive function have distinct, non-overlapping origins in the brain?",
+      "options": [
+        "Sensing how other people feel",
+        "Recognizing familiar faces",
+        "Solving basic math equations",
+        "Processing spatial navigation"
+      ],
+      "a": 0,
+      "correctText": "Sensing how other people feel",
+      "category": "Science",
+      "source": "https://news.osu.edu/we-may-be-born-with-2-complex-cognitive-functions-already-established/"
+    },
+    {
+      "q": "According to an April 2026 study in Nature, what was a primary amplifier of the severe 2024 Antarctic winter heatwave, during which temperatures rose 28°C above average?",
+      "options": [
+        "Human-caused climate change",
+        "Unprecedented solar flares",
+        "A sudden shift in ocean currents",
+        "Under-ice volcanic activity"
+      ],
+      "a": 0,
+      "correctText": "Human-caused climate change",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41612-026-01392-x"
+    },
+    {
+      "q": "In April 2026, scientists captured the most detailed structural images to date of which protein's DNA repair process, offering clues to inhibit BRCA mutations?",
+      "options": [
+        "RAD52",
+        "CRISPR-Cas9",
+        "p53",
+        "Hemoglobin"
+      ],
+      "a": 0,
+      "correctText": "RAD52",
+      "category": "Science",
+      "source": "https://news.osu.edu/best-snapshots-yet-of-dna-repair-protein-relevant-to-brca-mutations/"
+    }
+  ]
+}

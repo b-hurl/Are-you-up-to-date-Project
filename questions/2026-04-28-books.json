@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "On April 27, 2026, employees of which major trade publisher announced a historic unionization campaign with the Washington-Baltimore NewsGuild?",
+      "options": [
+        "Hachette Book Group",
+        "Simon & Schuster",
+        "Penguin Random House",
+        "HarperCollins"
+      ],
+      "a": 0,
+      "correctText": "Hachette Book Group",
+      "category": "Books",
+      "source": "https://lunch.publishersmarketplace.com/2026/04/hachette-book-group-employees-unionize/"
+    },
+    {
+      "q": "Reviewed in late April 2026, Andrew Martin's new novel about millennials navigating the pandemic lockdown is titled what?",
+      "options": [
+        "Down Time",
+        "Early Work",
+        "Cool for America",
+        "The Boy Vet"
+      ],
+      "a": 0,
+      "correctText": "Down Time",
+      "category": "Books",
+      "source": "https://newrepublic.com/article/208934/andrew-martin-down-time-millennials-pandemic-review"
+    },
+    {
+      "q": "Which bestselling author released the new novel 'We Burned So Bright' on April 28, 2026, detailing two husbands racing across the country as a black hole approaches Earth?",
+      "options": [
+        "TJ Klune",
+        "Adam Silvera",
+        "V.E. Schwab",
+        "Casey McQuiston"
+      ],
+      "a": 0,
+      "correctText": "TJ Klune",
+      "category": "Books",
+      "source": "https://inkandimaginings.com/new-book-releases-april-28-2026/"
+    },
+    {
+      "q": "Paleontologist Steve Brusatte released a sweeping new evolutionary history book on April 28, 2026, titled 'The Story of...' what?",
+      "options": [
+        "Birds",
+        "Mammals",
+        "Reptiles",
+        "Amphibians"
+      ],
+      "a": 0,
+      "correctText": "Birds",
+      "category": "Books",
+      "source": "https://aliteraryescape.com/april-2026-book-releases/"
+    }
+  ]
+}

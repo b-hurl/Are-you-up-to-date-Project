@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-28",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In late April 2026, which AI coding agent, running Anthropic's Claude Opus 4.6, was blamed for accidentally deleting PocketOS's entire production database in just 9 seconds?",
+      "options": [
+        "Cursor",
+        "Devin",
+        "GitHub Copilot",
+        "CodeLlama"
+      ],
+      "a": 0,
+      "correctText": "Cursor",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-powered-ai-coding-agent-deletes-entire-company-database-in-9-seconds-backups-zapped-after-cursor-tool-powered-by-anthropics-claude-goes-rogue"
+    },
+    {
+      "q": "According to a recent FCC filing, what percentage of the merged Paramount-Warner Bros. Discovery will be owned by Middle Eastern sovereign wealth funds?",
+      "options": [
+        "38.5%",
+        "25.0%",
+        "49.5%",
+        "15.1%"
+      ],
+      "a": 0,
+      "correctText": "38.5%",
+      "category": "Business",
+      "source": "https://variety.com/2026/film/news/paramount-warner-bros-foreign-ownership-middle-eastern-funds-1236731732/"
+    },
+    {
+      "q": "In an interview making headlines on April 28, 2026, Prime Minister Mark Carney described the current state of which official residence as 'an embarrassment'?",
+      "options": [
+        "24 Sussex Drive",
+        "Rideau Hall",
+        "Stornoway",
+        "Harrington Lake"
+      ],
+      "a": 0,
+      "correctText": "24 Sussex Drive",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/state-of-24-sussex-an-embarrassment-says-carney-9.7178956"
+    },
+    {
+      "q": "On April 28, 2026, the Canadian government tabled its Spring Economic Update, which included the announcement of the 'Canada Strong Fund'. What type of fund is this?",
+      "options": [
+        "A national pension fund",
+        "A sovereign wealth fund",
+        "A climate disaster relief fund",
+        "A provincial healthcare fund"
+      ],
+      "a": 1,
+      "correctText": "A sovereign wealth fund",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/sovereign-wealth-fund-carney-major-projects-9.7178238"
+    },
+    {
+      "q": "An April 2026 study published in EMBO Reports revealed that obesity leaves a lasting 'memory' that can persist for 5 to 10 years post-weight loss in which type of immune cells?",
+      "options": [
+        "Helper T cells",
+        "Red blood cells",
+        "Platelets",
+        "Natural killer cells"
+      ],
+      "a": 0,
+      "correctText": "Helper T cells",
+      "category": "Science",
+      "source": "https://www.birmingham.ac.uk/news/2026/obesity-leaves-a-lasting-memory-in-immune-cells"
+    },
+    {
+      "q": "Announced in late April 2026 by original developers zsKnight and _Demo_, 'Super ZSNES' is a modern rewrite of the classic SNES emulator that notably leverages what to enhance graphics?",
+      "options": [
+        "The system's GPU",
+        "A dedicated AI accelerator",
+        "Cloud-based TPUs",
+        "The physical SuperFX chip"
+      ],
+      "a": 0,
+      "correctText": "The system's GPU",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gadgets/2026/04/super-zsnes-is-a-stab-at-a-modern-snes-emulator-from-the-original-developers/"
+    },
+    {
+      "q": "According to reports on April 28, 2026, voters in Sarnia expressed frustration and wondered about the whereabouts of which local MP after she crossed the floor?",
+      "options": [
+        "Chrystia Freeland",
+        "Leslyn Lewis",
+        "Marilyn Gladu",
+        "Michelle Rempel Garner"
+      ],
+      "a": 2,
+      "correctText": "Marilyn Gladu",
+      "category": "Canada",
+      "source": "https://www.thestar.com/politics/federal/these-voters-are-mad----and-theyre-wondering-where-their-floor-crossing-mp-has-gone/article_6c126c62-ff57-426a-bfc9-ac109497b8d6.html"
+    },
+    {
+      "q": "According to an April 2026 study, what mundane source of inaudible infrasound may be causing the 'spooky' or haunted feelings people experience in old houses?",
+      "options": [
+        "Old boilers and pipes",
+        "Faulty electrical wiring",
+        "Drafty window frames",
+        "Creaking floorboards"
+      ],
+      "a": 0,
+      "correctText": "Old boilers and pipes",
+      "category": "Science",
+      "source": "https://www.theguardian.com/science/2026/apr/27/spooky-feelings-in-old-houses-may-be-caused-by-boiler-sounds-study-suggests"
+    },
+    {
+      "q": "Ukrainian drones struck Russian oil storage tanks in which city on April 28, 2026, hitting them before flames from previous attacks had even been extinguished?",
+      "options": [
+        "Tuapse",
+        "Sochi",
+        "Novorossiysk",
+        "Krasnodar"
+      ],
+      "a": 0,
+      "correctText": "Tuapse",
+      "category": "World",
+      "source": "https://kyivindependent.com/ukrainian-drones-reportedly-strike-russian-oil-tanks-before-flames-from-previous-attacks-extinguished/"
+    },
+    {
+      "q": "In late April 2026, Prime Minister Mark Carney announced the creation of the 'Strong Canada Fund'. What type of financial instrument is this?",
+      "options": [
+        "Sovereign wealth fund",
+        "Federal student loan initiative",
+        "Provincial bailout package",
+        "Pension relief fund"
+      ],
+      "a": 0,
+      "correctText": "Sovereign wealth fund",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/sovereign-wealth-fund-carney-major-projects-9.7178238"
+    }
+  ]
+}

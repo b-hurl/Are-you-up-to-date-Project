@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 28, 2026, the Canadian government tabled its Spring Economic Update, which included the announcement of the 'Canada Strong Fund'. What type of fund is this?",
+      "options": [
+        "A national pension fund",
+        "A sovereign wealth fund",
+        "A climate disaster relief fund",
+        "A provincial healthcare fund"
+      ],
+      "a": 1,
+      "correctText": "A sovereign wealth fund",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/sovereign-wealth-fund-carney-major-projects-9.7178238"
+    },
+    {
+      "q": "According to reports on April 28, 2026, voters in Sarnia expressed frustration and wondered about the whereabouts of which local MP after she crossed the floor?",
+      "options": [
+        "Chrystia Freeland",
+        "Leslyn Lewis",
+        "Marilyn Gladu",
+        "Michelle Rempel Garner"
+      ],
+      "a": 2,
+      "correctText": "Marilyn Gladu",
+      "category": "Canada",
+      "source": "https://www.thestar.com/politics/federal/these-voters-are-mad----and-theyre-wondering-where-their-floor-crossing-mp-has-gone/article_6c126c62-ff57-426a-bfc9-ac109497b8d6.html"
+    },
+    {
+      "q": "Reported around April 28, 2026, which Canadian telecommunications company announced it was offering voluntary buyout packages to 50 percent of its workforce?",
+      "options": [
+        "Bell Canada",
+        "Telus",
+        "Shaw Communications",
+        "Rogers Communications"
+      ],
+      "a": 3,
+      "correctText": "Rogers Communications",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-rogers-communications-buyouts-april-27/"
+    },
+    {
+      "q": "In an interview making headlines on April 28, 2026, Prime Minister Mark Carney described the current state of which official residence as 'an embarrassment'?",
+      "options": [
+        "24 Sussex Drive",
+        "Rideau Hall",
+        "Stornoway",
+        "Harrington Lake"
+      ],
+      "a": 0,
+      "correctText": "24 Sussex Drive",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/state-of-24-sussex-an-embarrassment-says-carney-9.7178956"
+    },
+    {
+      "q": "According to late April 2026 news, Ontario Premier Doug Ford was found to be regularly working from home in January despite mandating what group to return to the office full-time?",
+      "options": [
+        "Public school teachers",
+        "Civil servants",
+        "Healthcare workers",
+        "Transit operators"
+      ],
+      "a": 1,
+      "correctText": "Civil servants",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11816493/doug-ford-remote-work/"
+    }
+  ]
+}

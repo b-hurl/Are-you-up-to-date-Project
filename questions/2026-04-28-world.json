@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In late April 2026, Prime Minister Mark Carney announced the creation of the 'Strong Canada Fund'. What type of financial instrument is this?",
+      "options": [
+        "Sovereign wealth fund",
+        "Federal student loan initiative",
+        "Provincial bailout package",
+        "Pension relief fund"
+      ],
+      "a": 0,
+      "correctText": "Sovereign wealth fund",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/sovereign-wealth-fund-carney-major-projects-9.7178238"
+    },
+    {
+      "q": "Ukrainian drones struck Russian oil storage tanks in which city on April 28, 2026, hitting them before flames from previous attacks had even been extinguished?",
+      "options": [
+        "Tuapse",
+        "Sochi",
+        "Novorossiysk",
+        "Krasnodar"
+      ],
+      "a": 0,
+      "correctText": "Tuapse",
+      "category": "World",
+      "source": "https://kyivindependent.com/ukrainian-drones-reportedly-strike-russian-oil-tanks-before-flames-from-previous-attacks-extinguished/"
+    },
+    {
+      "q": "In late April 2026, which country opened a new museum and memorial complex honoring its soldiers who were killed fighting alongside Russian forces against Ukraine?",
+      "options": [
+        "North Korea",
+        "Belarus",
+        "Syria",
+        "Iran"
+      ],
+      "a": 0,
+      "correctText": "North Korea",
+      "category": "World",
+      "source": "https://kyivindependent.com/russian-defense-minister-visits-pyongyang-honors-north-korean-soldiers/"
+    },
+    {
+      "q": "On April 27, 2026, which well-known fashion and jewelry retailer ceased trading at all 154 of its standalone stores in the UK and Ireland?",
+      "options": [
+        "Claire's",
+        "Accessorize",
+        "Lovisa",
+        "Pandora"
+      ],
+      "a": 0,
+      "correctText": "Claire's",
+      "category": "World",
+      "source": "https://www.bbc.co.uk/news/articles/cg4047qnpk2o"
+    },
+    {
+      "q": "In April 2026, a former local leader of Viktor Orbán’s Fidesz party, Feríz Rádi, was arrested at the Budapest airport in connection with what type of crime?",
+      "options": [
+        "Budget fraud",
+        "Espionage",
+        "Drug trafficking",
+        "Human smuggling"
+      ],
+      "a": 0,
+      "correctText": "Budget fraud",
+      "category": "World",
+      "source": "https://tvpworld.com/92933472/hungary-ex-fidesz-leader-rdi-feriz-arrested-at-budapest-airport"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "As detailed in an FCC funding request reported on April 28, 2026, what percentage of the newly merged Paramount and Warner Bros. Discovery will be foreign-owned?",
+      "options": [
+        "49.5%",
+        "35.0%",
+        "51.0%",
+        "25.5%"
+      ],
+      "a": 0,
+      "correctText": "49.5%",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/paramount-fcc-request-wbd-merger-middle-east-1236873732/"
+    },
+    {
+      "q": "Announced in late April 2026, Emma Stone and Chris Pine are teaming up for a May 2027 romantic comedy titled what?",
+      "options": [
+        "The Catch",
+        "The Drama",
+        "Bugonia",
+        "Carousel"
+      ],
+      "a": 0,
+      "correctText": "The Catch",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/the-catch-release-date-emma-stone-chris-pine-1236873877/"
+    },
+    {
+      "q": "On April 28, 2026, which streaming platform officially confirmed that 'Enola Holmes 3' will be released on July 1st?",
+      "options": [
+        "Netflix",
+        "Hulu",
+        "Amazon Prime Video",
+        "Max"
+      ],
+      "a": 0,
+      "correctText": "Netflix",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/enola-holmes-3-netflix-release-date-1236873308/"
+    },
+    {
+      "q": "Which upcoming 2026 comedy film dropped its official trailer in late April, billing itself as the fifth and final main installment of a beloved stunt franchise?",
+      "options": [
+        "Jackass: Best and Last",
+        "Jackass Forever 2",
+        "Bad Grandpa Returns",
+        "The Prank Panel: The Movie"
+      ],
+      "a": 0,
+      "correctText": "Jackass: Best and Last",
+      "category": "Entertainment",
+      "source": "https://youtu.be/sNwzFhGwA94?si=LhEfZCWpQYzFI6Yz"
+    },
+    {
+      "q": "Reported on April 28, 2026, Sony tapped 'L.A. Confidential' writer Brian Helgeland to script a film adaptation of which Quentin Tarantino comic crossover?",
+      "options": [
+        "Django/Zorro",
+        "Kill Bill: The Whole Bloody Affair",
+        "The Adventures of Cliff Booth",
+        "Basterds & Brothers"
+      ],
+      "a": 0,
+      "correctText": "Django/Zorro",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/django-zorro-movie-revived-sony-quentin-tarantino-1236731586/"
+    }
+  ]
+}

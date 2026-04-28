@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which former Duke roommate did Cooper Flagg narrowly defeat to win the 2025-26 NBA Rookie of the Year award in a historically close vote?",
+      "options": [
+        "V.J. Edgecombe",
+        "Kon Knueppel",
+        "Alex Sarr",
+        "Zaccharie Risacher"
+      ],
+      "a": 1,
+      "correctText": "Kon Knueppel",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48612580/cooper-flagg-beats-kon-knueppel-tightly-contested-roy"
+    },
+    {
+      "q": "Following the Los Angeles Lakers' blowout loss to the Rockets in Game 4 of their 2026 playoff series, which player shouldered the blame for his eight turnovers?",
+      "options": [
+        "Anthony Davis",
+        "Luka Doncic",
+        "Austin Reaves",
+        "LeBron James"
+      ],
+      "a": 3,
+      "correctText": "LeBron James",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48607125/lebron-james-takes-blame-lakers-blowout-loss-rockets-game-4"
+    },
+    {
+      "q": "Which 40-year-old track legend announced she is eyeing a comeback in 2027 with hopes of competing at the 2028 Los Angeles Olympics?",
+      "options": [
+        "Allyson Felix",
+        "Shelly-Ann Fraser-Pryce",
+        "Sanya Richards-Ross",
+        "Carmelita Jeter"
+      ],
+      "a": 0,
+      "correctText": "Allyson Felix",
+      "category": "Sports",
+      "source": "https://www.espn.com/olympics/trackandfield/story/_/id/48611243/track-legend-allyson-felix-40-eying-comeback-2027"
+    },
+    {
+      "q": "Who scored the overtime game-winning goal for the Anaheim Ducks in Game 4, pushing the Edmonton Oilers to the brink of elimination in the 2026 NHL playoffs?",
+      "options": [
+        "Trevor Zegras",
+        "Troy Terry",
+        "Ryan Poehling",
+        "Mason McTavish"
+      ],
+      "a": 2,
+      "correctText": "Ryan Poehling",
+      "category": "Sports",
+      "source": "https://apnews.com/article/ducks-oilers-score-mcdavid-9c6849c37ef77f6bf7d024e1bbf6a320"
+    },
+    {
+      "q": "Which tennis star avoided an upset bid by Naomi Osaka at the 2026 Madrid Open and revealed she was sticking to a chicken and rice diet to avoid a local stomach virus?",
+      "options": [
+        "Iga Swiatek",
+        "Aryna Sabalenka",
+        "Coco Gauff",
+        "Elena Rybakina"
+      ],
+      "a": 1,
+      "correctText": "Aryna Sabalenka",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48610140/sabalenka-avoids-madrid-open-virus-scare-osaka-upset-bid"
+    }
+  ]
+}

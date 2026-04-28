@@ -1,0 +1,97 @@
+{
+  "date": "2026-04-28",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which former Duke roommate did Cooper Flagg narrowly defeat to win the 2025-26 NBA Rookie of the Year award in a historically close vote?",
+      "options": [
+        "V.J. Edgecombe",
+        "Kon Knueppel",
+        "Alex Sarr",
+        "Zaccharie Risacher"
+      ],
+      "a": 1,
+      "correctText": "Kon Knueppel",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48612580/cooper-flagg-beats-kon-knueppel-tightly-contested-roy"
+    },
+    {
+      "q": "On April 28, 2026, which streaming platform officially confirmed that 'Enola Holmes 3' will be released on July 1st?",
+      "options": [
+        "Netflix",
+        "Hulu",
+        "Amazon Prime Video",
+        "Max"
+      ],
+      "a": 0,
+      "correctText": "Netflix",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/enola-holmes-3-netflix-release-date-1236873308/"
+    },
+    {
+      "q": "Following the Los Angeles Lakers' blowout loss to the Rockets in Game 4 of their 2026 playoff series, which player shouldered the blame for his eight turnovers?",
+      "options": [
+        "Anthony Davis",
+        "Luka Doncic",
+        "Austin Reaves",
+        "LeBron James"
+      ],
+      "a": 3,
+      "correctText": "LeBron James",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48607125/lebron-james-takes-blame-lakers-blowout-loss-rockets-game-4"
+    },
+    {
+      "q": "Who scored the overtime game-winning goal for the Anaheim Ducks in Game 4, pushing the Edmonton Oilers to the brink of elimination in the 2026 NHL playoffs?",
+      "options": [
+        "Trevor Zegras",
+        "Troy Terry",
+        "Ryan Poehling",
+        "Mason McTavish"
+      ],
+      "a": 2,
+      "correctText": "Ryan Poehling",
+      "category": "Sports",
+      "source": "https://apnews.com/article/ducks-oilers-score-mcdavid-9c6849c37ef77f6bf7d024e1bbf6a320"
+    },
+    {
+      "q": "On April 27, 2026, employees of which major trade publisher announced a historic unionization campaign with the Washington-Baltimore NewsGuild?",
+      "options": [
+        "Hachette Book Group",
+        "Simon & Schuster",
+        "Penguin Random House",
+        "HarperCollins"
+      ],
+      "a": 0,
+      "correctText": "Hachette Book Group",
+      "category": "Books",
+      "source": "https://lunch.publishersmarketplace.com/2026/04/hachette-book-group-employees-unionize/"
+    },
+    {
+      "q": "According to a study reported on April 28, 2026, taking a daily supplement of which vitamin increased the rate of complete cancer disappearance in breast cancer patients undergoing chemotherapy by 79%?",
+      "options": [
+        "Vitamin D",
+        "Vitamin C",
+        "Vitamin E",
+        "Vitamin B12"
+      ],
+      "a": 0,
+      "correctText": "Vitamin D",
+      "category": "Health",
+      "source": "https://www.sciencedaily.com/"
+    },
+    {
+      "q": "Which bestselling author released the new novel 'We Burned So Bright' on April 28, 2026, detailing two husbands racing across the country as a black hole approaches Earth?",
+      "options": [
+        "TJ Klune",
+        "Adam Silvera",
+        "V.E. Schwab",
+        "Casey McQuiston"
+      ],
+      "a": 0,
+      "correctText": "TJ Klune",
+      "category": "Books",
+      "source": "https://inkandimaginings.com/new-book-releases-april-28-2026/"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to a study reported on April 28, 2026, taking a daily supplement of which vitamin increased the rate of complete cancer disappearance in breast cancer patients undergoing chemotherapy by 79%?",
+      "options": [
+        "Vitamin D",
+        "Vitamin C",
+        "Vitamin E",
+        "Vitamin B12"
+      ],
+      "a": 0,
+      "correctText": "Vitamin D",
+      "category": "Health",
+      "source": "https://www.sciencedaily.com/"
+    },
+    {
+      "q": "According to a study from the Feinberg School of Medicine covered on April 28, 2026, artificial intelligence models scored higher than physicians in generating what type of comprehensive medical documents?",
+      "options": [
+        "Oncologic pathology reports",
+        "Radiology imaging summaries",
+        "Psychiatric evaluations",
+        "Surgical operation notes"
+      ],
+      "a": 0,
+      "correctText": "Oncologic pathology reports",
+      "category": "Health",
+      "source": "https://dailynorthwestern.com/2026/04/28/campus/feinberg-researchers-find-ai-more-capable-than-physicians-at-generating-comprehensive-oncology-reports/"
+    },
+    {
+      "q": "On April 28, 2026, NTT DATA announced the launch of a new brain health monitoring service that generates a cognitive health score by using AI to analyze what type of data?",
+      "options": [
+        "Driving data",
+        "Sleep patterns",
+        "Walking gait",
+        "Speech patterns"
+      ],
+      "a": 0,
+      "correctText": "Driving data",
+      "category": "Health",
+      "source": "https://www.nttdata.com/global/en/media/press-release/2026/april/ntt-data-launches-monitoring-service-for-brain-health"
+    }
+  ]
+}
