@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 29, 2026, the CEO of which gaming publisher addressed the rumored pricing of Grand Theft Auto 6 and the possibility of a new L.A. Noire?",
+      "options": [
+        "Take-Two Interactive",
+        "Electronic Arts",
+        "Ubisoft",
+        "Activision Blizzard"
+      ],
+      "a": 0,
+      "correctText": "Take-Two Interactive",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/take-two-ceo-addresses-grand-theft-auto-6-price-and-the-possibility-for-more-la-noire"
+    },
+    {
+      "q": "Which graphics card brand, famous for its Hall of Fame (HOF) series, exited the PC hardware business after 30 years on April 29, 2026?",
+      "options": [
+        "GALAX",
+        "EVGA",
+        "Gigabyte",
+        "ZOTAC"
+      ],
+      "a": 0,
+      "correctText": "GALAX",
+      "category": "Gaming",
+      "source": "http://wccftech.com/galax-exit-graphics-card-market-palit-assumes-full-control/"
+    },
+    {
+      "q": "Developer Red Moon Workshop debuted the first official gameplay trailer on April 29, 2026, for which 2.5D roguelite fighting game?",
+      "options": [
+        "Shot One Fighters",
+        "Street Fighter 6: Rogue",
+        "Rivals of Aether 2",
+        "Guilty Gear: Strive - Labyrinth"
+      ],
+      "a": 0,
+      "correctText": "Shot One Fighters",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=9DUlhjBkALc"
+    },
+    {
+      "q": "On April 29, 2026, Rebel Wolves announced a September 3 release date and dropped a new story trailer for which dark fantasy vampire RPG?",
+      "options": [
+        "The Blood of Dawnwalker",
+        "Vampire: The Masquerade - Bloodlines 2",
+        "Darkwatch: Reborn",
+        "Nosgoth Awakening"
+      ],
+      "a": 0,
+      "correctText": "The Blood of Dawnwalker",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=Fn7aYRVyRMM"
+    },
+    {
+      "q": "The supernatural urban open-world RPG 'Neverness to Everness', developed by Hotta Studio, officially launched globally across PC, mobile, and PS5 on which date in 2026?",
+      "options": [
+        "April 29",
+        "May 1",
+        "March 15",
+        "June 10"
+      ],
+      "a": 0,
+      "correctText": "April 29",
+      "category": "Gaming",
+      "source": "https://gamingonphone.com/news/nte-neverness-to-everness-gets-a-global-launch-on-april-29-2026/"
+    }
+  ]
+}

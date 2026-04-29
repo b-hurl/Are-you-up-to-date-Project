@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-29",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to reports from late April 2026, why was former FBI Director James Comey indicted for a second time?",
+      "options": [
+        "For posting a photo of seashells spelling '86 47,' which was interpreted as a threat against President Trump",
+        "For leaking classified surveillance footage from the White House",
+        "For perjuring himself during a congressional hearing on the Russia investigation",
+        "For misusing federal funds to publish his latest autobiography"
+      ],
+      "a": 0,
+      "correctText": "For posting a photo of seashells spelling '86 47,' which was interpreted as a threat against President Trump",
+      "category": "Usa",
+      "source": "https://apnews.com/article/comey-indicted-seashell-photo-86-47-a7fdd67891a7f74bc6fd8ce4d3d4170a"
+    },
+    {
+      "q": "Which country announced on April 29, 2026, that it would leave the OPEC oil cartel, dealing a major blow to the group?",
+      "options": [
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Kuwait",
+        "Venezuela"
+      ],
+      "a": 0,
+      "correctText": "United Arab Emirates",
+      "category": "World",
+      "source": "https://apnews.com/article/opec-united-arab-emirates-leaving-cartel-4966108c3fafacb67181152216deda14"
+    },
+    {
+      "q": "In April 2026, Utah's MIDA approved a massive off-grid 9-gigawatt data center campus in Box Elder County developed by O'Leary Digital, the infrastructure arm of which 'Shark Tank' investor?",
+      "options": [
+        "Kevin O'Leary",
+        "Mark Cuban",
+        "Barbara Corcoran",
+        "Lori Greiner"
+      ],
+      "a": 0,
+      "correctText": "Kevin O'Leary",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/kevin-o-learys-9-gw-utah-data-center-campus-approved"
+    },
+    {
+      "q": "In Winnipeg, a 17-year-old teen was charged with animal cruelty in April 2026 after allegedly driving an SUV over multiple sleeping what?",
+      "options": [
+        "Canada geese",
+        "Stray dogs",
+        "Raccoons",
+        "White-tailed deer"
+      ],
+      "a": 0,
+      "correctText": "Canada geese",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/manitoba/boy-charged-cruelty-canada-goose-killed-9.7180058?cmp=rss"
+    },
+    {
+      "q": "On April 28, 2026, SpaceX and Blue Origin informed NASA that their lunar landers will be ready for the Artemis III mission no earlier than what timeframe?",
+      "options": [
+        "Early 2026",
+        "Mid 2028",
+        "Late 2027",
+        "Late 2030"
+      ],
+      "a": 2,
+      "correctText": "Late 2027",
+      "category": "Science",
+      "source": "https://arstechnica.com/space/2026/04/put-it-in-pencil-nasas-artemis-iii-mission-will-launch-no-earlier-than-late-2027/"
+    },
+    {
+      "q": "Which two countries finalized a Free Trade Agreement on April 29, 2026, that excluded dairy but included 5,000 work visas?",
+      "options": [
+        "India and New Zealand",
+        "Australia and Japan",
+        "China and Brazil",
+        "UK and Canada"
+      ],
+      "a": 0,
+      "correctText": "India and New Zealand",
+      "category": "Business",
+      "source": "https://moderndiplomacy.eu/2026/04/29/follow-the-money-week-of-april-29-2026/"
+    },
+    {
+      "q": "On April 28, 2026, reports emerged that the FCC ordered a review of ABC's broadcast licenses following a controversial joke made by which late-night host?",
+      "options": [
+        "Jimmy Kimmel",
+        "Stephen Colbert",
+        "Jimmy Fallon",
+        "Seth Meyers"
+      ],
+      "a": 0,
+      "correctText": "Jimmy Kimmel",
+      "category": "Technology",
+      "source": "https://arstechnica.com/tech-policy/2026/04/fcc-orders-review-of-abc-licenses-after-kimmel-joke-offends-trump-and-first-lady/"
+    },
+    {
+      "q": "A leaked internal 'AI Adoption Dashboard' in late April 2026 revealed that one prolific employee at which major entertainment company called Anthropic's Claude chatbot 51,000 times a day?",
+      "options": [
+        "Disney",
+        "Netflix",
+        "Warner Bros. Discovery",
+        "Paramount"
+      ],
+      "a": 0,
+      "correctText": "Disney",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/how-disney-tech-employees-are-using-ai-claude-cursor-tokens-2026-4"
+    },
+    {
+      "q": "As of late April 2026, shares of Nvidia, AMD, and Oracle slumped following reports that which major AI company had missed its internal targets for active users and revenue?",
+      "options": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Meta"
+      ],
+      "a": 0,
+      "correctText": "OpenAI",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/market-slumps-as-openai-reportedly-misses-internal-targets-for-active-users-and-revenue-nvidia-oracle-amd-and-coreweave-shares-all-tremble-on-the-news"
+    },
+    {
+      "q": "Reversing its 2018 policy, which major tech company reportedly signed a classified agreement in late April 2026 to allow the Pentagon to use its AI models for 'any lawful government purpose'?",
+      "options": [
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Apple"
+      ],
+      "a": 0,
+      "correctText": "Google",
+      "category": "Technology",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/919494/google-pentagon-classified-ai-deal"
+    }
+  ]
+}

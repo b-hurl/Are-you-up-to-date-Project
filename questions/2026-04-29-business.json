@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 29, 2026, which country's announcement that it will exit OPEC caused Asian stocks to gain and oil prices to decline?",
+      "options": [
+        "UAE",
+        "Saudi Arabia",
+        "Kuwait",
+        "Iraq"
+      ],
+      "a": 0,
+      "correctText": "UAE",
+      "category": "Business",
+      "source": "https://www.timesunion.com/business/article/Asian-stocks-gain-and-oil-prices-decline-after-the-UAE-says-it-will-exit-OPEC"
+    },
+    {
+      "q": "Which major U.S. stock index rose to 7,154 points on April 29, 2026, marking a 12.77% gain over the previous month?",
+      "options": [
+        "S&P 500",
+        "Dow Jones Industrial Average",
+        "Nasdaq Composite",
+        "Russell 2000"
+      ],
+      "a": 0,
+      "correctText": "S&P 500",
+      "category": "Business",
+      "source": "https://tradingeconomics.com/united-states/stock-market"
+    },
+    {
+      "q": "On April 29, 2026, Ecuador secured a $1.7 billion mining investment featuring a 50% state revenue share from which country?",
+      "options": [
+        "China",
+        "United States",
+        "Canada",
+        "Australia"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Business",
+      "source": "https://moderndiplomacy.eu/2026/04/29/follow-the-money-week-of-april-29-2026/"
+    },
+    {
+      "q": "Which two countries finalized a Free Trade Agreement on April 29, 2026, that excluded dairy but included 5,000 work visas?",
+      "options": [
+        "India and New Zealand",
+        "Australia and Japan",
+        "China and Brazil",
+        "UK and Canada"
+      ],
+      "a": 0,
+      "correctText": "India and New Zealand",
+      "category": "Business",
+      "source": "https://moderndiplomacy.eu/2026/04/29/follow-the-money-week-of-april-29-2026/"
+    },
+    {
+      "q": "Which central bank held its interest rates at 0.75% on April 29, 2026, but revealed a hawkish 6-3 vote split signaling inflation concerns?",
+      "options": [
+        "Bank of Japan (BOJ)",
+        "European Central Bank (ECB)",
+        "Bank of England (BOE)",
+        "Swiss National Bank (SNB)"
+      ],
+      "a": 0,
+      "correctText": "Bank of Japan (BOJ)",
+      "category": "Business",
+      "source": "https://moderndiplomacy.eu/2026/04/29/follow-the-money-week-of-april-29-2026/"
+    }
+  ]
+}

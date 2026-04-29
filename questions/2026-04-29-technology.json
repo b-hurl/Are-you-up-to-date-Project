@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 28, 2026, reports emerged that the FCC ordered a review of ABC's broadcast licenses following a controversial joke made by which late-night host?",
+      "options": [
+        "Jimmy Kimmel",
+        "Stephen Colbert",
+        "Jimmy Fallon",
+        "Seth Meyers"
+      ],
+      "a": 0,
+      "correctText": "Jimmy Kimmel",
+      "category": "Technology",
+      "source": "https://arstechnica.com/tech-policy/2026/04/fcc-orders-review-of-abc-licenses-after-kimmel-joke-offends-trump-and-first-lady/"
+    },
+    {
+      "q": "As of late April 2026, shares of Nvidia, AMD, and Oracle slumped following reports that which major AI company had missed its internal targets for active users and revenue?",
+      "options": [
+        "OpenAI",
+        "Anthropic",
+        "Google",
+        "Meta"
+      ],
+      "a": 0,
+      "correctText": "OpenAI",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/market-slumps-as-openai-reportedly-misses-internal-targets-for-active-users-and-revenue-nvidia-oracle-amd-and-coreweave-shares-all-tremble-on-the-news"
+    },
+    {
+      "q": "A leaked internal 'AI Adoption Dashboard' in late April 2026 revealed that one prolific employee at which major entertainment company called Anthropic's Claude chatbot 51,000 times a day?",
+      "options": [
+        "Disney",
+        "Netflix",
+        "Warner Bros. Discovery",
+        "Paramount"
+      ],
+      "a": 0,
+      "correctText": "Disney",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/how-disney-tech-employees-are-using-ai-claude-cursor-tokens-2026-4"
+    },
+    {
+      "q": "In April 2026, Utah's MIDA approved a massive off-grid 9-gigawatt data center campus in Box Elder County developed by O'Leary Digital, the infrastructure arm of which 'Shark Tank' investor?",
+      "options": [
+        "Kevin O'Leary",
+        "Mark Cuban",
+        "Barbara Corcoran",
+        "Lori Greiner"
+      ],
+      "a": 0,
+      "correctText": "Kevin O'Leary",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/kevin-o-learys-9-gw-utah-data-center-campus-approved"
+    },
+    {
+      "q": "Reversing its 2018 policy, which major tech company reportedly signed a classified agreement in late April 2026 to allow the Pentagon to use its AI models for 'any lawful government purpose'?",
+      "options": [
+        "Google",
+        "Microsoft",
+        "Amazon",
+        "Apple"
+      ],
+      "a": 0,
+      "correctText": "Google",
+      "category": "Technology",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/919494/google-pentagon-classified-ai-deal"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On April 28, 2026, SpaceX and Blue Origin informed NASA that their lunar landers will be ready for the Artemis III mission no earlier than what timeframe?",
+      "options": [
+        "Early 2026",
+        "Mid 2028",
+        "Late 2027",
+        "Late 2030"
+      ],
+      "a": 2,
+      "correctText": "Late 2027",
+      "category": "Science",
+      "source": "https://arstechnica.com/space/2026/04/put-it-in-pencil-nasas-artemis-iii-mission-will-launch-no-earlier-than-late-2027/"
+    },
+    {
+      "q": "Which explicitly nonpartisan organization was highlighted in an April 28, 2026 report for being formed by former NASA astronauts to uphold the US Constitution?",
+      "options": [
+        "Space Explorers for Democracy",
+        "Astronauts for America",
+        "Cosmic Patriots",
+        "Constitutional Cosmos"
+      ],
+      "a": 1,
+      "correctText": "Astronauts for America",
+      "category": "Science",
+      "source": "https://www.space.com/space-exploration/human-spaceflight/these-astronauts-are-trying-to-uphold-the-us-constitution-we-need-to-make-sure-that-people-are-using-facts-and-evidence"
+    },
+    {
+      "q": "In preparation for the Artemis III mission, what vessel successfully delivered the massive SLS core stage to NASA’s Kennedy Space Center as announced on April 28, 2026?",
+      "options": [
+        "Super Guppy aircraft",
+        "Crawler-transporter 2",
+        "Starship cargo variant",
+        "Pegasus barge"
+      ],
+      "a": 3,
+      "correctText": "Pegasus barge",
+      "category": "Science",
+      "source": "https://www.nasa.gov/blogs/missions/2026/04/28/nasas-artemis-iii-moon-rocket-hardware-arrives-artemis-ii-capsule-returns-to-kennedy/"
+    },
+    {
+      "q": "According to 3D simulations published by Kyoto University on April 28, 2026, what internal factor can cause a massive star's core to spin up rather than down before it dies?",
+      "options": [
+        "The geometry of its internal magnetic field",
+        "The rate of its solar wind emission",
+        "The depletion of its hydrogen fuel",
+        "The absorption of nearby dark matter"
+      ],
+      "a": 0,
+      "correctText": "The geometry of its internal magnetic field",
+      "category": "Science",
+      "source": "https://www.kyoto-u.ac.jp/en/research-news/2026-04-28-0"
+    },
+    {
+      "q": "As detailed in late April 2026, NASA plans to deploy a fleet of four autonomous, hopping drones by 2028 to scout the lunar south pole. What is the name of this project?",
+      "options": [
+        "LunarLeap",
+        "ArtemisScout",
+        "MoonFall",
+        "CraterHop"
+      ],
+      "a": 2,
+      "correctText": "MoonFall",
+      "category": "Science",
+      "source": "https://www.space.com/astronomy/moon/nasa-wants-to-use-a-fleet-of-moonfall-drones-to-scout-the-lunar-south-pole-we-believe-we-can-do-it"
+    }
+  ]
+}

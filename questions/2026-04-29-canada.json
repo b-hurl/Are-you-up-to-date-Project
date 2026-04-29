@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What type of machines is the Canadian federal government planning to ban to stop scammers, according to an April 2026 announcement? [1.4]",
+      "options": [
+        "Crypto ATMs",
+        "Gift card kiosks",
+        "Gold vending machines",
+        "Foreign exchange terminals"
+      ],
+      "a": 0,
+      "correctText": "Crypto ATMs",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/toronto/canada-crypto-atm-ban-scammers-9.7180642"
+    },
+    {
+      "q": "As of late April 2026, Canada's Health Minister Majorie Michel was 'looking into' legislation that would permanently ban the sale of tobacco products to anyone born after which year?",
+      "options": [
+        "2008",
+        "2005",
+        "2010",
+        "2012"
+      ],
+      "a": 0,
+      "correctText": "2008",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/health/article/canadian-smoking-ban-being-looked-into-health-minister/"
+    },
+    {
+      "q": "In Winnipeg, a 17-year-old teen was charged with animal cruelty in April 2026 after allegedly driving an SUV over multiple sleeping what?",
+      "options": [
+        "Canada geese",
+        "Stray dogs",
+        "Raccoons",
+        "White-tailed deer"
+      ],
+      "a": 0,
+      "correctText": "Canada geese",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/manitoba/boy-charged-cruelty-canada-goose-killed-9.7180058?cmp=rss"
+    },
+    {
+      "q": "Prime Minister Mark Carney's newly minted majority government launched a new skilled training strategy in its 2026 spring economic update, projecting a 2026-27 deficit of what amount?",
+      "options": [
+        "$65.3 billion",
+        "$11.4 billion",
+        "$37.5 billion",
+        "$85.1 billion"
+      ],
+      "a": 0,
+      "correctText": "$65.3 billion",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/carney-liberals-launching-new-skilled-training-strategy-deficit-projected-at-653b/"
+    },
+    {
+      "q": "In April 2026, auto insurers Beneva and L'Unique filed a $72-million lawsuit over stolen vehicles targeting Honda, Toyota, and which other automaker?",
+      "options": [
+        "Stellantis",
+        "General Motors",
+        "Ford",
+        "Hyundai"
+      ],
+      "a": 0,
+      "correctText": "Stellantis",
+      "category": "Canada",
+      "source": "https://driving.ca/auto-news/driver-info/car-theft-72-million-lawsuit-honda-toyota-stellantis-auto-insurers"
+    }
+  ]
+}

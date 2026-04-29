@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In April 2026, sources revealed that the NCAA initiated final steps to expand both the men's and women's basketball tournaments to how many teams?",
+      "options": [
+        "76 teams",
+        "72 teams",
+        "80 teams",
+        "68 teams"
+      ],
+      "a": 0,
+      "correctText": "76 teams",
+      "category": "Sports",
+      "source": "https://www.espn.com/mens-college-basketball/story/_/id/48621117/sources-ncaa-basketball-tournaments-set-move-76-teams"
+    },
+    {
+      "q": "In April 2026, the NBA moved closer to implementing new anti-tanking measures by introducing drastic changes to what system?",
+      "options": [
+        "Draft lottery odds",
+        "Salary cap penalties",
+        "Play-in tournament qualification",
+        "Revenue sharing distribution"
+      ],
+      "a": 0,
+      "correctText": "Draft lottery odds",
+      "category": "Sports",
+      "source": "https://apnews.com/article/nba-lottery-proposal-tanking-c5a1b02f046b9a63f6aee5739934c2d4"
+    },
+    {
+      "q": "Which former Dallas Cowboys quarterback made headlines in April 2026 for failing to advance in the U.S. Open golf qualifying?",
+      "options": [
+        "Tony Romo",
+        "Troy Aikman",
+        "Dak Prescott",
+        "Drew Bledsoe"
+      ],
+      "a": 0,
+      "correctText": "Tony Romo",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48619157/ex-cowboys-qb-tony-romo-fails-advance-us-open-qualifying"
+    },
+    {
+      "q": "Following a rough 9-19 start to the 2026 season, the Philadelphia Phillies fired manager Rob Thomson and replaced him with which interim manager?",
+      "options": [
+        "Don Mattingly",
+        "Joe Girardi",
+        "Ryne Sandberg",
+        "Charlie Manuel"
+      ],
+      "a": 0,
+      "correctText": "Don Mattingly",
+      "category": "Sports",
+      "source": "https://www.nbcsportsphiladelphia.com/mlb/philadelphia-phillies/phillies-fire-rob-thomson-don-mattingly-interim-manager/729839/"
+    },
+    {
+      "q": "At the 2026 World Snooker Championship, World No. 1 Judd Trump was knocked out in a dramatic upset by which Iranian player?",
+      "options": [
+        "Hossein Vafaei",
+        "Ding Junhui",
+        "Luca Brecel",
+        "Mark Selby"
+      ],
+      "a": 0,
+      "correctText": "Hossein Vafaei",
+      "category": "Sports",
+      "source": "https://www.espn.co.uk/darts/story/_/id/48615432/world-snooker-championship-2026-iranian-hossein-vafaei-clinches-dramatic-win-world-no-1-judd-trump"
+    }
+  ]
+}

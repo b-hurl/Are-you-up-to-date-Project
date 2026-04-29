@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which country announced on April 29, 2026, that it would leave the OPEC oil cartel, dealing a major blow to the group?",
+      "options": [
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Kuwait",
+        "Venezuela"
+      ],
+      "a": 0,
+      "correctText": "United Arab Emirates",
+      "category": "World",
+      "source": "https://apnews.com/article/opec-united-arab-emirates-leaving-cartel-4966108c3fafacb67181152216deda14"
+    },
+    {
+      "q": "According to reports on April 29, 2026, Ukraine set a new monthly record by intercepting how many Russian drones in March?",
+      "options": [
+        "33,000",
+        "15,000",
+        "50,000",
+        "10,000"
+      ],
+      "a": 0,
+      "correctText": "33,000",
+      "category": "World",
+      "source": "https://apnews.com/article/russia-ukraine-war-drone-attacks-oil-06edbc9666fe0681fa0930affc475e9b"
+    },
+    {
+      "q": "Which Chechen political figure sparked outrage on April 29, 2026, by justifying 'honor killings' as a private family matter?",
+      "options": [
+        "Ruslan Kutayev",
+        "Ramzan Kadyrov",
+        "Akhmed Zakayev",
+        "Aslan Maskhadov"
+      ],
+      "a": 0,
+      "correctText": "Ruslan Kutayev",
+      "category": "World",
+      "source": "https://meduza.io/en/feature/2026/04/29/chechen-political-figure-says-honor-killings-are-a-private-family-matter-calls-lgbtq-people-outcasts-and-perverts"
+    },
+    {
+      "q": "The CEO of which major European budget airline warned on April 29, 2026, that airlines would fail if jet fuel costs remained high?",
+      "options": [
+        "Ryanair",
+        "easyJet",
+        "Wizz Air",
+        "Lufthansa"
+      ],
+      "a": 0,
+      "correctText": "Ryanair",
+      "category": "World",
+      "source": "https://www.politico.eu/article/ryanair-chief-warns-europe-airline-failures-jet-fuel-costs-spike/"
+    },
+    {
+      "q": "The Liberal government under which Canadian Prime Minister launched a new skilled training strategy in late April 2026 with a projected $65.3 billion deficit?",
+      "options": [
+        "Mark Carney",
+        "Justin Trudeau",
+        "Chrystia Freeland",
+        "Pierre Poilievre"
+      ],
+      "a": 0,
+      "correctText": "Mark Carney",
+      "category": "World",
+      "source": "https://www.ctvnews.ca/politics/article/carney-liberals-launching-new-skilled-training-strategy-deficit-projected-at-653b/"
+    }
+  ]
+}

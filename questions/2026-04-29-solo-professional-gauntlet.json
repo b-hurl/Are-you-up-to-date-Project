@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-29",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "The Liberal government under which Canadian Prime Minister launched a new skilled training strategy in late April 2026 with a projected $65.3 billion deficit?",
+      "options": [
+        "Mark Carney",
+        "Justin Trudeau",
+        "Chrystia Freeland",
+        "Pierre Poilievre"
+      ],
+      "a": 0,
+      "correctText": "Mark Carney",
+      "category": "World",
+      "source": "https://www.ctvnews.ca/politics/article/carney-liberals-launching-new-skilled-training-strategy-deficit-projected-at-653b/"
+    },
+    {
+      "q": "In April 2026, auto insurers Beneva and L'Unique filed a $72-million lawsuit over stolen vehicles targeting Honda, Toyota, and which other automaker?",
+      "options": [
+        "Stellantis",
+        "General Motors",
+        "Ford",
+        "Hyundai"
+      ],
+      "a": 0,
+      "correctText": "Stellantis",
+      "category": "Canada",
+      "source": "https://driving.ca/auto-news/driver-info/car-theft-72-million-lawsuit-honda-toyota-stellantis-auto-insurers"
+    },
+    {
+      "q": "As detailed in late April 2026, NASA plans to deploy a fleet of four autonomous, hopping drones by 2028 to scout the lunar south pole. What is the name of this project?",
+      "options": [
+        "LunarLeap",
+        "ArtemisScout",
+        "MoonFall",
+        "CraterHop"
+      ],
+      "a": 2,
+      "correctText": "MoonFall",
+      "category": "Science",
+      "source": "https://www.space.com/astronomy/moon/nasa-wants-to-use-a-fleet-of-moonfall-drones-to-scout-the-lunar-south-pole-we-believe-we-can-do-it"
+    },
+    {
+      "q": "Why did General Motors announce in its Q1 2026 results that it expects a $500 million tariff refund?",
+      "options": [
+        "A Supreme Court ruling invalidated the IEEPA tariffs previously imposed by the Trump administration",
+        "The United States-Mexico-Canada Agreement (USMCA) was retroactively amended",
+        "A federal judge ruled that GM was exempt from aluminum and steel import taxes",
+        "The EPA offered a tax rebate for exceeding electric vehicle manufacturing quotas"
+      ],
+      "a": 0,
+      "correctText": "A Supreme Court ruling invalidated the IEEPA tariffs previously imposed by the Trump administration",
+      "category": "Usa",
+      "source": "https://abcnews.com/Business/general-motors-expects-500-million-tariff-refund-after/story?id=132447958"
+    },
+    {
+      "q": "On April 28, 2026, the Justice Department indicted Dr. David Morens, a former senior adviser to Dr. Anthony Fauci. What was the primary charge?",
+      "options": [
+        "Using a private email account to intentionally hide communications related to COVID-19 research",
+        "Accepting illicit kickbacks from a major pharmaceutical company",
+        "Falsifying data in a federally funded study on respiratory viruses",
+        "Providing classified health data to a foreign government"
+      ],
+      "a": 0,
+      "correctText": "Using a private email account to intentionally hide communications related to COVID-19 research",
+      "category": "Usa",
+      "source": "https://apnews.com/article/covid-coronavirus-origins-indictment-fauci-morens-a1aa2b7519a0c00fc654391edf4fa155"
+    },
+    {
+      "q": "Which central bank held its interest rates at 0.75% on April 29, 2026, but revealed a hawkish 6-3 vote split signaling inflation concerns?",
+      "options": [
+        "Bank of Japan (BOJ)",
+        "European Central Bank (ECB)",
+        "Bank of England (BOE)",
+        "Swiss National Bank (SNB)"
+      ],
+      "a": 0,
+      "correctText": "Bank of Japan (BOJ)",
+      "category": "Business",
+      "source": "https://moderndiplomacy.eu/2026/04/29/follow-the-money-week-of-april-29-2026/"
+    },
+    {
+      "q": "Which major U.S. stock index rose to 7,154 points on April 29, 2026, marking a 12.77% gain over the previous month?",
+      "options": [
+        "S&P 500",
+        "Dow Jones Industrial Average",
+        "Nasdaq Composite",
+        "Russell 2000"
+      ],
+      "a": 0,
+      "correctText": "S&P 500",
+      "category": "Business",
+      "source": "https://tradingeconomics.com/united-states/stock-market"
+    },
+    {
+      "q": "What type of machines is the Canadian federal government planning to ban to stop scammers, according to an April 2026 announcement? [1.4]",
+      "options": [
+        "Crypto ATMs",
+        "Gift card kiosks",
+        "Gold vending machines",
+        "Foreign exchange terminals"
+      ],
+      "a": 0,
+      "correctText": "Crypto ATMs",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/toronto/canada-crypto-atm-ban-scammers-9.7180642"
+    },
+    {
+      "q": "On April 29, 2026, which country's announcement that it will exit OPEC caused Asian stocks to gain and oil prices to decline?",
+      "options": [
+        "UAE",
+        "Saudi Arabia",
+        "Kuwait",
+        "Iraq"
+      ],
+      "a": 0,
+      "correctText": "UAE",
+      "category": "Business",
+      "source": "https://www.timesunion.com/business/article/Asian-stocks-gain-and-oil-prices-decline-after-the-UAE-says-it-will-exit-OPEC"
+    },
+    {
+      "q": "What detail emerged in late April 2026 regarding the Secret Service agent who was shot in the chest during an assassination attempt on President Trump?",
+      "options": [
+        "The agent may have been hit by 'friendly fire' from another Secret Service member",
+        "The agent was targeted by a drone operated by the suspect",
+        "The agent's ballistic vest failed to stop a small-caliber projectile",
+        "The agent managed to disarm the attacker without firing a single shot"
+      ],
+      "a": 0,
+      "correctText": "The agent may have been hit by 'friendly fire' from another Secret Service member",
+      "category": "Usa",
+      "source": "https://news.sky.com/story/secret-service-agent-who-took-bullet-in-trump-assassination-bid-may-have-been-hit-by-friendly-fire-13537624"
+    }
+  ]
+}

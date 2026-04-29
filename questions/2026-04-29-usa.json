@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to reports from late April 2026, why was former FBI Director James Comey indicted for a second time?",
+      "options": [
+        "For posting a photo of seashells spelling '86 47,' which was interpreted as a threat against President Trump",
+        "For leaking classified surveillance footage from the White House",
+        "For perjuring himself during a congressional hearing on the Russia investigation",
+        "For misusing federal funds to publish his latest autobiography"
+      ],
+      "a": 0,
+      "correctText": "For posting a photo of seashells spelling '86 47,' which was interpreted as a threat against President Trump",
+      "category": "Usa",
+      "source": "https://apnews.com/article/comey-indicted-seashell-photo-86-47-a7fdd67891a7f74bc6fd8ce4d3d4170a"
+    },
+    {
+      "q": "On April 28, 2026, the Justice Department indicted Dr. David Morens, a former senior adviser to Dr. Anthony Fauci. What was the primary charge?",
+      "options": [
+        "Using a private email account to intentionally hide communications related to COVID-19 research",
+        "Accepting illicit kickbacks from a major pharmaceutical company",
+        "Falsifying data in a federally funded study on respiratory viruses",
+        "Providing classified health data to a foreign government"
+      ],
+      "a": 0,
+      "correctText": "Using a private email account to intentionally hide communications related to COVID-19 research",
+      "category": "Usa",
+      "source": "https://apnews.com/article/covid-coronavirus-origins-indictment-fauci-morens-a1aa2b7519a0c00fc654391edf4fa155"
+    },
+    {
+      "q": "Why did General Motors announce in its Q1 2026 results that it expects a $500 million tariff refund?",
+      "options": [
+        "A Supreme Court ruling invalidated the IEEPA tariffs previously imposed by the Trump administration",
+        "The United States-Mexico-Canada Agreement (USMCA) was retroactively amended",
+        "A federal judge ruled that GM was exempt from aluminum and steel import taxes",
+        "The EPA offered a tax rebate for exceeding electric vehicle manufacturing quotas"
+      ],
+      "a": 0,
+      "correctText": "A Supreme Court ruling invalidated the IEEPA tariffs previously imposed by the Trump administration",
+      "category": "Usa",
+      "source": "https://abcnews.com/Business/general-motors-expects-500-million-tariff-refund-after/story?id=132447958"
+    },
+    {
+      "q": "What detail emerged in late April 2026 regarding the Secret Service agent who was shot in the chest during an assassination attempt on President Trump?",
+      "options": [
+        "The agent may have been hit by 'friendly fire' from another Secret Service member",
+        "The agent was targeted by a drone operated by the suspect",
+        "The agent's ballistic vest failed to stop a small-caliber projectile",
+        "The agent managed to disarm the attacker without firing a single shot"
+      ],
+      "a": 0,
+      "correctText": "The agent may have been hit by 'friendly fire' from another Secret Service member",
+      "category": "Usa",
+      "source": "https://news.sky.com/story/secret-service-agent-who-took-bullet-in-trump-assassination-bid-may-have-been-hit-by-friendly-fire-13537624"
+    }
+  ]
+}
