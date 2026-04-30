@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which highly contagious virus did the CDC warn in late April 2026 could see a spike in US cases amid the upcoming travel season?",
+      "options": [
+        "Measles",
+        "Polio",
+        "Norovirus",
+        "Dengue Fever"
+      ],
+      "a": 0,
+      "correctText": "Measles",
+      "category": "Health",
+      "source": "https://abcnews.com/Health/cdc-warns-additional-measles-cases-us-expected-amid/story?id=132490613"
+    },
+    {
+      "q": "A late April 2026 study reported that what you eat for which meal could significantly influence your immune system's T-cells just hours later?",
+      "options": [
+        "Lunch",
+        "Breakfast",
+        "Dinner",
+        "Midnight snack"
+      ],
+      "a": 0,
+      "correctText": "Lunch",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/what-you-eat-for-lunch-could-influence-your-immune-system-just-hours-later/"
+    },
+    {
+      "q": "According to reports from late April 2026, the push for which unpasteurized beverage has intensified across the US despite illness outbreaks and scientists' warnings?",
+      "options": [
+        "Raw milk",
+        "Raw apple cider",
+        "Untreated well water",
+        "Kombucha"
+      ],
+      "a": 0,
+      "correctText": "Raw milk",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/push-raw-milk-intensifies-across-120124796.html?ncid=redditnewsus"
+    },
+    {
+      "q": "In late April 2026, researchers highlighted that deadly cases of Valley Fever have tripled in recent years in which Texas city, largely blaming frequent dust storms?",
+      "options": [
+        "El Paso",
+        "Houston",
+        "Austin",
+        "Dallas"
+      ],
+      "a": 0,
+      "correctText": "El Paso",
+      "category": "Health",
+      "source": "https://www.independent.co.uk/news/health/el-paso-texas-valley-fever-cases-dust-storms-b2967263.html"
+    },
+    {
+      "q": "Hospital CEOs faced a House Ways and Means Committee hearing in late April 2026 to defend charging patients more at outpatient facilities through what type of controversial charges?",
+      "options": [
+        "Facility fees",
+        "Concierge charges",
+        "Out-of-network penalties",
+        "Telehealth premiums"
+      ],
+      "a": 0,
+      "correctText": "Facility fees",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/hospital-ceos-defend-charging-patients-facilities-rcna342577"
+    }
+  ]
+}

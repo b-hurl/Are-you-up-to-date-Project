@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-30",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which country was selected to headquarter the new multinational Defence, Security and Resilience Bank (DSRB) for NATO allies?",
+      "options": [
+        "Canada",
+        "Germany",
+        "United Kingdom",
+        "France"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/canada-host-new-defence-bank-9.7182264"
+    },
+    {
+      "q": "During a White House dinner, who playfully reminded U.S. President Donald Trump that he is Canada's head of state?",
+      "options": [
+        "King Charles",
+        "Prime Minister Mark Carney",
+        "Governor General Mary Simon",
+        "Justin Trudeau"
+      ],
+      "a": 0,
+      "correctText": "King Charles",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/king-charles-trump-canada-head-of-state-9.7181667"
+    },
+    {
+      "q": "During a 90-minute call with U.S. President Donald Trump on Ukraine, Vladimir Putin proposed a ceasefire for which Russian holiday?",
+      "options": [
+        "Victory Day (May 9)",
+        "Orthodox Easter",
+        "Russian Independence Day",
+        "New Year's Day"
+      ],
+      "a": 0,
+      "correctText": "Victory Day (May 9)",
+      "category": "World",
+      "source": "https://united24media.com/world/putin-proposes-may-9-ceasefire-in-90-minute-trump-call-on-ukraine-18349"
+    },
+    {
+      "q": "Ex-FBI Director James Comey surrendered to federal court in April 2026 to face charges of threatening the President's life through what type of social media post?",
+      "options": [
+        "An Instagram photo of seashells arranged as '86 47'",
+        "A TikTok video of him burning a presidential seal",
+        "An X post displaying a digital painting of the White House in ruins",
+        "A Facebook live stream reading a hostile manifesto"
+      ],
+      "a": 0,
+      "correctText": "An Instagram photo of seashells arranged as '86 47'",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/c70vzj1nrddo"
+    },
+    {
+      "q": "Oyster growers in which Canadian province reported a nearly 100% mortality rate as MSX and dermo diseases devastated the industry?",
+      "options": [
+        "Prince Edward Island",
+        "Nova Scotia",
+        "New Brunswick",
+        "British Columbia"
+      ],
+      "a": 0,
+      "correctText": "Prince Edward Island",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/prince-edward-island/pei-oyster-growers-diseases-mortality-msx-dermo-9.7176920"
+    },
+    {
+      "q": "A man from which country was sentenced to four years in prison in late April 2026 for orchestrating a massive 'swatting' spree targeting dozens of U.S. government officials?",
+      "options": [
+        "Romania",
+        "Russia",
+        "North Korea",
+        "Iran"
+      ],
+      "a": 0,
+      "correctText": "Romania",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/wireStory/romanian-man-sentenced-4-years-prison-swatting-spree-132517603"
+    },
+    {
+      "q": "U.S. President Donald Trump announced the U.S. is reviewing a reduction of its troops in Germany after a clash with which German Chancellor?",
+      "options": [
+        "Friedrich Merz",
+        "Olaf Scholz",
+        "Angela Merkel",
+        "Annalena Baerbock"
+      ],
+      "a": 0,
+      "correctText": "Friedrich Merz",
+      "category": "World",
+      "source": "https://www.independent.co.uk/news/world/europe/trump-germany-us-troops-merz-nato-b2967672.html"
+    },
+    {
+      "q": "In April 2026, Jerome Powell announced he would continue to serve as a Federal Reserve governor even after his chairmanship ends, citing what specific reason?",
+      "options": [
+        "To see through an ongoing renovation probe",
+        "To oversee the rollout of a digital dollar",
+        "To launch a nationwide educational tour",
+        "To lead a transition to a new monetary standard"
+      ],
+      "a": 0,
+      "correctText": "To see through an ongoing renovation probe",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/29/jerome-powell-says-he-will-continue-to-serve-as-a-fed-governor-even-after-chairmanship-ends-.html"
+    },
+    {
+      "q": "To strengthen its bid for a lucrative Canadian submarine contract, a company from which country pledged to manufacture armoured vehicles in Canada?",
+      "options": [
+        "South Korea",
+        "Germany",
+        "France",
+        "Japan"
+      ],
+      "a": 0,
+      "correctText": "South Korea",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/business/article/south-korea-sweetens-submarine-bid-will-manufacture-armoured-vehicles-in-canada-if-chosen/"
+    },
+    {
+      "q": "Released on April 30, 2026, the 'State of the World's Fathers' report by Equimundo highlighted a global caregiving strain, revealing that what percentage of fathers say they aren't getting the parenting support they need?",
+      "options": [
+        "87%",
+        "45%",
+        "62%",
+        "99%"
+      ],
+      "a": 0,
+      "correctText": "87%",
+      "category": "Science",
+      "source": "https://equimundo.org/resources/state-of-the-worlds-fathers-2026/"
+    }
+  ]
+}

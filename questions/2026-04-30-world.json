@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who playfully reminded U.S. President Donald Trump that he is Canada's head of state during a White House state dinner?",
+      "options": [
+        "King Charles",
+        "Prime Minister Mark Carney",
+        "Emmanuel Macron",
+        "Justin Trudeau"
+      ],
+      "a": 0,
+      "correctText": "King Charles",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/king-charles-trump-canada-head-of-state-9.7181667"
+    },
+    {
+      "q": "Which country was selected to headquarter the new multinational Defence, Security and Resilience Bank (DSRB) for NATO allies?",
+      "options": [
+        "Canada",
+        "Germany",
+        "United Kingdom",
+        "France"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/canada-host-new-defence-bank-9.7182264"
+    },
+    {
+      "q": "U.S. President Donald Trump announced the U.S. is reviewing a reduction of its troops in Germany after a clash with which German Chancellor?",
+      "options": [
+        "Friedrich Merz",
+        "Olaf Scholz",
+        "Angela Merkel",
+        "Annalena Baerbock"
+      ],
+      "a": 0,
+      "correctText": "Friedrich Merz",
+      "category": "World",
+      "source": "https://www.independent.co.uk/news/world/europe/trump-germany-us-troops-merz-nato-b2967672.html"
+    },
+    {
+      "q": "During a 90-minute call with U.S. President Donald Trump on Ukraine, Vladimir Putin proposed a ceasefire for which Russian holiday?",
+      "options": [
+        "Victory Day (May 9)",
+        "Orthodox Easter",
+        "Russian Independence Day",
+        "New Year's Day"
+      ],
+      "a": 0,
+      "correctText": "Victory Day (May 9)",
+      "category": "World",
+      "source": "https://united24media.com/world/putin-proposes-may-9-ceasefire-in-90-minute-trump-call-on-ukraine-18349"
+    },
+    {
+      "q": "For the first time in nearly two decades, Russia's 2026 Victory Day parade in Red Square will be held without what?",
+      "options": [
+        "Military equipment",
+        "A marching band",
+        "Foreign dignitaries",
+        "Soldiers"
+      ],
+      "a": 0,
+      "correctText": "Military equipment",
+      "category": "World",
+      "source": "https://apnews.com/article/russia-victory-day-parade-3c0e2619140194148dd94c730775ee3f"
+    }
+  ]
+}

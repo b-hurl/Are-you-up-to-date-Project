@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "During a White House dinner, who playfully reminded U.S. President Donald Trump that he is Canada's head of state?",
+      "options": [
+        "King Charles",
+        "Prime Minister Mark Carney",
+        "Governor General Mary Simon",
+        "Justin Trudeau"
+      ],
+      "a": 0,
+      "correctText": "King Charles",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/king-charles-trump-canada-head-of-state-9.7181667"
+    },
+    {
+      "q": "According to a 2026 FAO report, which province recorded the largest unemployment rate increase in Canada for the second year running?",
+      "options": [
+        "Ontario",
+        "Alberta",
+        "British Columbia",
+        "Quebec"
+      ],
+      "a": 0,
+      "correctText": "Ontario",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11822663/fao-2025-unemployment/"
+    },
+    {
+      "q": "The Toronto Blue Jays dropped which organization from a promotional day following a Fifth Estate investigation into corruption allegations?",
+      "options": [
+        "Cricket Canada",
+        "Rugby Canada",
+        "Soccer Canada",
+        "Athletics Canada"
+      ],
+      "a": 0,
+      "correctText": "Cricket Canada",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/fifthestate/cricket-canada-dropped-from-jays-event-9.7181824"
+    },
+    {
+      "q": "To strengthen its bid for a lucrative Canadian submarine contract, a company from which country pledged to manufacture armoured vehicles in Canada?",
+      "options": [
+        "South Korea",
+        "Germany",
+        "France",
+        "Japan"
+      ],
+      "a": 0,
+      "correctText": "South Korea",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/business/article/south-korea-sweetens-submarine-bid-will-manufacture-armoured-vehicles-in-canada-if-chosen/"
+    },
+    {
+      "q": "Oyster growers in which Canadian province reported a nearly 100% mortality rate as MSX and dermo diseases devastated the industry?",
+      "options": [
+        "Prince Edward Island",
+        "Nova Scotia",
+        "New Brunswick",
+        "British Columbia"
+      ],
+      "a": 0,
+      "correctText": "Prince Edward Island",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/prince-edward-island/pei-oyster-growers-diseases-mortality-msx-dermo-9.7176920"
+    }
+  ]
+}

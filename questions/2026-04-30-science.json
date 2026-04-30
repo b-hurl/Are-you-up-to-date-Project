@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to a study featured in Scientific American on April 30, 2026, researchers were surprised to find that city birds appear to be more afraid of whom?",
+      "options": [
+        "Women than men",
+        "Children than adults",
+        "People with dogs than without",
+        "People wearing bright colors"
+      ],
+      "a": 0,
+      "correctText": "Women than men",
+      "category": "Science",
+      "source": "https://www.scientificamerican.com/article/city-birds-appear-more-afraid-of-women-than-men-and-scientists-have-no-idea-why/"
+    },
+    {
+      "q": "An MIT study published on April 30, 2026, revealed that a 10% increase in female immigrants in a given U.S. metro area leads to registered nurses spending more time doing what?",
+      "options": [
+        "Providing care to elderly patients",
+        "Filing administrative paperwork",
+        "Training new immigrant staff",
+        "Working in pediatric wards"
+      ],
+      "a": 0,
+      "correctText": "Providing care to elderly patients",
+      "category": "Science",
+      "source": "https://news.mit.edu/2026/study-immigrants-help-address-us-eldercare-shortage-0430"
+    },
+    {
+      "q": "Released on April 30, 2026, the 'State of the World's Fathers' report by Equimundo highlighted a global caregiving strain, revealing that what percentage of fathers say they aren't getting the parenting support they need?",
+      "options": [
+        "87%",
+        "45%",
+        "62%",
+        "99%"
+      ],
+      "a": 0,
+      "correctText": "87%",
+      "category": "Science",
+      "source": "https://equimundo.org/resources/state-of-the-worlds-fathers-2026/"
+    }
+  ]
+}

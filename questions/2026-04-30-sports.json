@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A request for FIFA President Gianni Infantino to be given a police escort was denied by police in which Canadian city?",
+      "options": [
+        "Vancouver",
+        "Toronto",
+        "Montreal",
+        "Ottawa"
+      ],
+      "a": 0,
+      "correctText": "Vancouver",
+      "category": "Sports",
+      "source": "https://apnews.com/article/infantino-police-motorcade-vancouver-59e0eaf50a4b9eeec29fe26f95a01ee2"
+    },
+    {
+      "q": "Who scored the overtime winner for the Philadelphia Flyers in Game 6 to eliminate the Pittsburgh Penguins and reach the second round of the 2026 NHL playoffs?",
+      "options": [
+        "Cam York",
+        "Sean Couturier",
+        "Travis Konecny",
+        "Matvei Michkov"
+      ],
+      "a": 0,
+      "correctText": "Cam York",
+      "category": "Sports",
+      "source": "https://apnews.com/article/penguins-flyers-score-ot-0b51f7d4852b83219e485869f8dd471a"
+    },
+    {
+      "q": "Which Chelsea winger recently launched an appeal to the Court of Arbitration for Sport (CAS) over a four-year doping ban?",
+      "options": [
+        "Mykhailo Mudryk",
+        "Cole Palmer",
+        "Raheem Sterling",
+        "Enzo Fernández"
+      ],
+      "a": 0,
+      "correctText": "Mykhailo Mudryk",
+      "category": "Sports",
+      "source": "https://www.espn.com.au/football/story/_/id/48628626/chelsea-mykhailo-mudryk-cas-appeal-doping-ban"
+    },
+    {
+      "q": "Who was appointed to make history as the first black official in an FA Cup final for the 2026 match between Chelsea and Manchester City?",
+      "options": [
+        "Akil Howson",
+        "Sam Allison",
+        "Uriah Rennie",
+        "Darren England"
+      ],
+      "a": 0,
+      "correctText": "Akil Howson",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/articles/cgjp4v39xjpo"
+    },
+    {
+      "q": "Which American tennis player saved six match points to stun World No. 1 Aryna Sabalenka at the 2026 Madrid Open?",
+      "options": [
+        "Hailey Baptiste",
+        "Coco Gauff",
+        "Jessica Pegula",
+        "Emma Navarro"
+      ],
+      "a": 0,
+      "correctText": "Hailey Baptiste",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48621529/american-hailey-baptiste-saves-6-match-points-stuns-aryna-sabalenka-madrid-open"
+    }
+  ]
+}

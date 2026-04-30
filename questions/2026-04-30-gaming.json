@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What surprising feature was added to \"Super Mario Galaxy 2\" on the Switch in its April 2026 Version 1.4.0 update?",
+      "options": [
+        "A new storybook chapter",
+        "A playable Luigi mode",
+        "Online co-op",
+        "An achievement system"
+      ],
+      "a": 0,
+      "correctText": "A new storybook chapter",
+      "category": "Gaming",
+      "source": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68643"
+    },
+    {
+      "q": "Which 2025 Soulslike action RPG was announced as part of the PlayStation Plus Monthly Games lineup for May 2026?",
+      "options": [
+        "Wuchang: Fallen Feathers",
+        "Stellar Blade",
+        "Lies of P",
+        "Wo Long: Fallen Dynasty"
+      ],
+      "a": 0,
+      "correctText": "Wuchang: Fallen Feathers",
+      "category": "Gaming",
+      "source": "https://blog.playstation.com/2026/04/29/playstation-plus-monthly-games-for-may-ea-sports-fc-26-wuchang-fallen-feathers-nine-sols/"
+    },
+    {
+      "q": "Megabit Publishing announced that the stealth heist game \"Thick As Thieves\" will launch for $4.99 because the initial release serves as what?",
+      "options": [
+        "An introductory campaign",
+        "An early access prototype",
+        "A multiplayer-only beta",
+        "A cosmetic-focused prologue"
+      ],
+      "a": 0,
+      "correctText": "An introductory campaign",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/thick-as-thieves-priced-at-4-99-launch-to-serve-as-introductory-campaign"
+    },
+    {
+      "q": "Torn Banner Studios confirmed that the co-op zombie shooter \"No More Room in Hell 2\" will leave Early Access and launch on consoles during which timeframe?",
+      "options": [
+        "Summer 2026",
+        "Holiday 2026",
+        "Fall 2026",
+        "Spring 2027"
+      ],
+      "a": 0,
+      "correctText": "Summer 2026",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/no-more-room-in-hell-2-launches-this-summer-for-ps5-xbox-series-and-pc"
+    },
+    {
+      "q": "Build a Rocket Boy developers recently spoke out about crunch on the game \"MindsEye,\" as well as the secret installation of what on their work devices?",
+      "options": [
+        "Surveillance software",
+        "Keyloggers",
+        "Crypto miners",
+        "AI code-writing tools"
+      ],
+      "a": 0,
+      "correctText": "Surveillance software",
+      "category": "Gaming",
+      "source": "https://kotaku.com/mindseye-build-a-rocket-boy-leslie-benzies-mark-gerhard-cyber-boi-layoffs-teramind-2000691386"
+    }
+  ]
+}

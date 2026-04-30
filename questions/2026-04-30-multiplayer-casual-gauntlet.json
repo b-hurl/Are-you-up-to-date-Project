@@ -1,0 +1,71 @@
+{
+  "date": "2026-04-30",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Who scored the overtime winner for the Philadelphia Flyers in Game 6 to eliminate the Pittsburgh Penguins and reach the second round of the 2026 NHL playoffs?",
+      "options": [
+        "Cam York",
+        "Sean Couturier",
+        "Travis Konecny",
+        "Matvei Michkov"
+      ],
+      "a": 0,
+      "correctText": "Cam York",
+      "category": "Sports",
+      "source": "https://apnews.com/article/penguins-flyers-score-ot-0b51f7d4852b83219e485869f8dd471a"
+    },
+    {
+      "q": "Which 2025 Soulslike action RPG was announced as part of the PlayStation Plus Monthly Games lineup for May 2026?",
+      "options": [
+        "Wuchang: Fallen Feathers",
+        "Stellar Blade",
+        "Lies of P",
+        "Wo Long: Fallen Dynasty"
+      ],
+      "a": 0,
+      "correctText": "Wuchang: Fallen Feathers",
+      "category": "Gaming",
+      "source": "https://blog.playstation.com/2026/04/29/playstation-plus-monthly-games-for-may-ea-sports-fc-26-wuchang-fallen-feathers-nine-sols/"
+    },
+    {
+      "q": "Torn Banner Studios confirmed that the co-op zombie shooter \"No More Room in Hell 2\" will leave Early Access and launch on consoles during which timeframe?",
+      "options": [
+        "Summer 2026",
+        "Holiday 2026",
+        "Fall 2026",
+        "Spring 2027"
+      ],
+      "a": 0,
+      "correctText": "Summer 2026",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/no-more-room-in-hell-2-launches-this-summer-for-ps5-xbox-series-and-pc"
+    },
+    {
+      "q": "Who was appointed to make history as the first black official in an FA Cup final for the 2026 match between Chelsea and Manchester City?",
+      "options": [
+        "Akil Howson",
+        "Sam Allison",
+        "Uriah Rennie",
+        "Darren England"
+      ],
+      "a": 0,
+      "correctText": "Akil Howson",
+      "category": "Sports",
+      "source": "https://www.bbc.co.uk/sport/football/articles/cgjp4v39xjpo"
+    },
+    {
+      "q": "Which highly contagious virus did the CDC warn in late April 2026 could see a spike in US cases amid the upcoming travel season?",
+      "options": [
+        "Measles",
+        "Polio",
+        "Norovirus",
+        "Dengue Fever"
+      ],
+      "a": 0,
+      "correctText": "Measles",
+      "category": "Health",
+      "source": "https://abcnews.com/Health/cdc-warns-additional-measles-cases-us-expected-amid/story?id=132490613"
+    }
+  ]
+}

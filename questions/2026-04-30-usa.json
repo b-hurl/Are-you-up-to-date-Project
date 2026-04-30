@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In April 2026, Jerome Powell announced he would continue to serve as a Federal Reserve governor even after his chairmanship ends, citing what specific reason?",
+      "options": [
+        "To see through an ongoing renovation probe",
+        "To oversee the rollout of a digital dollar",
+        "To launch a nationwide educational tour",
+        "To lead a transition to a new monetary standard"
+      ],
+      "a": 0,
+      "correctText": "To see through an ongoing renovation probe",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/29/jerome-powell-says-he-will-continue-to-serve-as-a-fed-governor-even-after-chairmanship-ends-.html"
+    },
+    {
+      "q": "In late April 2026, prosecutors alleged that singer D4vd fatally stabbed 14-year-old Celeste Rivas Hernandez for what reason?",
+      "options": [
+        "To silence her from exposing their relationship",
+        "To steal her unreleased songwriting materials",
+        "To stop her from testifying in a fraud case",
+        "To cover up a hit-and-run accident"
+      ],
+      "a": 0,
+      "correctText": "To silence her from exposing their relationship",
+      "category": "Usa",
+      "source": "https://apnews.com/article/d4vd-celeste-rivas-hernandez-la-death-5f0f75063da762ad8b73951851b1f0d6"
+    },
+    {
+      "q": "Ex-FBI Director James Comey surrendered to federal court in April 2026 to face charges of threatening the President's life through what type of social media post?",
+      "options": [
+        "An Instagram photo of seashells arranged as '86 47'",
+        "A TikTok video of him burning a presidential seal",
+        "An X post displaying a digital painting of the White House in ruins",
+        "A Facebook live stream reading a hostile manifesto"
+      ],
+      "a": 0,
+      "correctText": "An Instagram photo of seashells arranged as '86 47'",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/c70vzj1nrddo"
+    },
+    {
+      "q": "A 6-3 Supreme Court decision in April 2026 limited the Voting Rights Act by striking down a congressional map from which state as an unconstitutional racial gerrymander?",
+      "options": [
+        "Louisiana",
+        "Texas",
+        "Alabama",
+        "Georgia"
+      ],
+      "a": 0,
+      "correctText": "Louisiana",
+      "category": "Usa",
+      "source": "https://abcnews.com/Politics/supreme-court-limits-voting-rights-act/story?id=132122248"
+    },
+    {
+      "q": "A man from which country was sentenced to four years in prison in late April 2026 for orchestrating a massive 'swatting' spree targeting dozens of U.S. government officials?",
+      "options": [
+        "Romania",
+        "Russia",
+        "North Korea",
+        "Iran"
+      ],
+      "a": 0,
+      "correctText": "Romania",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/wireStory/romanian-man-sentenced-4-years-prison-swatting-spree-132517603"
+    }
+  ]
+}

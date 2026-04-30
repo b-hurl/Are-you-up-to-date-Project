@@ -1,0 +1,136 @@
+{
+  "date": "2026-04-30",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to reports from late April 2026, the push for which unpasteurized beverage has intensified across the US despite illness outbreaks and scientists' warnings?",
+      "options": [
+        "Raw milk",
+        "Raw apple cider",
+        "Untreated well water",
+        "Kombucha"
+      ],
+      "a": 0,
+      "correctText": "Raw milk",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/push-raw-milk-intensifies-across-120124796.html?ncid=redditnewsus"
+    },
+    {
+      "q": "Build a Rocket Boy developers recently spoke out about crunch on the game \"MindsEye,\" as well as the secret installation of what on their work devices?",
+      "options": [
+        "Surveillance software",
+        "Keyloggers",
+        "Crypto miners",
+        "AI code-writing tools"
+      ],
+      "a": 0,
+      "correctText": "Surveillance software",
+      "category": "Gaming",
+      "source": "https://kotaku.com/mindseye-build-a-rocket-boy-leslie-benzies-mark-gerhard-cyber-boi-layoffs-teramind-2000691386"
+    },
+    {
+      "q": "Which Chelsea winger recently launched an appeal to the Court of Arbitration for Sport (CAS) over a four-year doping ban?",
+      "options": [
+        "Mykhailo Mudryk",
+        "Cole Palmer",
+        "Raheem Sterling",
+        "Enzo Fernández"
+      ],
+      "a": 0,
+      "correctText": "Mykhailo Mudryk",
+      "category": "Sports",
+      "source": "https://www.espn.com.au/football/story/_/id/48628626/chelsea-mykhailo-mudryk-cas-appeal-doping-ban"
+    },
+    {
+      "q": "Hospital CEOs faced a House Ways and Means Committee hearing in late April 2026 to defend charging patients more at outpatient facilities through what type of controversial charges?",
+      "options": [
+        "Facility fees",
+        "Concierge charges",
+        "Out-of-network penalties",
+        "Telehealth premiums"
+      ],
+      "a": 0,
+      "correctText": "Facility fees",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/hospital-ceos-defend-charging-patients-facilities-rcna342577"
+    },
+    {
+      "q": "Which American tennis player saved six match points to stun World No. 1 Aryna Sabalenka at the 2026 Madrid Open?",
+      "options": [
+        "Hailey Baptiste",
+        "Coco Gauff",
+        "Jessica Pegula",
+        "Emma Navarro"
+      ],
+      "a": 0,
+      "correctText": "Hailey Baptiste",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48621529/american-hailey-baptiste-saves-6-match-points-stuns-aryna-sabalenka-madrid-open"
+    },
+    {
+      "q": "What surprising feature was added to \"Super Mario Galaxy 2\" on the Switch in its April 2026 Version 1.4.0 update?",
+      "options": [
+        "A new storybook chapter",
+        "A playable Luigi mode",
+        "Online co-op",
+        "An achievement system"
+      ],
+      "a": 0,
+      "correctText": "A new storybook chapter",
+      "category": "Gaming",
+      "source": "https://en-americas-support.nintendo.com/app/answers/detail/a_id/68643"
+    },
+    {
+      "q": "A request for FIFA President Gianni Infantino to be given a police escort was denied by police in which Canadian city?",
+      "options": [
+        "Vancouver",
+        "Toronto",
+        "Montreal",
+        "Ottawa"
+      ],
+      "a": 0,
+      "correctText": "Vancouver",
+      "category": "Sports",
+      "source": "https://apnews.com/article/infantino-police-motorcade-vancouver-59e0eaf50a4b9eeec29fe26f95a01ee2"
+    },
+    {
+      "q": "In late April 2026, researchers highlighted that deadly cases of Valley Fever have tripled in recent years in which Texas city, largely blaming frequent dust storms?",
+      "options": [
+        "El Paso",
+        "Houston",
+        "Austin",
+        "Dallas"
+      ],
+      "a": 0,
+      "correctText": "El Paso",
+      "category": "Health",
+      "source": "https://www.independent.co.uk/news/health/el-paso-texas-valley-fever-cases-dust-storms-b2967263.html"
+    },
+    {
+      "q": "A late April 2026 study reported that what you eat for which meal could significantly influence your immune system's T-cells just hours later?",
+      "options": [
+        "Lunch",
+        "Breakfast",
+        "Dinner",
+        "Midnight snack"
+      ],
+      "a": 0,
+      "correctText": "Lunch",
+      "category": "Health",
+      "source": "https://www.scientificamerican.com/article/what-you-eat-for-lunch-could-influence-your-immune-system-just-hours-later/"
+    },
+    {
+      "q": "Megabit Publishing announced that the stealth heist game \"Thick As Thieves\" will launch for $4.99 because the initial release serves as what?",
+      "options": [
+        "An introductory campaign",
+        "An early access prototype",
+        "A multiplayer-only beta",
+        "A cosmetic-focused prologue"
+      ],
+      "a": 0,
+      "correctText": "An introductory campaign",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/04/thick-as-thieves-priced-at-4-99-launch-to-serve-as-introductory-campaign"
+    }
+  ]
+}

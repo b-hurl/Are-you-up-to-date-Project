@@ -1,0 +1,110 @@
+{
+  "date": "2026-04-30",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to a study featured in Scientific American on April 30, 2026, researchers were surprised to find that city birds appear to be more afraid of whom?",
+      "options": [
+        "Women than men",
+        "Children than adults",
+        "People with dogs than without",
+        "People wearing bright colors"
+      ],
+      "a": 0,
+      "correctText": "Women than men",
+      "category": "Science",
+      "source": "https://www.scientificamerican.com/article/city-birds-appear-more-afraid-of-women-than-men-and-scientists-have-no-idea-why/"
+    },
+    {
+      "q": "The Toronto Blue Jays dropped which organization from a promotional day following a Fifth Estate investigation into corruption allegations?",
+      "options": [
+        "Cricket Canada",
+        "Rugby Canada",
+        "Soccer Canada",
+        "Athletics Canada"
+      ],
+      "a": 0,
+      "correctText": "Cricket Canada",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/fifthestate/cricket-canada-dropped-from-jays-event-9.7181824"
+    },
+    {
+      "q": "For the first time in nearly two decades, Russia's 2026 Victory Day parade in Red Square will be held without what?",
+      "options": [
+        "Military equipment",
+        "A marching band",
+        "Foreign dignitaries",
+        "Soldiers"
+      ],
+      "a": 0,
+      "correctText": "Military equipment",
+      "category": "World",
+      "source": "https://apnews.com/article/russia-victory-day-parade-3c0e2619140194148dd94c730775ee3f"
+    },
+    {
+      "q": "According to a 2026 FAO report, which province recorded the largest unemployment rate increase in Canada for the second year running?",
+      "options": [
+        "Ontario",
+        "Alberta",
+        "British Columbia",
+        "Quebec"
+      ],
+      "a": 0,
+      "correctText": "Ontario",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11822663/fao-2025-unemployment/"
+    },
+    {
+      "q": "An MIT study published on April 30, 2026, revealed that a 10% increase in female immigrants in a given U.S. metro area leads to registered nurses spending more time doing what?",
+      "options": [
+        "Providing care to elderly patients",
+        "Filing administrative paperwork",
+        "Training new immigrant staff",
+        "Working in pediatric wards"
+      ],
+      "a": 0,
+      "correctText": "Providing care to elderly patients",
+      "category": "Science",
+      "source": "https://news.mit.edu/2026/study-immigrants-help-address-us-eldercare-shortage-0430"
+    },
+    {
+      "q": "Who playfully reminded U.S. President Donald Trump that he is Canada's head of state during a White House state dinner?",
+      "options": [
+        "King Charles",
+        "Prime Minister Mark Carney",
+        "Emmanuel Macron",
+        "Justin Trudeau"
+      ],
+      "a": 0,
+      "correctText": "King Charles",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/king-charles-trump-canada-head-of-state-9.7181667"
+    },
+    {
+      "q": "A 6-3 Supreme Court decision in April 2026 limited the Voting Rights Act by striking down a congressional map from which state as an unconstitutional racial gerrymander?",
+      "options": [
+        "Louisiana",
+        "Texas",
+        "Alabama",
+        "Georgia"
+      ],
+      "a": 0,
+      "correctText": "Louisiana",
+      "category": "Usa",
+      "source": "https://abcnews.com/Politics/supreme-court-limits-voting-rights-act/story?id=132122248"
+    },
+    {
+      "q": "In late April 2026, prosecutors alleged that singer D4vd fatally stabbed 14-year-old Celeste Rivas Hernandez for what reason?",
+      "options": [
+        "To silence her from exposing their relationship",
+        "To steal her unreleased songwriting materials",
+        "To stop her from testifying in a fraud case",
+        "To cover up a hit-and-run accident"
+      ],
+      "a": 0,
+      "correctText": "To silence her from exposing their relationship",
+      "category": "Usa",
+      "source": "https://apnews.com/article/d4vd-celeste-rivas-hernandez-la-death-5f0f75063da762ad8b73951851b1f0d6"
+    }
+  ]
+}
