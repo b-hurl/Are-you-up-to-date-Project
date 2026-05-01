@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-01",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "On April 30, 2026, U.S. senators agreed to ban themselves from trading on which type of platforms, such as Kalshi and Polymarket?",
+      "options": [
+        "Prediction markets",
+        "Cryptocurrency exchanges",
+        "Foreign stock exchanges",
+        "Commodities markets"
+      ],
+      "a": 0,
+      "correctText": "Prediction markets",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/30/senate-prediction-markets-trading-ban-kalshi-polymarket.html"
+    },
+    {
+      "q": "In a major repatriation announced on April 30, 2026, officials from which U.S. state returned more than 650 looted antiquities valued at $14 million to India?",
+      "options": [
+        "New York",
+        "California",
+        "Illinois",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "New York",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/apr/30/new-york-return-antiquities-india"
+    },
+    {
+      "q": "U.S. President Donald Trump signed an executive order on April 30, 2026, authorizing which cross-border crude pipeline segment from Canada into Wyoming?",
+      "options": [
+        "Bridger Pipeline",
+        "Keystone XL",
+        "Trans Mountain",
+        "Enbridge Line 5"
+      ],
+      "a": 0,
+      "correctText": "Bridger Pipeline",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/business/trump-authorizes-canada-wyoming-pipeline-9.7183277"
+    },
+    {
+      "q": "A paper highlighted on May 1, 2026, details how Northwestern University researchers successfully used plasma to convert methane into what important industrial chemical?",
+      "options": [
+        "Methanol",
+        "Ammonia",
+        "Ethanol",
+        "Propane"
+      ],
+      "a": 0,
+      "correctText": "Methanol",
+      "category": "Science",
+      "source": "https://dailynorthwestern.com/2026/05/01/campus/northwestern-researchers-find-way-to-use-plasma-in-key-industrial-chemical-reaction/"
+    },
+    {
+      "q": "In a massive 24-hour global logistics operation reported in early May 2026, the United States shipped how many tons of munitions and equipment to Israel?",
+      "options": [
+        "6,500 tons",
+        "2,000 tons",
+        "10,000 tons",
+        "500 tons"
+      ],
+      "a": 0,
+      "correctText": "6,500 tons",
+      "category": "World",
+      "source": "https://www.jpost.com/israel-news/defense-news/article-894754"
+    },
+    {
+      "q": "Which New Orleans sheriff was indicted by a grand jury on 30 felony charges in late April 2026 regarding the previous escape of 10 inmates?",
+      "options": [
+        "Susan Hutson",
+        "Marlin Gusman",
+        "Michelle Woodfork",
+        "LaToya Cantrell"
+      ],
+      "a": 0,
+      "correctText": "Susan Hutson",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/new-orleans-sheriff-indicted-allegedly-prevent-jailbreak-escape-10-inm-rcna342843"
+    },
+    {
+      "q": "As reported on May 1, 2026, researchers at the University of Queensland developed a new scalable vapour-based manufacturing process for perovskite solar cells that eliminates what toxic material?",
+      "options": [
+        "Lead",
+        "Cadmium",
+        "Arsenic",
+        "Mercury"
+      ],
+      "a": 0,
+      "correctText": "Lead",
+      "category": "Science",
+      "source": "https://www.pv-magazine-australia.com/2026/05/01/queensland-researchers-develop-lead-free-perovskite-material/"
+    },
+    {
+      "q": "U.S. Trade Representative Jamieson Greer told Canadians at a Washington roundtable that what phrase is considered strict administration policy, not just a slogan?",
+      "options": [
+        "America First",
+        "Build Back Better",
+        "Buy North American",
+        "Make America Great Again"
+      ],
+      "a": 0,
+      "correctText": "America First",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/trumps-trade-czar-says-us-looking-to-work-with-canada-on-energy-cp-sources/"
+    },
+    {
+      "q": "In the 2026 World Press Freedom Index released by Reporters Without Borders, Ukraine overtook which country that fell to 64th place?",
+      "options": [
+        "United States",
+        "France",
+        "Germany",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "United States",
+      "category": "World",
+      "source": "https://kyivindependent.com/ukraine-overtakes-united-states-on-press-freedom/"
+    },
+    {
+      "q": "Following a Ukrainian drone strike on a local refinery, residents of which Russian Black Sea town feared an environmental disaster after reporting that 'oil is literally falling from the sky'?",
+      "options": [
+        "Tuapse",
+        "Sochi",
+        "Novorossiysk",
+        "Gelendzhik"
+      ],
+      "a": 0,
+      "correctText": "Tuapse",
+      "category": "World",
+      "source": "https://www.ctvnews.ca/world/russia-ukraine-war/article/oil-is-literally-falling-from-the-sky-russian-town-fears-environmental-disaster-after-ukrainian-drone-strikes-on-refinery/"
+    }
+  ]
+}

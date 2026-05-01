@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-01",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to a regulatory filing revealed in late April 2026, Warner Bros. Discovery CEO David Zaslav's compensation package more than tripled in 2025 to what amount?",
+      "options": [
+        "$165 million",
+        "$75 million",
+        "$250 million",
+        "$55 million"
+      ],
+      "a": 0,
+      "correctText": "David Zaslav's 2025 total compensation surged to $165 million, largely due to a massive stock option award.",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/david-zaslav-warner-bros-discovery-compensation-2025-1236734023/"
+    },
+    {
+      "q": "The US FDA proposed excluding which category of medications from the list of bulk drug substances that outsourcing facilities can use for compounding in May 2026?",
+      "options": [
+        "Weight-loss drugs",
+        "Antibiotics",
+        "ADHD stimulants",
+        "Antidepressants"
+      ],
+      "a": 0,
+      "correctText": "Weight-loss drugs",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/us-fda-proposes-excluding-weight-135418702.html?ncid=redditnewsus"
+    },
+    {
+      "q": "According to its cinematic trailer released on April 30, 2026, when will 'Subnautica 2' officially enter Early Access?",
+      "options": [
+        "May 14, 2026",
+        "June 1, 2026",
+        "August 30, 2026",
+        "October 31, 2026"
+      ],
+      "a": 0,
+      "correctText": "Subnautica 2 enters Early Access on PC and Xbox Series X/S on May 14, 2026.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=8EZhCzFaQuw"
+    },
+    {
+      "q": "Which upcoming sci-fi action-adventure RPG released a 'Conversation Choices First Look' trailer in late April 2026 featuring the companion Phaedra?",
+      "options": [
+        "EXODUS",
+        "Mass Effect 4",
+        "The Outer Worlds 2",
+        "Starfield: Shattered Space"
+      ],
+      "a": 0,
+      "correctText": "EXODUS released new gameplay footage showing a conversation with the Celestial virus-infected companion Phaedra.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=21Ye3SVxfAg"
+    },
+    {
+      "q": "At the 2026 FIFA Congress in Vancouver, Gianni Infantino's attempt to orchestrate a handshake between delegates from which two football associations backfired?",
+      "options": [
+        "Israel and Palestine",
+        "Russia and Ukraine",
+        "Serbia and Kosovo",
+        "Iran and USA"
+      ],
+      "a": 0,
+      "correctText": "Israel and Palestine",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/football/2026/apr/30/israel-fa-delegate-snubbed-by-palestinian-counterpart-at-fifa-congress"
+    },
+    {
+      "q": "The police department of which Canadian city denied a request to give FIFA President Gianni Infantino a police escort for the 2026 FIFA Congress?",
+      "options": [
+        "Vancouver",
+        "Toronto",
+        "Montreal",
+        "Ottawa"
+      ],
+      "a": 0,
+      "correctText": "Vancouver",
+      "category": "Sports",
+      "source": "https://apnews.com/article/infantino-police-motorcade-vancouver-59e0eaf50a4b9eeec29fe26f95a01ee2"
+    },
+    {
+      "q": "Developed by former Burnout creators at Fuse Games, what is the official release date for the arcade racing game 'Star Wars: Galactic Racer'?",
+      "options": [
+        "October 6, 2026",
+        "May 4, 2026",
+        "December 18, 2026",
+        "November 11, 2026"
+      ],
+      "a": 0,
+      "correctText": "Star Wars: Galactic Racer will officially be released on October 6, 2026 for PC, PS5, and Xbox Series X/S.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=v9J3Y1ypDMc"
+    },
+    {
+      "q": "Developed by Unfrozen, which turn-based strategy prequel launched into Early Access on April 30, 2026?",
+      "options": [
+        "Heroes of Might and Magic: Olden Era",
+        "Songs of Conquest",
+        "Age of Wonders 4",
+        "Disciples: Liberation"
+      ],
+      "a": 0,
+      "correctText": "Heroes of Might and Magic: Olden Era was released into Early Access, bringing back the classic strategy gameplay.",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3105440/view/703267074116420198"
+    },
+    {
+      "q": "Which former World No. 4 Japanese tennis player announced on May 1, 2026, that he plans to retire from professional tennis at the end of the season?",
+      "options": [
+        "Kei Nishikori",
+        "Yoshihito Nishioka",
+        "Taro Daniel",
+        "Sho Shimabukuro"
+      ],
+      "a": 0,
+      "correctText": "Kei Nishikori",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48641890/former-no-4-kei-nishikori-plans-retire-end-season"
+    },
+    {
+      "q": "What is the name of the new vehicular action game from Strange Scaffold where you play as the vehicle that famously sends people to a fantasy world?",
+      "options": [
+        "Truck-kun is Supporting Me from Another World?!",
+        "Isekai Delivery Express",
+        "Space Warlord Truck Simulator",
+        "Reincarnation Taxi"
+      ],
+      "a": 0,
+      "correctText": "Truck-kun is Supporting Me from Another World?! is a chaotic driving game built around the classic isekai anime trope.",
+      "category": "Gaming",
+      "source": "https://youtu.be/Iujy19OLvuc"
+    }
+  ]
+}

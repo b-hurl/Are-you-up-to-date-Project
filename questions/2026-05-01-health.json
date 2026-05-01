@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In a move that baffled public health groups, the Trump administration announced in early May 2026 that federal funding would no longer cover which harm-reduction tool?",
+      "options": [
+        "Fentanyl test strips",
+        "Naloxone nasal sprays",
+        "Clean syringe programs",
+        "Methadone clinics"
+      ],
+      "a": 0,
+      "correctText": "Fentanyl test strips",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/trump-administration-fentanyl-xylazine-test-strips-drugs-overdose-samhsa/"
+    },
+    {
+      "q": "Which physician did President Trump announce as his new pick for U.S. surgeon general on April 30, 2026, after pulling the nomination of Dr. Casey Means?",
+      "options": [
+        "Dr. Nicole Saphier",
+        "Dr. Janette Nesheiwat",
+        "Dr. Marty Makary",
+        "Dr. Robert Redfield"
+      ],
+      "a": 0,
+      "correctText": "Dr. Nicole Saphier",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/trump-pulls-casey-means-nomination-general-replacement-nicole-saphier-rcna261423"
+    },
+    {
+      "q": "The US FDA proposed excluding which category of medications from the list of bulk drug substances that outsourcing facilities can use for compounding in May 2026?",
+      "options": [
+        "Weight-loss drugs",
+        "Antibiotics",
+        "ADHD stimulants",
+        "Antidepressants"
+      ],
+      "a": 0,
+      "correctText": "Weight-loss drugs",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/us-fda-proposes-excluding-weight-135418702.html?ncid=redditnewsus"
+    },
+    {
+      "q": "What pioneering biologist, who privately challenged the Human Genome Project to decode human DNA, passed away at age 79 in late April 2026?",
+      "options": [
+        "J. Craig Venter",
+        "Francis Collins",
+        "James Watson",
+        "Kary Mullis"
+      ],
+      "a": 0,
+      "correctText": "J. Craig Venter",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/news/us-news/j-craig-venter-swashbuckling-scientist-helped-decode-human-genome-dies-rcna342863"
+    },
+    {
+      "q": "In 2026, a clinical trial led by Hamilton Health Sciences began testing a carotid artery implant to trap blood clots and prevent strokes, an idea inspired by what everyday kitchen item?",
+      "options": [
+        "Coffee filter",
+        "Salad spinner",
+        "Cheese grater",
+        "Mesh strainer"
+      ],
+      "a": 0,
+      "correctText": "Coffee filter",
+      "category": "Health",
+      "source": "https://www.ctvnews.ca/toronto/article/hamilton-hospital-network-leading-first-of-its-kind-procedure-to-prevent-strokes/"
+    }
+  ]
+}

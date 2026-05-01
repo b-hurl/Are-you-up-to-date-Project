@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to its cinematic trailer released on April 30, 2026, when will 'Subnautica 2' officially enter Early Access?",
+      "options": [
+        "May 14, 2026",
+        "June 1, 2026",
+        "August 30, 2026",
+        "October 31, 2026"
+      ],
+      "a": 0,
+      "correctText": "Subnautica 2 enters Early Access on PC and Xbox Series X/S on May 14, 2026.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=8EZhCzFaQuw"
+    },
+    {
+      "q": "Which upcoming sci-fi action-adventure RPG released a 'Conversation Choices First Look' trailer in late April 2026 featuring the companion Phaedra?",
+      "options": [
+        "EXODUS",
+        "Mass Effect 4",
+        "The Outer Worlds 2",
+        "Starfield: Shattered Space"
+      ],
+      "a": 0,
+      "correctText": "EXODUS released new gameplay footage showing a conversation with the Celestial virus-infected companion Phaedra.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=21Ye3SVxfAg"
+    },
+    {
+      "q": "Developed by Unfrozen, which turn-based strategy prequel launched into Early Access on April 30, 2026?",
+      "options": [
+        "Heroes of Might and Magic: Olden Era",
+        "Songs of Conquest",
+        "Age of Wonders 4",
+        "Disciples: Liberation"
+      ],
+      "a": 0,
+      "correctText": "Heroes of Might and Magic: Olden Era was released into Early Access, bringing back the classic strategy gameplay.",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3105440/view/703267074116420198"
+    },
+    {
+      "q": "What is the name of the new vehicular action game from Strange Scaffold where you play as the vehicle that famously sends people to a fantasy world?",
+      "options": [
+        "Truck-kun is Supporting Me from Another World?!",
+        "Isekai Delivery Express",
+        "Space Warlord Truck Simulator",
+        "Reincarnation Taxi"
+      ],
+      "a": 0,
+      "correctText": "Truck-kun is Supporting Me from Another World?! is a chaotic driving game built around the classic isekai anime trope.",
+      "category": "Gaming",
+      "source": "https://youtu.be/Iujy19OLvuc"
+    },
+    {
+      "q": "Developed by former Burnout creators at Fuse Games, what is the official release date for the arcade racing game 'Star Wars: Galactic Racer'?",
+      "options": [
+        "October 6, 2026",
+        "May 4, 2026",
+        "December 18, 2026",
+        "November 11, 2026"
+      ],
+      "a": 0,
+      "correctText": "Star Wars: Galactic Racer will officially be released on October 6, 2026 for PC, PS5, and Xbox Series X/S.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=v9J3Y1ypDMc"
+    }
+  ]
+}

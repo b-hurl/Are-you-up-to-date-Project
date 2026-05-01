@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On April 30, 2026, U.S. senators agreed to ban themselves from trading on which type of platforms, such as Kalshi and Polymarket?",
+      "options": [
+        "Prediction markets",
+        "Cryptocurrency exchanges",
+        "Foreign stock exchanges",
+        "Commodities markets"
+      ],
+      "a": 0,
+      "correctText": "Prediction markets",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/04/30/senate-prediction-markets-trading-ban-kalshi-polymarket.html"
+    },
+    {
+      "q": "In a major repatriation announced on April 30, 2026, officials from which U.S. state returned more than 650 looted antiquities valued at $14 million to India?",
+      "options": [
+        "New York",
+        "California",
+        "Illinois",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "New York",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/apr/30/new-york-return-antiquities-india"
+    },
+    {
+      "q": "Which New Orleans sheriff was indicted by a grand jury on 30 felony charges in late April 2026 regarding the previous escape of 10 inmates?",
+      "options": [
+        "Susan Hutson",
+        "Marlin Gusman",
+        "Michelle Woodfork",
+        "LaToya Cantrell"
+      ],
+      "a": 0,
+      "correctText": "Susan Hutson",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/new-orleans-sheriff-indicted-allegedly-prevent-jailbreak-escape-10-inm-rcna342843"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-01",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In a move that baffled public health groups, the Trump administration announced in early May 2026 that federal funding would no longer cover which harm-reduction tool?",
+      "options": [
+        "Fentanyl test strips",
+        "Naloxone nasal sprays",
+        "Clean syringe programs",
+        "Methadone clinics"
+      ],
+      "a": 0,
+      "correctText": "Fentanyl test strips",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/trump-administration-fentanyl-xylazine-test-strips-drugs-overdose-samhsa/"
+    },
+    {
+      "q": "In May 2026, director Pavel Talankin reported that an airline had lost his recently awarded Documentary Oscar for which film?",
+      "options": [
+        "Mr. Nobody Against Putin",
+        "20 Days in Mariupol",
+        "Navalny",
+        "The Dissident"
+      ],
+      "a": 0,
+      "correctText": "Pavel Talankin stated that his Oscar statuette for 'Mr. Nobody Against Putin' went missing after the TSA forced him to check it in his luggage.",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/airline-lost-oscar-mr-nobody-against-putin-director-says-1236581253/"
+    },
+    {
+      "q": "Which actor was the center of a five-studio bidding war in late April 2026 to star in a feature film adaptation of the video game 'Battlefield'?",
+      "options": [
+        "Michael B. Jordan",
+        "John Boyega",
+        "Tom Holland",
+        "Henry Cavill"
+      ],
+      "a": 0,
+      "correctText": "Five studios submitted bids for a 'Battlefield' movie package starring Michael B. Jordan and directed by Christopher McQuarrie.",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/creative-content/movies/battlefield-movie-bidding-war-studios-warner-bros-netflix-michael-b-jordan/"
+    },
+    {
+      "q": "A 2026 investigation by The Harvard Crimson revealed that players on which university sports team were unknowingly funded by a $25,000 donation from Jeffrey Epstein?",
+      "options": [
+        "Women's Rugby",
+        "Women's Rowing",
+        "Women's Lacrosse",
+        "Women's Ice Hockey"
+      ],
+      "a": 0,
+      "correctText": "Women's Rugby",
+      "category": "Sports",
+      "source": "https://www.thecrimson.com/article/2026/4/30/epstein-rugby-donation/"
+    },
+    {
+      "q": "Ben Leonberg, the director of 'Good Boy', was announced in April 2026 to be making 'Follow Mode', a new horror film focused on what piece of technology?",
+      "options": [
+        "A consumer-grade drone",
+        "A smart home assistant",
+        "An autonomous car",
+        "An augmented reality headset"
+      ],
+      "a": 0,
+      "correctText": "Leonberg's 'Follow Mode' is a drone horror film where a consumer-grade drone's tracking setting turns deadly.",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/good-boy-ben-leonberg-making-drone-horror-film-follow-mode-1236876869/"
+    },
+    {
+      "q": "In Game 6 of their 2026 first-round series, the New York Knicks eliminated the Atlanta Hawks 140-89. What record-breaking halftime lead did the Knicks hold in that game?",
+      "options": [
+        "47 points",
+        "35 points",
+        "51 points",
+        "40 points"
+      ],
+      "a": 0,
+      "correctText": "47 points",
+      "category": "Sports",
+      "source": "https://apnews.com/article/knicks-hawks-score-nba-playoffs-984a01a2361ae92f0388dae73facbcb2"
+    },
+    {
+      "q": "What pioneering biologist, who privately challenged the Human Genome Project to decode human DNA, passed away at age 79 in late April 2026?",
+      "options": [
+        "J. Craig Venter",
+        "Francis Collins",
+        "James Watson",
+        "Kary Mullis"
+      ],
+      "a": 0,
+      "correctText": "J. Craig Venter",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/news/us-news/j-craig-venter-swashbuckling-scientist-helped-decode-human-genome-dies-rcna342863"
+    },
+    {
+      "q": "In May 2026, subscribers filed a federal antitrust lawsuit seeking to block Paramount's acquisition deals involving Skydance and which other major studio?",
+      "options": [
+        "Warner Bros. Discovery",
+        "Sony Pictures",
+        "Universal Pictures",
+        "The Walt Disney Company"
+      ],
+      "a": 0,
+      "correctText": "A class-action lawsuit was filed by subscribers aiming to halt the Paramount, Skydance, and Warner Bros. Discovery merger deals.",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/business-news/paramount-sued-subscribers-warner-bros-skydance-deals-1236581570/"
+    },
+    {
+      "q": "In 2026, a clinical trial led by Hamilton Health Sciences began testing a carotid artery implant to trap blood clots and prevent strokes, an idea inspired by what everyday kitchen item?",
+      "options": [
+        "Coffee filter",
+        "Salad spinner",
+        "Cheese grater",
+        "Mesh strainer"
+      ],
+      "a": 0,
+      "correctText": "Coffee filter",
+      "category": "Health",
+      "source": "https://www.ctvnews.ca/toronto/article/hamilton-hospital-network-leading-first-of-its-kind-procedure-to-prevent-strokes/"
+    },
+    {
+      "q": "Which physician did President Trump announce as his new pick for U.S. surgeon general on April 30, 2026, after pulling the nomination of Dr. Casey Means?",
+      "options": [
+        "Dr. Nicole Saphier",
+        "Dr. Janette Nesheiwat",
+        "Dr. Marty Makary",
+        "Dr. Robert Redfield"
+      ],
+      "a": 0,
+      "correctText": "Dr. Nicole Saphier",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/trump-pulls-casey-means-nomination-general-replacement-nicole-saphier-rcna261423"
+    }
+  ]
+}

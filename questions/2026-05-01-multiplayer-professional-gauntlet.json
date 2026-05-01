@@ -1,0 +1,97 @@
+{
+  "date": "2026-05-01",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A Regina man was fined $75,000 and sentenced after pleading guilty to falsifying 31 documents related to what federal process?",
+      "options": [
+        "Immigration and refugee sponsorships",
+        "Commercial trucking licenses",
+        "Agricultural subsidies",
+        "Corporate tax returns"
+      ],
+      "a": 0,
+      "correctText": "Immigration and refugee sponsorships",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/regina/article/regina-man-charged-fined-75k-for-falsifying-31-immigration-documents-cbsa/"
+    },
+    {
+      "q": "Ottawa recently announced that a first-of-its-kind multinational defence bank, designed to lower the cost of financing major military purchases for NATO partners, will be headquartered in which country?",
+      "options": [
+        "Canada",
+        "United States",
+        "United Kingdom",
+        "Germany"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11823824/defence-bank-will-be-headquartered-in-canada/"
+    },
+    {
+      "q": "On May 1, 2026, NASA released Landsat 9 satellite imagery showing severe landslide scars in Papua New Guinea that were triggered by which extreme weather event?",
+      "options": [
+        "Tropical Cyclone Maila",
+        "Typhoon Haiyan",
+        "Hurricane Katrina",
+        "El Niño droughts"
+      ],
+      "a": 0,
+      "correctText": "Tropical Cyclone Maila",
+      "category": "Science",
+      "source": "https://earthobservatory.nasa.gov/images/154420/cyclone-rains-spur-papua-new-guinea-landslides"
+    },
+    {
+      "q": "RCMP launched an investigation after an Alberta separatist group called The Centurion Project was ordered by a court to take down what publicly posted information?",
+      "options": [
+        "A list of voters and their addresses",
+        "Confidential provincial tax returns",
+        "Undercover police officer identities",
+        "Premier Danielle Smith's personal emails"
+      ],
+      "a": 0,
+      "correctText": "A list of voters and their addresses",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11823997/alberta-elector-list-breach/"
+    },
+    {
+      "q": "The UK's national terror threat level was raised to what status on May 1, 2026, following a stabbing attack in Golders Green?",
+      "options": [
+        "Severe",
+        "Critical",
+        "Substantial",
+        "Moderate"
+      ],
+      "a": 0,
+      "correctText": "Severe",
+      "category": "World",
+      "source": "https://www.lbc.co.uk/article/uk-terror-threat-level-raised-5HjdYYX_2/"
+    },
+    {
+      "q": "According to a study reported by Disability Scoop on May 1, 2026, a review of over 5,000 social media posts found widespread misinformation primarily regarding which neurodivergence topics?",
+      "options": [
+        "Autism and ADHD",
+        "Dyslexia and dysgraphia",
+        "Tourette's syndrome",
+        "Epilepsy and seizures"
+      ],
+      "a": 0,
+      "correctText": "Autism and ADHD",
+      "category": "Science",
+      "source": "https://www.disabilityscoop.com/2026/05/01/autism-misinformation-widespread-on-social-media-study-finds/"
+    },
+    {
+      "q": "In early May 2026, the U.S. government issued an ultimatum to Zambia threatening to withdraw support for 1.3 million people in what critical health program if American firms were not granted priority mineral access?",
+      "options": [
+        "HIV treatment",
+        "Malaria prevention",
+        "Polio vaccination",
+        "Tuberculosis care"
+      ],
+      "a": 0,
+      "correctText": "HIV treatment",
+      "category": "World",
+      "source": "https://www.ibtimes.co.uk/zambia-diplomatic-ultimatum-mineral-rights-medical-aid-1794390"
+    }
+  ]
+}

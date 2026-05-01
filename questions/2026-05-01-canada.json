@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "U.S. President Donald Trump signed an executive order on April 30, 2026, authorizing which cross-border crude pipeline segment from Canada into Wyoming?",
+      "options": [
+        "Bridger Pipeline",
+        "Keystone XL",
+        "Trans Mountain",
+        "Enbridge Line 5"
+      ],
+      "a": 0,
+      "correctText": "Bridger Pipeline",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/business/trump-authorizes-canada-wyoming-pipeline-9.7183277"
+    },
+    {
+      "q": "RCMP launched an investigation after an Alberta separatist group called The Centurion Project was ordered by a court to take down what publicly posted information?",
+      "options": [
+        "A list of voters and their addresses",
+        "Confidential provincial tax returns",
+        "Undercover police officer identities",
+        "Premier Danielle Smith's personal emails"
+      ],
+      "a": 0,
+      "correctText": "A list of voters and their addresses",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11823997/alberta-elector-list-breach/"
+    },
+    {
+      "q": "Ottawa recently announced that a first-of-its-kind multinational defence bank, designed to lower the cost of financing major military purchases for NATO partners, will be headquartered in which country?",
+      "options": [
+        "Canada",
+        "United States",
+        "United Kingdom",
+        "Germany"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11823824/defence-bank-will-be-headquartered-in-canada/"
+    },
+    {
+      "q": "U.S. Trade Representative Jamieson Greer told Canadians at a Washington roundtable that what phrase is considered strict administration policy, not just a slogan?",
+      "options": [
+        "America First",
+        "Build Back Better",
+        "Buy North American",
+        "Make America Great Again"
+      ],
+      "a": 0,
+      "correctText": "America First",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/trumps-trade-czar-says-us-looking-to-work-with-canada-on-energy-cp-sources/"
+    },
+    {
+      "q": "A Regina man was fined $75,000 and sentenced after pleading guilty to falsifying 31 documents related to what federal process?",
+      "options": [
+        "Immigration and refugee sponsorships",
+        "Commercial trucking licenses",
+        "Agricultural subsidies",
+        "Corporate tax returns"
+      ],
+      "a": 0,
+      "correctText": "Immigration and refugee sponsorships",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/regina/article/regina-man-charged-fined-75k-for-falsifying-31-immigration-documents-cbsa/"
+    }
+  ]
+}

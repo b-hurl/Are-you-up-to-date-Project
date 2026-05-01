@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to a study reported by Disability Scoop on May 1, 2026, a review of over 5,000 social media posts found widespread misinformation primarily regarding which neurodivergence topics?",
+      "options": [
+        "Autism and ADHD",
+        "Dyslexia and dysgraphia",
+        "Tourette's syndrome",
+        "Epilepsy and seizures"
+      ],
+      "a": 0,
+      "correctText": "Autism and ADHD",
+      "category": "Science",
+      "source": "https://www.disabilityscoop.com/2026/05/01/autism-misinformation-widespread-on-social-media-study-finds/"
+    },
+    {
+      "q": "On May 1, 2026, NASA released Landsat 9 satellite imagery showing severe landslide scars in Papua New Guinea that were triggered by which extreme weather event?",
+      "options": [
+        "Tropical Cyclone Maila",
+        "Typhoon Haiyan",
+        "Hurricane Katrina",
+        "El Niño droughts"
+      ],
+      "a": 0,
+      "correctText": "Tropical Cyclone Maila",
+      "category": "Science",
+      "source": "https://earthobservatory.nasa.gov/images/154420/cyclone-rains-spur-papua-new-guinea-landslides"
+    },
+    {
+      "q": "As reported on May 1, 2026, researchers at the University of Queensland developed a new scalable vapour-based manufacturing process for perovskite solar cells that eliminates what toxic material?",
+      "options": [
+        "Lead",
+        "Cadmium",
+        "Arsenic",
+        "Mercury"
+      ],
+      "a": 0,
+      "correctText": "Lead",
+      "category": "Science",
+      "source": "https://www.pv-magazine-australia.com/2026/05/01/queensland-researchers-develop-lead-free-perovskite-material/"
+    },
+    {
+      "q": "A paper highlighted on May 1, 2026, details how Northwestern University researchers successfully used plasma to convert methane into what important industrial chemical?",
+      "options": [
+        "Methanol",
+        "Ammonia",
+        "Ethanol",
+        "Propane"
+      ],
+      "a": 0,
+      "correctText": "Methanol",
+      "category": "Science",
+      "source": "https://dailynorthwestern.com/2026/05/01/campus/northwestern-researchers-find-way-to-use-plasma-in-key-industrial-chemical-reaction/"
+    }
+  ]
+}

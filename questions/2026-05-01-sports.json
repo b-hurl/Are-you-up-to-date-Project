@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In Game 6 of their 2026 first-round series, the New York Knicks eliminated the Atlanta Hawks 140-89. What record-breaking halftime lead did the Knicks hold in that game?",
+      "options": [
+        "47 points",
+        "35 points",
+        "51 points",
+        "40 points"
+      ],
+      "a": 0,
+      "correctText": "47 points",
+      "category": "Sports",
+      "source": "https://apnews.com/article/knicks-hawks-score-nba-playoffs-984a01a2361ae92f0388dae73facbcb2"
+    },
+    {
+      "q": "A 2026 investigation by The Harvard Crimson revealed that players on which university sports team were unknowingly funded by a $25,000 donation from Jeffrey Epstein?",
+      "options": [
+        "Women's Rugby",
+        "Women's Rowing",
+        "Women's Lacrosse",
+        "Women's Ice Hockey"
+      ],
+      "a": 0,
+      "correctText": "Women's Rugby",
+      "category": "Sports",
+      "source": "https://www.thecrimson.com/article/2026/4/30/epstein-rugby-donation/"
+    },
+    {
+      "q": "At the 2026 FIFA Congress in Vancouver, Gianni Infantino's attempt to orchestrate a handshake between delegates from which two football associations backfired?",
+      "options": [
+        "Israel and Palestine",
+        "Russia and Ukraine",
+        "Serbia and Kosovo",
+        "Iran and USA"
+      ],
+      "a": 0,
+      "correctText": "Israel and Palestine",
+      "category": "Sports",
+      "source": "https://www.theguardian.com/football/2026/apr/30/israel-fa-delegate-snubbed-by-palestinian-counterpart-at-fifa-congress"
+    },
+    {
+      "q": "The police department of which Canadian city denied a request to give FIFA President Gianni Infantino a police escort for the 2026 FIFA Congress?",
+      "options": [
+        "Vancouver",
+        "Toronto",
+        "Montreal",
+        "Ottawa"
+      ],
+      "a": 0,
+      "correctText": "Vancouver",
+      "category": "Sports",
+      "source": "https://apnews.com/article/infantino-police-motorcade-vancouver-59e0eaf50a4b9eeec29fe26f95a01ee2"
+    },
+    {
+      "q": "Which former World No. 4 Japanese tennis player announced on May 1, 2026, that he plans to retire from professional tennis at the end of the season?",
+      "options": [
+        "Kei Nishikori",
+        "Yoshihito Nishioka",
+        "Taro Daniel",
+        "Sho Shimabukuro"
+      ],
+      "a": 0,
+      "correctText": "Kei Nishikori",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48641890/former-no-4-kei-nishikori-plans-retire-end-season"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a regulatory filing revealed in late April 2026, Warner Bros. Discovery CEO David Zaslav's compensation package more than tripled in 2025 to what amount?",
+      "options": [
+        "$165 million",
+        "$75 million",
+        "$250 million",
+        "$55 million"
+      ],
+      "a": 0,
+      "correctText": "David Zaslav's 2025 total compensation surged to $165 million, largely due to a massive stock option award.",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/david-zaslav-warner-bros-discovery-compensation-2025-1236734023/"
+    },
+    {
+      "q": "In May 2026, subscribers filed a federal antitrust lawsuit seeking to block Paramount's acquisition deals involving Skydance and which other major studio?",
+      "options": [
+        "Warner Bros. Discovery",
+        "Sony Pictures",
+        "Universal Pictures",
+        "The Walt Disney Company"
+      ],
+      "a": 0,
+      "correctText": "A class-action lawsuit was filed by subscribers aiming to halt the Paramount, Skydance, and Warner Bros. Discovery merger deals.",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/business-news/paramount-sued-subscribers-warner-bros-skydance-deals-1236581570/"
+    },
+    {
+      "q": "Which actor was the center of a five-studio bidding war in late April 2026 to star in a feature film adaptation of the video game 'Battlefield'?",
+      "options": [
+        "Michael B. Jordan",
+        "John Boyega",
+        "Tom Holland",
+        "Henry Cavill"
+      ],
+      "a": 0,
+      "correctText": "Five studios submitted bids for a 'Battlefield' movie package starring Michael B. Jordan and directed by Christopher McQuarrie.",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/creative-content/movies/battlefield-movie-bidding-war-studios-warner-bros-netflix-michael-b-jordan/"
+    },
+    {
+      "q": "In May 2026, director Pavel Talankin reported that an airline had lost his recently awarded Documentary Oscar for which film?",
+      "options": [
+        "Mr. Nobody Against Putin",
+        "20 Days in Mariupol",
+        "Navalny",
+        "The Dissident"
+      ],
+      "a": 0,
+      "correctText": "Pavel Talankin stated that his Oscar statuette for 'Mr. Nobody Against Putin' went missing after the TSA forced him to check it in his luggage.",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/airline-lost-oscar-mr-nobody-against-putin-director-says-1236581253/"
+    },
+    {
+      "q": "Ben Leonberg, the director of 'Good Boy', was announced in April 2026 to be making 'Follow Mode', a new horror film focused on what piece of technology?",
+      "options": [
+        "A consumer-grade drone",
+        "A smart home assistant",
+        "An autonomous car",
+        "An augmented reality headset"
+      ],
+      "a": 0,
+      "correctText": "Leonberg's 'Follow Mode' is a drone horror film where a consumer-grade drone's tracking setting turns deadly.",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/04/good-boy-ben-leonberg-making-drone-horror-film-follow-mode-1236876869/"
+    }
+  ]
+}
