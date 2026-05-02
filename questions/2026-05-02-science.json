@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A recent study featured in the news on May 2, 2026, found that small doses of which antibiotic yielded good results in treating panic attacks by reducing inflammation in microglia?",
+      "options": [
+        "Minocycline",
+        "Amoxicillin",
+        "Ciprofloxacin",
+        "Doxycycline"
+      ],
+      "a": 0,
+      "correctText": "Minocycline",
+      "category": "Science",
+      "source": "https://agencia.fapesp.br/small-dose-of-antibiotic-yields-good-results-in-treating-panic-attacks/57917"
+    },
+    {
+      "q": "According to a study published around May 2, 2026, replacing meat and dairy with alternatives can cut food-related emissions by what percentage?",
+      "options": [
+        "50%",
+        "25%",
+        "75%",
+        "90%"
+      ],
+      "a": 0,
+      "correctText": "50%",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s44458-026-00075-1"
+    },
+    {
+      "q": "A double-blind, placebo-controlled study circulating in early May 2026 found that the drug methylphenidate reduced what type of behavior among healthy adults?",
+      "options": [
+        "Dishonesty",
+        "Aggression",
+        "Procrastination",
+        "Impulsivity"
+      ],
+      "a": 0,
+      "correctText": "Dishonesty",
+      "category": "Science",
+      "source": "https://link.springer.com/article/10.1007/s00213-026-07059-y"
+    },
+    {
+      "q": "A new UCSF study highlighted in May 2026 medical news found that rapid weight loss caused by GLP-1 drugs can lead to which side effect?",
+      "options": [
+        "Hair loss",
+        "Hearing loss",
+        "Bone density reduction",
+        "Vision impairment"
+      ],
+      "a": 0,
+      "correctText": "Hair loss",
+      "category": "Science",
+      "source": "https://www.sfgate.com/bayarea/article/ozempic-hair-loss-research-22235173.php"
+    },
+    {
+      "q": "Research released in May 2026 revealed that mothers who lack a specific fatty acid in their blood during pregnancy are more likely to have children who develop what condition?",
+      "options": [
+        "Asthma",
+        "Eczema",
+        "Type 1 Diabetes",
+        "Autism Spectrum Disorder"
+      ],
+      "a": 0,
+      "correctText": "Asthma",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1126482"
+    }
+  ]
+}

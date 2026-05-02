@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-02",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which upcoming comedy directed by and starring Jonah Hill alongside Kristen Wiig was pulled from Warner Bros.' July 2026 release schedule?",
+      "options": [
+        "Cut Off",
+        "Outcome",
+        "Mid90s",
+        "Twinless"
+      ],
+      "a": 0,
+      "correctText": "Cut Off",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/cut-off-jonah-hill-kristen-wiig-release-date-warner-bros-1236582051/"
+    },
+    {
+      "q": "Who scored 32 points to lead the Detroit Pistons in an epic 24-point comeback victory over the Orlando Magic to force Game 7?",
+      "options": [
+        "Cade Cunningham",
+        "Tobias Harris",
+        "Paolo Banchero",
+        "Franz Wagner"
+      ],
+      "a": 0,
+      "correctText": "Cade Cunningham",
+      "category": "Sports",
+      "source": "https://apnews.com/article/pistons-magic-score-nba-playoffs-21c0fd317e2c1ae10648bf8ec71849fc"
+    },
+    {
+      "q": "In May 2026, Take-Two CEO Strauss Zelnick ruled out what feature for Grand Theft Auto 6, stating that \"all the brands are made up\"?",
+      "options": [
+        "Real world brand partnerships",
+        "Celebrity voice cameos",
+        "Licensed music radio stations",
+        "In-game cryptocurrency"
+      ],
+      "a": 0,
+      "correctText": "Real world brand partnerships",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/dont-expect-product-placement-in-gta-6-the-ceo-of-take-two-says-it-wont-do-real-world-brand-partnerships-because-all-the-brands-are-made-up"
+    },
+    {
+      "q": "Which Bethesda game remaster was described by Digital Foundry in May 2026 as \"still broken a year after release\"?",
+      "options": [
+        "Oblivion Remastered",
+        "Skyrim Anniversary Edition",
+        "Fallout 3 Remastered",
+        "Morrowind Remastered"
+      ],
+      "a": 0,
+      "correctText": "Oblivion Remastered",
+      "category": "Gaming",
+      "source": "https://www.digitalfoundry.net/news/2026/05/yup-oblivion-remastered-is-still-broken-a-year-after-release"
+    },
+    {
+      "q": "The Los Angeles Lakers used a ruthless 27-3 surge to bury which team in Game 6 of their 2026 Western Conference playoff series?",
+      "options": [
+        "Houston Rockets",
+        "Phoenix Suns",
+        "Dallas Mavericks",
+        "Golden State Warriors"
+      ],
+      "a": 0,
+      "correctText": "Houston Rockets",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3fa694ba5879166fbee0ad60907c604d"
+    },
+    {
+      "q": "Which Los Angeles Lakers player scored 28 points in a 98-78 Game 6 victory to eliminate the Houston Rockets in the 2026 playoffs?",
+      "options": [
+        "LeBron James",
+        "Rui Hachimura",
+        "Austin Reaves",
+        "Deandre Ayton"
+      ],
+      "a": 0,
+      "correctText": "LeBron James",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3fa694ba5879166fbee0ad60907c604d"
+    },
+    {
+      "q": "In May 2026, Diego Luna was announced to be joining the cast of which live-action Disney remake in a newly created role?",
+      "options": [
+        "Tangled",
+        "Moana",
+        "Hercules",
+        "The Aristocats"
+      ],
+      "a": 0,
+      "correctText": "Tangled",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/tangled-live-action-diego-luna-cast-1236581994/"
+    },
+    {
+      "q": "In a move reported in late April and early May 2026, the U.S. FDA proposed excluding active ingredients for which class of popular drugs from the list used by compounding pharmacies?",
+      "options": [
+        "Weight-loss drugs",
+        "Antibiotics",
+        "Antidepressants",
+        "Asthma inhalers"
+      ],
+      "a": 0,
+      "correctText": "Weight-loss drugs",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/us-fda-proposes-excluding-weight-135418702.html?ncid=redditnewsus"
+    },
+    {
+      "q": "On April 30, 2026, President Trump pulled the stalled surgeon general nomination of Casey Means and announced which medical professional and Fox News contributor as his new pick?",
+      "options": [
+        "Dr. Nicole Saphier",
+        "Dr. Janette Nesheiwat",
+        "Dr. Mehmet Oz",
+        "Dr. Sanjay Gupta"
+      ],
+      "a": 0,
+      "correctText": "Dr. Nicole Saphier",
+      "category": "Health",
+      "source": "https://www.npr.org/2026/04/30/g-s1-119571/nicole-saphier-trump-casey-means-surgeon-general-nomination"
+    },
+    {
+      "q": "Which team did the Detroit Pistons defeat 93-79 after rallying from a 24-point deficit to force a Game 7 in their 2026 playoff series?",
+      "options": [
+        "Orlando Magic",
+        "Miami Heat",
+        "Atlanta Hawks",
+        "Indiana Pacers"
+      ],
+      "a": 0,
+      "correctText": "Orlando Magic",
+      "category": "Sports",
+      "source": "https://apnews.com/article/pistons-magic-score-nba-playoffs-21c0fd317e2c1ae10648bf8ec71849fc"
+    }
+  ]
+}

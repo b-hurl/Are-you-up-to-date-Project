@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Canadian pharmaceutical company just received Health Canada approval to manufacture the second generic version of Ozempic?",
+      "options": [
+        "Apotex",
+        "Pharmascience",
+        "Jamieson",
+        "Bausch Health"
+      ],
+      "a": 0,
+      "correctText": "Apotex",
+      "category": "Canada",
+      "source": "https://www.cp24.com/news/canada/2026/05/01/health-canada-approves-2nd-generic-version-of-ozempic-and-its-canadian/"
+    },
+    {
+      "q": "Following a U.S. pipeline deal signed by Donald Trump, what infrastructure project did Prime Minister Mark Carney say is \"more likely than not\" for Alberta?",
+      "options": [
+        "A new oil export pipeline",
+        "A cross-border high-speed railway",
+        "A multinational nuclear power plant",
+        "A trans-continental aqueduct"
+      ],
+      "a": 0,
+      "correctText": "A new oil export pipeline",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/alberta-oil-pipeline-is-more-likely-than-not-pm-carney-says/"
+    },
+    {
+      "q": "The federal government announced it is quadrupling the maximum fine for airlines that repeatedly violate the air passenger bill of rights. What is the new maximum fine?",
+      "options": [
+        "$1 million",
+        "$500,000",
+        "$2 million",
+        "$5 million"
+      ],
+      "a": 0,
+      "correctText": "$1 million",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/government-boosting-airline-fines-air-passenger-rights-9.7183609"
+    },
+    {
+      "q": "Prime Minister Mark Carney recently announced an initial $25 billion investment to launch Canada's first national sovereign wealth fund. What is the fund called?",
+      "options": [
+        "Canada Strong Fund",
+        "True North Sovereign Fund",
+        "Maple Heritage Fund",
+        "Northern Prosperity Trust"
+      ],
+      "a": 0,
+      "correctText": "Canada Strong Fund",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11825911/norway-singapore-canada-sovereign-wealth-fund/"
+    },
+    {
+      "q": "Canadian Olympic pole vaulter Alysha Newman was recently handed a 20-month ban by the Athletics Integrity Unit for what reason?",
+      "options": [
+        "Whereabouts failures",
+        "Testing positive for steroids",
+        "Using unauthorized footwear",
+        "Bribery of officials"
+      ],
+      "a": 0,
+      "correctText": "Whereabouts failures",
+      "category": "Canada",
+      "source": "https://runningmagazine.ca/the-scene/canadian-olympic-medallist-alysha-newman-banned-for-20-months/"
+    }
+  ]
+}

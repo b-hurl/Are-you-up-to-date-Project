@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to director Naoki Hamaguchi in a May 2026 interview, how many full playthroughs of the third Final Fantasy VII Remake game has he already completed?",
+      "options": [
+        "Over 40",
+        "Exactly 10",
+        "Over 100",
+        "None yet"
+      ],
+      "a": 0,
+      "correctText": "Over 40",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/05/final-fantasy-vii-director-has-already-completed-over-40-full-playthroughs-of-the-third-game"
+    },
+    {
+      "q": "In May 2026, Take-Two CEO Strauss Zelnick ruled out what feature for Grand Theft Auto 6, stating that \"all the brands are made up\"?",
+      "options": [
+        "Real world brand partnerships",
+        "Celebrity voice cameos",
+        "Licensed music radio stations",
+        "In-game cryptocurrency"
+      ],
+      "a": 0,
+      "correctText": "Real world brand partnerships",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/dont-expect-product-placement-in-gta-6-the-ceo-of-take-two-says-it-wont-do-real-world-brand-partnerships-because-all-the-brands-are-made-up"
+    },
+    {
+      "q": "Which Bethesda game remaster was described by Digital Foundry in May 2026 as \"still broken a year after release\"?",
+      "options": [
+        "Oblivion Remastered",
+        "Skyrim Anniversary Edition",
+        "Fallout 3 Remastered",
+        "Morrowind Remastered"
+      ],
+      "a": 0,
+      "correctText": "Oblivion Remastered",
+      "category": "Gaming",
+      "source": "https://www.digitalfoundry.net/news/2026/05/yup-oblivion-remastered-is-still-broken-a-year-after-release"
+    },
+    {
+      "q": "In a May 2026 character trailer for \"Avatar Legends: The Fighting Game\", which character was highlighted for his mastery of the boomerang?",
+      "options": [
+        "Sokka",
+        "Zuko",
+        "Aang",
+        "Katara"
+      ],
+      "a": 0,
+      "correctText": "Sokka",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=S4_GC-CwLu4"
+    },
+    {
+      "q": "The development team of \"Magical Princess\" shared a major milestone in May 2026, announcing the game sold how many units within just two days of release?",
+      "options": [
+        "100,000",
+        "250,000",
+        "500,000",
+        "1,000,000"
+      ],
+      "a": 0,
+      "correctText": "100,000",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3562120/view/657105177931678231?l=english"
+    }
+  ]
+}

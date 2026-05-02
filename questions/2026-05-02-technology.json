@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "As of May 2, 2026, the US military reached deals with seven tech companies to use their AI on classified systems. Which prominent company was labeled a supply-chain risk and excluded?",
+      "options": [
+        "Anthropic",
+        "OpenAI",
+        "Google",
+        "Microsoft"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Technology",
+      "source": "https://www.lockhaven.com/news/local-news/2026/05/us-military-reaches-deals-with-seven-tech-companies/"
+    },
+    {
+      "q": "On May 2, 2026, it was reported that Huawei expects its AI chip revenue to jump to $12 billion this year, largely driven by mass production of which processor?",
+      "options": [
+        "Ascend 950PR",
+        "Kirin 9000S",
+        "Ascend 910B",
+        "Snapdragon 8 Gen 4"
+      ],
+      "a": 0,
+      "correctText": "Ascend 950PR",
+      "category": "Technology",
+      "source": "https://www.indexbox.io/news/huawei-expects-ai-chip-revenue-to-hit-12-billion-in-2026/"
+    },
+    {
+      "q": "Which company announced on May 2, 2026, that it secured a U.S. Patent for its graph-based conversational-flow editing technology to democratize AI agent creation?",
+      "options": [
+        "SalesCloser Technologies",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk"
+      ],
+      "a": 0,
+      "correctText": "SalesCloser Technologies",
+      "category": "Technology",
+      "source": "https://www.taiwannews.com.tw/news/salescloser-secures-us-patent-for-ai-powered-conversational-workflow-technology"
+    },
+    {
+      "q": "Despite a cautious outlook for the smartphone market, which Taiwanese fabless semiconductor company announced on May 2, 2026, that it is lifting its ASIC target to $2 billion?",
+      "options": [
+        "MediaTek",
+        "TSMC",
+        "Realtek",
+        "Novatek"
+      ],
+      "a": 0,
+      "correctText": "MediaTek",
+      "category": "Technology",
+      "source": "https://www.digitimes.com/news/mediatek-lifts-2026-asic-target-to-2-billion-despite-smartphone-market-deterioration/"
+    }
+  ]
+}

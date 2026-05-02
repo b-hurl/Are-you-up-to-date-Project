@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a new UCSF study highlighted in early May 2026, what surprising side effect has been linked to GLP-1 weight loss drugs during periods of rapid weight loss?",
+      "options": [
+        "Hair loss",
+        "Memory loss",
+        "Bone density reduction",
+        "Vision impairment"
+      ],
+      "a": 0,
+      "correctText": "Hair loss",
+      "category": "Health",
+      "source": "https://www.sfgate.com/bayarea/article/ozempic-hair-loss-research-22235173.php"
+    },
+    {
+      "q": "In early May 2026, the FDA approved expanded access to daraxonrasib, a promising but unapproved drug used to treat what specific type of cancer?",
+      "options": [
+        "Pancreatic cancer",
+        "Lung cancer",
+        "Melanoma",
+        "Leukemia"
+      ],
+      "a": 0,
+      "correctText": "Pancreatic cancer",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/daraxonrasib-pancreatic-cancer-drug-fda-expanded-access-ben-sasse/"
+    },
+    {
+      "q": "On April 30, 2026, President Trump pulled the stalled surgeon general nomination of Casey Means and announced which medical professional and Fox News contributor as his new pick?",
+      "options": [
+        "Dr. Nicole Saphier",
+        "Dr. Janette Nesheiwat",
+        "Dr. Mehmet Oz",
+        "Dr. Sanjay Gupta"
+      ],
+      "a": 0,
+      "correctText": "Dr. Nicole Saphier",
+      "category": "Health",
+      "source": "https://www.npr.org/2026/04/30/g-s1-119571/nicole-saphier-trump-casey-means-surgeon-general-nomination"
+    },
+    {
+      "q": "A health report from May 2, 2026, highlighted that which liver condition is currently on the rise globally, largely driven by increasing rates of obesity and metabolic disorders?",
+      "options": [
+        "Fatty liver disease",
+        "Cirrhosis",
+        "Hepatitis C",
+        "Liver cancer"
+      ],
+      "a": 0,
+      "correctText": "Fatty liver disease",
+      "category": "Health",
+      "source": "https://www.aol.com/articles/fatty-liver-disease-rise-globally-183000990.html"
+    },
+    {
+      "q": "In a move reported in late April and early May 2026, the U.S. FDA proposed excluding active ingredients for which class of popular drugs from the list used by compounding pharmacies?",
+      "options": [
+        "Weight-loss drugs",
+        "Antibiotics",
+        "Antidepressants",
+        "Asthma inhalers"
+      ],
+      "a": 0,
+      "correctText": "Weight-loss drugs",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/us-fda-proposes-excluding-weight-135418702.html?ncid=redditnewsus"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In a morning briefing on May 2, 2026, it was reported that the US Defense Department ordered the withdrawal of how many troops from Germany?",
+      "options": [
+        "5,000",
+        "2,000",
+        "10,000",
+        "1,500"
+      ],
+      "a": 0,
+      "correctText": "5,000",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-2-2026"
+    },
+    {
+      "q": "Reported on May 2, 2026, US President Donald Trump formally notified Congress that hostilities had 'terminated' with which country?",
+      "options": [
+        "Iran",
+        "North Korea",
+        "Venezuela",
+        "Yemen"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://www.gmanetwork.com/news/topstories/world/922241/live-updates-conflict-in-the-middle-east-may-2-2026/story/"
+    },
+    {
+      "q": "As reported on May 2, 2026, which country suspended all cooperation with the European Parliament over an alleged 'Islamophobic' agenda?",
+      "options": [
+        "Azerbaijan",
+        "Turkey",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "a": 0,
+      "correctText": "Azerbaijan",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-2-2026"
+    },
+    {
+      "q": "According to reports on May 2, 2026, President Trump announced plans to raise tariffs on cars and trucks from the European Union to what percentage?",
+      "options": [
+        "25%",
+        "15%",
+        "10%",
+        "35%"
+      ],
+      "a": 0,
+      "correctText": "25%",
+      "category": "World",
+      "source": "https://www.vindy.com/news/local-news/2026/05/nation-and-world-at-a-glance-for-may-2/"
+    },
+    {
+      "q": "As reported on May 2, 2026, former Miami Congressman David Rivera was convicted of secretly lobbying for the government of which country?",
+      "options": [
+        "Venezuela",
+        "Cuba",
+        "Russia",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Venezuela",
+      "category": "World",
+      "source": "https://www.vindy.com/news/local-news/2026/05/nation-and-world-at-a-glance-for-may-2/"
+    }
+  ]
+}

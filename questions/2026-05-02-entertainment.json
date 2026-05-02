@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In early May 2026, the Academy announced new rules for the 2027 Oscars, which included an explicit ban on what type of performances and screenplays?",
+      "options": [
+        "AI-generated performances and screenplays",
+        "Motion capture performances",
+        "Voice-only acting roles",
+        "Performances by non-professional actors"
+      ],
+      "a": 0,
+      "correctText": "AI-generated performances and screenplays",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/awards/oscars-2026-rules-ai-acting-nominations-international-1236734659/"
+    },
+    {
+      "q": "Which upcoming comedy directed by and starring Jonah Hill alongside Kristen Wiig was pulled from Warner Bros.' July 2026 release schedule?",
+      "options": [
+        "Cut Off",
+        "Outcome",
+        "Mid90s",
+        "Twinless"
+      ],
+      "a": 0,
+      "correctText": "Cut Off",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/cut-off-jonah-hill-kristen-wiig-release-date-warner-bros-1236582051/"
+    },
+    {
+      "q": "In May 2026, Diego Luna was announced to be joining the cast of which live-action Disney remake in a newly created role?",
+      "options": [
+        "Tangled",
+        "Moana",
+        "Hercules",
+        "The Aristocats"
+      ],
+      "a": 0,
+      "correctText": "Tangled",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/tangled-live-action-diego-luna-cast-1236581994/"
+    },
+    {
+      "q": "Which Academy Award-nominated actor was officially confirmed in May 2026 to be joining the cast of Greta Gerwig's Netflix adaptation of 'Narnia: The Magician's Nephew'?",
+      "options": [
+        "Ciarán Hinds",
+        "Liam Neeson",
+        "Brendan Gleeson",
+        "Colin Farrell"
+      ],
+      "a": 0,
+      "correctText": "Ciarán Hinds",
+      "category": "Entertainment",
+      "source": "https://www.narniaweb.com/2026/05/netflix-reveals-10-confirmed-narnia-cast-members-including-ciaran-hinds/"
+    },
+    {
+      "q": "Which airline made headlines in early May 2026 for temporarily losing the Best Documentary Oscar belonging to the director of 'Mr. Nobody Against Putin'?",
+      "options": [
+        "Lufthansa",
+        "British Airways",
+        "Air France",
+        "Delta Air Lines"
+      ],
+      "a": 0,
+      "correctText": "Lufthansa",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/lufthansa-finds-lost-oscar-mr-nobody-against-putin-1236581798/"
+    }
+  ]
+}

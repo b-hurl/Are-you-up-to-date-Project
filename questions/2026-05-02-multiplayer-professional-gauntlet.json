@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-02",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which Canadian pharmaceutical company just received Health Canada approval to manufacture the second generic version of Ozempic?",
+      "options": [
+        "Apotex",
+        "Pharmascience",
+        "Jamieson",
+        "Bausch Health"
+      ],
+      "a": 0,
+      "correctText": "Apotex",
+      "category": "Canada",
+      "source": "https://www.cp24.com/news/canada/2026/05/01/health-canada-approves-2nd-generic-version-of-ozempic-and-its-canadian/"
+    },
+    {
+      "q": "Despite a cautious outlook for the smartphone market, which Taiwanese fabless semiconductor company announced on May 2, 2026, that it is lifting its ASIC target to $2 billion?",
+      "options": [
+        "MediaTek",
+        "TSMC",
+        "Realtek",
+        "Novatek"
+      ],
+      "a": 0,
+      "correctText": "MediaTek",
+      "category": "Technology",
+      "source": "https://www.digitimes.com/news/mediatek-lifts-2026-asic-target-to-2-billion-despite-smartphone-market-deterioration/"
+    },
+    {
+      "q": "As of May 2, 2026, the US military reached deals with seven tech companies to use their AI on classified systems. Which prominent company was labeled a supply-chain risk and excluded?",
+      "options": [
+        "Anthropic",
+        "OpenAI",
+        "Google",
+        "Microsoft"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Technology",
+      "source": "https://www.lockhaven.com/news/local-news/2026/05/us-military-reaches-deals-with-seven-tech-companies/"
+    },
+    {
+      "q": "According to reports on May 2, 2026, President Trump announced plans to raise tariffs on cars and trucks from the European Union to what percentage?",
+      "options": [
+        "25%",
+        "15%",
+        "10%",
+        "35%"
+      ],
+      "a": 0,
+      "correctText": "25%",
+      "category": "World",
+      "source": "https://www.vindy.com/news/local-news/2026/05/nation-and-world-at-a-glance-for-may-2/"
+    },
+    {
+      "q": "As reported on May 2, 2026, former Miami Congressman David Rivera was convicted of secretly lobbying for the government of which country?",
+      "options": [
+        "Venezuela",
+        "Cuba",
+        "Russia",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Venezuela",
+      "category": "World",
+      "source": "https://www.vindy.com/news/local-news/2026/05/nation-and-world-at-a-glance-for-may-2/"
+    },
+    {
+      "q": "Which major U.S. airline announced it would halt all flights as of early Saturday in May 2026 amidst financial struggles?",
+      "options": [
+        "Spirit Airlines",
+        "Frontier Airlines",
+        "JetBlue Airways",
+        "Allegiant Air"
+      ],
+      "a": 0,
+      "correctText": "Spirit Airlines",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/02/business/spirit-to-halt-all-flights?cid=ios_app"
+    },
+    {
+      "q": "A new UCSF study highlighted in May 2026 medical news found that rapid weight loss caused by GLP-1 drugs can lead to which side effect?",
+      "options": [
+        "Hair loss",
+        "Hearing loss",
+        "Bone density reduction",
+        "Vision impairment"
+      ],
+      "a": 0,
+      "correctText": "Hair loss",
+      "category": "Science",
+      "source": "https://www.sfgate.com/bayarea/article/ozempic-hair-loss-research-22235173.php"
+    },
+    {
+      "q": "Following a U.S. pipeline deal signed by Donald Trump, what infrastructure project did Prime Minister Mark Carney say is \"more likely than not\" for Alberta?",
+      "options": [
+        "A new oil export pipeline",
+        "A cross-border high-speed railway",
+        "A multinational nuclear power plant",
+        "A trans-continental aqueduct"
+      ],
+      "a": 0,
+      "correctText": "A new oil export pipeline",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/alberta-oil-pipeline-is-more-likely-than-not-pm-carney-says/"
+    },
+    {
+      "q": "Canadian Olympic pole vaulter Alysha Newman was recently handed a 20-month ban by the Athletics Integrity Unit for what reason?",
+      "options": [
+        "Whereabouts failures",
+        "Testing positive for steroids",
+        "Using unauthorized footwear",
+        "Bribery of officials"
+      ],
+      "a": 0,
+      "correctText": "Whereabouts failures",
+      "category": "Canada",
+      "source": "https://runningmagazine.ca/the-scene/canadian-olympic-medallist-alysha-newman-banned-for-20-months/"
+    },
+    {
+      "q": "Which company announced on May 2, 2026, that it secured a U.S. Patent for its graph-based conversational-flow editing technology to democratize AI agent creation?",
+      "options": [
+        "SalesCloser Technologies",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk"
+      ],
+      "a": 0,
+      "correctText": "SalesCloser Technologies",
+      "category": "Technology",
+      "source": "https://www.taiwannews.com.tw/news/salescloser-secures-us-patent-for-ai-powered-conversational-workflow-technology"
+    }
+  ]
+}

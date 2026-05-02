@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who scored 32 points to lead the Detroit Pistons in an epic 24-point comeback victory over the Orlando Magic to force Game 7?",
+      "options": [
+        "Cade Cunningham",
+        "Tobias Harris",
+        "Paolo Banchero",
+        "Franz Wagner"
+      ],
+      "a": 0,
+      "correctText": "Cade Cunningham",
+      "category": "Sports",
+      "source": "https://apnews.com/article/pistons-magic-score-nba-playoffs-21c0fd317e2c1ae10648bf8ec71849fc"
+    },
+    {
+      "q": "Which team did the Detroit Pistons defeat 93-79 after rallying from a 24-point deficit to force a Game 7 in their 2026 playoff series?",
+      "options": [
+        "Orlando Magic",
+        "Miami Heat",
+        "Atlanta Hawks",
+        "Indiana Pacers"
+      ],
+      "a": 0,
+      "correctText": "Orlando Magic",
+      "category": "Sports",
+      "source": "https://apnews.com/article/pistons-magic-score-nba-playoffs-21c0fd317e2c1ae10648bf8ec71849fc"
+    },
+    {
+      "q": "Which Los Angeles Lakers player scored 28 points in a 98-78 Game 6 victory to eliminate the Houston Rockets in the 2026 playoffs?",
+      "options": [
+        "LeBron James",
+        "Rui Hachimura",
+        "Austin Reaves",
+        "Deandre Ayton"
+      ],
+      "a": 0,
+      "correctText": "LeBron James",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3fa694ba5879166fbee0ad60907c604d"
+    },
+    {
+      "q": "The Los Angeles Lakers used a ruthless 27-3 surge to bury which team in Game 6 of their 2026 Western Conference playoff series?",
+      "options": [
+        "Houston Rockets",
+        "Phoenix Suns",
+        "Dallas Mavericks",
+        "Golden State Warriors"
+      ],
+      "a": 0,
+      "correctText": "Houston Rockets",
+      "category": "Sports",
+      "source": "https://apnews.com/article/rockets-lakers-score-3fa694ba5879166fbee0ad60907c604d"
+    },
+    {
+      "q": "Which golfer fired a 67 to share the lead at the LPGA tournament in Mexico in early May 2026?",
+      "options": [
+        "Nelly Korda",
+        "Rose Zhang",
+        "Celine Boutier",
+        "Lydia Ko"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48650423/nelly-korda-fires-67-shares-lead-lpga-mexico"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-02",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In a May 2026 character trailer for \"Avatar Legends: The Fighting Game\", which character was highlighted for his mastery of the boomerang?",
+      "options": [
+        "Sokka",
+        "Zuko",
+        "Aang",
+        "Katara"
+      ],
+      "a": 0,
+      "correctText": "Sokka",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=S4_GC-CwLu4"
+    },
+    {
+      "q": "In early May 2026, the Academy announced new rules for the 2027 Oscars, which included an explicit ban on what type of performances and screenplays?",
+      "options": [
+        "AI-generated performances and screenplays",
+        "Motion capture performances",
+        "Voice-only acting roles",
+        "Performances by non-professional actors"
+      ],
+      "a": 0,
+      "correctText": "AI-generated performances and screenplays",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/awards/oscars-2026-rules-ai-acting-nominations-international-1236734659/"
+    },
+    {
+      "q": "Which golfer fired a 67 to share the lead at the LPGA tournament in Mexico in early May 2026?",
+      "options": [
+        "Nelly Korda",
+        "Rose Zhang",
+        "Celine Boutier",
+        "Lydia Ko"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48650423/nelly-korda-fires-67-shares-lead-lpga-mexico"
+    },
+    {
+      "q": "In early May 2026, the FDA approved expanded access to daraxonrasib, a promising but unapproved drug used to treat what specific type of cancer?",
+      "options": [
+        "Pancreatic cancer",
+        "Lung cancer",
+        "Melanoma",
+        "Leukemia"
+      ],
+      "a": 0,
+      "correctText": "Pancreatic cancer",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/daraxonrasib-pancreatic-cancer-drug-fda-expanded-access-ben-sasse/"
+    },
+    {
+      "q": "According to director Naoki Hamaguchi in a May 2026 interview, how many full playthroughs of the third Final Fantasy VII Remake game has he already completed?",
+      "options": [
+        "Over 40",
+        "Exactly 10",
+        "Over 100",
+        "None yet"
+      ],
+      "a": 0,
+      "correctText": "Over 40",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/05/final-fantasy-vii-director-has-already-completed-over-40-full-playthroughs-of-the-third-game"
+    },
+    {
+      "q": "The development team of \"Magical Princess\" shared a major milestone in May 2026, announcing the game sold how many units within just two days of release?",
+      "options": [
+        "100,000",
+        "250,000",
+        "500,000",
+        "1,000,000"
+      ],
+      "a": 0,
+      "correctText": "100,000",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3562120/view/657105177931678231?l=english"
+    },
+    {
+      "q": "Which airline made headlines in early May 2026 for temporarily losing the Best Documentary Oscar belonging to the director of 'Mr. Nobody Against Putin'?",
+      "options": [
+        "Lufthansa",
+        "British Airways",
+        "Air France",
+        "Delta Air Lines"
+      ],
+      "a": 0,
+      "correctText": "Lufthansa",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/lufthansa-finds-lost-oscar-mr-nobody-against-putin-1236581798/"
+    },
+    {
+      "q": "Which Academy Award-nominated actor was officially confirmed in May 2026 to be joining the cast of Greta Gerwig's Netflix adaptation of 'Narnia: The Magician's Nephew'?",
+      "options": [
+        "Ciarán Hinds",
+        "Liam Neeson",
+        "Brendan Gleeson",
+        "Colin Farrell"
+      ],
+      "a": 0,
+      "correctText": "Ciarán Hinds",
+      "category": "Entertainment",
+      "source": "https://www.narniaweb.com/2026/05/netflix-reveals-10-confirmed-narnia-cast-members-including-ciaran-hinds/"
+    },
+    {
+      "q": "According to a new UCSF study highlighted in early May 2026, what surprising side effect has been linked to GLP-1 weight loss drugs during periods of rapid weight loss?",
+      "options": [
+        "Hair loss",
+        "Memory loss",
+        "Bone density reduction",
+        "Vision impairment"
+      ],
+      "a": 0,
+      "correctText": "Hair loss",
+      "category": "Health",
+      "source": "https://www.sfgate.com/bayarea/article/ozempic-hair-loss-research-22235173.php"
+    },
+    {
+      "q": "A health report from May 2, 2026, highlighted that which liver condition is currently on the rise globally, largely driven by increasing rates of obesity and metabolic disorders?",
+      "options": [
+        "Fatty liver disease",
+        "Cirrhosis",
+        "Hepatitis C",
+        "Liver cancer"
+      ],
+      "a": 0,
+      "correctText": "Fatty liver disease",
+      "category": "Health",
+      "source": "https://www.aol.com/articles/fatty-liver-disease-rise-globally-183000990.html"
+    }
+  ]
+}

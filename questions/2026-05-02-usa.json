@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which major U.S. airline announced it would halt all flights as of early Saturday in May 2026 amidst financial struggles?",
+      "options": [
+        "Spirit Airlines",
+        "Frontier Airlines",
+        "JetBlue Airways",
+        "Allegiant Air"
+      ],
+      "a": 0,
+      "correctText": "Spirit Airlines",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/02/business/spirit-to-halt-all-flights?cid=ios_app"
+    },
+    {
+      "q": "In a ruling reported on May 1, 2026, a federal appeals court restricted access across the U.S. to which common abortion pill by blocking its mailing?",
+      "options": [
+        "Mifepristone",
+        "Misoprostol",
+        "Plan B",
+        "Levonorgestrel"
+      ],
+      "a": 0,
+      "correctText": "Mifepristone",
+      "category": "Usa",
+      "source": "https://apnews.com/article/abortion-pills-mail-louisiana-ruling-40d60a9bf6212480e527480757b603c3"
+    },
+    {
+      "q": "A small plane that crashed in the Texas Hill Country in early May 2026, tragically killing all five people on board, was carrying players of what sport?",
+      "options": [
+        "Pickleball",
+        "Tennis",
+        "Golf",
+        "Badminton"
+      ],
+      "a": 0,
+      "correctText": "Pickleball",
+      "category": "Usa",
+      "source": "https://apnews.com/article/texas-small-plane-crash-57cd22e7f5d91eb68a04a43a66b4ab5a"
+    },
+    {
+      "q": "The Pentagon reached deals with seven tech companies in early May 2026 to use their AI on classified systems, but which major AI startup was notably excluded due to an ongoing legal dispute?",
+      "options": [
+        "Anthropic",
+        "OpenAI",
+        "Reflection",
+        "Scale AI"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Usa",
+      "source": "https://apnews.com/article/pentagon-artificial-intelligence-military-classified-systems-war-060cecf836c4cebcf012a3ceb5333f2c"
+    },
+    {
+      "q": "Which U.S. Navy guided-missile destroyer lost power and propulsion for several hours in the Indo-Pacific after an 'engineering casualty' in early May 2026?",
+      "options": [
+        "USS Higgins",
+        "USS Zumwalt",
+        "USS Gerald R. Ford",
+        "USS John McCain"
+      ],
+      "a": 0,
+      "correctText": "USS Higgins",
+      "category": "Usa",
+      "source": "https://www.ctvnews.ca/world/article/us-navy-warship-lost-power-and-propulsion-for-hours-defence-official-says/"
+    }
+  ]
+}

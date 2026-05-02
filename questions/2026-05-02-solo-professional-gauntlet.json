@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-02",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A recent study featured in the news on May 2, 2026, found that small doses of which antibiotic yielded good results in treating panic attacks by reducing inflammation in microglia?",
+      "options": [
+        "Minocycline",
+        "Amoxicillin",
+        "Ciprofloxacin",
+        "Doxycycline"
+      ],
+      "a": 0,
+      "correctText": "Minocycline",
+      "category": "Science",
+      "source": "https://agencia.fapesp.br/small-dose-of-antibiotic-yields-good-results-in-treating-panic-attacks/57917"
+    },
+    {
+      "q": "As reported on May 2, 2026, which country suspended all cooperation with the European Parliament over an alleged 'Islamophobic' agenda?",
+      "options": [
+        "Azerbaijan",
+        "Turkey",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "a": 0,
+      "correctText": "Azerbaijan",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-2-2026"
+    },
+    {
+      "q": "In a morning briefing on May 2, 2026, it was reported that the US Defense Department ordered the withdrawal of how many troops from Germany?",
+      "options": [
+        "5,000",
+        "2,000",
+        "10,000",
+        "1,500"
+      ],
+      "a": 0,
+      "correctText": "5,000",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-2-2026"
+    },
+    {
+      "q": "According to a study published around May 2, 2026, replacing meat and dairy with alternatives can cut food-related emissions by what percentage?",
+      "options": [
+        "50%",
+        "25%",
+        "75%",
+        "90%"
+      ],
+      "a": 0,
+      "correctText": "50%",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s44458-026-00075-1"
+    },
+    {
+      "q": "On May 2, 2026, it was reported that Huawei expects its AI chip revenue to jump to $12 billion this year, largely driven by mass production of which processor?",
+      "options": [
+        "Ascend 950PR",
+        "Kirin 9000S",
+        "Ascend 910B",
+        "Snapdragon 8 Gen 4"
+      ],
+      "a": 0,
+      "correctText": "Ascend 950PR",
+      "category": "Technology",
+      "source": "https://www.indexbox.io/news/huawei-expects-ai-chip-revenue-to-hit-12-billion-in-2026/"
+    },
+    {
+      "q": "A small plane that crashed in the Texas Hill Country in early May 2026, tragically killing all five people on board, was carrying players of what sport?",
+      "options": [
+        "Pickleball",
+        "Tennis",
+        "Golf",
+        "Badminton"
+      ],
+      "a": 0,
+      "correctText": "Pickleball",
+      "category": "Usa",
+      "source": "https://apnews.com/article/texas-small-plane-crash-57cd22e7f5d91eb68a04a43a66b4ab5a"
+    },
+    {
+      "q": "Prime Minister Mark Carney recently announced an initial $25 billion investment to launch Canada's first national sovereign wealth fund. What is the fund called?",
+      "options": [
+        "Canada Strong Fund",
+        "True North Sovereign Fund",
+        "Maple Heritage Fund",
+        "Northern Prosperity Trust"
+      ],
+      "a": 0,
+      "correctText": "Canada Strong Fund",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11825911/norway-singapore-canada-sovereign-wealth-fund/"
+    },
+    {
+      "q": "The federal government announced it is quadrupling the maximum fine for airlines that repeatedly violate the air passenger bill of rights. What is the new maximum fine?",
+      "options": [
+        "$1 million",
+        "$500,000",
+        "$2 million",
+        "$5 million"
+      ],
+      "a": 0,
+      "correctText": "$1 million",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/government-boosting-airline-fines-air-passenger-rights-9.7183609"
+    },
+    {
+      "q": "The Pentagon reached deals with seven tech companies in early May 2026 to use their AI on classified systems, but which major AI startup was notably excluded due to an ongoing legal dispute?",
+      "options": [
+        "Anthropic",
+        "OpenAI",
+        "Reflection",
+        "Scale AI"
+      ],
+      "a": 0,
+      "correctText": "Anthropic",
+      "category": "Usa",
+      "source": "https://apnews.com/article/pentagon-artificial-intelligence-military-classified-systems-war-060cecf836c4cebcf012a3ceb5333f2c"
+    },
+    {
+      "q": "Which U.S. Navy guided-missile destroyer lost power and propulsion for several hours in the Indo-Pacific after an 'engineering casualty' in early May 2026?",
+      "options": [
+        "USS Higgins",
+        "USS Zumwalt",
+        "USS Gerald R. Ford",
+        "USS John McCain"
+      ],
+      "a": 0,
+      "correctText": "USS Higgins",
+      "category": "Usa",
+      "source": "https://www.ctvnews.ca/world/article/us-navy-warship-lost-power-and-propulsion-for-hours-defence-official-says/"
+    }
+  ]
+}
