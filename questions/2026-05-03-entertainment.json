@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which actor revealed in May 2026 that he auditioned for 'Hellraiser 6' hoping producers wouldn't notice he had already been killed off in 'Hellraiser 4'?",
+      "options": [
+        "Adam Scott",
+        "Paul Rudd",
+        "Jason Bateman",
+        "Bradley Cooper"
+      ],
+      "a": 0,
+      "correctText": "Adam Scott",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/adam-scott-auditioned-hellraiser-6-killed-off-1236736056/"
+    },
+    {
+      "q": "Which actor, known for playing Sheriff Ben Meeker in the 'Halloween' franchise and Henry's father in 'Goodfellas', died at the age of 81 according to May 2026 reports?",
+      "options": [
+        "Beau Starr",
+        "Charles Cyphers",
+        "Tom Atkins",
+        "Dan O'Herlihy"
+      ],
+      "a": 0,
+      "correctText": "Beau Starr",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/beau-starr-dies-81-1236879126/"
+    },
+    {
+      "q": "According to reports from May 2026, which Anthony Mackie-led Saudi epic failed to rally cinemagoers and is being billed as a massive box office flop despite its $150M budget?",
+      "options": [
+        "Desert Warrior",
+        "Dune: Part Three",
+        "Sandstorm",
+        "Oasis of Blood"
+      ],
+      "a": 0,
+      "correctText": "Desert Warrior",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/desert-warrior-anthony-mackie-box-office-1236877487/"
+    },
+    {
+      "q": "What major entertainment union reached a new, larger deal with studios in May 2026, putting an end to recent negotiations?",
+      "options": [
+        "SAG-AFTRA",
+        "WGA",
+        "DGA",
+        "IATSE"
+      ],
+      "a": 0,
+      "correctText": "SAG-AFTRA",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/sag-aftra-studios-reach-new-bigger-deal-amptp-1236879157/"
+    },
+    {
+      "q": "It was announced in May 2026 that Ralph Fiennes, Colin Farrell, and Wagner Moura will star in the comedy film 'Art' directed by which 'City of God' filmmaker?",
+      "options": [
+        "Fernando Meirelles",
+        "Alfonso Cuarón",
+        "Alejandro G. Iñárritu",
+        "Guillermo del Toro"
+      ],
+      "a": 0,
+      "correctText": "Fernando Meirelles",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/ralph-fiennes-colin-farrell-wagner-moura-art-comedy-film-1236878036/"
+    }
+  ]
+}

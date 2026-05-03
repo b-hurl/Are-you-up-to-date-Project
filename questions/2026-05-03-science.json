@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to research highlighted on May 3, 2026, astronomers at the University of Warwick confirmed over 100 hidden exoplanets in NASA's TESS data using a new AI tool named what?",
+      "options": [
+        "RAVEN",
+        "EAGLE",
+        "ORION",
+        "STELLAR"
+      ],
+      "a": 0,
+      "correctText": "RAVEN",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/news/space_time/astronomy/"
+    },
+    {
+      "q": "Astronomical research published on May 3, 2026, indicates that interstellar comet 3I/Atlas originated from a colder, dimmer star system based on high levels of which hydrogen isotope found in its water?",
+      "options": [
+        "Deuterium",
+        "Tritium",
+        "Protium",
+        "Helium-3"
+      ],
+      "a": 0,
+      "correctText": "Deuterium",
+      "category": "Science",
+      "source": "https://www.news9live.com/science/research-reveals-birthplace-conditions-of-interstellar-comet-3iatlas-2621123"
+    },
+    {
+      "q": "A study published in the Proceedings of the Royal Society B on May 3, 2026, settled a long-running behavioral debate by confirming what surprising mathematical talent in honeybees?",
+      "options": [
+        "They can count numbers",
+        "They can calculate geometry",
+        "They understand fractions",
+        "They comprehend the concept of zero"
+      ],
+      "a": 0,
+      "correctText": "They can count numbers",
+      "category": "Science",
+      "source": "https://www.vice.com/en/article/scientists-just-discovered-a-surprising-new-talent-in-bees/"
+    }
+  ]
+}

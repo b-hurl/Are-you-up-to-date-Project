@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to the New York Times Fiction Bestsellers list for May 3, 2026, which author claimed the top spot with 'Hope Rises', the second book in the Walter Nash series?",
+      "options": [
+        "David Baldacci",
+        "James Patterson",
+        "John Sandford",
+        "Stephen King"
+      ],
+      "a": 0,
+      "correctText": "David Baldacci",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/03/"
+    },
+    {
+      "q": "Also debuting on the May 3, 2026 New York Times Bestseller list is 'Yesteryear', a novel about a modern social media influencer who wakes up in 1855. Who is the author?",
+      "options": [
+        "Caro Claire Burke",
+        "Maria Semple",
+        "Abby Jimenez",
+        "Devney Perry"
+      ],
+      "a": 0,
+      "correctText": "Caro Claire Burke",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/03/"
+    },
+    {
+      "q": "Highlighted in the Week of May 3, 2026 'Sunday Paper Recommends', Kathryn Stockett has released her first novel in fifteen years, set in 1933 Mississippi. What is its title?",
+      "options": [
+        "The Calamity Club",
+        "The Help Returns",
+        "The Southern Sisterhood",
+        "The Oxford Orphans"
+      ],
+      "a": 0,
+      "correctText": "The Calamity Club",
+      "category": "Books",
+      "source": "https://mariashriversundaypaper.com/sunday-paper-recommends-week-of-may-3-2026/"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-03",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In early May 2026, the US FDA proposed excluding the active ingredients for Wegovy and Zepbound from its 503B bulks list, aiming to restrict what practice?",
+      "options": [
+        "Large-scale compounding of weight-loss drugs",
+        "Over-the-counter sales of diet pills",
+        "Importation of generic medicines from Canada",
+        "Direct-to-consumer television advertising"
+      ],
+      "a": 0,
+      "correctText": "Large-scale compounding of weight-loss drugs",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/us-fda-proposes-excluding-weight-135418702.html"
+    },
+    {
+      "q": "Who led the Philadelphia 76ers with 34 points in their 109-100 Game 7 victory over the Boston Celtics to complete a 3-1 series comeback?",
+      "options": [
+        "Tyrese Maxey",
+        "Joel Embiid",
+        "Paul George",
+        "Jayson Tatum"
+      ],
+      "a": 1,
+      "correctText": "Joel Embiid",
+      "category": "Sports",
+      "source": "https://apnews.com/article/76ers-celtics-score-nba-playoffs-dfad4f07338f9d73eb4159090430940c"
+    },
+    {
+      "q": "Which golfer tapped in for an eagle on the 18th hole to secure a 3-shot lead heading into the final round of the LPGA tournament in Mexico?",
+      "options": [
+        "Lilia Vu",
+        "Ruoning Yin",
+        "Nelly Korda",
+        "Celine Boutier"
+      ],
+      "a": 2,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/nhl/story/_/id/48661404/nelly-korda-taps-eagle-secures-3-shot-lead-mexico"
+    },
+    {
+      "q": "In a viral health story peaking on May 3, 2026, a 16-year-old athlete who believed his shortness of breath was simply due to football practice was actually diagnosed with what rare condition?",
+      "options": [
+        "Mucoepidermoid carcinoma (a rare lung cancer)",
+        "Cystic fibrosis",
+        "Valley fever",
+        "A congenital heart defect"
+      ],
+      "a": 0,
+      "correctText": "Mucoepidermoid carcinoma (a rare lung cancer)",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/teen-athlete-football-practice-lung-cancer-rare-diagnosis-mass-general-brigham/"
+    },
+    {
+      "q": "What major entertainment union reached a new, larger deal with studios in May 2026, putting an end to recent negotiations?",
+      "options": [
+        "SAG-AFTRA",
+        "WGA",
+        "DGA",
+        "IATSE"
+      ],
+      "a": 0,
+      "correctText": "SAG-AFTRA",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/sag-aftra-studios-reach-new-bigger-deal-amptp-1236879157/"
+    },
+    {
+      "q": "Which actor revealed in May 2026 that he auditioned for 'Hellraiser 6' hoping producers wouldn't notice he had already been killed off in 'Hellraiser 4'?",
+      "options": [
+        "Adam Scott",
+        "Paul Rudd",
+        "Jason Bateman",
+        "Bradley Cooper"
+      ],
+      "a": 0,
+      "correctText": "Adam Scott",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/adam-scott-auditioned-hellraiser-6-killed-off-1236736056/"
+    },
+    {
+      "q": "The May 2026 announcement trailer for the puzzle adventure game 'Beware of the Cartographer!' tasks players with mapping a mysterious land during which historical period?",
+      "options": [
+        "The Age of Enlightenment",
+        "The Renaissance",
+        "The Industrial Revolution",
+        "The Middle Ages"
+      ],
+      "a": 0,
+      "correctText": "The Age of Enlightenment",
+      "category": "Gaming",
+      "source": "https://youtu.be/y89v0KkTTV8?si=9cT_JXAzt62WbODs"
+    },
+    {
+      "q": "A week after his breakthrough Cup victory at Talladega, which NASCAR driver secured the pole position at Texas Motor Speedway?",
+      "options": [
+        "Daniel Suarez",
+        "Ross Chastain",
+        "Joey Logano",
+        "Carson Hocevar"
+      ],
+      "a": 3,
+      "correctText": "Carson Hocevar",
+      "category": "Sports",
+      "source": "https://apnews.com/article/nascar-texas-preview-8d22b1383beef3dd7a7bc494a9259f32"
+    },
+    {
+      "q": "Due to changing requirements regarding the surrounding area, which NFL team's home stadium has reportedly slipped out of the Super Bowl hosting rotation?",
+      "options": [
+        "Miami Dolphins",
+        "New Orleans Saints",
+        "Tampa Bay Buccaneers",
+        "Las Vegas Raiders"
+      ],
+      "a": 0,
+      "correctText": "Miami Dolphins",
+      "category": "Sports",
+      "source": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/miami-slips-out-of-super-bowl-rotation-due-to-nfl-requirements"
+    },
+    {
+      "q": "According to reports from May 2026, which Anthony Mackie-led Saudi epic failed to rally cinemagoers and is being billed as a massive box office flop despite its $150M budget?",
+      "options": [
+        "Desert Warrior",
+        "Dune: Part Three",
+        "Sandstorm",
+        "Oasis of Blood"
+      ],
+      "a": 0,
+      "correctText": "Desert Warrior",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/desert-warrior-anthony-mackie-box-office-1236877487/"
+    }
+  ]
+}

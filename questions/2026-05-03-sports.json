@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who led the Philadelphia 76ers with 34 points in their 109-100 Game 7 victory over the Boston Celtics to complete a 3-1 series comeback?",
+      "options": [
+        "Tyrese Maxey",
+        "Joel Embiid",
+        "Paul George",
+        "Jayson Tatum"
+      ],
+      "a": 1,
+      "correctText": "Joel Embiid",
+      "category": "Sports",
+      "source": "https://apnews.com/article/76ers-celtics-score-nba-playoffs-dfad4f07338f9d73eb4159090430940c"
+    },
+    {
+      "q": "Which golfer tapped in for an eagle on the 18th hole to secure a 3-shot lead heading into the final round of the LPGA tournament in Mexico?",
+      "options": [
+        "Lilia Vu",
+        "Ruoning Yin",
+        "Nelly Korda",
+        "Celine Boutier"
+      ],
+      "a": 2,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/nhl/story/_/id/48661404/nelly-korda-taps-eagle-secures-3-shot-lead-mexico"
+    },
+    {
+      "q": "A week after his breakthrough Cup victory at Talladega, which NASCAR driver secured the pole position at Texas Motor Speedway?",
+      "options": [
+        "Daniel Suarez",
+        "Ross Chastain",
+        "Joey Logano",
+        "Carson Hocevar"
+      ],
+      "a": 3,
+      "correctText": "Carson Hocevar",
+      "category": "Sports",
+      "source": "https://apnews.com/article/nascar-texas-preview-8d22b1383beef3dd7a7bc494a9259f32"
+    },
+    {
+      "q": "Due to changing requirements regarding the surrounding area, which NFL team's home stadium has reportedly slipped out of the Super Bowl hosting rotation?",
+      "options": [
+        "Miami Dolphins",
+        "New Orleans Saints",
+        "Tampa Bay Buccaneers",
+        "Las Vegas Raiders"
+      ],
+      "a": 0,
+      "correctText": "Miami Dolphins",
+      "category": "Sports",
+      "source": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/miami-slips-out-of-super-bowl-rotation-due-to-nfl-requirements"
+    },
+    {
+      "q": "Which former Formula 1 driver and Paralympic champion passed away at the age of 59?",
+      "options": [
+        "Michael Schumacher",
+        "Alex Zanardi",
+        "Niki Lauda",
+        "Jules Bianchi"
+      ],
+      "a": 1,
+      "correctText": "Alex Zanardi",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/formula1/articles/cvgz0kpxjpgo"
+    }
+  ]
+}

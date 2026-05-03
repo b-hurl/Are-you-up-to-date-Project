@@ -1,0 +1,110 @@
+{
+  "date": "2026-05-03",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Louisiana Republicans passed a bill in early May 2026 to eliminate an elected New Orleans court clerk position just days before which exoneree was to take office?",
+      "options": [
+        "Calvin Duncan",
+        "Anthony Ray Hinton",
+        "Ricky Jackson",
+        "Glenn Ford"
+      ],
+      "a": 0,
+      "correctText": "Calvin Duncan",
+      "category": "Usa",
+      "source": "https://www.wral.com/news/ap/6a48a-louisiana-republicans-eliminate-elected-position-days-before-an-exoneree-was-set-to-take-office/"
+    },
+    {
+      "q": "Which destructive, invasive insect was recently discovered in Ontario, renewing concerns about its threat to Canada's vineyards and fruit trees?",
+      "options": [
+        "Spotted lanternfly",
+        "Asian giant hornet",
+        "Emerald ash borer",
+        "Brown marmorated stink bug"
+      ],
+      "a": 0,
+      "correctText": "Spotted lanternfly",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/science/ontario-invasive-lanternfly-spread-9.7183557"
+    },
+    {
+      "q": "Due to privacy concerns, the Ontario Lottery and Gaming Corporation recently changed its policy on announcing jackpot winners. What information is now released to the media?",
+      "options": [
+        "Only their first name and last initial",
+        "No names are released at all",
+        "Winners can choose a pseudonym",
+        "Only the winner's city of residence"
+      ],
+      "a": 0,
+      "correctText": "Only their first name and last initial",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/lottery-winnings-privacy-changes-ontario-bc-9.7185252"
+    },
+    {
+      "q": "A study published in the Proceedings of the Royal Society B on May 3, 2026, settled a long-running behavioral debate by confirming what surprising mathematical talent in honeybees?",
+      "options": [
+        "They can count numbers",
+        "They can calculate geometry",
+        "They understand fractions",
+        "They comprehend the concept of zero"
+      ],
+      "a": 0,
+      "correctText": "They can count numbers",
+      "category": "Science",
+      "source": "https://www.vice.com/en/article/scientists-just-discovered-a-surprising-new-talent-in-bees/"
+    },
+    {
+      "q": "According to a May 2026 ruling, which U.S. federal appeals court restricted abortion access by blocking the mailing of mifepristone?",
+      "options": [
+        "5th U.S. Circuit Court of Appeals",
+        "9th U.S. Circuit Court of Appeals",
+        "2nd U.S. Circuit Court of Appeals",
+        "11th U.S. Circuit Court of Appeals"
+      ],
+      "a": 0,
+      "correctText": "5th U.S. Circuit Court of Appeals",
+      "category": "Usa",
+      "source": "https://apnews.com/article/abortion-pills-mail-louisiana-ruling-40d60a9bf6212480e527480757b603c3"
+    },
+    {
+      "q": "Tesla recently started selling Model 3s in Canada at its lowest price ever. Where are these specific EVs manufactured?",
+      "options": [
+        "China",
+        "California",
+        "Germany",
+        "Texas"
+      ],
+      "a": 0,
+      "correctText": "China",
+      "category": "Canada",
+      "source": "https://www.engadget.com/2162731/tesla-starts-selling-chinese-made-model-3s-in-canada-at-lowest-price-ever/"
+    },
+    {
+      "q": "A Federal Court recently ruled that a failed refugee claimant and convicted identity thief can stay in Canada because he previously acted as an informant against which gang?",
+      "options": [
+        "MS-13",
+        "Sinaloa Cartel",
+        "Hells Angels",
+        "Cali Cartel"
+      ],
+      "a": 0,
+      "correctText": "MS-13",
+      "category": "Canada",
+      "source": "https://nationalpost.com/news/canada/failed-refugee-claimant-ms-13-gang-informant-identity-thief-and-forger-can-stay-in-canada"
+    },
+    {
+      "q": "Astronomical research published on May 3, 2026, indicates that interstellar comet 3I/Atlas originated from a colder, dimmer star system based on high levels of which hydrogen isotope found in its water?",
+      "options": [
+        "Deuterium",
+        "Tritium",
+        "Protium",
+        "Helium-3"
+      ],
+      "a": 0,
+      "correctText": "Deuterium",
+      "category": "Science",
+      "source": "https://www.news9live.com/science/research-reveals-birthplace-conditions-of-interstellar-comet-3iatlas-2621123"
+    }
+  ]
+}

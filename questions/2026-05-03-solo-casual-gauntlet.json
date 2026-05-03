@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-03",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to the May 2026 Patch 1.05.00 for Crimson Desert, players can now pick up previously decorative gold bars scattered in the world to yield what item?",
+      "options": [
+        "A Crude Gold Bar worth 5 Silver",
+        "A Shiny Token worth 100 Gold",
+        "A Heavy Ingot for crafting",
+        "A Mysterious Artifact"
+      ],
+      "a": 0,
+      "correctText": "A Crude Gold Bar worth 5 Silver",
+      "category": "Gaming",
+      "source": "https://crimsondesert.pearlabyss.com/en-US/News/Notice/Detail?_boardNo=88"
+    },
+    {
+      "q": "In an expanded access ruling covered on May 3, 2026, the FDA allowed 'compassionate use' of the experimental drug daraxonrasib to treat which deadly disease, famously affecting former Senator Ben Sasse?",
+      "options": [
+        "Pancreatic cancer",
+        "Brain cancer",
+        "Leukemia",
+        "Melanoma"
+      ],
+      "a": 0,
+      "correctText": "Pancreatic cancer",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/daraxonrasib-pancreatic-cancer-drug-fda-expanded-access-ben-sasse/"
+    },
+    {
+      "q": "Which actor, known for playing Sheriff Ben Meeker in the 'Halloween' franchise and Henry's father in 'Goodfellas', died at the age of 81 according to May 2026 reports?",
+      "options": [
+        "Beau Starr",
+        "Charles Cyphers",
+        "Tom Atkins",
+        "Dan O'Herlihy"
+      ],
+      "a": 0,
+      "correctText": "Beau Starr",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/beau-starr-dies-81-1236879126/"
+    },
+    {
+      "q": "As of May 2026, health authorities in Hong Kong have begun heavily enforcing a new public law that completely bans which of the following activities in public spaces?",
+      "options": [
+        "Vaping and using e-cigarettes",
+        "Consuming high-sugar energy drinks",
+        "Smoking traditional cigars only",
+        "Selling fast food within business districts"
+      ],
+      "a": 0,
+      "correctText": "Vaping and using e-cigarettes",
+      "category": "Health",
+      "source": "https://www.channelnewsasia.com/east-asia/hong-kong-vape-vaping-public-ban-smoking-ecigarettes-6094261"
+    },
+    {
+      "q": "Which former Formula 1 driver and Paralympic champion passed away at the age of 59?",
+      "options": [
+        "Michael Schumacher",
+        "Alex Zanardi",
+        "Niki Lauda",
+        "Jules Bianchi"
+      ],
+      "a": 1,
+      "correctText": "Alex Zanardi",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/formula1/articles/cvgz0kpxjpgo"
+    },
+    {
+      "q": "It was announced in May 2026 that Ralph Fiennes, Colin Farrell, and Wagner Moura will star in the comedy film 'Art' directed by which 'City of God' filmmaker?",
+      "options": [
+        "Fernando Meirelles",
+        "Alfonso Cuarón",
+        "Alejandro G. Iñárritu",
+        "Guillermo del Toro"
+      ],
+      "a": 0,
+      "correctText": "Fernando Meirelles",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/ralph-fiennes-colin-farrell-wagner-moura-art-comedy-film-1236878036/"
+    },
+    {
+      "q": "Also debuting on the May 3, 2026 New York Times Bestseller list is 'Yesteryear', a novel about a modern social media influencer who wakes up in 1855. Who is the author?",
+      "options": [
+        "Caro Claire Burke",
+        "Maria Semple",
+        "Abby Jimenez",
+        "Devney Perry"
+      ],
+      "a": 0,
+      "correctText": "Caro Claire Burke",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/03/"
+    },
+    {
+      "q": "Highlighted in the Week of May 3, 2026 'Sunday Paper Recommends', Kathryn Stockett has released her first novel in fifteen years, set in 1933 Mississippi. What is its title?",
+      "options": [
+        "The Calamity Club",
+        "The Help Returns",
+        "The Southern Sisterhood",
+        "The Oxford Orphans"
+      ],
+      "a": 0,
+      "correctText": "The Calamity Club",
+      "category": "Books",
+      "source": "https://mariashriversundaypaper.com/sunday-paper-recommends-week-of-may-3-2026/"
+    },
+    {
+      "q": "In a May 2026 interview, Naoki Hamaguchi, the director of the Final Fantasy VII Remake trilogy, revealed that he has already completed how many full playthroughs of the unreleased third game?",
+      "options": [
+        "Over 40",
+        "Exactly 10",
+        "Over 100",
+        "None yet"
+      ],
+      "a": 0,
+      "correctText": "Over 40",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/05/final-fantasy-vii-director-has-already-completed-over-40-full-playthroughs-of-the-third-game"
+    },
+    {
+      "q": "In early May 2026, Take-Two's CEO Strauss Zelnick stated that GTA 6 won't feature real-world brand partnerships for what primary reason?",
+      "options": [
+        "Because all the brands are made up",
+        "Because it breaks immersion",
+        "Advertising laws forbid it",
+        "The licensing costs are too high"
+      ],
+      "a": 0,
+      "correctText": "Because all the brands are made up",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/dont-expect-product-placement-in-gta-6-the-ceo-of-take-two-says-it-wont-do-real-world-brand-partnerships-because-all-the-brands-are-made-up"
+    }
+  ]
+}

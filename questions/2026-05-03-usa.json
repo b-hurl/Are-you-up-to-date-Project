@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 2026 ruling, which U.S. federal appeals court restricted abortion access by blocking the mailing of mifepristone?",
+      "options": [
+        "5th U.S. Circuit Court of Appeals",
+        "9th U.S. Circuit Court of Appeals",
+        "2nd U.S. Circuit Court of Appeals",
+        "11th U.S. Circuit Court of Appeals"
+      ],
+      "a": 0,
+      "correctText": "5th U.S. Circuit Court of Appeals",
+      "category": "Usa",
+      "source": "https://apnews.com/article/abortion-pills-mail-louisiana-ruling-40d60a9bf6212480e527480757b603c3"
+    },
+    {
+      "q": "In May 2026, California announced it will begin allowing police to issue traffic tickets directly to the manufacturers of which type of vehicles?",
+      "options": [
+        "Driverless cars",
+        "Electric scooters",
+        "Commercial delivery drones",
+        "Hydrogen-powered buses"
+      ],
+      "a": 0,
+      "correctText": "Driverless cars",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/clypjx3rg2go"
+    },
+    {
+      "q": "Louisiana Republicans passed a bill in early May 2026 to eliminate an elected New Orleans court clerk position just days before which exoneree was to take office?",
+      "options": [
+        "Calvin Duncan",
+        "Anthony Ray Hinton",
+        "Ricky Jackson",
+        "Glenn Ford"
+      ],
+      "a": 0,
+      "correctText": "Calvin Duncan",
+      "category": "Usa",
+      "source": "https://www.wral.com/news/ap/6a48a-louisiana-republicans-eliminate-elected-position-days-before-an-exoneree-was-set-to-take-office/"
+    },
+    {
+      "q": "In May 2026, the U.S. warned shipping firms they could face sanctions if they pay tolls to which country for safe passage through the Strait of Hormuz?",
+      "options": [
+        "Iran",
+        "Yemen",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/c3v2l2qq9qlo"
+    },
+    {
+      "q": "In early May 2026, police found evidence of an explosive device after a vehicle crashed into a health club in which U.S. state, leaving one dead?",
+      "options": [
+        "Oregon",
+        "Washington",
+        "California",
+        "Colorado"
+      ],
+      "a": 0,
+      "correctText": "Oregon",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/wireStory/1-person-dead-after-vehicle-crashes-oregon-health-132606300"
+    }
+  ]
+}

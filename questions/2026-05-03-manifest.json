@@ -1,0 +1,54 @@
+[
+  {
+    "name": "science",
+    "count": 3
+  },
+  {
+    "name": "sports",
+    "count": 5
+  },
+  {
+    "name": "gaming",
+    "count": 5
+  },
+  {
+    "name": "entertainment",
+    "count": 5
+  },
+  {
+    "name": "books",
+    "count": 3
+  },
+  {
+    "name": "health",
+    "count": 5
+  },
+  {
+    "name": "world",
+    "count": 5
+  },
+  {
+    "name": "canada",
+    "count": 5
+  },
+  {
+    "name": "usa",
+    "count": 5
+  },
+  {
+    "name": "solo-casual-gauntlet",
+    "count": 10
+  },
+  {
+    "name": "multiplayer-casual-gauntlet",
+    "count": 10
+  },
+  {
+    "name": "solo-professional-gauntlet",
+    "count": 10
+  },
+  {
+    "name": "multiplayer-professional-gauntlet",
+    "count": 8
+  }
+]

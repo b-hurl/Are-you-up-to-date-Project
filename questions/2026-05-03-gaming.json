@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Released on May 2, 2026, the 5.0.0 update of NetHack replaced its 'makedefs' utility with text alternatives loaded in which programming language?",
+      "options": [
+        "Lua",
+        "Python",
+        "JavaScript",
+        "Ruby"
+      ],
+      "a": 0,
+      "correctText": "Lua",
+      "category": "Gaming",
+      "source": "https://nethack.org/v500/release.html"
+    },
+    {
+      "q": "In early May 2026, Take-Two's CEO Strauss Zelnick stated that GTA 6 won't feature real-world brand partnerships for what primary reason?",
+      "options": [
+        "Because all the brands are made up",
+        "Because it breaks immersion",
+        "Advertising laws forbid it",
+        "The licensing costs are too high"
+      ],
+      "a": 0,
+      "correctText": "Because all the brands are made up",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/dont-expect-product-placement-in-gta-6-the-ceo-of-take-two-says-it-wont-do-real-world-brand-partnerships-because-all-the-brands-are-made-up"
+    },
+    {
+      "q": "According to the May 2026 Patch 1.05.00 for Crimson Desert, players can now pick up previously decorative gold bars scattered in the world to yield what item?",
+      "options": [
+        "A Crude Gold Bar worth 5 Silver",
+        "A Shiny Token worth 100 Gold",
+        "A Heavy Ingot for crafting",
+        "A Mysterious Artifact"
+      ],
+      "a": 0,
+      "correctText": "A Crude Gold Bar worth 5 Silver",
+      "category": "Gaming",
+      "source": "https://crimsondesert.pearlabyss.com/en-US/News/Notice/Detail?_boardNo=88"
+    },
+    {
+      "q": "In a May 2026 interview, Naoki Hamaguchi, the director of the Final Fantasy VII Remake trilogy, revealed that he has already completed how many full playthroughs of the unreleased third game?",
+      "options": [
+        "Over 40",
+        "Exactly 10",
+        "Over 100",
+        "None yet"
+      ],
+      "a": 0,
+      "correctText": "Over 40",
+      "category": "Gaming",
+      "source": "https://www.nintendolife.com/news/2026/05/final-fantasy-vii-director-has-already-completed-over-40-full-playthroughs-of-the-third-game"
+    },
+    {
+      "q": "The May 2026 announcement trailer for the puzzle adventure game 'Beware of the Cartographer!' tasks players with mapping a mysterious land during which historical period?",
+      "options": [
+        "The Age of Enlightenment",
+        "The Renaissance",
+        "The Industrial Revolution",
+        "The Middle Ages"
+      ],
+      "a": 0,
+      "correctText": "The Age of Enlightenment",
+      "category": "Gaming",
+      "source": "https://youtu.be/y89v0KkTTV8?si=9cT_JXAzt62WbODs"
+    }
+  ]
+}

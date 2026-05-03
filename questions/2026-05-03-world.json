@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Reported heavily on May 3, 2026, President Trump stated he would reduce US troop levels 'a lot further' than an initial 5,000 withdrawal in which European country?",
+      "options": [
+        "Germany",
+        "Italy",
+        "Spain",
+        "Poland"
+      ],
+      "a": 0,
+      "correctText": "Germany",
+      "category": "World",
+      "source": "https://apnews.com/article/germany-trump-troops-nato-drawdown-pistorius-merz-a93151327dcb7279a56a36dd4bbeca1c"
+    },
+    {
+      "q": "As of early May 2026, the US bypassed congressional review to approve $8.6 billion in military sales to Middle East allies, including Israel, Qatar, the UAE, and which other nation?",
+      "options": [
+        "Kuwait",
+        "Saudi Arabia",
+        "Oman",
+        "Bahrain"
+      ],
+      "a": 0,
+      "correctText": "Kuwait",
+      "category": "World",
+      "source": "https://www.jpost.com/international/article-894888"
+    },
+    {
+      "q": "On May 3, 2026, President Trump announced he was reviewing a 14-point proposal to end the war and lift blockades involving which Middle Eastern country?",
+      "options": [
+        "Iran",
+        "Syria",
+        "Yemen",
+        "Russia"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://apnews.com/article/iran-us-war-ceasefire-negotiations-strait-9317c11e51ba8dfa527b424f931fe04b"
+    },
+    {
+      "q": "On May 3, 2026, which country's Prime Minister, Donald Tusk, condemned the 'disintegration' of NATO following US announcements of further European troop reductions?",
+      "options": [
+        "Poland",
+        "Germany",
+        "France",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Poland",
+      "category": "World",
+      "source": "https://kyivindependent.com/polands-prime-minister-condemns-nato-disintegration-as-trump-says-us-will-further-reduce-troop-presence-in-europe/"
+    },
+    {
+      "q": "Reported over the weekend of May 3, 2026, the oil tanker M/T Eureka was hijacked off the coast of Yemen and steered toward the waters of which country?",
+      "options": [
+        "Somalia",
+        "Djibouti",
+        "Eritrea",
+        "Oman"
+      ],
+      "a": 0,
+      "correctText": "Somalia",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cpwprl0v2npo"
+    }
+  ]
+}

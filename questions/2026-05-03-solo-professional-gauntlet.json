@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-03",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to a 2026 Canadian Security Intelligence Service (CSIS) report, nearly one in ten counter-terrorism investigations now involves whom?",
+      "options": [
+        "Minors under the age of 18",
+        "Active military personnel",
+        "Foreign diplomats",
+        "Seniors over the age of 65"
+      ],
+      "a": 0,
+      "correctText": "Minors under the age of 18",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/youth-radicalization-rising-in-canada-canadian-security-intelligence-service-report/"
+    },
+    {
+      "q": "Reported heavily on May 3, 2026, President Trump stated he would reduce US troop levels 'a lot further' than an initial 5,000 withdrawal in which European country?",
+      "options": [
+        "Germany",
+        "Italy",
+        "Spain",
+        "Poland"
+      ],
+      "a": 0,
+      "correctText": "Germany",
+      "category": "World",
+      "source": "https://apnews.com/article/germany-trump-troops-nato-drawdown-pistorius-merz-a93151327dcb7279a56a36dd4bbeca1c"
+    },
+    {
+      "q": "According to research highlighted on May 3, 2026, astronomers at the University of Warwick confirmed over 100 hidden exoplanets in NASA's TESS data using a new AI tool named what?",
+      "options": [
+        "RAVEN",
+        "EAGLE",
+        "ORION",
+        "STELLAR"
+      ],
+      "a": 0,
+      "correctText": "RAVEN",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/news/space_time/astronomy/"
+    },
+    {
+      "q": "In May 2026, California announced it will begin allowing police to issue traffic tickets directly to the manufacturers of which type of vehicles?",
+      "options": [
+        "Driverless cars",
+        "Electric scooters",
+        "Commercial delivery drones",
+        "Hydrogen-powered buses"
+      ],
+      "a": 0,
+      "correctText": "Driverless cars",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/clypjx3rg2go"
+    },
+    {
+      "q": "In early May 2026, police found evidence of an explosive device after a vehicle crashed into a health club in which U.S. state, leaving one dead?",
+      "options": [
+        "Oregon",
+        "Washington",
+        "California",
+        "Colorado"
+      ],
+      "a": 0,
+      "correctText": "Oregon",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/wireStory/1-person-dead-after-vehicle-crashes-oregon-health-132606300"
+    },
+    {
+      "q": "In May 2026, the U.S. warned shipping firms they could face sanctions if they pay tolls to which country for safe passage through the Strait of Hormuz?",
+      "options": [
+        "Iran",
+        "Yemen",
+        "Saudi Arabia",
+        "Qatar"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Usa",
+      "source": "https://www.bbc.com/news/articles/c3v2l2qq9qlo"
+    },
+    {
+      "q": "On May 3, 2026, which country's Prime Minister, Donald Tusk, condemned the 'disintegration' of NATO following US announcements of further European troop reductions?",
+      "options": [
+        "Poland",
+        "Germany",
+        "France",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Poland",
+      "category": "World",
+      "source": "https://kyivindependent.com/polands-prime-minister-condemns-nato-disintegration-as-trump-says-us-will-further-reduce-troop-presence-in-europe/"
+    },
+    {
+      "q": "As of early May 2026, the US bypassed congressional review to approve $8.6 billion in military sales to Middle East allies, including Israel, Qatar, the UAE, and which other nation?",
+      "options": [
+        "Kuwait",
+        "Saudi Arabia",
+        "Oman",
+        "Bahrain"
+      ],
+      "a": 0,
+      "correctText": "Kuwait",
+      "category": "World",
+      "source": "https://www.jpost.com/international/article-894888"
+    },
+    {
+      "q": "On May 3, 2026, President Trump announced he was reviewing a 14-point proposal to end the war and lift blockades involving which Middle Eastern country?",
+      "options": [
+        "Iran",
+        "Syria",
+        "Yemen",
+        "Russia"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://apnews.com/article/iran-us-war-ceasefire-negotiations-strait-9317c11e51ba8dfa527b424f931fe04b"
+    },
+    {
+      "q": "Reported over the weekend of May 3, 2026, the oil tanker M/T Eureka was hijacked off the coast of Yemen and steered toward the waters of which country?",
+      "options": [
+        "Somalia",
+        "Djibouti",
+        "Eritrea",
+        "Oman"
+      ],
+      "a": 0,
+      "correctText": "Somalia",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cpwprl0v2npo"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Making headlines on May 3, 2026, President Trump officially withdrew the stalled Surgeon General nomination of Dr. Casey Means and announced which medical contributor as her replacement?",
+      "options": [
+        "Dr. Nicole Saphier",
+        "Dr. Janette Nesheiwat",
+        "Dr. Marc Siegel",
+        "Dr. Mehmet Oz"
+      ],
+      "a": 0,
+      "correctText": "Dr. Nicole Saphier",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/trump-pulls-casey-means-nomination-general-replacement-nicole-saphier-rcna261423"
+    },
+    {
+      "q": "In an expanded access ruling covered on May 3, 2026, the FDA allowed 'compassionate use' of the experimental drug daraxonrasib to treat which deadly disease, famously affecting former Senator Ben Sasse?",
+      "options": [
+        "Pancreatic cancer",
+        "Brain cancer",
+        "Leukemia",
+        "Melanoma"
+      ],
+      "a": 0,
+      "correctText": "Pancreatic cancer",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/daraxonrasib-pancreatic-cancer-drug-fda-expanded-access-ben-sasse/"
+    },
+    {
+      "q": "In early May 2026, the US FDA proposed excluding the active ingredients for Wegovy and Zepbound from its 503B bulks list, aiming to restrict what practice?",
+      "options": [
+        "Large-scale compounding of weight-loss drugs",
+        "Over-the-counter sales of diet pills",
+        "Importation of generic medicines from Canada",
+        "Direct-to-consumer television advertising"
+      ],
+      "a": 0,
+      "correctText": "Large-scale compounding of weight-loss drugs",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/us-fda-proposes-excluding-weight-135418702.html"
+    },
+    {
+      "q": "As of May 2026, health authorities in Hong Kong have begun heavily enforcing a new public law that completely bans which of the following activities in public spaces?",
+      "options": [
+        "Vaping and using e-cigarettes",
+        "Consuming high-sugar energy drinks",
+        "Smoking traditional cigars only",
+        "Selling fast food within business districts"
+      ],
+      "a": 0,
+      "correctText": "Vaping and using e-cigarettes",
+      "category": "Health",
+      "source": "https://www.channelnewsasia.com/east-asia/hong-kong-vape-vaping-public-ban-smoking-ecigarettes-6094261"
+    },
+    {
+      "q": "In a viral health story peaking on May 3, 2026, a 16-year-old athlete who believed his shortness of breath was simply due to football practice was actually diagnosed with what rare condition?",
+      "options": [
+        "Mucoepidermoid carcinoma (a rare lung cancer)",
+        "Cystic fibrosis",
+        "Valley fever",
+        "A congenital heart defect"
+      ],
+      "a": 0,
+      "correctText": "Mucoepidermoid carcinoma (a rare lung cancer)",
+      "category": "Health",
+      "source": "https://www.cbsnews.com/news/teen-athlete-football-practice-lung-cancer-rare-diagnosis-mass-general-brigham/"
+    }
+  ]
+}
