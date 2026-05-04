@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-04",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In early May 2026, a federal prosecutor revealed that a Secret Service agent's vest was struck by buckshot from a man attempting to storm which major event?",
+      "options": [
+        "White House Correspondents' Dinner",
+        "The Met Gala",
+        "Gridiron Club Dinner",
+        "State of the Union Address"
+      ],
+      "a": 0,
+      "correctText": "White House Correspondents' Dinner",
+      "category": "Usa",
+      "source": "https://apnews.com/article/allen-white-house-correspondents-dinner-agent-shot-99d9a340efe4436e8127c36c58fa0a39"
+    },
+    {
+      "q": "Which budget airline announced in early May 2026 that it had nearly finished refunding customers after abruptly ceasing operations?",
+      "options": [
+        "Spirit Airlines",
+        "Frontier Airlines",
+        "JetBlue",
+        "Allegiant Air"
+      ],
+      "a": 0,
+      "correctText": "Spirit Airlines",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/03/spirit-airlines-customer-refunds"
+    },
+    {
+      "q": "According to a May 4, 2026 publication by NASA's Earth Observatory, scientists analyzed satellite data to document the rapid ice loss and 'record-setting retreat' of which Antarctic glacier?",
+      "options": [
+        "Hektoria Glacier",
+        "Thwaites Glacier",
+        "Pine Island Glacier",
+        "Denman Glacier"
+      ],
+      "a": 0,
+      "correctText": "Hektoria Glacier",
+      "category": "Science",
+      "source": "https://www.nasa.gov/"
+    },
+    {
+      "q": "It was reported on May 4, 2026, that Apple abandoned its formal target to maintain what financial status in preparation for the AI arms race?",
+      "options": [
+        "Net cash neutral",
+        "Zero-debt balance",
+        "Trillion-dollar cash reserve",
+        "Dividend-first yield"
+      ],
+      "a": 0,
+      "correctText": "Net cash neutral",
+      "category": "Technology",
+      "source": "https://www.digitimes.com/news/a20260504VL200/apple-ai-arms-race-cash.html"
+    },
+    {
+      "q": "After winning Game 7 against the Tampa Bay Lightning, which team will the Montreal Canadiens face in the second round of the 2026 Stanley Cup Playoffs?",
+      "options": [
+        "Buffalo Sabres",
+        "Toronto Maple Leafs",
+        "Boston Bruins",
+        "Florida Panthers"
+      ],
+      "a": 0,
+      "correctText": "Buffalo Sabres",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/montreal/habs-lightning-game-7-9.7185934"
+    },
+    {
+      "q": "According to a May 2026 study, pediatric primary care telemedicine visits led to a significantly lower rate of unnecessary prescriptions for what compared to in-person visits?",
+      "options": [
+        "Antibiotics",
+        "Antihistamines",
+        "Asthma inhalers",
+        "ADHD medications"
+      ],
+      "a": 0,
+      "correctText": "Antibiotics",
+      "category": "Science",
+      "source": "https://www.cidrap.umn.edu/antimicrobial-stewardship/telemedicine-offered-familiar-providers-linked-lower-antibiotic"
+    },
+    {
+      "q": "Despite a federal excise tax holiday, the average price of regular gasoline surged past what mark per litre across British Columbia in early May 2026?",
+      "options": [
+        "$2.00",
+        "$1.75",
+        "$2.50",
+        "$1.50"
+      ],
+      "a": 0,
+      "correctText": "$2.00",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/gas-prices-bc-average-2-dollars-9.7185283"
+    },
+    {
+      "q": "According to the WHO in a May 2026 report, an outbreak of what suspected rodent-transmitted virus left three people dead on a cruise ship in the Atlantic Ocean?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Legionnaires' disease",
+        "Ebola virus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cy0294829ndo"
+    },
+    {
+      "q": "On May 4, 2026, ABC News Australia reported that police officers' locations could be tracked due to a Bluetooth security flaw in which devices?",
+      "options": [
+        "Axon tasers and body-worn cameras",
+        "Police cruiser GPS systems",
+        "Encrypted digital radios",
+        "Standard issue smartwatches"
+      ],
+      "a": 0,
+      "correctText": "Axon tasers and body-worn cameras",
+      "category": "Technology",
+      "source": "https://www.abc.net.au/news/2026-05-04/police-location-tracked-bluetooth-flaw-axon-tasers-bodycams/106610886"
+    },
+    {
+      "q": "Prime Minister Mark Carney recently called an alleged privacy breach in Alberta deeply concerning after what separatist group published an elector list in an app?",
+      "options": [
+        "The Centurion Project",
+        "The Vanguard Initiative",
+        "Alberta First",
+        "The Sovereign Front"
+      ],
+      "a": 0,
+      "correctText": "The Centurion Project",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/edmonton/article/mark-carney-calls-alleged-privacy-breach-in-alberta-deeply-concerning/"
+    }
+  ]
+}

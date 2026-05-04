@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which 1996 supernatural horror film starring Robin Tunney and Fairuza Balk celebrated its 30th anniversary on May 3, 2026?",
+      "options": [
+        "The Craft",
+        "Practical Magic",
+        "Scream",
+        "The Faculty"
+      ],
+      "a": 0,
+      "correctText": "The Craft",
+      "category": "Entertainment",
+      "source": "https://www.inverse.com/entertainment/the-craft-30-year-anniversary"
+    },
+    {
+      "q": "A viral meme depicting Miranda Priestly as a fast-food worker in 'The Devil Wears Prada 2' was widely mistaken for AI, but was actually painted by which human artist?",
+      "options": [
+        "Alexis Franklin",
+        "BossLogic",
+        "Lois van Baarle",
+        "Beeple"
+      ],
+      "a": 0,
+      "correctText": "Alexis Franklin",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/the-devil-wears-prada-2-praise-human-artist-ai-generated-meme-1236879030/"
+    },
+    {
+      "q": "In early May 2026, Los Angeles Mayor Karen Bass proclaimed that Hollywood is 'turning a corner' due to an uptick in production driven by what factor?",
+      "options": [
+        "Increased state subsidies",
+        "The end of union strikes",
+        "A new studio construction boom",
+        "Lower interest rates"
+      ],
+      "a": 0,
+      "correctText": "Increased state subsidies",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/la-production-karen-bass-hollywood-turning-corner-subsidies-1236732286/"
+    },
+    {
+      "q": "Irish actor Gary Lydon passed away at age 61 in May 2026. In which acclaimed film did he play a garda alongside Barry Keoghan?",
+      "options": [
+        "The Banshees of Inisherin",
+        "The Guard",
+        "Calvary",
+        "Brooklyn"
+      ],
+      "a": 0,
+      "correctText": "The Banshees of Inisherin",
+      "category": "Entertainment",
+      "source": "https://www.irishtimes.com/culture/film/2026/05/03/gary-lydon-actor-best-known-for-banshees-of-inisherin-role-dies/"
+    },
+    {
+      "q": "Actor Adam Scott recently revealed he auditioned for the sixth installment of which horror franchise, hoping producers wouldn't notice his character had already died in the fourth film?",
+      "options": [
+        "Hellraiser",
+        "Halloween",
+        "A Nightmare on Elm Street",
+        "Friday the 13th"
+      ],
+      "a": 0,
+      "correctText": "Hellraiser",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/adam-scott-auditioned-hellraiser-6-killed-off-1236736056/"
+    }
+  ]
+}

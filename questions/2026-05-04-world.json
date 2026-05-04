@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to the WHO in a May 2026 report, an outbreak of what suspected rodent-transmitted virus left three people dead on a cruise ship in the Atlantic Ocean?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Legionnaires' disease",
+        "Ebola virus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cy0294829ndo"
+    },
+    {
+      "q": "In early May 2026, German Foreign Minister Johann Wadephul urged which nation to completely abandon nuclear weapons and reopen the Strait of Hormuz?",
+      "options": [
+        "Iran",
+        "North Korea",
+        "Syria",
+        "Russia"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://newsukraine.rbc.ua/news/germany-calls-on-iran-to-abandon-nuclear-1777824212.html"
+    },
+    {
+      "q": "In May 2026, Ukraine launched a wave of drone strikes hitting Primorsk, a major oil-exporting port on the Baltic Sea belonging to which country?",
+      "options": [
+        "Russia",
+        "Belarus",
+        "Sweden",
+        "Finland"
+      ],
+      "a": 0,
+      "correctText": "Russia",
+      "category": "World",
+      "source": "https://apnews.com/article/russia-ukraine-drones-strike-attack-oil-port-b686081ec3f3a9da07d380413067cfd6"
+    },
+    {
+      "q": "Which US President announced in May 2026 that the US military would \"guide ships safely\" out of the Strait of Hormuz amidst a conflict with Iran?",
+      "options": [
+        "Donald Trump",
+        "Joe Biden",
+        "Barack Obama",
+        "George W. Bush"
+      ],
+      "a": 0,
+      "correctText": "Donald Trump",
+      "category": "World",
+      "source": "https://www.dw.com/en/iran-war-trump-says-us-to-guide-ships-safely-out-of-hormuz/live-77021634"
+    },
+    {
+      "q": "Which South American nation opened a human trafficking probe in early May 2026 after its citizens were allegedly lured with fake job offers to fight in the Russian army?",
+      "options": [
+        "Peru",
+        "Colombia",
+        "Argentina",
+        "Brazil"
+      ],
+      "a": 0,
+      "correctText": "Peru",
+      "category": "World",
+      "source": "https://tvpworld.com/93051990/peru-opens-trafficking-probe-over-citizens-recruited-to-fight-for-russia"
+    }
+  ]
+}

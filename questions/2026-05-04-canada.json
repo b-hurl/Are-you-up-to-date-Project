@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "After winning Game 7 against the Tampa Bay Lightning, which team will the Montreal Canadiens face in the second round of the 2026 Stanley Cup Playoffs?",
+      "options": [
+        "Buffalo Sabres",
+        "Toronto Maple Leafs",
+        "Boston Bruins",
+        "Florida Panthers"
+      ],
+      "a": 0,
+      "correctText": "Buffalo Sabres",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/montreal/habs-lightning-game-7-9.7185934"
+    },
+    {
+      "q": "Prime Minister Mark Carney recently called an alleged privacy breach in Alberta deeply concerning after what separatist group published an elector list in an app?",
+      "options": [
+        "The Centurion Project",
+        "The Vanguard Initiative",
+        "Alberta First",
+        "The Sovereign Front"
+      ],
+      "a": 0,
+      "correctText": "The Centurion Project",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/edmonton/article/mark-carney-calls-alleged-privacy-breach-in-alberta-deeply-concerning/"
+    },
+    {
+      "q": "Despite a federal excise tax holiday, the average price of regular gasoline surged past what mark per litre across British Columbia in early May 2026?",
+      "options": [
+        "$2.00",
+        "$1.75",
+        "$2.50",
+        "$1.50"
+      ],
+      "a": 0,
+      "correctText": "$2.00",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/gas-prices-bc-average-2-dollars-9.7185283"
+    },
+    {
+      "q": "Canada became the first non-European nation to attend a meeting of the European Political Community (EPC), with PM Mark Carney joining the May 2026 summit held in which city?",
+      "options": [
+        "Yerevan, Armenia",
+        "Tbilisi, Georgia",
+        "Baku, Azerbaijan",
+        "Chisinau, Moldova"
+      ],
+      "a": 0,
+      "correctText": "Yerevan, Armenia",
+      "category": "Canada",
+      "source": "https://www.theguardian.com/world/2026/may/03/canada-first-non-european-nation-epc-summit-mark-carney-allies-trump"
+    },
+    {
+      "q": "In May 2026, the federal government stated it may 'reallocate' its co-working sites to help departments meet the goal of having unionized employees report to the office how many days a week?",
+      "options": [
+        "Four days a week",
+        "Two days a week",
+        "Three days a week",
+        "Five days a week"
+      ],
+      "a": 0,
+      "correctText": "Four days a week",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/ottawa/federal-co-working-sites-may-be-reallocated-to-meet-4-day-office-return-9.7184371"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "date": "2026-05-04",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Who led the Detroit Pistons with 32 points and 12 assists in their Game 7 victory over the Orlando Magic to secure their first playoff series win in 18 years?",
+      "options": [
+        "Cade Cunningham",
+        "Tobias Harris",
+        "Jaden Ivey",
+        "Jalen Duren"
+      ],
+      "a": 0,
+      "correctText": "Cade Cunningham",
+      "category": "Sports",
+      "source": "https://apnews.com/article/magic-pistons-score-446aabc1b621307e848afd5f6bab6def"
+    },
+    {
+      "q": "Irish actor Gary Lydon passed away at age 61 in May 2026. In which acclaimed film did he play a garda alongside Barry Keoghan?",
+      "options": [
+        "The Banshees of Inisherin",
+        "The Guard",
+        "Calvary",
+        "Brooklyn"
+      ],
+      "a": 0,
+      "correctText": "The Banshees of Inisherin",
+      "category": "Entertainment",
+      "source": "https://www.irishtimes.com/culture/film/2026/05/03/gary-lydon-actor-best-known-for-banshees-of-inisherin-role-dies/"
+    },
+    {
+      "q": "Which strategy game recently reached the milestone of selling 500,000 copies in less than 72 hours of its release?",
+      "options": [
+        "Heroes of Might and Magic: Olden Era",
+        "Age of Mythology: Retold",
+        "Songs of Conquest",
+        "Crown of Greed"
+      ],
+      "a": 0,
+      "correctText": "\"Heroes of Might and Magic: Olden Era\" achieved 500,000 copies sold within its first three days on the market.",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/3105440/announcements/detail/703267074116420580"
+    },
+    {
+      "q": "Which Colorado Avalanche defenseman returned from injury to score twice in a 9-6 Game 1 playoff victory against the Minnesota Wild?",
+      "options": [
+        "Cale Makar",
+        "Devon Toews",
+        "Samuel Girard",
+        "Josh Manson"
+      ],
+      "a": 0,
+      "correctText": "Cale Makar",
+      "category": "Sports",
+      "source": "https://apnews.com/article/wild-avalanche-nhl-score-stanley-25b487413ccbebe3f72a7af091a650c7"
+    },
+    {
+      "q": "Which golfer won a tournament in Mexico by four shots to secure her third title of the 2026 season?",
+      "options": [
+        "Nelly Korda",
+        "Lydia Ko",
+        "Celine Boutier",
+        "Brooke Henderson"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48668717/nelly-korda-wins-mexico-4-shots-3rd-title-season"
+    },
+    {
+      "q": "Which major medical center was reported on May 4, 2026, to be launching a \"Pathway to Practical Nursing\" program to transition its nursing assistants into licensed practical nurses?",
+      "options": [
+        "Cleveland Clinic",
+        "Mayo Clinic",
+        "Johns Hopkins Hospital",
+        "Massachusetts General Hospital"
+      ],
+      "a": 0,
+      "correctText": "Cleveland Clinic",
+      "category": "Health",
+      "source": "https://consultqd.clevelandclinic.org/cleveland-clinic-pcna-to-lpn-program-building-a-sustainable-nursing-pipeline-from-within"
+    },
+    {
+      "q": "According to a May 4, 2026 report, what toxic metal can contaminate brightly colored clothing without any requirement for testing?",
+      "options": [
+        "Lead",
+        "Mercury",
+        "Arsenic",
+        "Cadmium"
+      ],
+      "a": 0,
+      "correctText": "Lead",
+      "category": "Health",
+      "source": "https://www.abc.net.au/news/science/2026-05-04/lead-in-textiles-how-do-we-know-our-clothing-is-safe-to-wear/106598968"
+    },
+    {
+      "q": "Following the closure of their studio in early 2026, former employees of which Ubisoft studio branch recently announced the launch of a new independent developer called besszong?",
+      "options": [
+        "Ubisoft Halifax",
+        "Ubisoft Montreal",
+        "Ubisoft Toronto",
+        "Ubisoft Vancouver"
+      ],
+      "a": 0,
+      "correctText": "Former Ubisoft Halifax workers formed the indie studio besszong, with plans to create a multiplayer party game.",
+      "category": "Gaming",
+      "source": "https://www.ctvnews.ca/atlantic/nova-scotia/article/former-ubisoft-halifax-workers-launch-independent-video-game-studio/"
+    }
+  ]
+}

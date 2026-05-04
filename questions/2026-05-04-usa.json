@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which budget airline announced in early May 2026 that it had nearly finished refunding customers after abruptly ceasing operations?",
+      "options": [
+        "Spirit Airlines",
+        "Frontier Airlines",
+        "JetBlue",
+        "Allegiant Air"
+      ],
+      "a": 0,
+      "correctText": "Spirit Airlines",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/03/spirit-airlines-customer-refunds"
+    },
+    {
+      "q": "A United Airlines flight landing in Newark in May 2026 struck a light pole that subsequently damaged a bakery truck on which major roadway?",
+      "options": [
+        "New Jersey Turnpike",
+        "Garden State Parkway",
+        "Interstate 95",
+        "Pulaski Skyway"
+      ],
+      "a": 0,
+      "correctText": "New Jersey Turnpike",
+      "category": "Usa",
+      "source": "https://apnews.com/article/united-flight-strikes-light-pole-jersey-turnpike-74bf3bf4960d9342c09b02d8b896d1e9"
+    },
+    {
+      "q": "In early May 2026, a federal prosecutor revealed that a Secret Service agent's vest was struck by buckshot from a man attempting to storm which major event?",
+      "options": [
+        "White House Correspondents' Dinner",
+        "The Met Gala",
+        "Gridiron Club Dinner",
+        "State of the Union Address"
+      ],
+      "a": 0,
+      "correctText": "White House Correspondents' Dinner",
+      "category": "Usa",
+      "source": "https://apnews.com/article/allen-white-house-correspondents-dinner-agent-shot-99d9a340efe4436e8127c36c58fa0a39"
+    },
+    {
+      "q": "At least 10 people were taken to hospitals following a May 2026 shooting at a gathering near which lake outside Oklahoma City?",
+      "options": [
+        "Arcadia Lake",
+        "Lake Hefner",
+        "Lake Thunderbird",
+        "Draper Lake"
+      ],
+      "a": 0,
+      "correctText": "Arcadia Lake",
+      "category": "Usa",
+      "source": "https://apnews.com/article/oklahoma-edmond-arcadia-lake-party-shooting-2bcf01e21af70e114b6132765252a8a1"
+    },
+    {
+      "q": "Two U.S. service members went missing in May 2026 after participating in the African Lion multinational military exercises in which country?",
+      "options": [
+        "Morocco",
+        "Tunisia",
+        "Senegal",
+        "Ghana"
+      ],
+      "a": 0,
+      "correctText": "Morocco",
+      "category": "Usa",
+      "source": "https://apnews.com/article/morocco-us-africom-african-lion-exercise-missing-733658c155ce6d64a740a2abb9e59e52"
+    }
+  ]
+}

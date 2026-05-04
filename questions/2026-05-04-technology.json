@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On May 4, 2026, ABC News Australia reported that police officers' locations could be tracked due to a Bluetooth security flaw in which devices?",
+      "options": [
+        "Axon tasers and body-worn cameras",
+        "Police cruiser GPS systems",
+        "Encrypted digital radios",
+        "Standard issue smartwatches"
+      ],
+      "a": 0,
+      "correctText": "Axon tasers and body-worn cameras",
+      "category": "Technology",
+      "source": "https://www.abc.net.au/news/2026-05-04/police-location-tracked-bluetooth-flaw-axon-tasers-bodycams/106610886"
+    },
+    {
+      "q": "An IBM study published on May 4, 2026, revealed that what percentage of surveyed organizations now have a Chief AI Officer (CAIO)?",
+      "options": [
+        "76%",
+        "26%",
+        "50%",
+        "92%"
+      ],
+      "a": 0,
+      "correctText": "76%",
+      "category": "Technology",
+      "source": "https://newsroom.ibm.com/2026-05-04-IBM-Study-CEOs-are-Reshaping-C-suite-Roles-for-the-AI-Era"
+    },
+    {
+      "q": "It was reported on May 4, 2026, that Apple abandoned its formal target to maintain what financial status in preparation for the AI arms race?",
+      "options": [
+        "Net cash neutral",
+        "Zero-debt balance",
+        "Trillion-dollar cash reserve",
+        "Dividend-first yield"
+      ],
+      "a": 0,
+      "correctText": "Net cash neutral",
+      "category": "Technology",
+      "source": "https://www.digitimes.com/news/a20260504VL200/apple-ai-arms-race-cash.html"
+    }
+  ]
+}

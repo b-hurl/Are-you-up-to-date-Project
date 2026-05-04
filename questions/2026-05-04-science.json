@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 4, 2026 publication by NASA's Earth Observatory, scientists analyzed satellite data to document the rapid ice loss and 'record-setting retreat' of which Antarctic glacier?",
+      "options": [
+        "Hektoria Glacier",
+        "Thwaites Glacier",
+        "Pine Island Glacier",
+        "Denman Glacier"
+      ],
+      "a": 0,
+      "correctText": "Hektoria Glacier",
+      "category": "Science",
+      "source": "https://www.nasa.gov/"
+    },
+    {
+      "q": "A planet-finding method detailed in early May 2026 successfully discovered 27 potential 'circumbinary' planets, which are notable because they orbit what?",
+      "options": [
+        "Two stars instead of one",
+        "A supermassive black hole",
+        "A single white dwarf",
+        "Without any host star (rogue)"
+      ],
+      "a": 0,
+      "correctText": "Two stars instead of one",
+      "category": "Science",
+      "source": "https://news.unsw.edu.au/en/almost-30-real-life-tatooine-planet-candidates-discovered"
+    },
+    {
+      "q": "A Nature study trending on May 4, 2026, found that a suboptimal global diet—low in whole grains and high in sodium—contributed to over 4 million deaths from what specific condition in 2023?",
+      "options": [
+        "Ischemic heart disease",
+        "Type 2 diabetes",
+        "Colorectal cancer",
+        "Chronic kidney disease"
+      ],
+      "a": 0,
+      "correctText": "Ischemic heart disease",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41591-026-04250-8"
+    },
+    {
+      "q": "In early May 2026, researchers published findings on a newly discovered cellular organelle inside the gut microbes of cows that plays a key role in producing methane. What is it called?",
+      "options": [
+        "Hydrogenobody",
+        "Methanosome",
+        "Bovinelle",
+        "Rumenocyst"
+      ],
+      "a": 0,
+      "correctText": "Hydrogenobody",
+      "category": "Science",
+      "source": "https://www.scientificamerican.com/article/scientists-just-discovered-what-is-fueling-cows-potent-burps/"
+    },
+    {
+      "q": "According to a May 2026 study, pediatric primary care telemedicine visits led to a significantly lower rate of unnecessary prescriptions for what compared to in-person visits?",
+      "options": [
+        "Antibiotics",
+        "Antihistamines",
+        "Asthma inhalers",
+        "ADHD medications"
+      ],
+      "a": 0,
+      "correctText": "Antibiotics",
+      "category": "Science",
+      "source": "https://www.cidrap.umn.edu/antimicrobial-stewardship/telemedicine-offered-familiar-providers-linked-lower-antibiotic"
+    }
+  ]
+}

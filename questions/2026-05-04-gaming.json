@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 4, 2026, which video game retailer made an unsolicited $55.5 billion takeover offer for the e-commerce firm eBay?",
+      "options": [
+        "GameStop",
+        "Best Buy",
+        "Target",
+        "Walmart"
+      ],
+      "a": 0,
+      "correctText": "GameStop made the massive offer, proposing $125 a share and aiming to cut $1.2bn in eBay's sales and marketing spending.",
+      "category": "Gaming",
+      "source": "https://www.bbc.com/news/articles/cn0p8yled1do"
+    },
+    {
+      "q": "According to a recent revelation by former Nintendo of America President Reggie Fils-Aimé, which major e-commerce company previously asked Nintendo to break the law with illegal financial support?",
+      "options": [
+        "Amazon",
+        "eBay",
+        "Walmart",
+        "Best Buy"
+      ],
+      "a": 0,
+      "correctText": "Reggie Fils-Aimé stated that Nintendo stopped selling to Amazon after the retailer demanded illegal financial support to undercut Walmart's prices.",
+      "category": "Gaming",
+      "source": "https://kotaku.com/reggie-fils-aime-says-nintendo-stopped-selling-to-amazon-after-being-asked-to-break-the-law-2000692699"
+    },
+    {
+      "q": "Following the closure of their studio in early 2026, former employees of which Ubisoft studio branch recently announced the launch of a new independent developer called besszong?",
+      "options": [
+        "Ubisoft Halifax",
+        "Ubisoft Montreal",
+        "Ubisoft Toronto",
+        "Ubisoft Vancouver"
+      ],
+      "a": 0,
+      "correctText": "Former Ubisoft Halifax workers formed the indie studio besszong, with plans to create a multiplayer party game.",
+      "category": "Gaming",
+      "source": "https://www.ctvnews.ca/atlantic/nova-scotia/article/former-ubisoft-halifax-workers-launch-independent-video-game-studio/"
+    },
+    {
+      "q": "Which strategy game recently reached the milestone of selling 500,000 copies in less than 72 hours of its release?",
+      "options": [
+        "Heroes of Might and Magic: Olden Era",
+        "Age of Mythology: Retold",
+        "Songs of Conquest",
+        "Crown of Greed"
+      ],
+      "a": 0,
+      "correctText": "\"Heroes of Might and Magic: Olden Era\" achieved 500,000 copies sold within its first three days on the market.",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/3105440/announcements/detail/703267074116420580"
+    },
+    {
+      "q": "Which classic fox-masked kunoichi character was recently revealed in a new gameplay trailer as the first DLC fighter for Season 3 of Tekken 8?",
+      "options": [
+        "Kunimitsu",
+        "Kazumi",
+        "Lidia",
+        "Zafina"
+      ],
+      "a": 0,
+      "correctText": "Kunimitsu was announced as the first DLC character of Tekken 8's Season 3 Character Pass.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=ao8PakwFP5E"
+    }
+  ]
+}

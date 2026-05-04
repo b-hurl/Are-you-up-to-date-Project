@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-04",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In May 2026, Ukraine launched a wave of drone strikes hitting Primorsk, a major oil-exporting port on the Baltic Sea belonging to which country?",
+      "options": [
+        "Russia",
+        "Belarus",
+        "Sweden",
+        "Finland"
+      ],
+      "a": 0,
+      "correctText": "Russia",
+      "category": "World",
+      "source": "https://apnews.com/article/russia-ukraine-drones-strike-attack-oil-port-b686081ec3f3a9da07d380413067cfd6"
+    },
+    {
+      "q": "Two U.S. service members went missing in May 2026 after participating in the African Lion multinational military exercises in which country?",
+      "options": [
+        "Morocco",
+        "Tunisia",
+        "Senegal",
+        "Ghana"
+      ],
+      "a": 0,
+      "correctText": "Morocco",
+      "category": "Usa",
+      "source": "https://apnews.com/article/morocco-us-africom-african-lion-exercise-missing-733658c155ce6d64a740a2abb9e59e52"
+    },
+    {
+      "q": "Which South American nation opened a human trafficking probe in early May 2026 after its citizens were allegedly lured with fake job offers to fight in the Russian army?",
+      "options": [
+        "Peru",
+        "Colombia",
+        "Argentina",
+        "Brazil"
+      ],
+      "a": 0,
+      "correctText": "Peru",
+      "category": "World",
+      "source": "https://tvpworld.com/93051990/peru-opens-trafficking-probe-over-citizens-recruited-to-fight-for-russia"
+    },
+    {
+      "q": "Canada became the first non-European nation to attend a meeting of the European Political Community (EPC), with PM Mark Carney joining the May 2026 summit held in which city?",
+      "options": [
+        "Yerevan, Armenia",
+        "Tbilisi, Georgia",
+        "Baku, Azerbaijan",
+        "Chisinau, Moldova"
+      ],
+      "a": 0,
+      "correctText": "Yerevan, Armenia",
+      "category": "Canada",
+      "source": "https://www.theguardian.com/world/2026/may/03/canada-first-non-european-nation-epc-summit-mark-carney-allies-trump"
+    },
+    {
+      "q": "At least 10 people were taken to hospitals following a May 2026 shooting at a gathering near which lake outside Oklahoma City?",
+      "options": [
+        "Arcadia Lake",
+        "Lake Hefner",
+        "Lake Thunderbird",
+        "Draper Lake"
+      ],
+      "a": 0,
+      "correctText": "Arcadia Lake",
+      "category": "Usa",
+      "source": "https://apnews.com/article/oklahoma-edmond-arcadia-lake-party-shooting-2bcf01e21af70e114b6132765252a8a1"
+    },
+    {
+      "q": "In a May 2026 interview, Nvidia CEO Jensen Huang stated that US export policies had backfired, causing the company's market share in China to drop to what level?",
+      "options": [
+        "Zero percent",
+        "Ten percent",
+        "Twenty-five percent",
+        "Fifty percent"
+      ],
+      "a": 0,
+      "correctText": "Zero percent",
+      "category": "Business",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/jensen-says-nvidia-now-has-zero-percent-market-share-in-china-says-us-export-policy-has-already-largely-backfired"
+    },
+    {
+      "q": "A United Airlines flight landing in Newark in May 2026 struck a light pole that subsequently damaged a bakery truck on which major roadway?",
+      "options": [
+        "New Jersey Turnpike",
+        "Garden State Parkway",
+        "Interstate 95",
+        "Pulaski Skyway"
+      ],
+      "a": 0,
+      "correctText": "New Jersey Turnpike",
+      "category": "Usa",
+      "source": "https://apnews.com/article/united-flight-strikes-light-pole-jersey-turnpike-74bf3bf4960d9342c09b02d8b896d1e9"
+    },
+    {
+      "q": "In May 2026, Amazon Web Services (AWS) suspended billing for some Middle East cloud customers after its data centers in the UAE and Bahrain were damaged by what?",
+      "options": [
+        "Earthquakes",
+        "Cyberattacks",
+        "Flooding",
+        "Drone strikes"
+      ],
+      "a": 3,
+      "correctText": "Drone strikes",
+      "category": "Business",
+      "source": "https://arstechnica.com/gadgets/2026/05/amazon-stuck-with-months-of-repairs-after-drone-strikes-on-data-centers/"
+    },
+    {
+      "q": "In early May 2026, researchers published findings on a newly discovered cellular organelle inside the gut microbes of cows that plays a key role in producing methane. What is it called?",
+      "options": [
+        "Hydrogenobody",
+        "Methanosome",
+        "Bovinelle",
+        "Rumenocyst"
+      ],
+      "a": 0,
+      "correctText": "Hydrogenobody",
+      "category": "Science",
+      "source": "https://www.scientificamerican.com/article/scientists-just-discovered-what-is-fueling-cows-potent-burps/"
+    },
+    {
+      "q": "After nearly 30 years in business, which one-time Google search competitor officially \"threw in the towel\" and shut down its search business in May 2026?",
+      "options": [
+        "Yahoo Search",
+        "AltaVista",
+        "Dogpile",
+        "Ask.com"
+      ],
+      "a": 3,
+      "correctText": "Ask.com",
+      "category": "Business",
+      "source": "https://www.pcgamer.com/gaming-industry/onetime-google-competitor-ask-com-formerly-ask-jeeves-throws-in-the-towel-after-almost-30-years-jeeves-spirit-endures/"
+    }
+  ]
+}

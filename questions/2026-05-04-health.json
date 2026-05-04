@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 4, 2026 report, what toxic metal can contaminate brightly colored clothing without any requirement for testing?",
+      "options": [
+        "Lead",
+        "Mercury",
+        "Arsenic",
+        "Cadmium"
+      ],
+      "a": 0,
+      "correctText": "Lead",
+      "category": "Health",
+      "source": "https://www.abc.net.au/news/science/2026-05-04/lead-in-textiles-how-do-we-know-our-clothing-is-safe-to-wear/106598968"
+    },
+    {
+      "q": "In a May 4, 2026 policy review, it was noted that the FDA's new Real-Time Clinical Trial (RTCT) pilot program aims to incorporate what technology into early-phase trials?",
+      "options": [
+        "Artificial Intelligence",
+        "Blockchain",
+        "Virtual Reality",
+        "Quantum Computing"
+      ],
+      "a": 0,
+      "correctText": "Artificial Intelligence",
+      "category": "Health",
+      "source": "https://www.thefdalawblog.com/2026/05/fda-announces-new-real-time-clinical-trial-initiative-to-expedite-development-but-at-what-cost/"
+    },
+    {
+      "q": "Which major medical center was reported on May 4, 2026, to be launching a \"Pathway to Practical Nursing\" program to transition its nursing assistants into licensed practical nurses?",
+      "options": [
+        "Cleveland Clinic",
+        "Mayo Clinic",
+        "Johns Hopkins Hospital",
+        "Massachusetts General Hospital"
+      ],
+      "a": 0,
+      "correctText": "Cleveland Clinic",
+      "category": "Health",
+      "source": "https://consultqd.clevelandclinic.org/cleveland-clinic-pcna-to-lpn-program-building-a-sustainable-nursing-pipeline-from-within"
+    }
+  ]
+}

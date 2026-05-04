@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which NHL team defeated the Tampa Bay Lightning 2-1 in Game 7 of their 2026 first-round playoff series?",
+      "options": [
+        "Montreal Canadiens",
+        "Toronto Maple Leafs",
+        "Boston Bruins",
+        "Florida Panthers"
+      ],
+      "a": 0,
+      "correctText": "Montreal Canadiens",
+      "category": "Sports",
+      "source": "https://apnews.com/article/lightning-canadiens-score-nhl-stanley-cup-1ae03e056d806d5d7aa8572f985948ed"
+    },
+    {
+      "q": "Who led the Detroit Pistons with 32 points and 12 assists in their Game 7 victory over the Orlando Magic to secure their first playoff series win in 18 years?",
+      "options": [
+        "Cade Cunningham",
+        "Tobias Harris",
+        "Jaden Ivey",
+        "Jalen Duren"
+      ],
+      "a": 0,
+      "correctText": "Cade Cunningham",
+      "category": "Sports",
+      "source": "https://apnews.com/article/magic-pistons-score-446aabc1b621307e848afd5f6bab6def"
+    },
+    {
+      "q": "Which golfer won a tournament in Mexico by four shots to secure her third title of the 2026 season?",
+      "options": [
+        "Nelly Korda",
+        "Lydia Ko",
+        "Celine Boutier",
+        "Brooke Henderson"
+      ],
+      "a": 0,
+      "correctText": "Nelly Korda",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48668717/nelly-korda-wins-mexico-4-shots-3rd-title-season"
+    },
+    {
+      "q": "Which NBA player led the Philadelphia 76ers with 34 points and 12 rebounds to a Game 7 victory over the Boston Celtics, completing a comeback from a 3-1 deficit?",
+      "options": [
+        "Joel Embiid",
+        "Tyrese Maxey",
+        "Paul George",
+        "Jayson Tatum"
+      ],
+      "a": 0,
+      "correctText": "Joel Embiid",
+      "category": "Sports",
+      "source": "https://apnews.com/article/76ers-celtics-score-nba-playoffs-dfad4f07338f9d73eb4159090430940c"
+    },
+    {
+      "q": "Which Colorado Avalanche defenseman returned from injury to score twice in a 9-6 Game 1 playoff victory against the Minnesota Wild?",
+      "options": [
+        "Cale Makar",
+        "Devon Toews",
+        "Samuel Girard",
+        "Josh Manson"
+      ],
+      "a": 0,
+      "correctText": "Cale Makar",
+      "category": "Sports",
+      "source": "https://apnews.com/article/wild-avalanche-nhl-score-stanley-25b487413ccbebe3f72a7af091a650c7"
+    }
+  ]
+}

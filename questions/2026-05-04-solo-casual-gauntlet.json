@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-04",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In a May 4, 2026 policy review, it was noted that the FDA's new Real-Time Clinical Trial (RTCT) pilot program aims to incorporate what technology into early-phase trials?",
+      "options": [
+        "Artificial Intelligence",
+        "Blockchain",
+        "Virtual Reality",
+        "Quantum Computing"
+      ],
+      "a": 0,
+      "correctText": "Artificial Intelligence",
+      "category": "Health",
+      "source": "https://www.thefdalawblog.com/2026/05/fda-announces-new-real-time-clinical-trial-initiative-to-expedite-development-but-at-what-cost/"
+    },
+    {
+      "q": "Which NBA player led the Philadelphia 76ers with 34 points and 12 rebounds to a Game 7 victory over the Boston Celtics, completing a comeback from a 3-1 deficit?",
+      "options": [
+        "Joel Embiid",
+        "Tyrese Maxey",
+        "Paul George",
+        "Jayson Tatum"
+      ],
+      "a": 0,
+      "correctText": "Joel Embiid",
+      "category": "Sports",
+      "source": "https://apnews.com/article/76ers-celtics-score-nba-playoffs-dfad4f07338f9d73eb4159090430940c"
+    },
+    {
+      "q": "A viral meme depicting Miranda Priestly as a fast-food worker in 'The Devil Wears Prada 2' was widely mistaken for AI, but was actually painted by which human artist?",
+      "options": [
+        "Alexis Franklin",
+        "BossLogic",
+        "Lois van Baarle",
+        "Beeple"
+      ],
+      "a": 0,
+      "correctText": "Alexis Franklin",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/the-devil-wears-prada-2-praise-human-artist-ai-generated-meme-1236879030/"
+    },
+    {
+      "q": "In early May 2026, Los Angeles Mayor Karen Bass proclaimed that Hollywood is 'turning a corner' due to an uptick in production driven by what factor?",
+      "options": [
+        "Increased state subsidies",
+        "The end of union strikes",
+        "A new studio construction boom",
+        "Lower interest rates"
+      ],
+      "a": 0,
+      "correctText": "Increased state subsidies",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/la-production-karen-bass-hollywood-turning-corner-subsidies-1236732286/"
+    },
+    {
+      "q": "On May 4, 2026, which video game retailer made an unsolicited $55.5 billion takeover offer for the e-commerce firm eBay?",
+      "options": [
+        "GameStop",
+        "Best Buy",
+        "Target",
+        "Walmart"
+      ],
+      "a": 0,
+      "correctText": "GameStop made the massive offer, proposing $125 a share and aiming to cut $1.2bn in eBay's sales and marketing spending.",
+      "category": "Gaming",
+      "source": "https://www.bbc.com/news/articles/cn0p8yled1do"
+    },
+    {
+      "q": "Actor Adam Scott recently revealed he auditioned for the sixth installment of which horror franchise, hoping producers wouldn't notice his character had already died in the fourth film?",
+      "options": [
+        "Hellraiser",
+        "Halloween",
+        "A Nightmare on Elm Street",
+        "Friday the 13th"
+      ],
+      "a": 0,
+      "correctText": "Hellraiser",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/adam-scott-auditioned-hellraiser-6-killed-off-1236736056/"
+    },
+    {
+      "q": "According to a recent revelation by former Nintendo of America President Reggie Fils-Aimé, which major e-commerce company previously asked Nintendo to break the law with illegal financial support?",
+      "options": [
+        "Amazon",
+        "eBay",
+        "Walmart",
+        "Best Buy"
+      ],
+      "a": 0,
+      "correctText": "Reggie Fils-Aimé stated that Nintendo stopped selling to Amazon after the retailer demanded illegal financial support to undercut Walmart's prices.",
+      "category": "Gaming",
+      "source": "https://kotaku.com/reggie-fils-aime-says-nintendo-stopped-selling-to-amazon-after-being-asked-to-break-the-law-2000692699"
+    },
+    {
+      "q": "Which NHL team defeated the Tampa Bay Lightning 2-1 in Game 7 of their 2026 first-round playoff series?",
+      "options": [
+        "Montreal Canadiens",
+        "Toronto Maple Leafs",
+        "Boston Bruins",
+        "Florida Panthers"
+      ],
+      "a": 0,
+      "correctText": "Montreal Canadiens",
+      "category": "Sports",
+      "source": "https://apnews.com/article/lightning-canadiens-score-nhl-stanley-cup-1ae03e056d806d5d7aa8572f985948ed"
+    },
+    {
+      "q": "Which classic fox-masked kunoichi character was recently revealed in a new gameplay trailer as the first DLC fighter for Season 3 of Tekken 8?",
+      "options": [
+        "Kunimitsu",
+        "Kazumi",
+        "Lidia",
+        "Zafina"
+      ],
+      "a": 0,
+      "correctText": "Kunimitsu was announced as the first DLC character of Tekken 8's Season 3 Character Pass.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=ao8PakwFP5E"
+    },
+    {
+      "q": "Which 1996 supernatural horror film starring Robin Tunney and Fairuza Balk celebrated its 30th anniversary on May 3, 2026?",
+      "options": [
+        "The Craft",
+        "Practical Magic",
+        "Scream",
+        "The Faculty"
+      ],
+      "a": 0,
+      "correctText": "The Craft",
+      "category": "Entertainment",
+      "source": "https://www.inverse.com/entertainment/the-craft-30-year-anniversary"
+    }
+  ]
+}
