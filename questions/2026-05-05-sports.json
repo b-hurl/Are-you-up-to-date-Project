@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which English cricket club encouraged remote working from their stadium to boost attendance in May 2026?",
+      "options": [
+        "Surrey County Cricket Club",
+        "Middlesex County Cricket Club",
+        "Yorkshire County Cricket Club",
+        "Lancashire County Cricket Club"
+      ],
+      "a": 0,
+      "correctText": "Surrey County Cricket Club",
+      "category": "Sports",
+      "source": "https://www.abc.net.au/news/2026-05-05/work-from-the-oval-instead-of-work-from-home/106641578"
+    },
+    {
+      "q": "Which snooker player became the World Champion in May 2026 after holding onto a narrow lead at the Crucible?",
+      "options": [
+        "Wu Yize",
+        "Ronnie O'Sullivan",
+        "Judd Trump",
+        "Mark Selby"
+      ],
+      "a": 0,
+      "correctText": "Wu Yize",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/snooker/live/cvgkk1gy2pyt"
+    },
+    {
+      "q": "Which NBA team finished a comeback to win their first playoff series in 18 years over the Orlando Magic in May 2026?",
+      "options": [
+        "Detroit Pistons",
+        "Charlotte Hornets",
+        "Chicago Bulls",
+        "Indiana Pacers"
+      ],
+      "a": 0,
+      "correctText": "Detroit Pistons",
+      "category": "Sports",
+      "source": "https://apnews.com/article/magic-pistons-score-446aabc1b621307e848afd5f6bab6def"
+    },
+    {
+      "q": "In May 2026, an all-Indigenous soccer team named Originarios debuted with a 2-0 victory in the fifth division of which Brazilian city?",
+      "options": [
+        "Rio de Janeiro",
+        "São Paulo",
+        "Brasília",
+        "Salvador"
+      ],
+      "a": 0,
+      "correctText": "Rio de Janeiro",
+      "category": "Sports",
+      "source": "https://apnews.com/article/brazil-indigenous-team-soccer-world-cup-rio-514f80b40cd9cd0585b71c9cd684db43"
+    },
+    {
+      "q": "Which Detroit Tigers starting pitcher was scheduled to undergo arthroscopic surgery on his left elbow in early May 2026?",
+      "options": [
+        "Tarik Skubal",
+        "Jack Flaherty",
+        "Matt Manning",
+        "Casey Mize"
+      ],
+      "a": 0,
+      "correctText": "Tarik Skubal",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48677671/tigers-tarik-skubal-surgery-left-elbow"
+    }
+  ]
+}

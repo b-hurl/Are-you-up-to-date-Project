@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-05",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In May 2026, Unfrozen and Hooded Horse announced that which strategy RPG revival sold over 500,000 copies in its first 72 hours of Early Access?",
+      "options": [
+        "Heroes of Might and Magic: Olden Era",
+        "Age of Wonders 4: Rebirth",
+        "Disciples: New Dawn",
+        "King's Bounty III"
+      ],
+      "a": 0,
+      "correctText": "Heroes of Might and Magic: Olden Era",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/3105440/announcements/detail/703267074116420580"
+    },
+    {
+      "q": "According to breaking health reports, a suspected outbreak of what rare rodent-borne disease killed three people on a Netherlands-based cruise ship in the Atlantic?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Legionnaires' disease",
+        "Nipah virus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "Health",
+      "source": "https://www.cnn.com/2026/05/04/health/hantavirus-cruise-ships-explainer-intl"
+    },
+    {
+      "q": "Which English cricket club encouraged remote working from their stadium to boost attendance in May 2026?",
+      "options": [
+        "Surrey County Cricket Club",
+        "Middlesex County Cricket Club",
+        "Yorkshire County Cricket Club",
+        "Lancashire County Cricket Club"
+      ],
+      "a": 0,
+      "correctText": "Surrey County Cricket Club",
+      "category": "Sports",
+      "source": "https://www.abc.net.au/news/2026-05-05/work-from-the-oval-instead-of-work-from-home/106641578"
+    },
+    {
+      "q": "Scientists recently developed a bioengineered chewing gum containing extracts from which plant to help fight oral cancer by lowering HPV and harmful bacteria?",
+      "options": [
+        "Lablab beans",
+        "Green tea leaves",
+        "Coffee beans",
+        "Ginseng roots"
+      ],
+      "a": 0,
+      "correctText": "Lablab beans",
+      "category": "Health",
+      "source": "https://scitechdaily.com/scientists-develop-bioengineered-chewing-gum-that-could-help-fight-oral-cancer/"
+    },
+    {
+      "q": "Which themed Steam sales event officially kicked off on May 4, 2026, offering massive discounts on titles centered around card mechanics and strategy?",
+      "options": [
+        "Steam Deckbuilders Fest",
+        "Steam Roguelike Fest",
+        "Steam Strategy Fest",
+        "Steam Tabletop Fest"
+      ],
+      "a": 0,
+      "correctText": "Steam Deckbuilders Fest",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=tOGut3DNkJc"
+    }
+  ]
+}

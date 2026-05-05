@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-05",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which Detroit Tigers starting pitcher was scheduled to undergo arthroscopic surgery on his left elbow in early May 2026?",
+      "options": [
+        "Tarik Skubal",
+        "Jack Flaherty",
+        "Matt Manning",
+        "Casey Mize"
+      ],
+      "a": 0,
+      "correctText": "Tarik Skubal",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48677671/tigers-tarik-skubal-surgery-left-elbow"
+    },
+    {
+      "q": "A May 2026 University of Georgia study found that individuals who managed what specific metric were able to significantly lower their rate of cognitive decline in just two years?",
+      "options": [
+        "Body Mass Index (BMI)",
+        "Blood glucose",
+        "Resting heart rate",
+        "Cortisol levels"
+      ],
+      "a": 0,
+      "correctText": "Body Mass Index (BMI)",
+      "category": "Health",
+      "source": "https://news.uga.edu/managing-your-weight-may-keep-your-brain-healthier-for-longer/"
+    },
+    {
+      "q": "Which highly anticipated racing game from Playground Games officially \"went gold\" in early May 2026, confirming 9 in-game radio stations?",
+      "options": [
+        "Forza Horizon 6",
+        "Gran Turismo 8",
+        "Need for Speed: Apex",
+        "Project CARS 4"
+      ],
+      "a": 0,
+      "correctText": "Forza Horizon 6",
+      "category": "Gaming",
+      "source": "https://forza.net/news/forza-horizon-6-radio"
+    },
+    {
+      "q": "Which western-themed co-op action game developed by Evil Raptor surpassed 500,000 copies sold over its opening weekend in early May 2026?",
+      "options": [
+        "Far Far West",
+        "Dust & Echoes",
+        "Bounty Hunters: Showdown",
+        "Gunslingers of the Damned"
+      ],
+      "a": 0,
+      "correctText": "Far Far West",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3124540/view/655979278033224555"
+    },
+    {
+      "q": "Which snooker player became the World Champion in May 2026 after holding onto a narrow lead at the Crucible?",
+      "options": [
+        "Wu Yize",
+        "Ronnie O'Sullivan",
+        "Judd Trump",
+        "Mark Selby"
+      ],
+      "a": 0,
+      "correctText": "Wu Yize",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/snooker/live/cvgkk1gy2pyt"
+    },
+    {
+      "q": "Researchers recently announced a groundbreaking sustainable solution to Vitamin B12 deficiency by successfully engineering which blue-green algae to produce the active vitamin?",
+      "options": [
+        "Spirulina",
+        "Chlorella",
+        "Sea moss",
+        "Astaxanthin"
+      ],
+      "a": 0,
+      "correctText": "Spirulina",
+      "category": "Health",
+      "source": "https://scitechdaily.com/researchers-unveil-groundbreaking-sustainable-solution-to-vitamin-b12-deficiency/"
+    },
+    {
+      "q": "On May 5, 2026, the Supreme Court temporarily restored telehealth and mail access to which widely used abortion pill?",
+      "options": [
+        "Mifepristone",
+        "Misoprostol",
+        "Levonorgestrel",
+        "Ulipristal"
+      ],
+      "a": 0,
+      "correctText": "Mifepristone",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/supreme-court-restores-access-abortion-145359847.html"
+    },
+    {
+      "q": "In May 2026, an all-Indigenous soccer team named Originarios debuted with a 2-0 victory in the fifth division of which Brazilian city?",
+      "options": [
+        "Rio de Janeiro",
+        "São Paulo",
+        "Brasília",
+        "Salvador"
+      ],
+      "a": 0,
+      "correctText": "Rio de Janeiro",
+      "category": "Sports",
+      "source": "https://apnews.com/article/brazil-indigenous-team-soccer-world-cup-rio-514f80b40cd9cd0585b71c9cd684db43"
+    },
+    {
+      "q": "Which NBA team finished a comeback to win their first playoff series in 18 years over the Orlando Magic in May 2026?",
+      "options": [
+        "Detroit Pistons",
+        "Charlotte Hornets",
+        "Chicago Bulls",
+        "Indiana Pacers"
+      ],
+      "a": 0,
+      "correctText": "Detroit Pistons",
+      "category": "Sports",
+      "source": "https://apnews.com/article/magic-pistons-score-446aabc1b621307e848afd5f6bab6def"
+    },
+    {
+      "q": "On May 4, 2026, which major video game retail chain made a surprise $55.5 billion unsolicited takeover offer for the e-commerce giant eBay?",
+      "options": [
+        "GameStop",
+        "Best Buy",
+        "Target",
+        "Walmart"
+      ],
+      "a": 0,
+      "correctText": "GameStop",
+      "category": "Gaming",
+      "source": "https://www.bbc.com/news/articles/cn0p8yled1do"
+    }
+  ]
+}

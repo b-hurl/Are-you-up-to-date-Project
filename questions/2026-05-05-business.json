@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which data analytics company reported an 85% revenue growth in its Q1 2026 earnings, marking its fastest expansion since its 2020 market debut?",
+      "options": [
+        "Palantir",
+        "Snowflake",
+        "Datadog",
+        "Splunk"
+      ],
+      "a": 0,
+      "correctText": "Palantir",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html"
+    },
+    {
+      "q": "In early May 2026, which video game retailer made an unsolicited $55.5 billion takeover offer to acquire the e-commerce giant eBay?",
+      "options": [
+        "GameStop",
+        "Best Buy",
+        "Micro Center",
+        "Newegg"
+      ],
+      "a": 0,
+      "correctText": "GameStop",
+      "category": "Business",
+      "source": "https://www.bbc.co.uk/news/articles/cn0p8yled1do"
+    },
+    {
+      "q": "What popular in-store customer perk did McDonald's quietly begin phasing out nationwide in May 2026 to modernize its restaurants?",
+      "options": [
+        "Self-serve soda fountains",
+        "All-day breakfast menus",
+        "Free WiFi access",
+        "Indoor PlayPlaces"
+      ],
+      "a": 0,
+      "correctText": "Self-serve soda fountains",
+      "category": "Business",
+      "source": "https://www.foxbusiness.com/fox-news-food-drink/mcdonalds-quietly-ditching-popular-in-store-feature-nationwide"
+    },
+    {
+      "q": "According to CEO Jensen Huang in May 2026, his tech company's market share in China dropped to \"zero percent\" due to US export policies. Which company does he lead?",
+      "options": [
+        "Nvidia",
+        "Intel",
+        "AMD",
+        "Qualcomm"
+      ],
+      "a": 0,
+      "correctText": "Nvidia",
+      "category": "Business",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/jensen-says-nvidia-now-has-zero-percent-market-share-in-china-says-us-export-policy-has-already-largely-backfired"
+    },
+    {
+      "q": "At its annual 'Think 2026' conference on May 5, which tech giant announced the next generation of its 'watsonx Orchestrate' for multi-agent AI orchestration?",
+      "options": [
+        "IBM",
+        "Microsoft",
+        "Google",
+        "Oracle"
+      ],
+      "a": 0,
+      "correctText": "IBM",
+      "category": "Business",
+      "source": "https://www.ibm.com/think"
+    }
+  ]
+}

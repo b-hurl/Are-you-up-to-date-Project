@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-05",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "What popular in-store customer perk did McDonald's quietly begin phasing out nationwide in May 2026 to modernize its restaurants?",
+      "options": [
+        "Self-serve soda fountains",
+        "All-day breakfast menus",
+        "Free WiFi access",
+        "Indoor PlayPlaces"
+      ],
+      "a": 0,
+      "correctText": "Self-serve soda fountains",
+      "category": "Business",
+      "source": "https://www.foxbusiness.com/fox-news-food-drink/mcdonalds-quietly-ditching-popular-in-store-feature-nationwide"
+    },
+    {
+      "q": "On May 5, 2026, which major e-commerce platform announced it was reviewing a $56 billion 'unsolicited' acquisition offer from GameStop?",
+      "options": [
+        "eBay",
+        "Etsy",
+        "Shopify",
+        "Wayfair"
+      ],
+      "a": 0,
+      "correctText": "eBay",
+      "category": "Technology",
+      "source": "https://iblnews.org/gamestops-56-billion-bid-for-ebay-bloomberg-tech-5-4-2026/"
+    },
+    {
+      "q": "According to a May 2026 study, White Americans who regularly get their political news from which network show much higher levels of support for the Great Replacement Theory?",
+      "options": [
+        "Fox News",
+        "CNN",
+        "MSNBC",
+        "Newsmax"
+      ],
+      "a": 0,
+      "correctText": "Fox News",
+      "category": "Science",
+      "source": "https://www.psypost.org/fox-news-viewership-linked-to-higher-belief-in-great-replacement-theory/"
+    },
+    {
+      "q": "What new software platform did IBM announce the general availability of on May 5, 2026, designed to help organizations build AI-ready sovereign environments?",
+      "options": [
+        "IBM Sovereign Core",
+        "IBM Watson AI OS",
+        "IBM Hybrid Shield",
+        "IBM Cloud Matrix"
+      ],
+      "a": 0,
+      "correctText": "IBM Sovereign Core",
+      "category": "Technology",
+      "source": "https://newsroom.ibm.com/2026-05-05-Think-2026-IBM-Makes-Digital-Sovereignty-Operational-with-General-Availability-of-IBM-Sovereign-Core"
+    },
+    {
+      "q": "On May 4, 2026, Elon Musk agreed to pay $1.5 million to settle an SEC lawsuit regarding delayed disclosures during his 2022 buyout of which company?",
+      "options": [
+        "Twitter",
+        "Tesla",
+        "SpaceX",
+        "SolarCity"
+      ],
+      "a": 0,
+      "correctText": "Twitter",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/05/04/sec-and-elon-musk-agree-to-settle-lawsuit-over-twitter-buyout-in-2022.html"
+    },
+    {
+      "q": "Which major national Statistics Canada data collection initiative officially went live across the country on May 5, 2026?",
+      "options": [
+        "The Federal Housing Survey",
+        "The National Health Registry",
+        "The Canadian Voter Audit",
+        "The 2026 Census"
+      ],
+      "a": 3,
+      "correctText": "The 2026 Census",
+      "category": "Canada",
+      "source": "https://www.census.gc.ca/en/index"
+    },
+    {
+      "q": "Days before the annual Victory Day parade in 2026, a Ukrainian drone reportedly hit a luxury high-rise residential building located just miles from the Kremlin in which city?",
+      "options": [
+        "Moscow",
+        "St. Petersburg",
+        "Kazan",
+        "Belgorod"
+      ],
+      "a": 0,
+      "correctText": "Moscow",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cwy234llx3vo"
+    },
+    {
+      "q": "On May 4, 2026, the White House press room and North Lawn were evacuated following an armed suspect's shootout with which agency near the National Mall?",
+      "options": [
+        "Secret Service",
+        "FBI",
+        "Capitol Police",
+        "Park Police"
+      ],
+      "a": 0,
+      "correctText": "Secret Service",
+      "category": "Usa",
+      "source": "https://wtop.com/dc/2026/05/1-shot-by-law-enforcement-near-white-house-nearby-dc-roads-closed/"
+    },
+    {
+      "q": "A May 2026 psychology study found that modern German viewers felt less guilt about Holocaust atrocities when images were mixed with smiling photographs of which historical figure?",
+      "options": [
+        "Adolf Hitler",
+        "Joseph Goebbels",
+        "Benito Mussolini",
+        "Heinrich Himmler"
+      ],
+      "a": 0,
+      "correctText": "Adolf Hitler",
+      "category": "Science",
+      "source": "https://www.psypost.org/new-study-shows-how-nazi-era-propaganda-influences-present-day-attitudes/"
+    },
+    {
+      "q": "At its annual 'Think 2026' conference on May 5, which tech giant announced the next generation of its 'watsonx Orchestrate' for multi-agent AI orchestration?",
+      "options": [
+        "IBM",
+        "Microsoft",
+        "Google",
+        "Oracle"
+      ],
+      "a": 0,
+      "correctText": "IBM",
+      "category": "Business",
+      "source": "https://www.ibm.com/think"
+    }
+  ]
+}

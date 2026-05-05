@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On May 4, 2026, the Supreme Court restored nationwide access to which abortion pill through telehealth, mail, and pharmacies?",
+      "options": [
+        "Mifepristone",
+        "Misoprostol",
+        "Plan B",
+        "Levonorgestrel"
+      ],
+      "a": 0,
+      "correctText": "Mifepristone",
+      "category": "Usa",
+      "source": "https://apnews.com/article/abortion-pills-mifepristone-supreme-court-louisiana-0533e83d67148fdfec53b1d0d30c1e8a"
+    },
+    {
+      "q": "On May 4, 2026, Elon Musk agreed to pay $1.5 million to settle an SEC lawsuit regarding delayed disclosures during his 2022 buyout of which company?",
+      "options": [
+        "Twitter",
+        "Tesla",
+        "SpaceX",
+        "SolarCity"
+      ],
+      "a": 0,
+      "correctText": "Twitter",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/05/04/sec-and-elon-musk-agree-to-settle-lawsuit-over-twitter-buyout-in-2022.html"
+    },
+    {
+      "q": "On May 4, 2026, the White House press room and North Lawn were evacuated following an armed suspect's shootout with which agency near the National Mall?",
+      "options": [
+        "Secret Service",
+        "FBI",
+        "Capitol Police",
+        "Park Police"
+      ],
+      "a": 0,
+      "correctText": "Secret Service",
+      "category": "Usa",
+      "source": "https://wtop.com/dc/2026/05/1-shot-by-law-enforcement-near-white-house-nearby-dc-roads-closed/"
+    }
+  ]
+}

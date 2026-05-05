@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-05",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which data analytics company reported an 85% revenue growth in its Q1 2026 earnings, marking its fastest expansion since its 2020 market debut?",
+      "options": [
+        "Palantir",
+        "Snowflake",
+        "Datadog",
+        "Splunk"
+      ],
+      "a": 0,
+      "correctText": "Palantir",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/05/04/palantir-pltr-q1-earnings-report-2026.html"
+    },
+    {
+      "q": "Which satellite internet provider slashed the monthly price of its US Residential plan to $29 for the first three months, according to a May 5, 2026 announcement?",
+      "options": [
+        "Starlink",
+        "HughesNet",
+        "Viasat",
+        "Project Kuiper"
+      ],
+      "a": 0,
+      "correctText": "Starlink",
+      "category": "Technology",
+      "source": "https://www.pcmag.com/news/starlink-drops-price-as-low-as-29month-to-win-over-new-users"
+    },
+    {
+      "q": "In May 2026, which Middle Eastern nation reported coming under Iranian attack for the first time since an April ceasefire, as the U.S. moved to reopen the Strait of Hormuz?",
+      "options": [
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Oman",
+        "Kuwait"
+      ],
+      "a": 0,
+      "correctText": "United Arab Emirates",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/world/strait-hormuz-ships-us-iran-9.7186404"
+    },
+    {
+      "q": "According to CEO Jensen Huang in May 2026, his tech company's market share in China dropped to \"zero percent\" due to US export policies. Which company does he lead?",
+      "options": [
+        "Nvidia",
+        "Intel",
+        "AMD",
+        "Qualcomm"
+      ],
+      "a": 0,
+      "correctText": "Nvidia",
+      "category": "Business",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/jensen-says-nvidia-now-has-zero-percent-market-share-in-china-says-us-export-policy-has-already-largely-backfired"
+    },
+    {
+      "q": "In May 2026, the group 'Stay Free Alberta' delivered a petition to Elections Alberta with over 300,000 signatures calling for what?",
+      "options": [
+        "The removal of the carbon tax",
+        "A referendum on Alberta separation",
+        "A ban on wind and solar farms",
+        "The recall of Premier Danielle Smith"
+      ],
+      "a": 1,
+      "correctText": "A referendum on Alberta separation",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/edmonton/alberta-separatists-say-more-than-300k-have-signed-petition-9.7187218"
+    },
+    {
+      "q": "On May 4, 2026, the Supreme Court restored nationwide access to which abortion pill through telehealth, mail, and pharmacies?",
+      "options": [
+        "Mifepristone",
+        "Misoprostol",
+        "Plan B",
+        "Levonorgestrel"
+      ],
+      "a": 0,
+      "correctText": "Mifepristone",
+      "category": "Usa",
+      "source": "https://apnews.com/article/abortion-pills-mifepristone-supreme-court-louisiana-0533e83d67148fdfec53b1d0d30c1e8a"
+    },
+    {
+      "q": "Two U.S. Navy destroyers transited the Strait of Hormuz in May 2026 after dodging a sustained barrage of missiles, drones, and small boats from which country?",
+      "options": [
+        "Iran",
+        "Yemen",
+        "Russia",
+        "China"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://www.cbsnews.com/news/2-us-navy-destroyers-transit-strait-of-hormuz-after-dodging-iranian-onslaught/?ftag=CNM-00-10aab4i"
+    },
+    {
+      "q": "A May 2026 Northwestern University study on paternal mortality data in Georgia found that the majority of deaths among new dads within five years of birth were due to what?",
+      "options": [
+        "Potentially preventable causes like homicide and accidental injury",
+        "Genetic heart conditions triggered by stress",
+        "Workplace accidents due to sleep deprivation",
+        "Biological complications related to aging"
+      ],
+      "a": 0,
+      "correctText": "Potentially preventable causes like homicide and accidental injury",
+      "category": "Science",
+      "source": "https://news.northwestern.edu/stories/2026/4/dads-dying-after-kids-are-born-no-one-is-tracking-it"
+    },
+    {
+      "q": "Which provincial political leader made headlines in May 2026 for predicting that Premier Doug Ford would eventually go to prison?",
+      "options": [
+        "Bonnie Crombie",
+        "Mike Schreiner",
+        "Marit Stiles",
+        "John Fraser"
+      ],
+      "a": 2,
+      "correctText": "Marit Stiles",
+      "category": "Canada",
+      "source": "https://www.thestar.com/politics/provincial/ndp-leader-marit-stiles-predicts-prison-for-doug-ford/article_b0681435-5f63-44a0-9726-e447bcea3487.html"
+    },
+    {
+      "q": "In May 2026, the federal government announced a new program to begin tracking which specific group of people once their permits expire?",
+      "options": [
+        "Permanent residents entering the US",
+        "Temporary foreign residents leaving Canada",
+        "Tourists extending their visas",
+        "International students switching programs"
+      ],
+      "a": 1,
+      "correctText": "Temporary foreign residents leaving Canada",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-pilot-program-tracking-temporary-foreign-residents-leaving-permits/"
+    }
+  ]
+}

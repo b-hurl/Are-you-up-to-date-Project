@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In May 2026, the federal government announced a new program to begin tracking which specific group of people once their permits expire?",
+      "options": [
+        "Permanent residents entering the US",
+        "Temporary foreign residents leaving Canada",
+        "Tourists extending their visas",
+        "International students switching programs"
+      ],
+      "a": 1,
+      "correctText": "Temporary foreign residents leaving Canada",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-pilot-program-tracking-temporary-foreign-residents-leaving-permits/"
+    },
+    {
+      "q": "Which provincial political leader made headlines in May 2026 for predicting that Premier Doug Ford would eventually go to prison?",
+      "options": [
+        "Bonnie Crombie",
+        "Mike Schreiner",
+        "Marit Stiles",
+        "John Fraser"
+      ],
+      "a": 2,
+      "correctText": "Marit Stiles",
+      "category": "Canada",
+      "source": "https://www.thestar.com/politics/provincial/ndp-leader-marit-stiles-predicts-prison-for-doug-ford/article_b0681435-5f63-44a0-9726-e447bcea3487.html"
+    },
+    {
+      "q": "Which major national Statistics Canada data collection initiative officially went live across the country on May 5, 2026?",
+      "options": [
+        "The Federal Housing Survey",
+        "The National Health Registry",
+        "The Canadian Voter Audit",
+        "The 2026 Census"
+      ],
+      "a": 3,
+      "correctText": "The 2026 Census",
+      "category": "Canada",
+      "source": "https://www.census.gc.ca/en/index"
+    },
+    {
+      "q": "Prime Minister Mark Carney's government faced recent pushback over a controversial proposal that aims to do what to Canadian airports?",
+      "options": [
+        "Privatize them",
+        "Close regional hubs",
+        "Ban domestic short-haul flights",
+        "Merge them with US customs"
+      ],
+      "a": 0,
+      "correctText": "Privatize them",
+      "category": "Canada",
+      "source": "https://www.thestar.com/opinion/editorials/mark-carneys-government-says-privatizing-airports-will-make-them-better-this-is-why-it-should-think-again/article_9ce07974-f756-4a1a-9128-3995d0def80b.html"
+    },
+    {
+      "q": "In May 2026, the group 'Stay Free Alberta' delivered a petition to Elections Alberta with over 300,000 signatures calling for what?",
+      "options": [
+        "The removal of the carbon tax",
+        "A referendum on Alberta separation",
+        "A ban on wind and solar farms",
+        "The recall of Premier Danielle Smith"
+      ],
+      "a": 1,
+      "correctText": "A referendum on Alberta separation",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/edmonton/alberta-separatists-say-more-than-300k-have-signed-petition-9.7187218"
+    }
+  ]
+}

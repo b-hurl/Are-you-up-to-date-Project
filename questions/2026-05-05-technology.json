@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On May 5, 2026, which major e-commerce platform announced it was reviewing a $56 billion 'unsolicited' acquisition offer from GameStop?",
+      "options": [
+        "eBay",
+        "Etsy",
+        "Shopify",
+        "Wayfair"
+      ],
+      "a": 0,
+      "correctText": "eBay",
+      "category": "Technology",
+      "source": "https://iblnews.org/gamestops-56-billion-bid-for-ebay-bloomberg-tech-5-4-2026/"
+    },
+    {
+      "q": "Which satellite internet provider slashed the monthly price of its US Residential plan to $29 for the first three months, according to a May 5, 2026 announcement?",
+      "options": [
+        "Starlink",
+        "HughesNet",
+        "Viasat",
+        "Project Kuiper"
+      ],
+      "a": 0,
+      "correctText": "Starlink",
+      "category": "Technology",
+      "source": "https://www.pcmag.com/news/starlink-drops-price-as-low-as-29month-to-win-over-new-users"
+    },
+    {
+      "q": "What new software platform did IBM announce the general availability of on May 5, 2026, designed to help organizations build AI-ready sovereign environments?",
+      "options": [
+        "IBM Sovereign Core",
+        "IBM Watson AI OS",
+        "IBM Hybrid Shield",
+        "IBM Cloud Matrix"
+      ],
+      "a": 0,
+      "correctText": "IBM Sovereign Core",
+      "category": "Technology",
+      "source": "https://newsroom.ibm.com/2026-05-05-Think-2026-IBM-Makes-Digital-Sovereignty-Operational-with-General-Availability-of-IBM-Sovereign-Core"
+    }
+  ]
+}

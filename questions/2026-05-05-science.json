@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 2026 study, White Americans who regularly get their political news from which network show much higher levels of support for the Great Replacement Theory?",
+      "options": [
+        "Fox News",
+        "CNN",
+        "MSNBC",
+        "Newsmax"
+      ],
+      "a": 0,
+      "correctText": "Fox News",
+      "category": "Science",
+      "source": "https://www.psypost.org/fox-news-viewership-linked-to-higher-belief-in-great-replacement-theory/"
+    },
+    {
+      "q": "A May 2026 Northwestern University study on paternal mortality data in Georgia found that the majority of deaths among new dads within five years of birth were due to what?",
+      "options": [
+        "Potentially preventable causes like homicide and accidental injury",
+        "Genetic heart conditions triggered by stress",
+        "Workplace accidents due to sleep deprivation",
+        "Biological complications related to aging"
+      ],
+      "a": 0,
+      "correctText": "Potentially preventable causes like homicide and accidental injury",
+      "category": "Science",
+      "source": "https://news.northwestern.edu/stories/2026/4/dads-dying-after-kids-are-born-no-one-is-tracking-it"
+    },
+    {
+      "q": "According to a May 2026 national survey, what is the most commonly microdosed substance among adults in the U.S.?",
+      "options": [
+        "Cannabis",
+        "Psilocybin",
+        "LSD",
+        "MDMA"
+      ],
+      "a": 0,
+      "correctText": "Cannabis",
+      "category": "Science",
+      "source": "https://today.ucsd.edu/story/cannabis-microdosing-more-common-than-psychedelics-amoung-us-adults-national-survey-finds"
+    },
+    {
+      "q": "A May 2026 psychology study found that modern German viewers felt less guilt about Holocaust atrocities when images were mixed with smiling photographs of which historical figure?",
+      "options": [
+        "Adolf Hitler",
+        "Joseph Goebbels",
+        "Benito Mussolini",
+        "Heinrich Himmler"
+      ],
+      "a": 0,
+      "correctText": "Adolf Hitler",
+      "category": "Science",
+      "source": "https://www.psypost.org/new-study-shows-how-nazi-era-propaganda-influences-present-day-attitudes/"
+    },
+    {
+      "q": "A May 2026 University of Georgia study found that adults could significantly lower their rate of cognitive decline in just two years by managing what?",
+      "options": [
+        "Their body weight",
+        "Their sleep schedule",
+        "Their daily caffeine intake",
+        "Their screen time"
+      ],
+      "a": 0,
+      "correctText": "Their body weight",
+      "category": "Science",
+      "source": "https://news.uga.edu/managing-your-weight-may-keep-your-brain-healthier-for-longer/"
+    }
+  ]
+}
