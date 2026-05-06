@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which NHL team won the lottery for the No. 1 pick in the 2026 draft, as reported on May 6, 2026?",
+      "options": [
+        "Toronto Maple Leafs",
+        "Vancouver Canucks",
+        "San Jose Sharks",
+        "Chicago Blackhawks"
+      ],
+      "a": 0,
+      "correctText": "Toronto Maple Leafs",
+      "category": "Sports",
+      "source": "https://apnews.com/article/maple-leafs-nhl-draft-lottery-241c71feece28fc1916bde242a401255"
+    },
+    {
+      "q": "On May 6, 2026, it was announced that Tiger Woods officially withdrew from the PGA Championship, while which LIV Golf player received a surprise invitation?",
+      "options": [
+        "Dustin Johnson",
+        "Phil Mickelson",
+        "Brooks Koepka",
+        "Bryson DeChambeau"
+      ],
+      "a": 0,
+      "correctText": "Dustin Johnson",
+      "category": "Sports",
+      "source": "https://apnews.com/article/pga-championship-aronimink-dustin-johnson-tiger-woods-f45cdf2c13d7ceced2f31ff0dfc4cfce"
+    },
+    {
+      "q": "Pittsburgh Pirates reliever Chris Devenski was suspended following an on-field incident for intentionally throwing at which Cincinnati Reds rookie in early May 2026?",
+      "options": [
+        "Sal Stewart",
+        "Elly De La Cruz",
+        "Matt McLain",
+        "Noelvi Marte"
+      ],
+      "a": 0,
+      "correctText": "Sal Stewart",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48685932/pirates-devenski-suspended-throwing-reds-stewart"
+    },
+    {
+      "q": "Who was crowned the 2026 World Snooker Champion after defeating Shaun Murphy 18-17 in a dramatic final?",
+      "options": [
+        "Wu Yize",
+        "Ding Junhui",
+        "Zhao Xintong",
+        "Kyren Wilson"
+      ],
+      "a": 0,
+      "correctText": "Wu Yize",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/snooker/live/cvgkk1gy2pyt"
+    },
+    {
+      "q": "Which tennis star suggested a boycott might be needed over the prize money share issue at the 2026 French Open?",
+      "options": [
+        "Aryna Sabalenka",
+        "Iga Swiatek",
+        "Coco Gauff",
+        "Elena Rybakina"
+      ],
+      "a": 0,
+      "correctText": "Aryna Sabalenka",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48684165/boycott-needed-prize-share-issue"
+    }
+  ]
+}

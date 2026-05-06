@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-06",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In a May 6, 2026 press release, ASUS announced their Computex 2026 booth will feature an experimental zone celebrating the 20th anniversary of which iconic hardware brand?",
+      "options": [
+        "Republic of Gamers (ROG)",
+        "TUF Gaming",
+        "Alienware",
+        "Predator"
+      ],
+      "a": 0,
+      "correctText": "ASUS is celebrating the 20-year milestone of Republic of Gamers (ROG), which was originally formed in 2006, at Computex 2026.",
+      "category": "Gaming",
+      "source": "https://www.asus.com/"
+    },
+    {
+      "q": "It was confirmed on May 5, 2026, that actor Jonathan Tiersten passed away at the age of 60. Which 1983 cult horror film was he best known for?",
+      "options": [
+        "Sleepaway Camp",
+        "Friday the 13th",
+        "A Nightmare on Elm Street",
+        "The Texas Chain Saw Massacre"
+      ],
+      "a": 0,
+      "correctText": "Sleepaway Camp",
+      "category": "Entertainment",
+      "source": "https://www.horrorsociety.com/2026/05/05/breaking-sleepaway-camp-actor-jonathan-tiersten-has-passed-away/"
+    },
+    {
+      "q": "Which Battlefield 4 map was confirmed to be returning in Battlefield 6 Season 3, according to a gameplay trailer released on May 6, 2026?",
+      "options": [
+        "Golmud Railway",
+        "Caspian Border",
+        "Operation Locker",
+        "Siege of Shanghai"
+      ],
+      "a": 0,
+      "correctText": "The May 6 gameplay trailer revealed that Golmud Railway is returning as an expanded, reimagined map called 'Railway to Golmud'.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=XCMr55EjFew"
+    },
+    {
+      "q": "Pittsburgh Pirates reliever Chris Devenski was suspended following an on-field incident for intentionally throwing at which Cincinnati Reds rookie in early May 2026?",
+      "options": [
+        "Sal Stewart",
+        "Elly De La Cruz",
+        "Matt McLain",
+        "Noelvi Marte"
+      ],
+      "a": 0,
+      "correctText": "Sal Stewart",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48685932/pirates-devenski-suspended-throwing-reds-stewart"
+    },
+    {
+      "q": "Which tennis star suggested a boycott might be needed over the prize money share issue at the 2026 French Open?",
+      "options": [
+        "Aryna Sabalenka",
+        "Iga Swiatek",
+        "Coco Gauff",
+        "Elena Rybakina"
+      ],
+      "a": 0,
+      "correctText": "Aryna Sabalenka",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48684165/boycott-needed-prize-share-issue"
+    },
+    {
+      "q": "As part of his 'MAHA' push, Health and Human Services Secretary Robert F. Kennedy Jr. initiated a campaign in May 2026 to wean Americans off of which class of medications?",
+      "options": [
+        "Statins",
+        "Opioids",
+        "Blood pressure medications",
+        "Antidepressants (SSRIs)"
+      ],
+      "a": 3,
+      "correctText": "Antidepressants (SSRIs)",
+      "category": "Health",
+      "source": "http://independent.co.uk/news/world/americas/us-politics/rfk-jr-zoloft-prozac-drugs-maha-b2970721.html"
+    },
+    {
+      "q": "Following years of being sidelined due to distribution constraints, which Eugen Systems World War II real-time strategy game was officially re-released on Steam on May 6, 2026?",
+      "options": [
+        "R.U.S.E.",
+        "Wargame: Red Dragon",
+        "Steel Division 2",
+        "Company of Heroes 3"
+      ],
+      "a": 0,
+      "correctText": "R.U.S.E. made its return to Steam on May 6, 2026, complete with all its original DLCs and full Steam Deck support.",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/RUSE/announcements/detail/679623176076920230"
+    },
+    {
+      "q": "According to CDC data highlighted in May 2026, which U.S. state saw its tuberculosis cases hit a 12-year high, significantly outpacing the national average?",
+      "options": [
+        "California",
+        "Texas",
+        "Florida",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "California",
+      "category": "Health",
+      "source": "https://www.sfgate.com/bayarea/article/california-disease-outbreaks-22240687.php"
+    },
+    {
+      "q": "Who was crowned the 2026 World Snooker Champion after defeating Shaun Murphy 18-17 in a dramatic final?",
+      "options": [
+        "Wu Yize",
+        "Ding Junhui",
+        "Zhao Xintong",
+        "Kyren Wilson"
+      ],
+      "a": 0,
+      "correctText": "Wu Yize",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/snooker/live/cvgkk1gy2pyt"
+    },
+    {
+      "q": "A Subnautica 2 developer vlog released on May 6, 2026, confirmed that the highly anticipated underwater survival sequel will launch in Early Access for what price?",
+      "options": [
+        "$29.99",
+        "$19.99",
+        "$39.99",
+        "$49.99"
+      ],
+      "a": 0,
+      "correctText": "Unknown Worlds Entertainment announced in their May 6 Dev Vlog that Subnautica 2 will cost $29.99 at its Early Access launch.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=N3nlHGdtCE0"
+    }
+  ]
+}

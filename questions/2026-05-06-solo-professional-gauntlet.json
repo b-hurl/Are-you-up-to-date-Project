@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-06",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Driven largely by surging exports of oil and what other commodity, did Statistics Canada report the country swinging to its first trade surplus in six months in May 2026?",
+      "options": [
+        "Gold",
+        "Lumber",
+        "Wheat",
+        "Uranium"
+      ],
+      "a": 0,
+      "correctText": "Gold",
+      "category": "Canada",
+      "source": "https://financialpost.com/news/economy/canada-swings-to-trade-surplus-for-first-time-in-six-months"
+    },
+    {
+      "q": "On May 6, 2026, Türkiye unveiled the 'Yildirimhan', a new intercontinental ballistic missile reportedly capable of reaching what top speed?",
+      "options": [
+        "Mach 15",
+        "Mach 25",
+        "Mach 5",
+        "Mach 35"
+      ],
+      "a": 1,
+      "correctText": "Mach 25",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-6-2026/3211566"
+    },
+    {
+      "q": "The World Health Organization initiated contact tracing on May 6, 2026, for over 80 passengers on a flight from Saint Helena to Johannesburg due to exposure to which virus?",
+      "options": [
+        "Ebola virus",
+        "Marburg virus",
+        "Hantavirus",
+        "Nipah virus"
+      ],
+      "a": 2,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://www.manilatimes.net/2026/05/06/world/who-tracing-over-80-people-on-flight-taken-by-hantavirus-victim/2336441"
+    },
+    {
+      "q": "Reported on May 6, 2026, U.S. President Donald Trump announced a temporary pause on what military operation designed to escort commercial shipping through the Strait of Hormuz?",
+      "options": [
+        "Operation Sentinel",
+        "Project Liberty",
+        "Project Freedom",
+        "Operation Resolute Navigation"
+      ],
+      "a": 2,
+      "correctText": "Project Freedom",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-6-2026/3211566"
+    },
+    {
+      "q": "Which state's Secretary of State announced in May 2026 that the state had shared sensitive voter registration data with the U.S. Department of Justice to comply with federal law?",
+      "options": [
+        "Iowa",
+        "Florida",
+        "Texas",
+        "Nebraska"
+      ],
+      "a": 0,
+      "correctText": "Iowa",
+      "category": "Usa",
+      "source": "https://www.iowapublicradio.org/state-government-news/2026-05-05/iowa-shares-voter-data-with-justice-department"
+    },
+    {
+      "q": "Which historic all-women's college faced a federal Title IX investigation in May 2026 over its policy of admitting transgender women?",
+      "options": [
+        "Smith College",
+        "Wellesley College",
+        "Vassar College",
+        "Mount Holyoke College"
+      ],
+      "a": 0,
+      "correctText": "Smith College",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/05/smith-college-transgender-women-investigation"
+    },
+    {
+      "q": "In May 2026, the U.S. Securities and Exchange Commission (SEC) proposed allowing publicly traded companies to opt out of filing which type of reports?",
+      "options": [
+        "Quarterly earnings reports",
+        "Annual tax returns",
+        "Executive compensation disclosures",
+        "Lobbying expense reports"
+      ],
+      "a": 0,
+      "correctText": "Quarterly earnings reports",
+      "category": "Usa",
+      "source": "https://www.reuters.com/sustainability/boards-policy-regulation/us-sec-proposes-allowing-public-companies-shift-semiannual-earnings-reports-2026-05-05/"
+    },
+    {
+      "q": "As reported on May 6, 2026, U.S. Secretary of State Marco Rubio confirmed the end of the offensive stage of the Iran war, a military campaign officially codenamed what?",
+      "options": [
+        "Operation Desert Storm",
+        "Operation Epic Fury",
+        "Operation Enduring Freedom",
+        "Operation Infinite Resolve"
+      ],
+      "a": 1,
+      "correctText": "Operation Epic Fury",
+      "category": "World",
+      "source": "https://www.thehindu.com/news/international/iran-israel-war-live-updates-may-6-2026/article68132049.ece"
+    },
+    {
+      "q": "Ukrainian President Volodymyr Zelenskyy declared a unilateral ceasefire starting at midnight on May 6, 2026, ahead of which nation's Victory Day commemorations?",
+      "options": [
+        "Poland",
+        "Germany",
+        "Belarus",
+        "Russia"
+      ],
+      "a": 3,
+      "correctText": "Russia",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-6-2026/3211566"
+    },
+    {
+      "q": "In May 2026, which Canadian telecommunications company was reported to be using AI to artificially alter the accents of its customer-service agents?",
+      "options": [
+        "Telus",
+        "Bell",
+        "Rogers",
+        "Shaw"
+      ],
+      "a": 0,
+      "correctText": "Telus",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-telus-ai-accents-customer-service-agents/"
+    }
+  ]
+}

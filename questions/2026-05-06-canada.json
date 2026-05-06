@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Canadian musician Ashley MacIsaac launched a $1.5M lawsuit against Google on May 5, 2026, after an AI Overview falsely identified him as what?",
+      "options": [
+        "A sex offender",
+        "A convicted murderer",
+        "A tax evader",
+        "An American citizen"
+      ],
+      "a": 0,
+      "correctText": "A sex offender",
+      "category": "Canada",
+      "source": "https://www.theguardian.com/music/2026/may/05/canadian-ashley-macisaac-fiddler-musician-singer-songwriter-sues-google-ai-sex-offender-ntwnfb"
+    },
+    {
+      "q": "In May 2026, which Canadian telecommunications company was reported to be using AI to artificially alter the accents of its customer-service agents?",
+      "options": [
+        "Telus",
+        "Bell",
+        "Rogers",
+        "Shaw"
+      ],
+      "a": 0,
+      "correctText": "Telus",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-telus-ai-accents-customer-service-agents/"
+    },
+    {
+      "q": "Former Alberta Premier Jason Kenney announced he was retaining legal counsel in May 2026 following a massive data leak linked to which organization's database?",
+      "options": [
+        "The Centurion Project",
+        "Take Back Alberta",
+        "The Alberta Prosperity Project",
+        "The Freedom Convoy"
+      ],
+      "a": 0,
+      "correctText": "The Centurion Project",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11831942/dangerous-violation-jason-kenney-alleged-centurion-project-leak/"
+    },
+    {
+      "q": "Driven largely by surging exports of oil and what other commodity, did Statistics Canada report the country swinging to its first trade surplus in six months in May 2026?",
+      "options": [
+        "Gold",
+        "Lumber",
+        "Wheat",
+        "Uranium"
+      ],
+      "a": 0,
+      "correctText": "Gold",
+      "category": "Canada",
+      "source": "https://financialpost.com/news/economy/canada-swings-to-trade-surplus-for-first-time-in-six-months"
+    },
+    {
+      "q": "Airbus secured a major order in May 2026 for up to 150 Canadian-made A220 commercial planes from which airline?",
+      "options": [
+        "AirAsia",
+        "Lufthansa",
+        "Delta Air Lines",
+        "Emirates"
+      ],
+      "a": 0,
+      "correctText": "AirAsia",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-airbus-wins-order-for-as-many-as-150-canadian-made-a220-planes-from/"
+    }
+  ]
+}

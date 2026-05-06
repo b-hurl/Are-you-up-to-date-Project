@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-06",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to reports on May 5, 2026, which filmmaker's Monkeypaw Productions recently cut down its development team?",
+      "options": [
+        "Jordan Peele",
+        "Ari Aster",
+        "Jason Blum",
+        "James Wan"
+      ],
+      "a": 0,
+      "correctText": "Jordan Peele",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/jordan-peele-monkeypaw-productions-cuts-down-development-1236587005/"
+    },
+    {
+      "q": "On May 6, 2026, it was announced that Tiger Woods officially withdrew from the PGA Championship, while which LIV Golf player received a surprise invitation?",
+      "options": [
+        "Dustin Johnson",
+        "Phil Mickelson",
+        "Brooks Koepka",
+        "Bryson DeChambeau"
+      ],
+      "a": 0,
+      "correctText": "Dustin Johnson",
+      "category": "Sports",
+      "source": "https://apnews.com/article/pga-championship-aronimink-dustin-johnson-tiger-woods-f45cdf2c13d7ceced2f31ff0dfc4cfce"
+    },
+    {
+      "q": "Which state filed a lawsuit in May 2026 against artificial intelligence company Character.AI, alleging its chatbots illegally acted as licensed medical doctors?",
+      "options": [
+        "California",
+        "New York",
+        "Pennsylvania",
+        "Texas"
+      ],
+      "a": 2,
+      "correctText": "Pennsylvania",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/pennsylvania-sues-ai-company-saying-123949199.html?ncid=redditnewsus"
+    },
+    {
+      "q": "In early May 2026, the World Health Organization investigated a rare suspected human-to-human transmission of what rodent-borne virus on a stranded cruise ship?",
+      "options": [
+        "Norovirus",
+        "Hantavirus",
+        "Nipah virus",
+        "Lassa fever"
+      ],
+      "a": 1,
+      "correctText": "Hantavirus",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/hantavirus-cruise-ship-stranded-crew-evacuation-human-transmission-rcna343606"
+    },
+    {
+      "q": "In May 2026, the U.S. Supreme Court temporarily blocked a lower court ruling, fully restoring access to which abortion pill through telehealth and mail?",
+      "options": [
+        "Misoprostol",
+        "Mifepristone",
+        "Plan B",
+        "Methotrexate"
+      ],
+      "a": 1,
+      "correctText": "Mifepristone",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/supreme-court-restores-access-abortion-145359847.html?ncid=redditnewsus"
+    },
+    {
+      "q": "Which of Guillermo del Toro's films was announced on May 5, 2026, to return to the Cannes Film Festival in a new 4K restoration to celebrate its 20th anniversary?",
+      "options": [
+        "Pan's Labyrinth",
+        "The Shape of Water",
+        "Hellboy",
+        "Cronos"
+      ],
+      "a": 0,
+      "correctText": "Pan's Labyrinth",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/festivals/guillermo-del-toro-pans-labyrinth-cannes-classics-1236738458/"
+    },
+    {
+      "q": "As announced on May 5, 2026, Ray Mendoza is set to direct 'Blood On The Promontory', a Western-drama following five convicts shackled together by what?",
+      "options": [
+        "By foot",
+        "By their necks",
+        "By their wrists",
+        "By their waists"
+      ],
+      "a": 0,
+      "correctText": "By foot",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/ray-mendoza-sets-blood-on-the-promontory-next-movie-1236882008/"
+    },
+    {
+      "q": "Which NHL team won the lottery for the No. 1 pick in the 2026 draft, as reported on May 6, 2026?",
+      "options": [
+        "Toronto Maple Leafs",
+        "Vancouver Canucks",
+        "San Jose Sharks",
+        "Chicago Blackhawks"
+      ],
+      "a": 0,
+      "correctText": "Toronto Maple Leafs",
+      "category": "Sports",
+      "source": "https://apnews.com/article/maple-leafs-nhl-draft-lottery-241c71feece28fc1916bde242a401255"
+    },
+    {
+      "q": "A 1.0 release trailer on May 6, 2026, highlighted 'Zagreus' Journey', an ambitious fan-mod that seamlessly integrates the entirety of the original Hades game into which title?",
+      "options": [
+        "Hades II",
+        "Dead Cells",
+        "Hollow Knight: Silksong",
+        "The Binding of Isaac"
+      ],
+      "a": 0,
+      "correctText": "The 'Zagreus' Journey' mod allows players to explore the original Hades regions and fight its legacy bosses seamlessly as Melinoë within Hades II.",
+      "category": "Gaming",
+      "source": "https://youtu.be/rxuTLSPqIEE?si=Rsj9Fyza5WW9lQ8r"
+    },
+    {
+      "q": "On May 6, 2026, which former Disney child star from 'The Parent Trap' revealed she lost 90 percent of her early earnings due to bad financial advice and a British supertax?",
+      "options": [
+        "Hayley Mills",
+        "Annette Funicello",
+        "Julie Andrews",
+        "Jodie Foster"
+      ],
+      "a": 0,
+      "correctText": "Hayley Mills",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/hayley-mills-parent-trap-lost-money-crook-advisor-1236736796/"
+    }
+  ]
+}

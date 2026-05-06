@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In May 2026, a former FedEx driver was sentenced to death in Texas for the 2022 kidnapping and murder of which seven-year-old girl?",
+      "options": [
+        "Athena Strand",
+        "Harmony Montgomery",
+        "Summer Wells",
+        "Oakley Carlson"
+      ],
+      "a": 0,
+      "correctText": "Athena Strand",
+      "category": "Usa",
+      "source": "https://www.the-independent.com/news/world/americas/crime/fedex-driver-texas-sentencing-athena-strand-murder-b2971038.html"
+    },
+    {
+      "q": "Which state's Secretary of State announced in May 2026 that the state had shared sensitive voter registration data with the U.S. Department of Justice to comply with federal law?",
+      "options": [
+        "Iowa",
+        "Florida",
+        "Texas",
+        "Nebraska"
+      ],
+      "a": 0,
+      "correctText": "Iowa",
+      "category": "Usa",
+      "source": "https://www.iowapublicradio.org/state-government-news/2026-05-05/iowa-shares-voter-data-with-justice-department"
+    },
+    {
+      "q": "In May 2026, the U.S. Securities and Exchange Commission (SEC) proposed allowing publicly traded companies to opt out of filing which type of reports?",
+      "options": [
+        "Quarterly earnings reports",
+        "Annual tax returns",
+        "Executive compensation disclosures",
+        "Lobbying expense reports"
+      ],
+      "a": 0,
+      "correctText": "Quarterly earnings reports",
+      "category": "Usa",
+      "source": "https://www.reuters.com/sustainability/boards-policy-regulation/us-sec-proposes-allowing-public-companies-shift-semiannual-earnings-reports-2026-05-05/"
+    },
+    {
+      "q": "The Trump administration announced in May 2026 that it is closing a federal watchdog office dedicated to monitoring abuses in which specific area?",
+      "options": [
+        "Immigration detention",
+        "Prison labor programs",
+        "Veteran healthcare",
+        "Offshore drilling"
+      ],
+      "a": 0,
+      "correctText": "Immigration detention",
+      "category": "Usa",
+      "source": "https://www.reuters.com/legal/government/us-close-watchdog-office-federal-immigration-detention-abuses-2026-05-05/"
+    },
+    {
+      "q": "Which historic all-women's college faced a federal Title IX investigation in May 2026 over its policy of admitting transgender women?",
+      "options": [
+        "Smith College",
+        "Wellesley College",
+        "Vassar College",
+        "Mount Holyoke College"
+      ],
+      "a": 0,
+      "correctText": "Smith College",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/05/smith-college-transgender-women-investigation"
+    }
+  ]
+}

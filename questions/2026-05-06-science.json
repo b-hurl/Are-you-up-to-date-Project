@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On May 6, 2026, Cleveland Clinic researchers reported that patients with inflammatory bowel disease face a significantly elevated risk of what complication 31 to 90 days after colon cancer surgery?",
+      "options": [
+        "Blood clots",
+        "Severe internal bleeding",
+        "Secondary infections",
+        "Chronic abdominal pain"
+      ],
+      "a": 0,
+      "correctText": "Blood clots",
+      "category": "Science",
+      "source": "https://consultqd.clevelandclinic.org/patients-with-ibd-who-undergo-colon-cancer-surgery-have-higher-blood-clot-risk"
+    },
+    {
+      "q": "A report announced by the World Resources Institute and The Rockefeller Foundation on May 6, 2026, found that investing $1 in climate health solutions in low- and middle-income countries can yield up to how much in benefits?",
+      "options": [
+        "$68",
+        "$25",
+        "$150",
+        "$5"
+      ],
+      "a": 0,
+      "correctText": "$68",
+      "category": "Science",
+      "source": "https://www.rockefellerfoundation.org/news/wri-rockefeller-foundation-early-climate-health-investments-generate-68-fold-gains-in-low-and-middle-income-countries/"
+    },
+    {
+      "q": "At the ARVO 2026 annual meeting on May 6, 2026, MingMed Biotechnology presented Phase II data showing their oral drug QA102 reduced the growth rate of drusen volume in patients with what condition?",
+      "options": [
+        "Age-related macular degeneration",
+        "Glaucoma",
+        "Diabetic retinopathy",
+        "Cataracts"
+      ],
+      "a": 0,
+      "correctText": "Age-related macular degeneration",
+      "category": "Science",
+      "source": "https://firstwordpharma.com/story/5856985"
+    }
+  ]
+}

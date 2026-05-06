@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which of Guillermo del Toro's films was announced on May 5, 2026, to return to the Cannes Film Festival in a new 4K restoration to celebrate its 20th anniversary?",
+      "options": [
+        "Pan's Labyrinth",
+        "The Shape of Water",
+        "Hellboy",
+        "Cronos"
+      ],
+      "a": 0,
+      "correctText": "Pan's Labyrinth",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/festivals/guillermo-del-toro-pans-labyrinth-cannes-classics-1236738458/"
+    },
+    {
+      "q": "According to reports on May 5, 2026, which filmmaker's Monkeypaw Productions recently cut down its development team?",
+      "options": [
+        "Jordan Peele",
+        "Ari Aster",
+        "Jason Blum",
+        "James Wan"
+      ],
+      "a": 0,
+      "correctText": "Jordan Peele",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/jordan-peele-monkeypaw-productions-cuts-down-development-1236587005/"
+    },
+    {
+      "q": "On May 6, 2026, which former Disney child star from 'The Parent Trap' revealed she lost 90 percent of her early earnings due to bad financial advice and a British supertax?",
+      "options": [
+        "Hayley Mills",
+        "Annette Funicello",
+        "Julie Andrews",
+        "Jodie Foster"
+      ],
+      "a": 0,
+      "correctText": "Hayley Mills",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/hayley-mills-parent-trap-lost-money-crook-advisor-1236736796/"
+    },
+    {
+      "q": "As announced on May 5, 2026, Ray Mendoza is set to direct 'Blood On The Promontory', a Western-drama following five convicts shackled together by what?",
+      "options": [
+        "By foot",
+        "By their necks",
+        "By their wrists",
+        "By their waists"
+      ],
+      "a": 0,
+      "correctText": "By foot",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/ray-mendoza-sets-blood-on-the-promontory-next-movie-1236882008/"
+    },
+    {
+      "q": "It was confirmed on May 5, 2026, that actor Jonathan Tiersten passed away at the age of 60. Which 1983 cult horror film was he best known for?",
+      "options": [
+        "Sleepaway Camp",
+        "Friday the 13th",
+        "A Nightmare on Elm Street",
+        "The Texas Chain Saw Massacre"
+      ],
+      "a": 0,
+      "correctText": "Sleepaway Camp",
+      "category": "Entertainment",
+      "source": "https://www.horrorsociety.com/2026/05/05/breaking-sleepaway-camp-actor-jonathan-tiersten-has-passed-away/"
+    }
+  ]
+}

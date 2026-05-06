@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In early May 2026, the World Health Organization investigated a rare suspected human-to-human transmission of what rodent-borne virus on a stranded cruise ship?",
+      "options": [
+        "Norovirus",
+        "Hantavirus",
+        "Nipah virus",
+        "Lassa fever"
+      ],
+      "a": 1,
+      "correctText": "Hantavirus",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/hantavirus-cruise-ship-stranded-crew-evacuation-human-transmission-rcna343606"
+    },
+    {
+      "q": "Which state filed a lawsuit in May 2026 against artificial intelligence company Character.AI, alleging its chatbots illegally acted as licensed medical doctors?",
+      "options": [
+        "California",
+        "New York",
+        "Pennsylvania",
+        "Texas"
+      ],
+      "a": 2,
+      "correctText": "Pennsylvania",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/pennsylvania-sues-ai-company-saying-123949199.html?ncid=redditnewsus"
+    },
+    {
+      "q": "In May 2026, the U.S. Supreme Court temporarily blocked a lower court ruling, fully restoring access to which abortion pill through telehealth and mail?",
+      "options": [
+        "Misoprostol",
+        "Mifepristone",
+        "Plan B",
+        "Methotrexate"
+      ],
+      "a": 1,
+      "correctText": "Mifepristone",
+      "category": "Health",
+      "source": "https://www.yahoo.com/news/articles/supreme-court-restores-access-abortion-145359847.html?ncid=redditnewsus"
+    },
+    {
+      "q": "As part of his 'MAHA' push, Health and Human Services Secretary Robert F. Kennedy Jr. initiated a campaign in May 2026 to wean Americans off of which class of medications?",
+      "options": [
+        "Statins",
+        "Opioids",
+        "Blood pressure medications",
+        "Antidepressants (SSRIs)"
+      ],
+      "a": 3,
+      "correctText": "Antidepressants (SSRIs)",
+      "category": "Health",
+      "source": "http://independent.co.uk/news/world/americas/us-politics/rfk-jr-zoloft-prozac-drugs-maha-b2970721.html"
+    },
+    {
+      "q": "According to CDC data highlighted in May 2026, which U.S. state saw its tuberculosis cases hit a 12-year high, significantly outpacing the national average?",
+      "options": [
+        "California",
+        "Texas",
+        "Florida",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "California",
+      "category": "Health",
+      "source": "https://www.sfgate.com/bayarea/article/california-disease-outbreaks-22240687.php"
+    }
+  ]
+}

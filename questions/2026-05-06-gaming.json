@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Battlefield 4 map was confirmed to be returning in Battlefield 6 Season 3, according to a gameplay trailer released on May 6, 2026?",
+      "options": [
+        "Golmud Railway",
+        "Caspian Border",
+        "Operation Locker",
+        "Siege of Shanghai"
+      ],
+      "a": 0,
+      "correctText": "The May 6 gameplay trailer revealed that Golmud Railway is returning as an expanded, reimagined map called 'Railway to Golmud'.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=XCMr55EjFew"
+    },
+    {
+      "q": "Following years of being sidelined due to distribution constraints, which Eugen Systems World War II real-time strategy game was officially re-released on Steam on May 6, 2026?",
+      "options": [
+        "R.U.S.E.",
+        "Wargame: Red Dragon",
+        "Steel Division 2",
+        "Company of Heroes 3"
+      ],
+      "a": 0,
+      "correctText": "R.U.S.E. made its return to Steam on May 6, 2026, complete with all its original DLCs and full Steam Deck support.",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/RUSE/announcements/detail/679623176076920230"
+    },
+    {
+      "q": "A Subnautica 2 developer vlog released on May 6, 2026, confirmed that the highly anticipated underwater survival sequel will launch in Early Access for what price?",
+      "options": [
+        "$29.99",
+        "$19.99",
+        "$39.99",
+        "$49.99"
+      ],
+      "a": 0,
+      "correctText": "Unknown Worlds Entertainment announced in their May 6 Dev Vlog that Subnautica 2 will cost $29.99 at its Early Access launch.",
+      "category": "Gaming",
+      "source": "https://www.youtube.com/watch?v=N3nlHGdtCE0"
+    },
+    {
+      "q": "A 1.0 release trailer on May 6, 2026, highlighted 'Zagreus' Journey', an ambitious fan-mod that seamlessly integrates the entirety of the original Hades game into which title?",
+      "options": [
+        "Hades II",
+        "Dead Cells",
+        "Hollow Knight: Silksong",
+        "The Binding of Isaac"
+      ],
+      "a": 0,
+      "correctText": "The 'Zagreus' Journey' mod allows players to explore the original Hades regions and fight its legacy bosses seamlessly as Melinoë within Hades II.",
+      "category": "Gaming",
+      "source": "https://youtu.be/rxuTLSPqIEE?si=Rsj9Fyza5WW9lQ8r"
+    },
+    {
+      "q": "In a May 6, 2026 press release, ASUS announced their Computex 2026 booth will feature an experimental zone celebrating the 20th anniversary of which iconic hardware brand?",
+      "options": [
+        "Republic of Gamers (ROG)",
+        "TUF Gaming",
+        "Alienware",
+        "Predator"
+      ],
+      "a": 0,
+      "correctText": "ASUS is celebrating the 20-year milestone of Republic of Gamers (ROG), which was originally formed in 2006, at Computex 2026.",
+      "category": "Gaming",
+      "source": "https://www.asus.com/"
+    }
+  ]
+}
