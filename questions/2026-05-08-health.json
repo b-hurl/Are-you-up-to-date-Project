@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 2026 report in The Atlantic, what is the specialty of Dr. Stephen Kornfeld, the passenger who had to take over medical duties during a deadly hantavirus outbreak on the MV Hondius cruise ship?",
+      "options": [
+        "Medical oncologist",
+        "Retired surgeon",
+        "Pediatrician",
+        "Infectious disease expert"
+      ],
+      "a": 0,
+      "correctText": "Medical oncologist",
+      "category": "Health",
+      "source": "https://www.theatlantic.com/health/2026/05/hantavirus-cruise-doctor/687095/"
+    },
+    {
+      "q": "Which genetic variant was reported in May 2026 to explain why GLP-1 weight-loss medications don't work for about one in ten people?",
+      "options": [
+        "PAM gene variant p.S539W",
+        "MTHFR gene variant C677T",
+        "BRCA1 variant",
+        "APOE4 variant"
+      ],
+      "a": 0,
+      "correctText": "PAM gene variant p.S539W",
+      "category": "Health",
+      "source": "https://health.yahoo.com/your-body/weight-management/weight-loss/articles/glp-1s-don-t-everyone-200616875.html"
+    },
+    {
+      "q": "In May 2026, the WHO addressed concerns over the deadly MV Hondius cruise ship hantavirus outbreak by emphasizing what key point?",
+      "options": [
+        "It is unlikely to be the next pandemic",
+        "It has airborne transmission identical to COVID",
+        "A global travel lockdown is needed immediately",
+        "It is a completely new, unknown virus strain"
+      ],
+      "a": 0,
+      "correctText": "It is unlikely to be the next pandemic",
+      "category": "Health",
+      "source": "https://www.huffpost.com/entry/hantavirus-global-pandemic-spread-who_n_69fc9a9be4b0cb033e4fe620"
+    },
+    {
+      "q": "A May 2026 Weill Cornell Medicine study showed that flipping an immune system switch related to which cells could help stop gut inflammation?",
+      "options": [
+        "RORγt+ regulatory T cells",
+        "Natural killer (NK) cells",
+        "Red blood cells",
+        "B memory cells"
+      ],
+      "a": 0,
+      "correctText": "RORγt+ regulatory T cells",
+      "category": "Health",
+      "source": "https://scitechdaily.com/scientists-flip-immune-system-switch-uncover-surprising-path-to-stop-gut-inflammation/"
+    },
+    {
+      "q": "A May 2026 Cornell University study suggested that marginal deficiency of which vitamin could negatively affect healthy aging and cellular metabolism?",
+      "options": [
+        "Vitamin B12",
+        "Vitamin D",
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "a": 0,
+      "correctText": "Vitamin B12",
+      "category": "Health",
+      "source": "https://scitechdaily.com/new-research-shows-vitamin-b12-may-hold-the-key-to-healthy-aging/"
+    }
+  ]
+}

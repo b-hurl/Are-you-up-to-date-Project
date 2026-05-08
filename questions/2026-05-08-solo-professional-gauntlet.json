@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-08",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A growing bipartisan rebellion has recently led to 142 activist groups blocking the construction of what type of facilities due to their massive energy and water consumption?",
+      "options": [
+        "AI data centers",
+        "Cryptocurrency mines",
+        "Semiconductor fabs",
+        "Electric vehicle battery plants"
+      ],
+      "a": 0,
+      "correctText": "AI data centers",
+      "category": "Technology",
+      "source": "https://marketwise.com/investing/the-anti-ai-data-center-rebellion-keeps-growing-bigger/"
+    },
+    {
+      "q": "In May 2026, Clarence Thomas hit a historic milestone on the Supreme Court by becoming what?",
+      "options": [
+        "The second longest-serving justice",
+        "The oldest sitting justice",
+        "The justice with the most majority opinions",
+        "The first justice to serve 40 years"
+      ],
+      "a": 0,
+      "correctText": "The second longest-serving justice",
+      "category": "Usa",
+      "source": "https://apnews.com/article/supreme-court-justice-clarence-thomas-tenure-history-ae7e6b941d021bcbeb7cf530501d6e9f"
+    },
+    {
+      "q": "According to a May 2026 report, how much did the U.S. tariffs on Canadian and Mexican cars cost U.S. automakers in the previous year?",
+      "options": [
+        "$12.5 billion",
+        "$5.4 billion",
+        "$20.1 billion",
+        "$8.9 billion"
+      ],
+      "a": 0,
+      "correctText": "$12.5 billion",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-us-auto-tariffs-canada-mexico-trump/"
+    },
+    {
+      "q": "In May 2026, Prime Minister Mark Carney announced that a plan is in the works for what historic official residence?",
+      "options": [
+        "24 Sussex Drive",
+        "Rideau Hall",
+        "Stornoway",
+        "Harrington Lake"
+      ],
+      "a": 0,
+      "correctText": "24 Sussex Drive",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-24-sussex-drive-carney-prime-minister-residence/"
+    },
+    {
+      "q": "In May 2026, Mohamed Sabry Soliman was sentenced to life in prison for a 2025 firebombing attack on a demonstration in which US state?",
+      "options": [
+        "Colorado",
+        "California",
+        "Oregon",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "Colorado",
+      "category": "Usa",
+      "source": "https://apnews.com/article/boulder-firebomb-demonstrators-murder-guilty-d59db32f926f83cfd2836b73099e32ec"
+    },
+    {
+      "q": "On May 8, 2026, the UN health agency confirmed an outbreak of hantavirus on the MV Hondius cruise ship but stated it was not the start of a pandemic, though it notably marked the first time the virus spread in what manner?",
+      "options": [
+        "Between people",
+        "Through the ship's ventilation system",
+        "From seabirds to humans",
+        "Through contaminated ship food"
+      ],
+      "a": 0,
+      "correctText": "Between people",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cnvpzgn26edo"
+    },
+    {
+      "q": "On May 8, 2026, Ukrainian President Volodymyr Zelensky announced that Ukraine would respond to Russia’s repeated Victory Day ceasefire violations using what specific measure?",
+      "options": [
+        "'Long-range sanctions' (strikes deep inside Russia)",
+        "'Economic blockades' of Russian ports",
+        "An immediate ground counteroffensive",
+        "Deploying NATO-supplied peacekeepers"
+      ],
+      "a": 0,
+      "correctText": "'Long-range sanctions' (strikes deep inside Russia)",
+      "category": "World",
+      "source": "https://kyivindependent.com/zelensky-says-ukraine-to-respond-to-russian-ceasefire-violations-with-long-range-sanctions/"
+    },
+    {
+      "q": "According to a May 2026 report released for World Password Day, what percentage of MD5 password hashes can be cracked in under an hour using modern hardware?",
+      "options": [
+        "60%",
+        "25%",
+        "85%",
+        "99%"
+      ],
+      "a": 0,
+      "correctText": "60%",
+      "category": "Technology",
+      "source": "https://www.theregister.com/security/2026/05/07/60-of-md5-password-hashes-are-crackable-in-under-an-hour/5234954"
+    },
+    {
+      "q": "Which social media platform is ending its optional end-to-end encrypted messaging feature for users on May 8, 2026?",
+      "options": [
+        "Instagram",
+        "WhatsApp",
+        "Signal",
+        "Telegram"
+      ],
+      "a": 0,
+      "correctText": "Instagram",
+      "category": "Technology",
+      "source": "https://www.macrumors.com/2026/05/05/psa-instagram-encrypted-messaging-ends-may-8/"
+    },
+    {
+      "q": "Which British Columbia secondary school was announced on May 7, 2026 to be demolished in the wake of a mass shooting?",
+      "options": [
+        "Tumbler Ridge Secondary School",
+        "Columbine High School",
+        "Sandy Hook Elementary",
+        "Robb Elementary School"
+      ],
+      "a": 0,
+      "correctText": "Tumbler Ridge Secondary School",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/vancouver/article/tumbler-ridge-secondary-school-to-be-demolished-in-wake-of-mass-shooting/"
+    }
+  ]
+}

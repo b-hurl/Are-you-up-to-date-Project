@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Former President Donald Trump recently agreed with fan backlash over what issue regarding the 2026 FIFA World Cup?",
+      "options": [
+        "High ticket prices",
+        "The location of the final",
+        "The tournament format",
+        "The selection of host cities"
+      ],
+      "a": 0,
+      "correctText": "High ticket prices",
+      "category": "Sports",
+      "source": "https://www.the-independent.com/sport/football/world-cup/trump-world-cup-ticket-prices-fifa-b2972396.html"
+    },
+    {
+      "q": "Which Real Madrid player was taken to the hospital following a dressing room clash with teammate Aurélien Tchouaméni?",
+      "options": [
+        "Federico Valverde",
+        "Vinícius Júnior",
+        "Jude Bellingham",
+        "Eduardo Camavinga"
+      ],
+      "a": 0,
+      "correctText": "Federico Valverde",
+      "category": "Sports",
+      "source": "https://www.abc.net.au/news/2026-05-08/real-madrid-dressing-room-spat-sees-taken-to-hospital/106656622"
+    },
+    {
+      "q": "How did FIFA President Gianni Infantino justify the high ticket prices for the 2026 World Cup in the United States?",
+      "options": [
+        "They are priced at the U.S. market rate",
+        "To cover stadium renovations",
+        "To offset inflation",
+        "To pay for expanded team rosters"
+      ],
+      "a": 0,
+      "correctText": "They are priced at the U.S. market rate",
+      "category": "Sports",
+      "source": "https://www.espn.com/soccer/story/_/id/48696372/fifa-president-gianni-infantino-2026-world-cup-ticket-prices-usa"
+    },
+    {
+      "q": "Which tennis tournament recently sided with players urging a boycott over Grand Slam prize money?",
+      "options": [
+        "Italian Open",
+        "Miami Open",
+        "Madrid Open",
+        "Indian Wells"
+      ],
+      "a": 0,
+      "correctText": "Italian Open",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48701564/italian-open-amid-slam-push-sides-players-prize-money"
+    },
+    {
+      "q": "The International Olympic Committee (IOC) recently urged sports federations to let athletes from which country compete under their own flag?",
+      "options": [
+        "Belarus",
+        "Russia",
+        "Iran",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Belarus",
+      "category": "Sports",
+      "source": "https://www.espn.com/olympics/story/_/id/48702737/ioc-urges-sports-let-belarus-athletes-compete-flag"
+    }
+  ]
+}

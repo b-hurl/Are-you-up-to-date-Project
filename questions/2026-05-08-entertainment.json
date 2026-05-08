@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 2026 announcement, which upcoming Benh Zeitlin film will reunite actors Paul Mescal and Jessie Buckley?",
+      "options": [
+        "Hold On to Your Angels",
+        "The Nice Guys",
+        "Beasts of the Southern Wild",
+        "Paper Tiger"
+      ],
+      "a": 0,
+      "correctText": "Hold On to Your Angels",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/paul-mescal-jessie-buckley-zeitlin-hold-on-to-your-angels-1236741030/"
+    },
+    {
+      "q": "Which actor and filmmaker is directing the upcoming Netflix AI thriller starring Jeff Daniels, Joel Edgerton, and Caleb McLaughlin, announced in May 2026?",
+      "options": [
+        "Joseph Gordon-Levitt",
+        "Rian Johnson",
+        "Keanu Reeves",
+        "Adam Driver"
+      ],
+      "a": 0,
+      "correctText": "Joseph Gordon-Levitt",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/jeff-daniels-joel-edgerton-jospeh-gordon-levitt-1236884015/"
+    },
+    {
+      "q": "In May 2026, Sony Pictures Entertainment reported its Fiscal Year 2025 profit took a hit due to the shutdown of which VFX division?",
+      "options": [
+        "Pixomondo",
+        "Wētā FX",
+        "Industrial Light & Magic",
+        "Sony Pictures Imageworks"
+      ],
+      "a": 0,
+      "correctText": "Pixomondo",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/sony-pictures-entertainment-q4-2025-earnings-demon-slayer-1236740156/"
+    },
+    {
+      "q": "Which upcoming Adam Alleca horror film, announced in May 2026, stars Melissa Barrera as a young woman targeted by a possessive force in a rundown apartment?",
+      "options": [
+        "Inhabit",
+        "Abigail",
+        "The Exorcist",
+        "Rosemary's Baby"
+      ],
+      "a": 0,
+      "correctText": "Inhabit",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/melissa-barrera-horror-feature-inhabit-adam-alleca-1236740351/"
+    },
+    {
+      "q": "Which 1976 thriller about the Watergate scandal celebrated its 50th anniversary in May 2026, reportedly sparking plans for a contemporary version?",
+      "options": [
+        "All The President's Men",
+        "Network",
+        "The Parallax View",
+        "Three Days of the Condor"
+      ],
+      "a": 0,
+      "correctText": "All The President's Men",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/trump-era-all-the-presidents-men-movie-plans-1236886406/"
+    }
+  ]
+}

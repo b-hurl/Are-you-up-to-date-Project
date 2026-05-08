@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-08",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which tennis tournament recently sided with players urging a boycott over Grand Slam prize money?",
+      "options": [
+        "Italian Open",
+        "Miami Open",
+        "Madrid Open",
+        "Indian Wells"
+      ],
+      "a": 0,
+      "correctText": "Italian Open",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48701564/italian-open-amid-slam-push-sides-players-prize-money"
+    },
+    {
+      "q": "In May 2026, Sony Pictures Entertainment reported its Fiscal Year 2025 profit took a hit due to the shutdown of which VFX division?",
+      "options": [
+        "Pixomondo",
+        "Wētā FX",
+        "Industrial Light & Magic",
+        "Sony Pictures Imageworks"
+      ],
+      "a": 0,
+      "correctText": "Pixomondo",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/sony-pictures-entertainment-q4-2025-earnings-demon-slayer-1236740156/"
+    },
+    {
+      "q": "Unveiled by Cold Iron Studios in May 2026, 'Aliens: Fireteam Elite 2' upgrades the franchise's cooperative survival gameplay from a three-player structure to what?",
+      "options": [
+        "Four-player co-op",
+        "Two-player co-op",
+        "Six-player co-op",
+        "Eight-player co-op"
+      ],
+      "a": 0,
+      "correctText": "Four-player co-op",
+      "category": "Gaming",
+      "source": "https://www.shacknews.com/article/140000/aliens-fireteam-elite-2-announced-summer-2026"
+    },
+    {
+      "q": "In May 2026, the WHO addressed concerns over the deadly MV Hondius cruise ship hantavirus outbreak by emphasizing what key point?",
+      "options": [
+        "It is unlikely to be the next pandemic",
+        "It has airborne transmission identical to COVID",
+        "A global travel lockdown is needed immediately",
+        "It is a completely new, unknown virus strain"
+      ],
+      "a": 0,
+      "correctText": "It is unlikely to be the next pandemic",
+      "category": "Health",
+      "source": "https://www.huffpost.com/entry/hantavirus-global-pandemic-spread-who_n_69fc9a9be4b0cb033e4fe620"
+    },
+    {
+      "q": "To prevent scalping for the returning Steam Controller in May 2026, Valve required buyers to have made a Steam purchase prior to what date?",
+      "options": [
+        "April 27, 2026",
+        "May 4, 2026",
+        "December 31, 2025",
+        "January 1, 2026"
+      ],
+      "a": 0,
+      "correctText": "April 27, 2026",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/group/45479024/view/702141174212725149"
+    },
+    {
+      "q": "Which Real Madrid player was taken to the hospital following a dressing room clash with teammate Aurélien Tchouaméni?",
+      "options": [
+        "Federico Valverde",
+        "Vinícius Júnior",
+        "Jude Bellingham",
+        "Eduardo Camavinga"
+      ],
+      "a": 0,
+      "correctText": "Federico Valverde",
+      "category": "Sports",
+      "source": "https://www.abc.net.au/news/2026-05-08/real-madrid-dressing-room-spat-sees-taken-to-hospital/106656622"
+    },
+    {
+      "q": "Which upcoming Adam Alleca horror film, announced in May 2026, stars Melissa Barrera as a young woman targeted by a possessive force in a rundown apartment?",
+      "options": [
+        "Inhabit",
+        "Abigail",
+        "The Exorcist",
+        "Rosemary's Baby"
+      ],
+      "a": 0,
+      "correctText": "Inhabit",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/melissa-barrera-horror-feature-inhabit-adam-alleca-1236740351/"
+    },
+    {
+      "q": "The International Olympic Committee (IOC) recently urged sports federations to let athletes from which country compete under their own flag?",
+      "options": [
+        "Belarus",
+        "Russia",
+        "Iran",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Belarus",
+      "category": "Sports",
+      "source": "https://www.espn.com/olympics/story/_/id/48702737/ioc-urges-sports-let-belarus-athletes-compete-flag"
+    },
+    {
+      "q": "How did FIFA President Gianni Infantino justify the high ticket prices for the 2026 World Cup in the United States?",
+      "options": [
+        "They are priced at the U.S. market rate",
+        "To cover stadium renovations",
+        "To offset inflation",
+        "To pay for expanded team rosters"
+      ],
+      "a": 0,
+      "correctText": "They are priced at the U.S. market rate",
+      "category": "Sports",
+      "source": "https://www.espn.com/soccer/story/_/id/48696372/fifa-president-gianni-infantino-2026-world-cup-ticket-prices-usa"
+    },
+    {
+      "q": "Which 1976 thriller about the Watergate scandal celebrated its 50th anniversary in May 2026, reportedly sparking plans for a contemporary version?",
+      "options": [
+        "All The President's Men",
+        "Network",
+        "The Parallax View",
+        "Three Days of the Condor"
+      ],
+      "a": 0,
+      "correctText": "All The President's Men",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/trump-era-all-the-presidents-men-movie-plans-1236886406/"
+    }
+  ]
+}

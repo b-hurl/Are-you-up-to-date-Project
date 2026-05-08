@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 8, 2026, the UN health agency confirmed an outbreak of hantavirus on the MV Hondius cruise ship but stated it was not the start of a pandemic, though it notably marked the first time the virus spread in what manner?",
+      "options": [
+        "Between people",
+        "Through the ship's ventilation system",
+        "From seabirds to humans",
+        "Through contaminated ship food"
+      ],
+      "a": 0,
+      "correctText": "Between people",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cnvpzgn26edo"
+    },
+    {
+      "q": "Following a second round of attacks on U.S. Navy destroyers in the Strait of Hormuz reported on May 8, 2026, how did President Donald Trump describe the U.S. retaliatory bombing of Iran?",
+      "options": [
+        "A 'love tap'",
+        "A 'final warning'",
+        "A 'proportional response'",
+        "A 'decisive victory'"
+      ],
+      "a": 0,
+      "correctText": "A 'love tap'",
+      "category": "World",
+      "source": "https://uk.news.yahoo.com/trump-calls-us-bombing-iran-225225069.html"
+    },
+    {
+      "q": "On May 8, 2026, Ukrainian President Volodymyr Zelensky announced that Ukraine would respond to Russia’s repeated Victory Day ceasefire violations using what specific measure?",
+      "options": [
+        "'Long-range sanctions' (strikes deep inside Russia)",
+        "'Economic blockades' of Russian ports",
+        "An immediate ground counteroffensive",
+        "Deploying NATO-supplied peacekeepers"
+      ],
+      "a": 0,
+      "correctText": "'Long-range sanctions' (strikes deep inside Russia)",
+      "category": "World",
+      "source": "https://kyivindependent.com/zelensky-says-ukraine-to-respond-to-russian-ceasefire-violations-with-long-range-sanctions/"
+    },
+    {
+      "q": "New images published on May 8, 2026, revealed that approximately how many North Korean soldiers have died fighting in the Russia-Ukraine war?",
+      "options": [
+        "2,300",
+        "500",
+        "11,000",
+        "5,500"
+      ],
+      "a": 0,
+      "correctText": "2,300",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/clypr5985ejo?at_medium=RSS&amp;at_campaign=rss"
+    },
+    {
+      "q": "Which group of tech workers rejected a $340,000 one-time bonus on May 8, 2026, risking an 18-day strike as they demand annual payouts and a share of the company's AI windfall?",
+      "options": [
+        "Samsung chip workers",
+        "Nvidia engineers",
+        "TSMC technicians",
+        "SK hynix researchers"
+      ],
+      "a": 0,
+      "correctText": "Samsung chip workers",
+      "category": "World",
+      "source": "https://www.tomshardware.com/tech-industry/big-tech/samsung-chip-workers-reject-usd340-000-one-time-bonus-demand-annual-payouts-like-sk-hynixs-usd900-000-workers-want-share-of-ai-windfall-impending-18-day-strike-could-cost-samsung-up-to-usd11-7-billion"
+    }
+  ]
+}

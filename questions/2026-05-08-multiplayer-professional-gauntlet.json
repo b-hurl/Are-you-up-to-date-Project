@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-08",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A recent incident in London highlighted a new form of extortion involving what type of wearable technology being used to secretly record people?",
+      "options": [
+        "Smart glasses",
+        "Smartwatches",
+        "Smart rings",
+        "Fitness trackers"
+      ],
+      "a": 0,
+      "correctText": "Smart glasses",
+      "category": "Technology",
+      "source": "https://gizmodo.com/extortion-using-smart-glasses-is-a-thing-now-2000755562"
+    },
+    {
+      "q": "In May 2026, internet infrastructure company Cloudflare announced it was laying off approximately how many employees?",
+      "options": [
+        "1,100",
+        "3,500",
+        "500",
+        "10,000"
+      ],
+      "a": 0,
+      "correctText": "1,100",
+      "category": "Technology",
+      "source": "https://blog.cloudflare.com/building-for-the-future/"
+    },
+    {
+      "q": "In May 2026, the Canadian government announced oversight reforms to which body to combat immigration and citizenship scams?",
+      "options": [
+        "College of Immigration and Citizenship Consultants",
+        "Immigration and Refugee Board of Canada",
+        "Canada Border Services Agency",
+        "Department of Citizenship and Immigration"
+      ],
+      "a": 0,
+      "correctText": "College of Immigration and Citizenship Consultants",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/canada-announces-reforms-to-combat-immigration-citizenship-scams/"
+    },
+    {
+      "q": "A U.S. industry body reported in May 2026 that Canada's provincial bans on American alcohol led to what percentage drop in U.S. alcohol exports to Canada?",
+      "options": [
+        "63 per cent",
+        "45 per cent",
+        "75 per cent",
+        "25 per cent"
+      ],
+      "a": 0,
+      "correctText": "63 per cent",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11837143/canadas-booze-bans-exports/"
+    },
+    {
+      "q": "Starting May 8, 2026, the U.S. State Department announced it will proactively start revoking passports for thousands of parents who owe significant amounts of what?",
+      "options": [
+        "Child support",
+        "Federal income tax",
+        "Student loans",
+        "Alimony"
+      ],
+      "a": 0,
+      "correctText": "Child support",
+      "category": "Usa",
+      "source": "https://apnews.com/article/passports-unpaid-child-support-penalty-state-department-42d90cfa8a06ee349bb9145f668919b6"
+    },
+    {
+      "q": "In May 2026, a federal judge ruled that the termination of humanities grants by which government entity was unconstitutional and 'troubling'?",
+      "options": [
+        "DOGE",
+        "FEMA",
+        "EPA",
+        "FCC"
+      ],
+      "a": 0,
+      "correctText": "DOGE",
+      "category": "Usa",
+      "source": "https://abcnews.com/Politics/judge-doge-grant-terminations-unlawful-troubling/story?id=132762412"
+    },
+    {
+      "q": "During finals week in May 2026, which popular educational platform was hacked by the group ShinyHunters, leaving university students stranded?",
+      "options": [
+        "Canvas",
+        "Blackboard",
+        "Google Classroom",
+        "Moodle"
+      ],
+      "a": 0,
+      "correctText": "Canvas",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/07/us/canvas-hack-strands-college-students-finals-week"
+    },
+    {
+      "q": "New images published on May 8, 2026, revealed that approximately how many North Korean soldiers have died fighting in the Russia-Ukraine war?",
+      "options": [
+        "2,300",
+        "500",
+        "11,000",
+        "5,500"
+      ],
+      "a": 0,
+      "correctText": "2,300",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/clypr5985ejo?at_medium=RSS&amp;at_campaign=rss"
+    },
+    {
+      "q": "Following a second round of attacks on U.S. Navy destroyers in the Strait of Hormuz reported on May 8, 2026, how did President Donald Trump describe the U.S. retaliatory bombing of Iran?",
+      "options": [
+        "A 'love tap'",
+        "A 'final warning'",
+        "A 'proportional response'",
+        "A 'decisive victory'"
+      ],
+      "a": 0,
+      "correctText": "A 'love tap'",
+      "category": "World",
+      "source": "https://uk.news.yahoo.com/trump-calls-us-bombing-iran-225225069.html"
+    },
+    {
+      "q": "Which group of tech workers rejected a $340,000 one-time bonus on May 8, 2026, risking an 18-day strike as they demand annual payouts and a share of the company's AI windfall?",
+      "options": [
+        "Samsung chip workers",
+        "Nvidia engineers",
+        "TSMC technicians",
+        "SK hynix researchers"
+      ],
+      "a": 0,
+      "correctText": "Samsung chip workers",
+      "category": "World",
+      "source": "https://www.tomshardware.com/tech-industry/big-tech/samsung-chip-workers-reject-usd340-000-one-time-bonus-demand-annual-payouts-like-sk-hynixs-usd900-000-workers-want-share-of-ai-windfall-impending-18-day-strike-could-cost-samsung-up-to-usd11-7-billion"
+    }
+  ]
+}

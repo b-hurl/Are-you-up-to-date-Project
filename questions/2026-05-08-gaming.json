@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to Sony's financial results announced in May 2026, the PlayStation 5 has shipped how many units worldwide?",
+      "options": [
+        "93.7 million",
+        "88.5 million",
+        "97.0 million",
+        "101.2 million"
+      ],
+      "a": 0,
+      "correctText": "93.7 million",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/ps5-shipments-top-93-7-million"
+    },
+    {
+      "q": "Capcom announced on May 8, 2026, that their sci-fi hacking action-adventure game PRAGMATA surpassed what sales milestone in just 16 days?",
+      "options": [
+        "Two million units",
+        "One million units",
+        "Three million units",
+        "Five million units"
+      ],
+      "a": 0,
+      "correctText": "Two million units",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/pragmata-sales-top-two-million-in-16-days"
+    },
+    {
+      "q": "To prevent scalping for the returning Steam Controller in May 2026, Valve required buyers to have made a Steam purchase prior to what date?",
+      "options": [
+        "April 27, 2026",
+        "May 4, 2026",
+        "December 31, 2025",
+        "January 1, 2026"
+      ],
+      "a": 0,
+      "correctText": "April 27, 2026",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/group/45479024/view/702141174212725149"
+    },
+    {
+      "q": "Why did developer Beethoven & Dinosaur confirm in May 2026 that their coming-of-age game 'Mixtape' will not have a Streamer Mode?",
+      "options": [
+        "Its levels are designed around licensed pop songs",
+        "The publisher refused to pay for Twitch streaming rights",
+        "Streamer modes cause lag during multiplayer",
+        "The game contains no copyrightable audio tracks"
+      ],
+      "a": 0,
+      "correctText": "Its levels are designed around licensed pop songs",
+      "category": "Gaming",
+      "source": "https://www.videogameschronicle.com/news/mixtape-studio-says-the-game-has-no-streamer-mode-because-its-licensed-music-is-its-soul/"
+    },
+    {
+      "q": "Unveiled by Cold Iron Studios in May 2026, 'Aliens: Fireteam Elite 2' upgrades the franchise's cooperative survival gameplay from a three-player structure to what?",
+      "options": [
+        "Four-player co-op",
+        "Two-player co-op",
+        "Six-player co-op",
+        "Eight-player co-op"
+      ],
+      "a": 0,
+      "correctText": "Four-player co-op",
+      "category": "Gaming",
+      "source": "https://www.shacknews.com/article/140000/aliens-fireteam-elite-2-announced-summer-2026"
+    }
+  ]
+}

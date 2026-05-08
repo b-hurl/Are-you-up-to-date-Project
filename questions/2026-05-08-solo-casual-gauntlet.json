@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-08",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to Sony's financial results announced in May 2026, the PlayStation 5 has shipped how many units worldwide?",
+      "options": [
+        "93.7 million",
+        "88.5 million",
+        "97.0 million",
+        "101.2 million"
+      ],
+      "a": 0,
+      "correctText": "93.7 million",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/ps5-shipments-top-93-7-million"
+    },
+    {
+      "q": "Which actor and filmmaker is directing the upcoming Netflix AI thriller starring Jeff Daniels, Joel Edgerton, and Caleb McLaughlin, announced in May 2026?",
+      "options": [
+        "Joseph Gordon-Levitt",
+        "Rian Johnson",
+        "Keanu Reeves",
+        "Adam Driver"
+      ],
+      "a": 0,
+      "correctText": "Joseph Gordon-Levitt",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/jeff-daniels-joel-edgerton-jospeh-gordon-levitt-1236884015/"
+    },
+    {
+      "q": "Capcom announced on May 8, 2026, that their sci-fi hacking action-adventure game PRAGMATA surpassed what sales milestone in just 16 days?",
+      "options": [
+        "Two million units",
+        "One million units",
+        "Three million units",
+        "Five million units"
+      ],
+      "a": 0,
+      "correctText": "Two million units",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/pragmata-sales-top-two-million-in-16-days"
+    },
+    {
+      "q": "Why did developer Beethoven & Dinosaur confirm in May 2026 that their coming-of-age game 'Mixtape' will not have a Streamer Mode?",
+      "options": [
+        "Its levels are designed around licensed pop songs",
+        "The publisher refused to pay for Twitch streaming rights",
+        "Streamer modes cause lag during multiplayer",
+        "The game contains no copyrightable audio tracks"
+      ],
+      "a": 0,
+      "correctText": "Its levels are designed around licensed pop songs",
+      "category": "Gaming",
+      "source": "https://www.videogameschronicle.com/news/mixtape-studio-says-the-game-has-no-streamer-mode-because-its-licensed-music-is-its-soul/"
+    },
+    {
+      "q": "A May 2026 Weill Cornell Medicine study showed that flipping an immune system switch related to which cells could help stop gut inflammation?",
+      "options": [
+        "RORγt+ regulatory T cells",
+        "Natural killer (NK) cells",
+        "Red blood cells",
+        "B memory cells"
+      ],
+      "a": 0,
+      "correctText": "RORγt+ regulatory T cells",
+      "category": "Health",
+      "source": "https://scitechdaily.com/scientists-flip-immune-system-switch-uncover-surprising-path-to-stop-gut-inflammation/"
+    },
+    {
+      "q": "A May 2026 Cornell University study suggested that marginal deficiency of which vitamin could negatively affect healthy aging and cellular metabolism?",
+      "options": [
+        "Vitamin B12",
+        "Vitamin D",
+        "Vitamin C",
+        "Vitamin K"
+      ],
+      "a": 0,
+      "correctText": "Vitamin B12",
+      "category": "Health",
+      "source": "https://scitechdaily.com/new-research-shows-vitamin-b12-may-hold-the-key-to-healthy-aging/"
+    },
+    {
+      "q": "According to a May 2026 announcement, which upcoming Benh Zeitlin film will reunite actors Paul Mescal and Jessie Buckley?",
+      "options": [
+        "Hold On to Your Angels",
+        "The Nice Guys",
+        "Beasts of the Southern Wild",
+        "Paper Tiger"
+      ],
+      "a": 0,
+      "correctText": "Hold On to Your Angels",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/paul-mescal-jessie-buckley-zeitlin-hold-on-to-your-angels-1236741030/"
+    },
+    {
+      "q": "Which genetic variant was reported in May 2026 to explain why GLP-1 weight-loss medications don't work for about one in ten people?",
+      "options": [
+        "PAM gene variant p.S539W",
+        "MTHFR gene variant C677T",
+        "BRCA1 variant",
+        "APOE4 variant"
+      ],
+      "a": 0,
+      "correctText": "PAM gene variant p.S539W",
+      "category": "Health",
+      "source": "https://health.yahoo.com/your-body/weight-management/weight-loss/articles/glp-1s-don-t-everyone-200616875.html"
+    },
+    {
+      "q": "Former President Donald Trump recently agreed with fan backlash over what issue regarding the 2026 FIFA World Cup?",
+      "options": [
+        "High ticket prices",
+        "The location of the final",
+        "The tournament format",
+        "The selection of host cities"
+      ],
+      "a": 0,
+      "correctText": "High ticket prices",
+      "category": "Sports",
+      "source": "https://www.the-independent.com/sport/football/world-cup/trump-world-cup-ticket-prices-fifa-b2972396.html"
+    },
+    {
+      "q": "According to a May 2026 report in The Atlantic, what is the specialty of Dr. Stephen Kornfeld, the passenger who had to take over medical duties during a deadly hantavirus outbreak on the MV Hondius cruise ship?",
+      "options": [
+        "Medical oncologist",
+        "Retired surgeon",
+        "Pediatrician",
+        "Infectious disease expert"
+      ],
+      "a": 0,
+      "correctText": "Medical oncologist",
+      "category": "Health",
+      "source": "https://www.theatlantic.com/health/2026/05/hantavirus-cruise-doctor/687095/"
+    }
+  ]
+}

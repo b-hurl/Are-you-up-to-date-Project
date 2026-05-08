@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "During finals week in May 2026, which popular educational platform was hacked by the group ShinyHunters, leaving university students stranded?",
+      "options": [
+        "Canvas",
+        "Blackboard",
+        "Google Classroom",
+        "Moodle"
+      ],
+      "a": 0,
+      "correctText": "Canvas",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/07/us/canvas-hack-strands-college-students-finals-week"
+    },
+    {
+      "q": "In May 2026, a federal judge ruled that the termination of humanities grants by which government entity was unconstitutional and 'troubling'?",
+      "options": [
+        "DOGE",
+        "FEMA",
+        "EPA",
+        "FCC"
+      ],
+      "a": 0,
+      "correctText": "DOGE",
+      "category": "Usa",
+      "source": "https://abcnews.com/Politics/judge-doge-grant-terminations-unlawful-troubling/story?id=132762412"
+    },
+    {
+      "q": "In May 2026, Mohamed Sabry Soliman was sentenced to life in prison for a 2025 firebombing attack on a demonstration in which US state?",
+      "options": [
+        "Colorado",
+        "California",
+        "Oregon",
+        "New York"
+      ],
+      "a": 0,
+      "correctText": "Colorado",
+      "category": "Usa",
+      "source": "https://apnews.com/article/boulder-firebomb-demonstrators-murder-guilty-d59db32f926f83cfd2836b73099e32ec"
+    },
+    {
+      "q": "Starting May 8, 2026, the U.S. State Department announced it will proactively start revoking passports for thousands of parents who owe significant amounts of what?",
+      "options": [
+        "Child support",
+        "Federal income tax",
+        "Student loans",
+        "Alimony"
+      ],
+      "a": 0,
+      "correctText": "Child support",
+      "category": "Usa",
+      "source": "https://apnews.com/article/passports-unpaid-child-support-penalty-state-department-42d90cfa8a06ee349bb9145f668919b6"
+    },
+    {
+      "q": "In May 2026, Clarence Thomas hit a historic milestone on the Supreme Court by becoming what?",
+      "options": [
+        "The second longest-serving justice",
+        "The oldest sitting justice",
+        "The justice with the most majority opinions",
+        "The first justice to serve 40 years"
+      ],
+      "a": 0,
+      "correctText": "The second longest-serving justice",
+      "category": "Usa",
+      "source": "https://apnews.com/article/supreme-court-justice-clarence-thomas-tenure-history-ae7e6b941d021bcbeb7cf530501d6e9f"
+    }
+  ]
+}

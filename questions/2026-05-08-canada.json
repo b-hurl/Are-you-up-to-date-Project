@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which British Columbia secondary school was announced on May 7, 2026 to be demolished in the wake of a mass shooting?",
+      "options": [
+        "Tumbler Ridge Secondary School",
+        "Columbine High School",
+        "Sandy Hook Elementary",
+        "Robb Elementary School"
+      ],
+      "a": 0,
+      "correctText": "Tumbler Ridge Secondary School",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/vancouver/article/tumbler-ridge-secondary-school-to-be-demolished-in-wake-of-mass-shooting/"
+    },
+    {
+      "q": "In May 2026, the Canadian government announced oversight reforms to which body to combat immigration and citizenship scams?",
+      "options": [
+        "College of Immigration and Citizenship Consultants",
+        "Immigration and Refugee Board of Canada",
+        "Canada Border Services Agency",
+        "Department of Citizenship and Immigration"
+      ],
+      "a": 0,
+      "correctText": "College of Immigration and Citizenship Consultants",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/canada-announces-reforms-to-combat-immigration-citizenship-scams/"
+    },
+    {
+      "q": "According to a May 2026 report, how much did the U.S. tariffs on Canadian and Mexican cars cost U.S. automakers in the previous year?",
+      "options": [
+        "$12.5 billion",
+        "$5.4 billion",
+        "$20.1 billion",
+        "$8.9 billion"
+      ],
+      "a": 0,
+      "correctText": "$12.5 billion",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/business/article-us-auto-tariffs-canada-mexico-trump/"
+    },
+    {
+      "q": "In May 2026, Prime Minister Mark Carney announced that a plan is in the works for what historic official residence?",
+      "options": [
+        "24 Sussex Drive",
+        "Rideau Hall",
+        "Stornoway",
+        "Harrington Lake"
+      ],
+      "a": 0,
+      "correctText": "24 Sussex Drive",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-24-sussex-drive-carney-prime-minister-residence/"
+    },
+    {
+      "q": "A U.S. industry body reported in May 2026 that Canada's provincial bans on American alcohol led to what percentage drop in U.S. alcohol exports to Canada?",
+      "options": [
+        "63 per cent",
+        "45 per cent",
+        "75 per cent",
+        "25 per cent"
+      ],
+      "a": 0,
+      "correctText": "63 per cent",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11837143/canadas-booze-bans-exports/"
+    }
+  ]
+}
