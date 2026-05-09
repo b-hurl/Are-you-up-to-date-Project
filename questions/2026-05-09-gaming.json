@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Microsoft-owned studio behind Psychonauts announced its decision to form a union with the Communications Workers of America (CWA) in early May 2026?",
+      "options": [
+        "Double Fine Productions",
+        "Obsidian Entertainment",
+        "Ninja Theory",
+        "inXile Entertainment"
+      ],
+      "a": 0,
+      "correctText": "Double Fine Productions",
+      "category": "Gaming",
+      "source": "https://aftermath.site/double-fine-union-microsoft-cwa-xbox/"
+    },
+    {
+      "q": "According to financial results reported in May 2026, Sony recorded an impairment loss of $560 million in its fourth quarter due to the struggling performance of which acquired studio?",
+      "options": [
+        "Bungie",
+        "Insomniac Games",
+        "Firesprite",
+        "Haven Studios"
+      ],
+      "a": 0,
+      "correctText": "Bungie",
+      "category": "Gaming",
+      "source": "https://kotaku.com/sony-records-new-560-million-loss-on-bungie-acquisition-as-marathon-struggles-and-destiny-2-nosedives-2000694100"
+    },
+    {
+      "q": "Which legendary Nintendo developer, known for his foundational work on Super Mario Bros. and The Legend of Zelda, announced his retirement as Executive Officer effective June 26, 2026?",
+      "options": [
+        "Takashi Tezuka",
+        "Shigeru Miyamoto",
+        "Koji Kondo",
+        "Eiji Aonuma"
+      ],
+      "a": 0,
+      "correctText": "Takashi Tezuka",
+      "category": "Gaming",
+      "source": "https://www.nintendo.co.jp/ir/pdf/2026/260508_3e.pdf"
+    },
+    {
+      "q": "The official launch trailer for Forza Horizon 6, released in May 2026, confirmed that the racing game's massive open-world setting will take place in which country?",
+      "options": [
+        "Japan",
+        "Germany",
+        "Brazil",
+        "South Africa"
+      ],
+      "a": 0,
+      "correctText": "Japan",
+      "category": "Gaming",
+      "source": "https://youtu.be/oYhaW-Vr4wg"
+    },
+    {
+      "q": "According to Nintendo's May 2026 financial report, how many worldwide units did the Nintendo Switch 2 sell during its first fiscal year on the market?",
+      "options": [
+        "19.86 million",
+        "15.52 million",
+        "23.66 million",
+        "12.45 million"
+      ],
+      "a": 0,
+      "correctText": "19.86 million",
+      "category": "Gaming",
+      "source": "https://www.nintendo.co.jp/ir/en/finance/hard_soft/index.html"
+    }
+  ]
+}

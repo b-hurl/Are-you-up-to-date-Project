@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "On May 8, 2026, Nintendo announced a price hike for its upcoming Switch 2 console, raising the U.S. retail price to what amount?",
+      "options": [
+        "$499.99",
+        "$549.99",
+        "$449.99",
+        "$599.99"
+      ],
+      "a": 0,
+      "correctText": "$499.99",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html"
+    },
+    {
+      "q": "According to a May 8, 2026 announcement, Defense Secretary Pete Hegseth launched a team of private sector negotiators to oversee defense contracts under what name?",
+      "options": [
+        "Deal Team Six",
+        "Economic Defense Unit",
+        "Warfighting Acquisition Task Force",
+        "Arsenal of Freedom"
+      ],
+      "a": 0,
+      "correctText": "Deal Team Six",
+      "category": "Business",
+      "source": "https://www.defensenews.com/news/pentagon-congress/2026/05/08/hegseth-aims-to-cut-through-the-bureaucracy-with-deal-team-six/"
+    },
+    {
+      "q": "Defying the economic shock of the Iran war, the U.S. Labor Department reported on May 8, 2026, that employers unexpectedly added how many jobs in April?",
+      "options": [
+        "115,000",
+        "65,000",
+        "185,000",
+        "205,000"
+      ],
+      "a": 0,
+      "correctText": "115,000",
+      "category": "Business",
+      "source": "https://www.vindy.com/news/business/2026/05/us-employers-defy-economic-shock-from-iran-war-and-add-a-surprisingly-strong-115000-jobs-in-april/"
+    },
+    {
+      "q": "On May 9, 2026, Power Integrations (POWI) reported Q1 earnings highlighting a 23% year-over-year revenue growth in which of its business segments?",
+      "options": [
+        "Industrial",
+        "Consumer",
+        "Communications",
+        "Computer"
+      ],
+      "a": 0,
+      "correctText": "Industrial",
+      "category": "Business",
+      "source": "https://www.fool.com/earnings/call-transcripts/2026/05/09/powi-q1-2026-earnings-transcript/"
+    }
+  ]
+}

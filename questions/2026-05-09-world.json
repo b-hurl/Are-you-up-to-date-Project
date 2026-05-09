@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What amount is the Canadian government preparing to roll out for Ontario First Nations to reclaim their child welfare systems?",
+      "options": [
+        "$8.5 billion",
+        "$4.2 billion",
+        "$1.5 billion",
+        "$10 billion"
+      ],
+      "a": 0,
+      "correctText": "$8.5 billion",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/ontario-first-nations-child-welfare-deal-funding-roll-out-9.7192941"
+    },
+    {
+      "q": "Samsung chip workers recently rejected a $340,000 one-time bonus, demanding an annual payout structure similar to which competitor?",
+      "options": [
+        "SK hynix",
+        "Micron",
+        "Intel",
+        "TSMC"
+      ],
+      "a": 0,
+      "correctText": "SK hynix",
+      "category": "World",
+      "source": "https://www.tomshardware.com/tech-industry/big-tech/samsung-chip-workers-reject-usd340-000-one-time-bonus-demand-annual-payouts-like-sk-hynixs-usd900-000-workers-want-share-of-ai-windfall-impending-18-day-strike-could-cost-samsung-up-to-usd11-7-billion"
+    },
+    {
+      "q": "Keir Starmer's Labour Party suffered significant losses in the U.K. local elections as which hard-right party made substantial gains?",
+      "options": [
+        "Reform UK",
+        "UK Independence Party (UKIP)",
+        "British National Party",
+        "The Conservative Party"
+      ],
+      "a": 0,
+      "correctText": "Reform UK",
+      "category": "World",
+      "source": "https://www.nbcnews.com/world/united-kingdom/starmer-labour-reform-farage-uk-election-rcna344013"
+    },
+    {
+      "q": "Saudi officials reportedly expressed fear that which U.S. initiative would spur Iran to launch an attack on Gulf allies?",
+      "options": [
+        "Project Freedom",
+        "Operation Sentinel",
+        "Operation Restoring Hope",
+        "Project Liberty"
+      ],
+      "a": 0,
+      "correctText": "Project Freedom",
+      "category": "World",
+      "source": "https://www.nbcnews.com/politics/national-security/saudis-feared-trumps-project-freedom-spur-iran-attack-officials-say-rcna344124"
+    },
+    {
+      "q": "Iran's foreign minister recently accused the U.S. of a 'reckless military adventure' following naval clashes in which region?",
+      "options": [
+        "Strait of Hormuz",
+        "Red Sea",
+        "Suez Canal",
+        "Gulf of Oman"
+      ],
+      "a": 0,
+      "correctText": "Strait of Hormuz",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/c99lpn9ze8ro"
+    }
+  ]
+}

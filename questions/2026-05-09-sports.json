@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 8, 2026, Novak Djokovic suffered a loss in his first match since March at the Italian Open to which 20-year-old Croatian qualifier?",
+      "options": [
+        "Dino Prizmic",
+        "Borna Coric",
+        "Duje Ajdukovic",
+        "Marin Cilic"
+      ],
+      "a": 0,
+      "correctText": "Dino Prizmic",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48713912/novak-djokovic-loses-qualifier-first-match-march"
+    },
+    {
+      "q": "In May 2026, FIFA sparked widespread backlash after it tripled the price of its best available tickets for the upcoming World Cup final to what amount?",
+      "options": [
+        "$32,970",
+        "$10,990",
+        "$25,000",
+        "$50,000"
+      ],
+      "a": 0,
+      "correctText": "$32,970",
+      "category": "Sports",
+      "source": "https://apnews.com/article/fifa-world-cup-tickets-637b8b097434e5adf60d1be5e4415ba4"
+    },
+    {
+      "q": "Which Real Madrid player was taken to the hospital with a head injury following a reported dressing room fight with teammate Aurélien Tchouaméni in May 2026?",
+      "options": [
+        "Federico Valverde",
+        "Vinícius Júnior",
+        "Jude Bellingham",
+        "Eduardo Camavinga"
+      ],
+      "a": 0,
+      "correctText": "Federico Valverde",
+      "category": "Sports",
+      "source": "https://www.abc.net.au/news/2026-05-08/real-madrid-dressing-room-spat-sees-taken-to-hospital/106656622"
+    },
+    {
+      "q": "Which former U.S. President criticized FIFA's $32,970 World Cup final ticket prices on May 8, 2026, stating 'I wouldn't pay it either'?",
+      "options": [
+        "Donald Trump",
+        "Barack Obama",
+        "George W. Bush",
+        "Bill Clinton"
+      ],
+      "a": 0,
+      "correctText": "Donald Trump",
+      "category": "Sports",
+      "source": "https://www.the-independent.com/sport/football/world-cup/trump-world-cup-ticket-prices-fifa-b2972396.html"
+    },
+    {
+      "q": "Following the early May 2026 semi-finals, which English club advanced to face Paris Saint-Germain in the Champions League final in Budapest?",
+      "options": [
+        "Arsenal",
+        "Manchester City",
+        "Liverpool",
+        "Aston Villa"
+      ],
+      "a": 0,
+      "correctText": "Arsenal",
+      "category": "Sports",
+      "source": "https://www.bbc.com/sport/football/articles/cx218q541lvo"
+    }
+  ]
+}

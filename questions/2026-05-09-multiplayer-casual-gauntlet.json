@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-09",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which legendary Nintendo developer, known for his foundational work on Super Mario Bros. and The Legend of Zelda, announced his retirement as Executive Officer effective June 26, 2026?",
+      "options": [
+        "Takashi Tezuka",
+        "Shigeru Miyamoto",
+        "Koji Kondo",
+        "Eiji Aonuma"
+      ],
+      "a": 0,
+      "correctText": "Takashi Tezuka",
+      "category": "Gaming",
+      "source": "https://www.nintendo.co.jp/ir/pdf/2026/260508_3e.pdf"
+    },
+    {
+      "q": "Which Kazuo Ishiguro novel did Guillermo del Toro recently tease he is adapting into a stop-motion film?",
+      "options": [
+        "The Buried Giant",
+        "Never Let Me Go",
+        "The Remains of the Day",
+        "Klara and the Sun"
+      ],
+      "a": 0,
+      "correctText": "The Buried Giant",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/guillermo-del-tor-kazuo-ishiguros-the-buried-giant-bfi-1236888463/"
+    },
+    {
+      "q": "On May 9, 2026, the Stoughton Public Library's new romance-themed book club met to discuss which epic fantasy novel by Sue Lynn Tan?",
+      "options": [
+        "Daughter of the Moon Goddess",
+        "The Poppy War",
+        "Iron Widow",
+        "A Magic Steeped in Poison"
+      ],
+      "a": 0,
+      "correctText": "Daughter of the Moon Goddess",
+      "category": "Books",
+      "source": "https://www.stoughtonwi.com/"
+    },
+    {
+      "q": "On May 9, 2026, the Lupus Research Alliance hosted its 'Walk with Us to Cure Lupus' event at what new New Jersey venue?",
+      "options": [
+        "Meadowlands Racetrack",
+        "MetLife Stadium",
+        "Prudential Center",
+        "Liberty State Park"
+      ],
+      "a": 0,
+      "correctText": "Meadowlands Racetrack",
+      "category": "Health",
+      "source": "https://www.lupusresearch.org/join-the-lupus-research-alliance-for-the-walk-with-us-to-cure-lupus-may-9-at-new-jerseys-meadowlands-racetrack/"
+    },
+    {
+      "q": "Which Microsoft-owned studio behind Psychonauts announced its decision to form a union with the Communications Workers of America (CWA) in early May 2026?",
+      "options": [
+        "Double Fine Productions",
+        "Obsidian Entertainment",
+        "Ninja Theory",
+        "inXile Entertainment"
+      ],
+      "a": 0,
+      "correctText": "Double Fine Productions",
+      "category": "Gaming",
+      "source": "https://aftermath.site/double-fine-union-microsoft-cwa-xbox/"
+    },
+    {
+      "q": "Which governor officially proclaimed May 9, 2026, as 'Mental Health Day for Children, Youth, and Their Families' in their state?",
+      "options": [
+        "Gretchen Whitmer",
+        "Gavin Newsom",
+        "Kathy Hochul",
+        "Jared Polis"
+      ],
+      "a": 0,
+      "correctText": "Gretchen Whitmer",
+      "category": "Health",
+      "source": "https://www.michigan.gov/whitmer/news/proclamations/2026/05/09/may-9-2026-mental-health-day-for-children-youth-and-their-families"
+    },
+    {
+      "q": "According to financial results reported in May 2026, Sony recorded an impairment loss of $560 million in its fourth quarter due to the struggling performance of which acquired studio?",
+      "options": [
+        "Bungie",
+        "Insomniac Games",
+        "Firesprite",
+        "Haven Studios"
+      ],
+      "a": 0,
+      "correctText": "Bungie",
+      "category": "Gaming",
+      "source": "https://kotaku.com/sony-records-new-560-million-loss-on-bungie-acquisition-as-marathon-struggles-and-destiny-2-nosedives-2000694100"
+    },
+    {
+      "q": "On May 9, 2026, The Leapfrog Group released its spring hospital safety grades. Which MyMichigan Medical Center achieved its fifth consecutive 'A' grade?",
+      "options": [
+        "Alma",
+        "Alpena",
+        "Saginaw",
+        "Sault"
+      ],
+      "a": 0,
+      "correctText": "Alma",
+      "category": "Health",
+      "source": "https://www.thealpenanews.com/news/local-news/2026/05/medical-centers-achieve-high-grades-for-patient-safety/"
+    },
+    {
+      "q": "On May 8, 2026, Novak Djokovic suffered a loss in his first match since March at the Italian Open to which 20-year-old Croatian qualifier?",
+      "options": [
+        "Dino Prizmic",
+        "Borna Coric",
+        "Duje Ajdukovic",
+        "Marin Cilic"
+      ],
+      "a": 0,
+      "correctText": "Dino Prizmic",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48713912/novak-djokovic-loses-qualifier-first-match-march"
+    },
+    {
+      "q": "The Friends of the Library in which New Mexico municipality held a major book sale at their Market Street bookstore on May 9, 2026?",
+      "options": [
+        "Silver City",
+        "Taos",
+        "Santa Fe",
+        "Las Cruces"
+      ],
+      "a": 0,
+      "correctText": "Silver City",
+      "category": "Books",
+      "source": "https://www.grantcountybeat.com/"
+    }
+  ]
+}

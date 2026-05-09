@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What is the title of the unmade 1980s Larry David film script that leaked online, following a noncommittal man who reunites with his dying ex?",
+      "options": [
+        "Prognosis: Negative",
+        "Rochelle, Rochelle",
+        "Chunnel",
+        "Ponce de Leon"
+      ],
+      "a": 0,
+      "correctText": "Prognosis: Negative",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/larry-david-script-leaks-online-read-prognosis-negative-1236742075/"
+    },
+    {
+      "q": "Who was revealed to be high on the list to direct DC Studios' upcoming 'Deathstroke & Bane' movie?",
+      "options": [
+        "Greg Mottola",
+        "James Gunn",
+        "Todd Phillips",
+        "Zack Snyder"
+      ],
+      "a": 0,
+      "correctText": "Greg Mottola",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/deathstroke-and-bane-greg-mottola-1236888282/"
+    },
+    {
+      "q": "Which Kazuo Ishiguro novel did Guillermo del Toro recently tease he is adapting into a stop-motion film?",
+      "options": [
+        "The Buried Giant",
+        "Never Let Me Go",
+        "The Remains of the Day",
+        "Klara and the Sun"
+      ],
+      "a": 0,
+      "correctText": "The Buried Giant",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/guillermo-del-tor-kazuo-ishiguros-the-buried-giant-bfi-1236888463/"
+    },
+    {
+      "q": "With whom did Warner Bros. recently reach a $57 million legal settlement regarding a dispute over 'The Matrix Resurrections'?",
+      "options": [
+        "Village Roadshow",
+        "Legendary Entertainment",
+        "Silver Pictures",
+        "RatPac-Dune Entertainment"
+      ],
+      "a": 0,
+      "correctText": "Village Roadshow",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/creative-content/movies/warner-bros-wins-matrix-resurrections-village-roadshow-dispute/"
+    },
+    {
+      "q": "Which actor secured a $12.5 million payday and shared the wealth with their co-stars via a 'favored nations' deal for 'Devil Wears Prada 2'?",
+      "options": [
+        "Meryl Streep",
+        "Anne Hathaway",
+        "Emily Blunt",
+        "Stanley Tucci"
+      ],
+      "a": 0,
+      "correctText": "Meryl Streep",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/devil-wears-prada-2-salaries-meryl-streep-hathaway-pay-1236741185/"
+    }
+  ]
+}

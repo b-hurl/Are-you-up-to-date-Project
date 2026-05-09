@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 2026 Statistics Canada estimate, Ontario is expected to lose approximately what proportion of its international student population following the federal permit cap?",
+      "options": [
+        "More than a third",
+        "About a quarter",
+        "Nearly half",
+        "Less than 10%"
+      ],
+      "a": 0,
+      "correctText": "More than a third",
+      "category": "Canada",
+      "source": "https://ici.radio-canada.ca/rci/en/news/2252404/ontario-estimated-to-lose-more-than-a-third-of-its-international-students-following-permit-cap-statscan"
+    },
+    {
+      "q": "In early May 2026, three men were charged in the United States with attempting to smuggle how many firearms into Canada?",
+      "options": [
+        "89",
+        "45",
+        "120",
+        "22"
+      ],
+      "a": 0,
+      "correctText": "89",
+      "category": "Canada",
+      "source": "https://www.justice.gov/usao-sdny/pr/three-men-charged-attempted-smuggling-89-firearms"
+    },
+    {
+      "q": "A May 2026 Nanos survey revealed that 8 out of 10 Canadians still support what action to strengthen the country's bargaining position in U.S. trade talks?",
+      "options": [
+        "Boycotting U.S. goods and travel",
+        "Withdrawing from free trade agreements",
+        "Banning American media platforms",
+        "Applying a 10% tariff on U.S. imports"
+      ],
+      "a": 0,
+      "correctText": "Boycotting U.S. goods and travel",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/majority-of-canadians-still-support-boycotting-us-nanos-survey/"
+    },
+    {
+      "q": "According to a May 2026 Nanos poll, what do 3-in-4 young Canadians cite as a major problem affecting their day-to-day decisions?",
+      "options": [
+        "Inflation",
+        "Climate change",
+        "Housing availability",
+        "Healthcare access"
+      ],
+      "a": 0,
+      "correctText": "Inflation",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/inflation-is-a-top-issue-for-3-in-4-young-canadians-nanos-survey/"
+    },
+    {
+      "q": "In May 2026, which airline announced it was cutting its flight schedule to Canada as a result of soaring jet fuel prices?",
+      "options": [
+        "Air India",
+        "British Airways",
+        "Emirates",
+        "Lufthansa"
+      ],
+      "a": 0,
+      "correctText": "Air India",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/business/air-india-cancels-flights-canada-9.7193009"
+    }
+  ]
+}

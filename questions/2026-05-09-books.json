@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "Which MIT engineering professor and author presented her new book 'Birds Up Close' at the Mass Audubon Wellfleet Bay Wildlife Sanctuary on May 9, 2026?",
+      "options": [
+        "Lorna Gibson",
+        "Temple Grandin",
+        "Neri Oxman",
+        "Mary Roach"
+      ],
+      "a": 0,
+      "correctText": "Lorna Gibson",
+      "category": "Books",
+      "source": "https://orleanscapecod.org/"
+    },
+    {
+      "q": "Which author discussed her new memoir on May 9, 2026, at the Seattle Central Library as part of the 'One Book, One Coast' shared reading initiative?",
+      "options": [
+        "Tamiko Nimura",
+        "Ruth Ozeki",
+        "Min Jin Lee",
+        "Marie Kondo"
+      ],
+      "a": 0,
+      "correctText": "Tamiko Nimura",
+      "category": "Books",
+      "source": "https://www.spl.org/"
+    },
+    {
+      "q": "On May 9, 2026, the Stoughton Public Library's new romance-themed book club met to discuss which epic fantasy novel by Sue Lynn Tan?",
+      "options": [
+        "Daughter of the Moon Goddess",
+        "The Poppy War",
+        "Iron Widow",
+        "A Magic Steeped in Poison"
+      ],
+      "a": 0,
+      "correctText": "Daughter of the Moon Goddess",
+      "category": "Books",
+      "source": "https://www.stoughtonwi.com/"
+    },
+    {
+      "q": "The Friends of the Library in which New Mexico municipality held a major book sale at their Market Street bookstore on May 9, 2026?",
+      "options": [
+        "Silver City",
+        "Taos",
+        "Santa Fe",
+        "Las Cruces"
+      ],
+      "a": 0,
+      "correctText": "Silver City",
+      "category": "Books",
+      "source": "https://www.grantcountybeat.com/"
+    }
+  ]
+}

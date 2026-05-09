@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 8, 2026, the Virginia Supreme Court struck down a voter-approved congressional redistricting plan that was created by which political party?",
+      "options": [
+        "Democratic Party",
+        "Republican Party",
+        "Libertarian Party",
+        "Green Party"
+      ],
+      "a": 0,
+      "correctText": "Democratic Party",
+      "category": "Usa",
+      "source": "https://apnews.com/article/redistricting-virginia-congress-democrats-republicans-12a31037f3c9a94d3cb9fbcaaf84d94f"
+    },
+    {
+      "q": "In May 2026, Tesla issued a recall for over 170 of its Cybertrucks due to a defect that could cause what major safety issue?",
+      "options": [
+        "Wheels may fall off",
+        "Doors may randomly unlatch",
+        "Battery pack may catch fire",
+        "Accelerator pedal may stick"
+      ],
+      "a": 0,
+      "correctText": "Wheels may fall off",
+      "category": "Usa",
+      "source": "https://www.kbb.com/car-news/tesla-recalls-cybertruck-because-wheels-may-fall-off/"
+    },
+    {
+      "q": "A May 2026 investigation highlighted a rising number of U.S. parents rejecting which newborn injection, leading to fatal brain bleeds?",
+      "options": [
+        "Vitamin K shot",
+        "Hepatitis B vaccine",
+        "Polio vaccine",
+        "Vitamin D shot"
+      ],
+      "a": 0,
+      "correctText": "Vitamin K shot",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/08/health/vitamin-k-shot-propublica"
+    },
+    {
+      "q": "According to a May 2026 report, how many U.S. jurisdictions have blocked new AI data center builds amid growing opposition?",
+      "options": [
+        "69",
+        "50",
+        "25",
+        "100"
+      ],
+      "a": 0,
+      "correctText": "69",
+      "category": "Usa",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-data-center-bans-are-rapidly-multiplying-across-the-us-69-jurisdictions-block-new-builds-with-four-moves-noted-as-permanent"
+    },
+    {
+      "q": "Which adult website was taken offline in May 2026 after being the center of a CNN investigation into sexual abuse?",
+      "options": [
+        "Motherless",
+        "Pornhub",
+        "xHamster",
+        "OnlyFans"
+      ],
+      "a": 0,
+      "correctText": "Motherless",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/08/europe/porn-site-motherless-taken-down-dutch-authorities-intl"
+    }
+  ]
+}

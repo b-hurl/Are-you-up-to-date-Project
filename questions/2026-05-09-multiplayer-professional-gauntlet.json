@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-09",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "What amount is the Canadian government preparing to roll out for Ontario First Nations to reclaim their child welfare systems?",
+      "options": [
+        "$8.5 billion",
+        "$4.2 billion",
+        "$1.5 billion",
+        "$10 billion"
+      ],
+      "a": 0,
+      "correctText": "$8.5 billion",
+      "category": "World",
+      "source": "https://www.cbc.ca/news/politics/ontario-first-nations-child-welfare-deal-funding-roll-out-9.7192941"
+    },
+    {
+      "q": "Keir Starmer's Labour Party suffered significant losses in the U.K. local elections as which hard-right party made substantial gains?",
+      "options": [
+        "Reform UK",
+        "UK Independence Party (UKIP)",
+        "British National Party",
+        "The Conservative Party"
+      ],
+      "a": 0,
+      "correctText": "Reform UK",
+      "category": "World",
+      "source": "https://www.nbcnews.com/world/united-kingdom/starmer-labour-reform-farage-uk-election-rcna344013"
+    },
+    {
+      "q": "Why did Tesla recently recall 173 of its cheaper, rear-wheel-drive Cybertrucks?",
+      "options": [
+        "The wheels might fall off",
+        "The battery could catch fire",
+        "The steering wheel locks up",
+        "The touchscreen goes blank"
+      ],
+      "a": 0,
+      "correctText": "The wheels might fall off",
+      "category": "Technology",
+      "source": "https://www.theverge.com/transportation/926741/tesla-cybertruck-cheaper-recall"
+    },
+    {
+      "q": "In May 2026, Tesla issued a recall for over 170 of its Cybertrucks due to a defect that could cause what major safety issue?",
+      "options": [
+        "Wheels may fall off",
+        "Doors may randomly unlatch",
+        "Battery pack may catch fire",
+        "Accelerator pedal may stick"
+      ],
+      "a": 0,
+      "correctText": "Wheels may fall off",
+      "category": "Usa",
+      "source": "https://www.kbb.com/car-news/tesla-recalls-cybertruck-because-wheels-may-fall-off/"
+    },
+    {
+      "q": "Under a new state law, big data centers are now required to pay their full power and infrastructure costs in which U.S. state?",
+      "options": [
+        "Florida",
+        "Texas",
+        "California",
+        "Virginia"
+      ],
+      "a": 0,
+      "correctText": "Florida",
+      "category": "Technology",
+      "source": "https://cbs12.com/news/local/florida-governement-politics-news-governor-ron-desantis-big-data-centers-in-florida-must-pay-full-power-and-infrastructure-costs-under-new-law-loxahatchee-ai-data-center-local-palm-beach-county-power-artificial-intelligence-blocks-electric-utilities"
+    },
+    {
+      "q": "Which adult website was taken offline in May 2026 after being the center of a CNN investigation into sexual abuse?",
+      "options": [
+        "Motherless",
+        "Pornhub",
+        "xHamster",
+        "OnlyFans"
+      ],
+      "a": 0,
+      "correctText": "Motherless",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/08/europe/porn-site-motherless-taken-down-dutch-authorities-intl"
+    },
+    {
+      "q": "On May 8, 2026, Nintendo announced a price hike for its upcoming Switch 2 console, raising the U.S. retail price to what amount?",
+      "options": [
+        "$499.99",
+        "$549.99",
+        "$449.99",
+        "$599.99"
+      ],
+      "a": 0,
+      "correctText": "$499.99",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/05/08/nintendo-switch-2-price-hike-sales-fall-memory-crunch.html"
+    },
+    {
+      "q": "According to a recent study analyzing over 10,500 blood samples, what percentage of Americans were found to have multiple PFAS, or 'forever chemicals,' in their bodies? [1.9]",
+      "options": [
+        "98.5%",
+        "75.2%",
+        "50.0%",
+        "12.8%"
+      ],
+      "a": 0,
+      "correctText": "98.5%",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1127482"
+    },
+    {
+      "q": "Samsung chip workers recently rejected a $340,000 one-time bonus, demanding an annual payout structure similar to which competitor?",
+      "options": [
+        "SK hynix",
+        "Micron",
+        "Intel",
+        "TSMC"
+      ],
+      "a": 0,
+      "correctText": "SK hynix",
+      "category": "World",
+      "source": "https://www.tomshardware.com/tech-industry/big-tech/samsung-chip-workers-reject-usd340-000-one-time-bonus-demand-annual-payouts-like-sk-hynixs-usd900-000-workers-want-share-of-ai-windfall-impending-18-day-strike-could-cost-samsung-up-to-usd11-7-billion"
+    },
+    {
+      "q": "A May 2026 investigation highlighted a rising number of U.S. parents rejecting which newborn injection, leading to fatal brain bleeds?",
+      "options": [
+        "Vitamin K shot",
+        "Hepatitis B vaccine",
+        "Polio vaccine",
+        "Vitamin D shot"
+      ],
+      "a": 0,
+      "correctText": "Vitamin K shot",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/08/health/vitamin-k-shot-propublica"
+    }
+  ]
+}

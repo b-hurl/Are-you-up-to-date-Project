@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-09",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to a May 2026 Nanos poll, what do 3-in-4 young Canadians cite as a major problem affecting their day-to-day decisions?",
+      "options": [
+        "Inflation",
+        "Climate change",
+        "Housing availability",
+        "Healthcare access"
+      ],
+      "a": 0,
+      "correctText": "Inflation",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/inflation-is-a-top-issue-for-3-in-4-young-canadians-nanos-survey/"
+    },
+    {
+      "q": "A federal judge ruled that the Department of Government Efficiency (DOGE) acted unconstitutionally by using which AI tool to terminate humanities grants?",
+      "options": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Copilot"
+      ],
+      "a": 0,
+      "correctText": "ChatGPT",
+      "category": "Technology",
+      "source": "https://www.theverge.com/policy/927071/doge-chatgpt-grants-canceled"
+    },
+    {
+      "q": "A May 2026 Nanos survey revealed that 8 out of 10 Canadians still support what action to strengthen the country's bargaining position in U.S. trade talks?",
+      "options": [
+        "Boycotting U.S. goods and travel",
+        "Withdrawing from free trade agreements",
+        "Banning American media platforms",
+        "Applying a 10% tariff on U.S. imports"
+      ],
+      "a": 0,
+      "correctText": "Boycotting U.S. goods and travel",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/majority-of-canadians-still-support-boycotting-us-nanos-survey/"
+    },
+    {
+      "q": "On May 9, 2026, Power Integrations (POWI) reported Q1 earnings highlighting a 23% year-over-year revenue growth in which of its business segments?",
+      "options": [
+        "Industrial",
+        "Consumer",
+        "Communications",
+        "Computer"
+      ],
+      "a": 0,
+      "correctText": "Industrial",
+      "category": "Business",
+      "source": "https://www.fool.com/earnings/call-transcripts/2026/05/09/powi-q1-2026-earnings-transcript/"
+    },
+    {
+      "q": "According to a May 2026 Statistics Canada estimate, Ontario is expected to lose approximately what proportion of its international student population following the federal permit cap?",
+      "options": [
+        "More than a third",
+        "About a quarter",
+        "Nearly half",
+        "Less than 10%"
+      ],
+      "a": 0,
+      "correctText": "More than a third",
+      "category": "Canada",
+      "source": "https://ici.radio-canada.ca/rci/en/news/2252404/ontario-estimated-to-lose-more-than-a-third-of-its-international-students-following-permit-cap-statscan"
+    },
+    {
+      "q": "According to a May 2026 report, how many U.S. jurisdictions have blocked new AI data center builds amid growing opposition?",
+      "options": [
+        "69",
+        "50",
+        "25",
+        "100"
+      ],
+      "a": 0,
+      "correctText": "69",
+      "category": "Usa",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-data-center-bans-are-rapidly-multiplying-across-the-us-69-jurisdictions-block-new-builds-with-four-moves-noted-as-permanent"
+    },
+    {
+      "q": "A Columbia University School of Nursing AI-assisted audit of nearly 3,000 peer-reviewed medical papers revealed what alarming trend?",
+      "options": [
+        "The papers contained fake citations that do not exist",
+        "The studies falsified the ages of their human subjects",
+        "The papers were written entirely by artificial intelligence",
+        "The authors plagiarized Wikipedia articles word-for-word"
+      ],
+      "a": 0,
+      "correctText": "The papers contained fake citations that do not exist",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1127364"
+    },
+    {
+      "q": "According to a May 8, 2026 announcement, Defense Secretary Pete Hegseth launched a team of private sector negotiators to oversee defense contracts under what name?",
+      "options": [
+        "Deal Team Six",
+        "Economic Defense Unit",
+        "Warfighting Acquisition Task Force",
+        "Arsenal of Freedom"
+      ],
+      "a": 0,
+      "correctText": "Deal Team Six",
+      "category": "Business",
+      "source": "https://www.defensenews.com/news/pentagon-congress/2026/05/08/hegseth-aims-to-cut-through-the-bureaucracy-with-deal-team-six/"
+    },
+    {
+      "q": "In early May 2026, three men were charged in the United States with attempting to smuggle how many firearms into Canada?",
+      "options": [
+        "89",
+        "45",
+        "120",
+        "22"
+      ],
+      "a": 0,
+      "correctText": "89",
+      "category": "Canada",
+      "source": "https://www.justice.gov/usao-sdny/pr/three-men-charged-attempted-smuggling-89-firearms"
+    },
+    {
+      "q": "An international study recently concluded that for the first time in human history, what demographic shift has occurred globally?",
+      "options": [
+        "Men are less fertile than women",
+        "The global population has started shrinking",
+        "Women are retiring an average of five years later than men",
+        "Life expectancy for men has surpassed that of women"
+      ],
+      "a": 0,
+      "correctText": "Men are less fertile than women",
+      "category": "Science",
+      "source": "https://www.uio.no/english/research/research-news/articles/2026/men-now-have-fewer-children-than-women.html"
+    }
+  ]
+}

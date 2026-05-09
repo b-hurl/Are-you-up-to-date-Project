@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "A federal judge ruled that the Department of Government Efficiency (DOGE) acted unconstitutionally by using which AI tool to terminate humanities grants?",
+      "options": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Copilot"
+      ],
+      "a": 0,
+      "correctText": "ChatGPT",
+      "category": "Technology",
+      "source": "https://www.theverge.com/policy/927071/doge-chatgpt-grants-canceled"
+    },
+    {
+      "q": "The European Parliamentary Research Service recently called which technology \"a loophole that needs closing\" regarding online age verification?",
+      "options": [
+        "Virtual Private Networks (VPNs)",
+        "End-to-end encryption",
+        "Tor Browser",
+        "Incognito Mode"
+      ],
+      "a": 0,
+      "correctText": "Virtual Private Networks (VPNs)",
+      "category": "Technology",
+      "source": "https://cyberinsider.com/eu-calls-vpns-a-loophole-that-needs-closing-in-age-verification-push/"
+    },
+    {
+      "q": "Why did Tesla recently recall 173 of its cheaper, rear-wheel-drive Cybertrucks?",
+      "options": [
+        "The wheels might fall off",
+        "The battery could catch fire",
+        "The steering wheel locks up",
+        "The touchscreen goes blank"
+      ],
+      "a": 0,
+      "correctText": "The wheels might fall off",
+      "category": "Technology",
+      "source": "https://www.theverge.com/transportation/926741/tesla-cybertruck-cheaper-recall"
+    },
+    {
+      "q": "Laid-off employees at which major tech company recently attempted, and failed, to collectively negotiate for a better severance package?",
+      "options": [
+        "Oracle",
+        "Microsoft",
+        "IBM",
+        "Salesforce"
+      ],
+      "a": 0,
+      "correctText": "Oracle",
+      "category": "Technology",
+      "source": "https://techcrunch.com/2026/05/08/laid-off-oracle-workers-tried-to-negotiate-better-severance-oracle-said-no/"
+    },
+    {
+      "q": "Under a new state law, big data centers are now required to pay their full power and infrastructure costs in which U.S. state?",
+      "options": [
+        "Florida",
+        "Texas",
+        "California",
+        "Virginia"
+      ],
+      "a": 0,
+      "correctText": "Florida",
+      "category": "Technology",
+      "source": "https://cbs12.com/news/local/florida-governement-politics-news-governor-ron-desantis-big-data-centers-in-florida-must-pay-full-power-and-infrastructure-costs-under-new-law-loxahatchee-ai-data-center-local-palm-beach-county-power-artificial-intelligence-blocks-electric-utilities"
+    }
+  ]
+}

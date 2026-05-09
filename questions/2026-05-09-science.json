@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a recent study analyzing over 10,500 blood samples, what percentage of Americans were found to have multiple PFAS, or 'forever chemicals,' in their bodies? [1.9]",
+      "options": [
+        "98.5%",
+        "75.2%",
+        "50.0%",
+        "12.8%"
+      ],
+      "a": 0,
+      "correctText": "98.5%",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1127482"
+    },
+    {
+      "q": "Recent neurological research reveals that consuming an amount of caffeine equivalent to two cups of coffee does what to the human brain?",
+      "options": [
+        "Enhances the ability to temporarily quiet its own motor signals",
+        "Reduces overall memory retention by half",
+        "Completely shuts down the prefrontal cortex",
+        "Permanently increases baseline anxiety levels"
+      ],
+      "a": 0,
+      "correctText": "Enhances the ability to temporarily quiet its own motor signals",
+      "category": "Science",
+      "source": "https://www.psypost.org/how-a-stick-of-caffeinated-gum-changes-the-brain-s-electrical-braking-system/"
+    },
+    {
+      "q": "An international study recently concluded that for the first time in human history, what demographic shift has occurred globally?",
+      "options": [
+        "Men are less fertile than women",
+        "The global population has started shrinking",
+        "Women are retiring an average of five years later than men",
+        "Life expectancy for men has surpassed that of women"
+      ],
+      "a": 0,
+      "correctText": "Men are less fertile than women",
+      "category": "Science",
+      "source": "https://www.uio.no/english/research/research-news/articles/2026/men-now-have-fewer-children-than-women.html"
+    },
+    {
+      "q": "A Columbia University School of Nursing AI-assisted audit of nearly 3,000 peer-reviewed medical papers revealed what alarming trend?",
+      "options": [
+        "The papers contained fake citations that do not exist",
+        "The studies falsified the ages of their human subjects",
+        "The papers were written entirely by artificial intelligence",
+        "The authors plagiarized Wikipedia articles word-for-word"
+      ],
+      "a": 0,
+      "correctText": "The papers contained fake citations that do not exist",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1127364"
+    },
+    {
+      "q": "A recent study found that how couples divide household chores is linked to women’s sexual desire, but the connection heavily depends on what?",
+      "options": [
+        "Personal beliefs about gender roles",
+        "The total combined income of the couple",
+        "The size and location of their house",
+        "How many years they have been married"
+      ],
+      "a": 0,
+      "correctText": "Personal beliefs about gender roles",
+      "category": "Science",
+      "source": "https://www.psypost.org/benevolent-sexism-appears-to-buffer-the-impact-of-unequal-chores-on-womens-sexual-desire/"
+    }
+  ]
+}

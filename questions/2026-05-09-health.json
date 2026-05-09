@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 9, 2026, The Leapfrog Group released its spring hospital safety grades. Which MyMichigan Medical Center achieved its fifth consecutive 'A' grade?",
+      "options": [
+        "Alma",
+        "Alpena",
+        "Saginaw",
+        "Sault"
+      ],
+      "a": 0,
+      "correctText": "Alma",
+      "category": "Health",
+      "source": "https://www.thealpenanews.com/news/local-news/2026/05/medical-centers-achieve-high-grades-for-patient-safety/"
+    },
+    {
+      "q": "Which governor officially proclaimed May 9, 2026, as 'Mental Health Day for Children, Youth, and Their Families' in their state?",
+      "options": [
+        "Gretchen Whitmer",
+        "Gavin Newsom",
+        "Kathy Hochul",
+        "Jared Polis"
+      ],
+      "a": 0,
+      "correctText": "Gretchen Whitmer",
+      "category": "Health",
+      "source": "https://www.michigan.gov/whitmer/news/proclamations/2026/05/09/may-9-2026-mental-health-day-for-children-youth-and-their-families"
+    },
+    {
+      "q": "On May 9, 2026, the Mahoning County Mental Health and Recovery Board awarded its Leader of the Year Award to Todd Werth for helping establish a wellness center specifically for whom?",
+      "options": [
+        "First Responders",
+        "High School Students",
+        "Veterans",
+        "Nurses"
+      ],
+      "a": 0,
+      "correctText": "First Responders",
+      "category": "Health",
+      "source": "https://www.vindy.com/news/local-news/2026/05/board-awards-heroes-of-mental-health-in-county/"
+    },
+    {
+      "q": "On May 9, 2026, the Lupus Research Alliance hosted its 'Walk with Us to Cure Lupus' event at what new New Jersey venue?",
+      "options": [
+        "Meadowlands Racetrack",
+        "MetLife Stadium",
+        "Prudential Center",
+        "Liberty State Park"
+      ],
+      "a": 0,
+      "correctText": "Meadowlands Racetrack",
+      "category": "Health",
+      "source": "https://www.lupusresearch.org/join-the-lupus-research-alliance-for-the-walk-with-us-to-cure-lupus-may-9-at-new-jerseys-meadowlands-racetrack/"
+    },
+    {
+      "q": "A May 9, 2026 report revealed that researchers from Wake Forest University discovered shared 'SP genes' that could eventually help humans do what?",
+      "options": [
+        "Regrow lost limbs",
+        "Reverse Alzheimer's",
+        "Cure blindness",
+        "Regenerate heart tissue"
+      ],
+      "a": 0,
+      "correctText": "Regrow lost limbs",
+      "category": "Health",
+      "source": "https://www.sciencedaily.com/news/health_medicine/"
+    }
+  ]
+}
