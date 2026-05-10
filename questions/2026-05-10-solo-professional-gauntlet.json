@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-10",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A study highlighted on May 10, 2026, found that specialized psychotherapy paired with doses of which two psychedelic substances was associated with strong reductions in severe depression?",
+      "options": [
+        "LSD and psilocybin",
+        "MDMA and ketamine",
+        "Mescaline and ibogaine",
+        "Ayahuasca and DMT"
+      ],
+      "a": 0,
+      "correctText": "LSD and psilocybin",
+      "category": "Science",
+      "source": "https://www.psypost.org/real-world-outcomes-support-the-benefits-of-psychedelic-therapy-for-severe-depre/"
+    },
+    {
+      "q": "Which beleaguered Crown corporation was authorized in May 2026 to receive an additional $673 million in federal funds to stay afloat?",
+      "options": [
+        "Canada Post",
+        "Via Rail",
+        "Canadian Broadcasting Corporation (CBC)",
+        "Trans Mountain Corporation"
+      ],
+      "a": 0,
+      "correctText": "Canada Post",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11841034/canada-post-getting-more-federal-funds-to-stay-afloat/"
+    },
+    {
+      "q": "Discussed heavily by scientists on May 10, 2026, after actor Sam Neill announced his cancer remission, what emerging therapy genetically engineers a patient's own immune cells to fight disease?",
+      "options": [
+        "CAR T-cell therapy",
+        "CRISPR gene editing",
+        "mRNA cancer vaccines",
+        "Monoclonal antibodies"
+      ],
+      "a": 0,
+      "correctText": "CAR T-cell therapy",
+      "category": "Science",
+      "source": "https://www.theguardian.com/society/2026/may/10/cancer-treatment-car-t-cell-therapy-sam-neill"
+    },
+    {
+      "q": "According to May 2026 reports, a college student managed to halt four trains on Taiwan's high-speed rail using software-defined radios. What critical security oversight allowed him to bypass protection layers?",
+      "options": [
+        "19 years without cryptographic key rotation",
+        "An unpatched Windows XP operating system",
+        "A hardcoded default password of 'admin'",
+        "Connecting to an unsecured public Wi-Fi network"
+      ],
+      "a": 0,
+      "correctText": "19 years without cryptographic key rotation",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/cyber-security/college-student-hacks-taiwan-high-speed-rail-line-stopping-four-trains-19-years-without-crypto-key-rotation-ends-in-predictable-result"
+    },
+    {
+      "q": "According to a May 10, 2026 report, the disappearance of which group is being called a 'grave threat to US national security'?",
+      "options": [
+        "Missing US scientists",
+        "Military generals",
+        "Cybersecurity officials",
+        "Undercover agents"
+      ],
+      "a": 0,
+      "correctText": "Missing US scientists",
+      "category": "Usa",
+      "source": "https://www.abc.net.au/news/2026-05-10/us-scientists-missing-dead-fbi-nasa/106646664"
+    },
+    {
+      "q": "Parents in which country strongly criticized the government's decision to end the 2026 school year a month early to accommodate the FIFA World Cup?",
+      "options": [
+        "Mexico",
+        "United States",
+        "Canada",
+        "Argentina"
+      ],
+      "a": 0,
+      "correctText": "Mexico",
+      "category": "World",
+      "source": "https://www.bbc.co.uk/news/articles/c36276z14ego"
+    },
+    {
+      "q": "Uber drivers in which Canadian city made history in May 2026 by ratifying the country's first-ever union contract for app-based drivers?",
+      "options": [
+        "Victoria",
+        "Vancouver",
+        "Toronto",
+        "Montreal"
+      ],
+      "a": 0,
+      "correctText": "Victoria",
+      "category": "Canada",
+      "source": "https://rabble.ca/labour/victoria-uber-drivers-secure-first-ever-union-contract/"
+    },
+    {
+      "q": "Under President Nasry Asfura, which Central American country announced in May 2026 it is reconsidering restoring diplomatic ties with Taiwan?",
+      "options": [
+        "Honduras",
+        "Guatemala",
+        "El Salvador",
+        "Nicaragua"
+      ],
+      "a": 0,
+      "correctText": "Honduras",
+      "category": "World",
+      "source": "https://www.taiwannews.com.tw/en/news/6357898"
+    },
+    {
+      "q": "According to a Nature Medicine study published on May 10, 2026, researchers demonstrated the detection of multiple systemic diseases using which non-invasive imaging technique?",
+      "options": [
+        "Retinal imaging",
+        "Functional MRI",
+        "Ultrasound tomography",
+        "Thermal body scanning"
+      ],
+      "a": 0,
+      "correctText": "Retinal imaging",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41591-026-04359-w"
+    },
+    {
+      "q": "On May 8, 2026, singer Dua Lipa filed a $15 million lawsuit that made headlines over the weekend. Which electronics manufacturer did she sue for allegedly using her image on television packaging without consent?",
+      "options": [
+        "Samsung",
+        "Sony",
+        "LG",
+        "TCL"
+      ],
+      "a": 0,
+      "correctText": "Samsung",
+      "category": "Technology",
+      "source": "https://variety.com/2026/music/news/dua-lipa-sues-samsung-sell-tvs-1236742471/"
+    }
+  ]
+}

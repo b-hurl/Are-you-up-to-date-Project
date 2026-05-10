@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-10",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "On May 10, 2026, Rachel Goldberg-Polin's memoir recounting the capture of her son debuted at #1 on the New York Times Hardcover Nonfiction Bestsellers list. What is its title?",
+      "options": [
+        "When We See You Again",
+        "Strangers",
+        "London Falling",
+        "Famesick"
+      ],
+      "a": 0,
+      "correctText": "When We See You Again",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/10/hardcover-nonfiction/"
+    },
+    {
+      "q": "What cooperative 'casino crawler' game announced it surpassed 1 million copies sold in just one week on Steam?",
+      "options": [
+        "Gamble With Your Friends",
+        "Lethal Company",
+        "Balatro",
+        "Casino Heist"
+      ],
+      "a": 0,
+      "correctText": "Gamble With Your Friends",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3892270/view/701015907648931195?l=english"
+    },
+    {
+      "q": "The animal evolution roguelite 'Everything is Crab' achieved what sales milestone in its first 48 hours?",
+      "options": [
+        "100,000 copies",
+        "50,000 copies",
+        "250,000 copies",
+        "500,000 copies"
+      ],
+      "a": 0,
+      "correctText": "100,000 copies",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/3526710/announcements/detail/699890007742088470"
+    },
+    {
+      "q": "Which Microsoft-owned studio behind the Psychonauts series recently filed a petition to unionize its workers under the CWA?",
+      "options": [
+        "Double Fine Productions",
+        "Obsidian Entertainment",
+        "inXile Entertainment",
+        "Ninja Theory"
+      ],
+      "a": 0,
+      "correctText": "Double Fine Productions",
+      "category": "Gaming",
+      "source": "https://aftermath.site/double-fine-union-microsoft-cwa-xbox/"
+    },
+    {
+      "q": "During the 2026 NBA Playoffs on May 10, which team took a commanding 3-0 series lead over the Los Angeles Lakers?",
+      "options": [
+        "Oklahoma City Thunder",
+        "Denver Nuggets",
+        "Phoenix Suns",
+        "Dallas Mavericks"
+      ],
+      "a": 0,
+      "correctText": "Oklahoma City Thunder",
+      "category": "Sports",
+      "source": "https://sports.yahoo.com/nba/article/thunder-pull-away-from-lakers-again-to-take-3-0-series-lead-025926899.html"
+    },
+    {
+      "q": "Which Japanese author, best known for creating the horror sensation 'Ring', passed away at age 68 according to May 2026 reports?",
+      "options": [
+        "Koji Suzuki",
+        "Junji Ito",
+        "Hideo Nakata",
+        "Haruki Murakami"
+      ],
+      "a": 0,
+      "correctText": "Koji Suzuki",
+      "category": "Entertainment",
+      "source": "https://www.nippon.com/en/news/yjj2026050900490/"
+    },
+    {
+      "q": "Which legendary Atlanta Braves manager and Baseball Hall of Famer passed away at the age of 84 over the May 9-10, 2026 weekend?",
+      "options": [
+        "Bobby Cox",
+        "Tommy Lasorda",
+        "Tony La Russa",
+        "Sparky Anderson"
+      ],
+      "a": 0,
+      "correctText": "Bobby Cox",
+      "category": "Sports",
+      "source": "https://www.wsbtv.com/news/local/atlanta-braves-manager-bobby-cox-dies-84/MKQ7IYNVEBDL3GKA4K4UBW6XQM/"
+    },
+    {
+      "q": "According to the newly released Early Access Gameplay Trailer, what date will 'Subnautica 2' enter Early Access?",
+      "options": [
+        "May 14, 2026",
+        "June 1, 2026",
+        "July 15, 2026",
+        "August 10, 2026"
+      ],
+      "a": 0,
+      "correctText": "May 14, 2026",
+      "category": "Gaming",
+      "source": "https://youtu.be/6t2nDHldoSk?si=Vg5pC-BnFPfJKT8X"
+    },
+    {
+      "q": "Why did Werner Herzog decline an invitation to premiere his new movie 'Bucking Fastard' at the 2026 Cannes Film Festival?",
+      "options": [
+        "It was denied a competition slot",
+        "The film's editing was unfinished",
+        "He objected to the jury president",
+        "The lead actors were on strike"
+      ],
+      "a": 0,
+      "correctText": "It was denied a competition slot",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/werner-herzog-bucking-fastard-turns-down-cannes-invite-1236741890/"
+    },
+    {
+      "q": "Which novel by Caro Claire Burke claimed the #1 spot on the New York Times Hardcover Fiction Bestsellers list for the week of May 10, 2026?",
+      "options": [
+        "Yesteryear",
+        "The Correspondent",
+        "Purple State",
+        "Mad Mabel"
+      ],
+      "a": 0,
+      "correctText": "Yesteryear",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/10/hardcover-fiction/"
+    }
+  ]
+}

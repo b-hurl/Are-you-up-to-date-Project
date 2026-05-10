@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Following a May 2026 reversal, the FCC extended a waiver allowing software updates for foreign-made drones and routers to prevent cybersecurity risks. Until what year was the waiver extended?",
+      "options": [
+        "2029",
+        "2027",
+        "2030",
+        "2028"
+      ],
+      "a": 0,
+      "correctText": "2029",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/networking/routers/fcc-reverses-course-allows-software-updates-for-foreign-made-drones-and-routers-until-2029-agency-says-blocking-security-patches-could-create-cybersecurity-risks"
+    },
+    {
+      "q": "In a financial report covered on May 10, 2026, the parent company of Truth Social reported a first-quarter net loss of over $400 million, primarily driven by a plunge in what asset class?",
+      "options": [
+        "Cryptocurrencies",
+        "Real Estate",
+        "Artificial Intelligence Stocks",
+        "Electric Vehicle Bonds"
+      ],
+      "a": 0,
+      "correctText": "Cryptocurrencies",
+      "category": "Technology",
+      "source": "https://www.ctvnews.ca/business/article/parent-company-of-trumps-truth-social-reports-400m-loss/"
+    },
+    {
+      "q": "According to May 2026 reports, a college student managed to halt four trains on Taiwan's high-speed rail using software-defined radios. What critical security oversight allowed him to bypass protection layers?",
+      "options": [
+        "19 years without cryptographic key rotation",
+        "An unpatched Windows XP operating system",
+        "A hardcoded default password of 'admin'",
+        "Connecting to an unsecured public Wi-Fi network"
+      ],
+      "a": 0,
+      "correctText": "19 years without cryptographic key rotation",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/cyber-security/college-student-hacks-taiwan-high-speed-rail-line-stopping-four-trains-19-years-without-crypto-key-rotation-ends-in-predictable-result"
+    },
+    {
+      "q": "On May 8, 2026, singer Dua Lipa filed a $15 million lawsuit that made headlines over the weekend. Which electronics manufacturer did she sue for allegedly using her image on television packaging without consent?",
+      "options": [
+        "Samsung",
+        "Sony",
+        "LG",
+        "TCL"
+      ],
+      "a": 0,
+      "correctText": "Samsung",
+      "category": "Technology",
+      "source": "https://variety.com/2026/music/news/dua-lipa-sues-samsung-sell-tvs-1236742471/"
+    },
+    {
+      "q": "As reported in early May 2026, several tech companies and digital rights groups signed an open letter opposing the UK's proposed online age verification laws. Which of the following tech giants was NOT among the prominent signers mentioned?",
+      "options": [
+        "Google",
+        "Mozilla",
+        "Mullvad",
+        "Proton"
+      ],
+      "a": 0,
+      "correctText": "Google",
+      "category": "Technology",
+      "source": "https://cyberinsider.com/mozilla-mullvad-proton-sign-letter-opposing-uk-age-verification/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which novel by Caro Claire Burke claimed the #1 spot on the New York Times Hardcover Fiction Bestsellers list for the week of May 10, 2026?",
+      "options": [
+        "Yesteryear",
+        "The Correspondent",
+        "Purple State",
+        "Mad Mabel"
+      ],
+      "a": 0,
+      "correctText": "Yesteryear",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/10/hardcover-fiction/"
+    },
+    {
+      "q": "On May 10, 2026, Rachel Goldberg-Polin's memoir recounting the capture of her son debuted at #1 on the New York Times Hardcover Nonfiction Bestsellers list. What is its title?",
+      "options": [
+        "When We See You Again",
+        "Strangers",
+        "London Falling",
+        "Famesick"
+      ],
+      "a": 0,
+      "correctText": "When We See You Again",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/10/hardcover-nonfiction/"
+    },
+    {
+      "q": "Featured on the May 10, 2026 edition of CBS 'Sunday Morning,' what is the title of Martha Stewart's latest book offering tips on cooking, entertaining, and home organizing?",
+      "options": [
+        "The Martha Way",
+        "Martha's Rules",
+        "Entertaining with Martha",
+        "The Good Life"
+      ],
+      "a": 0,
+      "correctText": "The Martha Way",
+      "category": "Books",
+      "source": "https://www.cbsnews.com/news/this-week-on-sunday-morning-may-10-2026/"
+    },
+    {
+      "q": "In his new book 'Torched,' discussed on CBS 'Sunday Morning' on May 10, 2026, correspondent Jonathan Vigliotti examines the devastating wildfires and rush to rebuild which major U.S. city?",
+      "options": [
+        "Los Angeles",
+        "San Francisco",
+        "Seattle",
+        "Phoenix"
+      ],
+      "a": 0,
+      "correctText": "Los Angeles",
+      "category": "Books",
+      "source": "https://www.cbsnews.com/news/this-week-on-sunday-morning-may-10-2026/"
+    },
+    {
+      "q": "Which Emmy Award-winning actress appeared on the New York Times Nonfiction Bestsellers list on May 10, 2026, with her personal memoir 'You with the Sad Eyes'?",
+      "options": [
+        "Christina Applegate",
+        "Selma Blair",
+        "Viola Davis",
+        "Lena Dunham"
+      ],
+      "a": 0,
+      "correctText": "Christina Applegate",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/10/hardcover-nonfiction/"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "Which Japanese author, best known for creating the horror sensation 'Ring', passed away at age 68 according to May 2026 reports?",
+      "options": [
+        "Koji Suzuki",
+        "Junji Ito",
+        "Hideo Nakata",
+        "Haruki Murakami"
+      ],
+      "a": 0,
+      "correctText": "Koji Suzuki",
+      "category": "Entertainment",
+      "source": "https://www.nippon.com/en/news/yjj2026050900490/"
+    },
+    {
+      "q": "Why did Werner Herzog decline an invitation to premiere his new movie 'Bucking Fastard' at the 2026 Cannes Film Festival?",
+      "options": [
+        "It was denied a competition slot",
+        "The film's editing was unfinished",
+        "He objected to the jury president",
+        "The lead actors were on strike"
+      ],
+      "a": 0,
+      "correctText": "It was denied a competition slot",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/werner-herzog-bucking-fastard-turns-down-cannes-invite-1236741890/"
+    },
+    {
+      "q": "What is the title of Larry David's unproduced 1983 film script that leaked online in May 2026, which was also a recurring joke on 'Seinfeld'?",
+      "options": [
+        "Prognosis: Negative",
+        "Rochelle, Rochelle",
+        "Sack Lunch",
+        "Chunnel"
+      ],
+      "a": 0,
+      "correctText": "Prognosis: Negative",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/larry-david-script-leaks-online-read-prognosis-negative-1236742075/"
+    },
+    {
+      "q": "In May 2026, NBC announced it greenlit four new scripted shows for its upcoming 2026-27 television season, including a reboot of which classic series?",
+      "options": [
+        "The Rockford Files",
+        "Columbo",
+        "Miami Vice",
+        "Knight Rider"
+      ],
+      "a": 0,
+      "correctText": "The Rockford Files",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/05/08/nbc-orders-4-new-shows-to-series-for-upcoming-2026-27-tv-season-including-rockford-files-reboot/"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "A study highlighted on May 10, 2026, found that specialized psychotherapy paired with doses of which two psychedelic substances was associated with strong reductions in severe depression?",
+      "options": [
+        "LSD and psilocybin",
+        "MDMA and ketamine",
+        "Mescaline and ibogaine",
+        "Ayahuasca and DMT"
+      ],
+      "a": 0,
+      "correctText": "LSD and psilocybin",
+      "category": "Science",
+      "source": "https://www.psypost.org/real-world-outcomes-support-the-benefits-of-psychedelic-therapy-for-severe-depre/"
+    },
+    {
+      "q": "According to a Nature Medicine study published on May 10, 2026, researchers demonstrated the detection of multiple systemic diseases using which non-invasive imaging technique?",
+      "options": [
+        "Retinal imaging",
+        "Functional MRI",
+        "Ultrasound tomography",
+        "Thermal body scanning"
+      ],
+      "a": 0,
+      "correctText": "Retinal imaging",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/s41591-026-04359-w"
+    },
+    {
+      "q": "Discussed heavily by scientists on May 10, 2026, after actor Sam Neill announced his cancer remission, what emerging therapy genetically engineers a patient's own immune cells to fight disease?",
+      "options": [
+        "CAR T-cell therapy",
+        "CRISPR gene editing",
+        "mRNA cancer vaccines",
+        "Monoclonal antibodies"
+      ],
+      "a": 0,
+      "correctText": "CAR T-cell therapy",
+      "category": "Science",
+      "source": "https://www.theguardian.com/society/2026/may/10/cancer-treatment-car-t-cell-therapy-sam-neill"
+    }
+  ]
+}

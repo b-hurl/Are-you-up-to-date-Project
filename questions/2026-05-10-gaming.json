@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "The animal evolution roguelite 'Everything is Crab' achieved what sales milestone in its first 48 hours?",
+      "options": [
+        "100,000 copies",
+        "50,000 copies",
+        "250,000 copies",
+        "500,000 copies"
+      ],
+      "a": 0,
+      "correctText": "100,000 copies",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/3526710/announcements/detail/699890007742088470"
+    },
+    {
+      "q": "What cooperative 'casino crawler' game announced it surpassed 1 million copies sold in just one week on Steam?",
+      "options": [
+        "Gamble With Your Friends",
+        "Lethal Company",
+        "Balatro",
+        "Casino Heist"
+      ],
+      "a": 0,
+      "correctText": "Gamble With Your Friends",
+      "category": "Gaming",
+      "source": "https://store.steampowered.com/news/app/3892270/view/701015907648931195?l=english"
+    },
+    {
+      "q": "Which Microsoft-owned studio behind the Psychonauts series recently filed a petition to unionize its workers under the CWA?",
+      "options": [
+        "Double Fine Productions",
+        "Obsidian Entertainment",
+        "inXile Entertainment",
+        "Ninja Theory"
+      ],
+      "a": 0,
+      "correctText": "Double Fine Productions",
+      "category": "Gaming",
+      "source": "https://aftermath.site/double-fine-union-microsoft-cwa-xbox/"
+    },
+    {
+      "q": "According to the newly released Early Access Gameplay Trailer, what date will 'Subnautica 2' enter Early Access?",
+      "options": [
+        "May 14, 2026",
+        "June 1, 2026",
+        "July 15, 2026",
+        "August 10, 2026"
+      ],
+      "a": 0,
+      "correctText": "May 14, 2026",
+      "category": "Gaming",
+      "source": "https://youtu.be/6t2nDHldoSk?si=Vg5pC-BnFPfJKT8X"
+    },
+    {
+      "q": "Guerrilla Games co-founder Arjan Brussee revealed he is building a new European alternative to Unreal Engine. What is this engine called?",
+      "options": [
+        "The Immense Engine",
+        "The Decima Engine",
+        "The Euro Engine",
+        "The Aurora Engine"
+      ],
+      "a": 0,
+      "correctText": "The Immense Engine",
+      "category": "Gaming",
+      "source": "https://www.videogameschronicle.com/news/guerilla-games-co-founder-and-epic-veteran-building-a-european-alternative-to-unreal-engine/"
+    }
+  ]
+}

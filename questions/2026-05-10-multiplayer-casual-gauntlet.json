@@ -1,0 +1,123 @@
+{
+  "date": "2026-05-10",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which Emmy Award-winning actress appeared on the New York Times Nonfiction Bestsellers list on May 10, 2026, with her personal memoir 'You with the Sad Eyes'?",
+      "options": [
+        "Christina Applegate",
+        "Selma Blair",
+        "Viola Davis",
+        "Lena Dunham"
+      ],
+      "a": 0,
+      "correctText": "Christina Applegate",
+      "category": "Books",
+      "source": "https://www.nytimes.com/books/best-sellers/2026/05/10/hardcover-nonfiction/"
+    },
+    {
+      "q": "In May 2026, NBC announced it greenlit four new scripted shows for its upcoming 2026-27 television season, including a reboot of which classic series?",
+      "options": [
+        "The Rockford Files",
+        "Columbo",
+        "Miami Vice",
+        "Knight Rider"
+      ],
+      "a": 0,
+      "correctText": "The Rockford Files",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/05/08/nbc-orders-4-new-shows-to-series-for-upcoming-2026-27-tv-season-including-rockford-files-reboot/"
+    },
+    {
+      "q": "Guerrilla Games co-founder Arjan Brussee revealed he is building a new European alternative to Unreal Engine. What is this engine called?",
+      "options": [
+        "The Immense Engine",
+        "The Decima Engine",
+        "The Euro Engine",
+        "The Aurora Engine"
+      ],
+      "a": 0,
+      "correctText": "The Immense Engine",
+      "category": "Gaming",
+      "source": "https://www.videogameschronicle.com/news/guerilla-games-co-founder-and-epic-veteran-building-a-european-alternative-to-unreal-engine/"
+    },
+    {
+      "q": "At the 2026 Italian Open, world No. 1 Aryna Sabalenka suffered a surprise third-round defeat over the May 9-10 weekend to which Romanian player?",
+      "options": [
+        "Sorana Cirstea",
+        "Simona Halep",
+        "Irina-Camelia Begu",
+        "Ana Bogdan"
+      ],
+      "a": 0,
+      "correctText": "Sorana Cirstea",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48722343/sabalenka-suffers-surprise-defeat-cirstea-italian-open"
+    },
+    {
+      "q": "On May 10, 2026, which NBA coach agreed to a 2-year contract to remain with the Golden State Warriors? [1.10]",
+      "options": [
+        "Steve Kerr",
+        "Gregg Popovich",
+        "Erik Spoelstra",
+        "Tyronn Lue"
+      ],
+      "a": 0,
+      "correctText": "Steve Kerr",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48724788/steve-kerr-agrees-2-year-deal-remain-warriors"
+    },
+    {
+      "q": "Featured on the May 10, 2026 edition of CBS 'Sunday Morning,' what is the title of Martha Stewart's latest book offering tips on cooking, entertaining, and home organizing?",
+      "options": [
+        "The Martha Way",
+        "Martha's Rules",
+        "Entertaining with Martha",
+        "The Good Life"
+      ],
+      "a": 0,
+      "correctText": "The Martha Way",
+      "category": "Books",
+      "source": "https://www.cbsnews.com/news/this-week-on-sunday-morning-may-10-2026/"
+    },
+    {
+      "q": "In May 2026, which country demanded guarantees from FIFA that its players and officials, including those who served in the Revolutionary Guard, would receive visas for the World Cup?",
+      "options": [
+        "Iran",
+        "Saudi Arabia",
+        "Russia",
+        "Qatar"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Sports",
+      "source": "https://www.bbc.com/news/articles/ckgpxg03v57o"
+    },
+    {
+      "q": "What is the title of Larry David's unproduced 1983 film script that leaked online in May 2026, which was also a recurring joke on 'Seinfeld'?",
+      "options": [
+        "Prognosis: Negative",
+        "Rochelle, Rochelle",
+        "Sack Lunch",
+        "Chunnel"
+      ],
+      "a": 0,
+      "correctText": "Prognosis: Negative",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/larry-david-script-leaks-online-read-prognosis-negative-1236742075/"
+    },
+    {
+      "q": "In his new book 'Torched,' discussed on CBS 'Sunday Morning' on May 10, 2026, correspondent Jonathan Vigliotti examines the devastating wildfires and rush to rebuild which major U.S. city?",
+      "options": [
+        "Los Angeles",
+        "San Francisco",
+        "Seattle",
+        "Phoenix"
+      ],
+      "a": 0,
+      "correctText": "Los Angeles",
+      "category": "Books",
+      "source": "https://www.cbsnews.com/news/this-week-on-sunday-morning-may-10-2026/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 10, 2026 report, the disappearance of which group is being called a 'grave threat to US national security'?",
+      "options": [
+        "Missing US scientists",
+        "Military generals",
+        "Cybersecurity officials",
+        "Undercover agents"
+      ],
+      "a": 0,
+      "correctText": "Missing US scientists",
+      "category": "Usa",
+      "source": "https://www.abc.net.au/news/2026-05-10/us-scientists-missing-dead-fbi-nasa/106646664"
+    },
+    {
+      "q": "On May 10, 2026, the WHO head reassured residents of a Spanish island regarding an incoming ship affected by what disease?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "COVID-19",
+        "Ebola"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "Usa",
+      "source": "https://www.cbc.ca/news/world/cruise-ship-hantavirus-who-message-spain-9.7193947"
+    },
+    {
+      "q": "In a Middle East conflict update published on May 10, 2026, the US military reported striking the smokestacks of two vessels linked to which country?",
+      "options": [
+        "Iran",
+        "Russia",
+        "China",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Usa",
+      "source": "https://www.gmanetwork.com/news/topstories/world/804562/live-updates-conflict-in-the-middle-east-may-10-2026"
+    },
+    {
+      "q": "As reported on May 10, 2026, which US President announced he expected to hear back 'very soon' regarding Washington's latest peace plan for the Middle East?",
+      "options": [
+        "Donald Trump",
+        "Joe Biden",
+        "Kamala Harris",
+        "Ron DeSantis"
+      ],
+      "a": 0,
+      "correctText": "Donald Trump",
+      "category": "Usa",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-10-2026/3045678"
+    },
+    {
+      "q": "According to May 10, 2026 news briefs, which country's air defenses recently engaged with two ballistic missiles and three drones launched from Iran?",
+      "options": [
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Israel",
+        "Kuwait"
+      ],
+      "a": 0,
+      "correctText": "United Arab Emirates",
+      "category": "Usa",
+      "source": "https://www.gmanetwork.com/news/topstories/world/804562/live-updates-conflict-in-the-middle-east-may-10-2026"
+    }
+  ]
+}

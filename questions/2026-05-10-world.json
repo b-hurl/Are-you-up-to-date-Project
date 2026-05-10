@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What virus prompted a global contact-tracing effort following an outbreak on the cruise ship MV Hondius in May 2026?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Coronavirus",
+        "Ebola"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://www.thecooldown.com/outdoors/hantavirus-outbreak-cruise-ship-passengers/"
+    },
+    {
+      "q": "Parents in which country strongly criticized the government's decision to end the 2026 school year a month early to accommodate the FIFA World Cup?",
+      "options": [
+        "Mexico",
+        "United States",
+        "Canada",
+        "Argentina"
+      ],
+      "a": 0,
+      "correctText": "Mexico",
+      "category": "World",
+      "source": "https://www.bbc.co.uk/news/articles/c36276z14ego"
+    },
+    {
+      "q": "Under President Nasry Asfura, which Central American country announced in May 2026 it is reconsidering restoring diplomatic ties with Taiwan?",
+      "options": [
+        "Honduras",
+        "Guatemala",
+        "El Salvador",
+        "Nicaragua"
+      ],
+      "a": 0,
+      "correctText": "Honduras",
+      "category": "World",
+      "source": "https://www.taiwannews.com.tw/en/news/6357898"
+    },
+    {
+      "q": "In May 2026, a Ukrainian delegation urged the U.S. to investigate the possible use of which technology by Russia's sanctioned 'shadow fleet'?",
+      "options": [
+        "Starlink",
+        "GPS",
+        "Galileo",
+        "Iridium"
+      ],
+      "a": 0,
+      "correctText": "Starlink",
+      "category": "World",
+      "source": "https://kyivindependent.com/ukraine-asks-us-to-verify-possible-starlink-use-aboard-russias-shadow-fleet-vessels/"
+    },
+    {
+      "q": "Following disastrous local elections in May 2026, which Labour MP threatened a leadership challenge against Keir Starmer if no cabinet member stepped forward?",
+      "options": [
+        "Catherine West",
+        "Angela Rayner",
+        "Rachel Reeves",
+        "Yvette Cooper"
+      ],
+      "a": 0,
+      "correctText": "Catherine West",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cx210w87l4do"
+    }
+  ]
+}

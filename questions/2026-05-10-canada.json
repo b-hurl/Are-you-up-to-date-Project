@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to reports on May 10, 2026, which Canadian organization is seeing its biggest recruitment surge in 30 years?",
+      "options": [
+        "The Canadian Armed Forces",
+        "The Royal Canadian Mounted Police (RCMP)",
+        "The Canadian Coast Guard",
+        "Canada Border Services Agency (CBSA)"
+      ],
+      "a": 0,
+      "correctText": "The Canadian Armed Forces",
+      "category": "Canada",
+      "source": "https://www.bbc.com/news/articles/crrpd1pvgkzo"
+    },
+    {
+      "q": "Speaking at the Global Progress Action Summit in Toronto, Prime Minister Mark Carney stated that Canada must do what to offset vulnerabilities?",
+      "options": [
+        "Seek non-U.S. trade partners",
+        "Adopt the US dollar",
+        "Withdraw from the USMCA",
+        "Increase domestic oil production"
+      ],
+      "a": 0,
+      "correctText": "Seek non-U.S. trade partners",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/article-carney-trade-toronto-speech-global-progress-action-summit/"
+    },
+    {
+      "q": "In May 2026, CSIS director Dan Rogers warned that which potential provincial event is highly vulnerable to foreign interference?",
+      "options": [
+        "An Alberta secession referendum",
+        "A Quebec sovereignty vote",
+        "An early Ontario general election",
+        "A British Columbia carbon tax repeal"
+      ],
+      "a": 0,
+      "correctText": "An Alberta secession referendum",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/csis-director-says-alberta-referendum-vulnerable-to-foreign-interference-9.7193121"
+    },
+    {
+      "q": "Which beleaguered Crown corporation was authorized in May 2026 to receive an additional $673 million in federal funds to stay afloat?",
+      "options": [
+        "Canada Post",
+        "Via Rail",
+        "Canadian Broadcasting Corporation (CBC)",
+        "Trans Mountain Corporation"
+      ],
+      "a": 0,
+      "correctText": "Canada Post",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11841034/canada-post-getting-more-federal-funds-to-stay-afloat/"
+    },
+    {
+      "q": "Uber drivers in which Canadian city made history in May 2026 by ratifying the country's first-ever union contract for app-based drivers?",
+      "options": [
+        "Victoria",
+        "Vancouver",
+        "Toronto",
+        "Montreal"
+      ],
+      "a": 0,
+      "correctText": "Victoria",
+      "category": "Canada",
+      "source": "https://rabble.ca/labour/victoria-uber-drivers-secure-first-ever-union-contract/"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-10",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to May 10, 2026 news briefs, which country's air defenses recently engaged with two ballistic missiles and three drones launched from Iran?",
+      "options": [
+        "United Arab Emirates",
+        "Saudi Arabia",
+        "Israel",
+        "Kuwait"
+      ],
+      "a": 0,
+      "correctText": "United Arab Emirates",
+      "category": "Usa",
+      "source": "https://www.gmanetwork.com/news/topstories/world/804562/live-updates-conflict-in-the-middle-east-may-10-2026"
+    },
+    {
+      "q": "In May 2026, a Ukrainian delegation urged the U.S. to investigate the possible use of which technology by Russia's sanctioned 'shadow fleet'?",
+      "options": [
+        "Starlink",
+        "GPS",
+        "Galileo",
+        "Iridium"
+      ],
+      "a": 0,
+      "correctText": "Starlink",
+      "category": "World",
+      "source": "https://kyivindependent.com/ukraine-asks-us-to-verify-possible-starlink-use-aboard-russias-shadow-fleet-vessels/"
+    },
+    {
+      "q": "According to CEO Haluk Bayraktar on May 10, 2026, Turkish defense company Baykar aims to begin the first serial deliveries of which unmanned combat aircraft this year?",
+      "options": [
+        "Bayraktar KIZILELMA",
+        "Bayraktar AKINCI",
+        "Bayraktar TB2",
+        "TAI Anka"
+      ],
+      "a": 0,
+      "correctText": "Bayraktar KIZILELMA",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing/morning-briefing-may-10-2026/3215888"
+    },
+    {
+      "q": "In a Middle East conflict update published on May 10, 2026, the US military reported striking the smokestacks of two vessels linked to which country?",
+      "options": [
+        "Iran",
+        "Russia",
+        "China",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Usa",
+      "source": "https://www.gmanetwork.com/news/topstories/world/804562/live-updates-conflict-in-the-middle-east-may-10-2026"
+    },
+    {
+      "q": "What virus prompted a global contact-tracing effort following an outbreak on the cruise ship MV Hondius in May 2026?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Coronavirus",
+        "Ebola"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://www.thecooldown.com/outdoors/hantavirus-outbreak-cruise-ship-passengers/"
+    },
+    {
+      "q": "In a financial report covered on May 10, 2026, the parent company of Truth Social reported a first-quarter net loss of over $400 million, primarily driven by a plunge in what asset class?",
+      "options": [
+        "Cryptocurrencies",
+        "Real Estate",
+        "Artificial Intelligence Stocks",
+        "Electric Vehicle Bonds"
+      ],
+      "a": 0,
+      "correctText": "Cryptocurrencies",
+      "category": "Technology",
+      "source": "https://www.ctvnews.ca/business/article/parent-company-of-trumps-truth-social-reports-400m-loss/"
+    },
+    {
+      "q": "On May 10, 2026, CEO Luu Bach Dat of which company admitted to shortcomings in legal compliance during an extraordinary general meeting?",
+      "options": [
+        "Duc Giang Chemicals",
+        "Vinamilk",
+        "Hoa Phat Group",
+        "Petrovietnam"
+      ],
+      "a": 0,
+      "correctText": "Duc Giang Chemicals",
+      "category": "Business",
+      "source": "https://theinvestor.vn/duc-giang-chemicals-ceo-reassures-shareholders-accepts-profit-erosion-pressure-d9961.html"
+    },
+    {
+      "q": "As reported in early May 2026, several tech companies and digital rights groups signed an open letter opposing the UK's proposed online age verification laws. Which of the following tech giants was NOT among the prominent signers mentioned?",
+      "options": [
+        "Google",
+        "Mozilla",
+        "Mullvad",
+        "Proton"
+      ],
+      "a": 0,
+      "correctText": "Google",
+      "category": "Technology",
+      "source": "https://cyberinsider.com/mozilla-mullvad-proton-sign-letter-opposing-uk-age-verification/"
+    },
+    {
+      "q": "In May 2026, CSIS director Dan Rogers warned that which potential provincial event is highly vulnerable to foreign interference?",
+      "options": [
+        "An Alberta secession referendum",
+        "A Quebec sovereignty vote",
+        "An early Ontario general election",
+        "A British Columbia carbon tax repeal"
+      ],
+      "a": 0,
+      "correctText": "An Alberta secession referendum",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/csis-director-says-alberta-referendum-vulnerable-to-foreign-interference-9.7193121"
+    },
+    {
+      "q": "Following disastrous local elections in May 2026, which Labour MP threatened a leadership challenge against Keir Starmer if no cabinet member stepped forward?",
+      "options": [
+        "Catherine West",
+        "Angela Rayner",
+        "Rachel Reeves",
+        "Yvette Cooper"
+      ],
+      "a": 0,
+      "correctText": "Catherine West",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/cx210w87l4do"
+    }
+  ]
+}

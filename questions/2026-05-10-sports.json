@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 10, 2026, which NBA coach agreed to a 2-year contract to remain with the Golden State Warriors? [1.10]",
+      "options": [
+        "Steve Kerr",
+        "Gregg Popovich",
+        "Erik Spoelstra",
+        "Tyronn Lue"
+      ],
+      "a": 0,
+      "correctText": "Steve Kerr",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48724788/steve-kerr-agrees-2-year-deal-remain-warriors"
+    },
+    {
+      "q": "Which legendary Atlanta Braves manager and Baseball Hall of Famer passed away at the age of 84 over the May 9-10, 2026 weekend?",
+      "options": [
+        "Bobby Cox",
+        "Tommy Lasorda",
+        "Tony La Russa",
+        "Sparky Anderson"
+      ],
+      "a": 0,
+      "correctText": "Bobby Cox",
+      "category": "Sports",
+      "source": "https://www.wsbtv.com/news/local/atlanta-braves-manager-bobby-cox-dies-84/MKQ7IYNVEBDL3GKA4K4UBW6XQM/"
+    },
+    {
+      "q": "In May 2026, which country demanded guarantees from FIFA that its players and officials, including those who served in the Revolutionary Guard, would receive visas for the World Cup?",
+      "options": [
+        "Iran",
+        "Saudi Arabia",
+        "Russia",
+        "Qatar"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "Sports",
+      "source": "https://www.bbc.com/news/articles/ckgpxg03v57o"
+    },
+    {
+      "q": "During the 2026 NBA Playoffs on May 10, which team took a commanding 3-0 series lead over the Los Angeles Lakers?",
+      "options": [
+        "Oklahoma City Thunder",
+        "Denver Nuggets",
+        "Phoenix Suns",
+        "Dallas Mavericks"
+      ],
+      "a": 0,
+      "correctText": "Oklahoma City Thunder",
+      "category": "Sports",
+      "source": "https://sports.yahoo.com/nba/article/thunder-pull-away-from-lakers-again-to-take-3-0-series-lead-025926899.html"
+    },
+    {
+      "q": "At the 2026 Italian Open, world No. 1 Aryna Sabalenka suffered a surprise third-round defeat over the May 9-10 weekend to which Romanian player?",
+      "options": [
+        "Sorana Cirstea",
+        "Simona Halep",
+        "Irina-Camelia Begu",
+        "Ana Bogdan"
+      ],
+      "a": 0,
+      "correctText": "Sorana Cirstea",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48722343/sabalenka-suffers-surprise-defeat-cirstea-italian-open"
+    }
+  ]
+}

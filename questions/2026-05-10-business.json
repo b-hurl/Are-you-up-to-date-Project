@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "According to CEO Haluk Bayraktar on May 10, 2026, Turkish defense company Baykar aims to begin the first serial deliveries of which unmanned combat aircraft this year?",
+      "options": [
+        "Bayraktar KIZILELMA",
+        "Bayraktar AKINCI",
+        "Bayraktar TB2",
+        "TAI Anka"
+      ],
+      "a": 0,
+      "correctText": "Bayraktar KIZILELMA",
+      "category": "Business",
+      "source": "https://www.aa.com.tr/en/morning-briefing/morning-briefing-may-10-2026/3215888"
+    },
+    {
+      "q": "On May 10, 2026, CEO Luu Bach Dat of which company admitted to shortcomings in legal compliance during an extraordinary general meeting?",
+      "options": [
+        "Duc Giang Chemicals",
+        "Vinamilk",
+        "Hoa Phat Group",
+        "Petrovietnam"
+      ],
+      "a": 0,
+      "correctText": "Duc Giang Chemicals",
+      "category": "Business",
+      "source": "https://theinvestor.vn/duc-giang-chemicals-ceo-reassures-shareholders-accepts-profit-erosion-pressure-d9961.html"
+    },
+    {
+      "q": "In an article published on May 10, 2026, The Motley Fool highlighted ON Semiconductor, Dell Technologies, and what other company as 'Under-the-Radar AI Stocks to Buy'?",
+      "options": [
+        "Astera Labs",
+        "Super Micro Computer",
+        "Palantir",
+        "Arm Holdings"
+      ],
+      "a": 0,
+      "correctText": "Astera Labs",
+      "category": "Business",
+      "source": "https://www.fool.com/investing/2026/05/10/the-best-under-the-radar-ai-stocks-to-buy-in-2026/"
+    }
+  ]
+}
