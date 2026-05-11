@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 11, 2026, U.S. President Donald Trump rejected an Iranian response to a U.S. ceasefire proposal that was mediated by which country?",
+      "options": [
+        "Pakistan",
+        "Oman",
+        "Qatar",
+        "Switzerland"
+      ],
+      "a": 0,
+      "correctText": "Pakistan",
+      "category": "World",
+      "source": "https://apnews.com/article/iran-us-war-attack-may-10-2026-f8812db41837336d816efaea7bc1c44a"
+    },
+    {
+      "q": "In May 2026, IDF Chief of Staff Lt. Gen. Eyal Zamir warned Israeli lawmakers that the army \"will fall apart\" without what?",
+      "options": [
+        "Additional soldiers",
+        "New fighter jets",
+        "More U.S. funding",
+        "Iron Dome interceptors"
+      ],
+      "a": 0,
+      "correctText": "Additional soldiers",
+      "category": "World",
+      "source": "https://www.ynetnews.com/article/rjre64rrwx"
+    },
+    {
+      "q": "A declared three-day ceasefire in Ukraine was broken in May 2026 when Russian strikes killed at least one person. Who had originally announced this ceasefire?",
+      "options": [
+        "U.S. President Donald Trump",
+        "French President Emmanuel Macron",
+        "UN Secretary-General António Guterres",
+        "Turkish President Recep Tayyip Erdoğan"
+      ],
+      "a": 0,
+      "correctText": "U.S. President Donald Trump",
+      "category": "World",
+      "source": "https://kyivindependent.com/russia-breaks-3-day-ceasefire-as-strikes-kill-1-injure-19-across-ukraine/"
+    },
+    {
+      "q": "As Vladimir Putin reportedly steps up his 'grey war,' which Russian frigate was spotted operating in UK waters in May 2026?",
+      "options": [
+        "Admiral Grigorovich",
+        "Moskva",
+        "Admiral Gorshkov",
+        "Pyotr Velikiy"
+      ],
+      "a": 0,
+      "correctText": "Admiral Grigorovich",
+      "category": "World",
+      "source": "https://inews.co.uk/news/russian-frigate-spotted-uk-waters-putin-grey-war-4409627"
+    },
+    {
+      "q": "In a May 2026 interview on '60 Minutes,' Israeli Prime Minister Benjamin Netanyahu stated that the war with Iran is 'not over' until what happens?",
+      "options": [
+        "Enriched uranium is removed",
+        "The Supreme Leader is deposed",
+        "All ballistic missiles are destroyed",
+        "The Strait of Hormuz is fully secured"
+      ],
+      "a": 0,
+      "correctText": "Enriched uranium is removed",
+      "category": "World",
+      "source": "https://www.ynetnews.com/article/hycu17a0bl"
+    }
+  ]
+}

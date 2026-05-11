@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Four Canadians were recently flown to British Columbia for a 21-day quarantine after being evacuated from a cruise ship stricken by an outbreak of which disease?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "COVID-19",
+        "Legionnaires' disease"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/world/livestory/hantavirus-cruise-ship-docked-spain-canary-islands-evacuation-9.7194019"
+    },
+    {
+      "q": "A Toronto specialist warned that Canadian hospitalizations for which group of vaccine-preventable illnesses have more than doubled since the pandemic?",
+      "options": [
+        "Flu, RSV, and COVID-19",
+        "Measles, mumps, and rubella",
+        "Polio, tetanus, and diphtheria",
+        "Hepatitis A, Hepatitis B, and HPV"
+      ],
+      "a": 0,
+      "correctText": "Flu, RSV, and COVID-19",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/doctors-warn-vaccine-preventable-illnesses-straining-hospitals/"
+    },
+    {
+      "q": "Following a severe crash near the Surrey-Delta border in B.C., emergency crews were faced with a bizarre scene when a motorcycle was left dangling from what structure?",
+      "options": [
+        "A traffic light",
+        "A highway overpass",
+        "A pedestrian bridge",
+        "A hydro pole"
+      ],
+      "a": 0,
+      "correctText": "A traffic light",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/motorcycle-dangling-from-traffic-light-after-crash-9.7194201"
+    },
+    {
+      "q": "Students at Conestoga College recently reacted with frustration after a provincial audit revealed what major issue at the institution?",
+      "options": [
+        "Severe financial and governance mismanagement",
+        "Falsified student enrollment numbers",
+        "Unsafe campus housing conditions",
+        "A massive data breach of student records"
+      ],
+      "a": 0,
+      "correctText": "Severe financial and governance mismanagement",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/kitchener-waterloo/i-just-don-t-think-that-s-right-students-react-to-findings-of-provincial-audit-at-conestoga-college-9.7194135"
+    },
+    {
+      "q": "Driven by global conflicts and an increase in pay, Canada's armed forces are currently seeing their biggest military recruitment surge in how many years?",
+      "options": [
+        "30 years",
+        "10 years",
+        "50 years",
+        "20 years"
+      ],
+      "a": 0,
+      "correctText": "30 years",
+      "category": "Canada",
+      "source": "https://www.bbc.com/news/articles/crrpd1pvgkzo"
+    }
+  ]
+}

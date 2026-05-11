@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What type of inaudible but 'felt' sound are citizens increasingly complaining about from nearby AI data centers?",
+      "options": [
+        "Infrasound",
+        "Ultrasound",
+        "White noise",
+        "Microwaves"
+      ],
+      "a": 0,
+      "correctText": "Infrasound",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/data-centers-face-increasing-infrasound-complaints-from-neighboring-communities-sounds-do-not-register-on-decibel-meters-but-irritate-local-citizens"
+    },
+    {
+      "q": "Which 3D printer manufacturer was recently told to 'go (bleep) yourself' by Right to Repair advocate Louis Rossmann after threatening an enthusiast developer?",
+      "options": [
+        "Bambu Lab",
+        "Prusa Research",
+        "Creality",
+        "Anycubic"
+      ],
+      "a": 0,
+      "correctText": "Bambu Lab",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/3d-printing/louis-rossmann-tells-3d-printer-maker-bambu-lab-to-go-bleep-yourself-over-its-lawsuit-against-enthusiast-right-to-repair-advocate-offers-to-pay-the-legal-fees-for-a-threatened-orcaslicer-developer"
+    },
+    {
+      "q": "Maryland citizens are facing a $2 billion power grid upgrade bill primarily driven by out-of-state facilities for what industry?",
+      "options": [
+        "AI data centers",
+        "Electric vehicle manufacturing",
+        "Cryptocurrency mining",
+        "Semiconductor fabrication"
+      ],
+      "a": 0,
+      "correctText": "AI data centers",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises"
+    },
+    {
+      "q": "Sony recently recorded a $766 million impairment loss against which game development studio following the underperformance of its live-service titles?",
+      "options": [
+        "Bungie",
+        "Naughty Dog",
+        "Insomniac Games",
+        "Guerrilla Games"
+      ],
+      "a": 0,
+      "correctText": "Bungie",
+      "category": "Technology",
+      "source": "https://www.pcgamer.com/gaming-industry/sony-records-a-usd766-million-impairment-loss-against-bungie-for-the-2025-financial-year-a-1-2-punch-of-destiny-2-and-marathon-failing-to-meet-its-expectations/"
+    },
+    {
+      "q": "General Motors agreed to pay a $12.75 million settlement with California over violations of driver privacy concerning the sale of what type of data?",
+      "options": [
+        "Driving behavior and geolocation",
+        "In-car voice assistant recordings",
+        "Biometric facial recognition",
+        "Infotainment browsing history"
+      ],
+      "a": 0,
+      "correctText": "Driving behavior and geolocation",
+      "category": "Technology",
+      "source": "https://techcrunch.com/2026/05/09/gm-agrees-to-pay-12-75m-in-california-driver-privacy-settlement/"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to announcements on May 11, 2026, what will be the new US MSRP for the Nintendo Switch 2 starting on September 1, 2026? [4.2]",
+      "options": [
+        "$499.99",
+        "$449.99",
+        "$399.99",
+        "$549.99"
+      ],
+      "a": 0,
+      "correctText": "$499.99",
+      "category": "Gaming",
+      "source": "https://gamingbolt.com/nintendo-switch-2-nears-20-million-units-sold-but-fiscal-year-2027-forecast-is-down"
+    },
+    {
+      "q": "As detailed in Nintendo's financial reports released around May 11, 2026, how many units of the Nintendo Switch 2 were sold globally by the end of March 2026?",
+      "options": [
+        "19.86 million",
+        "10.5 million",
+        "25.4 million",
+        "35.1 million"
+      ],
+      "a": 0,
+      "correctText": "19.86 million",
+      "category": "Gaming",
+      "source": "https://gamingbolt.com/nintendo-switch-2-nears-20-million-units-sold-but-fiscal-year-2027-forecast-is-down"
+    },
+    {
+      "q": "What major new feature was introduced to Pearl Abyss's open-world game 'Crimson Desert' in Patch Version 1.06.00, released on May 11, 2026?",
+      "options": [
+        "Special Mounts",
+        "Player Housing",
+        "Fishing Tournaments",
+        "Siege Warfare"
+      ],
+      "a": 0,
+      "correctText": "Special Mounts",
+      "category": "Gaming",
+      "source": "https://crimsondesert.pearlabyss.com/en-US/News/Notice/Detail?_boardNo=90"
+    },
+    {
+      "q": "Which sci-fi strategy roguelike game, developed by Alt Shift, officially launched for PC on May 11, 2026?",
+      "options": [
+        "Battlestar Galactica: Scattered Hopes",
+        "Star Trek: Infinite Frontiers",
+        "The Expanse: Fleet Command",
+        "Stargate: Time Loop"
+      ],
+      "a": 0,
+      "correctText": "Battlestar Galactica: Scattered Hopes",
+      "category": "Gaming",
+      "source": "https://www.ign.com/videos/battlestar-galactica-scattered-hopes-official-release-date-trailer"
+    }
+  ]
+}

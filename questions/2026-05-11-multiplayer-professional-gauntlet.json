@@ -1,0 +1,110 @@
+{
+  "date": "2026-05-11",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Sony recently recorded a $766 million impairment loss against which game development studio following the underperformance of its live-service titles?",
+      "options": [
+        "Bungie",
+        "Naughty Dog",
+        "Insomniac Games",
+        "Guerrilla Games"
+      ],
+      "a": 0,
+      "correctText": "Bungie",
+      "category": "Technology",
+      "source": "https://www.pcgamer.com/gaming-industry/sony-records-a-usd766-million-impairment-loss-against-bungie-for-the-2025-financial-year-a-1-2-punch-of-destiny-2-and-marathon-failing-to-meet-its-expectations/"
+    },
+    {
+      "q": "On May 11, 2026, U.S. President Donald Trump rejected an Iranian response to a U.S. ceasefire proposal that was mediated by which country?",
+      "options": [
+        "Pakistan",
+        "Oman",
+        "Qatar",
+        "Switzerland"
+      ],
+      "a": 0,
+      "correctText": "Pakistan",
+      "category": "World",
+      "source": "https://apnews.com/article/iran-us-war-attack-may-10-2026-f8812db41837336d816efaea7bc1c44a"
+    },
+    {
+      "q": "In a May 2026 interview on '60 Minutes,' Israeli Prime Minister Benjamin Netanyahu stated that the war with Iran is 'not over' until what happens?",
+      "options": [
+        "Enriched uranium is removed",
+        "The Supreme Leader is deposed",
+        "All ballistic missiles are destroyed",
+        "The Strait of Hormuz is fully secured"
+      ],
+      "a": 0,
+      "correctText": "Enriched uranium is removed",
+      "category": "World",
+      "source": "https://www.ynetnews.com/article/hycu17a0bl"
+    },
+    {
+      "q": "On May 11, 2026, NASA released satellite imagery of a massive, colorful 'dirty' water swirl off the Mid-Atlantic coast, primarily caused by spring blooms of what organisms?",
+      "options": [
+        "Phytoplankton",
+        "Toxic red algae",
+        "Bioluminescent jellyfish",
+        "Coral spawn"
+      ],
+      "a": 0,
+      "correctText": "Phytoplankton",
+      "category": "Science",
+      "source": "https://earthobservatory.nasa.gov/"
+    },
+    {
+      "q": "What type of inaudible but 'felt' sound are citizens increasingly complaining about from nearby AI data centers?",
+      "options": [
+        "Infrasound",
+        "Ultrasound",
+        "White noise",
+        "Microwaves"
+      ],
+      "a": 0,
+      "correctText": "Infrasound",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/data-centers-face-increasing-infrasound-complaints-from-neighboring-communities-sounds-do-not-register-on-decibel-meters-but-irritate-local-citizens"
+    },
+    {
+      "q": "A Toronto specialist warned that Canadian hospitalizations for which group of vaccine-preventable illnesses have more than doubled since the pandemic?",
+      "options": [
+        "Flu, RSV, and COVID-19",
+        "Measles, mumps, and rubella",
+        "Polio, tetanus, and diphtheria",
+        "Hepatitis A, Hepatitis B, and HPV"
+      ],
+      "a": 0,
+      "correctText": "Flu, RSV, and COVID-19",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/doctors-warn-vaccine-preventable-illnesses-straining-hospitals/"
+    },
+    {
+      "q": "Four Canadians were recently flown to British Columbia for a 21-day quarantine after being evacuated from a cruise ship stricken by an outbreak of which disease?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "COVID-19",
+        "Legionnaires' disease"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/world/livestory/hantavirus-cruise-ship-docked-spain-canary-islands-evacuation-9.7194019"
+    },
+    {
+      "q": "Following a severe crash near the Surrey-Delta border in B.C., emergency crews were faced with a bizarre scene when a motorcycle was left dangling from what structure?",
+      "options": [
+        "A traffic light",
+        "A highway overpass",
+        "A pedestrian bridge",
+        "A hydro pole"
+      ],
+      "a": 0,
+      "correctText": "A traffic light",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/motorcycle-dangling-from-traffic-light-after-crash-9.7194201"
+    }
+  ]
+}

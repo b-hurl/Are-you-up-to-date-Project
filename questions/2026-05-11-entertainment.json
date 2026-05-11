@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "On May 11, 2026, Kyoto Animation announced an anime film adaptation of \"The Credits Roll Into the Sea,\" which follows a 65-year-old widow who unexpectedly enrolls in what kind of school? [1]",
+      "options": [
+        "Film school",
+        "Culinary school",
+        "Law school",
+        "Art restoration school"
+      ],
+      "a": 0,
+      "correctText": "Film school",
+      "category": "Entertainment",
+      "source": "https://animecorner.me/the-credits-roll-into-the-sea-gets-anime-movie-by-kyoto-animation-in-2027/"
+    },
+    {
+      "q": "Heading into the May 2026 Cannes Film Festival, which indie distributor holds an unprecedented streak of winning six consecutive Palmes d'Or? [1]",
+      "options": [
+        "Neon",
+        "A24",
+        "Searchlight Pictures",
+        "Focus Features"
+      ],
+      "a": 0,
+      "correctText": "Neon",
+      "category": "Entertainment",
+      "source": "https://www.stamfordadvocate.com/entertainment/article/neon-winner-of-6-straight-palmes-dor-comes-into-the-cannes-film-festival-an-unlikely-heavyweight"
+    },
+    {
+      "q": "In May 2026, actress Supriya Ganesh reacted to the outpouring of fan support regarding her departure as Dr. Samira Mohan from which HBO Max medical drama ahead of its third season? [1]",
+      "options": [
+        "The Pitt",
+        "ER: Next Gen",
+        "Chicago Med",
+        "The Resident"
+      ],
+      "a": 0,
+      "correctText": "The Pitt",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/05/10/the-pitts-supriya-ganesh-reacts-to-outpouring-of-fan-support-amid-series-exit-news-shares-what-shell-miss/"
+    },
+    {
+      "q": "Director Tyree Dillihay hosted a May 11, 2026 AMA to discuss his hit animated film \"GOAT,\" which follows an underdog athlete competing in what fictional full-contact sport? [1]",
+      "options": [
+        "Roarball",
+        "Skyhoops",
+        "Beastball",
+        "Slamdash"
+      ],
+      "a": 0,
+      "correctText": "Roarball",
+      "category": "Entertainment",
+      "source": "https://www.sonypicturesanimation.com/projects/films/goat"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-11",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "According to announcements on May 11, 2026, what will be the new US MSRP for the Nintendo Switch 2 starting on September 1, 2026? [4.2]",
+      "options": [
+        "$499.99",
+        "$449.99",
+        "$399.99",
+        "$549.99"
+      ],
+      "a": 0,
+      "correctText": "$499.99",
+      "category": "Gaming",
+      "source": "https://gamingbolt.com/nintendo-switch-2-nears-20-million-units-sold-but-fiscal-year-2027-forecast-is-down"
+    },
+    {
+      "q": "What major new feature was introduced to Pearl Abyss's open-world game 'Crimson Desert' in Patch Version 1.06.00, released on May 11, 2026?",
+      "options": [
+        "Special Mounts",
+        "Player Housing",
+        "Fishing Tournaments",
+        "Siege Warfare"
+      ],
+      "a": 0,
+      "correctText": "Special Mounts",
+      "category": "Gaming",
+      "source": "https://crimsondesert.pearlabyss.com/en-US/News/Notice/Detail?_boardNo=90"
+    },
+    {
+      "q": "In May 2026, actress Supriya Ganesh reacted to the outpouring of fan support regarding her departure as Dr. Samira Mohan from which HBO Max medical drama ahead of its third season? [1]",
+      "options": [
+        "The Pitt",
+        "ER: Next Gen",
+        "Chicago Med",
+        "The Resident"
+      ],
+      "a": 0,
+      "correctText": "The Pitt",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/05/10/the-pitts-supriya-ganesh-reacts-to-outpouring-of-fan-support-amid-series-exit-news-shares-what-shell-miss/"
+    },
+    {
+      "q": "As detailed in Nintendo's financial reports released around May 11, 2026, how many units of the Nintendo Switch 2 were sold globally by the end of March 2026?",
+      "options": [
+        "19.86 million",
+        "10.5 million",
+        "25.4 million",
+        "35.1 million"
+      ],
+      "a": 0,
+      "correctText": "19.86 million",
+      "category": "Gaming",
+      "source": "https://gamingbolt.com/nintendo-switch-2-nears-20-million-units-sold-but-fiscal-year-2027-forecast-is-down"
+    },
+    {
+      "q": "Which sci-fi strategy roguelike game, developed by Alt Shift, officially launched for PC on May 11, 2026?",
+      "options": [
+        "Battlestar Galactica: Scattered Hopes",
+        "Star Trek: Infinite Frontiers",
+        "The Expanse: Fleet Command",
+        "Stargate: Time Loop"
+      ],
+      "a": 0,
+      "correctText": "Battlestar Galactica: Scattered Hopes",
+      "category": "Gaming",
+      "source": "https://www.ign.com/videos/battlestar-galactica-scattered-hopes-official-release-date-trailer"
+    },
+    {
+      "q": "The Oklahoma City Thunder took a dominant 3-0 series lead in the Western Conference semifinals after a blowout win against which team?",
+      "options": [
+        "Los Angeles Lakers",
+        "Dallas Mavericks",
+        "Phoenix Suns",
+        "Denver Nuggets"
+      ],
+      "a": 0,
+      "correctText": "Los Angeles Lakers",
+      "category": "Sports",
+      "source": "https://sports.yahoo.com/nba/article/thunder-pull-away-from-lakers-again-to-take-3-0-series-lead-025926899.html"
+    },
+    {
+      "q": "On May 11, 2026, Kyoto Animation announced an anime film adaptation of \"The Credits Roll Into the Sea,\" which follows a 65-year-old widow who unexpectedly enrolls in what kind of school? [1]",
+      "options": [
+        "Film school",
+        "Culinary school",
+        "Law school",
+        "Art restoration school"
+      ],
+      "a": 0,
+      "correctText": "Film school",
+      "category": "Entertainment",
+      "source": "https://animecorner.me/the-credits-roll-into-the-sea-gets-anime-movie-by-kyoto-animation-in-2027/"
+    },
+    {
+      "q": "Hall of Fame manager Bobby Cox, who famously led his team to 14 consecutive division titles and the 1995 World Series, passed away at the age of 84. Which team did he manage during this historic run?",
+      "options": [
+        "Atlanta Braves",
+        "New York Yankees",
+        "St. Louis Cardinals",
+        "Los Angeles Dodgers"
+      ],
+      "a": 0,
+      "correctText": "Atlanta Braves",
+      "category": "Sports",
+      "source": "https://www.wsbtv.com/news/local/atlanta-braves-manager-bobby-cox-dies-84/MKQ7IYNVEBDL3GKA4K4UBW6XQM/?utm_medium=Social&utm_source=Facebook&fbclid=Iwb21leARsVTtleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR586DPKaxx68q40gytzBg9H-Dse2qdPstWR68f2qIXaIws_Y2GsjDclvF9w9Q_aem_m7Tb0ATH1ACczIn9n_V5bg"
+    },
+    {
+      "q": "Heading into the May 2026 Cannes Film Festival, which indie distributor holds an unprecedented streak of winning six consecutive Palmes d'Or? [1]",
+      "options": [
+        "Neon",
+        "A24",
+        "Searchlight Pictures",
+        "Focus Features"
+      ],
+      "a": 0,
+      "correctText": "Neon",
+      "category": "Entertainment",
+      "source": "https://www.stamfordadvocate.com/entertainment/article/neon-winner-of-6-straight-palmes-dor-comes-into-the-cannes-film-festival-an-unlikely-heavyweight"
+    },
+    {
+      "q": "After a 144-114 Game 4 victory, the New York Knicks booked their second straight Eastern Conference Finals appearance by sweeping which team?",
+      "options": [
+        "Philadelphia 76ers",
+        "Boston Celtics",
+        "Milwaukee Bucks",
+        "Miami Heat"
+      ],
+      "a": 0,
+      "correctText": "Philadelphia 76ers",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nba/news/3538654/knicks-book-2-nd-straight-east-final-berth-with-game-4-rout-of-76-ers"
+    }
+  ]
+}

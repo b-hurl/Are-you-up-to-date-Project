@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On May 11, 2026, NASA released satellite imagery of a massive, colorful 'dirty' water swirl off the Mid-Atlantic coast, primarily caused by spring blooms of what organisms?",
+      "options": [
+        "Phytoplankton",
+        "Toxic red algae",
+        "Bioluminescent jellyfish",
+        "Coral spawn"
+      ],
+      "a": 0,
+      "correctText": "Phytoplankton",
+      "category": "Science",
+      "source": "https://earthobservatory.nasa.gov/"
+    },
+    {
+      "q": "On May 11, 2026, a population-based study involving over 1.4 million births in the Canadian Medical Association Journal found a modest risk increase of congenital anomalies in babies born to mothers with what condition?",
+      "options": [
+        "Endometriosis",
+        "Polycystic Ovary Syndrome",
+        "Gestational diabetes",
+        "Uterine fibroids"
+      ],
+      "a": 0,
+      "correctText": "Endometriosis",
+      "category": "Science",
+      "source": "https://www.sciencemediacentre.org/expert-reaction-to-study-looking-at-association-between-mothers-having-endometriosis-and-children-born-with-congenital-abnormalities/"
+    },
+    {
+      "q": "On May 11, 2026, the RNA Society awarded Dr. Brenda Bass its Lifetime Achievement in Science award, recognizing her early discovery of which RNA-editing enzyme?",
+      "options": [
+        "ADAR (adenosine deaminase acting on RNA)",
+        "Cas9 (CRISPR associated protein 9)",
+        "Reverse transcriptase",
+        "RNase P"
+      ],
+      "a": 0,
+      "correctText": "ADAR (adenosine deaminase acting on RNA)",
+      "category": "Science",
+      "source": "https://www.asbmb.org/asbmb-today/people/051126/asbmb-members-receive-rna-society-awards"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Anthony Edwards scored 36 points to help the Minnesota Timberwolves tie their playoff series after which San Antonio Spurs star was surprisingly ejected in Game 4? [1.3]",
+      "options": [
+        "Victor Wembanyama",
+        "Devin Vassell",
+        "Keldon Johnson",
+        "Jeremy Sochan"
+      ],
+      "a": 0,
+      "correctText": "Victor Wembanyama",
+      "category": "Sports",
+      "source": "https://apnews.com/article/nba-playoffs-spurs-timberwolves-game-4-score-0235026a5204793d8139e8a0ecdc5c62"
+    },
+    {
+      "q": "After a 144-114 Game 4 victory, the New York Knicks booked their second straight Eastern Conference Finals appearance by sweeping which team?",
+      "options": [
+        "Philadelphia 76ers",
+        "Boston Celtics",
+        "Milwaukee Bucks",
+        "Miami Heat"
+      ],
+      "a": 0,
+      "correctText": "Philadelphia 76ers",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nba/news/3538654/knicks-book-2-nd-straight-east-final-berth-with-game-4-rout-of-76-ers"
+    },
+    {
+      "q": "According to reports, Steve Kerr agreed to a two-year deal to remain the head coach of which NBA franchise?",
+      "options": [
+        "Golden State Warriors",
+        "Los Angeles Lakers",
+        "Chicago Bulls",
+        "Phoenix Suns"
+      ],
+      "a": 0,
+      "correctText": "Golden State Warriors",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48724788/steve-kerr-agrees-2-year-deal-remain-warriors"
+    },
+    {
+      "q": "The Oklahoma City Thunder took a dominant 3-0 series lead in the Western Conference semifinals after a blowout win against which team?",
+      "options": [
+        "Los Angeles Lakers",
+        "Dallas Mavericks",
+        "Phoenix Suns",
+        "Denver Nuggets"
+      ],
+      "a": 0,
+      "correctText": "Los Angeles Lakers",
+      "category": "Sports",
+      "source": "https://sports.yahoo.com/nba/article/thunder-pull-away-from-lakers-again-to-take-3-0-series-lead-025926899.html"
+    },
+    {
+      "q": "Hall of Fame manager Bobby Cox, who famously led his team to 14 consecutive division titles and the 1995 World Series, passed away at the age of 84. Which team did he manage during this historic run?",
+      "options": [
+        "Atlanta Braves",
+        "New York Yankees",
+        "St. Louis Cardinals",
+        "Los Angeles Dodgers"
+      ],
+      "a": 0,
+      "correctText": "Atlanta Braves",
+      "category": "Sports",
+      "source": "https://www.wsbtv.com/news/local/atlanta-braves-manager-bobby-cox-dies-84/MKQ7IYNVEBDL3GKA4K4UBW6XQM/?utm_medium=Social&utm_source=Facebook&fbclid=Iwb21leARsVTtleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAwzNTA2ODU1MzE3MjgAAR586DPKaxx68q40gytzBg9H-Dse2qdPstWR68f2qIXaIws_Y2GsjDclvF9w9Q_aem_m7Tb0ATH1ACczIn9n_V5bg"
+    }
+  ]
+}
