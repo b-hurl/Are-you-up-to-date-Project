@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which NBA team swept the Philadelphia 76ers in the second round of the 2026 playoffs after tying a postseason record with 25 three-pointers in Game 4?",
+      "options": [
+        "New York Knicks",
+        "Boston Celtics",
+        "Milwaukee Bucks",
+        "Miami Heat"
+      ],
+      "a": 0,
+      "correctText": "New York Knicks",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nba/news/3538654"
+    },
+    {
+      "q": "Who scored 36 points to guide the Minnesota Timberwolves past the San Antonio Spurs in Game 4 of the 2026 NBA playoffs following Victor Wembanyama's ejection?",
+      "options": [
+        "Anthony Edwards",
+        "Karl-Anthony Towns",
+        "Rudy Gobert",
+        "Naz Reid"
+      ],
+      "a": 0,
+      "correctText": "Anthony Edwards",
+      "category": "Sports",
+      "source": "https://apnews.com/article/nba-playoffs-spurs-timberwolves-game-4-score-0235026a5204793d8139e8a0ecdc5c62"
+    },
+    {
+      "q": "Following his Game 4 ejection for elbowing Naz Reid, the NBA announced that which San Antonio Spurs star would not face further suspension?",
+      "options": [
+        "Victor Wembanyama",
+        "Devin Vassell",
+        "Keldon Johnson",
+        "Jeremy Sochan"
+      ],
+      "a": 0,
+      "correctText": "Victor Wembanyama",
+      "category": "Sports",
+      "source": "https://thescore.com/nba/news/3539103"
+    },
+    {
+      "q": "Which NBA head coach agreed to a two-year contract extension with the Golden State Warriors in May 2026?",
+      "options": [
+        "Steve Kerr",
+        "Gregg Popovich",
+        "Erik Spoelstra",
+        "Tyronn Lue"
+      ],
+      "a": 0,
+      "correctText": "Steve Kerr",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48724788/steve-kerr-agrees-2-year-deal-remain-warriors"
+    },
+    {
+      "q": "Which former USWNT soccer star announced on Mother's Day 2026 that she and her partner are expecting their third child?",
+      "options": [
+        "Alex Morgan",
+        "Megan Rapinoe",
+        "Carli Lloyd",
+        "Hope Solo"
+      ],
+      "a": 0,
+      "correctText": "Alex Morgan",
+      "category": "Sports",
+      "source": "https://www.espn.com/soccer/story/_/id/48738086/alex-morgan-third-baby-announcement-pregnancy"
+    }
+  ]
+}

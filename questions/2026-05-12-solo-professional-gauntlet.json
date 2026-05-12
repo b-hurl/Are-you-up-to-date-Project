@@ -1,0 +1,142 @@
+{
+  "date": "2026-05-12",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which Southern California city's mayor agreed to plead guilty in May 2026 to acting as an agent for China?",
+      "options": [
+        "Arcadia",
+        "Irvine",
+        "Monterey Park",
+        "Alhambra"
+      ],
+      "a": 0,
+      "correctText": "Arcadia",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/mayor-southern-california-city-plead-guilty-acting-agent-china-feds-sa-rcna344647"
+    },
+    {
+      "q": "In a memo to employees in May 2026, the CEO of which software company announced they were restructuring to meet 'the agentic era,' flattening the organization by removing up to three layers of management?",
+      "options": [
+        "GitLab",
+        "GitHub",
+        "Atlassian",
+        "Slack"
+      ],
+      "a": 0,
+      "correctText": "GitLab",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/gitlab-layoffs-memo-2026-5"
+    },
+    {
+      "q": "According to University of Toronto researchers examining cellphone data in May 2026, what was the median decline in Canadian visits to major U.S. metropolitan areas?",
+      "options": [
+        "15 percent",
+        "25 percent",
+        "60 percent",
+        "42 percent",
+        "5 percent",
+        "75 percent"
+      ],
+      "a": 3,
+      "correctText": "42 percent",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/world/trumps-tariffs/article/just-how-much-has-canadian-travel-to-the-us-declined-researchers-suggest-its-more-than-we-thought/"
+    },
+    {
+      "q": "On May 11, 2026, the European Union approved new sanctions against violent Israeli settlers in the West Bank after which country's former government dropped its veto?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Germany",
+        "Italy"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/c202wp2rl09o"
+    },
+    {
+      "q": "In May 2026, the U.S. Supreme Court halted an order requiring which state to use a congressional map with two largely Black districts?",
+      "options": [
+        "Alabama",
+        "Louisiana",
+        "Mississippi",
+        "Georgia"
+      ],
+      "a": 0,
+      "correctText": "Alabama",
+      "category": "Usa",
+      "source": "https://apnews.com/article/alabama-redistricting-supreme-court-congress-ba371351585b79c2965f9efb0332f33d"
+    },
+    {
+      "q": "In May 2026, 12 Radboud hospital employees in the Netherlands were placed in quarantine following the incorrect handling of a patient infected with which virus?",
+      "options": [
+        "Hantavirus",
+        "Monkeypox",
+        "Marburg virus",
+        "Norovirus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://nltimes.nl/2026/05/11/hantavirus-12-radboud-hospital-workers-quarantine-due-slack-safety-measures"
+    },
+    {
+      "q": "Scientists warned Canadians in May 2026 to prepare for an invasion of the lone star tick from the U.S., which is known to cause what severe condition?",
+      "options": [
+        "A chronic sleeping disorder",
+        "Permanent loss of taste",
+        "Severe hair loss",
+        "Sudden color blindness",
+        "An allergy to meat",
+        "An allergy to sunlight"
+      ],
+      "a": 4,
+      "correctText": "An allergy to meat",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/nova-scotia/ticks-meat-allergy-lone-star-9.7193134"
+    },
+    {
+      "q": "Why are some B.C. residents demanding changes to the AMBER Alert system following an overnight alert in May 2026?",
+      "options": [
+        "It does not provide enough details about the suspects.",
+        "It broadcasts province-wide, waking people far from the incident.",
+        "It is not available in languages other than English.",
+        "It only alerts major cities and ignores rural areas.",
+        "It causes cell phones to permanently freeze until restarted.",
+        "It sends notifications as text messages instead of alarms."
+      ],
+      "a": 1,
+      "correctText": "It broadcasts province-wide, waking people far from the incident.",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/vancouver/article/there-has-to-be-a-better-way-some-bc-residents-want-the-amber-alert-system-to-change/"
+    },
+    {
+      "q": "Following the leak of unencrypted files on Steam in May 2026, Microsoft reportedly began banning players for nearly 8,000 years for playing a cracked version of which highly anticipated racing game?",
+      "options": [
+        "Forza Horizon 6",
+        "Gran Turismo 8",
+        "Need for Speed: Apex",
+        "Assetto Corsa 2"
+      ],
+      "a": 0,
+      "correctText": "Forza Horizon 6",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gaming/2026/05/pirates-are-already-playing-forza-horizon-6-days-before-its-launch/"
+    },
+    {
+      "q": "In May 2026, Apple and Google officially began rolling out what long-awaited privacy feature for beta users texting between iPhones and Androids via RCS?",
+      "options": [
+        "End-to-end encryption",
+        "Self-destructing messages",
+        "Anonymous caller ID",
+        "Biometric text locks"
+      ],
+      "a": 0,
+      "correctText": "End-to-end encryption",
+      "category": "Technology",
+      "source": "https://techcrunch.com/2026/05/11/finally-texts-between-android-and-iphone-users-can-be-end-to-end-encrypted/"
+    }
+  ]
+}

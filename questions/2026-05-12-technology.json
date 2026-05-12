@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In a memo to employees in May 2026, the CEO of which software company announced they were restructuring to meet 'the agentic era,' flattening the organization by removing up to three layers of management?",
+      "options": [
+        "GitLab",
+        "GitHub",
+        "Atlassian",
+        "Slack"
+      ],
+      "a": 0,
+      "correctText": "GitLab",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/gitlab-layoffs-memo-2026-5"
+    },
+    {
+      "q": "According to May 2026 reports, which major social platform began blocking logged-out mobile web users from accessing its site, instead displaying an un-dismissible prompt forcing them to download its app?",
+      "options": [
+        "Reddit",
+        "X (Twitter)",
+        "Facebook",
+        "TikTok"
+      ],
+      "a": 0,
+      "correctText": "Reddit",
+      "category": "Technology",
+      "source": "https://www.macrumors.com/2026/05/11/reddit-starts-blocking-mobile-website/"
+    },
+    {
+      "q": "In May 2026, Apple and Google officially began rolling out what long-awaited privacy feature for beta users texting between iPhones and Androids via RCS?",
+      "options": [
+        "End-to-end encryption",
+        "Self-destructing messages",
+        "Anonymous caller ID",
+        "Biometric text locks"
+      ],
+      "a": 0,
+      "correctText": "End-to-end encryption",
+      "category": "Technology",
+      "source": "https://techcrunch.com/2026/05/11/finally-texts-between-android-and-iphone-users-can-be-end-to-end-encrypted/"
+    },
+    {
+      "q": "Following the leak of unencrypted files on Steam in May 2026, Microsoft reportedly began banning players for nearly 8,000 years for playing a cracked version of which highly anticipated racing game?",
+      "options": [
+        "Forza Horizon 6",
+        "Gran Turismo 8",
+        "Need for Speed: Apex",
+        "Assetto Corsa 2"
+      ],
+      "a": 0,
+      "correctText": "Forza Horizon 6",
+      "category": "Technology",
+      "source": "https://arstechnica.com/gaming/2026/05/pirates-are-already-playing-forza-horizon-6-days-before-its-launch/"
+    },
+    {
+      "q": "In May 2026, graduating humanities students at which university audibly booed their commencement speaker after she referred to AI as the 'next industrial revolution'?",
+      "options": [
+        "University of Central Florida",
+        "New York University",
+        "University of Texas at Austin",
+        "University of Michigan"
+      ],
+      "a": 0,
+      "correctText": "University of Central Florida",
+      "category": "Technology",
+      "source": "https://www.404media.co/ucf-ai-commencement-speaker-booed/"
+    }
+  ]
+}

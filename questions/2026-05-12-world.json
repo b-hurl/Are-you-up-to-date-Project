@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 11, 2026, the European Union approved new sanctions against violent Israeli settlers in the West Bank after which country's former government dropped its veto?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Germany",
+        "Italy"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://www.bbc.com/news/articles/c202wp2rl09o"
+    },
+    {
+      "q": "A study highlighted in May 2026 reported a 74% drop in toxic PFAS \"forever chemicals\" over a 55-year period in the eggs of which Canadian seabird?",
+      "options": [
+        "Northern gannet",
+        "Atlantic puffin",
+        "Emperor penguin",
+        "Herring gull"
+      ],
+      "a": 0,
+      "correctText": "Northern gannet",
+      "category": "World",
+      "source": "https://www.theguardian.com/environment/2026/may/11/pfas-seabird-eggs-forever-chemicals"
+    },
+    {
+      "q": "According to a May 2026 economic intelligence report, North Korea earned up to $14 billion—nearly half of its GDP—over three years by providing military support to which nation?",
+      "options": [
+        "Russia",
+        "China",
+        "Syria",
+        "Iran"
+      ],
+      "a": 0,
+      "correctText": "Russia",
+      "category": "World",
+      "source": "https://www.pravda.com.ua/eng/news/2026/05/11/8034153/"
+    },
+    {
+      "q": "In May 2026, 12 Radboud hospital employees in the Netherlands were placed in quarantine following the incorrect handling of a patient infected with which virus?",
+      "options": [
+        "Hantavirus",
+        "Monkeypox",
+        "Marburg virus",
+        "Norovirus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://nltimes.nl/2026/05/11/hantavirus-12-radboud-hospital-workers-quarantine-due-slack-safety-measures"
+    },
+    {
+      "q": "In a major corruption probe announced on May 11, 2026, Andriy Yermak, the former second-in-command to the President of which country, was charged with money laundering?",
+      "options": [
+        "Ukraine",
+        "Poland",
+        "Bulgaria",
+        "Romania"
+      ],
+      "a": 0,
+      "correctText": "Ukraine",
+      "category": "World",
+      "source": "https://kyivindependent.com/breaking-zelenskys-former-second-in-command-yermak-charged-in-major-corruption-probe/"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-12",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which NBA head coach agreed to a two-year contract extension with the Golden State Warriors in May 2026?",
+      "options": [
+        "Steve Kerr",
+        "Gregg Popovich",
+        "Erik Spoelstra",
+        "Tyronn Lue"
+      ],
+      "a": 0,
+      "correctText": "Steve Kerr",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48724788/steve-kerr-agrees-2-year-deal-remain-warriors"
+    },
+    {
+      "q": "It was announced in May 2026 that Florence Pugh will star in and produce a film adaptation of which acclaimed Matt Haig fantasy novel?",
+      "options": [
+        "The Midnight Library",
+        "How to Stop Time",
+        "The Humans",
+        "Notes on a Nervous Planet"
+      ],
+      "a": 0,
+      "correctText": "The Midnight Library",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/florence-pugh-the-midnight-library-adaptation-studiocanal-1236744076/"
+    },
+    {
+      "q": "In a Q1 2026 earnings report, Neowiz confirmed that full-scale development had officially begun on the sequel to which of their hit action RPGs?",
+      "options": [
+        "Lies of P",
+        "Wo Long: Fallen Dynasty",
+        "Steelrising",
+        "Lords of the Fallen"
+      ],
+      "a": 0,
+      "correctText": "Lies of P",
+      "category": "Gaming",
+      "source": "https://www.msn.com/en-us/news/technology/neowiz-enters-full-scale-development-of-lies-of-p-sequel/ar-AA22ShJH"
+    },
+    {
+      "q": "In May 2026, which actor from the 'White Men Can't Jump' remake was cast in an undisclosed role in James Gunn's 'Man of Tomorrow'?",
+      "options": [
+        "Sinqua Walls",
+        "Jack Harlow",
+        "Trevante Rhodes",
+        "Lance Reddick"
+      ],
+      "a": 0,
+      "correctText": "Sinqua Walls",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/man-of-tomorrow-enlists-sinqua-walls-1236588558/"
+    },
+    {
+      "q": "In May 2026, 'Lies of P' developer Round8 Studio faced online backlash after a job listing revealed they were looking to hire what specific role?",
+      "options": [
+        "AI Artist",
+        "Blockchain Engineer",
+        "Metaverse Architect",
+        "Microtransaction Manager"
+      ],
+      "a": 0,
+      "correctText": "AI Artist",
+      "category": "Gaming",
+      "source": "https://www.neowiz.com/en/career/browse-job/043f65b9-9c3e-4063-9a86-d73eccae503e"
+    },
+    {
+      "q": "Which organization launched the $250,000 David M. Rubenstein Prize for the Advancement of American History on May 12, 2026?",
+      "options": [
+        "The New York Historical",
+        "The Smithsonian Institution",
+        "The Library of Congress",
+        "The National Archives"
+      ],
+      "a": 0,
+      "correctText": "The New York Historical",
+      "category": "Books",
+      "source": "https://www.tribtoday.com/news/national-news/2026/05/a-new-250k-prize-aims-to-spotlight-those-bringing-history-to-life/"
+    },
+    {
+      "q": "Following a Q1 2026 earnings presentation, developer Shift Up confirmed it will transition to a 'first-party service model' to self-publish the sequel to which action game?",
+      "options": [
+        "Stellar Blade",
+        "Rise of the Ronin",
+        "Ghost of Tsushima",
+        "Returnal"
+      ],
+      "a": 0,
+      "correctText": "Stellar Blade",
+      "category": "Gaming",
+      "source": "https://www.videogameschronicle.com/news/shift-up-says-it-will-publish-stellar-blade-2-instead-of-sony-wants-to-reach-a-broad-global-audience-from-day-one/"
+    },
+    {
+      "q": "Which author released the novel 'Death of the Soccer God', centered around the 1950 World Cup, on May 12, 2026?",
+      "options": [
+        "Dimitry Elias Léger",
+        "Colson Whitehead",
+        "Michael Chabon",
+        "Domenico Starnone"
+      ],
+      "a": 0,
+      "correctText": "Dimitry Elias Léger",
+      "category": "Books",
+      "source": "https://www.kirkusreviews.com/book-reviews/dimitry-elias-leger/death-of-the-soccer-god/"
+    },
+    {
+      "q": "Which actress was cast to portray author Agatha Christie in the upcoming noir-mystery film 'Eleven Missing Days'?",
+      "options": [
+        "Felicity Jones",
+        "Claire Foy",
+        "Daisy Ridley",
+        "Emily Blunt"
+      ],
+      "a": 0,
+      "correctText": "Felicity Jones",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/felicity-jones-agatha-christie-eleven-missing-days-film-1236892746/"
+    },
+    {
+      "q": "Who scored 36 points to guide the Minnesota Timberwolves past the San Antonio Spurs in Game 4 of the 2026 NBA playoffs following Victor Wembanyama's ejection?",
+      "options": [
+        "Anthony Edwards",
+        "Karl-Anthony Towns",
+        "Rudy Gobert",
+        "Naz Reid"
+      ],
+      "a": 0,
+      "correctText": "Anthony Edwards",
+      "category": "Sports",
+      "source": "https://apnews.com/article/nba-playoffs-spurs-timberwolves-game-4-score-0235026a5204793d8139e8a0ecdc5c62"
+    }
+  ]
+}

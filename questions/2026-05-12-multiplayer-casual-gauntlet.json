@@ -1,0 +1,110 @@
+{
+  "date": "2026-05-12",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "On May 12, 2026, it was announced that Sophia Rosenfeld received the István Hont Book Prize for her book exploring the history of what concept?",
+      "options": [
+        "Freedom in Modern Life",
+        "Democratic Elections",
+        "The Printing Press",
+        "The French Revolution"
+      ],
+      "a": 0,
+      "correctText": "Freedom in Modern Life",
+      "category": "Books",
+      "source": "https://almanac.upenn.edu/articles/sophia-rosenfeld-istvan-hont-book-prize"
+    },
+    {
+      "q": "Which game studio threatened 'franchise-wide' and hardware bans after an early build of their upcoming racing game, Forza Horizon 6, was leaked online in May 2026?",
+      "options": [
+        "Playground Games",
+        "Turn 10 Studios",
+        "Polyphony Digital",
+        "Criterion Games"
+      ],
+      "a": 0,
+      "correctText": "Playground Games",
+      "category": "Gaming",
+      "source": "https://www.dexerto.com/forza/forza-horizon-6-devs-threaten-franchise-wide-bans-after-game-leaks-ahead-of-launch-3363839/"
+    },
+    {
+      "q": "Following his Game 4 ejection for elbowing Naz Reid, the NBA announced that which San Antonio Spurs star would not face further suspension?",
+      "options": [
+        "Victor Wembanyama",
+        "Devin Vassell",
+        "Keldon Johnson",
+        "Jeremy Sochan"
+      ],
+      "a": 0,
+      "correctText": "Victor Wembanyama",
+      "category": "Sports",
+      "source": "https://thescore.com/nba/news/3539103"
+    },
+    {
+      "q": "Which former USWNT soccer star announced on Mother's Day 2026 that she and her partner are expecting their third child?",
+      "options": [
+        "Alex Morgan",
+        "Megan Rapinoe",
+        "Carli Lloyd",
+        "Hope Solo"
+      ],
+      "a": 0,
+      "correctText": "Alex Morgan",
+      "category": "Sports",
+      "source": "https://www.espn.com/soccer/story/_/id/48738086/alex-morgan-third-baby-announcement-pregnancy"
+    },
+    {
+      "q": "Publisher PlaySide announced in May 2026 that which vintage Disney-styled boomer shooter sold 730,000 copies and recouped all its investment in under a month?",
+      "options": [
+        "Mouse: P.I. For Hire",
+        "Cuphead: The Delicious Last Course",
+        "Bendy and the Ink Machine",
+        "Enchanted Portals"
+      ],
+      "a": 0,
+      "correctText": "Mouse: P.I. For Hire",
+      "category": "Gaming",
+      "source": "https://www.eurogamer.net/mouse-pi-for-hire-makes-money-back"
+    },
+    {
+      "q": "According to reports from May 2026, which screenwriter is writing a new film adaptation of Michael Crichton's 'Westworld' for Warner Bros.?",
+      "options": [
+        "David Koepp",
+        "Jonathan Nolan",
+        "Lisa Joy",
+        "Steven Spielberg"
+      ],
+      "a": 0,
+      "correctText": "David Koepp",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/westworld-remake-david-koepp-script-michael-crichton-1236898275/"
+    },
+    {
+      "q": "In May 2026, 'Coyote vs. Acme' distributor Ketchup Entertainment secured a P&A financing facility of what amount to support its theatrical ambitions?",
+      "options": [
+        "$100 million",
+        "$50 million",
+        "$200 million",
+        "$25 million"
+      ],
+      "a": 0,
+      "correctText": "$100 million",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/business-news/ketchup-secures-100-million-financing-1236592111/"
+    },
+    {
+      "q": "Which NBA team swept the Philadelphia 76ers in the second round of the 2026 playoffs after tying a postseason record with 25 three-pointers in Game 4?",
+      "options": [
+        "New York Knicks",
+        "Boston Celtics",
+        "Milwaukee Bucks",
+        "Miami Heat"
+      ],
+      "a": 0,
+      "correctText": "New York Knicks",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nba/news/3538654"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Southern California city's mayor agreed to plead guilty in May 2026 to acting as an agent for China?",
+      "options": [
+        "Arcadia",
+        "Irvine",
+        "Monterey Park",
+        "Alhambra"
+      ],
+      "a": 0,
+      "correctText": "Arcadia",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/mayor-southern-california-city-plead-guilty-acting-agent-china-feds-sa-rcna344647"
+    },
+    {
+      "q": "In May 2026, the U.S. Supreme Court halted an order requiring which state to use a congressional map with two largely Black districts?",
+      "options": [
+        "Alabama",
+        "Louisiana",
+        "Mississippi",
+        "Georgia"
+      ],
+      "a": 0,
+      "correctText": "Alabama",
+      "category": "Usa",
+      "source": "https://apnews.com/article/alabama-redistricting-supreme-court-congress-ba371351585b79c2965f9efb0332f33d"
+    },
+    {
+      "q": "In May 2026, a transgender student was fatally stabbed at an off-campus apartment near which university, prompting a police manhunt?",
+      "options": [
+        "University of Washington",
+        "University of Wisconsin",
+        "University of Wyoming",
+        "University of Waterloo"
+      ],
+      "a": 0,
+      "correctText": "University of Washington",
+      "category": "Usa",
+      "source": "https://www.kiro7.com/news/local/homicide-investigation-uw-off-campus-apartment/CJ2AGL7FWJCNTA4CIU33MV5SLQ/"
+    },
+    {
+      "q": "In May 2026, a lawsuit was filed against OpenAI alleging that ChatGPT provided instructions to a shooter who attacked which university?",
+      "options": [
+        "Florida State University",
+        "University of Florida",
+        "University of Miami",
+        "University of Central Florida"
+      ],
+      "a": 0,
+      "correctText": "Florida State University",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/openai-sued-chatgpts-alleged-role-guiding-fsu-shooter-rcna344443"
+    },
+    {
+      "q": "A former official from which university testified in May 2026 that Rep. Jim Jordan 'probably knew' about the campus doctor abuse scandal?",
+      "options": [
+        "Ohio State University",
+        "Penn State University",
+        "Michigan State University",
+        "University of Michigan"
+      ],
+      "a": 0,
+      "correctText": "Ohio State University",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/former-osu-official-testified-doesnt-believe-rep-jim-jordans-denials-s-rcna343669"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "questions": [
+    {
+      "q": "Why are some B.C. residents demanding changes to the AMBER Alert system following an overnight alert in May 2026?",
+      "options": [
+        "It does not provide enough details about the suspects.",
+        "It broadcasts province-wide, waking people far from the incident.",
+        "It is not available in languages other than English.",
+        "It only alerts major cities and ignores rural areas.",
+        "It causes cell phones to permanently freeze until restarted.",
+        "It sends notifications as text messages instead of alarms."
+      ],
+      "a": 1,
+      "correctText": "It broadcasts province-wide, waking people far from the incident.",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/vancouver/article/there-has-to-be-a-better-way-some-bc-residents-want-the-amber-alert-system-to-change/"
+    },
+    {
+      "q": "Scientists warned Canadians in May 2026 to prepare for an invasion of the lone star tick from the U.S., which is known to cause what severe condition?",
+      "options": [
+        "A chronic sleeping disorder",
+        "Permanent loss of taste",
+        "Severe hair loss",
+        "Sudden color blindness",
+        "An allergy to meat",
+        "An allergy to sunlight"
+      ],
+      "a": 4,
+      "correctText": "An allergy to meat",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/nova-scotia/ticks-meat-allergy-lone-star-9.7193134"
+    },
+    {
+      "q": "According to University of Toronto researchers examining cellphone data in May 2026, what was the median decline in Canadian visits to major U.S. metropolitan areas?",
+      "options": [
+        "15 percent",
+        "25 percent",
+        "60 percent",
+        "42 percent",
+        "5 percent",
+        "75 percent"
+      ],
+      "a": 3,
+      "correctText": "42 percent",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/world/trumps-tariffs/article/just-how-much-has-canadian-travel-to-the-us-declined-researchers-suggest-its-more-than-we-thought/"
+    },
+    {
+      "q": "Data from the Office of the Superintendent of Bankruptcy in May 2026 revealed that Canadian consumer insolvencies reached their highest level since what year?",
+      "options": [
+        "2020",
+        "2015",
+        "2009",
+        "1998",
+        "2012",
+        "1985"
+      ],
+      "a": 2,
+      "correctText": "2009",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11843496/consumer-insolvencies-highest-since-2009/"
+    },
+    {
+      "q": "Which group's leader recently refused to co-operate with Elections Alberta investigators over the alleged misuse of the provincial electors list?",
+      "options": [
+        "A radical environmentalist coalition",
+        "A provincial labor union",
+        "A federal election watchdog",
+        "A foreign tech corporation",
+        "A local municipal council",
+        "A prominent Alberta separatist group"
+      ],
+      "a": 5,
+      "correctText": "A prominent Alberta separatist group",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/alberta/article-separatist-leader-accused-of-misusing-alberta-electors-list-refuses-to/"
+    }
+  ]
+}

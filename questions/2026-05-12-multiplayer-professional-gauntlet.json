@@ -1,0 +1,140 @@
+{
+  "date": "2026-05-12",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Data from the Office of the Superintendent of Bankruptcy in May 2026 revealed that Canadian consumer insolvencies reached their highest level since what year?",
+      "options": [
+        "2020",
+        "2015",
+        "2009",
+        "1998",
+        "2012",
+        "1985"
+      ],
+      "a": 2,
+      "correctText": "2009",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11843496/consumer-insolvencies-highest-since-2009/"
+    },
+    {
+      "q": "According to a May 2026 economic intelligence report, North Korea earned up to $14 billion—nearly half of its GDP—over three years by providing military support to which nation?",
+      "options": [
+        "Russia",
+        "China",
+        "Syria",
+        "Iran"
+      ],
+      "a": 0,
+      "correctText": "Russia",
+      "category": "World",
+      "source": "https://www.pravda.com.ua/eng/news/2026/05/11/8034153/"
+    },
+    {
+      "q": "A study highlighted in May 2026 reported a 74% drop in toxic PFAS \"forever chemicals\" over a 55-year period in the eggs of which Canadian seabird?",
+      "options": [
+        "Northern gannet",
+        "Atlantic puffin",
+        "Emperor penguin",
+        "Herring gull"
+      ],
+      "a": 0,
+      "correctText": "Northern gannet",
+      "category": "World",
+      "source": "https://www.theguardian.com/environment/2026/may/11/pfas-seabird-eggs-forever-chemicals"
+    },
+    {
+      "q": "According to May 2026 reports, which major social platform began blocking logged-out mobile web users from accessing its site, instead displaying an un-dismissible prompt forcing them to download its app?",
+      "options": [
+        "Reddit",
+        "X (Twitter)",
+        "Facebook",
+        "TikTok"
+      ],
+      "a": 0,
+      "correctText": "Reddit",
+      "category": "Technology",
+      "source": "https://www.macrumors.com/2026/05/11/reddit-starts-blocking-mobile-website/"
+    },
+    {
+      "q": "In a major corruption probe announced on May 11, 2026, Andriy Yermak, the former second-in-command to the President of which country, was charged with money laundering?",
+      "options": [
+        "Ukraine",
+        "Poland",
+        "Bulgaria",
+        "Romania"
+      ],
+      "a": 0,
+      "correctText": "Ukraine",
+      "category": "World",
+      "source": "https://kyivindependent.com/breaking-zelenskys-former-second-in-command-yermak-charged-in-major-corruption-probe/"
+    },
+    {
+      "q": "A former official from which university testified in May 2026 that Rep. Jim Jordan 'probably knew' about the campus doctor abuse scandal?",
+      "options": [
+        "Ohio State University",
+        "Penn State University",
+        "Michigan State University",
+        "University of Michigan"
+      ],
+      "a": 0,
+      "correctText": "Ohio State University",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/former-osu-official-testified-doesnt-believe-rep-jim-jordans-denials-s-rcna343669"
+    },
+    {
+      "q": "In May 2026, a transgender student was fatally stabbed at an off-campus apartment near which university, prompting a police manhunt?",
+      "options": [
+        "University of Washington",
+        "University of Wisconsin",
+        "University of Wyoming",
+        "University of Waterloo"
+      ],
+      "a": 0,
+      "correctText": "University of Washington",
+      "category": "Usa",
+      "source": "https://www.kiro7.com/news/local/homicide-investigation-uw-off-campus-apartment/CJ2AGL7FWJCNTA4CIU33MV5SLQ/"
+    },
+    {
+      "q": "In May 2026, a lawsuit was filed against OpenAI alleging that ChatGPT provided instructions to a shooter who attacked which university?",
+      "options": [
+        "Florida State University",
+        "University of Florida",
+        "University of Miami",
+        "University of Central Florida"
+      ],
+      "a": 0,
+      "correctText": "Florida State University",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/openai-sued-chatgpts-alleged-role-guiding-fsu-shooter-rcna344443"
+    },
+    {
+      "q": "In May 2026, graduating humanities students at which university audibly booed their commencement speaker after she referred to AI as the 'next industrial revolution'?",
+      "options": [
+        "University of Central Florida",
+        "New York University",
+        "University of Texas at Austin",
+        "University of Michigan"
+      ],
+      "a": 0,
+      "correctText": "University of Central Florida",
+      "category": "Technology",
+      "source": "https://www.404media.co/ucf-ai-commencement-speaker-booed/"
+    },
+    {
+      "q": "Which group's leader recently refused to co-operate with Elections Alberta investigators over the alleged misuse of the provincial electors list?",
+      "options": [
+        "A radical environmentalist coalition",
+        "A provincial labor union",
+        "A federal election watchdog",
+        "A foreign tech corporation",
+        "A local municipal council",
+        "A prominent Alberta separatist group"
+      ],
+      "a": 5,
+      "correctText": "A prominent Alberta separatist group",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/canada/alberta/article-separatist-leader-accused-of-misusing-alberta-electors-list-refuses-to/"
+    }
+  ]
+}

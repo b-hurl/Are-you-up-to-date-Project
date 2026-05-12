@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "Which organization launched the $250,000 David M. Rubenstein Prize for the Advancement of American History on May 12, 2026?",
+      "options": [
+        "The New York Historical",
+        "The Smithsonian Institution",
+        "The Library of Congress",
+        "The National Archives"
+      ],
+      "a": 0,
+      "correctText": "The New York Historical",
+      "category": "Books",
+      "source": "https://www.tribtoday.com/news/national-news/2026/05/a-new-250k-prize-aims-to-spotlight-those-bringing-history-to-life/"
+    },
+    {
+      "q": "Which author released the novel 'Death of the Soccer God', centered around the 1950 World Cup, on May 12, 2026?",
+      "options": [
+        "Dimitry Elias Léger",
+        "Colson Whitehead",
+        "Michael Chabon",
+        "Domenico Starnone"
+      ],
+      "a": 0,
+      "correctText": "Dimitry Elias Léger",
+      "category": "Books",
+      "source": "https://www.kirkusreviews.com/book-reviews/dimitry-elias-leger/death-of-the-soccer-god/"
+    },
+    {
+      "q": "On May 12, 2026, it was announced that Sophia Rosenfeld received the István Hont Book Prize for her book exploring the history of what concept?",
+      "options": [
+        "Freedom in Modern Life",
+        "Democratic Elections",
+        "The Printing Press",
+        "The French Revolution"
+      ],
+      "a": 0,
+      "correctText": "Freedom in Modern Life",
+      "category": "Books",
+      "source": "https://almanac.upenn.edu/articles/sophia-rosenfeld-istvan-hont-book-prize"
+    }
+  ]
+}

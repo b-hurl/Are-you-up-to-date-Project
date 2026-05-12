@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to reports from May 2026, which screenwriter is writing a new film adaptation of Michael Crichton's 'Westworld' for Warner Bros.?",
+      "options": [
+        "David Koepp",
+        "Jonathan Nolan",
+        "Lisa Joy",
+        "Steven Spielberg"
+      ],
+      "a": 0,
+      "correctText": "David Koepp",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/westworld-remake-david-koepp-script-michael-crichton-1236898275/"
+    },
+    {
+      "q": "It was announced in May 2026 that Florence Pugh will star in and produce a film adaptation of which acclaimed Matt Haig fantasy novel?",
+      "options": [
+        "The Midnight Library",
+        "How to Stop Time",
+        "The Humans",
+        "Notes on a Nervous Planet"
+      ],
+      "a": 0,
+      "correctText": "The Midnight Library",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/florence-pugh-the-midnight-library-adaptation-studiocanal-1236744076/"
+    },
+    {
+      "q": "Which actress was cast to portray author Agatha Christie in the upcoming noir-mystery film 'Eleven Missing Days'?",
+      "options": [
+        "Felicity Jones",
+        "Claire Foy",
+        "Daisy Ridley",
+        "Emily Blunt"
+      ],
+      "a": 0,
+      "correctText": "Felicity Jones",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/felicity-jones-agatha-christie-eleven-missing-days-film-1236892746/"
+    },
+    {
+      "q": "In May 2026, which actor from the 'White Men Can't Jump' remake was cast in an undisclosed role in James Gunn's 'Man of Tomorrow'?",
+      "options": [
+        "Sinqua Walls",
+        "Jack Harlow",
+        "Trevante Rhodes",
+        "Lance Reddick"
+      ],
+      "a": 0,
+      "correctText": "Sinqua Walls",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/man-of-tomorrow-enlists-sinqua-walls-1236588558/"
+    },
+    {
+      "q": "In May 2026, 'Coyote vs. Acme' distributor Ketchup Entertainment secured a P&A financing facility of what amount to support its theatrical ambitions?",
+      "options": [
+        "$100 million",
+        "$50 million",
+        "$200 million",
+        "$25 million"
+      ],
+      "a": 0,
+      "correctText": "$100 million",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/business/business-news/ketchup-secures-100-million-financing-1236592111/"
+    }
+  ]
+}
