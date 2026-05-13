@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-13",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Alphabet's AI-driven drug discovery firm, Isomorphic Labs, announced on May 13, 2026, that it raised $2.1 billion in a funding round led by which venture capital firm?",
+      "options": [
+        "Thrive Capital",
+        "Sequoia Capital",
+        "Andreessen Horowitz",
+        "Founders Fund"
+      ],
+      "a": 0,
+      "correctText": "Thrive Capital",
+      "category": "Usa",
+      "source": "https://the-decoder.com/alphabets-isomorphic-labs-raises-2-1-billion-to-scale-ai-drug-discovery-toward-clinical-trials/"
+    },
+    {
+      "q": "Which First Nation filed a lawsuit against the Alberta and federal governments in May 2026 over the cumulative impacts of oilsands development?",
+      "options": [
+        "Mikisew Cree First Nation",
+        "Siksika Nation",
+        "Blood Tribe",
+        "Tsuut'ina Nation"
+      ],
+      "a": 0,
+      "correctText": "Mikisew Cree First Nation",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/edmonton/mikisew-cree-first-nation-alberta-lawsuit-9.7197506"
+    },
+    {
+      "q": "According to reports on May 13, 2026, grocery prices saw their biggest one-month jump in nearly four years. Which specific grocery category was reported to be 44% higher than three months prior?",
+      "options": [
+        "Fresh vegetables",
+        "Beef",
+        "Coffee",
+        "Milk"
+      ],
+      "a": 0,
+      "correctText": "Fresh vegetables",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/business/consumer/grocery-prices-jumped-april-iran-war-gas-rcna344762"
+    },
+    {
+      "q": "Former Starbucks CEO Howard Schultz penned a Wall Street Journal op-ed recently describing which city's business climate as 'hostile'?",
+      "options": [
+        "Seattle",
+        "Portland",
+        "San Francisco",
+        "Chicago"
+      ],
+      "a": 0,
+      "correctText": "Seattle",
+      "category": "Business",
+      "source": "https://www.seattletimes.com/business/starbucks/former-starbucks-ceo-howard-schultz-calls-seattle-hostile-to-business/"
+    },
+    {
+      "q": "Alexander Lukashenko stated that his country is preparing for war and planning a selective mobilization of military units. Which country does he lead?",
+      "options": [
+        "Belarus",
+        "Hungary",
+        "Poland",
+        "Slovakia"
+      ],
+      "a": 0,
+      "correctText": "Belarus",
+      "category": "World",
+      "source": "https://united24media.com/world/lukashenko-says-belarus-is-preparing-for-war-plans-to-mobilize-units-18737"
+    },
+    {
+      "q": "On May 13, 2026, Arizona Sheriff Chris Nanos provided an optimistic update, saying investigators are closer to solving the disappearance case of which 84-year-old woman?",
+      "options": [
+        "Nancy Guthrie",
+        "Laci Peterson",
+        "Chandra Levy",
+        "Natalee Holloway"
+      ],
+      "a": 0,
+      "correctText": "Nancy Guthrie",
+      "category": "Usa",
+      "source": "https://www.the-independent.com/news/world/americas/crime/nancy-guthrie-case-sheriff-nanos-update-b2973927.html"
+    },
+    {
+      "q": "Which major tech company was forced to cancel a highly polluting natural gas plant project intended to power its 'Project Jupiter' AI data center?",
+      "options": [
+        "Oracle",
+        "Microsoft",
+        "Google",
+        "Amazon"
+      ],
+      "a": 0,
+      "correctText": "Oracle",
+      "category": "Business",
+      "source": "https://nz.news.yahoo.com/oracle-forced-cancel-incredibly-polluting-143000675.html"
+    },
+    {
+      "q": "Ukrainian President Volodymyr Zelenskyy recently announced preparations for a military drone deal with which country?",
+      "options": [
+        "Canada",
+        "United States",
+        "Germany",
+        "United Kingdom"
+      ],
+      "a": 0,
+      "correctText": "Canada",
+      "category": "World",
+      "source": "https://globalnews.ca/news/11845888/ukraine-zelenskyy-drone-deal-canada/"
+    },
+    {
+      "q": "Jason Collins, who made history as the NBA's first openly gay active player, tragically died at age 47 in May 2026 from what illness?",
+      "options": [
+        "Brain cancer",
+        "Heart failure",
+        "Leukemia",
+        "Lung cancer"
+      ],
+      "a": 0,
+      "correctText": "Brain cancer",
+      "category": "Usa",
+      "source": "https://apnews.com/article/jason-collins-dies-nba-3675a6c2263f9ae6858ccab3982bfbdb"
+    },
+    {
+      "q": "Tech news on May 13, 2026, reported that the Google Chrome browser was secretly downloading a hidden 4GB file to users' computers without explicit consent to run which on-device AI model?",
+      "options": [
+        "Gemini Nano",
+        "GPT-4o",
+        "Llama 3",
+        "Claude 3 Haiku"
+      ],
+      "a": 0,
+      "correctText": "Gemini Nano",
+      "category": "Technology",
+      "source": "https://www.macrumors.com/how-to/stop-chrome-downloading-hidden-4gb-file/"
+    }
+  ]
+}

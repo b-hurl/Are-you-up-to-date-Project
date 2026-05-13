@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-13",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which specific strain of hantavirus, known for being capable of person-to-person transmission, caused the May 2026 outbreak on the MV Hondius cruise ship?",
+      "options": [
+        "Andes virus",
+        "Seoul virus",
+        "Sin Nombre virus",
+        "Hantaan virus"
+      ],
+      "a": 0,
+      "correctText": "Andes virus",
+      "category": "Health",
+      "source": "https://www.the-scientist.com/hantavirus-cruise-ship-outbreak-what-we-know-so-far"
+    },
+    {
+      "q": "In May 2026, a deadly hantavirus outbreak that led to a mass passenger quarantine occurred aboard which cruise ship?",
+      "options": [
+        "MV Hondius",
+        "Diamond Princess",
+        "MS Zaandam",
+        "Grand Princess"
+      ],
+      "a": 0,
+      "correctText": "MV Hondius",
+      "category": "Health",
+      "source": "https://abcnews.com/GMA/News/mv-hondius-cruise-ship-passenger-speaks-quarantine-unit/story?id=132873763"
+    },
+    {
+      "q": "Which 29-year-old Memphis Grizzlies forward, who was named to the NBA All-Rookie team in 2020, tragically died in May 2026?",
+      "options": [
+        "Brandon Clarke",
+        "Jaren Jackson Jr.",
+        "Desmond Bane",
+        "Dillon Brooks"
+      ],
+      "a": 0,
+      "correctText": "Brandon Clarke",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48751780/grizzlies-forward-brandon-clarke-dies-age-29"
+    },
+    {
+      "q": "During Disney's upfront presentation in May 2026, it was announced that James Cameron's 'Avatar: Fire and Ash' will make its streaming debut on June 24 on which platform?",
+      "options": [
+        "Disney+",
+        "Hulu",
+        "Max",
+        "Netflix"
+      ],
+      "a": 0,
+      "correctText": "Disney+",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/creative-content/movies/avatar-fire-and-ash-sets-debut-on-disney/"
+    },
+    {
+      "q": "Barry Blaustein, who passed away at 72 on May 12, 2026, was known for writing Eddie Murphy films and directing which acclaimed 1999 professional wrestling documentary?",
+      "options": [
+        "Beyond the Mat",
+        "Hitman Hart: Wrestling with Shadows",
+        "The Resurrection of Jake the Snake",
+        "Dark Side of the Ring"
+      ],
+      "a": 0,
+      "correctText": "Beyond the Mat",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/barry-blaustein-dead-eddie-murphy-snl-coming-to-america-1236593594/"
+    },
+    {
+      "q": "What new name was officially given to Polycystic Ovary Syndrome (PCOS) after a landmark global consensus study published in May 2026?",
+      "options": [
+        "Polyendocrine Metabolic Ovarian Syndrome (PMOS)",
+        "Polycystic Metabolic Ovarian Syndrome",
+        "Polyendocrine Cystic Syndrome",
+        "Hormonal Ovarian Metabolic Syndrome"
+      ],
+      "a": 0,
+      "correctText": "Polyendocrine Metabolic Ovarian Syndrome (PMOS)",
+      "category": "Health",
+      "source": "http://seattletimes.com/seattle-news/health/the-condition-pcos-is-now-called-pmos-what-to-know-about-the-name-change-and-what-it-means-for-care/"
+    },
+    {
+      "q": "Former USWNT star Alex Morgan announced on Mother's Day 2026 that she is expecting her third child. Fans affectionately referred to this baby number three by what sports term?",
+      "options": [
+        "A Hat Trick",
+        "A Three-Peat",
+        "A Triple Play",
+        "A Turkey"
+      ],
+      "a": 0,
+      "correctText": "A Hat Trick",
+      "category": "Sports",
+      "source": "https://www.espn.com/soccer/story/_/id/48738086/alex-morgan-third-baby-announcement-pregnancy"
+    },
+    {
+      "q": "Which late-night comedian was announced on May 12, 2026, to be returning to host the 2027 Oscars for the third consecutive year?",
+      "options": [
+        "Conan O'Brien",
+        "Jimmy Kimmel",
+        "John Mulaney",
+        "Jon Stewart"
+      ],
+      "a": 0,
+      "correctText": "Conan O'Brien",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/conan-obrien-host-2027-oscars-third-year-1236746181/"
+    },
+    {
+      "q": "Which actor, best known for playing the brutish Ogre in the 'Revenge of the Nerds' films and Ray Jackson in 'Bloodsport,' passed away at age 71 on May 12, 2026?",
+      "options": [
+        "Donald Gibb",
+        "John Goodman",
+        "Curtis Armstrong",
+        "Bolo Yeung"
+      ],
+      "a": 0,
+      "correctText": "Donald Gibb",
+      "category": "Entertainment",
+      "source": "https://entertainmentnow.com/news/donald-gibb-passes-away-tributes-pour/"
+    },
+    {
+      "q": "Which trailblazing former NBA center, known for becoming the first openly gay active athlete in a major American professional team sport, passed away at age 47 on May 12, 2026?",
+      "options": [
+        "Jason Collins",
+        "John Amaechi",
+        "Carl Nassib",
+        "Robbie Rogers"
+      ],
+      "a": 0,
+      "correctText": "Jason Collins",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48753479/jason-collins-dies-47"
+    }
+  ]
+}

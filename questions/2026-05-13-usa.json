@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to reports on May 13, 2026, grocery prices saw their biggest one-month jump in nearly four years. Which specific grocery category was reported to be 44% higher than three months prior?",
+      "options": [
+        "Fresh vegetables",
+        "Beef",
+        "Coffee",
+        "Milk"
+      ],
+      "a": 0,
+      "correctText": "Fresh vegetables",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/business/consumer/grocery-prices-jumped-april-iran-war-gas-rcna344762"
+    },
+    {
+      "q": "A lawsuit reported on May 13, 2026, alleges that an Oregon teenager tragically died of sepsis due to what medical error before receiving stitches?",
+      "options": [
+        "Doctors failed to clean the wound",
+        "A nurse administered the wrong blood type",
+        "An anesthesiologist gave a lethal dose",
+        "A surgeon left a sponge in his abdomen"
+      ],
+      "a": 0,
+      "correctText": "Doctors failed to clean the wound",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/oregon-teen-dies-sepsis-doctors-fail-clean-wound-stitching-lawsuit-say-rcna344685"
+    },
+    {
+      "q": "Jason Collins, who made history as the NBA's first openly gay active player, tragically died at age 47 in May 2026 from what illness?",
+      "options": [
+        "Brain cancer",
+        "Heart failure",
+        "Leukemia",
+        "Lung cancer"
+      ],
+      "a": 0,
+      "correctText": "Brain cancer",
+      "category": "Usa",
+      "source": "https://apnews.com/article/jason-collins-dies-nba-3675a6c2263f9ae6858ccab3982bfbdb"
+    },
+    {
+      "q": "On May 13, 2026, Arizona Sheriff Chris Nanos provided an optimistic update, saying investigators are closer to solving the disappearance case of which 84-year-old woman?",
+      "options": [
+        "Nancy Guthrie",
+        "Laci Peterson",
+        "Chandra Levy",
+        "Natalee Holloway"
+      ],
+      "a": 0,
+      "correctText": "Nancy Guthrie",
+      "category": "Usa",
+      "source": "https://www.the-independent.com/news/world/americas/crime/nancy-guthrie-case-sheriff-nanos-update-b2973927.html"
+    },
+    {
+      "q": "Alphabet's AI-driven drug discovery firm, Isomorphic Labs, announced on May 13, 2026, that it raised $2.1 billion in a funding round led by which venture capital firm?",
+      "options": [
+        "Thrive Capital",
+        "Sequoia Capital",
+        "Andreessen Horowitz",
+        "Founders Fund"
+      ],
+      "a": 0,
+      "correctText": "Thrive Capital",
+      "category": "Usa",
+      "source": "https://the-decoder.com/alphabets-isomorphic-labs-raises-2-1-billion-to-scale-ai-drug-discovery-toward-clinical-trials/"
+    }
+  ]
+}

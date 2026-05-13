@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What new name was officially given to Polycystic Ovary Syndrome (PCOS) after a landmark global consensus study published in May 2026?",
+      "options": [
+        "Polyendocrine Metabolic Ovarian Syndrome (PMOS)",
+        "Polycystic Metabolic Ovarian Syndrome",
+        "Polyendocrine Cystic Syndrome",
+        "Hormonal Ovarian Metabolic Syndrome"
+      ],
+      "a": 0,
+      "correctText": "Polyendocrine Metabolic Ovarian Syndrome (PMOS)",
+      "category": "Health",
+      "source": "http://seattletimes.com/seattle-news/health/the-condition-pcos-is-now-called-pmos-what-to-know-about-the-name-change-and-what-it-means-for-care/"
+    },
+    {
+      "q": "Which medical journal published the landmark May 12, 2026 study officially renaming PCOS to Polyendocrine Metabolic Ovarian Syndrome (PMOS)?",
+      "options": [
+        "The Lancet",
+        "New England Journal of Medicine",
+        "JAMA",
+        "The BMJ"
+      ],
+      "a": 0,
+      "correctText": "The Lancet",
+      "category": "Health",
+      "source": "https://www.abc.net.au/news/health/2026-05-12/polyendocrine-metabolic-ovarian-syndrome-pcos-new-name/106668902"
+    },
+    {
+      "q": "Who resigned from their position as FDA Commissioner on May 12, 2026, following a 13-month tenure marked by clashes with the White House?",
+      "options": [
+        "Dr. Marty Makary",
+        "Robert F. Kennedy Jr.",
+        "Dr. Rick Pazdur",
+        "Dr. Scott Gottlieb"
+      ],
+      "a": 0,
+      "correctText": "Dr. Marty Makary",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/dr-marty-makary-fda-commissioner-rcna344765"
+    },
+    {
+      "q": "In May 2026, a deadly hantavirus outbreak that led to a mass passenger quarantine occurred aboard which cruise ship?",
+      "options": [
+        "MV Hondius",
+        "Diamond Princess",
+        "MS Zaandam",
+        "Grand Princess"
+      ],
+      "a": 0,
+      "correctText": "MV Hondius",
+      "category": "Health",
+      "source": "https://abcnews.com/GMA/News/mv-hondius-cruise-ship-passenger-speaks-quarantine-unit/story?id=132873763"
+    },
+    {
+      "q": "Which specific strain of hantavirus, known for being capable of person-to-person transmission, caused the May 2026 outbreak on the MV Hondius cruise ship?",
+      "options": [
+        "Andes virus",
+        "Seoul virus",
+        "Sin Nombre virus",
+        "Hantaan virus"
+      ],
+      "a": 0,
+      "correctText": "Andes virus",
+      "category": "Health",
+      "source": "https://www.the-scientist.com/hantavirus-cruise-ship-outbreak-what-we-know-so-far"
+    }
+  ]
+}

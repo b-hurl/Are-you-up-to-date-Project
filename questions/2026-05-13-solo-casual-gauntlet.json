@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-13",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Known for his role as Dani Rojas on the hit series 'Ted Lasso', which actor signed a professional soccer contract with the USL Championship's El Paso Locomotive FC in May 2026?",
+      "options": [
+        "Cristo Fernández",
+        "Brett Goldstein",
+        "Phil Dunster",
+        "Toheeb Jimoh"
+      ],
+      "a": 0,
+      "correctText": "Cristo Fernández",
+      "category": "Sports",
+      "source": "https://www.espn.com/soccer/story/_/id/48750339/cristo-fernandez-signs-usl-team"
+    },
+    {
+      "q": "Following their second-round playoff exit in May 2026, the Philadelphia 76ers parted ways with which President of Basketball Operations?",
+      "options": [
+        "Daryl Morey",
+        "Elton Brand",
+        "Sam Hinkie",
+        "Bryan Colangelo"
+      ],
+      "a": 0,
+      "correctText": "Daryl Morey",
+      "category": "Sports",
+      "source": "https://www.cbssports.com/nba/news/philadelphia-76ers-daryl-morey-nick-nurse/"
+    },
+    {
+      "q": "According to creator Ken Levine, why did the upcoming game Judas take a decade to develop?",
+      "options": [
+        "Because they 'kissed many frogs'",
+        "Because of engine changes",
+        "Due to a lack of funding",
+        "They restarted the story five times"
+      ],
+      "a": 0,
+      "correctText": "Because they 'kissed many frogs'",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/bioshock-creator-ken-levine-reveals-why-judas-took-a-decade-to-develop-we-kissed-many-frogs"
+    },
+    {
+      "q": "Sega recently decided to quietly kill off which mysterious project after seeing so many live service titles tank?",
+      "options": [
+        "Their 'Super Game'",
+        "Sonic MMO",
+        "Virtua Fighter Infinite",
+        "Project Dreamcast"
+      ],
+      "a": 0,
+      "correctText": "Their 'Super Game'",
+      "category": "Gaming",
+      "source": "https://kotaku.com/sega-decides-to-quietly-kill-its-mysterious-super-game-after-seeing-so-many-live-services-tank-2000695252"
+    },
+    {
+      "q": "Which prehistoric character was officially revealed with a new trailer for Marvel Rivals Season 8?",
+      "options": [
+        "Devil Dinosaur",
+        "Sauron",
+        "Stegron",
+        "Old Lace"
+      ],
+      "a": 0,
+      "correctText": "Devil Dinosaur",
+      "category": "Gaming",
+      "source": "https://youtu.be/1ymnCXU6iyA"
+    },
+    {
+      "q": "Which highly anticipated horror game recently surpassed two million in global shipments and digital sales?",
+      "options": [
+        "Silent Hill f",
+        "Resident Evil 9",
+        "The Evil Within 3",
+        "Dead Space 2 Remake"
+      ],
+      "a": 0,
+      "correctText": "Silent Hill f",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/silent-hill-f-shipments-and-digital-sales-top-two-million"
+    },
+    {
+      "q": "Which medical journal published the landmark May 12, 2026 study officially renaming PCOS to Polyendocrine Metabolic Ovarian Syndrome (PMOS)?",
+      "options": [
+        "The Lancet",
+        "New England Journal of Medicine",
+        "JAMA",
+        "The BMJ"
+      ],
+      "a": 0,
+      "correctText": "The Lancet",
+      "category": "Health",
+      "source": "https://www.abc.net.au/news/health/2026-05-12/polyendocrine-metabolic-ovarian-syndrome-pcos-new-name/106668902"
+    },
+    {
+      "q": "Original producer Chuck Beaver recently explained that a fourth entry in which sci-fi horror franchise likely won't happen due to required sales numbers?",
+      "options": [
+        "Dead Space",
+        "Silent Hill",
+        "Amnesia",
+        "The Evil Within"
+      ],
+      "a": 0,
+      "correctText": "Dead Space",
+      "category": "Gaming",
+      "source": "https://frvr.com/blog/dead-space-4-likely-wont-happen/"
+    },
+    {
+      "q": "At the opening ceremony of the 2026 Cannes Film Festival, director Peter Jackson received an honorary Palme d'Or presented by which actor?",
+      "options": [
+        "Elijah Wood",
+        "Ian McKellen",
+        "Andy Serkis",
+        "Viggo Mortensen"
+      ],
+      "a": 0,
+      "correctText": "Elijah Wood",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/peter-jackson-elijah-wood-cannes-honorary-palme-dor-1236899550/"
+    },
+    {
+      "q": "Who resigned from their position as FDA Commissioner on May 12, 2026, following a 13-month tenure marked by clashes with the White House?",
+      "options": [
+        "Dr. Marty Makary",
+        "Robert F. Kennedy Jr.",
+        "Dr. Rick Pazdur",
+        "Dr. Scott Gottlieb"
+      ],
+      "a": 0,
+      "correctText": "Dr. Marty Makary",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/dr-marty-makary-fda-commissioner-rcna344765"
+    }
+  ]
+}

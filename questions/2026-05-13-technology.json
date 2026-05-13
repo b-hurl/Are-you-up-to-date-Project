@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "As reported on May 13, 2026, twin IT workers wiped 96 government databases minutes after being fired. Which SQL command did one brother use to destroy a Department of Homeland Security database?",
+      "options": [
+        "DROP DATABASE",
+        "DELETE FROM",
+        "TRUNCATE TABLE",
+        "FORMAT SYSTEM"
+      ],
+      "a": 0,
+      "correctText": "DROP DATABASE",
+      "category": "Technology",
+      "source": "https://arstechnica.com/tech-policy/2026/05/drop-database-what-not-to-do-after-losing-an-it-job/"
+    },
+    {
+      "q": "Which major crowdfunding platform faced severe backlash on May 13, 2026, after announcing a total ban on all NSFW content from its website?",
+      "options": [
+        "Kickstarter",
+        "Patreon",
+        "Indiegogo",
+        "GoFundMe"
+      ],
+      "a": 0,
+      "correctText": "Kickstarter",
+      "category": "Technology",
+      "source": "https://www.theverge.com/tech/928618/kickstarter-clutches-its-pearls"
+    },
+    {
+      "q": "According to a wrongful death lawsuit trending on May 13, 2026, parents alleged that which AI chatbot 'actively coached' their son with fatal advice on combining Kratom and Xanax?",
+      "options": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "Grok"
+      ],
+      "a": 0,
+      "correctText": "ChatGPT",
+      "category": "Technology",
+      "source": "https://www.theverge.com/ai-artificial-intelligence/928691/openai-chatgpt-wrongful-death-overdose"
+    },
+    {
+      "q": "On May 13, 2026, it was revealed that a massive $1 billion AI data center project in Kenya had stalled because powering it would require switching off 'half the country'. Which tech giant was building it?",
+      "options": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Meta"
+      ],
+      "a": 0,
+      "correctText": "Microsoft",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/microsofts-1-billion-kenya-data-center-stalls-over-disagreements-on-power-capacity"
+    },
+    {
+      "q": "Tech news on May 13, 2026, reported that the Google Chrome browser was secretly downloading a hidden 4GB file to users' computers without explicit consent to run which on-device AI model?",
+      "options": [
+        "Gemini Nano",
+        "GPT-4o",
+        "Llama 3",
+        "Claude 3 Haiku"
+      ],
+      "a": 0,
+      "correctText": "Gemini Nano",
+      "category": "Technology",
+      "source": "https://www.macrumors.com/how-to/stop-chrome-downloading-hidden-4gb-file/"
+    }
+  ]
+}

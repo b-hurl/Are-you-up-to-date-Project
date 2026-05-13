@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which late-night comedian was announced on May 12, 2026, to be returning to host the 2027 Oscars for the third consecutive year?",
+      "options": [
+        "Conan O'Brien",
+        "Jimmy Kimmel",
+        "John Mulaney",
+        "Jon Stewart"
+      ],
+      "a": 0,
+      "correctText": "Conan O'Brien",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/conan-obrien-host-2027-oscars-third-year-1236746181/"
+    },
+    {
+      "q": "At the opening ceremony of the 2026 Cannes Film Festival, director Peter Jackson received an honorary Palme d'Or presented by which actor?",
+      "options": [
+        "Elijah Wood",
+        "Ian McKellen",
+        "Andy Serkis",
+        "Viggo Mortensen"
+      ],
+      "a": 0,
+      "correctText": "Elijah Wood",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/peter-jackson-elijah-wood-cannes-honorary-palme-dor-1236899550/"
+    },
+    {
+      "q": "Which actor, best known for playing the brutish Ogre in the 'Revenge of the Nerds' films and Ray Jackson in 'Bloodsport,' passed away at age 71 on May 12, 2026?",
+      "options": [
+        "Donald Gibb",
+        "John Goodman",
+        "Curtis Armstrong",
+        "Bolo Yeung"
+      ],
+      "a": 0,
+      "correctText": "Donald Gibb",
+      "category": "Entertainment",
+      "source": "https://entertainmentnow.com/news/donald-gibb-passes-away-tributes-pour/"
+    },
+    {
+      "q": "During Disney's upfront presentation in May 2026, it was announced that James Cameron's 'Avatar: Fire and Ash' will make its streaming debut on June 24 on which platform?",
+      "options": [
+        "Disney+",
+        "Hulu",
+        "Max",
+        "Netflix"
+      ],
+      "a": 0,
+      "correctText": "Disney+",
+      "category": "Entertainment",
+      "source": "https://www.thewrap.com/creative-content/movies/avatar-fire-and-ash-sets-debut-on-disney/"
+    },
+    {
+      "q": "Barry Blaustein, who passed away at 72 on May 12, 2026, was known for writing Eddie Murphy films and directing which acclaimed 1999 professional wrestling documentary?",
+      "options": [
+        "Beyond the Mat",
+        "Hitman Hart: Wrestling with Shadows",
+        "The Resurrection of Jake the Snake",
+        "Dark Side of the Ring"
+      ],
+      "a": 0,
+      "correctText": "Beyond the Mat",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/barry-blaustein-dead-eddie-murphy-snl-coming-to-america-1236593594/"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-13",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In May 2026, Ukrainian President Volodymyr Zelenskyy announced that preparations have begun for a deal with Canada to co-produce what?",
+      "options": [
+        "Military drones",
+        "Artillery shells",
+        "Armoured personnel carriers",
+        "Fighter jets"
+      ],
+      "a": 0,
+      "correctText": "Military drones",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/world/russia-ukraine-war/article/zelenskyy-says-ukraine-has-a-drone-deal-with-canada-in-the-works/"
+    },
+    {
+      "q": "On May 13, 2026, it was revealed that a massive $1 billion AI data center project in Kenya had stalled because powering it would require switching off 'half the country'. Which tech giant was building it?",
+      "options": [
+        "Microsoft",
+        "Google",
+        "Amazon",
+        "Meta"
+      ],
+      "a": 0,
+      "correctText": "Microsoft",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/microsofts-1-billion-kenya-data-center-stalls-over-disagreements-on-power-capacity"
+    },
+    {
+      "q": "According to recent reports, the CIA has escalated its secret war with deadly operations against drug cartels inside which country?",
+      "options": [
+        "Mexico",
+        "Colombia",
+        "Peru",
+        "Honduras"
+      ],
+      "a": 0,
+      "correctText": "Mexico",
+      "category": "World",
+      "source": "https://edition.cnn.com/2026/05/12/politics/cia-drug-cartels-deadly-operations-mexico"
+    },
+    {
+      "q": "Which federal Liberal MP announced in May 2026 that he will resign his seat before the summer recess following a provincial nomination loss in Scarborough Southwest?",
+      "options": [
+        "Nate Erskine-Smith",
+        "Sean Fraser",
+        "Anthony Housefather",
+        "Greg Fergus"
+      ],
+      "a": 0,
+      "correctText": "Nate Erskine-Smith",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/liberal-mp-nate-erskine-smith-to-resign-federal-seat-this-summer-following-gta-nomination-loss/"
+    },
+    {
+      "q": "Which major crowdfunding platform faced severe backlash on May 13, 2026, after announcing a total ban on all NSFW content from its website?",
+      "options": [
+        "Kickstarter",
+        "Patreon",
+        "Indiegogo",
+        "GoFundMe"
+      ],
+      "a": 0,
+      "correctText": "Kickstarter",
+      "category": "Technology",
+      "source": "https://www.theverge.com/tech/928618/kickstarter-clutches-its-pearls"
+    },
+    {
+      "q": "According to data released in May 2026, Canadian consumer insolvencies in the first quarter reached their highest level since which year?",
+      "options": [
+        "2009",
+        "2014",
+        "2020",
+        "1998"
+      ],
+      "a": 0,
+      "correctText": "2009",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/business/insolvency-filings-increasing-canada-9.7197230"
+    },
+    {
+      "q": "As reported on May 13, 2026, twin IT workers wiped 96 government databases minutes after being fired. Which SQL command did one brother use to destroy a Department of Homeland Security database?",
+      "options": [
+        "DROP DATABASE",
+        "DELETE FROM",
+        "TRUNCATE TABLE",
+        "FORMAT SYSTEM"
+      ],
+      "a": 0,
+      "correctText": "DROP DATABASE",
+      "category": "Technology",
+      "source": "https://arstechnica.com/tech-policy/2026/05/drop-database-what-not-to-do-after-losing-an-it-job/"
+    },
+    {
+      "q": "A lawsuit reported on May 13, 2026, alleges that an Oregon teenager tragically died of sepsis due to what medical error before receiving stitches?",
+      "options": [
+        "Doctors failed to clean the wound",
+        "A nurse administered the wrong blood type",
+        "An anesthesiologist gave a lethal dose",
+        "A surgeon left a sponge in his abdomen"
+      ],
+      "a": 0,
+      "correctText": "Doctors failed to clean the wound",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/oregon-teen-dies-sepsis-doctors-fail-clean-wound-stitching-lawsuit-say-rcna344685"
+    },
+    {
+      "q": "Which e-commerce company's board formally rejected a $56 billion takeover offer from GameStop, calling it 'neither credible nor attractive'?",
+      "options": [
+        "eBay",
+        "Etsy",
+        "Shopify",
+        "Alibaba"
+      ],
+      "a": 0,
+      "correctText": "eBay",
+      "category": "Business",
+      "source": "https://arstechnica.com/tech-policy/2026/05/ebay-rejects-gamestops-56b-offer-your-proposal-is-neither-credible-nor-attractive/"
+    },
+    {
+      "q": "A May 2026 report by Ontario's Auditor General found that artificial intelligence systems used by doctors were doing what during patient visits?",
+      "options": [
+        "Hallucinating and fabricating medical information",
+        "Automatically deleting patient records",
+        "Overcharging patients for simple visits",
+        "Recommending unauthorized alternative medicine"
+      ],
+      "a": 0,
+      "correctText": "Hallucinating and fabricating medical information",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11844349/ontario-auditor-general-ai-usage/"
+    }
+  ]
+}
