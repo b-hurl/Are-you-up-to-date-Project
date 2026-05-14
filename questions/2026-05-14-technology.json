@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Chinese university led the development of the 'Jiuzhang 4.0' quantum computing prototype, which reportedly set a new world record on May 14, 2026? [2.1.5]",
+      "options": [
+        "University of Science and Technology of China (USTC)",
+        "Tsinghua University",
+        "Peking University",
+        "Fudan University"
+      ],
+      "a": 0,
+      "correctText": "University of Science and Technology of China (USTC)",
+      "category": "Technology",
+      "source": "https://english.news.cn/"
+    },
+    {
+      "q": "Which company announced on May 14, 2026, that it won the 'Most Innovative Technology' award at the 2026 Innovate Cybersecurity Summit?",
+      "options": [
+        "Concentric AI",
+        "CrowdStrike",
+        "Palo Alto Networks",
+        "Teleskope AI"
+      ],
+      "a": 0,
+      "correctText": "Concentric AI",
+      "category": "Technology",
+      "source": "https://concentric.ai/"
+    },
+    {
+      "q": "On May 14, 2026, which Japanese telecom corporation announced a new technology to stabilize video quality for remote drone operations using Local 5G?",
+      "options": [
+        "NTT",
+        "SoftBank",
+        "KDDI",
+        "Rakuten Mobile"
+      ],
+      "a": 0,
+      "correctText": "NTT",
+      "category": "Technology",
+      "source": "https://group.ntt/en/newsrelease/"
+    },
+    {
+      "q": "Which automotive LiDAR technology provider scheduled its first quarter 2026 earnings conference call for May 14, 2026?",
+      "options": [
+        "Innoviz Technologies",
+        "Luminar Technologies",
+        "Velodyne Lidar",
+        "Ouster"
+      ],
+      "a": 0,
+      "correctText": "Innoviz Technologies",
+      "category": "Technology",
+      "source": "https://innoviz.tech/"
+    },
+    {
+      "q": "According to May 14, 2026 reports, which tech CEO traveled alongside President Trump to a summit in China, sparking investor focus on advanced AI chips?",
+      "options": [
+        "Jensen Huang",
+        "Tim Cook",
+        "Elon Musk",
+        "Mark Zuckerberg"
+      ],
+      "a": 0,
+      "correctText": "Jensen Huang",
+      "category": "Technology",
+      "source": "https://apnews.com/"
+    }
+  ]
+}

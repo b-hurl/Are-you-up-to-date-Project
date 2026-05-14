@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "In mid-May 2026, what legal consequence befell a Michigan man who had previously promoted what he hoped would be the 'largest book burning' in American history?",
+      "options": [
+        "He was jailed for contempt of court",
+        "He was fined by the EPA for air pollution",
+        "He was banned from all state public libraries",
+        "He was sued by a coalition of local authors"
+      ],
+      "a": 0,
+      "correctText": "He was jailed for contempt of court",
+      "category": "Books",
+      "source": "https://www.mlive.com/news/saginaw-bay-city/2026/05/michigan-man-who-hoped-to-have-largest-book-burning-in-american-history-again-jailed-for-contempt.html"
+    },
+    {
+      "q": "A widely circulated May 2026 article discussed the unique challenges 19th-century missionaries faced when translating the Bible into Cherokee. Which grammatical feature did the Cherokee language notably lack when translators attempted to describe God?",
+      "options": [
+        "Gendered pronouns",
+        "Plural nouns",
+        "Future tense verbs",
+        "Definite articles"
+      ],
+      "a": 0,
+      "correctText": "Gendered pronouns",
+      "category": "Books",
+      "source": "https://theconversation.com/the-cherokee-bible-one-of-the-languages-first-books-is-a-window-between-worldviews-271717"
+    },
+    {
+      "q": "According to industry news from May 13, 2026, government authorities charged three individuals connected to PageTurner Press and Media for running a massive publishing scam. Approximately how much money did they defraud from authors?",
+      "options": [
+        "$44 million",
+        "$10 million",
+        "$2 million",
+        "$100 million"
+      ],
+      "a": 0,
+      "correctText": "$44 million",
+      "category": "Books",
+      "source": "https://www.publishersweekly.com/pw/by-topic/industry-news/publisher-news/article/95000-government-charges-three-people-in-publishing-scam.html"
+    },
+    {
+      "q": "As reported on May 13, 2026, Russian photographer Alexandra Kuzyk was sentenced to 18 months in a labor camp for publishing what type of unauthorized written content?",
+      "options": [
+        "Gay K-Pop fanfiction",
+        "Anti-war poetry",
+        "Translated Western biographies",
+        "Satirical political cartoons"
+      ],
+      "a": 0,
+      "correctText": "Gay K-Pop fanfiction",
+      "category": "Books",
+      "source": "https://lithub.com/lit-hub-daily-may-13-2026/"
+    }
+  ]
+}

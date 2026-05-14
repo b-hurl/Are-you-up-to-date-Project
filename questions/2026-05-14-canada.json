@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Why did an Alberta judge quash a petition calling for a referendum on the province's separation in May 2026?",
+      "options": [
+        "The provincial government failed in its duty to consult with First Nations",
+        "The petition did not gather the required 500,000 signatures",
+        "The proposed referendum question was overly vague",
+        "Separation violates the Canadian Charter of Rights and Freedoms"
+      ],
+      "a": 0,
+      "correctText": "The provincial government failed in its duty to consult with First Nations",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11848377/alberta-premier-court-ruling-separation-petition-anti-democratic/"
+    },
+    {
+      "q": "Which messaging app warned in May 2026 that it would pull out of Canada entirely if made to comply with a new lawful access bill?",
+      "options": [
+        "Signal",
+        "WhatsApp",
+        "Telegram",
+        "iMessage"
+      ],
+      "a": 0,
+      "correctText": "Signal",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-signal-warns-it-would-pull-out-of-canada-if-made-to-comply-with-lawful/"
+    },
+    {
+      "q": "According to a May 2026 discussion paper, the Carney government signaled it is open to divesting or selling which type of critical Canadian infrastructure?",
+      "options": [
+        "Canadian ports",
+        "Nuclear power plants",
+        "National postal services",
+        "Federal highways"
+      ],
+      "a": 0,
+      "correctText": "Canadian ports",
+      "category": "Canada",
+      "source": "https://www.thestar.com/politics/federal/carney-government-signals-its-open-to-selling-canadian-ports/article_bf0a5397-7b33-478d-8eeb-11c25b176762.html"
+    },
+    {
+      "q": "In May 2026, sources revealed Prime Minister Mark Carney was set to announce a long-delayed national strategy regarding what sector?",
+      "options": [
+        "Clean electricity",
+        "Artificial intelligence",
+        "High-speed rail",
+        "Critical minerals"
+      ],
+      "a": 0,
+      "correctText": "Clean electricity",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/politics/article/exclusive-pm-carney-to-announce-national-electricity-strategy-thursday-sources/"
+    },
+    {
+      "q": "A May 2026 report by RBC issued a stark warning that what Canadian industry could completely disappear by 2040?",
+      "options": [
+        "The auto industry",
+        "The commercial fishing industry",
+        "The domestic airline industry",
+        "The forestry sector"
+      ],
+      "a": 0,
+      "correctText": "The auto industry",
+      "category": "Canada",
+      "source": "https://torontosun.com/news/national/canadas-auto-industry-could-disappear-by-2040-rbc-warns"
+    }
+  ]
+}

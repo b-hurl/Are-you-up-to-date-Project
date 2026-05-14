@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-14",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "A widely circulated May 2026 article discussed the unique challenges 19th-century missionaries faced when translating the Bible into Cherokee. Which grammatical feature did the Cherokee language notably lack when translators attempted to describe God?",
+      "options": [
+        "Gendered pronouns",
+        "Plural nouns",
+        "Future tense verbs",
+        "Definite articles"
+      ],
+      "a": 0,
+      "correctText": "Gendered pronouns",
+      "category": "Books",
+      "source": "https://theconversation.com/the-cherokee-bible-one-of-the-languages-first-books-is-a-window-between-worldviews-271717"
+    },
+    {
+      "q": "As reported on May 13, 2026, Russian photographer Alexandra Kuzyk was sentenced to 18 months in a labor camp for publishing what type of unauthorized written content?",
+      "options": [
+        "Gay K-Pop fanfiction",
+        "Anti-war poetry",
+        "Translated Western biographies",
+        "Satirical political cartoons"
+      ],
+      "a": 0,
+      "correctText": "Gay K-Pop fanfiction",
+      "category": "Books",
+      "source": "https://lithub.com/lit-hub-daily-may-13-2026/"
+    },
+    {
+      "q": "In May 2026, which former NBA center and the league's first openly gay active player passed away at the age of 47?",
+      "options": [
+        "Jason Collins",
+        "John Amaechi",
+        "Robbie Rogers",
+        "Carl Nassib"
+      ],
+      "a": 0,
+      "correctText": "Jason Collins",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48753479/jason-collins-dies-47"
+    },
+    {
+      "q": "Why was golfer Rory McIlroy forced to cut his practice round short at Aronimink Golf Club ahead of the 2026 PGA Championship?",
+      "options": [
+        "A blister on his toe",
+        "A strained lower back",
+        "A wrist injury",
+        "A migraine headache"
+      ],
+      "a": 0,
+      "correctText": "A blister on his toe",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48752933/mcilroy-cuts-pga-championship-practice-round-short-due-blister"
+    },
+    {
+      "q": "Which defenseman scored the overtime winner for the Colorado Avalanche in Game 5 to complete a comeback and eliminate the Minnesota Wild from the 2026 NHL playoffs?",
+      "options": [
+        "Brett Kulak",
+        "Cale Makar",
+        "Devon Toews",
+        "Josh Manson"
+      ],
+      "a": 0,
+      "correctText": "Brett Kulak",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nhl/news/3540316/kulak-nets-ot-winner-as-avalanche-complete-epic-comeback-to-oust-wild"
+    },
+    {
+      "q": "Which 45-year-old tennis legend announced they would partner with Hailey Baptiste to play in the 2026 French Open doubles?",
+      "options": [
+        "Venus Williams",
+        "Serena Williams",
+        "Martina Navratilova",
+        "Lindsay Davenport"
+      ],
+      "a": 0,
+      "correctText": "Venus Williams",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48759765/45-year-old-venus-williams-play-french-open-doubles"
+    },
+    {
+      "q": "According to industry news from May 13, 2026, government authorities charged three individuals connected to PageTurner Press and Media for running a massive publishing scam. Approximately how much money did they defraud from authors?",
+      "options": [
+        "$44 million",
+        "$10 million",
+        "$2 million",
+        "$100 million"
+      ],
+      "a": 0,
+      "correctText": "$44 million",
+      "category": "Books",
+      "source": "https://www.publishersweekly.com/pw/by-topic/industry-news/publisher-news/article/95000-government-charges-three-people-in-publishing-scam.html"
+    },
+    {
+      "q": "News broke in mid-May 2026 that Japanese composer Yuji Ohno had passed away at 84. He was best known for creating the jazz theme for which iconic anime?",
+      "options": [
+        "Lupin the Third",
+        "Cowboy Bebop",
+        "Neon Genesis Evangelion",
+        "Dragon Ball Z"
+      ],
+      "a": 0,
+      "correctText": "Lupin the Third",
+      "category": "Entertainment",
+      "source": "https://japannews.yomiuri.co.jp/culture/manga-anime/20260513-327328/"
+    },
+    {
+      "q": "During its May 2026 Upfronts presentation, Netflix announced that it is developing a third film for which Adam Sandler comedy franchise?",
+      "options": [
+        "Grown Ups",
+        "Murder Mystery",
+        "Hubie Halloween",
+        "Happy Gilmore"
+      ],
+      "a": 0,
+      "correctText": "Grown Ups",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/grown-ups-3-netflix-upfront-adam-sandler-1236899841/"
+    },
+    {
+      "q": "In a financial update heavily discussed on May 14, 2026, Capcom revealed that what staggering percentage of its total game sales are now digital?",
+      "options": [
+        "93%",
+        "85%",
+        "70%",
+        "99%"
+      ],
+      "a": 0,
+      "correctText": "93%",
+      "category": "Gaming",
+      "source": "https://primagames.com/news/capcom-reveals-93-percent-game-sales-digital"
+    }
+  ]
+}

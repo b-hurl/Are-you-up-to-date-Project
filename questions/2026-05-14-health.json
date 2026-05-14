@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to the CDC on May 14, 2026, a U.S. patient evacuated from which expedition cruise ship tested negative for hantavirus and was removed from a biocontainment unit?",
+      "options": [
+        "MV Hondius",
+        "Diamond Princess",
+        "MS Ambition",
+        "Ruby Princess"
+      ],
+      "a": 0,
+      "correctText": "MV Hondius",
+      "category": "Health",
+      "source": "https://www.straitstimes.com/world/hantavirus-risk-to-us-public-remains-low-says-national-health-agency"
+    },
+    {
+      "q": "As reported by the Associated Press on May 14, 2026, the American Academy of Pediatrics issued new guidance for the first time in 13 years regarding which daily school activity?",
+      "options": [
+        "Recess",
+        "Standardized Testing",
+        "School Lunches",
+        "Physical Education"
+      ],
+      "a": 0,
+      "correctText": "Recess",
+      "category": "Health",
+      "source": "https://apnews.com/"
+    },
+    {
+      "q": "On May 14, 2026, federal officials announced that $1.3 billion in Medicaid funding to which U.S. state will be deferred over suspicions of fraud?",
+      "options": [
+        "California",
+        "New York",
+        "Texas",
+        "Florida"
+      ],
+      "a": 0,
+      "correctText": "California",
+      "category": "Health",
+      "source": "https://apnews.com/"
+    },
+    {
+      "q": "According to a May 14, 2026 report, the Trump administration widened its Medicaid fraud crackdown to which U.S. state, labeling it a 'hotspot'?",
+      "options": [
+        "Florida",
+        "Illinois",
+        "Michigan",
+        "Nevada"
+      ],
+      "a": 0,
+      "correctText": "Florida",
+      "category": "Health",
+      "source": "https://apnews.com/"
+    }
+  ]
+}

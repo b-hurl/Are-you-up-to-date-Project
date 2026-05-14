@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which U.S. state recently faced backlash for approving a datacenter twice the size of Manhattan?",
+      "options": [
+        "Utah",
+        "Nevada",
+        "Texas",
+        "Arizona"
+      ],
+      "a": 0,
+      "correctText": "Utah",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/13/utah-approves-datacenter-backlash"
+    },
+    {
+      "q": "Who won Senate confirmation in May 2026 to become the next Federal Reserve chair?",
+      "options": [
+        "Kevin Warsh",
+        "Jerome Powell",
+        "Janet Yellen",
+        "Ben Bernanke"
+      ],
+      "a": 0,
+      "correctText": "Kevin Warsh",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/05/13/kevin-warsh-wins-senate-confirmation-as-the-next-federal-reserve-chair.html"
+    },
+    {
+      "q": "A recent lawsuit alleges that a woman gave birth on a prison floor while guards watched in which U.S. state?",
+      "options": [
+        "Alabama",
+        "Mississippi",
+        "Florida",
+        "Georgia"
+      ],
+      "a": 0,
+      "correctText": "Alabama",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/13/alabama-prison-birth-lawsuit"
+    },
+    {
+      "q": "Which country announced it has run out of diesel and fuel oil amid a U.S. oil blockade in May 2026?",
+      "options": [
+        "Cuba",
+        "Venezuela",
+        "Iran",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Cuba",
+      "category": "Usa",
+      "source": "https://www.reuters.com/business/energy/cuba-has-run-out-diesel-fuel-oil-amid-us-oil-blockade-minister-says-2026-05-14/"
+    },
+    {
+      "q": "Which author of a children's book on grief received a life sentence for killing her husband?",
+      "options": [
+        "Kouri Richins",
+        "Lori Vallow",
+        "Jodi Arias",
+        "Pam Hupp"
+      ],
+      "a": 0,
+      "correctText": "Kouri Richins",
+      "category": "Usa",
+      "source": "https://apnews.com/article/kouri-richins-murder-trial-sentencing-fa8c4b159827eef080cfa104a316454c"
+    }
+  ]
+}

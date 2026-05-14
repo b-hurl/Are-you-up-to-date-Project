@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-14",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which company’s $56 billion takeover offer was rejected by eBay in May 2026 for being 'neither credible nor attractive'?",
+      "options": [
+        "GameStop",
+        "Amazon",
+        "Walmart",
+        "Best Buy"
+      ],
+      "a": 0,
+      "correctText": "GameStop",
+      "category": "Business",
+      "source": "https://arstechnica.com/tech-policy/2026/05/ebay-rejects-gamestops-56b-offer-your-proposal-is-neither-credible-nor-attractive/"
+    },
+    {
+      "q": "According to a May 2026 discussion paper, the Carney government signaled it is open to divesting or selling which type of critical Canadian infrastructure?",
+      "options": [
+        "Canadian ports",
+        "Nuclear power plants",
+        "National postal services",
+        "Federal highways"
+      ],
+      "a": 0,
+      "correctText": "Canadian ports",
+      "category": "Canada",
+      "source": "https://www.thestar.com/politics/federal/carney-government-signals-its-open-to-selling-canadian-ports/article_bf0a5397-7b33-478d-8eeb-11c25b176762.html"
+    },
+    {
+      "q": "In May 2026, the FCC angered small carriers by helping AT&T and which satellite internet provider buy EchoStar spectrum?",
+      "options": [
+        "Starlink",
+        "Project Kuiper",
+        "Viasat",
+        "HughesNet"
+      ],
+      "a": 0,
+      "correctText": "Starlink",
+      "category": "Business",
+      "source": "https://arstechnica.com/tech-policy/2026/05/fcc-angers-small-carriers-by-helping-att-and-starlink-buy-echostar-spectrum/"
+    },
+    {
+      "q": "Who won Senate confirmation in May 2026 to become the next Federal Reserve chair?",
+      "options": [
+        "Kevin Warsh",
+        "Jerome Powell",
+        "Janet Yellen",
+        "Ben Bernanke"
+      ],
+      "a": 0,
+      "correctText": "Kevin Warsh",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/05/13/kevin-warsh-wins-senate-confirmation-as-the-next-federal-reserve-chair.html"
+    },
+    {
+      "q": "A May 2026 report by RBC issued a stark warning that what Canadian industry could completely disappear by 2040?",
+      "options": [
+        "The auto industry",
+        "The commercial fishing industry",
+        "The domestic airline industry",
+        "The forestry sector"
+      ],
+      "a": 0,
+      "correctText": "The auto industry",
+      "category": "Canada",
+      "source": "https://torontosun.com/news/national/canadas-auto-industry-could-disappear-by-2040-rbc-warns"
+    },
+    {
+      "q": "U.S. President Donald Trump traveled to which capital city on May 14, 2026, for a high-stakes summit with President Xi Jinping?",
+      "options": [
+        "Beijing",
+        "Tokyo",
+        "Seoul",
+        "Taipei"
+      ],
+      "a": 0,
+      "correctText": "Beijing",
+      "category": "World",
+      "source": "https://apnews.com/article/trump-xi-china-iran-trade-a1d63a711a037472f5c1c330c2120bd5"
+    },
+    {
+      "q": "What is the name of Google's new AI-powered laptop platform built on Android, introduced as a premium successor to Chromebooks in May 2026?",
+      "options": [
+        "Googlebook",
+        "Pixelbook AI",
+        "AndroidBook",
+        "GeminiBook"
+      ],
+      "a": 0,
+      "correctText": "Googlebook",
+      "category": "Business",
+      "source": "https://www.wired.com/story/googlebook-laptop-platform/"
+    },
+    {
+      "q": "Which automotive LiDAR technology provider scheduled its first quarter 2026 earnings conference call for May 14, 2026?",
+      "options": [
+        "Innoviz Technologies",
+        "Luminar Technologies",
+        "Velodyne Lidar",
+        "Ouster"
+      ],
+      "a": 0,
+      "correctText": "Innoviz Technologies",
+      "category": "Technology",
+      "source": "https://innoviz.tech/"
+    },
+    {
+      "q": "Defense tech startup Anduril doubled its valuation in May 2026 amid a defense funding boom. What is its new valuation?",
+      "options": [
+        "Over $60 billion",
+        "$30 billion",
+        "$100 billion",
+        "$10 billion"
+      ],
+      "a": 0,
+      "correctText": "Over $60 billion",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/05/13/anduril-valuation-defense-tech-funding-boom.html"
+    },
+    {
+      "q": "While en route to China on May 14, 2026, President Trump posted a graphic on Truth Social depicting which country as the 51st U.S. state?",
+      "options": [
+        "Venezuela",
+        "Cuba",
+        "Greenland",
+        "Mexico"
+      ],
+      "a": 0,
+      "correctText": "Venezuela",
+      "category": "World",
+      "source": "https://www.ctvnews.ca/world/article/trump-posts-graphic-of-venezuela-as-51st-us-state/"
+    }
+  ]
+}

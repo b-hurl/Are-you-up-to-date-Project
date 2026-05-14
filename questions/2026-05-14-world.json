@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which country's energy minister announced on May 14, 2026, that the nation has completely run out of diesel and fuel oil amid a U.S. blockade?",
+      "options": [
+        "Cuba",
+        "Venezuela",
+        "Iran",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Cuba",
+      "category": "World",
+      "source": "https://www.reuters.com/business/energy/cuba-has-run-out-diesel-fuel-oil-amid-us-oil-blockade-minister-says-2026-05-14/"
+    },
+    {
+      "q": "In May 2026, the Russian parliament passed a bill explicitly allowing President Vladimir Putin to do what?",
+      "options": [
+        "Deploy troops extraterritorially to protect Russian citizens abroad",
+        "Annex the Transcarpathia region of Ukraine",
+        "Launch preemptive nuclear strikes against NATO",
+        "Blockade European shipments in the Black Sea"
+      ],
+      "a": 0,
+      "correctText": "Deploy troops extraterritorially to protect Russian citizens abroad",
+      "category": "World",
+      "source": "https://www.politico.eu/article/russia-parliament-passes-bill-allowing-vladimir-putin-invade-foreign-countries/"
+    },
+    {
+      "q": "While en route to China on May 14, 2026, President Trump posted a graphic on Truth Social depicting which country as the 51st U.S. state?",
+      "options": [
+        "Venezuela",
+        "Cuba",
+        "Greenland",
+        "Mexico"
+      ],
+      "a": 0,
+      "correctText": "Venezuela",
+      "category": "World",
+      "source": "https://www.ctvnews.ca/world/article/trump-posts-graphic-of-venezuela-as-51st-us-state/"
+    },
+    {
+      "q": "Ukrainian President Volodymyr Zelenskyy stated that Russia's massive 800-drone barrage in May 2026 was deliberately timed to coincide with what event?",
+      "options": [
+        "President Trump's arrival in China",
+        "The BRICS foreign ministers meeting",
+        "A NATO summit in Brussels",
+        "The signing of the Ukraine-UAE Drone Deal"
+      ],
+      "a": 0,
+      "correctText": "President Trump's arrival in China",
+      "category": "World",
+      "source": "https://united24media.com/latest-news/zelenskyy-states-russias-800-drone-barrage-was-no-coincidence-during-trump-china-visit-18787"
+    },
+    {
+      "q": "U.S. President Donald Trump traveled to which capital city on May 14, 2026, for a high-stakes summit with President Xi Jinping?",
+      "options": [
+        "Beijing",
+        "Tokyo",
+        "Seoul",
+        "Taipei"
+      ],
+      "a": 0,
+      "correctText": "Beijing",
+      "category": "World",
+      "source": "https://apnews.com/article/trump-xi-china-iran-trade-a1d63a711a037472f5c1c330c2120bd5"
+    }
+  ]
+}

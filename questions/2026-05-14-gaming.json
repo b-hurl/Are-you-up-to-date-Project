@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which highly anticipated underwater survival sequel by Unknown Worlds officially entered Early Access for PC and Xbox Series X|S on May 14, 2026?",
+      "options": [
+        "Subnautica 2",
+        "Aquanox 3",
+        "Abzu: Deep Dive",
+        "Soma: Origins"
+      ],
+      "a": 0,
+      "correctText": "Subnautica 2",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/subnautica-2-global-release-times-preload-details-confirmed"
+    },
+    {
+      "q": "In a financial update heavily discussed on May 14, 2026, Capcom revealed that what staggering percentage of its total game sales are now digital?",
+      "options": [
+        "93%",
+        "85%",
+        "70%",
+        "99%"
+      ],
+      "a": 0,
+      "correctText": "93%",
+      "category": "Gaming",
+      "source": "https://primagames.com/news/capcom-reveals-93-percent-game-sales-digital"
+    },
+    {
+      "q": "On May 14, 2026, pre-orders officially went live for 'Endless Ragnarok', a major expansion bringing new characters and story to which Cygames action RPG?",
+      "options": [
+        "Granblue Fantasy: Relink",
+        "Genshin Impact",
+        "Tales of Arise",
+        "Monster Hunter Wilds"
+      ],
+      "a": 0,
+      "correctText": "Granblue Fantasy: Relink",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/granblue-fantasy-relink-endless-ragnarok-pre-orders-now-available"
+    },
+    {
+      "q": "Which Japanese developer reported a massive 1227% year-on-year operating profit growth in May 2026, driven by the global success of the 'Trails in the Sky 1st Chapter' remake?",
+      "options": [
+        "Nihon Falcom",
+        "Square Enix",
+        "Atlus",
+        "Koei Tecmo"
+      ],
+      "a": 0,
+      "correctText": "Nihon Falcom",
+      "category": "Gaming",
+      "source": "https://www.pushsquare.com/news/2026/05/overseas-trails-in-the-sky-1st-chapter-sales-propel-falcom-profits-to-insane-heights"
+    },
+    {
+      "q": "To celebrate recent updates, Stunlock Studios launched a Steam free-to-play weekend starting May 14, 2026, for which vampire survival action RPG?",
+      "options": [
+        "V Rising",
+        "Vampyr",
+        "Redfall",
+        "Bloodmasque"
+      ],
+      "a": 0,
+      "correctText": "V Rising",
+      "category": "Gaming",
+      "source": "https://worthplaying.com/article/2026/5/13/news/140660-v-rising-free-to-play-on-steam-this-weekend-discounted-to-boot/"
+    }
+  ]
+}

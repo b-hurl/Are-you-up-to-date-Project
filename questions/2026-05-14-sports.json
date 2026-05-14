@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In May 2026, which former NBA center and the league's first openly gay active player passed away at the age of 47?",
+      "options": [
+        "Jason Collins",
+        "John Amaechi",
+        "Robbie Rogers",
+        "Carl Nassib"
+      ],
+      "a": 0,
+      "correctText": "Jason Collins",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48753479/jason-collins-dies-47"
+    },
+    {
+      "q": "Which defenseman scored the overtime winner for the Colorado Avalanche in Game 5 to complete a comeback and eliminate the Minnesota Wild from the 2026 NHL playoffs?",
+      "options": [
+        "Brett Kulak",
+        "Cale Makar",
+        "Devon Toews",
+        "Josh Manson"
+      ],
+      "a": 0,
+      "correctText": "Brett Kulak",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nhl/news/3540316/kulak-nets-ot-winner-as-avalanche-complete-epic-comeback-to-oust-wild"
+    },
+    {
+      "q": "Which 45-year-old tennis legend announced they would partner with Hailey Baptiste to play in the 2026 French Open doubles?",
+      "options": [
+        "Venus Williams",
+        "Serena Williams",
+        "Martina Navratilova",
+        "Lindsay Davenport"
+      ],
+      "a": 0,
+      "correctText": "Venus Williams",
+      "category": "Sports",
+      "source": "https://www.espn.com/tennis/story/_/id/48759765/45-year-old-venus-williams-play-french-open-doubles"
+    },
+    {
+      "q": "Which actor, known for playing Dani Rojas in 'Ted Lasso', signed a contract with a professional USL soccer team in May 2026?",
+      "options": [
+        "Cristo Fernández",
+        "Phil Dunster",
+        "Brett Goldstein",
+        "Toheeb Jimoh"
+      ],
+      "a": 0,
+      "correctText": "Cristo Fernández",
+      "category": "Sports",
+      "source": "https://www.espn.com/soccer/story/_/id/48750339/cristo-fernandez-signs-usl-team"
+    },
+    {
+      "q": "Why was golfer Rory McIlroy forced to cut his practice round short at Aronimink Golf Club ahead of the 2026 PGA Championship?",
+      "options": [
+        "A blister on his toe",
+        "A strained lower back",
+        "A wrist injury",
+        "A migraine headache"
+      ],
+      "a": 0,
+      "correctText": "A blister on his toe",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48752933/mcilroy-cuts-pga-championship-practice-round-short-due-blister"
+    }
+  ]
+}
