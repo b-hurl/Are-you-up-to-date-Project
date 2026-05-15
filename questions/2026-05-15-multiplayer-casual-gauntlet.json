@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-15",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which Colorado Avalanche player scored the overtime winner to complete an epic 3-0 comeback and oust the Minnesota Wild in Game 5 of the 2026 playoffs?",
+      "options": [
+        "Brett Kulak",
+        "Nathan MacKinnon",
+        "Cale Makar",
+        "Mikko Rantanen"
+      ],
+      "a": 0,
+      "correctText": "Brett Kulak",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nhl/news/3540316/kulak-nets-ot-winner-as-avalanche-complete-epic-comeback-to-oust-wild"
+    },
+    {
+      "q": "Which highly anticipated underwater exploration sequel officially released in Early Access on Steam in May 2026?",
+      "options": [
+        "Subnautica 2",
+        "Endless Ocean 3",
+        "Abzu: The Deep",
+        "Soma: Rebirth"
+      ],
+      "a": 0,
+      "correctText": "Subnautica 2",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/1962700/announcements/detail/671743145166242160"
+    },
+    {
+      "q": "Why did golfer Rory McIlroy cut his PGA Championship practice round short in May 2026?",
+      "options": [
+        "A blister",
+        "A strained back",
+        "Food poisoning",
+        "A wrist sprain"
+      ],
+      "a": 0,
+      "correctText": "A blister",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48752933/mcilroy-cuts-pga-championship-practice-round-short-due-blister"
+    },
+    {
+      "q": "Rare's 'Sea of Thieves' recently faced an exodus of content creators due to community fallout surrounding what serious issue?",
+      "options": [
+        "Sexual misconduct allegations against a community member",
+        "The introduction of pay-to-win microtransactions",
+        "A mass false-ban wave affecting streamers",
+        "The cancellation of the game's competitive mode"
+      ],
+      "a": 0,
+      "correctText": "Sexual misconduct allegations against a community member",
+      "category": "Gaming",
+      "source": "https://kotaku.com/sea-of-thieves-faces-an-exodus-of-content-creators-after-community-fallout-around-serious-sexual-misconduct-allegations-2000696113"
+    },
+    {
+      "q": "Matt Reeves recently confirmed the cast for 'The Batman: Part II,' which will notably include which Marvel Cinematic Universe star heading to Gotham?",
+      "options": [
+        "Sebastian Stan",
+        "Chris Evans",
+        "Tom Holland",
+        "Paul Rudd"
+      ],
+      "a": 0,
+      "correctText": "Sebastian Stan",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/lists/the-batman-part-ii-cast/"
+    }
+  ]
+}

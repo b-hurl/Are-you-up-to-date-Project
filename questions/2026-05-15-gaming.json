@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Rare's 'Sea of Thieves' recently faced an exodus of content creators due to community fallout surrounding what serious issue?",
+      "options": [
+        "Sexual misconduct allegations against a community member",
+        "The introduction of pay-to-win microtransactions",
+        "A mass false-ban wave affecting streamers",
+        "The cancellation of the game's competitive mode"
+      ],
+      "a": 0,
+      "correctText": "Sexual misconduct allegations against a community member",
+      "category": "Gaming",
+      "source": "https://kotaku.com/sea-of-thieves-faces-an-exodus-of-content-creators-after-community-fallout-around-serious-sexual-misconduct-allegations-2000696113"
+    },
+    {
+      "q": "Which gaming studio recently faced backlash for an anti-piracy warning, with fans noting that their older 3DS titles currently cost up to $1,800 on eBay?",
+      "options": [
+        "Level-5",
+        "Game Freak",
+        "Square Enix",
+        "Atlus"
+      ],
+      "a": 0,
+      "correctText": "Level-5",
+      "category": "Gaming",
+      "source": "https://www.dexerto.com/gaming/japanese-game-studio-criticized-for-anti-piracy-warning-as-their-games-are-1800-on-ebay-3364965/"
+    },
+    {
+      "q": "In a May 2026 developer blog titled 'Launch, Learnings, and What’s Next', Bungie announced that Season 2 of Marathon will introduce experimental playlists focusing on what?",
+      "options": [
+        "PvE and PvP-lite modes",
+        "A 100-player Battle Royale mode",
+        "Third-person perspective gameplay",
+        "Offline split-screen co-op"
+      ],
+      "a": 0,
+      "correctText": "PvE and PvP-lite modes",
+      "category": "Gaming",
+      "source": "https://www.bungie.net/7/en/News/Article/launch_learning_whatsnext"
+    },
+    {
+      "q": "Which developer's upcoming Nintendo Switch 2 game 'The Duskbloods' had its 2026 release window officially reaffirmed by Kadokawa?",
+      "options": [
+        "FromSoftware",
+        "Monolith Soft",
+        "PlatinumGames",
+        "Capcom"
+      ],
+      "a": 0,
+      "correctText": "FromSoftware",
+      "category": "Gaming",
+      "source": "https://ssl4.eir-parts.net/doc/9468/ir_material_for_fiscal_ym13/202797/00.pdf"
+    },
+    {
+      "q": "Which highly anticipated underwater exploration sequel officially released in Early Access on Steam in May 2026?",
+      "options": [
+        "Subnautica 2",
+        "Endless Ocean 3",
+        "Abzu: The Deep",
+        "Soma: Rebirth"
+      ],
+      "a": 0,
+      "correctText": "Subnautica 2",
+      "category": "Gaming",
+      "source": "https://steamcommunity.com/games/1962700/announcements/detail/671743145166242160"
+    }
+  ]
+}

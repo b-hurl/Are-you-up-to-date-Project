@@ -1,0 +1,123 @@
+{
+  "date": "2026-05-15",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "On May 15, 2026, the UK health secretary resigned amid mounting pressure on which British Prime Minister to step down following a local elections defeat?",
+      "options": [
+        "Keir Starmer",
+        "Rishi Sunak",
+        "Boris Johnson",
+        "Theresa May"
+      ],
+      "a": 0,
+      "correctText": "Keir Starmer",
+      "category": "World",
+      "source": "https://www.bernama.com/en/world/news.php?id=322000"
+    },
+    {
+      "q": "A group of sex workers in Montreal are calling for a strike to demand better working conditions during which upcoming event?",
+      "options": [
+        "Grand Prix weekend",
+        "Montreal International Jazz Festival",
+        "Osheaga Music Festival",
+        "Just for Laughs Festival"
+      ],
+      "a": 0,
+      "correctText": "Grand Prix weekend",
+      "category": "Canada",
+      "source": "https://www.castanet.net/news/Canada/614459/Montreal-sex-workers-to-go-on-strike-during-Grand-Prix-weekend#614459"
+    },
+    {
+      "q": "The U.S. Drug Enforcement Administration stated it is 'keeping an eye' on which Canadian port as a conduit for chemicals used to make fentanyl?",
+      "options": [
+        "Port of Vancouver",
+        "Port of Montreal",
+        "Port of Halifax",
+        "Port of Prince Rupert"
+      ],
+      "a": 0,
+      "correctText": "Port of Vancouver",
+      "category": "Canada",
+      "source": "https://nationalpost.com/news/canada/u-s-drug-enforcement-keeping-an-eye-on-port-of-vancouver-as-conduit-for-chemicals-used-to-make-fentanyl"
+    },
+    {
+      "q": "Which automaker announced the indefinite suspension of its planned $15-billion electric vehicle plant in Ontario?",
+      "options": [
+        "Honda",
+        "Toyota",
+        "Ford",
+        "General Motors"
+      ],
+      "a": 0,
+      "correctText": "Honda",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/business/honda-suspends-ev-plant-indefinitely-9.7199175"
+    },
+    {
+      "q": "After a judge tossed a separation petition, Prime Minister Mark Carney stated that the 'best place' for which province is in Canada?",
+      "options": [
+        "Alberta",
+        "Quebec",
+        "Saskatchewan",
+        "British Columbia"
+      ],
+      "a": 0,
+      "correctText": "Alberta",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11849485/carney-alberta-referendum-court-ruling-reaction/"
+    },
+    {
+      "q": "Under Prime Minister Mark Carney's newly unveiled clean electricity strategy, Canada aims to double its electricity grid capacity by what year?",
+      "options": [
+        "2050",
+        "2035",
+        "2040",
+        "2060"
+      ],
+      "a": 0,
+      "correctText": "2050",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11849175/carney-clean-electricity-strategy/"
+    },
+    {
+      "q": "U.S. President Donald Trump and Chinese President Xi Jinping held a final round of summit talks on May 15, 2026, in which major city?",
+      "options": [
+        "Beijing",
+        "Shanghai",
+        "Hong Kong",
+        "Taipei"
+      ],
+      "a": 0,
+      "correctText": "Beijing",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-15-2026/322222"
+    },
+    {
+      "q": "Following his May 2026 meetings in Beijing, President Trump announced that China had agreed to increase purchases of which American commodity?",
+      "options": [
+        "Oil",
+        "Soybeans",
+        "Semiconductors",
+        "Corn"
+      ],
+      "a": 0,
+      "correctText": "Oil",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/world/morning-briefing-may-15-2026/322222"
+    },
+    {
+      "q": "On May 15, 2026, a third round of US-mediated talks between Israel and Lebanon wrapped up after a full day of negotiations at which U.S. executive department?",
+      "options": [
+        "State Department",
+        "Department of Defense",
+        "Department of Homeland Security",
+        "Department of Justice"
+      ],
+      "a": 0,
+      "correctText": "State Department",
+      "category": "World",
+      "source": "https://www.aa.com.tr/en/americas/us-says-israel-lebanon-talks-at-state-department-productive-and-positive/321111"
+    }
+  ]
+}

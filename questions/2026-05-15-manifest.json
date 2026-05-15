@@ -1,0 +1,34 @@
+[
+  {
+    "name": "sports",
+    "count": 5
+  },
+  {
+    "name": "gaming",
+    "count": 5
+  },
+  {
+    "name": "entertainment",
+    "count": 5
+  },
+  {
+    "name": "world",
+    "count": 4
+  },
+  {
+    "name": "canada",
+    "count": 5
+  },
+  {
+    "name": "solo-casual-gauntlet",
+    "count": 10
+  },
+  {
+    "name": "multiplayer-casual-gauntlet",
+    "count": 5
+  },
+  {
+    "name": "solo-professional-gauntlet",
+    "count": 9
+  }
+]

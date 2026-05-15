@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-15",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Peter Jackson revealed that he spent a year developing a new 'Lord of the Rings' movie pitch with which late-night host before his show was canceled by CBS?",
+      "options": [
+        "Stephen Colbert",
+        "Jimmy Kimmel",
+        "Seth Meyers",
+        "John Oliver"
+      ],
+      "a": 0,
+      "correctText": "Stephen Colbert",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/stephen-colbert-pitched-lord-of-the-rings-before-late-show-canceled-1236748427/"
+    },
+    {
+      "q": "Which developer's upcoming Nintendo Switch 2 game 'The Duskbloods' had its 2026 release window officially reaffirmed by Kadokawa?",
+      "options": [
+        "FromSoftware",
+        "Monolith Soft",
+        "PlatinumGames",
+        "Capcom"
+      ],
+      "a": 0,
+      "correctText": "FromSoftware",
+      "category": "Gaming",
+      "source": "https://ssl4.eir-parts.net/doc/9468/ir_material_for_fiscal_ym13/202797/00.pdf"
+    },
+    {
+      "q": "French-American entertainer Claudine Longet passed away at 84. Her career was famously derailed after she was convicted of the 1976 fatal shooting of which Olympic skier?",
+      "options": [
+        "Spider Sabich",
+        "Bode Miller",
+        "Phil Mahre",
+        "Tommy Moe"
+      ],
+      "a": 0,
+      "correctText": "Spider Sabich",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/claudine-longet-dead-shot-olympian-spider-sabich-1236749043/"
+    },
+    {
+      "q": "Which gaming studio recently faced backlash for an anti-piracy warning, with fans noting that their older 3DS titles currently cost up to $1,800 on eBay?",
+      "options": [
+        "Level-5",
+        "Game Freak",
+        "Square Enix",
+        "Atlus"
+      ],
+      "a": 0,
+      "correctText": "Level-5",
+      "category": "Gaming",
+      "source": "https://www.dexerto.com/gaming/japanese-game-studio-criticized-for-anti-piracy-warning-as-their-games-are-1800-on-ebay-3364965/"
+    },
+    {
+      "q": "Which unconventional sport, originating from a Tampa man's bachelor party, was announced in May 2026 to be broadcast on ESPN?",
+      "options": [
+        "Soap hockey",
+        "Slip 'N Slide bowling",
+        "Inflatable jousting",
+        "Tarp surfing"
+      ],
+      "a": 0,
+      "correctText": "Soap hockey",
+      "category": "Sports",
+      "source": "https://www.tampabay.com/life-culture/2026/05/14/soap-hockey-tampa-espn-ocho-riverview/"
+    },
+    {
+      "q": "Amazon MGM Studios has officially started auditions for the next James Bond, tapping which veteran casting director to lead the search?",
+      "options": [
+        "Nina Gold",
+        "Carmen Cuba",
+        "Sarah Halley Finn",
+        "Francine Maisler"
+      ],
+      "a": 0,
+      "correctText": "Nina Gold",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/james-bond-auditions-start-casting-director-nina-gold-1236749108/"
+    },
+    {
+      "q": "Which artists were announced on May 15, 2026, to headline a Super Bowl-style halftime show for the 2026 FIFA World Cup final?",
+      "options": [
+        "Madonna, Shakira, and BTS",
+        "Taylor Swift, Bad Bunny, and Drake",
+        "Beyoncé, The Weeknd, and Dua Lipa",
+        "Rihanna, Ed Sheeran, and Coldplay"
+      ],
+      "a": 0,
+      "correctText": "Madonna, Shakira, and BTS",
+      "category": "Sports",
+      "source": "https://apnews.com/article/world-cup-final-halftime-show-f08a3cc88e5c1dfccf0517941458df2f"
+    },
+    {
+      "q": "Which 'Stranger Things' star was recently announced to be joining Donnie Yen in the upcoming 'John Wick' spinoff film 'Caine'?",
+      "options": [
+        "Dacre Montgomery",
+        "Joe Keery",
+        "Charlie Heaton",
+        "Finn Wolfhard"
+      ],
+      "a": 0,
+      "correctText": "Dacre Montgomery",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/dacre-montgomery-joins-donnie-yen-john-wick-spinoff-caine-1236904802/"
+    },
+    {
+      "q": "In a May 2026 developer blog titled 'Launch, Learnings, and What’s Next', Bungie announced that Season 2 of Marathon will introduce experimental playlists focusing on what?",
+      "options": [
+        "PvE and PvP-lite modes",
+        "A 100-player Battle Royale mode",
+        "Third-person perspective gameplay",
+        "Offline split-screen co-op"
+      ],
+      "a": 0,
+      "correctText": "PvE and PvP-lite modes",
+      "category": "Gaming",
+      "source": "https://www.bungie.net/7/en/News/Article/launch_learning_whatsnext"
+    },
+    {
+      "q": "During a game on May 14, 2026, a fan was hospitalized after falling into the visiting team's bullpen at which MLB team's stadium?",
+      "options": [
+        "Chicago White Sox",
+        "New York Mets",
+        "Houston Astros",
+        "Boston Red Sox"
+      ],
+      "a": 0,
+      "correctText": "Chicago White Sox",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48764264/fan-white-sox-game-hospitalized-fall-visiting-bullpen"
+    }
+  ]
+}

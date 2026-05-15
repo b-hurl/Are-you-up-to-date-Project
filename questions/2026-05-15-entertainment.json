@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Amazon MGM Studios has officially started auditions for the next James Bond, tapping which veteran casting director to lead the search?",
+      "options": [
+        "Nina Gold",
+        "Carmen Cuba",
+        "Sarah Halley Finn",
+        "Francine Maisler"
+      ],
+      "a": 0,
+      "correctText": "Nina Gold",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/james-bond-auditions-start-casting-director-nina-gold-1236749108/"
+    },
+    {
+      "q": "Matt Reeves recently confirmed the cast for 'The Batman: Part II,' which will notably include which Marvel Cinematic Universe star heading to Gotham?",
+      "options": [
+        "Sebastian Stan",
+        "Chris Evans",
+        "Tom Holland",
+        "Paul Rudd"
+      ],
+      "a": 0,
+      "correctText": "Sebastian Stan",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/lists/the-batman-part-ii-cast/"
+    },
+    {
+      "q": "French-American entertainer Claudine Longet passed away at 84. Her career was famously derailed after she was convicted of the 1976 fatal shooting of which Olympic skier?",
+      "options": [
+        "Spider Sabich",
+        "Bode Miller",
+        "Phil Mahre",
+        "Tommy Moe"
+      ],
+      "a": 0,
+      "correctText": "Spider Sabich",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/claudine-longet-dead-shot-olympian-spider-sabich-1236749043/"
+    },
+    {
+      "q": "Peter Jackson revealed that he spent a year developing a new 'Lord of the Rings' movie pitch with which late-night host before his show was canceled by CBS?",
+      "options": [
+        "Stephen Colbert",
+        "Jimmy Kimmel",
+        "Seth Meyers",
+        "John Oliver"
+      ],
+      "a": 0,
+      "correctText": "Stephen Colbert",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/stephen-colbert-pitched-lord-of-the-rings-before-late-show-canceled-1236748427/"
+    },
+    {
+      "q": "Which 'Stranger Things' star was recently announced to be joining Donnie Yen in the upcoming 'John Wick' spinoff film 'Caine'?",
+      "options": [
+        "Dacre Montgomery",
+        "Joe Keery",
+        "Charlie Heaton",
+        "Finn Wolfhard"
+      ],
+      "a": 0,
+      "correctText": "Dacre Montgomery",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/dacre-montgomery-joins-donnie-yen-john-wick-spinoff-caine-1236904802/"
+    }
+  ]
+}

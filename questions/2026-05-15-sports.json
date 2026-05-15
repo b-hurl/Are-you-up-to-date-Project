@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which Colorado Avalanche player scored the overtime winner to complete an epic 3-0 comeback and oust the Minnesota Wild in Game 5 of the 2026 playoffs?",
+      "options": [
+        "Brett Kulak",
+        "Nathan MacKinnon",
+        "Cale Makar",
+        "Mikko Rantanen"
+      ],
+      "a": 0,
+      "correctText": "Brett Kulak",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nhl/news/3540316/kulak-nets-ot-winner-as-avalanche-complete-epic-comeback-to-oust-wild"
+    },
+    {
+      "q": "During a game on May 14, 2026, a fan was hospitalized after falling into the visiting team's bullpen at which MLB team's stadium?",
+      "options": [
+        "Chicago White Sox",
+        "New York Mets",
+        "Houston Astros",
+        "Boston Red Sox"
+      ],
+      "a": 0,
+      "correctText": "Chicago White Sox",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48764264/fan-white-sox-game-hospitalized-fall-visiting-bullpen"
+    },
+    {
+      "q": "Which artists were announced on May 15, 2026, to headline a Super Bowl-style halftime show for the 2026 FIFA World Cup final?",
+      "options": [
+        "Madonna, Shakira, and BTS",
+        "Taylor Swift, Bad Bunny, and Drake",
+        "Beyoncé, The Weeknd, and Dua Lipa",
+        "Rihanna, Ed Sheeran, and Coldplay"
+      ],
+      "a": 0,
+      "correctText": "Madonna, Shakira, and BTS",
+      "category": "Sports",
+      "source": "https://apnews.com/article/world-cup-final-halftime-show-f08a3cc88e5c1dfccf0517941458df2f"
+    },
+    {
+      "q": "Which unconventional sport, originating from a Tampa man's bachelor party, was announced in May 2026 to be broadcast on ESPN?",
+      "options": [
+        "Soap hockey",
+        "Slip 'N Slide bowling",
+        "Inflatable jousting",
+        "Tarp surfing"
+      ],
+      "a": 0,
+      "correctText": "Soap hockey",
+      "category": "Sports",
+      "source": "https://www.tampabay.com/life-culture/2026/05/14/soap-hockey-tampa-espn-ocho-riverview/"
+    },
+    {
+      "q": "Why did golfer Rory McIlroy cut his PGA Championship practice round short in May 2026?",
+      "options": [
+        "A blister",
+        "A strained back",
+        "Food poisoning",
+        "A wrist sprain"
+      ],
+      "a": 0,
+      "correctText": "A blister",
+      "category": "Sports",
+      "source": "https://www.espn.com/golf/story/_/id/48752933/mcilroy-cuts-pga-championship-practice-round-short-due-blister"
+    }
+  ]
+}

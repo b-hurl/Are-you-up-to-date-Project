@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "After a judge tossed a separation petition, Prime Minister Mark Carney stated that the 'best place' for which province is in Canada?",
+      "options": [
+        "Alberta",
+        "Quebec",
+        "Saskatchewan",
+        "British Columbia"
+      ],
+      "a": 0,
+      "correctText": "Alberta",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11849485/carney-alberta-referendum-court-ruling-reaction/"
+    },
+    {
+      "q": "A group of sex workers in Montreal are calling for a strike to demand better working conditions during which upcoming event?",
+      "options": [
+        "Grand Prix weekend",
+        "Montreal International Jazz Festival",
+        "Osheaga Music Festival",
+        "Just for Laughs Festival"
+      ],
+      "a": 0,
+      "correctText": "Grand Prix weekend",
+      "category": "Canada",
+      "source": "https://www.castanet.net/news/Canada/614459/Montreal-sex-workers-to-go-on-strike-during-Grand-Prix-weekend#614459"
+    },
+    {
+      "q": "Which automaker announced the indefinite suspension of its planned $15-billion electric vehicle plant in Ontario?",
+      "options": [
+        "Honda",
+        "Toyota",
+        "Ford",
+        "General Motors"
+      ],
+      "a": 0,
+      "correctText": "Honda",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/business/honda-suspends-ev-plant-indefinitely-9.7199175"
+    },
+    {
+      "q": "Under Prime Minister Mark Carney's newly unveiled clean electricity strategy, Canada aims to double its electricity grid capacity by what year?",
+      "options": [
+        "2050",
+        "2035",
+        "2040",
+        "2060"
+      ],
+      "a": 0,
+      "correctText": "2050",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11849175/carney-clean-electricity-strategy/"
+    },
+    {
+      "q": "The U.S. Drug Enforcement Administration stated it is 'keeping an eye' on which Canadian port as a conduit for chemicals used to make fentanyl?",
+      "options": [
+        "Port of Vancouver",
+        "Port of Montreal",
+        "Port of Halifax",
+        "Port of Prince Rupert"
+      ],
+      "a": 0,
+      "correctText": "Port of Vancouver",
+      "category": "Canada",
+      "source": "https://nationalpost.com/news/canada/u-s-drug-enforcement-keeping-an-eye-on-port-of-vancouver-as-conduit-for-chemicals-used-to-make-fentanyl"
+    }
+  ]
+}
