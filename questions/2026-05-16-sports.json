@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 2026 report on World Cup broadcasting rights, which Indian media giant owned the rights for the Qatar tournament but failed to turn a profit?",
+      "options": [
+        "Viacom18",
+        "Sony Pictures Networks",
+        "Star Sports",
+        "Zee Entertainment"
+      ],
+      "a": 0,
+      "correctText": "Viacom18",
+      "category": "Sports",
+      "source": "https://www.dw.com/en/world-cup-market-in-india-and-china-fifa-got-greedy/a-77131796"
+    },
+    {
+      "q": "Following a scary incident at a Chicago White Sox game in May 2026, the team announced that a hospitalized fan was doing well after falling into what area of the stadium?",
+      "options": [
+        "The visiting bullpen",
+        "The home dugout",
+        "The center field bleachers",
+        "The right field seats"
+      ],
+      "a": 0,
+      "correctText": "The visiting bullpen",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48773240/white-sox-say-fan-fell-bullpen-doing-well"
+    },
+    {
+      "q": "In May 2026, FIFA announced that the first-ever Super Bowl-style halftime show at the World Cup final will feature which three musical acts?",
+      "options": [
+        "Madonna, Shakira and BTS",
+        "Taylor Swift, Bad Bunny and Coldplay",
+        "Dua Lipa, The Weeknd and Blackpink",
+        "Beyoncé, Ed Sheeran and Justin Bieber"
+      ],
+      "a": 0,
+      "correctText": "Madonna, Shakira and BTS",
+      "category": "Sports",
+      "source": "https://apnews.com/article/world-cup-final-halftime-show-f08a3cc88e5c1dfccf0517941458df2f"
+    },
+    {
+      "q": "According to league sources in May 2026, which two Golden State Warriors assistant coaches are departing the franchise?",
+      "options": [
+        "Terry Stotts and Jerry Stackhouse",
+        "Mike Brown and Kenny Atkinson",
+        "Luke Walton and Jarron Collins",
+        "Darvin Ham and Charles Lee"
+      ],
+      "a": 0,
+      "correctText": "Terry Stotts and Jerry Stackhouse",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/40149021/warriors-assistants-terry-stotts-jerry-stackhouse-departing"
+    },
+    {
+      "q": "During the Philadelphia Phillies' extra-inning game against the Pittsburgh Pirates on May 15, 2026, which Phillies player hit his 20th home run of the season?",
+      "options": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "J.T. Realmuto",
+        "Trea Turner"
+      ],
+      "a": 0,
+      "correctText": "Kyle Schwarber",
+      "category": "Sports",
+      "source": "https://www.mlb.com/phillies/news/kyle-schwarber-hits-20th-homer-in-phillies-extra-inning-win"
+    }
+  ]
+}

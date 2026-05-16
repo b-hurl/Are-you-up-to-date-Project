@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-16",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Elden Ring publisher Kadokawa's board of directors recently opposed a proposal from an activist shareholder to remove Takeshi Natsuno from which position?",
+      "options": [
+        "President and CEO",
+        "Head of FromSoftware",
+        "Chief Financial Officer",
+        "Lead Game Director"
+      ],
+      "a": 0,
+      "correctText": "President and CEO",
+      "category": "Gaming",
+      "source": "https://automaton-media.com/en/news/kadokawa-opposes-activist-shareholders-proposal-to-remove-current-president-and-ceo/"
+    },
+    {
+      "q": "In May 2026, German filmmaker Uwe Boll announced he would be directing '23 Years Later', an unofficial sequel to which of his previous video game adaptations?",
+      "options": [
+        "House of the Dead",
+        "Alone in the Dark",
+        "BloodRayne",
+        "Postal"
+      ],
+      "a": 0,
+      "correctText": "House of the Dead",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/uwe-boll-directing-unofficial-house-of-the-dead-sequel-1236595671/"
+    },
+    {
+      "q": "In May 2026, Rick Riordan announced he is collaborating with co-authors on four new middle-grade novels set in which fictional location?",
+      "options": [
+        "Camp Half-Blood",
+        "Hogwarts",
+        "Camp Jupiter",
+        "The Capitol"
+      ],
+      "a": 0,
+      "correctText": "Camp Half-Blood",
+      "category": "Books",
+      "source": "https://www.altoonamirror.com/news/2026/05/16/riordan-to-unveil-new-camp-half-blood-novels/"
+    },
+    {
+      "q": "Jill Curzon, whose death was reported in May 2026, was best known for her role as Louise in which 1966 'Doctor Who' spin-off film?",
+      "options": [
+        "Daleks' Invasion Earth 2150 A.D.",
+        "Dr. Who and the Daleks",
+        "The Power of the Daleks",
+        "The Evil of the Daleks"
+      ],
+      "a": 0,
+      "correctText": "Daleks' Invasion Earth 2150 A.D.",
+      "category": "Entertainment",
+      "source": "https://www.independent.co.uk/arts-entertainment/films/news/jill-curzon-death-doctor-who-b2977472.html"
+    },
+    {
+      "q": "Following a scary incident at a Chicago White Sox game in May 2026, the team announced that a hospitalized fan was doing well after falling into what area of the stadium?",
+      "options": [
+        "The visiting bullpen",
+        "The home dugout",
+        "The center field bleachers",
+        "The right field seats"
+      ],
+      "a": 0,
+      "correctText": "The visiting bullpen",
+      "category": "Sports",
+      "source": "https://www.espn.com/mlb/story/_/id/48773240/white-sox-say-fan-fell-bullpen-doing-well"
+    },
+    {
+      "q": "During a '60 Minutes' interview airing in May 2026, what upcoming film did Christopher Nolan state 'needed to be the biggest film' he has ever made?",
+      "options": [
+        "The Odyssey",
+        "Oppenheimer",
+        "Tenet",
+        "Interstellar"
+      ],
+      "a": 0,
+      "correctText": "The Odyssey",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/christopher-nolan-the-odyssey-70mm-imax-editing-process-1236750124/"
+    },
+    {
+      "q": "According to a May 2026 report on World Cup broadcasting rights, which Indian media giant owned the rights for the Qatar tournament but failed to turn a profit?",
+      "options": [
+        "Viacom18",
+        "Sony Pictures Networks",
+        "Star Sports",
+        "Zee Entertainment"
+      ],
+      "a": 0,
+      "correctText": "Viacom18",
+      "category": "Sports",
+      "source": "https://www.dw.com/en/world-cup-market-in-india-and-china-fifa-got-greedy/a-77131796"
+    },
+    {
+      "q": "Public libraries in which Canadian province expressed disappointment in May 2026 following the passing of Bill 28, which restricts access to certain library materials?",
+      "options": [
+        "Alberta",
+        "Ontario",
+        "British Columbia",
+        "Quebec"
+      ],
+      "a": 0,
+      "correctText": "Alberta",
+      "category": "Books",
+      "source": "https://www.caplibraries.ca/newsroom/alberta-public-libraries-disappointed-with-passing-of-bill-28"
+    },
+    {
+      "q": "How many copies did Subnautica 2 sell in its first 12 hours of Early Access in May 2026?",
+      "options": [
+        "Two million",
+        "One million",
+        "Five million",
+        "Half a million"
+      ],
+      "a": 0,
+      "correctText": "Two million",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/subnautica-2-early-access-sales-top-two-million-in-12-hours"
+    },
+    {
+      "q": "Which gaming consumer rights campaign backed California bill AB 1921, which recently passed a key hurdle to keep games playable after server shutdowns? [1.1.1]",
+      "options": [
+        "Stop Killing Games",
+        "Save Our Servers",
+        "Game Preservation Society",
+        "Players First Initiative"
+      ],
+      "a": 0,
+      "correctText": "Stop Killing Games",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/california-bill-pushing-to-keep-games-playable-after-server-shutdowns-passes-key-hurdle-paving-way-for-full-assembly-vote"
+    }
+  ]
+}

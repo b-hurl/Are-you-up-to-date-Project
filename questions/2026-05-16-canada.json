@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which major VPN provider stated it would consider leaving Canada over the federal government's proposed lawful access bill (Bill C-22)?",
+      "options": [
+        "NordVPN",
+        "ExpressVPN",
+        "CyberGhost",
+        "Surfshark"
+      ],
+      "a": 0,
+      "correctText": "NordVPN",
+      "category": "Canada",
+      "source": "https://toronto.citynews.ca/2026/05/15/major-vpn-provider-says-it-could-leave-canada-over-lawful-access-bill/"
+    },
+    {
+      "q": "B.C. Premier David Eby accused Ottawa of rewarding Alberta's 'bad behaviour' after an agreement was made to advance what type of infrastructure project?",
+      "options": [
+        "A West Coast oil pipeline",
+        "A high-speed rail network",
+        "A nuclear power plant",
+        "A trans-provincial highway"
+      ],
+      "a": 0,
+      "correctText": "A West Coast oil pipeline",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11852386/eby-pipeline-alberta-smith-carney/"
+    },
+    {
+      "q": "Canadians who registered for a class-action settlement began receiving bank account payouts in May 2026 related to the price-fixing of which grocery item?",
+      "options": [
+        "Bread",
+        "Milk",
+        "Eggs",
+        "Ground beef"
+      ],
+      "a": 0,
+      "correctText": "Bread",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11851421/bread-price-fixing-settlement-loblaw/"
+    },
+    {
+      "q": "Governor General Mary Simon approved the termination of two Order of Canada appointments, including Jacques Lamarre and which other former honouree convicted of crimes in Nepal?",
+      "options": [
+        "Peter Dalglish",
+        "Craig Kielburger",
+        "Marc Kielburger",
+        "Jean Vanier"
+      ],
+      "a": 0,
+      "correctText": "Peter Dalglish",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/order-of-canada-terminations-9.7201491"
+    },
+    {
+      "q": "Mark Carney and Alberta Premier Danielle Smith reached an energy agreement that could see the start of construction on what major project by 2027?",
+      "options": [
+        "An oil pipeline to the West Coast",
+        "A massive carbon capture facility",
+        "A new hydroelectric dam",
+        "A high-speed rail link to Calgary"
+      ],
+      "a": 0,
+      "correctText": "An oil pipeline to the West Coast",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/carney-smith-energy-announcement-mou-9.7200652"
+    }
+  ]
+}

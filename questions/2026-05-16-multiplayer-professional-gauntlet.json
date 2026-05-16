@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-16",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "According to breakthrough research by a team of UK and Japanese scientists published in May 2026, friendly skin bacteria could hold the key to stopping the inflammatory chaos of which condition?",
+      "options": [
+        "Eczema",
+        "Psoriasis",
+        "Rosacea",
+        "Acne"
+      ],
+      "a": 0,
+      "correctText": "Eczema",
+      "category": "Science",
+      "source": "https://www.manchester.ac.uk/about/news/bug-hope-to-beat-eczema/"
+    },
+    {
+      "q": "A May 2026 investigation identified 13 victims of fatal U.S. military boat strikes during a campaign targeting what type of smuggling in the Caribbean and eastern Pacific?",
+      "options": [
+        "Narcotics",
+        "Weapons",
+        "Exotic animals",
+        "Counterfeit currency"
+      ],
+      "a": 0,
+      "correctText": "Narcotics",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/15/us-military-airstrikes-caribbean-pacific-victim-identities"
+    },
+    {
+      "q": "Following a May 2026 summit with Chinese President Xi Jinping, Donald Trump told reporters that which two entities should 'both cool it'?",
+      "options": [
+        "China and Taiwan",
+        "Russia and Ukraine",
+        "Israel and Iran",
+        "North and South Korea"
+      ],
+      "a": 0,
+      "correctText": "China and Taiwan",
+      "category": "World",
+      "source": "https://www.cnbc.com/2026/05/15/trump-china-xi-taiwan.html"
+    },
+    {
+      "q": "Governor General Mary Simon approved the termination of two Order of Canada appointments, including Jacques Lamarre and which other former honouree convicted of crimes in Nepal?",
+      "options": [
+        "Peter Dalglish",
+        "Craig Kielburger",
+        "Marc Kielburger",
+        "Jean Vanier"
+      ],
+      "a": 0,
+      "correctText": "Peter Dalglish",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/order-of-canada-terminations-9.7201491"
+    },
+    {
+      "q": "B.C. Premier David Eby accused Ottawa of rewarding Alberta's 'bad behaviour' after an agreement was made to advance what type of infrastructure project?",
+      "options": [
+        "A West Coast oil pipeline",
+        "A high-speed rail network",
+        "A nuclear power plant",
+        "A trans-provincial highway"
+      ],
+      "a": 0,
+      "correctText": "A West Coast oil pipeline",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11852386/eby-pipeline-alberta-smith-carney/"
+    },
+    {
+      "q": "In May 2026, a judge declared a mistrial due to a deadlocked jury in the third Manhattan sex crimes trial of which former Hollywood mogul?",
+      "options": [
+        "Harvey Weinstein",
+        "Kevin Spacey",
+        "Bill Cosby",
+        "Bryan Singer"
+      ],
+      "a": 0,
+      "correctText": "Harvey Weinstein",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/jury-deadlocked-harvey-weinsteins-third-manhattan-sex-crimes-trial-rcna345327"
+    },
+    {
+      "q": "During a regional Lunch and Learn event reported on May 16, 2026, state and business leaders discussed the future of data centers, including a proposed $4 billion campus, in which U.S. state?",
+      "options": [
+        "West Virginia",
+        "Ohio",
+        "Kentucky",
+        "Pennsylvania"
+      ],
+      "a": 0,
+      "correctText": "West Virginia",
+      "category": "Business",
+      "source": "https://www.newsandsentinel.com/news/business/2026/05/state-developers-discuss-future-of-data-centers-in-west-virginia-during-eastern-panhandle-lunch-and-learn/"
+    },
+    {
+      "q": "Business news headlines on May 16, 2026, highlighted that global stock markets dropped from records largely due to worries about the rising price of what commodity rattling the bond market?",
+      "options": [
+        "Oil",
+        "Gold",
+        "Lumber",
+        "Lithium"
+      ],
+      "a": 0,
+      "correctText": "Oil",
+      "category": "Business",
+      "source": "https://www.tribtoday.com/news/business/2026/05/stock-markets-worldwide-drop-from-records-as-worries-about-oil-prices-rattle-the-bond-market/"
+    },
+    {
+      "q": "In May 2026, an explosion and massive fire sparked a \"mass casualty\" response at a lumber mill located in which U.S. state?",
+      "options": [
+        "Maine",
+        "Oregon",
+        "Washington",
+        "North Carolina"
+      ],
+      "a": 0,
+      "correctText": "Maine",
+      "category": "Usa",
+      "source": "https://www.the-independent.com/news/world/americas/maine-mass-casualty-incident-lumber-yard-explosion-b2977606.html"
+    },
+    {
+      "q": "Livestreamer Dalton Eatherly, known online as \"Chud the Builder,\" had his bond set at $1.2 million in May 2026 following a shooting outside a courthouse in which state?",
+      "options": [
+        "Tennessee",
+        "Texas",
+        "Florida",
+        "Georgia"
+      ],
+      "a": 0,
+      "correctText": "Tennessee",
+      "category": "Usa",
+      "source": "https://www.tennessean.com/story/news/crime/2026/05/15/dalton-eatherly-chud-the-builder-bond-clarksville-courthouse-shooting/90096003007/"
+    }
+  ]
+}

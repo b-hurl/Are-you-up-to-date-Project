@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "On May 16, 2026, industrial computer maker Ennoconn Corp announced an expected sequential revenue bump driven by rising demand for what type of solutions?",
+      "options": [
+        "Smart retail products",
+        "Self-driving vehicle chips",
+        "Agricultural drones",
+        "Virtual reality headsets"
+      ],
+      "a": 0,
+      "correctText": "Smart retail products",
+      "category": "Business",
+      "source": "https://www.taipeitimes.com/News/biz/archives/2026/05/16/2003817924"
+    },
+    {
+      "q": "During a regional Lunch and Learn event reported on May 16, 2026, state and business leaders discussed the future of data centers, including a proposed $4 billion campus, in which U.S. state?",
+      "options": [
+        "West Virginia",
+        "Ohio",
+        "Kentucky",
+        "Pennsylvania"
+      ],
+      "a": 0,
+      "correctText": "West Virginia",
+      "category": "Business",
+      "source": "https://www.newsandsentinel.com/news/business/2026/05/state-developers-discuss-future-of-data-centers-in-west-virginia-during-eastern-panhandle-lunch-and-learn/"
+    },
+    {
+      "q": "Speaking at a technology forum and reported on May 16, 2026, an innovation economy adviser stated that the artificial intelligence shift may upend small businesses by fueling the rise of what?",
+      "options": [
+        "One-person companies",
+        "Fully autonomous corporations",
+        "Government-run startups",
+        "Zero-revenue nonprofits"
+      ],
+      "a": 0,
+      "correctText": "One-person companies",
+      "category": "Business",
+      "source": "https://www.digitimes.com/news/a20260516VL203/ai-one-person-company-small-business.html"
+    },
+    {
+      "q": "Business news headlines on May 16, 2026, highlighted that global stock markets dropped from records largely due to worries about the rising price of what commodity rattling the bond market?",
+      "options": [
+        "Oil",
+        "Gold",
+        "Lumber",
+        "Lithium"
+      ],
+      "a": 0,
+      "correctText": "Oil",
+      "category": "Business",
+      "source": "https://www.tribtoday.com/news/business/2026/05/stock-markets-worldwide-drop-from-records-as-worries-about-oil-prices-rattle-the-bond-market/"
+    }
+  ]
+}

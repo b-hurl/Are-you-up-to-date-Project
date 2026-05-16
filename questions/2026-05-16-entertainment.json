@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "During a '60 Minutes' interview airing in May 2026, what upcoming film did Christopher Nolan state 'needed to be the biggest film' he has ever made?",
+      "options": [
+        "The Odyssey",
+        "Oppenheimer",
+        "Tenet",
+        "Interstellar"
+      ],
+      "a": 0,
+      "correctText": "The Odyssey",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/christopher-nolan-the-odyssey-70mm-imax-editing-process-1236750124/"
+    },
+    {
+      "q": "Known as 'The Godfather of Movie Advertising' for his work on iconic movie posters like 'Jaws', who died in Atlanta in May 2026 at age 87?",
+      "options": [
+        "Tony Seiniger",
+        "Drew Struzan",
+        "Saul Bass",
+        "Bill Gold"
+      ],
+      "a": 0,
+      "correctText": "Tony Seiniger",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/tony-seiniger-dead-poster-designer-1236750451/"
+    },
+    {
+      "q": "According to announcements made in May 2026, Maggie Gyllenhaal's film 'The Bride!' will make its global streaming debut on which platform on May 22?",
+      "options": [
+        "HBO Max",
+        "Netflix",
+        "Hulu",
+        "Disney+"
+      ],
+      "a": 0,
+      "correctText": "HBO Max",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/the-bride-streaming-premiere-date-hbo-max-1236906373/"
+    },
+    {
+      "q": "In May 2026, German filmmaker Uwe Boll announced he would be directing '23 Years Later', an unofficial sequel to which of his previous video game adaptations?",
+      "options": [
+        "House of the Dead",
+        "Alone in the Dark",
+        "BloodRayne",
+        "Postal"
+      ],
+      "a": 0,
+      "correctText": "House of the Dead",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/uwe-boll-directing-unofficial-house-of-the-dead-sequel-1236595671/"
+    },
+    {
+      "q": "Jill Curzon, whose death was reported in May 2026, was best known for her role as Louise in which 1966 'Doctor Who' spin-off film?",
+      "options": [
+        "Daleks' Invasion Earth 2150 A.D.",
+        "Dr. Who and the Daleks",
+        "The Power of the Daleks",
+        "The Evil of the Daleks"
+      ],
+      "a": 0,
+      "correctText": "Daleks' Invasion Earth 2150 A.D.",
+      "category": "Entertainment",
+      "source": "https://www.independent.co.uk/arts-entertainment/films/news/jill-curzon-death-doctor-who-b2977472.html"
+    }
+  ]
+}

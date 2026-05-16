@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-16",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which recently canceled Amazon game was revealed in a May 2026 report to have forced its developers to pivot to a Generative AI mandate before they were laid off?",
+      "options": [
+        "Project Trident",
+        "Project Crucible",
+        "Project Aeternum",
+        "Project Valhalla"
+      ],
+      "a": 0,
+      "correctText": "Project Trident",
+      "category": "Gaming",
+      "source": "https://www.eurogamer.net/amazon-ai-game-project-trident-laid-off-anyway-report"
+    },
+    {
+      "q": "According to league sources in May 2026, which two Golden State Warriors assistant coaches are departing the franchise?",
+      "options": [
+        "Terry Stotts and Jerry Stackhouse",
+        "Mike Brown and Kenny Atkinson",
+        "Luke Walton and Jarron Collins",
+        "Darvin Ham and Charles Lee"
+      ],
+      "a": 0,
+      "correctText": "Terry Stotts and Jerry Stackhouse",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/40149021/warriors-assistants-terry-stotts-jerry-stackhouse-departing"
+    },
+    {
+      "q": "In May 2026, which classic novel was banned by a Tennessee school system amidst a wave of conservative book challenges?",
+      "options": [
+        "Roots",
+        "To Kill a Mockingbird",
+        "The Color Purple",
+        "Beloved"
+      ],
+      "a": 0,
+      "correctText": "Roots",
+      "category": "Books",
+      "source": "https://www.yahoo.com/news/articles/tennessee-school-system-bans-roots-145549693.html"
+    },
+    {
+      "q": "Known as 'The Godfather of Movie Advertising' for his work on iconic movie posters like 'Jaws', who died in Atlanta in May 2026 at age 87?",
+      "options": [
+        "Tony Seiniger",
+        "Drew Struzan",
+        "Saul Bass",
+        "Bill Gold"
+      ],
+      "a": 0,
+      "correctText": "Tony Seiniger",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/tony-seiniger-dead-poster-designer-1236750451/"
+    },
+    {
+      "q": "In mid-May 2026, authors Shannon Baker, Erica Ruth Neubauer, and Jess Lourey participated in an author panel and signing event at Lykke Books as part of which book tour?",
+      "options": [
+        "Women of Mystery Tour",
+        "Midwest Thrillers Tour",
+        "Sleuths and Secrets Tour",
+        "Minnesota Crime Writers Tour"
+      ],
+      "a": 0,
+      "correctText": "Women of Mystery Tour",
+      "category": "Books",
+      "source": "https://www.nujournal.com/news/local-news/2026/05/16/mystery-women-of-minnesota-visit-nu/"
+    },
+    {
+      "q": "According to announcements made in May 2026, Maggie Gyllenhaal's film 'The Bride!' will make its global streaming debut on which platform on May 22?",
+      "options": [
+        "HBO Max",
+        "Netflix",
+        "Hulu",
+        "Disney+"
+      ],
+      "a": 0,
+      "correctText": "HBO Max",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/the-bride-streaming-premiere-date-hbo-max-1236906373/"
+    },
+    {
+      "q": "In May 2026, FIFA announced that the first-ever Super Bowl-style halftime show at the World Cup final will feature which three musical acts?",
+      "options": [
+        "Madonna, Shakira and BTS",
+        "Taylor Swift, Bad Bunny and Coldplay",
+        "Dua Lipa, The Weeknd and Blackpink",
+        "Beyoncé, Ed Sheeran and Justin Bieber"
+      ],
+      "a": 0,
+      "correctText": "Madonna, Shakira and BTS",
+      "category": "Sports",
+      "source": "https://apnews.com/article/world-cup-final-halftime-show-f08a3cc88e5c1dfccf0517941458df2f"
+    },
+    {
+      "q": "Which Lego racing game was announced in May 2026 to be delisted from digital storefronts, with its multiplayer servers scheduled to shut down in 2027?",
+      "options": [
+        "Lego 2K Drive",
+        "Lego Racers 3",
+        "Lego Speed Champions",
+        "Lego City Undercover 2"
+      ],
+      "a": 0,
+      "correctText": "Lego 2K Drive",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/lego-2k-drive-set-to-be-delisted-next-week-with-multiplayer-shutdown-scheduled-for-2027"
+    },
+    {
+      "q": "During the Philadelphia Phillies' extra-inning game against the Pittsburgh Pirates on May 15, 2026, which Phillies player hit his 20th home run of the season?",
+      "options": [
+        "Kyle Schwarber",
+        "Bryce Harper",
+        "J.T. Realmuto",
+        "Trea Turner"
+      ],
+      "a": 0,
+      "correctText": "Kyle Schwarber",
+      "category": "Sports",
+      "source": "https://www.mlb.com/phillies/news/kyle-schwarber-hits-20th-homer-in-phillies-extra-inning-win"
+    },
+    {
+      "q": "In May 2026, author Douglas Stuart was shortlisted for the Orwell Prize for Political Fiction for which of his novels?",
+      "options": [
+        "John of John",
+        "Shuggie Bain",
+        "Young Mungo",
+        "The Adversary"
+      ],
+      "a": 0,
+      "correctText": "John of John",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/news/ben-lerner-susan-choi-and-douglas-stuart-shortlisted-for-orwell-prizes"
+    }
+  ]
+}

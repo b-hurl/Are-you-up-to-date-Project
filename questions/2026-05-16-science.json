@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "As highlighted in a study discussed on May 16, 2026, researchers found that we tend to follow the walking path of the person directly in front of us when exiting what type of location?",
+      "options": [
+        "Train stations",
+        "Supermarkets",
+        "Movie theaters",
+        "Airports"
+      ],
+      "a": 0,
+      "correctText": "Train stations",
+      "category": "Science",
+      "source": "https://www.psypost.org/scientists-just-revealed-a-strange-quirk-in-how-we-exit-train-stations/"
+    },
+    {
+      "q": "A genetic survey featured in Nature in May 2026 exposed that nearly half of widely used laboratory models in genetics research contain inconsistencies. Which animal models did the survey focus on?",
+      "options": [
+        "Mouse models",
+        "Fruit flies",
+        "Zebrafish",
+        "Nematodes"
+      ],
+      "a": 0,
+      "correctText": "Mouse models",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/d41586-026-01534-4"
+    },
+    {
+      "q": "Trending in science news on May 16, 2026, researchers from the University of Oxford linked the evolution of human right-handedness to brain expansion and what other defining human trait?",
+      "options": [
+        "Walking on two legs (bipedalism)",
+        "Cooking with fire",
+        "Complex vocal language",
+        "Agriculture"
+      ],
+      "a": 0,
+      "correctText": "Walking on two legs (bipedalism)",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1128472"
+    },
+    {
+      "q": "According to breakthrough research by a team of UK and Japanese scientists published in May 2026, friendly skin bacteria could hold the key to stopping the inflammatory chaos of which condition?",
+      "options": [
+        "Eczema",
+        "Psoriasis",
+        "Rosacea",
+        "Acne"
+      ],
+      "a": 0,
+      "correctText": "Eczema",
+      "category": "Science",
+      "source": "https://www.manchester.ac.uk/about/news/bug-hope-to-beat-eczema/"
+    },
+    {
+      "q": "In a comprehensive study updated in May 2026, researchers at the University of Southampton analyzed 113 clinical trials to identify the best dosage patterns for medications treating which neurodevelopmental condition?",
+      "options": [
+        "ADHD",
+        "Autism spectrum disorder",
+        "Dyslexia",
+        "Tourette syndrome"
+      ],
+      "a": 0,
+      "correctText": "ADHD",
+      "category": "Science",
+      "source": "https://www.southampton.ac.uk/news/2026/05/new-study-reveals-best-dosage-for-adhd-medications.page"
+    }
+  ]
+}

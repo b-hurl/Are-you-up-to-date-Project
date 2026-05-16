@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which gaming consumer rights campaign backed California bill AB 1921, which recently passed a key hurdle to keep games playable after server shutdowns? [1.1.1]",
+      "options": [
+        "Stop Killing Games",
+        "Save Our Servers",
+        "Game Preservation Society",
+        "Players First Initiative"
+      ],
+      "a": 0,
+      "correctText": "Stop Killing Games",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/california-bill-pushing-to-keep-games-playable-after-server-shutdowns-passes-key-hurdle-paving-way-for-full-assembly-vote"
+    },
+    {
+      "q": "Which recently canceled Amazon game was revealed in a May 2026 report to have forced its developers to pivot to a Generative AI mandate before they were laid off?",
+      "options": [
+        "Project Trident",
+        "Project Crucible",
+        "Project Aeternum",
+        "Project Valhalla"
+      ],
+      "a": 0,
+      "correctText": "Project Trident",
+      "category": "Gaming",
+      "source": "https://www.eurogamer.net/amazon-ai-game-project-trident-laid-off-anyway-report"
+    },
+    {
+      "q": "Which Lego racing game was announced in May 2026 to be delisted from digital storefronts, with its multiplayer servers scheduled to shut down in 2027?",
+      "options": [
+        "Lego 2K Drive",
+        "Lego Racers 3",
+        "Lego Speed Champions",
+        "Lego City Undercover 2"
+      ],
+      "a": 0,
+      "correctText": "Lego 2K Drive",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/lego-2k-drive-set-to-be-delisted-next-week-with-multiplayer-shutdown-scheduled-for-2027"
+    },
+    {
+      "q": "How many copies did Subnautica 2 sell in its first 12 hours of Early Access in May 2026?",
+      "options": [
+        "Two million",
+        "One million",
+        "Five million",
+        "Half a million"
+      ],
+      "a": 0,
+      "correctText": "Two million",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/subnautica-2-early-access-sales-top-two-million-in-12-hours"
+    },
+    {
+      "q": "Elden Ring publisher Kadokawa's board of directors recently opposed a proposal from an activist shareholder to remove Takeshi Natsuno from which position?",
+      "options": [
+        "President and CEO",
+        "Head of FromSoftware",
+        "Chief Financial Officer",
+        "Lead Game Director"
+      ],
+      "a": 0,
+      "correctText": "President and CEO",
+      "category": "Gaming",
+      "source": "https://automaton-media.com/en/news/kadokawa-opposes-activist-shareholders-proposal-to-remove-current-president-and-ceo/"
+    }
+  ]
+}

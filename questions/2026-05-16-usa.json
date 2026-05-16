@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In May 2026, an explosion and massive fire sparked a \"mass casualty\" response at a lumber mill located in which U.S. state?",
+      "options": [
+        "Maine",
+        "Oregon",
+        "Washington",
+        "North Carolina"
+      ],
+      "a": 0,
+      "correctText": "Maine",
+      "category": "Usa",
+      "source": "https://www.the-independent.com/news/world/americas/maine-mass-casualty-incident-lumber-yard-explosion-b2977606.html"
+    },
+    {
+      "q": "Livestreamer Dalton Eatherly, known online as \"Chud the Builder,\" had his bond set at $1.2 million in May 2026 following a shooting outside a courthouse in which state?",
+      "options": [
+        "Tennessee",
+        "Texas",
+        "Florida",
+        "Georgia"
+      ],
+      "a": 0,
+      "correctText": "Tennessee",
+      "category": "Usa",
+      "source": "https://www.tennessean.com/story/news/crime/2026/05/15/dalton-eatherly-chud-the-builder-bond-clarksville-courthouse-shooting/90096003007/"
+    },
+    {
+      "q": "A May 2026 investigation identified 13 victims of fatal U.S. military boat strikes during a campaign targeting what type of smuggling in the Caribbean and eastern Pacific?",
+      "options": [
+        "Narcotics",
+        "Weapons",
+        "Exotic animals",
+        "Counterfeit currency"
+      ],
+      "a": 0,
+      "correctText": "Narcotics",
+      "category": "Usa",
+      "source": "https://www.theguardian.com/us-news/2026/may/15/us-military-airstrikes-caribbean-pacific-victim-identities"
+    },
+    {
+      "q": "In May 2026, a judge declared a mistrial due to a deadlocked jury in the third Manhattan sex crimes trial of which former Hollywood mogul?",
+      "options": [
+        "Harvey Weinstein",
+        "Kevin Spacey",
+        "Bill Cosby",
+        "Bryan Singer"
+      ],
+      "a": 0,
+      "correctText": "Harvey Weinstein",
+      "category": "Usa",
+      "source": "https://www.nbcnews.com/news/us-news/jury-deadlocked-harvey-weinsteins-third-manhattan-sex-crimes-trial-rcna345327"
+    },
+    {
+      "q": "In May 2026, authorities safely detonated a grenade-type improvised explosive device that was discovered by divers at a critical water reservoir in which U.S. city?",
+      "options": [
+        "Mobile, Alabama",
+        "Flint, Michigan",
+        "Jackson, Mississippi",
+        "Austin, Texas"
+      ],
+      "a": 0,
+      "correctText": "Mobile, Alabama",
+      "category": "Usa",
+      "source": "https://www.cnn.com/2026/05/15/us/mobile-alabama-explosive-detonated-reservoir-hnk"
+    }
+  ]
+}

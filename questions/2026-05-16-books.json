@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "In May 2026, which classic novel was banned by a Tennessee school system amidst a wave of conservative book challenges?",
+      "options": [
+        "Roots",
+        "To Kill a Mockingbird",
+        "The Color Purple",
+        "Beloved"
+      ],
+      "a": 0,
+      "correctText": "Roots",
+      "category": "Books",
+      "source": "https://www.yahoo.com/news/articles/tennessee-school-system-bans-roots-145549693.html"
+    },
+    {
+      "q": "Public libraries in which Canadian province expressed disappointment in May 2026 following the passing of Bill 28, which restricts access to certain library materials?",
+      "options": [
+        "Alberta",
+        "Ontario",
+        "British Columbia",
+        "Quebec"
+      ],
+      "a": 0,
+      "correctText": "Alberta",
+      "category": "Books",
+      "source": "https://www.caplibraries.ca/newsroom/alberta-public-libraries-disappointed-with-passing-of-bill-28"
+    },
+    {
+      "q": "In May 2026, Rick Riordan announced he is collaborating with co-authors on four new middle-grade novels set in which fictional location?",
+      "options": [
+        "Camp Half-Blood",
+        "Hogwarts",
+        "Camp Jupiter",
+        "The Capitol"
+      ],
+      "a": 0,
+      "correctText": "Camp Half-Blood",
+      "category": "Books",
+      "source": "https://www.altoonamirror.com/news/2026/05/16/riordan-to-unveil-new-camp-half-blood-novels/"
+    },
+    {
+      "q": "In May 2026, author Douglas Stuart was shortlisted for the Orwell Prize for Political Fiction for which of his novels?",
+      "options": [
+        "John of John",
+        "Shuggie Bain",
+        "Young Mungo",
+        "The Adversary"
+      ],
+      "a": 0,
+      "correctText": "John of John",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/news/ben-lerner-susan-choi-and-douglas-stuart-shortlisted-for-orwell-prizes"
+    },
+    {
+      "q": "In mid-May 2026, authors Shannon Baker, Erica Ruth Neubauer, and Jess Lourey participated in an author panel and signing event at Lykke Books as part of which book tour?",
+      "options": [
+        "Women of Mystery Tour",
+        "Midwest Thrillers Tour",
+        "Sleuths and Secrets Tour",
+        "Minnesota Crime Writers Tour"
+      ],
+      "a": 0,
+      "correctText": "Women of Mystery Tour",
+      "category": "Books",
+      "source": "https://www.nujournal.com/news/local-news/2026/05/16/mystery-women-of-minnesota-visit-nu/"
+    }
+  ]
+}

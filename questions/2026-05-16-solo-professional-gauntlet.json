@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-16",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "As highlighted in a study discussed on May 16, 2026, researchers found that we tend to follow the walking path of the person directly in front of us when exiting what type of location?",
+      "options": [
+        "Train stations",
+        "Supermarkets",
+        "Movie theaters",
+        "Airports"
+      ],
+      "a": 0,
+      "correctText": "Train stations",
+      "category": "Science",
+      "source": "https://www.psypost.org/scientists-just-revealed-a-strange-quirk-in-how-we-exit-train-stations/"
+    },
+    {
+      "q": "Speaking at a technology forum and reported on May 16, 2026, an innovation economy adviser stated that the artificial intelligence shift may upend small businesses by fueling the rise of what?",
+      "options": [
+        "One-person companies",
+        "Fully autonomous corporations",
+        "Government-run startups",
+        "Zero-revenue nonprofits"
+      ],
+      "a": 0,
+      "correctText": "One-person companies",
+      "category": "Business",
+      "source": "https://www.digitimes.com/news/a20260516VL203/ai-one-person-company-small-business.html"
+    },
+    {
+      "q": "Which European leader stated in May 2026 that they 'would not advise my children' to study or work in the United States due to its current social climate?",
+      "options": [
+        "Friedrich Merz of Germany",
+        "Emmanuel Macron of France",
+        "Pedro Sánchez of Spain",
+        "Giorgia Meloni of Italy"
+      ],
+      "a": 0,
+      "correctText": "Friedrich Merz of Germany",
+      "category": "World",
+      "source": "https://www.theguardian.com/world/2026/may/15/friedrich-merz-germany-children-study-work-us-politics"
+    },
+    {
+      "q": "Canadians who registered for a class-action settlement began receiving bank account payouts in May 2026 related to the price-fixing of which grocery item?",
+      "options": [
+        "Bread",
+        "Milk",
+        "Eggs",
+        "Ground beef"
+      ],
+      "a": 0,
+      "correctText": "Bread",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11851421/bread-price-fixing-settlement-loblaw/"
+    },
+    {
+      "q": "On May 16, 2026, industrial computer maker Ennoconn Corp announced an expected sequential revenue bump driven by rising demand for what type of solutions?",
+      "options": [
+        "Smart retail products",
+        "Self-driving vehicle chips",
+        "Agricultural drones",
+        "Virtual reality headsets"
+      ],
+      "a": 0,
+      "correctText": "Smart retail products",
+      "category": "Business",
+      "source": "https://www.taipeitimes.com/News/biz/archives/2026/05/16/2003817924"
+    },
+    {
+      "q": "A genetic survey featured in Nature in May 2026 exposed that nearly half of widely used laboratory models in genetics research contain inconsistencies. Which animal models did the survey focus on?",
+      "options": [
+        "Mouse models",
+        "Fruit flies",
+        "Zebrafish",
+        "Nematodes"
+      ],
+      "a": 0,
+      "correctText": "Mouse models",
+      "category": "Science",
+      "source": "https://www.nature.com/articles/d41586-026-01534-4"
+    },
+    {
+      "q": "Mark Carney and Alberta Premier Danielle Smith reached an energy agreement that could see the start of construction on what major project by 2027?",
+      "options": [
+        "An oil pipeline to the West Coast",
+        "A massive carbon capture facility",
+        "A new hydroelectric dam",
+        "A high-speed rail link to Calgary"
+      ],
+      "a": 0,
+      "correctText": "An oil pipeline to the West Coast",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/carney-smith-energy-announcement-mou-9.7200652"
+    },
+    {
+      "q": "A scientific study published in Science Advances in May 2026 found that climate change is causing what concerning phenomenon in over 21,000 rivers worldwide?",
+      "options": [
+        "Reducing oxygen levels",
+        "Increasing salt content",
+        "Creating toxic algae blooms",
+        "Turning the water acidic"
+      ],
+      "a": 0,
+      "correctText": "Reducing oxygen levels",
+      "category": "World",
+      "source": "https://apnews.com/article/rivers-oxygen-loss-dead-zone-global-warming-38b9116cc127f4212b1c20da08af0416"
+    },
+    {
+      "q": "Trending in science news on May 16, 2026, researchers from the University of Oxford linked the evolution of human right-handedness to brain expansion and what other defining human trait?",
+      "options": [
+        "Walking on two legs (bipedalism)",
+        "Cooking with fire",
+        "Complex vocal language",
+        "Agriculture"
+      ],
+      "a": 0,
+      "correctText": "Walking on two legs (bipedalism)",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1128472"
+    },
+    {
+      "q": "According to a May 2026 report, hackers breached tank readers at US gas stations. Officials suspect the hackers are linked to which country?",
+      "options": [
+        "Iran",
+        "Russia",
+        "China",
+        "North Korea"
+      ],
+      "a": 0,
+      "correctText": "Iran",
+      "category": "World",
+      "source": "https://www.cnn.com/2026/05/15/politics/iran-hackers-tank-readers-gas-stations"
+    }
+  ]
+}
