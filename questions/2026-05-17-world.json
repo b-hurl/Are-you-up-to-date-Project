@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 17, 2026, Russian officials claimed a mass drone attack hit residential buildings and killed at least three people in which region?",
+      "options": [
+        "Moscow",
+        "Belgorod",
+        "Kursk",
+        "Rostov"
+      ],
+      "a": 0,
+      "correctText": "Moscow",
+      "category": "World",
+      "source": "https://kyivindependent.com/over-70-drones-reportedly-downed-near-moscow-russian-officials-claim/"
+    },
+    {
+      "q": "Which 91-year-old Rwandan genocide suspect died in custody in The Hague, according to reports from May 16, 2026?",
+      "options": [
+        "Félicien Kabuga",
+        "Protais Mpiranya",
+        "Augustin Bizimana",
+        "Théoneste Bagosora"
+      ],
+      "a": 0,
+      "correctText": "Félicien Kabuga",
+      "category": "World",
+      "source": "https://apnews.com/article/rwanda-genocide-suspect-kabuda-dies-hague-d9c0156deb1359429cb22ea8441974e9"
+    },
+    {
+      "q": "On May 16, 2026, Canada confirmed its first isolated case of what virus in British Columbia following a cruise ship outbreak?",
+      "options": [
+        "Hantavirus",
+        "Ebola virus",
+        "Marburg virus",
+        "Zika virus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://www.theguardian.com/world/2026/may/16/canada-first-hantavirus-case-british-columbia"
+    },
+    {
+      "q": "According to reports on May 16, 2026, which U.S. political figure raised anxieties by describing Taiwan as a 'good negotiating chip' with China?",
+      "options": [
+        "Donald Trump",
+        "Joe Biden",
+        "Antony Blinken",
+        "JD Vance"
+      ],
+      "a": 0,
+      "correctText": "Donald Trump",
+      "category": "World",
+      "source": "https://apnews.com/article/taiwan-trump-arms-68eaac52b871e556aa6bd0509b101a90"
+    },
+    {
+      "q": "On May 16, 2026, President Volodymyr Zelensky announced that which country is ready to develop a ballistic missile defense system with Ukraine?",
+      "options": [
+        "France",
+        "United Kingdom",
+        "Germany",
+        "United States"
+      ],
+      "a": 0,
+      "correctText": "France",
+      "category": "World",
+      "source": "https://kyivindependent.com/france-ready-to-develop-ballistic-missile-defense-with-ukraine-zelensky-calls-it-important-step/"
+    }
+  ]
+}

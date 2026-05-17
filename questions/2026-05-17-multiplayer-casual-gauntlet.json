@@ -1,0 +1,58 @@
+{
+  "date": "2026-05-17",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Speaking at the 2026 Cannes Film Festival, what did Seth Rogen say about people who use AI to write scripts?",
+      "options": [
+        "They shouldn't be writers",
+        "They are the future of Hollywood",
+        "They need to learn basic formatting",
+        "They will eventually replace directors"
+      ],
+      "a": 0,
+      "correctText": "They shouldn't be writers",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/seth-rogen-ai-writing-scripts-cannes/"
+    },
+    {
+      "q": "Published in Nature and circulating heavily in May 2026 health discussions, a clinical trial demonstrated that which antiviral pill cuts the risk of COVID-19 infection when used as a post-exposure preventative?",
+      "options": [
+        "Ensitrelvir (Xocova)",
+        "Paxlovid",
+        "Molnupiravir",
+        "Remdesivir"
+      ],
+      "a": 0,
+      "correctText": "Ensitrelvir (Xocova)",
+      "category": "Health",
+      "source": "https://www.nature.com/articles/d41586-026-01546-0"
+    },
+    {
+      "q": "Which university's baseball team swept Purdue with a 15-9 victory at Principal Park on May 16, 2026?",
+      "options": [
+        "Iowa Hawkeyes",
+        "Indiana Hoosiers",
+        "Michigan Wolverines",
+        "Ohio State Buckeyes"
+      ],
+      "a": 0,
+      "correctText": "Iowa Hawkeyes",
+      "category": "Sports",
+      "source": "https://hawkeyesports.com/news/2026/05/16/hawkeyes-sweep-boilermakers/"
+    },
+    {
+      "q": "In an interview published on May 17, 2026, Bob Odenkirk recalled turning gray during a heart attack on the set of which show?",
+      "options": [
+        "Better Call Saul",
+        "Breaking Bad",
+        "Fargo",
+        "Lucky Hank"
+      ],
+      "a": 0,
+      "correctText": "Better Call Saul",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/tv/news/bob-odenkirk-recalls-heart-attack-better-call-saul/"
+    }
+  ]
+}

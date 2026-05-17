@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-17",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "In May 2026, a military diver tragically died during a recovery mission for scuba diving victims in an underwater cave located in which country?",
+      "options": [
+        "Maldives",
+        "Thailand",
+        "Mexico",
+        "Philippines"
+      ],
+      "a": 0,
+      "correctText": "Maldives",
+      "category": "Usa",
+      "source": "https://abcnews.com/International/5-dead-scuba-diving-accident-deep-underwater-cave/story?id=133010445"
+    },
+    {
+      "q": "In May 2026, Canadian mushroom growers warned that what upcoming U.S. action could 'flood' the domestic market?",
+      "options": [
+        "New tariffs on Canadian mushrooms",
+        "A ban on all imported produce",
+        "Stricter organic packaging rules",
+        "Massive subsidies for U.S. farms"
+      ],
+      "a": 0,
+      "correctText": "New tariffs on Canadian mushrooms",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/canadian-mushroom-farmers-set-to-face-new-tariffs/"
+    },
+    {
+      "q": "On May 16, 2026, Canada confirmed its first isolated case of what virus in British Columbia following a cruise ship outbreak?",
+      "options": [
+        "Hantavirus",
+        "Ebola virus",
+        "Marburg virus",
+        "Zika virus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "World",
+      "source": "https://www.theguardian.com/world/2026/may/16/canada-first-hantavirus-case-british-columbia"
+    },
+    {
+      "q": "On May 17, 2026, Russian officials claimed a mass drone attack hit residential buildings and killed at least three people in which region?",
+      "options": [
+        "Moscow",
+        "Belgorod",
+        "Kursk",
+        "Rostov"
+      ],
+      "a": 0,
+      "correctText": "Moscow",
+      "category": "World",
+      "source": "https://kyivindependent.com/over-70-drones-reportedly-downed-near-moscow-russian-officials-claim/"
+    },
+    {
+      "q": "Which transit network, known as North America’s largest commuter rail system, shut down following a union workers strike in May 2026?",
+      "options": [
+        "NJ Transit",
+        "Long Island Rail Road",
+        "Metra",
+        "GO Transit"
+      ],
+      "a": 1,
+      "correctText": "Long Island Rail Road",
+      "category": "Usa",
+      "source": "https://apnews.com/article/lirr-new-york-commuter-rail-strike-union-a9b20b5de53a944c9da4263d289a845f"
+    },
+    {
+      "q": "According to reports on May 16, 2026, which U.S. political figure raised anxieties by describing Taiwan as a 'good negotiating chip' with China?",
+      "options": [
+        "Donald Trump",
+        "Joe Biden",
+        "Antony Blinken",
+        "JD Vance"
+      ],
+      "a": 0,
+      "correctText": "Donald Trump",
+      "category": "World",
+      "source": "https://apnews.com/article/taiwan-trump-arms-68eaac52b871e556aa6bd0509b101a90"
+    },
+    {
+      "q": "When asked about the stalled Gordie Howe bridge opening in May 2026, what did the White House point to as the primary reason?",
+      "options": [
+        "Longstanding unfair trade practices",
+        "Unresolved environmental violations",
+        "Incomplete safety inspections",
+        "Disputes over toll revenue sharing"
+      ],
+      "a": 0,
+      "correctText": "Longstanding unfair trade practices",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/windsor/gordie-howe-bridge-opening-negotiations-trump-windsor-detroit-9.7201921"
+    },
+    {
+      "q": "A famous whale mural in downtown Dallas was painted over in May 2026 to make way for artwork celebrating which upcoming event?",
+      "options": [
+        "Super Bowl LXI",
+        "2028 Summer Olympics",
+        "2026 FIFA World Cup",
+        "World Expo 2026"
+      ],
+      "a": 2,
+      "correctText": "2026 FIFA World Cup",
+      "category": "Usa",
+      "source": "https://www.nbcdfw.com/news/local/iconic-whale-wall-mural-painted-over/4024257/"
+    },
+    {
+      "q": "Reported on May 17, 2026, researchers from Trinity College Dublin discovered a 1,200-year-old manuscript in Rome containing one of the oldest surviving versions of which text?",
+      "options": [
+        "Caedmon's Hymn",
+        "Beowulf",
+        "The Canterbury Tales",
+        "The Anglo-Saxon Chronicle"
+      ],
+      "a": 0,
+      "correctText": "Caedmon's Hymn",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/releases/2026/05/260515233337.htm"
+    },
+    {
+      "q": "On May 16, 2026, President Volodymyr Zelensky announced that which country is ready to develop a ballistic missile defense system with Ukraine?",
+      "options": [
+        "France",
+        "United Kingdom",
+        "Germany",
+        "United States"
+      ],
+      "a": 0,
+      "correctText": "France",
+      "category": "World",
+      "source": "https://kyivindependent.com/france-ready-to-develop-ballistic-missile-defense-with-ukraine-zelensky-calls-it-important-step/"
+    }
+  ]
+}

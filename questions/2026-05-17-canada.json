@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "As reported on the weekend of May 17, 2026, a Canadian in isolation in B.C. presumptively tested positive for what virus after leaving a cruise ship?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Avian flu",
+        "Legionnaires' disease"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/bc-update-hantavirus-update-bonnie-henry-may-16-9.7202396"
+    },
+    {
+      "q": "Which multimillionaire Vancouver developer was jailed for 40 days in May 2026 after repeatedly ignoring court orders regarding her finances?",
+      "options": [
+        "Helen Chan Sun",
+        "Bob Rennie",
+        "Francesco Aquilini",
+        "Ian Gillespie"
+      ],
+      "a": 0,
+      "correctText": "Helen Chan Sun",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/helen-sun-developer-jailed-contempt-9.7202029"
+    },
+    {
+      "q": "In May 2026, Canadian mushroom growers warned that what upcoming U.S. action could 'flood' the domestic market?",
+      "options": [
+        "New tariffs on Canadian mushrooms",
+        "A ban on all imported produce",
+        "Stricter organic packaging rules",
+        "Massive subsidies for U.S. farms"
+      ],
+      "a": 0,
+      "correctText": "New tariffs on Canadian mushrooms",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/canada/article/canadian-mushroom-farmers-set-to-face-new-tariffs/"
+    },
+    {
+      "q": "According to Toronto police data reported in May 2026, which group was the target of 82% of the city's religion-motivated hate crimes in 2025?",
+      "options": [
+        "Jews",
+        "Muslims",
+        "Sikhs",
+        "Hindus"
+      ],
+      "a": 0,
+      "correctText": "Jews",
+      "category": "Canada",
+      "source": "https://nationalpost.com/news/canada/jews-targets-of-82-of-religion-hate-crimes-in-toronto-in-2025-police-data"
+    },
+    {
+      "q": "When asked about the stalled Gordie Howe bridge opening in May 2026, what did the White House point to as the primary reason?",
+      "options": [
+        "Longstanding unfair trade practices",
+        "Unresolved environmental violations",
+        "Incomplete safety inspections",
+        "Disputes over toll revenue sharing"
+      ],
+      "a": 0,
+      "correctText": "Longstanding unfair trade practices",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/windsor/gordie-howe-bridge-opening-negotiations-trump-windsor-detroit-9.7201921"
+    }
+  ]
+}

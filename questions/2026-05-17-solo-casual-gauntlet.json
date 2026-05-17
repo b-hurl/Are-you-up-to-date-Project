@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-17",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "In health news trending through mid-May 2026, the condition formerly known as Polycystic Ovary Syndrome (PCOS) was officially renamed to PMOS. What does PMOS stand for?",
+      "options": [
+        "Polyendocrine Metabolic Ovarian Syndrome",
+        "Primary Metabolic Ovarian Syndrome",
+        "Polycystic Metabolic Ovarian Syndrome",
+        "Polyendocrine Menstrual Ovarian Syndrome"
+      ],
+      "a": 0,
+      "correctText": "Polyendocrine Metabolic Ovarian Syndrome",
+      "category": "Health",
+      "source": "https://healthmatters.nyp.org/pcos-is-now-called-pmos-polyendocrine-metabolic-ovarian-syndrome-heres-what-to-know/"
+    },
+    {
+      "q": "Which 2K racing game is scheduled to be delisted next week, with its multiplayer servers shutting down in 2027?",
+      "options": [
+        "Lego 2K Drive",
+        "Crash Team Racing Nitro-Fueled",
+        "Hot Wheels Unleashed 2",
+        "Disney Speedstorm"
+      ],
+      "a": 0,
+      "correctText": "Lego 2K Drive",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/lego-2k-drive-set-to-be-delisted-next-week-with-multiplayer-shutdown-scheduled-for-2027"
+    },
+    {
+      "q": "Which highly anticipated survival sequel recently sold over two million copies in its first 12 hours of Early Access?",
+      "options": [
+        "Subnautica 2",
+        "The Forest 2",
+        "Ark 2",
+        "Grounded 2"
+      ],
+      "a": 0,
+      "correctText": "Subnautica 2",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/subnautica-2-early-access-sales-top-two-million-in-12-hours"
+    },
+    {
+      "q": "Why won't the new indie game 'Mixtape' face a music-related delisting in the future?",
+      "options": [
+        "The developer paid extra for perpetual licenses",
+        "It only uses royalty-free music",
+        "Annapurna Interactive bought the record labels",
+        "The artists waived their licensing fees"
+      ],
+      "a": 0,
+      "correctText": "The developer paid extra for perpetual licenses",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/mixtape-will-be-safe-from-a-music-licensing-related-delisting-ensured-by-its-developer-paying-extra-for-the-privilege"
+    },
+    {
+      "q": "According to Eurogamer, Amazon pressured a team to develop an AI-powered game before laying them off. What was the game codenamed?",
+      "options": [
+        "Project Trident",
+        "Project Crucible",
+        "Project Genesis",
+        "Project Apollo"
+      ],
+      "a": 0,
+      "correctText": "Project Trident",
+      "category": "Gaming",
+      "source": "https://www.eurogamer.net/amazon-ai-game-project-trident-laid-off-anyway-report"
+    },
+    {
+      "q": "Which 'Sunset Boulevard' stage star auditioned to be the next James Bond, according to reports on May 17, 2026?",
+      "options": [
+        "Tom Francis",
+        "Jacob Elordi",
+        "Aaron Taylor-Johnson",
+        "Callum Turner"
+      ],
+      "a": 0,
+      "correctText": "Tom Francis",
+      "category": "Entertainment",
+      "source": "https://www.thenews.com.pk/latest/tom-francis-tries-out-to-be-the-new-james-bond"
+    },
+    {
+      "q": "On May 17, 2026, the WHO declared a global public health emergency over an outbreak of which rare Ebola strain in the Democratic Republic of Congo and Uganda?",
+      "options": [
+        "Bundibugyo virus",
+        "Zaire ebolavirus",
+        "Sudan ebolavirus",
+        "Taï Forest ebolavirus"
+      ],
+      "a": 0,
+      "correctText": "Bundibugyo virus",
+      "category": "Health",
+      "source": "https://apnews.com/"
+    },
+    {
+      "q": "Which MLB team defeated the Detroit Tigers 2-1 in a 10-inning game on May 16, 2026?",
+      "options": [
+        "Toronto Blue Jays",
+        "New York Yankees",
+        "Houston Astros",
+        "Chicago White Sox"
+      ],
+      "a": 0,
+      "correctText": "Toronto Blue Jays",
+      "category": "Sports",
+      "source": "https://vernonmatters.ca/2026/05/16/scores-and-sports-schedule-for-saturday-may-16-2026/"
+    },
+    {
+      "q": "In their highly anticipated MMA bout on May 16, 2026, how long did it take Ronda Rousey to submit Gina Carano?",
+      "options": [
+        "17 seconds",
+        "1 minute 42 seconds",
+        "3 rounds",
+        "She won by decision"
+      ],
+      "a": 0,
+      "correctText": "17 seconds",
+      "category": "Sports",
+      "source": "https://www.aljazeera.com/sports/2026/5/17/ronda-rousey-vs-gina-carano-fight-rousey-wins-with-a-17-second-submission"
+    },
+    {
+      "q": "In Forza Horizon 6, which natural element is intentionally made unbreakable to respect Japanese culture?",
+      "options": [
+        "Cherry Blossom trees",
+        "Bamboo forests",
+        "Lotus ponds",
+        "Bonsai trees"
+      ],
+      "a": 0,
+      "correctText": "Cherry Blossom trees",
+      "category": "Gaming",
+      "source": "https://kotaku.com/forza-horizon-6-cherry-blossoms-unbreakable-iconic-element-japan-xbox-2000696511"
+    }
+  ]
+}

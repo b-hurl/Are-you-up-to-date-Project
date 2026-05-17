@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 17, 2026 report, Microsoft's $1 billion AI data center project in Kenya hit a major hurdle because meeting its power needs would require doing what?",
+      "options": [
+        "Switching off half the country's electricity",
+        "Diverting water from the capital",
+        "Violating local emission laws",
+        "Building a dedicated nuclear plant"
+      ],
+      "a": 0,
+      "correctText": "Switching off half the country's electricity",
+      "category": "Technology",
+      "source": "https://www.techradar.com/news/archive/2026/05"
+    },
+    {
+      "q": "Which AI company's stock fell 5.7% on May 17, 2026, amid a broader tech sell-off following a hotter-than-expected April Consumer Price Index report?",
+      "options": [
+        "SoundHound AI",
+        "C3.ai",
+        "BigBear.ai",
+        "Symbotic"
+      ],
+      "a": 0,
+      "correctText": "SoundHound AI",
+      "category": "Technology",
+      "source": "https://www.indexbox.io/news/tech-stocks-slide-as-april-cpi-exceeds-expectations-on-may-17-2026/"
+    },
+    {
+      "q": "Which company debuted its AI-iPanel, an AI-powered distribution cabinet, at the OPTATEC Photonics and Laser Exhibition in Frankfurt, as reported on May 17, 2026?",
+      "options": [
+        "Shenglong Electric",
+        "Siemens",
+        "Schneider Electric",
+        "ABB"
+      ],
+      "a": 0,
+      "correctText": "Shenglong Electric",
+      "category": "Technology",
+      "source": "https://www.newsfilecorp.com/release/213456/Shenglong-Electrics-AI-Distribution-Cabinet-Debuts-at-Frankfurt-OPTATEC"
+    },
+    {
+      "q": "On May 17, 2026, which entertainment giant pulled back the curtain on its Imagineering robotics lab to showcase how its next-generation characters come to life?",
+      "options": [
+        "Disney",
+        "Universal Studios",
+        "Sony Pictures",
+        "Warner Bros."
+      ],
+      "a": 0,
+      "correctText": "Disney",
+      "category": "Technology",
+      "source": "https://www.techradar.com/news/archive/2026/05"
+    }
+  ]
+}

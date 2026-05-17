@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On May 17, 2026, the WHO declared a global public health emergency over an outbreak of which rare Ebola strain in the Democratic Republic of Congo and Uganda?",
+      "options": [
+        "Bundibugyo virus",
+        "Zaire ebolavirus",
+        "Sudan ebolavirus",
+        "Taï Forest ebolavirus"
+      ],
+      "a": 0,
+      "correctText": "Bundibugyo virus",
+      "category": "Health",
+      "source": "https://apnews.com/"
+    },
+    {
+      "q": "In health news trending through mid-May 2026, the condition formerly known as Polycystic Ovary Syndrome (PCOS) was officially renamed to PMOS. What does PMOS stand for?",
+      "options": [
+        "Polyendocrine Metabolic Ovarian Syndrome",
+        "Primary Metabolic Ovarian Syndrome",
+        "Polycystic Metabolic Ovarian Syndrome",
+        "Polyendocrine Menstrual Ovarian Syndrome"
+      ],
+      "a": 0,
+      "correctText": "Polyendocrine Metabolic Ovarian Syndrome",
+      "category": "Health",
+      "source": "https://healthmatters.nyp.org/pcos-is-now-called-pmos-polyendocrine-metabolic-ovarian-syndrome-heres-what-to-know/"
+    },
+    {
+      "q": "Published in Nature and circulating heavily in May 2026 health discussions, a clinical trial demonstrated that which antiviral pill cuts the risk of COVID-19 infection when used as a post-exposure preventative?",
+      "options": [
+        "Ensitrelvir (Xocova)",
+        "Paxlovid",
+        "Molnupiravir",
+        "Remdesivir"
+      ],
+      "a": 0,
+      "correctText": "Ensitrelvir (Xocova)",
+      "category": "Health",
+      "source": "https://www.nature.com/articles/d41586-026-01546-0"
+    }
+  ]
+}

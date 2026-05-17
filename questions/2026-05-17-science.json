@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "According to a major review highlighted by ScienceDaily on May 17, 2026, what longstanding fear regarding 'yo-yo dieting' is largely unsupported by scientific evidence?",
+      "options": [
+        "That it permanently ruins metabolism and causes long-term harm",
+        "That it inevitably causes severe hair loss",
+        "That it guarantees the development of Type 1 Diabetes",
+        "That it permanently shrinks the human stomach"
+      ],
+      "a": 0,
+      "correctText": "That it permanently ruins metabolism and causes long-term harm",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/releases/2026/05/260515233331.htm"
+    },
+    {
+      "q": "As highlighted in a May 17, 2026 publication, paleontologists in Spain uncovered the best-preserved skull in Europe belonging to which plated dinosaur?",
+      "options": [
+        "Dacentrurus armatus",
+        "Ankylosaurus magniventris",
+        "Triceratops horridus",
+        "Stegosaurus stenops"
+      ],
+      "a": 0,
+      "correctText": "Dacentrurus armatus",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/releases/2026/05/260515233340.htm"
+    },
+    {
+      "q": "Reported on May 17, 2026, researchers from Trinity College Dublin discovered a 1,200-year-old manuscript in Rome containing one of the oldest surviving versions of which text?",
+      "options": [
+        "Caedmon's Hymn",
+        "Beowulf",
+        "The Canterbury Tales",
+        "The Anglo-Saxon Chronicle"
+      ],
+      "a": 0,
+      "correctText": "Caedmon's Hymn",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/releases/2026/05/260515233337.htm"
+    },
+    {
+      "q": "In an astronomical update for May 17, 2026, Mashable's Science section reported that the Moon's phase for the night would feature what level of visibility?",
+      "options": [
+        "No visibility",
+        "A Supermoon",
+        "A total lunar eclipse",
+        "A fully illuminated Full Moon"
+      ],
+      "a": 0,
+      "correctText": "No visibility",
+      "category": "Science",
+      "source": "https://mashable.com/article/moon-phase-today-may-17"
+    }
+  ]
+}

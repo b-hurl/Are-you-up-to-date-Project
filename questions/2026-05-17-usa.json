@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 17, 2026, the WHO declared a public health emergency of international concern due to an outbreak of which Ebola virus strain?",
+      "options": [
+        "Bundibugyo virus",
+        "Zaire ebolavirus",
+        "Sudan ebolavirus",
+        "Taï Forest ebolavirus"
+      ],
+      "a": 0,
+      "correctText": "Bundibugyo virus",
+      "category": "Usa",
+      "source": "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern"
+    },
+    {
+      "q": "A famous whale mural in downtown Dallas was painted over in May 2026 to make way for artwork celebrating which upcoming event?",
+      "options": [
+        "Super Bowl LXI",
+        "2028 Summer Olympics",
+        "2026 FIFA World Cup",
+        "World Expo 2026"
+      ],
+      "a": 2,
+      "correctText": "2026 FIFA World Cup",
+      "category": "Usa",
+      "source": "https://www.nbcdfw.com/news/local/iconic-whale-wall-mural-painted-over/4024257/"
+    },
+    {
+      "q": "Which transit network, known as North America’s largest commuter rail system, shut down following a union workers strike in May 2026?",
+      "options": [
+        "NJ Transit",
+        "Long Island Rail Road",
+        "Metra",
+        "GO Transit"
+      ],
+      "a": 1,
+      "correctText": "Long Island Rail Road",
+      "category": "Usa",
+      "source": "https://apnews.com/article/lirr-new-york-commuter-rail-strike-union-a9b20b5de53a944c9da4263d289a845f"
+    },
+    {
+      "q": "Which country won the 70th Eurovision Song Contest in May 2026 with the party anthem 'Bangaranga'?",
+      "options": [
+        "Italy",
+        "Australia",
+        "Sweden",
+        "Bulgaria"
+      ],
+      "a": 3,
+      "correctText": "Bulgaria",
+      "category": "Usa",
+      "source": "https://apnews.com/article/eurovision-song-contest-grand-final-9798646a3ba5d4b21321b19decaf607c"
+    },
+    {
+      "q": "In May 2026, a military diver tragically died during a recovery mission for scuba diving victims in an underwater cave located in which country?",
+      "options": [
+        "Maldives",
+        "Thailand",
+        "Mexico",
+        "Philippines"
+      ],
+      "a": 0,
+      "correctText": "Maldives",
+      "category": "Usa",
+      "source": "https://abcnews.com/International/5-dead-scuba-diving-accident-deep-underwater-cave/story?id=133010445"
+    }
+  ]
+}

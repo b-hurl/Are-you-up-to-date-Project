@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-17",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "As highlighted in a May 17, 2026 publication, paleontologists in Spain uncovered the best-preserved skull in Europe belonging to which plated dinosaur?",
+      "options": [
+        "Dacentrurus armatus",
+        "Ankylosaurus magniventris",
+        "Triceratops horridus",
+        "Stegosaurus stenops"
+      ],
+      "a": 0,
+      "correctText": "Dacentrurus armatus",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/releases/2026/05/260515233340.htm"
+    },
+    {
+      "q": "According to a May 17, 2026 report, Microsoft's $1 billion AI data center project in Kenya hit a major hurdle because meeting its power needs would require doing what?",
+      "options": [
+        "Switching off half the country's electricity",
+        "Diverting water from the capital",
+        "Violating local emission laws",
+        "Building a dedicated nuclear plant"
+      ],
+      "a": 0,
+      "correctText": "Switching off half the country's electricity",
+      "category": "Technology",
+      "source": "https://www.techradar.com/news/archive/2026/05"
+    },
+    {
+      "q": "According to a major review highlighted by ScienceDaily on May 17, 2026, what longstanding fear regarding 'yo-yo dieting' is largely unsupported by scientific evidence?",
+      "options": [
+        "That it permanently ruins metabolism and causes long-term harm",
+        "That it inevitably causes severe hair loss",
+        "That it guarantees the development of Type 1 Diabetes",
+        "That it permanently shrinks the human stomach"
+      ],
+      "a": 0,
+      "correctText": "That it permanently ruins metabolism and causes long-term harm",
+      "category": "Science",
+      "source": "https://www.sciencedaily.com/releases/2026/05/260515233331.htm"
+    },
+    {
+      "q": "Which multimillionaire Vancouver developer was jailed for 40 days in May 2026 after repeatedly ignoring court orders regarding her finances?",
+      "options": [
+        "Helen Chan Sun",
+        "Bob Rennie",
+        "Francesco Aquilini",
+        "Ian Gillespie"
+      ],
+      "a": 0,
+      "correctText": "Helen Chan Sun",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/helen-sun-developer-jailed-contempt-9.7202029"
+    },
+    {
+      "q": "As reported on the weekend of May 17, 2026, a Canadian in isolation in B.C. presumptively tested positive for what virus after leaving a cruise ship?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Avian flu",
+        "Legionnaires' disease"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/british-columbia/bc-update-hantavirus-update-bonnie-henry-may-16-9.7202396"
+    },
+    {
+      "q": "Which country won the 70th Eurovision Song Contest in May 2026 with the party anthem 'Bangaranga'?",
+      "options": [
+        "Italy",
+        "Australia",
+        "Sweden",
+        "Bulgaria"
+      ],
+      "a": 3,
+      "correctText": "Bulgaria",
+      "category": "Usa",
+      "source": "https://apnews.com/article/eurovision-song-contest-grand-final-9798646a3ba5d4b21321b19decaf607c"
+    },
+    {
+      "q": "Which company debuted its AI-iPanel, an AI-powered distribution cabinet, at the OPTATEC Photonics and Laser Exhibition in Frankfurt, as reported on May 17, 2026?",
+      "options": [
+        "Shenglong Electric",
+        "Siemens",
+        "Schneider Electric",
+        "ABB"
+      ],
+      "a": 0,
+      "correctText": "Shenglong Electric",
+      "category": "Technology",
+      "source": "https://www.newsfilecorp.com/release/213456/Shenglong-Electrics-AI-Distribution-Cabinet-Debuts-at-Frankfurt-OPTATEC"
+    },
+    {
+      "q": "On May 17, 2026, the WHO declared a public health emergency of international concern due to an outbreak of which Ebola virus strain?",
+      "options": [
+        "Bundibugyo virus",
+        "Zaire ebolavirus",
+        "Sudan ebolavirus",
+        "Taï Forest ebolavirus"
+      ],
+      "a": 0,
+      "correctText": "Bundibugyo virus",
+      "category": "Usa",
+      "source": "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern"
+    },
+    {
+      "q": "On May 17, 2026, which entertainment giant pulled back the curtain on its Imagineering robotics lab to showcase how its next-generation characters come to life?",
+      "options": [
+        "Disney",
+        "Universal Studios",
+        "Sony Pictures",
+        "Warner Bros."
+      ],
+      "a": 0,
+      "correctText": "Disney",
+      "category": "Technology",
+      "source": "https://www.techradar.com/news/archive/2026/05"
+    },
+    {
+      "q": "Which AI company's stock fell 5.7% on May 17, 2026, amid a broader tech sell-off following a hotter-than-expected April Consumer Price Index report?",
+      "options": [
+        "SoundHound AI",
+        "C3.ai",
+        "BigBear.ai",
+        "Symbotic"
+      ],
+      "a": 0,
+      "correctText": "SoundHound AI",
+      "category": "Technology",
+      "source": "https://www.indexbox.io/news/tech-stocks-slide-as-april-cpi-exceeds-expectations-on-may-17-2026/"
+    }
+  ]
+}

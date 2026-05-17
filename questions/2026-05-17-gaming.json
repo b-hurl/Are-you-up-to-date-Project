@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Why won't the new indie game 'Mixtape' face a music-related delisting in the future?",
+      "options": [
+        "The developer paid extra for perpetual licenses",
+        "It only uses royalty-free music",
+        "Annapurna Interactive bought the record labels",
+        "The artists waived their licensing fees"
+      ],
+      "a": 0,
+      "correctText": "The developer paid extra for perpetual licenses",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/mixtape-will-be-safe-from-a-music-licensing-related-delisting-ensured-by-its-developer-paying-extra-for-the-privilege"
+    },
+    {
+      "q": "In Forza Horizon 6, which natural element is intentionally made unbreakable to respect Japanese culture?",
+      "options": [
+        "Cherry Blossom trees",
+        "Bamboo forests",
+        "Lotus ponds",
+        "Bonsai trees"
+      ],
+      "a": 0,
+      "correctText": "Cherry Blossom trees",
+      "category": "Gaming",
+      "source": "https://kotaku.com/forza-horizon-6-cherry-blossoms-unbreakable-iconic-element-japan-xbox-2000696511"
+    },
+    {
+      "q": "Which 2K racing game is scheduled to be delisted next week, with its multiplayer servers shutting down in 2027?",
+      "options": [
+        "Lego 2K Drive",
+        "Crash Team Racing Nitro-Fueled",
+        "Hot Wheels Unleashed 2",
+        "Disney Speedstorm"
+      ],
+      "a": 0,
+      "correctText": "Lego 2K Drive",
+      "category": "Gaming",
+      "source": "https://www.ign.com/articles/lego-2k-drive-set-to-be-delisted-next-week-with-multiplayer-shutdown-scheduled-for-2027"
+    },
+    {
+      "q": "According to Eurogamer, Amazon pressured a team to develop an AI-powered game before laying them off. What was the game codenamed?",
+      "options": [
+        "Project Trident",
+        "Project Crucible",
+        "Project Genesis",
+        "Project Apollo"
+      ],
+      "a": 0,
+      "correctText": "Project Trident",
+      "category": "Gaming",
+      "source": "https://www.eurogamer.net/amazon-ai-game-project-trident-laid-off-anyway-report"
+    },
+    {
+      "q": "Which highly anticipated survival sequel recently sold over two million copies in its first 12 hours of Early Access?",
+      "options": [
+        "Subnautica 2",
+        "The Forest 2",
+        "Ark 2",
+        "Grounded 2"
+      ],
+      "a": 0,
+      "correctText": "Subnautica 2",
+      "category": "Gaming",
+      "source": "https://www.gematsu.com/2026/05/subnautica-2-early-access-sales-top-two-million-in-12-hours"
+    }
+  ]
+}
