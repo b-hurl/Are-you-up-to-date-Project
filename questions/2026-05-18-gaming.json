@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Unknown Worlds recently stated they have no plans to change what controversial \"point of resistance\" among players in Subnautica 2? [1]",
+      "options": [
+        "The no-killing ethos",
+        "The mandatory co-op",
+        "The base building limits",
+        "The stamina meter"
+      ],
+      "a": 0,
+      "correctText": "The no-killing ethos",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/subnautica-2s-no-killing-ethos-will-be-a-continued-point-of-resistance-among-players-say-unknown-worlds-but-they-have-no-plans-to-change-it"
+    },
+    {
+      "q": "Subnautica 2's design lead Anthony Gallegos noted that the game's core tenet emphasizes living with dangerous organisms, purposely removing what traditional survival mechanic? [1]",
+      "options": [
+        "Lethal weapons and combat",
+        "Hunger and thirst management",
+        "Resource grinding",
+        "Base defense raids"
+      ],
+      "a": 0,
+      "correctText": "Lethal weapons and combat",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/subnautica-2s-no-killing-ethos-will-be-a-continued-point-of-resistance-among-players-say-unknown-worlds-but-they-have-no-plans-to-change-it"
+    },
+    {
+      "q": "US game stores were left baffled in May 2026 after mysteriously receiving sealed packages containing copies of which rare PS4 game? [2]",
+      "options": [
+        "Poop Slinger",
+        "Gilson B. Pontes' Lieve Mabel",
+        "Godzilla",
+        "P.T."
+      ],
+      "a": 0,
+      "correctText": "Poop Slinger",
+      "category": "Gaming",
+      "source": "https://kotaku.com/stores-at-a-loss-for-words-after-being-sent-sealed-copies-of-rare-ps4-game-poop-slinger-2000696767"
+    },
+    {
+      "q": "The developer of the upcoming indie game Mixtape paid extra for a perpetual privilege to ensure the game is permanently safe from what specific issue? [3]",
+      "options": [
+        "Music licensing-related delisting",
+        "Server shutdowns",
+        "Microtransaction requirements",
+        "Always-online DRM"
+      ],
+      "a": 0,
+      "correctText": "Music licensing-related delisting",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/mixtape-will-be-safe-from-a-music-licensing-related-delisting-ensured-by-its-developer-paying-extra-for-the-privilege"
+    },
+    {
+      "q": "A May 2026 announcement trailer revealed that the PlayStation release of the asymmetrical multiplayer game Primal Carnage: Evolution is set for what date? [4]",
+      "options": [
+        "May 28, 2026",
+        "June 15, 2026",
+        "July 4, 2026",
+        "October 31, 2026"
+      ],
+      "a": 0,
+      "correctText": "May 28, 2026",
+      "category": "Gaming",
+      "source": "https://youtu.be/SXRblgdOLhQ?si=PHHZ1perC4Gl2Ocu"
+    }
+  ]
+}

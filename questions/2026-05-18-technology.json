@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Who recently stated that AI-powered bug hunters have made the Linux security mailing list 'almost entirely unmanageable'?",
+      "options": [
+        "Linus Torvalds",
+        "Richard Stallman",
+        "Tim Cook",
+        "Satya Nadella"
+      ],
+      "a": 0,
+      "correctText": "Linus Torvalds",
+      "category": "Technology",
+      "source": "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633"
+    },
+    {
+      "q": "How did a LinkedIn user recently strike back against automated recruitment bots spamming their profile?",
+      "options": [
+        "By hiding an AI prompt injection in their bio to force Olde English prose",
+        "By injecting SQL to delete the recruiter's account",
+        "By redirecting the bot to a continuous loop of CAPTCHAs",
+        "By setting their work experience to 100 years in the future"
+      ],
+      "a": 0,
+      "correctText": "By hiding an AI prompt injection in their bio to force Olde English prose",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/linkedin-recruitment-spam-becomes-olde-english-prose-after-user-hides-ai-prompt-injection-in-bio-bots-also-also-manipulated-to-address-user-as-my-lord"
+    },
+    {
+      "q": "What is the name of the new Windows zero-day privilege escalation exploit that provides attackers with SYSTEM access on fully patched systems?",
+      "options": [
+        "MiniPlasma",
+        "WannaCry",
+        "BlueKeep",
+        "GhostToken"
+      ],
+      "a": 0,
+      "correctText": "MiniPlasma",
+      "category": "Technology",
+      "source": "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/"
+    },
+    {
+      "q": "What order did a South Korean court issue regarding the 2026 Samsung union strike?",
+      "options": [
+        "The strike must not impact chip production volume",
+        "The strike must end within 24 hours",
+        "Strikers are banned from demonstrating near the headquarters",
+        "The union must pay a daily fine to the government"
+      ],
+      "a": 0,
+      "correctText": "The strike must not impact chip production volume",
+      "category": "Technology",
+      "source": "https://www.straitstimes.com/business/companies-markets/south-korea-court-orders-samsung-union-strike-to-not-impact-chip-volume"
+    },
+    {
+      "q": "How did China's new 1.54-exaflops 'LineShine' supercomputer bypass US GPU bans?",
+      "options": [
+        "It is a CPU-only system using 2.4 million Huawei-designed Armv9 cores",
+        "It utilizes specialized quantum processors built by Alibaba",
+        "It connects millions of consumer gaming consoles in parallel",
+        "It relies entirely on analog optical computing chips"
+      ],
+      "a": 0,
+      "correctText": "It is a CPU-only system using 2.4 million Huawei-designed Armv9 cores",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/china-bypasses-us-gpu-bans-with-1-54-exaflops-lineshine-supercomputer-cpu-only-monster-packs-2-4-million-huawei-designed-armv9-cores"
+    }
+  ]
+}

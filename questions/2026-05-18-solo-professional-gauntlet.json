@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-18",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which European country's prime minister announced he would file a criminal complaint after shredded documents were discovered inside a former ministry building?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Slovakia",
+        "Romania"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://tvpworld.com/93304273/hungary-magyar-seeks-probe-after-fidesz-documents-found-in-ministry-building"
+    },
+    {
+      "q": "May 18, 2026, served as the lead plaintiff deadline for investors in a securities class action lawsuit regarding misleading contract value growth projections against which technological research and consulting firm?",
+      "options": [
+        "Gartner, Inc.",
+        "Forrester Research",
+        "McKinsey & Company",
+        "Boston Consulting Group"
+      ],
+      "a": 0,
+      "correctText": "Gartner, Inc.",
+      "category": "Business",
+      "source": "https://www.globenewswire.com/news-release/2026/05/14/2882200/0/en/GARTNER-INC-INVESTORS-WITH-LOSSES-HAVE-UNTIL-MAY-18-2026-TO-JOIN-SECURITIES-CLASS-ACTION-Bernstein-Liebhard-LLP-Announces-Deadline.html"
+    },
+    {
+      "q": "Who recently stated that AI-powered bug hunters have made the Linux security mailing list 'almost entirely unmanageable'?",
+      "options": [
+        "Linus Torvalds",
+        "Richard Stallman",
+        "Tim Cook",
+        "Satya Nadella"
+      ],
+      "a": 0,
+      "correctText": "Linus Torvalds",
+      "category": "Technology",
+      "source": "https://www.theregister.com/security/2026/05/18/linus-torvalds-says-ai-powered-bug-hunters-have-made-linux-security-mailing-list-almost-entirely-unmanageable/5241633"
+    },
+    {
+      "q": "A massive overnight drone attack in the Moscow region resulted in the deaths of at least how many people?",
+      "options": [
+        "3",
+        "10",
+        "15",
+        "0"
+      ],
+      "a": 0,
+      "correctText": "3",
+      "category": "World",
+      "source": "https://kyivindependent.com/over-70-drones-reportedly-downed-near-moscow-russian-officials-claim/"
+    },
+    {
+      "q": "According to recent intelligence reports, Cuba has purchased more than 300 military drones from which two countries?",
+      "options": [
+        "Russia and Iran",
+        "China and North Korea",
+        "Venezuela and Russia",
+        "Iran and Syria"
+      ],
+      "a": 0,
+      "correctText": "Russia and Iran",
+      "category": "World",
+      "source": "https://www.dw.com/en/cuba-buys-more-than-300-drones-from-russia-and-iran-report/a-77191599"
+    },
+    {
+      "q": "EU foreign policy chief Kaja Kallas recently warned that which three nations prefer a \"divided Europe\" over a united one?",
+      "options": [
+        "US, China, and Russia",
+        "India, China, and Brazil",
+        "UK, US, and Russia",
+        "China, Russia, and Iran"
+      ],
+      "a": 0,
+      "correctText": "US, China, and Russia",
+      "category": "World",
+      "source": "https://www.politico.eu/article/us-china-and-russia-prefer-a-divided-europe-kallas-warns/"
+    },
+    {
+      "q": "How did China's new 1.54-exaflops 'LineShine' supercomputer bypass US GPU bans?",
+      "options": [
+        "It is a CPU-only system using 2.4 million Huawei-designed Armv9 cores",
+        "It utilizes specialized quantum processors built by Alibaba",
+        "It connects millions of consumer gaming consoles in parallel",
+        "It relies entirely on analog optical computing chips"
+      ],
+      "a": 0,
+      "correctText": "It is a CPU-only system using 2.4 million Huawei-designed Armv9 cores",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/china-bypasses-us-gpu-bans-with-1-54-exaflops-lineshine-supercomputer-cpu-only-monster-packs-2-4-million-huawei-designed-armv9-cores"
+    },
+    {
+      "q": "Ukrainian President Volodymyr Zelenskyy confirmed that Ukraine was responsible for a massive drone strike targeting which Russian region?",
+      "options": [
+        "Moscow",
+        "St. Petersburg",
+        "Belgorod",
+        "Rostov-on-Don"
+      ],
+      "a": 0,
+      "correctText": "Moscow",
+      "category": "World",
+      "source": "https://united24media.com/war-in-ukraine/zelenskyy-confirms-ukraine-was-behind-massive-moscow-drone-strike-18887"
+    },
+    {
+      "q": "On May 18, 2026, the claims filing deadline ended for a $1.22 billion merchant class action settlement regarding overcharged interchange fees by which major credit card company?",
+      "options": [
+        "Discover",
+        "Visa",
+        "Mastercard",
+        "American Express"
+      ],
+      "a": 0,
+      "correctText": "Discover",
+      "category": "Business",
+      "source": "https://bradyware.com/new-recovery-opportunity-1-22-billion-discover-class-action-settlement/"
+    },
+    {
+      "q": "How did a LinkedIn user recently strike back against automated recruitment bots spamming their profile?",
+      "options": [
+        "By hiding an AI prompt injection in their bio to force Olde English prose",
+        "By injecting SQL to delete the recruiter's account",
+        "By redirecting the bot to a continuous loop of CAPTCHAs",
+        "By setting their work experience to 100 years in the future"
+      ],
+      "a": 0,
+      "correctText": "By hiding an AI prompt injection in their bio to force Olde English prose",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/artificial-intelligence/linkedin-recruitment-spam-becomes-olde-english-prose-after-user-hides-ai-prompt-injection-in-bio-bots-also-also-manipulated-to-address-user-as-my-lord"
+    }
+  ]
+}

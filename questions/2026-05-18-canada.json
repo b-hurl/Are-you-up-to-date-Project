@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What iconic building in Dawson City, Yukon, colloquially known as 'The Pit', was tragically destroyed by a fire in May 2026?",
+      "options": [
+        "Westminster Hotel",
+        "Downtown Hotel",
+        "Eldorado Hotel",
+        "Midnight Sun Hotel"
+      ],
+      "a": 0,
+      "correctText": "Westminster Hotel",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/north/devastation-in-dawson-city-yukon-as-iconic-hotel-is-razed-by-fire-9.7202871"
+    },
+    {
+      "q": "Public Safety Canada was hit with a Community Note on X in May 2026 after trying to downplay the true scope of which new surveillance legislation?",
+      "options": [
+        "Bill C-22",
+        "Bill C-11",
+        "Bill C-18",
+        "Bill S-211"
+      ],
+      "a": 0,
+      "correctText": "Bill C-22",
+      "category": "Canada",
+      "source": "https://www.iphoneincanada.ca/2026/05/17/ottawa-accused-of-lying-about-its-own-surveillance-bill-on-x/"
+    },
+    {
+      "q": "A Canadian isolating in British Columbia tested presumptive positive for the Andes strain of hantavirus after returning from a cruise on which ship?",
+      "options": [
+        "MV Hondius",
+        "Ocean Endeavour",
+        "MS Roald Amundsen",
+        "Le Boreal"
+      ],
+      "a": 0,
+      "correctText": "MV Hondius",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11853495/hantavirus-confirmed-case-canada/"
+    },
+    {
+      "q": "Newly elected federal NDP leader Avi Lewis spoke to a packed crowd on his party rebuild tour at which Saskatoon venue in May 2026?",
+      "options": [
+        "The Roxy Theatre",
+        "TCU Place",
+        "The Capitol Music Club",
+        "SaskTel Centre"
+      ],
+      "a": 0,
+      "correctText": "The Roxy Theatre",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/saskatoon/article/federal-ndp-leader-avi-lewis-speaks-to-packed-saskatoon-crowd-on-party-rebuild-tour/"
+    },
+    {
+      "q": "Which Canadian Conservative MP arrived in Taiwan in May 2026 to meet with President Lai Ching-te, defying a direct warning from China's ambassador?",
+      "options": [
+        "Michael Chong",
+        "Pierre Poilievre",
+        "Melissa Lantsman",
+        "Garnett Genuis"
+      ],
+      "a": 0,
+      "correctText": "Michael Chong",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-michael-chong-taiwan-visit-china/"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "q": "On May 18, 2026, the claims filing deadline ended for a $1.22 billion merchant class action settlement regarding overcharged interchange fees by which major credit card company?",
+      "options": [
+        "Discover",
+        "Visa",
+        "Mastercard",
+        "American Express"
+      ],
+      "a": 0,
+      "correctText": "Discover",
+      "category": "Business",
+      "source": "https://bradyware.com/new-recovery-opportunity-1-22-billion-discover-class-action-settlement/"
+    },
+    {
+      "q": "On May 18, 2026, Indian EV manufacturer Oben Electric announced that which of its newly launched electric motorcycle models had surpassed 25,000 bookings in just 15 days?",
+      "options": [
+        "Oben Rorr Evo",
+        "Oben Flash Pro",
+        "Oben Thunder",
+        "Oben Volta X"
+      ],
+      "a": 0,
+      "correctText": "Oben Rorr Evo",
+      "category": "Business",
+      "source": "https://auto.economictimes.indiatimes.com/news/two-wheelers/oben-electrics-rorr-evo-crosses-25000-bookings-in-15-days/110222000"
+    },
+    {
+      "q": "May 18, 2026, served as the lead plaintiff deadline for investors in a securities class action lawsuit regarding misleading contract value growth projections against which technological research and consulting firm?",
+      "options": [
+        "Gartner, Inc.",
+        "Forrester Research",
+        "McKinsey & Company",
+        "Boston Consulting Group"
+      ],
+      "a": 0,
+      "correctText": "Gartner, Inc.",
+      "category": "Business",
+      "source": "https://www.globenewswire.com/news-release/2026/05/14/2882200/0/en/GARTNER-INC-INVESTORS-WITH-LOSSES-HAVE-UNTIL-MAY-18-2026-TO-JOIN-SECURITIES-CLASS-ACTION-Bernstein-Liebhard-LLP-Announces-Deadline.html"
+    }
+  ]
+}

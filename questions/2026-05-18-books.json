@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "q": "Making viral news around May 18, 2026, researchers stunned the literary world by finding the oldest surviving English poem hidden inside a medieval Latin book at Rome's National Central Library. What is the name of this 7th-century poem?",
+      "options": [
+        "Caedmon's Hymn",
+        "Beowulf",
+        "The Wanderer",
+        "The Dream of the Rood"
+      ],
+      "a": 0,
+      "correctText": "Caedmon's Hymn",
+      "category": "Books",
+      "source": "https://apnews.com/article/old-english-manuscript-poetry-bede-caedmon-hymn-latin-italy-106769c014901cf06d8a56839d56ac90"
+    },
+    {
+      "q": "Highlighted by LAist in May 2026, which tiny independent Los Angeles bookstore transforms its 900-square-foot space into a lively \"Sunday Funday Market\" every week?",
+      "options": [
+        "A Good Used Book",
+        "The Last Bookstore",
+        "Skylight Books",
+        "Stories Books and Cafe"
+      ],
+      "a": 0,
+      "correctText": "A Good Used Book",
+      "category": "Books",
+      "source": "https://laist.com/news/why-this-tiny-bookstore-is-becoming-one-of-las-most-perfect-sunday-hangs"
+    },
+    {
+      "q": "On May 18, 2026, publisher Pan Fiction announced an \"industry-first\" book advent calendar targeted at romance readers. What is the title of this 12-novella collection?",
+      "options": [
+        "Kissed by Christmas",
+        "12 Days of Romance",
+        "The Mistletoe Mystery",
+        "A Very Merry Meet-Cute"
+      ],
+      "a": 0,
+      "correctText": "Kissed by Christmas",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/news/pan-fiction-to-publish-kissed-by-christmas-romance-advent-calendar"
+    },
+    {
+      "q": "On May 18, 2026, it was announced that author Steven James would be the keynote speaker for an annual Professional Writer's Conference held at which university?",
+      "options": [
+        "Taylor University",
+        "Liberty University",
+        "Biola University",
+        "Wheaton College"
+      ],
+      "a": 0,
+      "correctText": "Taylor University",
+      "category": "Books",
+      "source": "https://www.theechonews.com/article/2026/05/faith-and-fiction-writers-conference-returns"
+    }
+  ]
+}

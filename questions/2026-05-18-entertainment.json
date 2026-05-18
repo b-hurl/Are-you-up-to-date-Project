@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "On May 18, 2026, it was publicly announced that which actress, best known for her role in the 1953 sci-fi classic 'The War of the Worlds,' had died at age 96?",
+      "options": [
+        "Ann Robinson",
+        "Shelley Winters",
+        "Gene Barry",
+        "Vivien Leigh"
+      ],
+      "a": 0,
+      "correctText": "Ann Robinson",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/ann-robinson-dead-war-of-the-worlds-1236598147/"
+    },
+    {
+      "q": "Which actor was announced in May 2026 to be voicing the lead character, Jingoro, in Masashi Kawamura's stop-motion samurai epic 'Hidari'?",
+      "options": [
+        "Hiroyuki Sanada",
+        "Keanu Reeves",
+        "Ken Watanabe",
+        "Tom Cruise"
+      ],
+      "a": 1,
+      "correctText": "Keanu Reeves",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/keanu-reeves-voice-lead-stop-motion-samurai-film-hidari-1236751402/"
+    },
+    {
+      "q": "During a May 2026 Cannes masterclass, Cate Blanchett revealed she and Selena Gomez are starring in a new 'X-rated' epic directed by whom?",
+      "options": [
+        "Jim Jarmusch",
+        "Na Hong-jin",
+        "Brady Corbet",
+        "Wes Anderson"
+      ],
+      "a": 2,
+      "correctText": "Brady Corbet",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/festivals/cate-blanchett-selena-gomez-brady-corbet-new-film-1236751573/"
+    },
+    {
+      "q": "In May 2026, Markiplier announced at the Cannes Film Festival that his feature film debut 'Iron Lung' will premiere exclusively on which platform?",
+      "options": [
+        "Netflix",
+        "Amazon Prime",
+        "Hulu",
+        "YouTube"
+      ],
+      "a": 3,
+      "correctText": "YouTube",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/markiplier-iron-lung-youtube-cannes-1236907884/"
+    },
+    {
+      "q": "In a May 2026 interview, Ice Cube and Mike Epps officially confirmed that which comedy sequel is in development, with Chris Tucker in talks to return?",
+      "options": [
+        "Last Friday",
+        "First Sunday 2",
+        "Next Friday 2",
+        "Friday After Next 2"
+      ],
+      "a": 0,
+      "correctText": "Last Friday",
+      "category": "Entertainment",
+      "source": "https://www.complex.com/pop-culture/a/treyalston/ice-cube-mike-epps-last-friday-in-works"
+    }
+  ]
+}

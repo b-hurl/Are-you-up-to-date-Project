@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to recent intelligence reports, Cuba has purchased more than 300 military drones from which two countries?",
+      "options": [
+        "Russia and Iran",
+        "China and North Korea",
+        "Venezuela and Russia",
+        "Iran and Syria"
+      ],
+      "a": 0,
+      "correctText": "Russia and Iran",
+      "category": "World",
+      "source": "https://www.dw.com/en/cuba-buys-more-than-300-drones-from-russia-and-iran-report/a-77191599"
+    },
+    {
+      "q": "Ukrainian President Volodymyr Zelenskyy confirmed that Ukraine was responsible for a massive drone strike targeting which Russian region?",
+      "options": [
+        "Moscow",
+        "St. Petersburg",
+        "Belgorod",
+        "Rostov-on-Don"
+      ],
+      "a": 0,
+      "correctText": "Moscow",
+      "category": "World",
+      "source": "https://united24media.com/war-in-ukraine/zelenskyy-confirms-ukraine-was-behind-massive-moscow-drone-strike-18887"
+    },
+    {
+      "q": "Which European country's prime minister announced he would file a criminal complaint after shredded documents were discovered inside a former ministry building?",
+      "options": [
+        "Hungary",
+        "Poland",
+        "Slovakia",
+        "Romania"
+      ],
+      "a": 0,
+      "correctText": "Hungary",
+      "category": "World",
+      "source": "https://tvpworld.com/93304273/hungary-magyar-seeks-probe-after-fidesz-documents-found-in-ministry-building"
+    },
+    {
+      "q": "EU foreign policy chief Kaja Kallas recently warned that which three nations prefer a \"divided Europe\" over a united one?",
+      "options": [
+        "US, China, and Russia",
+        "India, China, and Brazil",
+        "UK, US, and Russia",
+        "China, Russia, and Iran"
+      ],
+      "a": 0,
+      "correctText": "US, China, and Russia",
+      "category": "World",
+      "source": "https://www.politico.eu/article/us-china-and-russia-prefer-a-divided-europe-kallas-warns/"
+    },
+    {
+      "q": "A massive overnight drone attack in the Moscow region resulted in the deaths of at least how many people?",
+      "options": [
+        "3",
+        "10",
+        "15",
+        "0"
+      ],
+      "a": 0,
+      "correctText": "3",
+      "category": "World",
+      "source": "https://kyivindependent.com/over-70-drones-reportedly-downed-near-moscow-russian-officials-claim/"
+    }
+  ]
+}

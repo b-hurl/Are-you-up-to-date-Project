@@ -1,0 +1,110 @@
+{
+  "date": "2026-05-18",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "On May 18, 2026, Indian EV manufacturer Oben Electric announced that which of its newly launched electric motorcycle models had surpassed 25,000 bookings in just 15 days?",
+      "options": [
+        "Oben Rorr Evo",
+        "Oben Flash Pro",
+        "Oben Thunder",
+        "Oben Volta X"
+      ],
+      "a": 0,
+      "correctText": "Oben Rorr Evo",
+      "category": "Business",
+      "source": "https://auto.economictimes.indiatimes.com/news/two-wheelers/oben-electrics-rorr-evo-crosses-25000-bookings-in-15-days/110222000"
+    },
+    {
+      "q": "What is the name of the new Windows zero-day privilege escalation exploit that provides attackers with SYSTEM access on fully patched systems?",
+      "options": [
+        "MiniPlasma",
+        "WannaCry",
+        "BlueKeep",
+        "GhostToken"
+      ],
+      "a": 0,
+      "correctText": "MiniPlasma",
+      "category": "Technology",
+      "source": "https://www.bleepingcomputer.com/news/microsoft/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released/"
+    },
+    {
+      "q": "Which Canadian Conservative MP arrived in Taiwan in May 2026 to meet with President Lai Ching-te, defying a direct warning from China's ambassador?",
+      "options": [
+        "Michael Chong",
+        "Pierre Poilievre",
+        "Melissa Lantsman",
+        "Garnett Genuis"
+      ],
+      "a": 0,
+      "correctText": "Michael Chong",
+      "category": "Canada",
+      "source": "https://www.theglobeandmail.com/politics/article-michael-chong-taiwan-visit-china/"
+    },
+    {
+      "q": "A Canadian isolating in British Columbia tested presumptive positive for the Andes strain of hantavirus after returning from a cruise on which ship?",
+      "options": [
+        "MV Hondius",
+        "Ocean Endeavour",
+        "MS Roald Amundsen",
+        "Le Boreal"
+      ],
+      "a": 0,
+      "correctText": "MV Hondius",
+      "category": "Canada",
+      "source": "https://globalnews.ca/news/11853495/hantavirus-confirmed-case-canada/"
+    },
+    {
+      "q": "What iconic building in Dawson City, Yukon, colloquially known as 'The Pit', was tragically destroyed by a fire in May 2026?",
+      "options": [
+        "Westminster Hotel",
+        "Downtown Hotel",
+        "Eldorado Hotel",
+        "Midnight Sun Hotel"
+      ],
+      "a": 0,
+      "correctText": "Westminster Hotel",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/north/devastation-in-dawson-city-yukon-as-iconic-hotel-is-razed-by-fire-9.7202871"
+    },
+    {
+      "q": "What order did a South Korean court issue regarding the 2026 Samsung union strike?",
+      "options": [
+        "The strike must not impact chip production volume",
+        "The strike must end within 24 hours",
+        "Strikers are banned from demonstrating near the headquarters",
+        "The union must pay a daily fine to the government"
+      ],
+      "a": 0,
+      "correctText": "The strike must not impact chip production volume",
+      "category": "Technology",
+      "source": "https://www.straitstimes.com/business/companies-markets/south-korea-court-orders-samsung-union-strike-to-not-impact-chip-volume"
+    },
+    {
+      "q": "Public Safety Canada was hit with a Community Note on X in May 2026 after trying to downplay the true scope of which new surveillance legislation?",
+      "options": [
+        "Bill C-22",
+        "Bill C-11",
+        "Bill C-18",
+        "Bill S-211"
+      ],
+      "a": 0,
+      "correctText": "Bill C-22",
+      "category": "Canada",
+      "source": "https://www.iphoneincanada.ca/2026/05/17/ottawa-accused-of-lying-about-its-own-surveillance-bill-on-x/"
+    },
+    {
+      "q": "Newly elected federal NDP leader Avi Lewis spoke to a packed crowd on his party rebuild tour at which Saskatoon venue in May 2026?",
+      "options": [
+        "The Roxy Theatre",
+        "TCU Place",
+        "The Capitol Music Club",
+        "SaskTel Centre"
+      ],
+      "a": 0,
+      "correctText": "The Roxy Theatre",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/saskatoon/article/federal-ndp-leader-avi-lewis-speaks-to-packed-saskatoon-crowd-on-party-rebuild-tour/"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "date": "2026-05-18",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which English Premier League club confirmed the appointment of Xabi Alonso as their new manager on a four-year deal in May 2026?",
+      "options": [
+        "Chelsea",
+        "Liverpool",
+        "Manchester United",
+        "Arsenal"
+      ],
+      "a": 0,
+      "correctText": "Chelsea",
+      "category": "Sports",
+      "source": "https://www.nytimes.com/athletic/7284711/2026/05/17/xabi-alonso-chelsea-manager-new/"
+    },
+    {
+      "q": "Subnautica 2's design lead Anthony Gallegos noted that the game's core tenet emphasizes living with dangerous organisms, purposely removing what traditional survival mechanic? [1]",
+      "options": [
+        "Lethal weapons and combat",
+        "Hunger and thirst management",
+        "Resource grinding",
+        "Base defense raids"
+      ],
+      "a": 0,
+      "correctText": "Lethal weapons and combat",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/subnautica-2s-no-killing-ethos-will-be-a-continued-point-of-resistance-among-players-say-unknown-worlds-but-they-have-no-plans-to-change-it"
+    },
+    {
+      "q": "Which NBA player became the 14th in league history to win back-to-back MVP awards as announced in May 2026?",
+      "options": [
+        "Shai Gilgeous-Alexander",
+        "Luka Doncic",
+        "Nikola Jokic",
+        "Victor Wembanyama"
+      ],
+      "a": 0,
+      "correctText": "Shai Gilgeous-Alexander",
+      "category": "Sports",
+      "source": "https://www.espn.com/nba/story/_/id/48795765/sources-thunder-shai-gilgeous-alexander-repeats-nba-mvp"
+    },
+    {
+      "q": "A May 2026 announcement trailer revealed that the PlayStation release of the asymmetrical multiplayer game Primal Carnage: Evolution is set for what date? [4]",
+      "options": [
+        "May 28, 2026",
+        "June 15, 2026",
+        "July 4, 2026",
+        "October 31, 2026"
+      ],
+      "a": 0,
+      "correctText": "May 28, 2026",
+      "category": "Gaming",
+      "source": "https://youtu.be/SXRblgdOLhQ?si=PHHZ1perC4Gl2Ocu"
+    },
+    {
+      "q": "Which actor was announced in May 2026 to be voicing the lead character, Jingoro, in Masashi Kawamura's stop-motion samurai epic 'Hidari'?",
+      "options": [
+        "Hiroyuki Sanada",
+        "Keanu Reeves",
+        "Ken Watanabe",
+        "Tom Cruise"
+      ],
+      "a": 1,
+      "correctText": "Keanu Reeves",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/global/keanu-reeves-voice-lead-stop-motion-samurai-film-hidari-1236751402/"
+    },
+    {
+      "q": "On May 18, 2026, it was publicly announced that which actress, best known for her role in the 1953 sci-fi classic 'The War of the Worlds,' had died at age 96?",
+      "options": [
+        "Ann Robinson",
+        "Shelley Winters",
+        "Gene Barry",
+        "Vivien Leigh"
+      ],
+      "a": 0,
+      "correctText": "Ann Robinson",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/ann-robinson-dead-war-of-the-worlds-1236598147/"
+    },
+    {
+      "q": "During a May 2026 Cannes masterclass, Cate Blanchett revealed she and Selena Gomez are starring in a new 'X-rated' epic directed by whom?",
+      "options": [
+        "Jim Jarmusch",
+        "Na Hong-jin",
+        "Brady Corbet",
+        "Wes Anderson"
+      ],
+      "a": 2,
+      "correctText": "Brady Corbet",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/festivals/cate-blanchett-selena-gomez-brady-corbet-new-film-1236751573/"
+    },
+    {
+      "q": "Who won the 2026 NASCAR All-Star Race at Dover Motor Speedway, taking home the $1 million prize?",
+      "options": [
+        "Denny Hamlin",
+        "Chase Elliott",
+        "Kyle Larson",
+        "Ryan Blaney"
+      ],
+      "a": 0,
+      "correctText": "Denny Hamlin",
+      "category": "Sports",
+      "source": "https://www.espn.com/racing/nascar/story/_/id/48799746/denny-hamlin-outduels-chase-briscoe-win-nascar-all-star-race"
+    },
+    {
+      "q": "Highlighted by LAist in May 2026, which tiny independent Los Angeles bookstore transforms its 900-square-foot space into a lively \"Sunday Funday Market\" every week?",
+      "options": [
+        "A Good Used Book",
+        "The Last Bookstore",
+        "Skylight Books",
+        "Stories Books and Cafe"
+      ],
+      "a": 0,
+      "correctText": "A Good Used Book",
+      "category": "Books",
+      "source": "https://laist.com/news/why-this-tiny-bookstore-is-becoming-one-of-las-most-perfect-sunday-hangs"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-18",
+  "type": "solo-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Which veteran quarterback agreed to a one-year deal to return to the Pittsburgh Steelers for the 2026 NFL season?",
+      "options": [
+        "Aaron Rodgers",
+        "Russell Wilson",
+        "Kirk Cousins",
+        "Matthew Stafford"
+      ],
+      "a": 0,
+      "correctText": "Aaron Rodgers",
+      "category": "Sports",
+      "source": "https://www.espn.com/nfl/story/_/id/48791130/aaron-rodgers-sign-1-year-deal-steelers"
+    },
+    {
+      "q": "On May 18, 2026, it was announced that author Steven James would be the keynote speaker for an annual Professional Writer's Conference held at which university?",
+      "options": [
+        "Taylor University",
+        "Liberty University",
+        "Biola University",
+        "Wheaton College"
+      ],
+      "a": 0,
+      "correctText": "Taylor University",
+      "category": "Books",
+      "source": "https://www.theechonews.com/article/2026/05/faith-and-fiction-writers-conference-returns"
+    },
+    {
+      "q": "US game stores were left baffled in May 2026 after mysteriously receiving sealed packages containing copies of which rare PS4 game? [2]",
+      "options": [
+        "Poop Slinger",
+        "Gilson B. Pontes' Lieve Mabel",
+        "Godzilla",
+        "P.T."
+      ],
+      "a": 0,
+      "correctText": "Poop Slinger",
+      "category": "Gaming",
+      "source": "https://kotaku.com/stores-at-a-loss-for-words-after-being-sent-sealed-copies-of-rare-ps4-game-poop-slinger-2000696767"
+    },
+    {
+      "q": "In May 2026, the Cleveland Cavaliers advanced to the Eastern Conference Finals by defeating which team 125-94 in Game 7?",
+      "options": [
+        "Detroit Pistons",
+        "Boston Celtics",
+        "Miami Heat",
+        "Indiana Pacers"
+      ],
+      "a": 0,
+      "correctText": "Detroit Pistons",
+      "category": "Sports",
+      "source": "https://www.thescore.com/nba/news/3542180/cavs-blow-out-pistons-in-game-7-will-play-knicks-in-east-finals"
+    },
+    {
+      "q": "In a May 2026 interview, Ice Cube and Mike Epps officially confirmed that which comedy sequel is in development, with Chris Tucker in talks to return?",
+      "options": [
+        "Last Friday",
+        "First Sunday 2",
+        "Next Friday 2",
+        "Friday After Next 2"
+      ],
+      "a": 0,
+      "correctText": "Last Friday",
+      "category": "Entertainment",
+      "source": "https://www.complex.com/pop-culture/a/treyalston/ice-cube-mike-epps-last-friday-in-works"
+    },
+    {
+      "q": "Unknown Worlds recently stated they have no plans to change what controversial \"point of resistance\" among players in Subnautica 2? [1]",
+      "options": [
+        "The no-killing ethos",
+        "The mandatory co-op",
+        "The base building limits",
+        "The stamina meter"
+      ],
+      "a": 0,
+      "correctText": "The no-killing ethos",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/subnautica-2s-no-killing-ethos-will-be-a-continued-point-of-resistance-among-players-say-unknown-worlds-but-they-have-no-plans-to-change-it"
+    },
+    {
+      "q": "The developer of the upcoming indie game Mixtape paid extra for a perpetual privilege to ensure the game is permanently safe from what specific issue? [3]",
+      "options": [
+        "Music licensing-related delisting",
+        "Server shutdowns",
+        "Microtransaction requirements",
+        "Always-online DRM"
+      ],
+      "a": 0,
+      "correctText": "Music licensing-related delisting",
+      "category": "Gaming",
+      "source": "https://www.rockpapershotgun.com/mixtape-will-be-safe-from-a-music-licensing-related-delisting-ensured-by-its-developer-paying-extra-for-the-privilege"
+    },
+    {
+      "q": "On May 18, 2026, publisher Pan Fiction announced an \"industry-first\" book advent calendar targeted at romance readers. What is the title of this 12-novella collection?",
+      "options": [
+        "Kissed by Christmas",
+        "12 Days of Romance",
+        "The Mistletoe Mystery",
+        "A Very Merry Meet-Cute"
+      ],
+      "a": 0,
+      "correctText": "Kissed by Christmas",
+      "category": "Books",
+      "source": "https://www.thebookseller.com/news/pan-fiction-to-publish-kissed-by-christmas-romance-advent-calendar"
+    },
+    {
+      "q": "In May 2026, Markiplier announced at the Cannes Film Festival that his feature film debut 'Iron Lung' will premiere exclusively on which platform?",
+      "options": [
+        "Netflix",
+        "Amazon Prime",
+        "Hulu",
+        "YouTube"
+      ],
+      "a": 3,
+      "correctText": "YouTube",
+      "category": "Entertainment",
+      "source": "https://deadline.com/2026/05/markiplier-iron-lung-youtube-cannes-1236907884/"
+    },
+    {
+      "q": "Making viral news around May 18, 2026, researchers stunned the literary world by finding the oldest surviving English poem hidden inside a medieval Latin book at Rome's National Central Library. What is the name of this 7th-century poem?",
+      "options": [
+        "Caedmon's Hymn",
+        "Beowulf",
+        "The Wanderer",
+        "The Dream of the Rood"
+      ],
+      "a": 0,
+      "correctText": "Caedmon's Hymn",
+      "category": "Books",
+      "source": "https://apnews.com/article/old-english-manuscript-poetry-bede-caedmon-hymn-latin-italy-106769c014901cf06d8a56839d56ac90"
+    }
+  ]
+}
