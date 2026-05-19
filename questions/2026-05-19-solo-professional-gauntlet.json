@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-19",
+  "type": "solo-professional-gauntlet",
+  "questions": [
+    {
+      "q": "A May 2026 study featured in The Guardian showed that participants given a single dose of psilocybin (magic mushrooms) were more likely to abstain from what addictive substance compared to a placebo group?",
+      "options": [
+        "Cocaine",
+        "Alcohol",
+        "Heroin",
+        "Nicotine"
+      ],
+      "a": 0,
+      "correctText": "Cocaine",
+      "category": "Science",
+      "source": "https://www.theguardian.com/science/2026/may/18/magic-mushrooms-treatment-cocaine-addiction-study"
+    },
+    {
+      "q": "Seagate shares tumbled in May 2026 after CEO Dave Mosley stated that building new factories to meet AI-driven memory chip demand would result in what?",
+      "options": [
+        "It would \"take too long\"",
+        "It would violate US export bans",
+        "It would bankrupt the company",
+        "It would require federal bailouts"
+      ],
+      "a": 0,
+      "correctText": "It would \"take too long\"",
+      "category": "Business",
+      "source": "https://www.cnbc.com/2026/05/18/seagate-memory-chip-stocks-ai.html"
+    },
+    {
+      "q": "Which former Google CEO was met with boos from students during a May 2026 commencement speech at the University of Arizona after making remarks about artificial intelligence?",
+      "options": [
+        "Sundar Pichai",
+        "Eric Schmidt",
+        "Larry Page",
+        "Sergey Brin"
+      ],
+      "a": 1,
+      "correctText": "Eric Schmidt",
+      "category": "Technology",
+      "source": "https://www.theguardian.com/us-news/2026/may/18/eric-schmidt-ai-university-commencement-speech-booed"
+    },
+    {
+      "q": "In May 2026, a contractor for which US federal agency was found to have inadvertently exposed highly privileged AWS GovCloud keys on a public GitHub repository?",
+      "options": [
+        "Cybersecurity & Infrastructure Security Agency (CISA)",
+        "National Security Agency (NSA)",
+        "Federal Bureau of Investigation (FBI)",
+        "Defense Information Systems Agency (DISA)"
+      ],
+      "a": 0,
+      "correctText": "Cybersecurity & Infrastructure Security Agency (CISA)",
+      "category": "Technology",
+      "source": "https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/"
+    },
+    {
+      "q": "In a May 2026 public letter ahead of its shareholder meeting, Lululemon's board rejected proxy board nominees from which founder, calling his perspectives \"misguided\"?",
+      "options": [
+        "Chip Wilson",
+        "Phil Knight",
+        "Kevin Plank",
+        "Yvon Chouinard"
+      ],
+      "a": 0,
+      "correctText": "Chip Wilson",
+      "category": "Business",
+      "source": "https://www.cnn.com/2026/05/18/business/lululemon-response-chip-wilson"
+    },
+    {
+      "q": "Which fast-food franchisee sued its parent company in May 2026 for $100 million, alleging its 'Dragontail' AI delivery system caused cascading operational breakdowns?",
+      "options": [
+        "Pizza Hut",
+        "Domino's",
+        "Papa John's",
+        "Burger King"
+      ],
+      "a": 0,
+      "correctText": "Pizza Hut",
+      "category": "Business",
+      "source": "https://www.businessinsider.com/pizza-hut-ai-system-dragontail-lawsuit-franchisee-2026-5"
+    },
+    {
+      "q": "What NHL team did the Montreal Canadiens defeat in Game 7 overtime to advance to the 2026 Eastern Conference final?",
+      "options": [
+        "Buffalo Sabres",
+        "Toronto Maple Leafs",
+        "Boston Bruins",
+        "Carolina Hurricanes"
+      ],
+      "a": 0,
+      "correctText": "Buffalo Sabres",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/montreal/habs-sabres-game-seven-second-round-9.7203205"
+    },
+    {
+      "q": "The Justice Department announced a $1.7 billion 'Anti-Weaponization Fund' to compensate Trump allies in a deal resolving his lawsuit against which federal agency?",
+      "options": [
+        "Internal Revenue Service (IRS)",
+        "Federal Bureau of Investigation (FBI)",
+        "Central Intelligence Agency (CIA)",
+        "Environmental Protection Agency (EPA)"
+      ],
+      "a": 0,
+      "correctText": "Internal Revenue Service (IRS)",
+      "category": "Usa",
+      "source": "https://apnews.com/article/trump-lawsuit-irs-leak-3729de38770b558be01712a143437bf8?utm_source=copy&utm_medium=share"
+    },
+    {
+      "q": "In May 2026, an active shooting being investigated as a hate crime left three people dead at which religious facility in Southern California?",
+      "options": [
+        "Islamic Center of San Diego",
+        "Saddleback Church",
+        "Hsi Lai Temple",
+        "Wilshire Boulevard Temple"
+      ],
+      "a": 0,
+      "correctText": "Islamic Center of San Diego",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/active-shooter-reported-islamic-center-san-diego-police/story?id=133081988"
+    },
+    {
+      "q": "In a May 2026 interview, Barnes & Noble CEO James Daunt expressed his willingness to sell which type of controversial content in stores, provided it isn't \"masquerading\"?",
+      "options": [
+        "AI-written books",
+        "Unlicensed fan fiction",
+        "Pirated textbooks",
+        "Self-published medical advice"
+      ],
+      "a": 0,
+      "correctText": "AI-written books",
+      "category": "Business",
+      "source": "https://www.the-independent.com/arts-entertainment/books/news/barnes-and-noble-james-daunt-ai-books-b2978925.html"
+    }
+  ]
+}

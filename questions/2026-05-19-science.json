@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a May 2026 PsyPost report, White Americans who feel they are on the losing side of politics are more likely to oppose economic redistribution programs only under what specific condition?",
+      "options": [
+        "They compare their political standing directly to racial minorities",
+        "They are actively experiencing a decline in personal income",
+        "They live in predominantly low-income neighborhoods",
+        "They are prompted with statistics about federal tax rates"
+      ],
+      "a": 0,
+      "correctText": "They compare their political standing directly to racial minorities",
+      "category": "Science",
+      "source": "https://www.psypost.org/how-explicit-racial-comparisons-shape-white-american-attitudes-on-wealth-redistr/"
+    },
+    {
+      "q": "A May 2026 psychological study found that while both political sides are reluctant to promote rhetoric from the opposing side, which group was more consistently hesitant to support their own causes when framed with opposing moral language?",
+      "options": [
+        "Liberals",
+        "Conservatives",
+        "Libertarians",
+        "Centrists"
+      ],
+      "a": 0,
+      "correctText": "Liberals",
+      "category": "Science",
+      "source": "https://www.psypost.org/liberals-hesitate-to-share-progressive-causes-framed-with-conservative-moral-language/"
+    },
+    {
+      "q": "Researchers tracking over 20,000 students reported in May 2026 that student wellbeing significantly drops across every measured domain—including happiness and optimism—after what major transition?",
+      "options": [
+        "The move from primary to high school",
+        "Taking their first set of standardized tests",
+        "Returning from the extended summer vacation",
+        "Switching to fully remote online schooling"
+      ],
+      "a": 0,
+      "correctText": "The move from primary to high school",
+      "category": "Science",
+      "source": "https://www.eurekalert.org/news-releases/1128435"
+    },
+    {
+      "q": "A May 2026 study featured in The Guardian showed that participants given a single dose of psilocybin (magic mushrooms) were more likely to abstain from what addictive substance compared to a placebo group?",
+      "options": [
+        "Cocaine",
+        "Alcohol",
+        "Heroin",
+        "Nicotine"
+      ],
+      "a": 0,
+      "correctText": "Cocaine",
+      "category": "Science",
+      "source": "https://www.theguardian.com/science/2026/may/18/magic-mushrooms-treatment-cocaine-addiction-study"
+    },
+    {
+      "q": "Mass General Brigham researchers reported in May 2026 that an AI model named 'ECG2Stroke' can predict a patient's risk of stroke up to 10 years in the future using what simple test?",
+      "options": [
+        "A 10-second electrocardiogram (ECG)",
+        "A routine non-fasting blood draw",
+        "A 5-minute digital cognitive exam",
+        "A non-invasive retinal eye scan"
+      ],
+      "a": 0,
+      "correctText": "A 10-second electrocardiogram (ECG)",
+      "category": "Science",
+      "source": "https://www.massgeneralbrigham.org/en/about/newsroom/press-releases/ai-model-predicts-10-year-stroke-risk"
+    }
+  ]
+}

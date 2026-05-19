@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which player scored 41 points and grabbed 24 rebounds to lead the Spurs to a double-overtime victory over the Thunder in Game 1 of the 2026 Western Conference finals?",
+      "options": [
+        "Victor Wembanyama",
+        "Chet Holmgren",
+        "Shai Gilgeous-Alexander",
+        "Devin Vassell"
+      ],
+      "a": 0,
+      "correctText": "Victor Wembanyama",
+      "category": "Sports",
+      "source": "https://apnews.com/article/spurs-thunder-score-nba-playoffs-1cb14e4088a0ec7bdc3defb93ff79658"
+    },
+    {
+      "q": "Which Canadian researcher, who helped spearhead the creation of the Special Olympics in the 1960s, died at the age of 96 in May 2026?",
+      "options": [
+        "Frank Hayden",
+        "James Naismith",
+        "David Suzuki",
+        "Frederick Banting"
+      ],
+      "a": 0,
+      "correctText": "Frank Hayden",
+      "category": "Sports",
+      "source": "https://globalnews.ca/news/11854117/frank-hayden-dead/"
+    },
+    {
+      "q": "Ahead of the 2026 World Cup, FIFA officials traveled to which country to negotiate a broadcast deal amid fears of a television blackout?",
+      "options": [
+        "India",
+        "China",
+        "Australia",
+        "South Africa"
+      ],
+      "a": 0,
+      "correctText": "India",
+      "category": "Sports",
+      "source": "https://www.independent.co.uk/sport/football/world-cup/fifa-india-world-cup-2026-blackout-tv-deal-b2978689.html"
+    },
+    {
+      "q": "Who scored the overtime winner for the Montreal Canadiens in Game 7 to defeat the Buffalo Sabres 3-2 and advance to the 2026 Eastern Conference finals?",
+      "options": [
+        "Alex Newhook",
+        "Cole Caufield",
+        "Nick Suzuki",
+        "Tage Thompson"
+      ],
+      "a": 0,
+      "correctText": "Alex Newhook",
+      "category": "Sports",
+      "source": "https://apnews.com/article/canadiens-sabres-playoffs-score-769f1e8dc5b0c3ee10341c750056175b"
+    },
+    {
+      "q": "By winning the 2026 PGA Championship, Aaron Rai became the first player born in which country to capture the major in more than a century?",
+      "options": [
+        "England",
+        "Scotland",
+        "Australia",
+        "Wales"
+      ],
+      "a": 0,
+      "correctText": "England",
+      "category": "Sports",
+      "source": "https://apnews.com/article/pga-championship-aronimink-wanamaker-smalley-1de289b32e148a35edcd919284f01096"
+    }
+  ]
+}

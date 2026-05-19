@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which prolific voice actor, known for playing Yoda in 'Star Wars: The Clone Wars', passed away at age 64 according to reports on May 18, 2026?",
+      "options": [
+        "Tom Kane",
+        "Mark Hamill",
+        "Dee Bradley Baker",
+        "James Arnold Taylor"
+      ],
+      "a": 0,
+      "correctText": "Tom Kane",
+      "category": "Entertainment",
+      "source": "https://www.eonline.com/news/1432103/tom-kane-dead-star-wars-powerpuff-girls-actor-dies-at-64"
+    },
+    {
+      "q": "The live-action reboot of 'Masters of the Universe' had its world premiere in Los Angeles on May 18, 2026. Which actor stars as Prince Adam/He-Man?",
+      "options": [
+        "Nicholas Galitzine",
+        "Chris Hemsworth",
+        "Noah Centineo",
+        "Kellan Lutz"
+      ],
+      "a": 0,
+      "correctText": "Nicholas Galitzine",
+      "category": "Entertainment",
+      "source": "https://www.hollywoodreporter.com/movies/movie-news/masters-of-the-universe-first-reactions-1236599231/"
+    },
+    {
+      "q": "On May 18, 2026, Netflix acquired the global rights outside France for which animated coming-of-age romance that opened the Cannes Critics' Week?",
+      "options": [
+        "In Waves",
+        "I Lost My Body",
+        "Flow",
+        "The Swarm"
+      ],
+      "a": 0,
+      "correctText": "In Waves",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/netflix-buys-in-waves-cannes-1236753146/"
+    },
+    {
+      "q": "Director Na Hong-jin debuted his epic sci-fi action thriller about an alien creature attacking a rural Korean town at the 2026 Cannes Film Festival. What is the film's title?",
+      "options": [
+        "Hope",
+        "Hostile",
+        "The Wailing",
+        "Alienoid"
+      ],
+      "a": 0,
+      "correctText": "Hope",
+      "category": "Entertainment",
+      "source": "https://apnews.com/article/cannes-hope-na-hongjin-monster-movie-a46d51b2c2e414754697b6ceef007c11"
+    },
+    {
+      "q": "On May 18, 2026, Paramount dropped eight new parody posters for the upcoming sixth installment of which comedy horror franchise, spoofing films like 'Get Out' and 'Sinners'?",
+      "options": [
+        "Scary Movie",
+        "A Haunted House",
+        "Shriek If You Know What I Did",
+        "Epic Movie"
+      ],
+      "a": 0,
+      "correctText": "Scary Movie",
+      "category": "Entertainment",
+      "source": "https://www.justjared.com/2026/05/18/scary-movie-6-debuts-eight-new-parody-posters-spoofing-horror-films-ma-weapons-more/"
+    }
+  ]
+}

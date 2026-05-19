@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What animal were Alberta students exposed to on a school bus in May 2026, prompting rabies treatment?",
+      "options": [
+        "A bat",
+        "A stray dog",
+        "A raccoon",
+        "A coyote"
+      ],
+      "a": 0,
+      "correctText": "A bat",
+      "category": "Health",
+      "source": "https://www.cbc.ca/news/canada/calgary/drumheller-bus-bat-rabies-treatment-9.7202467"
+    },
+    {
+      "q": "In May 2026, the CDC confirmed that at least one American tested positive for which virus amid an outbreak in the DRC and Uganda?",
+      "options": [
+        "Ebola",
+        "Mpox",
+        "Lassa fever",
+        "Marburg virus"
+      ],
+      "a": 0,
+      "correctText": "Ebola",
+      "category": "Health",
+      "source": "https://abcnews.com/International/drc-ebola-outbreak-affecting-small-number-americans-cdc/story?id=133061121"
+    },
+    {
+      "q": "Colorado public health officials investigated a 2026 death caused by which virus, which was notably unlinked to a recent cruise ship cluster?",
+      "options": [
+        "Hantavirus",
+        "Norovirus",
+        "Avian influenza",
+        "Rotavirus"
+      ],
+      "a": 0,
+      "correctText": "Hantavirus",
+      "category": "Health",
+      "source": "https://abcnews.com/Health/colorado-pubic-health-officials-investigating-hantavirus-death-linked/story?id=133065122"
+    },
+    {
+      "q": "Amid a 2026 hantavirus quarantine, former contagion patients described their life in isolation featuring hazmat suits, Nerf basketball, and what specific brand of food?",
+      "options": [
+        "Omaha Steaks",
+        "HelloFresh kits",
+        "Domino's Pizza",
+        "Lean Cuisine"
+      ],
+      "a": 0,
+      "correctText": "Omaha Steaks",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/former-contagion-patients-describe-life-in-quarantine-amid-hantavirus-rcna344946"
+    },
+    {
+      "q": "In May 2026, the Trump administration removed key landmark regulations against which group of \"forever\" toxins?",
+      "options": [
+        "PFAS",
+        "Phthalates",
+        "BPA",
+        "Asbestos"
+      ],
+      "a": 0,
+      "correctText": "PFAS",
+      "category": "Health",
+      "source": "https://www.cnn.com/2026/05/18/health/trump-pfas-rollback-wellness"
+    }
+  ]
+}

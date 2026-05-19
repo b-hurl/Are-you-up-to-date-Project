@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Why did a federal jury in California rule against Elon Musk in his 2026 lawsuit against OpenAI?",
+      "options": [
+        "He waited too long to file the case",
+        "He lacked standing as a former board member",
+        "OpenAI proved they remained a non-profit",
+        "Microsoft invoked an immunity clause"
+      ],
+      "a": 0,
+      "correctText": "He waited too long to file the case",
+      "category": "Usa",
+      "source": "https://www.reuters.com/legal/government/elon-musk-loses-lawsuit-against-openai-2026-05-18/"
+    },
+    {
+      "q": "In May 2026, an active shooting being investigated as a hate crime left three people dead at which religious facility in Southern California?",
+      "options": [
+        "Islamic Center of San Diego",
+        "Saddleback Church",
+        "Hsi Lai Temple",
+        "Wilshire Boulevard Temple"
+      ],
+      "a": 0,
+      "correctText": "Islamic Center of San Diego",
+      "category": "Usa",
+      "source": "https://abcnews.com/US/active-shooter-reported-islamic-center-san-diego-police/story?id=133081988"
+    },
+    {
+      "q": "A New York judge ruled that which two items found in Luigi Mangione's backpack can be used as evidence in his upcoming trial for the murder of a UnitedHealthcare CEO?",
+      "options": [
+        "A gun and a notebook",
+        "A laptop and a passport",
+        "A cellphone and a weapon magazine",
+        "A flash drive and a mask"
+      ],
+      "a": 0,
+      "correctText": "A gun and a notebook",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/05/18/luigi-mangione-backpack-evidence-unitedhealthcare-murder.html"
+    },
+    {
+      "q": "The Justice Department announced a $1.7 billion 'Anti-Weaponization Fund' to compensate Trump allies in a deal resolving his lawsuit against which federal agency?",
+      "options": [
+        "Internal Revenue Service (IRS)",
+        "Federal Bureau of Investigation (FBI)",
+        "Central Intelligence Agency (CIA)",
+        "Environmental Protection Agency (EPA)"
+      ],
+      "a": 0,
+      "correctText": "Internal Revenue Service (IRS)",
+      "category": "Usa",
+      "source": "https://apnews.com/article/trump-lawsuit-irs-leak-3729de38770b558be01712a143437bf8?utm_source=copy&utm_medium=share"
+    },
+    {
+      "q": "In May 2026, the CDC confirmed that an American doctor contracted which deadly virus while working in the Democratic Republic of the Congo?",
+      "options": [
+        "Ebola",
+        "Marburg",
+        "Lassa fever",
+        "Mpox"
+      ],
+      "a": 0,
+      "correctText": "Ebola",
+      "category": "Usa",
+      "source": "https://www.denver7.com/health/us-will-screen-passengers-potentially-restrict-entry-amid-ebola-outbreak-in-africa"
+    }
+  ]
+}

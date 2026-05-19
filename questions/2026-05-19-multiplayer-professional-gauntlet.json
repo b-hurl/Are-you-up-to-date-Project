@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-19",
+  "type": "multiplayer-professional-gauntlet",
+  "questions": [
+    {
+      "q": "Which international defense board did the U.S. Pentagon announce it was pausing its participation in with Canada on May 19, 2026?",
+      "options": [
+        "Canada-U.S. Permanent Joint Board on Defence",
+        "NORAD Modernization Committee",
+        "North American Aerospace Defense Command",
+        "Five Eyes Intelligence Council"
+      ],
+      "a": 0,
+      "correctText": "Canada-U.S. Permanent Joint Board on Defence",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/trump-canada-us-joint-defence-board-9.7203211"
+    },
+    {
+      "q": "According to a May 2026 PsyPost report, White Americans who feel they are on the losing side of politics are more likely to oppose economic redistribution programs only under what specific condition?",
+      "options": [
+        "They compare their political standing directly to racial minorities",
+        "They are actively experiencing a decline in personal income",
+        "They live in predominantly low-income neighborhoods",
+        "They are prompted with statistics about federal tax rates"
+      ],
+      "a": 0,
+      "correctText": "They compare their political standing directly to racial minorities",
+      "category": "Science",
+      "source": "https://www.psypost.org/how-explicit-racial-comparisons-shape-white-american-attitudes-on-wealth-redistr/"
+    },
+    {
+      "q": "In May 2026, the CDC confirmed that an American doctor contracted which deadly virus while working in the Democratic Republic of the Congo?",
+      "options": [
+        "Ebola",
+        "Marburg",
+        "Lassa fever",
+        "Mpox"
+      ],
+      "a": 0,
+      "correctText": "Ebola",
+      "category": "Usa",
+      "source": "https://www.denver7.com/health/us-will-screen-passengers-potentially-restrict-entry-amid-ebola-outbreak-in-africa"
+    },
+    {
+      "q": "A May 2026 psychological study found that while both political sides are reluctant to promote rhetoric from the opposing side, which group was more consistently hesitant to support their own causes when framed with opposing moral language?",
+      "options": [
+        "Liberals",
+        "Conservatives",
+        "Libertarians",
+        "Centrists"
+      ],
+      "a": 0,
+      "correctText": "Liberals",
+      "category": "Science",
+      "source": "https://www.psypost.org/liberals-hesitate-to-share-progressive-causes-framed-with-conservative-moral-language/"
+    },
+    {
+      "q": "In May 2026, China announced the full operation of a 24-megawatt underwater data center that uses ocean water for passive cooling and is uniquely powered by what source?",
+      "options": [
+        "Geothermal vents",
+        "Tidal wave generators",
+        "Offshore wind",
+        "Floating solar panels"
+      ],
+      "a": 2,
+      "correctText": "Offshore wind",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/china-says-worlds-first-offshore-wind-powered-underwater-data-center-has-entered-full-operation-houses-2-000-servers-24-megawatt-subsea-ai-facility-uses-ocean-water-for-passive-cooling-and-offshore-wind-for-power"
+    },
+    {
+      "q": "As reported on May 19, 2026, students from which Ontario region traveled to a remote Inuit community in Northern Quebec for a cultural exchange program?",
+      "options": [
+        "Waterloo Region",
+        "Peel Region",
+        "York Region",
+        "Durham Region"
+      ],
+      "a": 0,
+      "correctText": "Waterloo Region",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/kitchener/article/waterloo-region-students-travel-to-remote-inuit-community-in-northern-quebec-for-cultural-exchange/"
+    },
+    {
+      "q": "Why did a federal jury in California rule against Elon Musk in his 2026 lawsuit against OpenAI?",
+      "options": [
+        "He waited too long to file the case",
+        "He lacked standing as a former board member",
+        "OpenAI proved they remained a non-profit",
+        "Microsoft invoked an immunity clause"
+      ],
+      "a": 0,
+      "correctText": "He waited too long to file the case",
+      "category": "Usa",
+      "source": "https://www.reuters.com/legal/government/elon-musk-loses-lawsuit-against-openai-2026-05-18/"
+    },
+    {
+      "q": "Driven by surging power demand for AI data centers, NextEra Energy announced a $66.8 billion all-stock deal in May 2026 to acquire which regulated utility?",
+      "options": [
+        "Dominion Energy",
+        "Duke Energy",
+        "Southern Company",
+        "Exelon"
+      ],
+      "a": 0,
+      "correctText": "Dominion Energy",
+      "category": "Business",
+      "source": "https://www.reuters.com/legal/litigation/nextera-energy-buy-dominion-668-billion-us-power-deal-2026-05-18/"
+    },
+    {
+      "q": "A New York judge ruled that which two items found in Luigi Mangione's backpack can be used as evidence in his upcoming trial for the murder of a UnitedHealthcare CEO?",
+      "options": [
+        "A gun and a notebook",
+        "A laptop and a passport",
+        "A cellphone and a weapon magazine",
+        "A flash drive and a mask"
+      ],
+      "a": 0,
+      "correctText": "A gun and a notebook",
+      "category": "Usa",
+      "source": "https://www.cnbc.com/2026/05/18/luigi-mangione-backpack-evidence-unitedhealthcare-murder.html"
+    },
+    {
+      "q": "Which province announced on May 19, 2026, that it aims to bolster rural paramedic numbers by adding 32 new training seats at Assiniboine College?",
+      "options": [
+        "Manitoba",
+        "Saskatchewan",
+        "Nova Scotia",
+        "Prince Edward Island"
+      ],
+      "a": 0,
+      "correctText": "Manitoba",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/manitoba/paramedic-assiniboine-college-training-9.7199760"
+    }
+  ]
+}

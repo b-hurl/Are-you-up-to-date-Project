@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "What NHL team did the Montreal Canadiens defeat in Game 7 overtime to advance to the 2026 Eastern Conference final?",
+      "options": [
+        "Buffalo Sabres",
+        "Toronto Maple Leafs",
+        "Boston Bruins",
+        "Carolina Hurricanes"
+      ],
+      "a": 0,
+      "correctText": "Buffalo Sabres",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/montreal/habs-sabres-game-seven-second-round-9.7203205"
+    },
+    {
+      "q": "Which international defense board did the U.S. Pentagon announce it was pausing its participation in with Canada on May 19, 2026?",
+      "options": [
+        "Canada-U.S. Permanent Joint Board on Defence",
+        "NORAD Modernization Committee",
+        "North American Aerospace Defense Command",
+        "Five Eyes Intelligence Council"
+      ],
+      "a": 0,
+      "correctText": "Canada-U.S. Permanent Joint Board on Defence",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/politics/trump-canada-us-joint-defence-board-9.7203211"
+    },
+    {
+      "q": "Which Canadian province announced on May 19, 2026, that it plans to introduce an artificial intelligence curriculum for schools this fall?",
+      "options": [
+        "New Brunswick",
+        "Ontario",
+        "British Columbia",
+        "Alberta"
+      ],
+      "a": 0,
+      "correctText": "New Brunswick",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/new-brunswick/ai-schools-curriculum-9.7198535"
+    },
+    {
+      "q": "Which province announced on May 19, 2026, that it aims to bolster rural paramedic numbers by adding 32 new training seats at Assiniboine College?",
+      "options": [
+        "Manitoba",
+        "Saskatchewan",
+        "Nova Scotia",
+        "Prince Edward Island"
+      ],
+      "a": 0,
+      "correctText": "Manitoba",
+      "category": "Canada",
+      "source": "https://www.cbc.ca/news/canada/manitoba/paramedic-assiniboine-college-training-9.7199760"
+    },
+    {
+      "q": "As reported on May 19, 2026, students from which Ontario region traveled to a remote Inuit community in Northern Quebec for a cultural exchange program?",
+      "options": [
+        "Waterloo Region",
+        "Peel Region",
+        "York Region",
+        "Durham Region"
+      ],
+      "a": 0,
+      "correctText": "Waterloo Region",
+      "category": "Canada",
+      "source": "https://www.ctvnews.ca/kitchener/article/waterloo-region-students-travel-to-remote-inuit-community-in-northern-quebec-for-cultural-exchange/"
+    }
+  ]
+}

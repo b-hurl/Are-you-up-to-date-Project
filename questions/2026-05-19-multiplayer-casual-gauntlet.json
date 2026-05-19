@@ -1,0 +1,136 @@
+{
+  "date": "2026-05-19",
+  "type": "multiplayer-casual-gauntlet",
+  "questions": [
+    {
+      "q": "Director Na Hong-jin debuted his epic sci-fi action thriller about an alien creature attacking a rural Korean town at the 2026 Cannes Film Festival. What is the film's title?",
+      "options": [
+        "Hope",
+        "Hostile",
+        "The Wailing",
+        "Alienoid"
+      ],
+      "a": 0,
+      "correctText": "Hope",
+      "category": "Entertainment",
+      "source": "https://apnews.com/article/cannes-hope-na-hongjin-monster-movie-a46d51b2c2e414754697b6ceef007c11"
+    },
+    {
+      "q": "In an experiment highlighted by Vox's 'Today, Explained' podcast, author Vauhini Vara tested whether which group could distinguish her writing from an AI imitation?",
+      "options": [
+        "Her friends",
+        "Professional book editors",
+        "College literature students",
+        "Advanced plagiarism detection software"
+      ],
+      "a": 0,
+      "correctText": "Her friends",
+      "category": "Books",
+      "source": "https://www.vox.com/podcasts/488541/ai-books-publishing-experiment"
+    },
+    {
+      "q": "On May 18, 2026, Netflix acquired the global rights outside France for which animated coming-of-age romance that opened the Cannes Critics' Week?",
+      "options": [
+        "In Waves",
+        "I Lost My Body",
+        "Flow",
+        "The Swarm"
+      ],
+      "a": 0,
+      "correctText": "In Waves",
+      "category": "Entertainment",
+      "source": "https://variety.com/2026/film/news/netflix-buys-in-waves-cannes-1236753146/"
+    },
+    {
+      "q": "Who scored the overtime winner for the Montreal Canadiens in Game 7 to defeat the Buffalo Sabres 3-2 and advance to the 2026 Eastern Conference finals?",
+      "options": [
+        "Alex Newhook",
+        "Cole Caufield",
+        "Nick Suzuki",
+        "Tage Thompson"
+      ],
+      "a": 0,
+      "correctText": "Alex Newhook",
+      "category": "Sports",
+      "source": "https://apnews.com/article/canadiens-sabres-playoffs-score-769f1e8dc5b0c3ee10341c750056175b"
+    },
+    {
+      "q": "What animal were Alberta students exposed to on a school bus in May 2026, prompting rabies treatment?",
+      "options": [
+        "A bat",
+        "A stray dog",
+        "A raccoon",
+        "A coyote"
+      ],
+      "a": 0,
+      "correctText": "A bat",
+      "category": "Health",
+      "source": "https://www.cbc.ca/news/canada/calgary/drumheller-bus-bat-rabies-treatment-9.7202467"
+    },
+    {
+      "q": "In May 2026, the CDC confirmed that at least one American tested positive for which virus amid an outbreak in the DRC and Uganda?",
+      "options": [
+        "Ebola",
+        "Mpox",
+        "Lassa fever",
+        "Marburg virus"
+      ],
+      "a": 0,
+      "correctText": "Ebola",
+      "category": "Health",
+      "source": "https://abcnews.com/International/drc-ebola-outbreak-affecting-small-number-americans-cdc/story?id=133061121"
+    },
+    {
+      "q": "Ahead of the 2026 World Cup, FIFA officials traveled to which country to negotiate a broadcast deal amid fears of a television blackout?",
+      "options": [
+        "India",
+        "China",
+        "Australia",
+        "South Africa"
+      ],
+      "a": 0,
+      "correctText": "India",
+      "category": "Sports",
+      "source": "https://www.independent.co.uk/sport/football/world-cup/fifa-india-world-cup-2026-blackout-tv-deal-b2978689.html"
+    },
+    {
+      "q": "Which Canadian researcher, who helped spearhead the creation of the Special Olympics in the 1960s, died at the age of 96 in May 2026?",
+      "options": [
+        "Frank Hayden",
+        "James Naismith",
+        "David Suzuki",
+        "Frederick Banting"
+      ],
+      "a": 0,
+      "correctText": "Frank Hayden",
+      "category": "Sports",
+      "source": "https://globalnews.ca/news/11854117/frank-hayden-dead/"
+    },
+    {
+      "q": "The tiny Los Angeles bookstore 'A Good Used Book' is gaining community popularity for transforming its space every Sunday into what event?",
+      "options": [
+        "Sunday Funday Market",
+        "LA Zine Fest",
+        "Echo Park Reading Hour",
+        "The Historic Filipinotown Book Swap"
+      ],
+      "a": 0,
+      "correctText": "Sunday Funday Market",
+      "category": "Books",
+      "source": "https://laist.com/news/why-this-tiny-bookstore-is-becoming-one-of-las-most-perfect-sunday-hangs"
+    },
+    {
+      "q": "Amid a 2026 hantavirus quarantine, former contagion patients described their life in isolation featuring hazmat suits, Nerf basketball, and what specific brand of food?",
+      "options": [
+        "Omaha Steaks",
+        "HelloFresh kits",
+        "Domino's Pizza",
+        "Lean Cuisine"
+      ],
+      "a": 0,
+      "correctText": "Omaha Steaks",
+      "category": "Health",
+      "source": "https://www.nbcnews.com/health/health-news/former-contagion-patients-describe-life-in-quarantine-amid-hantavirus-rcna344946"
+    }
+  ]
+}

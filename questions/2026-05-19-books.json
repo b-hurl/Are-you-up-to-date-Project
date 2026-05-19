@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "According to a recent interview, what is Barnes & Noble CEO James Daunt's stance on selling AI-written books in their stores?",
+      "options": [
+        "He supports selling them if they are clearly labeled and there is public demand.",
+        "He wants to ban all books containing any AI-generated text from physical shelves.",
+        "He plans to replace self-published authors with Barnes & Noble's own AI models.",
+        "He believes AI books should only be sold digitally, not in print."
+      ],
+      "a": 0,
+      "correctText": "He supports selling them if they are clearly labeled and there is public demand.",
+      "category": "Books",
+      "source": "https://www.the-independent.com/arts-entertainment/books/news/barnes-and-noble-james-daunt-ai-books-b2978925.html"
+    },
+    {
+      "q": "In an experiment highlighted by Vox's 'Today, Explained' podcast, author Vauhini Vara tested whether which group could distinguish her writing from an AI imitation?",
+      "options": [
+        "Her friends",
+        "Professional book editors",
+        "College literature students",
+        "Advanced plagiarism detection software"
+      ],
+      "a": 0,
+      "correctText": "Her friends",
+      "category": "Books",
+      "source": "https://www.vox.com/podcasts/488541/ai-books-publishing-experiment"
+    },
+    {
+      "q": "Researchers in Ireland recently tracked down a forgotten medieval book in a Roman library that hides the oldest surviving English poem, known as what?",
+      "options": [
+        "Caedmon's Hymn",
+        "Beowulf",
+        "The Wanderer",
+        "The Seafarer"
+      ],
+      "a": 0,
+      "correctText": "Caedmon's Hymn",
+      "category": "Books",
+      "source": "https://apnews.com/article/old-english-manuscript-poetry-bede-caedmon-hymn-latin-italy-106769c014901cf06d8a56839d56ac90"
+    },
+    {
+      "q": "The tiny Los Angeles bookstore 'A Good Used Book' is gaining community popularity for transforming its space every Sunday into what event?",
+      "options": [
+        "Sunday Funday Market",
+        "LA Zine Fest",
+        "Echo Park Reading Hour",
+        "The Historic Filipinotown Book Swap"
+      ],
+      "a": 0,
+      "correctText": "Sunday Funday Market",
+      "category": "Books",
+      "source": "https://laist.com/news/why-this-tiny-bookstore-is-becoming-one-of-las-most-perfect-sunday-hangs"
+    },
+    {
+      "q": "Doireann Ní Ghríofa's newly reviewed book 'Said the Dead' explores the lives of forgotten patients at which historical psychiatric facility in Ireland?",
+      "options": [
+        "Cork Mental Hospital",
+        "Bethlem Royal Hospital",
+        "Broadmoor Hospital",
+        "Grangegorman Mental Hospital"
+      ],
+      "a": 0,
+      "correctText": "Cork Mental Hospital",
+      "category": "Books",
+      "source": "https://www.theguardian.com/books/2026/may/18/said-the-dead-by-doireann-ni-ghriofa-review-lost-voices-from-an-irish-asylum"
+    }
+  ]
+}

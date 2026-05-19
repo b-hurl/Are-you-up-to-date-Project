@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "q": "Which fast-food chain's franchisee filed a $100 million lawsuit in May 2026 alleging its new AI delivery system caused 'cascading operational breakdowns'? [1.1.3]",
+      "options": [
+        "Pizza Hut",
+        "Domino's",
+        "Papa John's",
+        "Taco Bell"
+      ],
+      "a": 0,
+      "correctText": "Pizza Hut",
+      "category": "Technology",
+      "source": "https://www.businessinsider.com/pizza-hut-ai-system-dragontail-lawsuit-franchisee-2026-5"
+    },
+    {
+      "q": "Which former Google CEO was met with boos from students during a May 2026 commencement speech at the University of Arizona after making remarks about artificial intelligence?",
+      "options": [
+        "Sundar Pichai",
+        "Eric Schmidt",
+        "Larry Page",
+        "Sergey Brin"
+      ],
+      "a": 1,
+      "correctText": "Eric Schmidt",
+      "category": "Technology",
+      "source": "https://www.theguardian.com/us-news/2026/may/18/eric-schmidt-ai-university-commencement-speech-booed"
+    },
+    {
+      "q": "In May 2026, China announced the full operation of a 24-megawatt underwater data center that uses ocean water for passive cooling and is uniquely powered by what source?",
+      "options": [
+        "Geothermal vents",
+        "Tidal wave generators",
+        "Offshore wind",
+        "Floating solar panels"
+      ],
+      "a": 2,
+      "correctText": "Offshore wind",
+      "category": "Technology",
+      "source": "https://www.tomshardware.com/tech-industry/china-says-worlds-first-offshore-wind-powered-underwater-data-center-has-entered-full-operation-houses-2-000-servers-24-megawatt-subsea-ai-facility-uses-ocean-water-for-passive-cooling-and-offshore-wind-for-power"
+    },
+    {
+      "q": "In May 2026, a contractor for which US federal agency was found to have inadvertently exposed highly privileged AWS GovCloud keys on a public GitHub repository?",
+      "options": [
+        "Cybersecurity & Infrastructure Security Agency (CISA)",
+        "National Security Agency (NSA)",
+        "Federal Bureau of Investigation (FBI)",
+        "Defense Information Systems Agency (DISA)"
+      ],
+      "a": 0,
+      "correctText": "Cybersecurity & Infrastructure Security Agency (CISA)",
+      "category": "Technology",
+      "source": "https://krebsonsecurity.com/2026/05/cisa-admin-leaked-aws-govcloud-keys-on-github/"
+    },
+    {
+      "q": "In May 2026, Microsoft announced it is actively phasing out which traditional security method for personal account sign-ins in Windows 11 to aggressively push passkeys?",
+      "options": [
+        "Email verification links",
+        "Hardware security keys",
+        "Security questions",
+        "SMS login codes"
+      ],
+      "a": 3,
+      "correctText": "SMS login codes",
+      "category": "Technology",
+      "source": "https://www.windowslatest.com/2026/05/19/microsoft-is-killing-sms-codes-for-microsoft-account-sign-in-aggressively-pushes-passkeys-on-windows-11/"
+    }
+  ]
+}
